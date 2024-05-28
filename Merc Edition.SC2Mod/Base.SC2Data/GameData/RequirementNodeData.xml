@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementCountUpgrade id="CountUpgradeSuperStimCompleteOnly">
+        <Count Link="SuperStim" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSuperStimQueuedOrBetter">
+        <Count Link="SuperStim" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeThornShieldCompleteOnly">
+        <Count Link="ThornShield" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeThornShieldQueuedOrBetter">
+        <Count Link="ThornShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementLTE id="LTCountUpgradeSuperStimQueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeSuperStimQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTCountUpgradeThornShieldQueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeThornShieldQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+</Catalog>

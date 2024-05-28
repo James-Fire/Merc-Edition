@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="AnarchistReady">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="4"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DieselBasedNapalm">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Period value="1"/>
+        <PeriodicEffect value="DieselBasedNapalmDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SignalFlareBlind">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification SightMaximum="1">
+            <StateFlags index="SuppressDetection" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SignalFlareTimedLife">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="14"/>
+        <ExpireEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ThornShield">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseThornShield"/>
+        <DamageResponse Handled="ThornShieldDamage">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+</Catalog>

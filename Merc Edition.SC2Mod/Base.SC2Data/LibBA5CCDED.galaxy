@@ -1,0 +1,53 @@
+include "TriggerLibs/NativeLib"
+
+include "LibBA5CCDED_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Merc Edition Data
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libBA5CCDED_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: War Pig - Laser Targeting System
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_WarPigLaserTargetingSystem_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(1, "LaserTargetingSystem", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_WarPigLaserTargetingSystem_Init () {
+    libBA5CCDED_gt_WarPigLaserTargetingSystem = TriggerCreate("libBA5CCDED_gt_WarPigLaserTargetingSystem_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_WarPigLaserTargetingSystem);
+}
+
+void libBA5CCDED_InitTriggers () {
+    libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_InitLib_completed = false;
+
+void libBA5CCDED_InitLib () {
+    if (libBA5CCDED_InitLib_completed) {
+        return;
+    }
+
+    libBA5CCDED_InitLib_completed = true;
+
+    libBA5CCDED_InitLibraries();
+    libBA5CCDED_InitTriggers();
+}
+

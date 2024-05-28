@@ -1,0 +1,162 @@
+﻿Abil/Name/ACVHarvest=Gather (ACV)
+Abil/Name/GreaterHeal=Greater Heal
+Abil/Name/MorphToAgitator=Morph To Agitator
+Abil/Name/MorphToAnarchist=Morph To Anarchist
+Abil/Name/SignalFlare=Signal Flare
+Abil/Name/SprayandPay=Spray and Pay
+Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
+Button/Name/BuildAdjucator=Build Adjucator
+Button/Name/BuildAgitator=Build Agitator
+Button/Name/BuildAnarchist=Build Anarchist
+Button/Name/BuildCharonDropship=Build Charon Dropship
+Button/Name/BuildCondor=Build Condor
+Button/Name/BuildCopperhead=Build Copperhead
+Button/Name/BuildCyberWolf=Build Cyber Wolf
+Button/Name/BuildDuskWing=Build Dusk Wing
+Button/Name/BuildHarrier=Build Harrier
+Button/Name/BuildHelsAngel=Build Hel's Angel
+Button/Name/BuildSiegeBreaker=Build Siege Breaker
+Button/Name/BuildSpartanCompany=Build Spartan Company
+Button/Name/BuildStarcruiser=Build Starcruiser
+Button/Name/BuildTitan=Build Titan
+Button/Name/BuildZeusLander=Build Zeus Lander
+Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
+Button/Name/DieselBasedNapalm=Diesel Based Napalm
+Button/Name/LaserTargetingSystem=Laser Targeting System
+Button/Name/MagrailMunitions=Magrail Munitions
+Button/Name/MorphtoAgitator=Morph to Agitator
+Button/Name/MorphtoAnarchist=Morph to Anarchist
+Button/Name/SignalFlare=Signal Flare
+Button/Name/SprayandPay=Spray and Pay
+Button/Name/SuperStim=Super Stim
+Button/Name/ThornShieldSkibidi=Thorn Shield
+Button/Name/ThornShieldWarPig=Thorn Shield
+Button/Name/TrainBlockB=Train Block B
+Button/Name/TrainDevilDog=Train Devil Dog
+Button/Name/TrainHammerSecurity=Train Hammer Security
+Button/Name/TrainPhantom=Train Phantom
+Button/Name/TrainShadow=Train Shadow
+Button/Name/TrainSkibisAngel=Train Skibi's Angel
+Button/Name/TrainWarPig=Train War Pig
+Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Adjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/BuildAgitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildCharonDropship=Air transport. Heals nearby biological units.
+Button/Tooltip/BuildCondor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildCopperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildCyberWolf=Anti-infantry specialist that deals area damage with each attack.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildDuskWing=Tactical-strike aircraft.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildHarrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/BuildHelsAngel=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
+Button/Tooltip/BuildSiegeBreaker=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BuildSpartanCompany=Heavy-fire support unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/BuildStarcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/BuildTitan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly.
+Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
+Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby friendly and enemy units.
+Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
+Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
+Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42">.
+Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time="14"/>.
+Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
+Button/Tooltip/SprayandPay=Deal 6 damage in an arc to enemy units.
+Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
+Button/Tooltip/ThornShieldSkibidi=Skibi's Angels gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
+Button/Tooltip/ThornShieldWarPig=War Pigs gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
+Button/Tooltip/Titan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/TrainDevilDog=Specialized anti-infantry attacker.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/TrainHammerSecurity=Heavy assault infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/TrainPhantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainShadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainSkibisAngel=Support trooper. Heals nearby biological units.
+Button/Tooltip/TrainWarPig=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Effect/Name/ACVFusionCutter=Fusion Cutter (Damage)
+Effect/Name/AGRShadeHunter=AGR Shade Hunter
+Effect/Name/AnarchistWeaponAB=Anarchist Weapon AB
+Effect/Name/AnarchistWeaponDamage=Anarchist Weapon Damage
+Effect/Name/AnarchistWeaponSearch=Anarchist Weapon Search
+Effect/Name/AnarchistWeaponSet=Anarchist Weapon Set
+Effect/Name/BarBreakersCP=Bar Breakers CP
+Effect/Name/BarBreakersDamage=Bar Breakers Damage
+Effect/Name/C11EthereanRifle=C-11 Etherean Rifle
+Effect/Name/ChargedJupiterRailDamage=Charged Jupiter Rail Damage
+Effect/Name/CoeusMissileCP=Coeus Missile CP
+Effect/Name/CoeusMissileDamage=Coeus Missile Damage
+Effect/Name/CoeusMissileLM=Coeus Missile LM
+Effect/Name/DeadMenTellNoTales=Dead Men Tell No Tales
+Effect/Name/DieselBasedNapalmAB=Diesel Based Napalm AB
+Effect/Name/DieselBasedNapalmDamage=Diesel Based Napalm Damage
+Effect/Name/FRANomadKingCannonsDamage=FR-A Nomad King Cannons Damage
+Effect/Name/FistsofKronosCP=Fists of Kronos CP
+Effect/Name/FistsofKronosDamage=Fists of Kronos Damage
+Effect/Name/GreetingGrenadeDamage=Greeting Grenade Damage
+Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
+Effect/Name/HellbornFlamethrowerCP=Hellborn Flamethrower CP
+Effect/Name/HellbornFlamethrowerDamage=Hellborn Flamethrower Damage
+Effect/Name/HellbornFlamethrowerSA=Hellborn Flamethrower SA
+Effect/Name/PharaohLaserBatteryDamage=Pharaoh Laser Battery Damage
+Effect/Name/PharaohLaserBatteryLM=Pharaoh Laser Battery LM
+Effect/Name/ScorpionMissiles=Scorpion Missiles
+Effect/Name/ScorpionMissilesLMLeft=Scorpion Missiles LM Left
+Effect/Name/ScorpionMissilesLMRight=Scorpion Missiles LM Right
+Effect/Name/ScorpionMissilesPersistent=Scorpion Missiles Persistent
+Effect/Name/SignalFlareBlindAB=Signal Flare Blind AB
+Effect/Name/SignalFlareBlindLaunchMissile=Signal Flare Blind Launch Missile
+Effect/Name/SignalFlareCU=Signal Flare CU
+Effect/Name/SignalFlareInitial=Signal Flare Initial
+Effect/Name/SignalFlareRevealLaunchMissile=Signal Flare Reveal Launch Missile
+Effect/Name/SignalFlareSwitch=Signal Flare Switch
+Effect/Name/SkibisAngelHeal=Skibi's Angel Heal
+Effect/Name/SprayandPayCP=Spray and Pay CP
+Effect/Name/SprayandPayDamage=Spray and Pay Damage
+Effect/Name/SprayandPaySA=Spray and Pay SA
+Effect/Name/ThermalBurst=Thermal Burst
+Effect/Name/ThermalBurstLaunchMissile=Thermal Burst Launch Missile
+Effect/Name/ThornShieldDamage=Thorn Shield Damage
+Unit/Name/ACV=ACV
+Unit/Name/Adjucator=Adjucator
+Unit/Name/Agitator=Agitator
+Unit/Name/Anarchist=Anarchist
+Unit/Name/CharonDropship=Charon Dropship
+Unit/Name/Condor=Condor
+Unit/Name/Copperhead=Copperhead
+Unit/Name/Harrier=Harrier
+Unit/Name/Nomad=Nomad
+Unit/Name/Phantom=Phantom
+Unit/Name/Shadow=Shadow
+Unit/Name/SignalFlareMissile=Signal Flare Missile
+Unit/Name/SignalFlareUnit=Signal Flare Unit
+Unit/Name/SkibisAngel=Skibi's Angel
+Unit/Name/Starcruiser=Starcruiser
+Unit/Name/Titan=Titan
+Upgrade/Name/LaserTargetingSystem=Laser Targeting System
+Upgrade/Name/SuperStim=Super Stim
+Upgrade/Name/ThornShield=Thorn Shield
+Weapon/Name/ACVFusionCutter=Fusion Cutter
+Weapon/Name/AGRShadeHunter=AGR Shade Hunter
+Weapon/Name/BarBreakers=Bar Breakers
+Weapon/Name/C11EthereanRifle=C-11 Etherean Rifle
+Weapon/Name/ChargedJupiterRail=Charged Jupiter Rail
+Weapon/Name/CoeusMissileLaunchers=Coeus Missile Launchers
+Weapon/Name/FRANomadKingCannons=FR-A Nomad King Cannons
+Weapon/Name/FistsofKronos=Fists of Kronos
+Weapon/Name/GreetingGrenade=Greeting Grenade
+Weapon/Name/HellbornFlamethrower=Hellborn Flamethrower
+Weapon/Name/NCWrecker=NC Wrecker
+Weapon/Name/PharaohLaserBattery=Pharaoh Laser Battery
+Weapon/Name/ScorpionMissiles=Scorpion Missiles
+Weapon/Name/ThermalBurst=Thermal Burst

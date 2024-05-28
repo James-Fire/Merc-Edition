@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="LaserTargetingSystem">
+        <EffectArray Reference="Weapon,KelmorianMinerGaussRifle,Range" Value="1"/>
+        <EffectArray Reference="Unit,WarPig,Sight" Value="2"/>
+        <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+    <CUpgrade id="SuperStim">
+        <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+    <CUpgrade id="ThornShield">
+        <EffectArray Reference="Unit,WarPig,LifeMax" Value="15"/>
+        <EffectArray Reference="Unit,WarPig,LifeStart" Value="15"/>
+        <EffectArray Reference="Unit,SkibisAngel,LifeStart" Value="15"/>
+        <EffectArray Reference="Unit,SkibisAngel,LifeMax" Value="15"/>
+        <AffectedUnitArray value="SkibisAngel"/>
+        <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+</Catalog>

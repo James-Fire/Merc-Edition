@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="LearnSuperStim">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTCountUpgradeSuperStimQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnThornShield">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTCountUpgradeThornShieldQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="UseSuperStim">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSuperStimCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseThornShield">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeThornShieldCompleteOnly"/>
+    </CRequirement>
+</Catalog>

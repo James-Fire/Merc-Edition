@@ -1,0 +1,8 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Merc Edition Data
+//--------------------------------------------------------------------------------------------------
+// Trigger Declarations
+trigger libBA5CCDED_gt_WarPigLaserTargetingSystem;
+

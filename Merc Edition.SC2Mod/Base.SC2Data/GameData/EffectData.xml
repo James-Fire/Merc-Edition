@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectDamage id="ACVFusionCutter" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectDamage id="C11EthereanRifle" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="12"/>
+        <Kind value="Ranged"/>
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectDamage id="AGRShadeHunter" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="6"/>
+        <Kind value="Ranged"/>
+        <Amount value="18"/>
+    </CEffectDamage>
+    <CEffectDamage id="ChargedJupiterRailDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="26"/>
+        <Kind value="Ranged"/>
+        <Amount value="26"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectDamage id="DeadMenTellNoTales">
+        <EditorCategories value=""/>
+        <Kind value="Ranged"/>
+        <Amount value="50"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="1.4" Fraction="1"/>
+    </CEffectDamage>
+    <CEffectSet id="DevilDogSet">
+        <EffectArray value="DieselBasedNapalmAB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="DieselBasedNapalmAB">
+        <EditorCategories value=""/>
+        <Behavior value="DieselBasedNapalm"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="DieselBasedNapalmDamage">
+        <EditorCategories value=""/>
+        <Amount value="5"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectDamage id="HellbornFlamethrowerDamage" parent="DU_WEAP">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="11"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="13"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="HellbornFlamethrowerCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourcePoint"/>
+        <InitialEffect value="HellbornFlamethrowerDamage"/>
+        <PeriodCount value="24"/>
+        <PeriodicEffectArray value="HellbornFlamethrowerSA"/>
+        <PeriodicOffsetArray value="0,-0.25,0"/>
+        <PeriodicOffsetArray value="0,-0.5,0"/>
+        <PeriodicOffsetArray value="0,-0.75,0"/>
+        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="0,-1.25,0"/>
+        <PeriodicOffsetArray value="0,-1.5,0"/>
+        <PeriodicOffsetArray value="0,-1.75,0"/>
+        <PeriodicOffsetArray value="0,-2,0"/>
+        <PeriodicOffsetArray value="0,-2.25,0"/>
+        <PeriodicOffsetArray value="0,-2.5,0"/>
+        <PeriodicOffsetArray value="0,-2.75,0"/>
+        <PeriodicOffsetArray value="0,-3,0"/>
+        <PeriodicOffsetArray value="0,-3.25,0"/>
+        <PeriodicOffsetArray value="0,-3.5,0"/>
+        <PeriodicOffsetArray value="0,-3.75,0"/>
+        <PeriodicOffsetArray value="0,-4,0"/>
+        <PeriodicOffsetArray value="0,-4.25,0"/>
+        <PeriodicOffsetArray value="0,-4.5,0"/>
+        <PeriodicOffsetArray value="0,-4.75,0"/>
+        <PeriodicOffsetArray value="0,-5,0"/>
+        <PeriodicOffsetArray value="0,-5.25,0"/>
+        <PeriodicOffsetArray value="0,-5.5,0"/>
+        <PeriodicOffsetArray value="0,-5.75,0"/>
+        <PeriodicOffsetArray value="0,-6,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="HellbornFlamethrowerSA">
+        <EditorCategories value="Race:Terran"/>
+        <ExcludeArray Value="Target"/>
+        <IncludeArray Effect="InfernalFlameThrowerCP" Value="Target"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="0.15" Effect="HellbornFlamethrowerDamage"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="BarBreakersDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="10"/>
+        <Kind value="Ranged"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="BarBreakersCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="BarBreakersDamage"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.122"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="CoeusMissileDamage" parent="DU_WEAP_SPLASH">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="6"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="11"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="0.5" Fraction="1"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="CoeusMissileLM">
+        <ValidatorArray index="0" value="RangeCheckLE15"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="CoeusMissileDamage"/>
+        <AmmoUnit value="ThorAAWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="CoeusMissileCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="CoeusMissileLM"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.25"/>
+        <PeriodicPeriodArray value="0.125"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="PharaohLaserBatteryLM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="PharaohLaserBatteryDamage"/>
+        <AmmoUnit value="DRBattlecruiserGLMWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="PharaohLaserBatteryDamage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Terran"/>
+        <Visibility value="Visible"/>
+        <Amount value="12"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectDamage id="FRANomadKingCannonsDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Visibility value="Visible"/>
+        <Amount value="12"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="SignalFlareBlindAB">
+        <EditorCategories value=""/>
+        <Behavior value="SignalFlareBlind"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="SignalFlareCU">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnUnit value="SignalFlareUnit"/>
+    </CEffectCreateUnit>
+    <CEffectCreatePersistent id="SignalFlareInitial">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <InitialEffect value="SignalFlareSwitch"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="SignalFlareRevealLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0,0,15"/>
+        <ImpactEffect value="SignalFlareCU"/>
+        <AmmoUnit value="SignalFlareMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="SignalFlareBlindLaunchMissile">
+        <ImpactOffset value="0,0,15"/>
+        <ImpactEffect value="SignalFlareBlindAB"/>
+        <AmmoUnit value="SignalFlareMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectSwitch id="SignalFlareSwitch">
+        <EditorCategories value=""/>
+        <CaseArray Validator="TargetIsPoint" Effect="SignalFlareRevealLaunchMissile"/>
+        <CaseDefault value="SignalFlareBlindLaunchMissile"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="SprayandPayCP">
+        <WhichLocation Value="CasterPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SprayandPaySA"/>
+        <PeriodicOffsetArray value="0,-2.5,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SprayandPayDamage">
+        <EditorCategories value=""/>
+        <Amount value="6"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="SprayandPaySA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Invulnerable,Benign"/>
+        <AreaArray Arc="64.995" Radius="6.2" Effect="SprayandPayDamage"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFlags index="CenterAtLaunch" value="1"/>
+    </CEffectEnumArea>
+    <CEffectLaunchMissile id="ThermalBurstLaunchMissile">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="ThermalBurst"/>
+        <AmmoUnit value="WraithGroundWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="ThermalBurst" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Visibility value="Visible"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ScorpionMissilesLMLeft">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="ScorpionMissiles"/>
+        <AmmoUnit value="WraithAirWeaponLeft"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="ScorpionMissilesPersistent">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="ScorpionMissilesLMLeft"/>
+        <PeriodicEffectArray value="ScorpionMissilesLMRight"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="ScorpionMissilesLMRight">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="ScorpionMissiles"/>
+        <AmmoUnit value="WraithAirWeaponRight"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="ScorpionMissiles" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="6"/>
+        <Visibility value="Visible"/>
+        <Amount value="6"/>
+    </CEffectDamage>
+    <CEffectCreateHealer id="SkibisAngelHeal">
+        <ValidatorArray value="noMarkers"/>
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="NotVortexd"/>
+        <DrainVital value="Energy"/>
+        <DrainVitalCostFactor value="0.33"/>
+        <RechargeVitalRate value="12"/>
+    </CEffectCreateHealer>
+    <CEffectCreatePersistent id="FistsofKronosCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="FistsofKronosDamage"/>
+        <PeriodicEffectArray value="FistsofKronosDamage"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.375"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="FistsofKronosDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <Amount value="60"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="GreetingGrenadeLM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="GreetingGrenadeDamage"/>
+        <AmmoUnit value="VultureWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="GreetingGrenadeDamage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="17"/>
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectSet id="AnarchistWeaponSet">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="AnarchistWeaponAB"/>
+        <EffectArray value="AnarchistWeaponDamage"/>
+        <EffectArray value="AnarchistWeaponSearch"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="AnarchistWeaponAB">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AnarchistReady"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="AnarchistWeaponDamage">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeBonus index="Light" value="17"/>
+        <ArmorReduction value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="23"/>
+        <Death value="Fire"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="AnarchistWeaponSearch">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="SourceUnit"/>
+        <ExcludeArray Effect="HellionTank" Value="Target"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="45" Radius="2" Effect="AnarchistWeaponDamage"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="ThornShieldDamage">
+        <EditorCategories value=""/>
+        <ShieldBonus value="5"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+</Catalog>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="ACVFusionCutter">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="1.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="C11EthereanRifle">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0.083"/>
+        <Backswing value="1.167"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ChargedJupiterRail">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="ChargedJupiterRailDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="2"/>
+        <Effect value="ChargedJupiterRailDamage"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HellbornFlamethrower">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="HellbornFlamethrowerDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="2.5"/>
+        <DamagePoint value="0.25"/>
+        <Backswing value="0.75"/>
+        <Effect value="HellbornFlamethrowerCP"/>
+        <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BarBreakers">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="BarBreakersDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Ground,Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5.5"/>
+        <Range value="4.5"/>
+        <Period value="1.1"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.75"/>
+        <Effect value="BarBreakersCP"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CoeusMissileLaunchers">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="CoeusMissileDamage"/>
+        <DisplayAttackCount value="4"/>
+        <TargetFilters value="Air,Visible;Ground,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="10"/>
+        <Arc value="5.625"/>
+        <Period value="3"/>
+        <Effect value="CoeusMissileCP"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PharaohLaserBattery">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="PharaohLaserBatteryDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="2"/>
+        <Period value="0.225"/>
+        <Effect value="PharaohLaserBatteryLM"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMax value="0.1875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="FRANomadKingCannons">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="FRANomadKingCannonsDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="6"/>
+        <MinimumRange value="2"/>
+        <Period value="0.3"/>
+        <Effect value="FRANomadKingCannonsDamage"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DevilDogFlameThrower">
+        <Backswing value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AGRShadeHunter">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="2"/>
+        <DamagePoint value="0.083"/>
+        <Backswing value="1.167"/>
+        <RandomDelayMin value="-0.063"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ThermalBurst">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1.694"/>
+        <Effect value="ThermalBurstLaunchMissile"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScorpionMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1.25"/>
+        <Effect value="ScorpionMissilesPersistent"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="FistsofKronos">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="FistsofKronosDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="7"/>
+        <Period value="1.93"/>
+        <DamagePoint value="0.831"/>
+        <Backswing value="0.25"/>
+        <Effect value="FistsofKronosCP"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GreetingGrenade">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="GreetingGrenadeDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.694"/>
+        <Backswing value="0"/>
+        <Effect value="GreetingGrenadeLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NCWrecker">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="AnarchistWeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="2"/>
+        <Period value="2"/>
+        <Effect value="AnarchistWeaponSet"/>
+    </CWeaponLegacy>
+</Catalog>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilHarvest id="ACVHarvest">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <ResourceAmountBonus index="Minerals" value="10"/>
+        <ResourceAmountBonus index="Vespene" value="4"/>
+    </CAbilHarvest>
+    <CAbilTrain id="BarracksTrain">
+        <InfoArray index="Train9" Time="25">
+            <Button DefaultButtonFace="TrainWarPig" State="Restricted"/>
+            <Unit value="WarPig"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="40">
+            <Button DefaultButtonFace="TrainBlockB" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="BlockB"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="40">
+            <Button DefaultButtonFace="TrainPhantom" State="Restricted" Requirements="HaveAttachedBarrTechLabOrAttachedTechReactorAndShadowOps"/>
+            <Unit value="Phantom"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="30">
+            <Button DefaultButtonFace="TrainHammerSecurity" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="HammerSecurity"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="25">
+            <Button DefaultButtonFace="TrainSkibisAngel" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="SkibisAngel"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="30">
+            <Button DefaultButtonFace="TrainDevilDog" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="DevilDog"/>
+        </InfoArray>
+        <InfoArray index="Train15" Time="50">
+            <Button DefaultButtonFace="TrainShadow" State="Restricted" Requirements="HaveAttachedBarrTechLabOrAttachedTechReactorAndShadowOps"/>
+            <Unit value="Shadow"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="FactoryTrain">
+        <InfoArray index="Train12" Time="45">
+            <Button DefaultButtonFace="BuildSiegeBreaker" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="SiegeBreaker"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="60">
+            <Button DefaultButtonFace="BuildTitan" State="Restricted" Requirements="HaveArmoryAndAttachedTechLabOrAttachedTechReactor"/>
+            <Unit value="Titan"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="30">
+            <Button DefaultButtonFace="BuildAgitator" State="Restricted"/>
+            <Unit value="Agitator"/>
+        </InfoArray>
+        <InfoArray index="Train15" Time="30">
+            <Button DefaultButtonFace="BuildAnarchist" State="Restricted"/>
+            <Unit value="Anarchist"/>
+        </InfoArray>
+        <InfoArray index="Train16" Time="40">
+            <Button DefaultButtonFace="BuildSpartanCompany" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="SpartanCompany"/>
+        </InfoArray>
+        <InfoArray index="Train17" Time="50">
+            <Button DefaultButtonFace="BuildCopperhead" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Copperhead"/>
+        </InfoArray>
+        <InfoArray index="Train18" Time="25">
+            <Button DefaultButtonFace="BuildCondor" State="Restricted"/>
+            <Unit value="Vulture"/>
+        </InfoArray>
+        <InfoArray index="Train19" Time="40">
+            <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="GreaterHeal">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SkibisAngelHeal"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Flags index="PassengerAcquirePassengers" value="1"/>
+        <TargetFilters value="Ground,Biological,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
+            <SortArray value="TSDistance"/>
+            <SortArray value="TSLifeFraction"/>
+        </TargetSorts>
+        <Range value="2"/>
+        <SmartValidatorArray value="healSmartTargetFilters"/>
+        <SmartValidatorArray value="NotWarpingIn"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="healCasterMinEnergy"/>
+        <AutoCastValidatorArray value="NotWarpingIn"/>
+        <Marker Link="Abil/MedivacHeal"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <AINotifyEffect value="SkibisAngelHeal"/>
+        <DefaultError value="RequiresHealTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MedicHeal"/>
+        <AcquireAttackers value="1"/>
+        <FollowRange value="1.5"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="MorphToAnarchist">
+        <AbilSetId value="TankMode"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BuildAnarchist" Requirements="HaveArmory">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="Anarchist" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.33"/>
+                <DurationArray index="Duration" value="3.67"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="4"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.33"/>
+                <DurationArray index="Duration" value="3.67"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToAgitator">
+        <AbilSetId value="HellionMode"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphtoAgitator" Requirements="HaveArmory">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="Agitator" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.33"/>
+                <DurationArray index="Duration" value="3.67"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="4"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.33"/>
+                <DurationArray index="Duration" value="3.67"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="SignalFlare">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SignalFlareInitial"/>
+        <Range value="10"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SignalFlare"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SprayandPay">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SprayandPayCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="14"/>
+        </Cost>
+        <Range value="250"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Invulnerable"/>
+        <AutoCastRange value="5.8"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SprayandPay"/>
+    </CAbilEffectTarget>
+</Catalog>

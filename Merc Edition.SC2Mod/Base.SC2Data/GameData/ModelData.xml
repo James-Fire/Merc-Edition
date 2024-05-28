@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="ACV" parent="SCVBase">
+        <Model value="Assets\Units\Terran\SCV_Merc_Collection\SCV_Merc_Collection.m3"/>
+    </CModel>
+    <CModel id="ACVDeath" parent="SCVDeathBase">
+        <Model value="Assets\Units\Terran\SCV_Merc_Collection_Death\SCV_Merc_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="ACVPortrait" parent="SCVPortraitBase">
+        <Model value="Assets\COOP\Tychus\Portraits\SCV_Heavens_COOP_Portrait\SCV_Heavens_COOP_Portrait.m3"/>
+        <Image value="Assets\Textures\SCVPortrait_Static.dds"/>
+        <Lighting value="SCVPortrait"/>
+    </CModel>
+    <CModel id="BlockB">
+        <Model value="Assets\Units\Terran\Reaper_Merc_Collection\Reaper_Merc_Collection.m3"/>
+    </CModel>
+    <CModel id="Copperhead" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\NC_Diamondback_BlueAttack.m3"/>
+        <Events>
+            <Anim value="Stand,Morph,End"/>
+            <Name value="DiamondbackCapture"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Diamondback_Capture"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+        <TechPurchaseCamera value="TechPurchaseDiamondback"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="CopperheadDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\DiamondbackDeath\DiamondbackDeath.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="CopperheadPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Models\NC_Diamondback_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\DiamondbackPortrait.fxa"/>
+        <Image value="Assets\Textures\DiamondbackPortrait_Static.dds"/>
+        <Lighting value="DiamondbackPortrait"/>
+    </CModel>
+    <CModel id="Agitator" parent="HellionBase">
+        <Model value="Assets\Units\Terran\Hellion_CovertOps_Collection\Hellion_CovertOps_Collection.m3"/>
+    </CModel>
+    <CModel id="AgitatorDeath" parent="HellionDeathBase">
+        <Model value="Assets\Units\Terran\Hellion_CovertOps_Collection_Death\Hellion_CovertOps_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="AgitatorPortrait" parent="HellionPortraitBase">
+        <Model value="Assets\Portraits\Terran\Hellion_CovertOps_Collection_Morph_Portrait\Hellion_CovertOps_Collection_Morph_Portrait.m3"/>
+        <Image value="Assets\Textures\HellionPortrait_Static.dds"/>
+        <Lighting value="HellionPortrait"/>
+    </CModel>
+    <CModel id="Adjucator" parent="Unit">
+        <Model value="Assets\Models\ScienceVesselBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="1.000000"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModel id="AdjucatorDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\ScienceVesselDeath\ScienceVesselDeath.m3"/>
+        <LowQualityModel value="ScienceVesselDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="0.933000"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="AdjucatorPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Scientist2Portrait\Scientist2Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\ScienceVesselPortrait.fxa"/>
+        <Image value="Assets\Textures\ScienceVesselPortrait_Static.dds"/>
+        <Lighting value="ScienceVesselPortrait"/>
+    </CModel>
+    <CModel id="CharonDropship" parent="MedivacBase">
+        <Model value="Assets\Units\Terran\Medivac_Merc_Collection\Medivac_Merc_Collection.m3"/>
+    </CModel>
+    <CModel id="CharonDropshipDeath" parent="MedivacDeathBase">
+        <Model value="Assets\Units\Terran\MedivacDeathEx1\MedivacDeathEx1.m3"/>
+    </CModel>
+    <CModel id="CharonDropshipPortrait" parent="MedivacPortraitBase">
+        <Model value="Assets\Portraits\Terran\Liberator_Silver_Portrait\Liberator_Silver_Portrait.m3"/>
+        <Image value="Assets\Textures\MedivacPortrait_Static.dds"/>
+        <Lighting value="MedivacPortrait"/>
+    </CModel>
+    <CModelFoliage id="DeadMenTellNoTales">
+        <Model value="Assets\COOP\Tychus\Effects\Firebat_Heavens_COOP_ExplosiveFire\Firebat_Heavens_COOP_ExplosiveFire.m3"/>
+        <AnimSpeed value="0.800000"/>
+    </CModelFoliage>
+    <CModelFoliage id="DieselBasedNapalm">
+        <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
+    </CModelFoliage>
+    <CModel id="SignalFlareMissile">
+        <Model value="Assets\Doodads\Tarsonis_Light\Tarsonis_Light_00.m3"/>
+    </CModel>
+    <CModelFoliage id="SignalFlareSmoke">
+        <Model value="Assets\Doodads\SmokeMedium\SmokeMedium.m3"/>
+        <AnimSpeed value="2.000000"/>
+    </CModelFoliage>
+    <CModelFoliage id="SignalFlareUnit">
+        <Model value="Assets\Doodads\Tarsonis_Light\Tarsonis_Light_00.m3"/>
+    </CModelFoliage>
+    <CModel id="SkibisAngel" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\MedicMercenary\MedicMercenary.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="SkibisAngelDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\MedicMercenaryDeath\MedicMercenaryDeath.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="SkibisAngelPortrai" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\COOP\Tychus\Portraits\Medic_Heavens_COOP_Portrait\Medic_Heavens_COOP_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\MedicPortrait.fxa"/>
+        <Image value="Assets\Textures\MedicPortrait_Static.dds"/>
+        <Lighting value="MedicPortrait"/>
+    </CModel>
+    <CModel id="Nomad" parent="Unit" Race="Terran">
+        <Events>
+            <Anim value="Work,00"/>
+            <Name value="PortJunkerWeldSelf"/>
+            <Type value="Sound"/>
+            <Time value="0.433000"/>
+            <Payload value="PortJunker_WeldSelf"/>
+        </Events>
+        <Events>
+            <Anim value="Work,00"/>
+            <Name value="PortJunkerWeldSelf"/>
+            <Type value="Sound"/>
+            <Time value="1.200000"/>
+            <Payload value="PortJunker_WeldSelf"/>
+        </Events>
+        <Events>
+            <Anim value="Work,00"/>
+            <Name value="PortJunkerWeldSelf"/>
+            <Type value="Sound"/>
+            <Time value="2.200000"/>
+            <Payload value="PortJunker_WeldSelf"/>
+        </Events>
+        <Events>
+            <Anim value="Work,00"/>
+            <Name value="PortJunkerWeldSelf"/>
+            <Type value="Sound"/>
+            <Time value="3.066000"/>
+            <Payload value="PortJunker_WeldSelf"/>
+        </Events>
+        <Events>
+            <Anim value="Work,00"/>
+            <Name value="PortJunkerWeldSelf"/>
+            <Type value="Sound"/>
+            <Time value="4.166000"/>
+            <Payload value="PortJunker_WeldSelf"/>
+        </Events>
+        <Events>
+            <Anim value="Work,00"/>
+            <Name value="PortJunkerWeldSelf"/>
+            <Type value="Sound"/>
+            <Time value="5.133000"/>
+            <Payload value="PortJunker_WeldSelf"/>
+        </Events>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.350000"/>
+        <SelectionRadius value="1.666500"/>
+        <ShadowRadius value="1.666500"/>
+    </CModel>
+    <CModel id="PortraitStarcruiser" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Battlecruiser_Silver_Portrait\Battlecruiser_Silver_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\BattlecruiserPortrait.fxa"/>
+        <Image value="Assets\Textures\BattlecruiserMercenaryPortrait_Static.dds"/>
+        <Lighting value="BattlecruiserMercenaryPortrait"/>
+    </CModel>
+    <CModel id="Reaper2" parent="ReaperBase">
+        <Model value="Assets\Units\Terran\Reaper\Reaper.m3"/>
+    </CModel>
+    <CModel id="BlockBDeath" parent="ReaperDeathBase">
+        <Model value="Assets\Units\Terran\ReaperDeathEx1\ReaperDeathEx1.m3"/>
+    </CModel>
+    <CModel id="BlockBPortrait" parent="ReaperPortraitBase">
+        <Model value="Assets\Portraits\Terran\Reaper_CovertOps_Collection_Portrait\Reaper_CovertOps_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\ReaperPortrait_Static.dds"/>
+        <Lighting value="ReaperPortrait"/>
+    </CModel>
+    <CModelFoliage id="SprayandPayLaunchModel">
+        <Model value="Assets\Models\Nova_PenetratingShot_Launch.m3"/>
+    </CModelFoliage>
+    <CModel id="Starcruiser" parent="Unit">
+        <Model value="Assets\Units\Terran\BattleCruiser_Merc_Collection\BattleCruiser_Merc_Collection.m3"/>
+        <AttachProps Id="Ref_Weapon 20">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 21">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 22">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 23">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 24">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 25">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 10">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 11">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 20">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 21">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 22">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 23">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 24">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 25">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.300000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.700000"/>
+        <SelectionRadius value="1.562500"/>
+        <ShadowRadius value="1.562500"/>
+        <Tipability value="0.150000"/>
+        <UnitGlossaryCamera value="Star2CameraLow12"/>
+    </CModel>
+    <CModel id="StarcruiserDeath" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\BattleCruiser_Merc_Collection_Death\BattleCruiser_Merc_Collection_Death_00.m3"/>
+        <LowQualityModel value="DukesRevengeDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.333000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.666000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.600000"/>
+        </Events>
+    </CModel>
+    <CModel id="Phantom" parent="GhostBase">
+        <Model value="Assets\Models\Ghost_Mercenary.m3"/>
+    </CModel>
+    <CModel id="PhantomDeath" parent="GhostDeathBase">
+        <Model value="Assets\Units\Terran\Ghost_CovertOps_Collection_Death\Ghost_CovertOps_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="PhantomPortrait" parent="GhostPortraitBase">
+        <Model value="Assets\Models\Ghost_Mercenary_Portrait.m3"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ghostportraitex3_static.dds"/>
+        <Lighting value="GhostPortrait"/>
+    </CModel>
+    <CModel id="Shadow" parent="Unit">
+        <Model value="Assets\Models\Spectre_Mercenary.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="ShadowPortrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Models\Spectre_Mercenary_Portrait.m3"/>
+        <Flags index="Download" value="1"/>
+        <Image value="Assets\Textures\SpectrePortrait_Static.dds"/>
+        <Lighting value="SpectrePortrait"/>
+    </CModel>
+    <CModel id="Harrier" parent="Unit">
+        <Model value="Assets\Models\NC_Wraith_(OrangeEngines).m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.625000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <TechPurchaseCamera value="TechPurchaseStarship"/>
+        <Tipability value="0.750000"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
+    <CModel id="HarrierPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Models\NC_Wraith_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\WraithPortrait.fxa"/>
+        <Image value="Assets\Textures\WraithPortrait_Static.dds"/>
+        <Lighting value="WraithPortrait"/>
+    </CModel>
+    <CModelFoliage id="ThornShieldDamage">
+        <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
+    </CModelFoliage>
+    <CModel id="Titan" parent="ThorBase">
+        <Model value="Assets\Units\Terran\Thor_Merc_Collection\Thor_Merc_Collection.m3"/>
+    </CModel>
+    <CModel id="TitanDeath" parent="ThorDeathBase">
+        <Model value="Assets\Units\Terran\Thor_Merc_Collection_Death\Thor_Merc_Collection_Death_00.m3"/>
+    </CModel>
+    <CModel id="TitanPortrait" parent="ThorPortraitBase">
+        <Model value="Assets\Portraits\Protoss\Thor_Merc_Collection_Portrait\Thor_Merc_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\ThorPortrait_Static.dds"/>
+        <Lighting value="ThorPortrait"/>
+    </CModel>
+    <CModel id="Condor" parent="Unit">
+        <Model value="Assets\Models\MercVulture.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.722000"/>
+        <ShadowRadius value="0.722000"/>
+        <TechPurchaseCamera value="TechPurchaseVehicle"/>
+        <Tipability value="1.000000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="CondorDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\MercVultureDeath.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+    </CModel>
+    <CModel id="CondorPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\VulturePortrait\VulturePortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\VulturePortrait.fxa"/>
+        <Image value="Assets\Textures\VulturePortrait_Static.dds"/>
+        <Lighting value="WarfieldPortrait"/>
+    </CModel>
+    <CModel id="AnarchistPortrait" parent="HellionPortraitBase">
+        <Model value="Assets\Portraits\Terran\HellionMorphPortrait\HellionMorphPortrait.m3"/>
+        <Image value="Assets\Textures\HellionPortrait_Static.dds"/>
+        <Lighting value="HellionPortrait"/>
+    </CModel>
+    <CModel id="Anarchist" parent="HellionHellbatBase">
+        <Model value="Assets\Units\Terran\Hellbat_CovertOps_Collection\Hellbat_CovertOps_Collection.m3"/>
+    </CModel>
+    <CModel id="AnarchistAttackFireAddition" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="AnarchistAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\HellionTankAttack\HellionTankAttack.m3"/>
+        <LowQualityModel value="HellionTankAttackLaunchLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.650000,1.650000,1.000000"/>
+        <ScaleMin value="1.650000,1.650000,1.000000"/>
+    </CModel>
+    <CModel id="AnarchistDeath" parent="HellionHellbatDeathBase">
+        <Model value="Assets\Units\Terran\HellionEx1TankDeath\HellionEx1TankDeath.m3"/>
+    </CModel>
+    <CModel id="AnarchistDeathRagdoll" parent="HellionHellbatDeathRagdollBase">
+        <Model value="Assets\Units\Terran\HellionTankDeathRagdoll\HellionTankDeathRagdoll.m3"/>
+    </CModel>
+    <CModelFoliage id="SprayandPayImpactModel">
+        <Model value="Assets\Models\Nova_PenetratingShot_Impact.m3"/>
+    </CModelFoliage>
+</Catalog>
