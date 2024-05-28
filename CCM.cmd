@@ -3,7 +3,7 @@ net session >nul 2>&1
 if %errorlevel%==2 powershell -noprofile -command "&{ start-process '%~f0' -verb RunAs}" && exit
 cd /d %~dp0
 for /f "delims=" %%i in ('dir /b /a:-d ^| find "SC2Map"') do (
-	cd /d "C:\Program Files (x86)\StarCraft II\Maps\Campaign"
+	cd /d "E:\Blizzard Games\StarCraft II\Maps\Campaign"
 	if exist %%i\ (
 		rmdir "%%i"
 	) else if exist %%i (
@@ -13,7 +13,7 @@ for /f "delims=" %%i in ('dir /b /a:-d ^| find "SC2Map"') do (
 )
 cd /d %~dp0
 for /f "delims=" %%i in ('dir /b /a:d ^| find "SC2Map"') do (
-	cd /d "C:\Program Files (x86)\StarCraft II\Maps\Campaign"
+	cd /d "E:\Blizzard Games\StarCraft II\Maps\Campaign"
 	if exist %%i\ (
 		rmdir "%%i"
 	) else if exist %%i (
@@ -23,12 +23,12 @@ for /f "delims=" %%i in ('dir /b /a:d ^| find "SC2Map"') do (
 )
 cd /d %~dp0
 for /f "delims=" %%i in ('dir /b /a:d ^| find "SC2Mod"') do (
-	cd /d "C:\Program Files (x86)\StarCraft II\Mods"
+	cd /d "E:\Blizzard Games\StarCraft II\Mods"
 	rmdir "%%i"
 	mklink "%%i" "%~dp0\%%i"
 )
 for /f "delims=" %%i in ('dir /b /a:-d ^| find "SC2Mod"') do (
-	cd /d "C:\Program Files (x86)\StarCraft II\Mods"
+	cd /d "E:\Blizzard Games\StarCraft II\Mods"
 	del "%%i"
 	mklink /d "%%i" "%~dp0\%%i"
 )
