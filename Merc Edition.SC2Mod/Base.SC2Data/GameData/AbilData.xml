@@ -146,8 +146,12 @@
     <CAbilEffectTarget id="SignalFlare">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SignalFlareInitial"/>
-        <Range value="10"/>
+        <Range value="16"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SignalFlare"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <PrepTime value="1"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <ProgressButtonArray index="Prep" value="SignalFlare"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SprayandPay">
         <EditorCategories value="AbilityorEffectType:Units"/>

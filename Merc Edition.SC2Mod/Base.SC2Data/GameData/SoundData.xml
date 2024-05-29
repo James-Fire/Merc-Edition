@@ -227,6 +227,26 @@
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_017.fxe"/>
         </AssetArray>
     </CSound>
+    <CSound id="SignalFlareLaunch">
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing3.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="SignalFlareLoop">
+        <AssetArray>
+            <File value="Assets\Sounds\FlameTurret_Loop_01.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,230818"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Pitch value="6.000000,6.000000"/>
+        <Volume value="-15.000000,-15.000000"/>
+    </CSound>
     <CSound id="SprayandPayImpactSound">
         <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_02.wav" FacialGroup=""/>

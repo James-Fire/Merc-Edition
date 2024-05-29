@@ -110,15 +110,20 @@
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="SignalFlareDebuffModel">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop_Impact\MiraHorner_Hellion_DeathRattle_Coop_Impact.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModelFoliage>
     <CModel id="SignalFlareMissile">
-        <Model value="Assets\Doodads\Tarsonis_Light\Tarsonis_Light_00.m3"/>
+        <Model value="Assets\Effects\Terran\BansheeMissile\BansheeMissile.m3"/>
     </CModel>
     <CModelFoliage id="SignalFlareSmoke">
-        <Model value="Assets\Doodads\SmokeMedium\SmokeMedium.m3"/>
+        <Model value="Assets\Effects\Neutral\SmokeStack_Smoke_Constant_Sm\SmokeStack_Smoke_Constant_Sm.m3"/>
         <AnimSpeed value="2.000000"/>
     </CModelFoliage>
     <CModelFoliage id="SignalFlareUnit">
-        <Model value="Assets\Doodads\Tarsonis_Light\Tarsonis_Light_00.m3"/>
+        <Model value="Assets\Effects\Terran\BansheeMissile\BansheeMissile.m3"/>
     </CModelFoliage>
     <CModel id="SkibisAngel" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\MedicMercenary\MedicMercenary.m3"/>

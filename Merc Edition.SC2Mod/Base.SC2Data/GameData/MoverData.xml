@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CMoverMissile id="SignalFlareMissile">
-        <MotionPhases Driver="Ballistic" Gravity="12" FlightTime="0.875"/>
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="20"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="0.7"/>
+        </MotionPhases>
     </CMoverMissile>
 </Catalog>

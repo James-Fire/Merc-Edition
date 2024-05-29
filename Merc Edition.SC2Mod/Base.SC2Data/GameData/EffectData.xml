@@ -163,16 +163,21 @@
         <WhichLocation Value="TargetPoint"/>
         <SpawnUnit value="SignalFlareUnit"/>
     </CEffectCreateUnit>
+    <CEffectCreateUnit id="SignalFlareDummyCU">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="SignalFlareRevealLaunchMissile"/>
+        <SpawnUnit value="SignalFlareTargetDummy"/>
+    </CEffectCreateUnit>
     <CEffectCreatePersistent id="SignalFlareInitial">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetUnitOrPoint"/>
         <InitialEffect value="SignalFlareSwitch"/>
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="SignalFlareRevealLaunchMissile">
-        <ImpactLocation Value="TargetPoint"/>
-        <ImpactOffset value="0,0,15"/>
         <ImpactEffect value="SignalFlareCU"/>
         <AmmoUnit value="SignalFlareMissile"/>
+        <LaunchLocation Value="CasterUnit"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="SignalFlareBlindLaunchMissile">
         <ImpactOffset value="0,0,15"/>
@@ -181,7 +186,7 @@
     </CEffectLaunchMissile>
     <CEffectSwitch id="SignalFlareSwitch">
         <EditorCategories value=""/>
-        <CaseArray Validator="TargetIsPoint" Effect="SignalFlareRevealLaunchMissile"/>
+        <CaseArray Validator="TargetIsPoint" Effect="SignalFlareDummyCU"/>
         <CaseDefault value="SignalFlareBlindLaunchMissile"/>
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSwitch>

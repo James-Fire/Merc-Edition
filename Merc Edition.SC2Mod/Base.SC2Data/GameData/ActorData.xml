@@ -290,13 +290,28 @@
     </CActorUnit>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
-        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeStandard SignalFlareHeightSOp"/>
     </CActorAction>
+    <CActorModel id="SignalFlareDebuffModel" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SignalFlareBlind.On" Send="Create"/>
+        <On Terms="Behavior.SignalFlareBlind.Off" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachHead"/>
+    </CActorModel>
     <CActorSiteOpLocalOffset id="SignalFlareHeightSOp">
         <EditorCategories value=""/>
         <LocalOffset value="0.000000,0.000000,15.000000"/>
     </CActorSiteOpLocalOffset>
-    <CActorMissile id="SignalFlareMissile" parent="GenericAttackMissile" unitName="SignalFlareMissile"/>
+    <CActorSound id="SignalFlareLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SignalFlareSwitch.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="SignalFlareLoop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+    </CActorSound>
+    <CActorMissile id="SignalFlareMissile" parent="GenericAttackMissile" unitName="SignalFlareMissile">
+        <On Terms="ActorCreation" Send="SetTintColor {255,128,128 15.000000}"/>
+        <HostSiteOps Ops="SOpPointUpWorld" HoldRotation="1"/>
+    </CActorMissile>
     <CActorRange id="SignalFlareRange" parent="RangeAbil" abil="SignalFlare">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
@@ -307,9 +322,17 @@
         <On Terms="UnitCreation.SignalFlareMissile" Send="Create"/>
         <On Terms="ActorCreation" Send="SetTintColor {255,128,128 2.000000}"/>
     </CActorModel>
+    <CActorUnit id="SignalFlareTargetDummy" parent="GenericUnitStandard" unitName="SignalFlareTargetDummy">
+        <EditorCategories value=""/>
+        <Model value="Invisible"/>
+        <HighlightTooltip value=""/>
+    </CActorUnit>
     <CActorUnit id="SignalFlareUnit" parent="GenericUnitStandard" unitName="SignalFlareUnit">
         <EditorCategories value=""/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,128,128 15.000000}"/>
+        <On Terms="ActorCreation" Send="Create SignalFlareLoop"/>
+        <HostSiteOps Ops="SOpPointUpWorld" HoldRotation="1"/>
     </CActorUnit>
     <CActorBeamSimple id="SkibisAngelHealBeam" parent="BeamSimpleAnimationStyleContinuous">
         <Inherits index="Visibility" value="1"/>
