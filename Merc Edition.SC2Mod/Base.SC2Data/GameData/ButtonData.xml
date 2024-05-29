@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="BearclawGauntlets">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
+    </CButton>
     <CButton id="BuildZeusLander">
         <Icon value="Assets\Textures\btn-unit-terran-hercules.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-hercules.dds"/>
@@ -60,6 +64,10 @@
         <AlertIcon value="Assets\Textures\btn-unit-collection-thor-collectoredition.dds"/>
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="Thor"/>
+    </CButton>
+    <CButton id="ChemicalPlating">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
     </CButton>
     <CButton id="DeadMenTellNoTales">
         <Icon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>

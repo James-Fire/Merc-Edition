@@ -5,6 +5,11 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ChemicalPlating">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseChemicalPlating"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DieselBasedNapalm">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>

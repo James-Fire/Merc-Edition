@@ -87,6 +87,15 @@
         <On Terms="WeaponStart.ACVFusionCutter.AttackStart" Send="Create"/>
         <Sound value="SCV_AttackLaunch"/>
     </CActorSound>
+    <CActorModel id="ChemicalPlating" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ChemicalPlatingDummy.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,0 7.000000}"/>
+    </CActorModel>
+    <CActorSound id="ChemicalPlatingImpacted" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ChemicalPlatingDummy.Start; At Target" Send="Create"/>
+    </CActorSound>
     <CActorUnit id="Copperhead" parent="GenericUnitStandard" unitName="Copperhead">
         <Aliases value="_UnitLarge"/>
         <Macros value="UnloadDropAnim"/>
@@ -291,6 +300,10 @@
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
     </CActorAction>
+    <CActorSound id="SignalFlareBlindSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SignalFlareBlind.On" Send="Create"/>
+    </CActorSound>
     <CActorModel id="SignalFlareDebuffModel" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.SignalFlareBlind.On" Send="Create"/>
@@ -303,7 +316,7 @@
     </CActorSiteOpLocalOffset>
     <CActorSound id="SignalFlareLaunch" parent="SoundOneShot">
         <EditorCategories value=""/>
-        <On Terms="Effect.SignalFlareSwitch.Start" Send="Create"/>
+        <On Terms="Effect.SignalFlareSwitch.Start; At Caster" Send="Create"/>
     </CActorSound>
     <CActorSound id="SignalFlareLoop" parent="SoundContinuous">
         <EditorCategories value=""/>

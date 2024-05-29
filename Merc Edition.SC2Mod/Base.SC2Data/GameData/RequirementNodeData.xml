@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
+        <Count Link="BearclawGauntlets" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeChemicalPlatingCompleteOnly">
+        <Count Link="ChemicalPlating" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSuperStimCompleteOnly">
         <Count Link="SuperStim" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

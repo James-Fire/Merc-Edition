@@ -23,6 +23,10 @@
         <Amount value="26"/>
         <Death value="Blast"/>
     </CEffectDamage>
+    <CEffectSet id="ChemicalPlatingDummy">
+        <ValidatorArray value="TargetHasChemicalPlating"/>
+        <EditorCategories value=""/>
+    </CEffectSet>
     <CEffectDamage id="DeadMenTellNoTales">
         <EditorCategories value=""/>
         <Kind value="Ranged"/>
@@ -319,5 +323,15 @@
         <EditorCategories value=""/>
         <ShieldBonus value="5"/>
         <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectSet id="VolatileBurst">
+        <EffectArray index="4" value="ChemicalPlatingDummy"/>
+        <EffectArray value="Suicide"/>
+    </CEffectSet>
+    <CEffectDamage id="VolatileBurstU">
+        <ValidatorArray value="TargetDoesntHaveChemicalPlating"/>
+    </CEffectDamage>
+    <CEffectDamage id="VolatileBurstU2">
+        <ValidatorArray value="TargetDoesntHaveChemicalPlating"/>
     </CEffectDamage>
 </Catalog>

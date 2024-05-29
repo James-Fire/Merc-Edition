@@ -149,6 +149,10 @@
         <Range value="16"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SignalFlare"/>
         <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Cooldown TimeUse="35"/>
+        </Cost>
         <PrepTime value="1"/>
         <ShowProgressArray index="Prep" value="1"/>
         <ProgressButtonArray index="Prep" value="SignalFlare"/>

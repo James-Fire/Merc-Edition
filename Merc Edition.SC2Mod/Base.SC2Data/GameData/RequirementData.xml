@@ -8,6 +8,14 @@
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeThornShieldQueuedOrBetter0"/>
     </CRequirement>
+    <CRequirement id="UseBearclawGauntlets">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseChemicalPlating">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeChemicalPlatingCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseSuperStim">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSuperStimCompleteOnly"/>

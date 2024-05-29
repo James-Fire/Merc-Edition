@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareBehaviorCount id="TargetDoesntHaveChemicalPlating">
+        <Compare value="NE"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="TargetHasChemicalPlating">
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitOrderTargetType id="TargetIsPoint">
         <Type value="Point"/>
     </CValidatorUnitOrderTargetType>

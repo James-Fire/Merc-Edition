@@ -5,6 +5,7 @@ Abil/Name/MorphToAnarchist=Morph To Anarchist
 Abil/Name/SignalFlare=Signal Flare
 Abil/Name/SprayandPay=Spray and Pay
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
+Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAgitator=Build Agitator
 Button/Name/BuildAnarchist=Build Anarchist
@@ -20,6 +21,7 @@ Button/Name/BuildSpartanCompany=Build Spartan Company
 Button/Name/BuildStarcruiser=Build Starcruiser
 Button/Name/BuildTitan=Build Titan
 Button/Name/BuildZeusLander=Build Zeus Lander
+Button/Name/ChemicalPlating=Chemical Plating
 Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/LaserTargetingSystem=Laser Targeting System
@@ -42,6 +44,7 @@ Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structu
 Button/Tooltip/Adjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/BearclawGauntlets=Increases the Devil Dog's attack radius by 60% and grants the Grapple ability.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/BuildAgitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -58,6 +61,7 @@ Button/Tooltip/BuildStarcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInf
 Button/Tooltip/BuildTitan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly.
 Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
+Button/Tooltip/ChemicalPlating=Increases the Devil Dog's armor by 3 and grants immunity to acid explosions.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby friendly and enemy units.
@@ -69,6 +73,7 @@ Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small 
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius to 1 and suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
 Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time="14"/>.
 Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
 Button/Tooltip/SprayandPay=Deal 6 damage in an arc to enemy units.
@@ -94,6 +99,7 @@ Effect/Name/BarBreakersCP=Bar Breakers CP
 Effect/Name/BarBreakersDamage=Bar Breakers Damage
 Effect/Name/C11EthereanRifle=C-11 Etherean Rifle
 Effect/Name/ChargedJupiterRailDamage=Charged Jupiter Rail Damage
+Effect/Name/ChemicalPlatingDummy=Chemical Plating Dummy
 Effect/Name/CoeusMissileCP=Coeus Missile CP
 Effect/Name/CoeusMissileDamage=Coeus Missile Damage
 Effect/Name/CoeusMissileLM=Coeus Missile LM
@@ -145,6 +151,8 @@ Unit/Name/SignalFlareUnit=Signal Flare Unit
 Unit/Name/SkibisAngel=Skibi's Angel
 Unit/Name/Starcruiser=Starcruiser
 Unit/Name/Titan=Titan
+Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
+Upgrade/Name/ChemicalPlating=Chemical Plating
 Upgrade/Name/LaserTargetingSystem=Laser Targeting System
 Upgrade/Name/SuperStim=Super Stim
 Upgrade/Name/ThornShield=Thorn Shield

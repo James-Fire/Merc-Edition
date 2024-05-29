@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade id="BearclawGauntlets">
+        <EffectArray Operation="Set" Reference="Effect,DevilDogSearchArea,AreaArray[0].Radius" Value="0.96"/>
+        <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
+        <AffectedUnitArray value="DevilDog"/>
+    </CUpgrade>
+    <CUpgrade id="ChemicalPlating">
+        <EffectArray Reference="Unit,DevilDog,LifeArmor" Value="3"/>
+        <AffectedUnitArray value="DevilDog"/>
+    </CUpgrade>
     <CUpgrade id="LaserTargetingSystem">
         <EffectArray Reference="Weapon,KelmorianMinerGaussRifle,Range" Value="1"/>
         <EffectArray Reference="Unit,WarPig,Sight" Value="2"/>

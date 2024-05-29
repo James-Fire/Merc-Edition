@@ -14,6 +14,11 @@
     <CModel id="BlockB">
         <Model value="Assets\Units\Terran\Reaper_Merc_Collection\Reaper_Merc_Collection.m3"/>
     </CModel>
+    <CModelFoliage id="ChemicalPlating">
+        <Model value="Assets\Effects\Terran\Nanocloud_Damage_Shield\Nanocloud_Damage_Shield.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModelFoliage>
     <CModel id="Copperhead" parent="Unit" Race="Terran">
         <Model value="Assets\Models\NC_Diamondback_BlueAttack.m3"/>
         <Events>
@@ -104,8 +109,9 @@
         <Lighting value="MedivacPortrait"/>
     </CModel>
     <CModelFoliage id="DeadMenTellNoTales">
-        <Model value="Assets\COOP\Tychus\Effects\Firebat_Heavens_COOP_ExplosiveFire\Firebat_Heavens_COOP_ExplosiveFire.m3"/>
-        <AnimSpeed value="0.800000"/>
+        <Model value="Assets\Effects\Terran\SpidermineExplosion\SpidermineExplosion_Low.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.000000"/>
+        <ScaleMin value="1.500000,1.500000,1.000000"/>
     </CModelFoliage>
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>

@@ -3,10 +3,10 @@
     <CMoverMissile id="SignalFlareMissile">
         <MotionPhases>
             <Driver value="Ballistic"/>
-            <Gravity value="20"/>
+            <Gravity value="25"/>
             <ThrowBandYaw value="-360,-360,-360,-360"/>
             <ThrowBandPitch value="-360,-360,-360,-360"/>
-            <FlightTime value="0.7"/>
+            <FlightTime value="1.2"/>
         </MotionPhases>
     </CMoverMissile>
 </Catalog>
