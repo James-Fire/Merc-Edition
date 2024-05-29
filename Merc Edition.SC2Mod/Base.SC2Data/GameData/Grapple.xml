@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectCreatePersistent id="DevilDogGrappleInitialCP">
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <InitialEffect value="DevilDogGrappleSwitch"/>
+        <PeriodCount value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="DevilDogGrappleCU">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="Placement" value="0"/>
+        <SpawnEffect value="DevilDogGrappleCUPoint"/>
+        <SpawnRange value="0"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="DevilDogGrappleCUClosest">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <SpawnEffect value="DevilDogGrappleCUPoint"/>
+        <SpawnRange value="8"/>
+    </CEffectCreateUnit>
+    <CEffectCreatePersistent id="DevilDogGrappleCUPoint">
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="MakePrecursor"/>
+        <PeriodicEffectArray value="DevilDogGrappleLM"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="DevilDogGrappleLM">
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Effect="DevilDogGrappleCUPoint" Value="TargetPoint"/>
+        <FinishEffect value="DevilDogGrappleRemovePrecursor"/>
+        <Flags index="2D" value="1"/>
+        <Movers Link="DevilDogGrappleMissile"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="DevilDogGrappleRemovePrecursor">
+        <ImpactLocation Effect="DevilDogGrappleCUPoint" Value="TargetUnit"/>
+        <Flags index="Kill" value="1"/>
+        <Death value="Remove"/>
+    </CEffectDamage>
+    <CEffectSwitch id="DevilDogGrappleSwitch">
+        <CaseArray Validator="GrappleValidator" Effect="DevilDogGrappleCU"/>
+        <CaseDefault value="DevilDogGrappleCUClosest"/>
+    </CEffectSwitch>
+    <CAbilEffectTarget id="DevilDogGrapple">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DevilDogGrappleInitialCP"/>
+        <Cost>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Range value="8"/>
+        <Arc value="4.9987"/>
+        <AINotifyEffect value="DevilDogGrappleInitialCP"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DevilDogGrapple" Requirements="UseBearclawGauntlets"/>
+    </CAbilEffectTarget>
+    <CValidatorCombine id="GrappleValidator">
+        <Type value="And"/>
+        <CombineArray value="TargetIsPathable"/>
+        <CombineArray value="HasVision"/>
+        <CombineArray value="GrappleLocationRangeCheck"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="GrappleLocationRangeCheck">
+        <ResultFailed value="TargetIsOutOfRange"/>
+        <WhichLocation Value="SourceUnit"/>
+        <Compare value="LT"/>
+        <Range value="8"/>
+        <Value Value="TargetPoint"/>
+    </CValidatorLocationCompareRange>
+</Catalog>

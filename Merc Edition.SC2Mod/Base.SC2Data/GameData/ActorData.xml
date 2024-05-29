@@ -279,6 +279,23 @@
         <On Terms="Effect.DeadMenTellNoTales.Start" Send="Create"/>
         <Scale value="1.500000"/>
     </CActorModel>
+    <CActorModel id="DevilDogGrappleImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DevilDogGrappleRemovePrecursor.Start" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="DevilDogGrappleJets" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DevilDogGrappleLM.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.DevilDogGrappleRemovePrecursor.Start" Send="Destroy"/>
+    </CActorModel>
+    <CActorSound id="DevilDogGrappleLand" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DevilDogGrappleRemovePrecursor.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="DevilDogGrappleLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DevilDogGrappleLM.Start; At Caster" Send="Create"/>
+    </CActorSound>
     <CActorModel id="DieselBasedNapalm" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.DieselBasedNapalm.On" Send="Create"/>
@@ -309,6 +326,7 @@
         <On Terms="Behavior.SignalFlareBlind.On" Send="Create"/>
         <On Terms="Behavior.SignalFlareBlind.Off" Send="Destroy"/>
         <HostSiteOps Ops="SOpAttachHead"/>
+        <Host Subject="_Unit"/>
     </CActorModel>
     <CActorSiteOpLocalOffset id="SignalFlareHeightSOp">
         <EditorCategories value=""/>

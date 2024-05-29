@@ -77,6 +77,10 @@
         <Icon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
     </CButton>
+    <CButton id="DevilDogGrapple">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
+    </CButton>
     <CButton id="MagrailMunitions">
         <Icon value="Assets\Textures\btn-upgrade-terran-magrailmunitions.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-magrailmunitions.dds"/>

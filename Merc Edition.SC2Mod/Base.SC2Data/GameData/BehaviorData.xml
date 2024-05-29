@@ -17,6 +17,9 @@
         <Period value="1"/>
         <PeriodicEffect value="DieselBasedNapalmDamage"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="Precursor">
+        <Modification RadiusMultiplier="0"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SignalFlareBlind">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>

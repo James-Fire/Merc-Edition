@@ -113,6 +113,14 @@
         <ScaleMax value="1.500000,1.500000,1.000000"/>
         <ScaleMin value="1.500000,1.500000,1.000000"/>
     </CModelFoliage>
+    <CModelFoliage id="DevilDogGrappleImpact">
+        <Model value="Assets\Effects\Neutral\Evolution_Impact_Terran_Coop\Evolution_Impact_Terran_Coop.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="DevilDogGrappleJets">
+        <Model value="Assets\Effects\Terran\FirebatHitSprite\FirebatHitSprite.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModelFoliage>
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>

@@ -12,6 +12,7 @@ Button/Hotkey/BuildSpartanCompany=G
 Button/Hotkey/BuildStarcruiser=B
 Button/Hotkey/BuildTitan=T
 Button/Hotkey/BuildZeusLander=H
+Button/Hotkey/DevilDogGrapple=G
 Button/Hotkey/MorphtoAgitator=C
 Button/Hotkey/MorphtoAnarchist=C
 Button/Hotkey/SignalFlare=F

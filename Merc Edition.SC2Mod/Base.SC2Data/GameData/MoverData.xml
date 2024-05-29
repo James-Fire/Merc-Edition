@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CMoverMissile id="DevilDogGrappleMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="24"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="1"/>
+        </MotionPhases>
+        <RotationIgnoredByUnit value="1"/>
+    </CMoverMissile>
     <CMoverMissile id="SignalFlareMissile">
         <MotionPhases>
             <Driver value="Ballistic"/>
