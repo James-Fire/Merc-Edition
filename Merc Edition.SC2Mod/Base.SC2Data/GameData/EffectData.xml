@@ -33,6 +33,7 @@
         <Amount value="50"/>
         <Death value="Fire"/>
         <AreaArray Radius="1.4" Fraction="1"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Invulnerable,Benign"/>
     </CEffectDamage>
     <CEffectSet id="DevilDogSet">
         <EffectArray value="DieselBasedNapalmAB"/>
@@ -141,6 +142,13 @@
         <PeriodicPeriodArray value="0.25"/>
         <PeriodicPeriodArray value="0.125"/>
     </CEffectCreatePersistent>
+    <CEffectDamage id="MagrailMunitionsDamage">
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="MagrailMunitionsLaunchMissile">
+        <ImpactEffect value="MagrailMunitionsDamage"/>
+        <AmmoUnit value="MagrailMunitionsMissile"/>
+    </CEffectLaunchMissile>
     <CEffectLaunchMissile id="PharaohLaserBatteryLM">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>

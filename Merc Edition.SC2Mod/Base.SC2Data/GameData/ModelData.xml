@@ -124,6 +124,9 @@
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModel id="MagrailMunitionsMissile">
+        <Model value="Assets\Effects\Terran\MagrailMunition_Missile\MagrailMunition_Missile.m3"/>
+    </CModel>
     <CModelFoliage id="SignalFlareDebuffModel">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop_Impact\MiraHorner_Hellion_DeathRattle_Coop_Impact.m3"/>
         <ScaleMax value="0.600000,0.600000,0.600000"/>

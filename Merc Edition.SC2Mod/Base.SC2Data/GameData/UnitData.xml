@@ -474,6 +474,7 @@
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="125"/>
     </CUnit>
+    <CUnit id="MagrailMunitionsMissile" parent="MISSILE"/>
     <CUnit id="SiegeBreaker">
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="185"/>

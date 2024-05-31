@@ -314,6 +314,10 @@
         <On Terms="Abil.SprayandPay.SourceCastStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 2.000000 AsTimeScale"/>
         <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Attack"/>
     </CActorUnit>
+    <CActorAction id="MagrailMunitions" parent="GenericAttack" effectLaunch="MagrailMunitionsLaunchMissile">
+        <LaunchAttachQuery Methods="Weapon 0"/>
+    </CActorAction>
+    <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile"/>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
     </CActorAction>
