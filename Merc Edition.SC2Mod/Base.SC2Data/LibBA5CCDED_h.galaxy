@@ -3,6 +3,9 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: Merc Edition Data
 //--------------------------------------------------------------------------------------------------
+// Function Declarations
+void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
+
 // Trigger Declarations
 trigger libBA5CCDED_gt_WarPigLaserTargetingSystem;
 

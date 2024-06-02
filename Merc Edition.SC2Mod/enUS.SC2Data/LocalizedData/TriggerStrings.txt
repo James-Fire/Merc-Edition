@@ -1,3 +1,7 @@
 ﻿Category/Name/lib_BA5CCDED_CA3A8D1E=Passive Upgrades
+Category/Name/lib_BA5CCDED_FFB39B08=Skin Stuff
+FunctionDef/Name/lib_BA5CCDED_F9E916E2=Taldarimify
 Library/Name/BA5CCDED=Merc Edition Data
+ParamDef/Name/lib_BA5CCDED_6E697F4C=Players
 Trigger/Name/lib_BA5CCDED_C1709FCF=War Pig - Laser Targeting System
+Variable/Name/lib_BA5CCDED_1F02B372=Player
