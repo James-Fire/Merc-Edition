@@ -135,20 +135,6 @@
             <LayoutButtons Face="Firebat" Type="AbilCmd" AbilCmd="BarracksTrain,Train6" Row="1" Column="1"/>
         </CardLayouts>
     </CUnit>
-    <CUnit id="DevilDog">
-        <CostResource index="Minerals" value="125"/>
-        <CostResource index="Vespene" value="50"/>
-        <EffectArray index="Death" value="DeadMenTellNoTales"/>
-        <BehaviorArray Link="ChemicalPlating"/>
-        <AbilArray Link="DevilDogGrapple"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="5" Face="BearclawGauntlets" AbilCmd="" Requirements="UseBearclawGauntlets" Column="1"/>
-            <LayoutButtons index="6" Face="ChemicalPlating" AbilCmd="" Requirements="UseChemicalPlating" Column="2"/>
-            <LayoutButtons Face="DevilDogGrapple" Type="AbilCmd" AbilCmd="DevilDogGrapple,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="DeadMenTellNoTales" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="DieselBasedNapalm" Type="Passive" Row="1" Column="1"/>
-        </CardLayouts>
-    </CUnit>
     <CUnit id="Copperhead">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
@@ -225,10 +211,6 @@
         <GlossaryWeakArray value="Marauder"/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
     </CUnit>
-    <CUnit id="DuskWing">
-        <CostResource index="Minerals" value="225"/>
-        <CostResource index="Vespene" value="150"/>
-    </CUnit>
     <CUnit id="Agitator">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
@@ -291,6 +273,24 @@
         <GlossaryWeakArray value="Stalker"/>
         <GlossaryWeakArray value="Marauder"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
+    </CUnit>
+    <CUnit id="DevilDog">
+        <CostResource index="Minerals" value="125"/>
+        <CostResource index="Vespene" value="50"/>
+        <AbilArray Link="DevilDogGrapple"/>
+        <BehaviorArray Link="ChemicalPlating"/>
+        <EffectArray index="Death" value="DeadMenTellNoTales"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="BearclawGauntlets" AbilCmd="" Requirements="UseBearclawGauntlets" Column="1"/>
+            <LayoutButtons index="6" Face="ChemicalPlating" AbilCmd="" Requirements="UseChemicalPlating" Column="2"/>
+            <LayoutButtons Face="DevilDogGrapple" Type="AbilCmd" AbilCmd="DevilDogGrapple,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="DeadMenTellNoTales" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="DieselBasedNapalm" Type="Passive" Row="1" Column="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="DuskWing">
+        <CostResource index="Minerals" value="225"/>
+        <CostResource index="Vespene" value="150"/>
     </CUnit>
     <CUnit id="Factory">
         <CardLayouts index="0">
@@ -466,6 +466,16 @@
         <GlossaryPriority value="210"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
+    <CUnit id="HammerSecurity">
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="50"/>
+        <AbilArray index="3" Link="MagrailMunitions"/>
+        <AbilArray Link="LowGradeStim"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="MagrailMunitions" Type="AbilCmd" AbilCmd="MagrailMunitions,Execute" Requirements="" Column="1"/>
+            <LayoutButtons index="6" Face="LowGradeStims" Type="AbilCmd" AbilCmd="LowGradeStim,Execute" Requirements="" Column="0"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="HelsAngelAssault">
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="125"/>
@@ -562,6 +572,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="GreaterHeal"/>
         <AbilArray Link="SignalFlare"/>
+        <BehaviorArray Link="ThornShield"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -589,7 +600,6 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
-        <BehaviorArray Link="ThornShield"/>
     </CUnit>
     <CUnit id="Nomad">
         <DeathRevealRadius value="3"/>
@@ -863,10 +873,6 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
     </CUnit>
-    <CUnit id="HammerSecurity">
-        <CostResource index="Minerals" value="150"/>
-        <CostResource index="Vespene" value="50"/>
-    </CUnit>
     <CUnit id="Shadow">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
@@ -1097,17 +1103,6 @@
         <GlossaryWeakArray value="SiegeTank"/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
     </CUnit>
-    <CUnit id="WarPig">
-        <CostResource index="Minerals" value="75"/>
-        <AbilArray index="3" Link="SprayandPay"/>
-        <BehaviorArray Link="ThornShield"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="5" Face="SprayandPay" AbilCmd="SprayandPay,Execute"/>
-            <LayoutButtons index="6" Face="SuperStim" AbilCmd="" Requirements="UseSuperStim"/>
-            <LayoutButtons Face="ThornShieldWarPig" Type="Passive" Requirements="UseThornShield" Row="2" Column="2"/>
-            <LayoutButtons Face="LaserTargetingSystem" Type="Passive" Row="1" Column="0"/>
-        </CardLayouts>
-    </CUnit>
     <CUnit id="Harrier">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
@@ -1256,5 +1251,16 @@
         <GlossaryWeakArray value="Marauder"/>
         <GlossaryAlias value="HellionTank"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
+    </CUnit>
+    <CUnit id="WarPig">
+        <CostResource index="Minerals" value="75"/>
+        <AbilArray index="3" Link="SprayandPay"/>
+        <BehaviorArray Link="ThornShield"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="SprayandPay" AbilCmd="SprayandPay,Execute"/>
+            <LayoutButtons index="6" Face="SuperStim" AbilCmd="" Requirements="UseSuperStim"/>
+            <LayoutButtons Face="ThornShieldWarPig" Type="Passive" Requirements="UseThornShield" Row="2" Column="2"/>
+            <LayoutButtons Face="LaserTargetingSystem" Type="Passive" Row="1" Column="0"/>
+        </CardLayouts>
     </CUnit>
 </Catalog>

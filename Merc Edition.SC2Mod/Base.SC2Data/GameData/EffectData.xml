@@ -142,13 +142,30 @@
         <PeriodicPeriodArray value="0.25"/>
         <PeriodicPeriodArray value="0.125"/>
     </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="LowGradeStimsApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="LowGradeStims"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="MagrailMunitionsCP">
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialDelay value="0.1"/>
+        <InitialEffect value="MagrailMunitionsLaunchMissile"/>
+        <ExpireDelay value="0.9"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="MagrailMunitionsDamage">
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="MagrailMunitionsLaunchMissile">
         <ImpactEffect value="MagrailMunitionsDamage"/>
         <AmmoUnit value="MagrailMunitionsMissile"/>
+        <ImpactLocation Effect="MagrailMunitionsSet"/>
+        <Flags index="Channeled" value="1"/>
     </CEffectLaunchMissile>
+    <CEffectSet id="MagrailMunitionsSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="MagrailMunitionsCP"/>
+    </CEffectSet>
     <CEffectLaunchMissile id="PharaohLaserBatteryLM">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>

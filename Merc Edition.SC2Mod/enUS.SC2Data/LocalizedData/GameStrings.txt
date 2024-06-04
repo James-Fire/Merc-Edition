@@ -1,11 +1,15 @@
 ﻿Abil/Name/ACVHarvest=Gather (ACV)
 Abil/Name/DevilDogGrapple=Grapple
 Abil/Name/GreaterHeal=Greater Heal
+Abil/Name/LowGradeStim=Low Grade Stim
+Abil/Name/MagrailMunitions=Magrail Munitions
 Abil/Name/MorphToAgitator=Morph To Agitator
 Abil/Name/MorphToAnarchist=Morph To Anarchist
 Abil/Name/SignalFlare=Signal Flare
 Abil/Name/SprayandPay=Spray and Pay
+Behavior/Name/LowGradeStims=Low Grade Stims
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
+Behavior/Tooltip/LowGradeStims=This unit is firing faster.
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAgitator=Build Agitator
@@ -27,6 +31,7 @@ Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
 Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/LaserTargetingSystem=Laser Targeting System
+Button/Name/LowGradeStims=Low Grade Stims
 Button/Name/MagrailMunitions=Magrail Munitions
 Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
@@ -71,7 +76,8 @@ Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
-Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42">.
+Button/Tooltip/LowGradeStims=Increase attack speed by 100% for <d time="7"/>.
+Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42"/>.
 Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -124,8 +130,11 @@ Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
 Effect/Name/HellbornFlamethrowerCP=Hellborn Flamethrower CP
 Effect/Name/HellbornFlamethrowerDamage=Hellborn Flamethrower Damage
 Effect/Name/HellbornFlamethrowerSA=Hellborn Flamethrower SA
+Effect/Name/LowGradeStimsApplyBehavior=LowGradeStimsApplyBehavior
+Effect/Name/MagrailMunitionsCP=MagrailMunitions CP
 Effect/Name/MagrailMunitionsDamage=Magrail Munitions Damage
 Effect/Name/MagrailMunitionsLaunchMissile=Magrail Munitions Launch Missile
+Effect/Name/MagrailMunitionsSet=MagrailMunitionsSet
 Effect/Name/PharaohLaserBatteryDamage=Pharaoh Laser Battery Damage
 Effect/Name/PharaohLaserBatteryLM=Pharaoh Laser Battery LM
 Effect/Name/ScorpionMissiles=Scorpion Missiles

@@ -101,6 +101,31 @@
         <AcquireAttackers value="1"/>
         <FollowRange value="1.5"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="LowGradeStim">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="LowGradeStimsApplyBehavior"/>
+        <Cost>
+            <Cooldown TimeUse="84"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LowGradeStims"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="MagrailMunitions">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MagrailMunitionsSet"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="7"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="7"/>
+        <FinishTime value="0.5"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MagrailMunitions">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
     <CAbilMorph id="MorphToAnarchist">
         <AbilSetId value="TankMode"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>

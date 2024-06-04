@@ -17,6 +17,15 @@
         <Period value="1"/>
         <PeriodicEffect value="DieselBasedNapalmDamage"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="LowGradeStims">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="Precursor">
         <Modification RadiusMultiplier="0"/>
     </CBehaviorBuff>

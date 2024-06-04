@@ -303,6 +303,12 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
     <!--                                                                                         -->
+    <!-- Hammer Security ....................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="HammerSecurity">
+        <On Terms="Effect.MagrailMunitionsLaunchMissile.Start" Send="AnimPlay Attack Attack"/>
+    </CActorUnit>
+    <!--                                                                                         -->
     <!--                                                                                         -->
     <!-- Merc Units ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!--                                                                                         -->
@@ -314,10 +320,31 @@
         <On Terms="Abil.SprayandPay.SourceCastStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 2.000000 AsTimeScale"/>
         <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Attack"/>
     </CActorUnit>
-    <CActorAction id="MagrailMunitions" parent="GenericAttack" effectLaunch="MagrailMunitionsLaunchMissile">
+    <CActorSound id="LowGradeStim" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="LowGradeStimEnd" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Behavior.LowGradeStims.Off" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorBeamSimple id="MagrailMunitionsBeam" parent="GenericAttackBeam">
+        <Model value="MagrailMunitionsMissile"/>
+    </CActorBeamSimple>
+    <CActorAction id="MagrailMunitions" parent="GenericAttack" effectImpact="MagrailMunitionsDamage" effectLaunch="MagrailMunitionsLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
+        <LaunchAssets Model="MagrailMunition_Launch"/>
+        <BeamScope value="Caster"/>
+        <ImpactMap index="None" Model="MagrailMunition_Impact" ModelReaction="MagrailMunitionImpactReaction"/>
+        <ImpactMap index="Shield" Sound="MagrailMunitionImpactShield" ModelReaction="MagrailMunitionImpactReactionShield"/>
+        <DamageMap index="None" Model="MagrailMunitionDamage" Sound="MagrailMunitionsImpact" ModelReaction="MagrailMunitionDamageReaction"/>
+        <DamageMap index="Shield" Sound="MagrailMunitionDamageShield" ModelReaction="MagrailMunitionDamageReactionShield"/>
     </CActorAction>
-    <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile"/>
+    <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile">
+        <Model value="MagrailMunitionsMissileInvisible"/>
+    </CActorMissile>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
     </CActorAction>
@@ -746,6 +773,12 @@
         <Missile value="WraithAirAttackRightMissile"/>
         <ImpactMap index="None" Model="WraithAirAttackImpact" Sound="WraithAWeaponImpact"/>
     </CActorAction>
+    <CActorModel id="LowGradeStimStart" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
     <CActorModel id="ThornShieldDamage" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ThornShieldDamage.Start; At Target" Send="Create"/>

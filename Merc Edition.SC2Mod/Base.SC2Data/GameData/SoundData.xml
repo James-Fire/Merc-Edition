@@ -254,6 +254,42 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
     </CSound>
+    <CSound id="LowGradeStim">
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack7.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="MagrailMunitionsImpact">
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Impact_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Impact_06.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="MagrailMunitionsLaunch">
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Launch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Launch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Launch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marauder_Magrail_Launch_07.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
     <CSound id="SignalFlareBlindSound">
         <AssetArray File="Assets\Sounds\Marauder_Magrail_Missile_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Marauder_Magrail_Missile_02.wav" FacialGroup=""/>

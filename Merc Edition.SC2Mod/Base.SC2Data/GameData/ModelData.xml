@@ -124,8 +124,17 @@
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="LowGradeStimEnd">
+        <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="LowGradeStimStart">
+        <Model value="Assets\Effects\Terran\StimpackStartImpact\StimpackStartImpact.m3"/>
+    </CModelFoliage>
     <CModel id="MagrailMunitionsMissile">
         <Model value="Assets\Effects\Terran\MagrailMunition_Missile\MagrailMunition_Missile.m3"/>
+    </CModel>
+    <CModel id="MagrailMunitionsMissileInvisible">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
     </CModel>
     <CModelFoliage id="SignalFlareDebuffModel">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop_Impact\MiraHorner_Hellion_DeathRattle_Coop_Impact.m3"/>
