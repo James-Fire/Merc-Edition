@@ -6,6 +6,9 @@
     <CRequirementCountUpgrade id="CountUpgradeChemicalPlatingCompleteOnly">
         <Count Link="ChemicalPlating" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeConcussiveShrapnelCompleteOnly">
+        <Count Link="ConcussiveShrapnel" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSuperStimCompleteOnly">
         <Count Link="SuperStim" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

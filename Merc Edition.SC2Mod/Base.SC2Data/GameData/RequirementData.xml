@@ -16,6 +16,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeChemicalPlatingCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseConcussiveShrapnel">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeConcussiveShrapnelCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseSuperStim">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSuperStimCompleteOnly"/>

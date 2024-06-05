@@ -130,11 +130,14 @@
     <CModelFoliage id="LowGradeStimStart">
         <Model value="Assets\Effects\Terran\StimpackStartImpact\StimpackStartImpact.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="MagrailMunitionsImpact">
+        <Model value="Assets\Effects\Protoss\PhoenixMissileImpact\PhoenixMissileImpact.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="MagrailMunitionsLaunch">
+        <Model value="Assets\Effects\Terran\MagrailMunition_Launch\MagrailMunition_Launch.m3"/>
+    </CModelFoliage>
     <CModel id="MagrailMunitionsMissile">
-        <Model value="Assets\Effects\Terran\MagrailMunition_Missile\MagrailMunition_Missile.m3"/>
-    </CModel>
-    <CModel id="MagrailMunitionsMissileInvisible">
-        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
     </CModel>
     <CModelFoliage id="SignalFlareDebuffModel">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop_Impact\MiraHorner_Hellion_DeathRattle_Coop_Impact.m3"/>

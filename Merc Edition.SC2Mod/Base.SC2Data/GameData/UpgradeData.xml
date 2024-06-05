@@ -25,4 +25,7 @@
         <AffectedUnitArray value="SkibisAngel"/>
         <AffectedUnitArray value="WarPig"/>
     </CUpgrade>
+    <CUpgrade id="ConcussiveShrapnel">
+        <AffectedUnitArray value="HammerSecurity"/>
+    </CUpgrade>
 </Catalog>

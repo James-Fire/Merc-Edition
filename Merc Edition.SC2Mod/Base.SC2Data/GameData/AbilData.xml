@@ -108,12 +108,14 @@
             <Cooldown TimeUse="84"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="LowGradeStims"/>
+        <Flags index="Transient" value="1"/>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="MagrailMunitions">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="MagrailMunitionsSet"/>
+        <Effect index="0" value="MagrailMunitionsLaunchMissile"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
+        <Flags index="TransientPreferred" value="1"/>
         <Cost>
             <Cooldown TimeUse="42"/>
         </Cost>
@@ -125,6 +127,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="MagrailMunitions">
             <Flags index="IgnoreUser" value="1"/>
         </CmdButtonArray>
+        <Arc value="9.9975"/>
     </CAbilEffectTarget>
     <CAbilMorph id="MorphToAnarchist">
         <AbilSetId value="TankMode"/>

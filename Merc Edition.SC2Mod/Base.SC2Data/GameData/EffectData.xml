@@ -27,6 +27,26 @@
         <ValidatorArray value="TargetHasChemicalPlating"/>
         <EditorCategories value=""/>
     </CEffectSet>
+    <CEffectApplyBehavior id="ConcussiveShrapnelApplyBehavior">
+        <Behavior value="ConcussiveShrapnel"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="ConcussiveShrapnelConeSA">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Arc="69.994" Radius="3" Effect="ConcussiveShrapnelApplyBehavior"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="ConcussiveShrapnelSA">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="0.8" Effect="ConcussiveShrapnelApplyBehavior"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ConcussiveShrapnelSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ConcussiveShrapnelConeSA"/>
+        <EffectArray value="ConcussiveShrapnelSA"/>
+    </CEffectSet>
     <CEffectDamage id="DeadMenTellNoTales">
         <EditorCategories value=""/>
         <Kind value="Ranged"/>
@@ -47,6 +67,12 @@
         <Amount value="5"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectSet id="HammerSecuritySet">
+        <EffectArray index="0" value="HammerSecurityDamage"/>
+        <EffectArray index="1" value="ConcussiveShrapnelSA"/>
+        <EffectArray index="2" value="ConcussiveShrapnelApplyBehavior"/>
+        <EffectArray value="ConcussiveShrapnelConeSA"/>
+    </CEffectSet>
     <CEffectDamage id="HellbornFlamethrowerDamage" parent="DU_WEAP">
         <ValidatorArray value="noMarkers"/>
         <EditorCategories value="Race:Terran"/>
@@ -146,26 +172,13 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="LowGradeStims"/>
     </CEffectApplyBehavior>
-    <CEffectCreatePersistent id="MagrailMunitionsCP">
-        <EditorCategories value="Race:Terran"/>
-        <Flags index="Channeled" value="1"/>
-        <InitialDelay value="0.1"/>
-        <InitialEffect value="MagrailMunitionsLaunchMissile"/>
-        <ExpireDelay value="0.9"/>
-    </CEffectCreatePersistent>
     <CEffectDamage id="MagrailMunitionsDamage">
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="MagrailMunitionsLaunchMissile">
         <ImpactEffect value="MagrailMunitionsDamage"/>
         <AmmoUnit value="MagrailMunitionsMissile"/>
-        <ImpactLocation Effect="MagrailMunitionsSet"/>
-        <Flags index="Channeled" value="1"/>
     </CEffectLaunchMissile>
-    <CEffectSet id="MagrailMunitionsSet">
-        <EditorCategories value="Race:Terran"/>
-        <EffectArray value="MagrailMunitionsCP"/>
-    </CEffectSet>
     <CEffectLaunchMissile id="PharaohLaserBatteryLM">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>

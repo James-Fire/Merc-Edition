@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorPlayerRequirement id="HaveConcussiveShrapnel">
+        <Value value="UseConcussiveShrapnel"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="TargetDoesntHaveChemicalPlating">
         <Compare value="NE"/>
         <Value value="1"/>

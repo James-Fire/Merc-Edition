@@ -330,21 +330,15 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
-    <CActorBeamSimple id="MagrailMunitionsBeam" parent="GenericAttackBeam">
-        <Model value="MagrailMunitionsMissile"/>
-    </CActorBeamSimple>
     <CActorAction id="MagrailMunitions" parent="GenericAttack" effectImpact="MagrailMunitionsDamage" effectLaunch="MagrailMunitionsLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
-        <LaunchAssets Model="MagrailMunition_Launch"/>
         <BeamScope value="Caster"/>
-        <ImpactMap index="None" Model="MagrailMunition_Impact" ModelReaction="MagrailMunitionImpactReaction"/>
+        <ImpactMap index="None" ModelReaction="MagrailMunitionImpactReaction"/>
         <ImpactMap index="Shield" Sound="MagrailMunitionImpactShield" ModelReaction="MagrailMunitionImpactReactionShield"/>
         <DamageMap index="None" Model="MagrailMunitionDamage" Sound="MagrailMunitionsImpact" ModelReaction="MagrailMunitionDamageReaction"/>
         <DamageMap index="Shield" Sound="MagrailMunitionDamageShield" ModelReaction="MagrailMunitionDamageReactionShield"/>
     </CActorAction>
-    <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile">
-        <Model value="MagrailMunitionsMissileInvisible"/>
-    </CActorMissile>
+    <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile"/>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
     </CActorAction>

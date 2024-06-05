@@ -10,6 +10,13 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Requirements value="UseChemicalPlating"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ConcussiveShrapnel">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-punishergrenade.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1.25"/>
+        <Modification MoveSpeedMultiplier="0.4"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DieselBasedNapalm">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
