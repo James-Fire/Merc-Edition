@@ -121,7 +121,6 @@ Effect/Name/CoeusMissileDamage=Coeus Missile Damage
 Effect/Name/CoeusMissileLM=Coeus Missile LM
 Effect/Name/CombatDrugsHeal=Combat Drugs Heal
 Effect/Name/ConcussiveShrapnelApplyBehavior=ConcussiveShrapnelApplyBehavior
-Effect/Name/ConcussiveShrapnelCP=Concussive Shrapnel CP
 Effect/Name/ConcussiveShrapnelConeSA=Concussive Shrapnel Cone SA
 Effect/Name/ConcussiveShrapnelDummy=Concussive Shrapnel Dummy
 Effect/Name/ConcussiveShrapnelSA=Concussive Shrapnel SA

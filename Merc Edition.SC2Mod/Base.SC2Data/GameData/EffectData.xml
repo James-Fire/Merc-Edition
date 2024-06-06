@@ -43,17 +43,12 @@
     <CEffectApplyBehavior id="ConcussiveShrapnelApplyBehavior">
         <Behavior value="ConcussiveShrapnel"/>
     </CEffectApplyBehavior>
-    <CEffectCreatePersistent id="ConcussiveShrapnelCP">
-        <EditorCategories value=""/>
-        <InitialEffect value="ConcussiveShrapnelDummy"/>
-        <InitialOffset value="0,0.5,0"/>
-    </CEffectCreatePersistent>
     <CEffectEnumArea id="ConcussiveShrapnelConeSA">
         <EditorCategories value=""/>
         <DebugTrace value="1"/>
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
-        <AreaArray Arc="69.994" Radius="3" Effect="ConcussiveShrapnelApplyBehavior"/>
-        <LaunchLocation Effect="ConcussiveShrapnelCP" Value="TargetPoint"/>
+        <AreaArray Arc="69.983" Radius="3" Effect="ConcussiveShrapnelApplyBehavior"/>
+        <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetUnit"/>
     </CEffectEnumArea>
     <CEffectSet id="ConcussiveShrapnelDummy">
@@ -102,8 +97,7 @@
     <CEffectSet id="HammerSecuritySet">
         <EffectArray index="0" value="HammerSecurityDamage"/>
         <EffectArray index="1" value="ConcussiveShrapnelApplyBehavior"/>
-        <EffectArray index="2" value="ConcussiveShrapnelCP"/>
-        <EffectArray value="ConcussiveShrapnelSA"/>
+        <EffectArray index="2" value="ConcussiveShrapnelSA"/>
         <EffectArray value="ConcussiveShrapnelConeSA"/>
     </CEffectSet>
     <CEffectDamage id="HellbornFlamethrowerDamage" parent="DU_WEAP">

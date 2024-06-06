@@ -162,7 +162,6 @@ Effect/EditorPrefix/CoeusMissileDamage=Titan -
 Effect/EditorPrefix/CoeusMissileLM=Titan -
 Effect/EditorPrefix/CombatDrugsHeal=Block B -
 Effect/EditorPrefix/ConcussiveShrapnelApplyBehavior=Hammer Security -
-Effect/EditorPrefix/ConcussiveShrapnelCP=Hammer Security -
 Effect/EditorPrefix/ConcussiveShrapnelConeSA=Hammer Security -
 Effect/EditorPrefix/ConcussiveShrapnelDummy=Hammer Security -
 Effect/EditorPrefix/ConcussiveShrapnelSA=Hammer Security -
