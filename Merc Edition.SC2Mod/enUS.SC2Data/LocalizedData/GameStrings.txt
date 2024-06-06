@@ -29,6 +29,7 @@ Button/Name/BuildStarcruiser=Build Starcruiser
 Button/Name/BuildTitan=Build Titan
 Button/Name/BuildZeusLander=Build Zeus Lander
 Button/Name/ChemicalPlating=Chemical Plating
+Button/Name/CombatDrugs=Combat Drugs
 Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
 Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
@@ -49,6 +50,7 @@ Button/Name/TrainPhantom=Train Phantom
 Button/Name/TrainShadow=Train Shadow
 Button/Name/TrainSkibisAngel=Train Skibi's Angel
 Button/Name/TrainWarPig=Train War Pig
+Button/Name/U240Rounds=U-240 Rounds
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Adjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -71,6 +73,7 @@ Button/Tooltip/BuildTitan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">C
 Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly.
 Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
 Button/Tooltip/ChemicalPlating=Increases the Devil Dog's armor by 3 and grants immunity to acid explosions.
+Button/Tooltip/CombatDrugs=Block B heal for 20% of their maximum life when dealing damage. While out of combat, they regenerate 2 life per second.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby friendly and enemy units.
@@ -100,6 +103,7 @@ Button/Tooltip/TrainPhantom=Infiltration unit. Can use Snipe and Cloak abilities
 Button/Tooltip/TrainShadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TrainSkibisAngel=Support trooper. Heals nearby biological units.
 Button/Tooltip/TrainWarPig=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/U240Rounds=Increases the Death Head's range by 1 and damage vs Light by 3. Enemies killed detonate a G-4 Clusterbomb.
 Effect/Name/ACVFusionCutter=Fusion Cutter (Damage)
 Effect/Name/AGRShadeHunter=AGR Shade Hunter
 Effect/Name/AnarchistWeaponAB=Anarchist Weapon AB
@@ -108,14 +112,18 @@ Effect/Name/AnarchistWeaponSearch=Anarchist Weapon Search
 Effect/Name/AnarchistWeaponSet=Anarchist Weapon Set
 Effect/Name/BarBreakersCP=Bar Breakers CP
 Effect/Name/BarBreakersDamage=Bar Breakers Damage
+Effect/Name/BarBreakersSet=Bar Breakers Set
 Effect/Name/C11EthereanRifle=C-11 Etherean Rifle
 Effect/Name/ChargedJupiterRailDamage=Charged Jupiter Rail Damage
 Effect/Name/ChemicalPlatingDummy=Chemical Plating Dummy
 Effect/Name/CoeusMissileCP=Coeus Missile CP
 Effect/Name/CoeusMissileDamage=Coeus Missile Damage
 Effect/Name/CoeusMissileLM=Coeus Missile LM
+Effect/Name/CombatDrugsHeal=Combat Drugs Heal
 Effect/Name/ConcussiveShrapnelApplyBehavior=ConcussiveShrapnelApplyBehavior
+Effect/Name/ConcussiveShrapnelCP=Concussive Shrapnel CP
 Effect/Name/ConcussiveShrapnelConeSA=Concussive Shrapnel Cone SA
+Effect/Name/ConcussiveShrapnelDummy=Concussive Shrapnel Dummy
 Effect/Name/ConcussiveShrapnelSA=Concussive Shrapnel SA
 Effect/Name/ConcussiveShrapnelSet=Concussive Shrapnel Set
 Effect/Name/DeadMenTellNoTales=Dead Men Tell No Tales
@@ -159,6 +167,8 @@ Effect/Name/SprayandPaySA=Spray and Pay SA
 Effect/Name/ThermalBurst=Thermal Burst
 Effect/Name/ThermalBurstLaunchMissile=Thermal Burst Launch Missile
 Effect/Name/ThornShieldDamage=Thorn Shield Damage
+Effect/Name/U-240RoundsBombApplyBehavior=U-240RoundsBombApplyBehavior
+Effect/Name/U-240RoundsBombCreateUnit=U-240 Rounds Bomb Create Unit
 Unit/Name/ACV=ACV
 Unit/Name/Adjucator=Adjucator
 Unit/Name/Agitator=Agitator
@@ -178,11 +188,15 @@ Unit/Name/SkibisAngel=Skibi's Angel
 Unit/Name/Starcruiser=Starcruiser
 Unit/Name/Titan=Titan
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
+Upgrade/Name/ChairsandAC=Chairs and A.C
 Upgrade/Name/ChemicalPlating=Chemical Plating
 Upgrade/Name/ConcussiveShrapnel=Concussive Shrapnel
+Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
 Upgrade/Name/LaserTargetingSystem=Laser Targeting System
+Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/SuperStim=Super Stim
 Upgrade/Name/ThornShield=Thorn Shield
+Upgrade/Name/U240Rounds=U-240 Rounds
 Weapon/Name/ACVFusionCutter=Fusion Cutter
 Weapon/Name/AGRShadeHunter=AGR Shade Hunter
 Weapon/Name/BarBreakers=Bar Breakers

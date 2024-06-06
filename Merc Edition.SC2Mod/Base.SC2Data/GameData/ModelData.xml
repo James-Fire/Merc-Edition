@@ -19,6 +19,12 @@
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModelFoliage>
+    <CModelFoliage id="CombatDrugsHeal">
+        <Model value="Assets\Effects\Terran\MedicHeal\MedicHeal.m3"/>
+        <AnimSpeed value="3.000000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModelFoliage>
     <CModel id="Copperhead" parent="Unit" Race="Terran">
         <Model value="Assets\Models\NC_Diamondback_BlueAttack.m3"/>
         <Events>
@@ -455,4 +461,7 @@
     <CModelFoliage id="SprayandPayImpactModel">
         <Model value="Assets\Models\Nova_PenetratingShot_Impact.m3"/>
     </CModelFoliage>
+    <CModel id="U-240RoundsBombModel">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+    </CModel>
 </Catalog>

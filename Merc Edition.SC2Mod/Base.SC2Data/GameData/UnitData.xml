@@ -646,8 +646,8 @@
         <Collide index="Small" value="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Biological" value="1"/>
-        <LifeStart value="50"/>
-        <LifeMax value="50"/>
+        <LifeStart value="75"/>
+        <LifeMax value="75"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
         <Mover value="CliffJumper"/>
         <Speed value="2.9531"/>
@@ -679,6 +679,7 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="JetPack" Type="Passive" AbilCmd="255,255" Row="2" Column="1"/>
+            <LayoutButtons Face="U240Rounds" Type="Passive" Requirements="UseU240Rounds" Row="2" Column="2"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -705,6 +706,8 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <LifeRegenDelay value="5"/>
+        <LifeRegenRate value="2"/>
     </CUnit>
     <CUnit id="SpartanCompany">
         <CostResource index="Minerals" value="225"/>

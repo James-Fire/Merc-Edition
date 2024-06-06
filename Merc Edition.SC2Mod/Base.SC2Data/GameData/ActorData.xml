@@ -96,6 +96,16 @@
         <EditorCategories value=""/>
         <On Terms="Effect.ChemicalPlatingDummy.Start; At Target" Send="Create"/>
     </CActorSound>
+    <CActorModel id="CombatDrugsHeal" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.CombatDrugsHeal.Start; At Caster" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorSound id="CombatDrugsSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.CombatDrugsHeal.Start; At Caster" Send="Create"/>
+    </CActorSound>
     <CActorUnit id="Copperhead" parent="GenericUnitStandard" unitName="Copperhead">
         <Aliases value="_UnitLarge"/>
         <Macros value="UnloadDropAnim"/>
@@ -477,8 +487,8 @@
         <On Terms="Behavior.ReaperJump.LandUp" Send="AnimBracketStop Jump"/>
         <On Terms="Behavior.ReaperJump.LandUp" Send="AnimBlendTimeApply"/>
         <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On Terms="WeaponStart.P38ScytheGuassPistol.AttackStart" Send="AnimBracketStart Attack Attack"/>
-        <On Terms="WeaponStop.P38ScytheGuassPistol.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="WeaponStart.BarBreakers.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.BarBreakers.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="WeaponStart.D8Charge.AttackStart" Send="AnimBracketStart Attack Spell"/>
         <On Terms="WeaponStop.D8Charge.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
@@ -986,5 +996,11 @@
         <On Terms="ActorCreation" Send="TimerSet 0.750000 Kill"/>
         <On Terms="TimerExpired; TimerName Kill" Send="AnimBracketStop BSD"/>
         <On Terms="ActorCreation; ValidateUnit HasHighCapacityBarrels" Send="ModelSwap HellionTankAttackLaunchUpgraded"/>
+    </CActorModel>
+    <CActorModel id="U-240RoundsBombModel" parent="ModelAnimationStyleContinuous">
+        <On Terms="Effect.U-240RoundsBombCreateUnit.Start" Send="Create"/>
+        <On Terms="Effect.U-240RoundsBombCreateUnit.Stop" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Unit" Scope="Source" Actor="Find"/>
+        <HostSiteOps Ops="SOpShadow"/>
     </CActorModel>
 </Catalog>

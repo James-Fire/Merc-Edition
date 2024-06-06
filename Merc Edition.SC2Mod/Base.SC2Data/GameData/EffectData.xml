@@ -4,6 +4,12 @@
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectSet id="BarBreakersSet">
+        <EditorCategories value=""/>
+        <EffectArray value="BarBreakersDamage"/>
+        <EffectArray value="CombatDrugsHeal"/>
+        <EffectArray value="U-240RoundsBombApplyBehavior"/>
+    </CEffectSet>
     <CEffectDamage id="C11EthereanRifle" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <AttributeBonus index="Light" value="12"/>
@@ -27,15 +33,33 @@
         <ValidatorArray value="TargetHasChemicalPlating"/>
         <EditorCategories value=""/>
     </CEffectSet>
+    <CEffectModifyUnit id="CombatDrugsHeal">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <VitalArray index="Life">
+            <ChangeFraction value="0.2"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="ConcussiveShrapnelApplyBehavior">
         <Behavior value="ConcussiveShrapnel"/>
     </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="ConcussiveShrapnelCP">
+        <EditorCategories value=""/>
+        <InitialEffect value="ConcussiveShrapnelDummy"/>
+        <InitialOffset value="0,0.5,0"/>
+    </CEffectCreatePersistent>
     <CEffectEnumArea id="ConcussiveShrapnelConeSA">
         <EditorCategories value=""/>
         <DebugTrace value="1"/>
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Arc="69.994" Radius="3" Effect="ConcussiveShrapnelApplyBehavior"/>
+        <LaunchLocation Effect="ConcussiveShrapnelCP" Value="TargetPoint"/>
+        <ImpactLocation Value="TargetUnit"/>
     </CEffectEnumArea>
+    <CEffectSet id="ConcussiveShrapnelDummy">
+        <EditorCategories value=""/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
     <CEffectEnumArea id="ConcussiveShrapnelSA">
         <EditorCategories value=""/>
         <DebugTrace value="1"/>
@@ -47,6 +71,14 @@
         <EffectArray value="ConcussiveShrapnelConeSA"/>
         <EffectArray value="ConcussiveShrapnelSA"/>
     </CEffectSet>
+    <CEffectDamage id="D8ChargeExplodeDamage">
+        <AINotifyFlags index="HurtFriend" value="0"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="D8ClusterBombExplodeDamage">
+        <AINotifyFlags index="HurtFriend" value="0"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectDamage id="DeadMenTellNoTales">
         <EditorCategories value=""/>
         <Kind value="Ranged"/>
@@ -69,8 +101,9 @@
     </CEffectDamage>
     <CEffectSet id="HammerSecuritySet">
         <EffectArray index="0" value="HammerSecurityDamage"/>
-        <EffectArray index="1" value="ConcussiveShrapnelSA"/>
-        <EffectArray index="2" value="ConcussiveShrapnelApplyBehavior"/>
+        <EffectArray index="1" value="ConcussiveShrapnelApplyBehavior"/>
+        <EffectArray index="2" value="ConcussiveShrapnelCP"/>
+        <EffectArray value="ConcussiveShrapnelSA"/>
         <EffectArray value="ConcussiveShrapnelConeSA"/>
     </CEffectSet>
     <CEffectDamage id="HellbornFlamethrowerDamage" parent="DU_WEAP">
@@ -134,7 +167,7 @@
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="2"/>
-        <PeriodicEffectArray value="BarBreakersDamage"/>
+        <PeriodicEffectArray value="BarBreakersSet"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.122"/>
     </CEffectCreatePersistent>
@@ -362,6 +395,15 @@
         <ShieldBonus value="5"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="U-240RoundsBombApplyBehavior">
+        <ValidatorArray index="0" value="HaveU240Rounds"/>
+        <Behavior value="U-240RoundsBomb"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="U-240RoundsBombCreateUnit">
+        <ValidatorArray value="HaveU240Rounds"/>
+        <WhichLocation Value="SourceUnitOrPoint"/>
+        <SpawnUnit value="D8Charge"/>
+    </CEffectCreateUnit>
     <CEffectSet id="VolatileBurst">
         <EffectArray index="4" value="ChemicalPlatingDummy"/>
         <EffectArray value="Suicide"/>

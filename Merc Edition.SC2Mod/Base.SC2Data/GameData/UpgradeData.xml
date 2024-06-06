@@ -5,14 +5,28 @@
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
+    <CUpgrade id="ChairsandAC">
+        <EffectArray Reference="Unit,Bunker,LifeArmor" Value="3"/>
+        <EffectArray Reference="Abil,BunkerTransport,MaxCargoCount" Value="4"/>
+        <EffectArray Reference="Abil,BunkerTransport,TotalCargoSpace" Value="4"/>
+        <AffectedUnitArray value="Bunker"/>
+    </CUpgrade>
     <CUpgrade id="ChemicalPlating">
         <EffectArray Reference="Unit,DevilDog,LifeArmor" Value="3"/>
         <AffectedUnitArray value="DevilDog"/>
+    </CUpgrade>
+    <CUpgrade id="JetPackOverdrive">
+        <EffectArray Reference="Unit,BlockB,Speed" Value="1.750000"/>
+        <AffectedUnitArray value="BlockB"/>
     </CUpgrade>
     <CUpgrade id="LaserTargetingSystem">
         <EffectArray Reference="Weapon,KelmorianMinerGaussRifle,Range" Value="1"/>
         <EffectArray Reference="Unit,WarPig,Sight" Value="2"/>
         <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+    <CUpgrade id="NeosteelCupHolders">
+        <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
+        <AffectedUnitArray value="Bunker"/>
     </CUpgrade>
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>
@@ -27,5 +41,10 @@
     </CUpgrade>
     <CUpgrade id="ConcussiveShrapnel">
         <AffectedUnitArray value="HammerSecurity"/>
+    </CUpgrade>
+    <CUpgrade id="U240Rounds">
+        <EffectArray Reference="Effect,BarBreakersDamage,AttributeBonus[Light]" Value="3"/>
+        <EffectArray Reference="Weapon,BarBreakers,Range" Value="1"/>
+        <AffectedUnitArray value="BlockB"/>
     </CUpgrade>
 </Catalog>

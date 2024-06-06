@@ -60,4 +60,12 @@
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <CBehaviorBuff id="U-240RoundsBomb">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="HaveU240Rounds"/>
+        <Duration value="1.5"/>
+        <DamageResponse Fatal="1" Handled="U-240RoundsBombCreateUnit">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
 </Catalog>

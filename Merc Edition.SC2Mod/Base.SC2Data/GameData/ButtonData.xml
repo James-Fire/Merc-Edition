@@ -69,6 +69,10 @@
         <Icon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
     </CButton>
+    <CButton id="CombatDrugs">
+        <Icon value="Assets\Textures\btn-upgrade-terran-reapercombatdrugs.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-reapercombatdrugs.dds"/>
+    </CButton>
     <CButton id="DeadMenTellNoTales">
         <Icon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
@@ -197,5 +201,9 @@
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-wraithfighterbronze.dds"/>
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="Wraith"/>
+    </CButton>
+    <CButton id="U240Rounds">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-u238rounds.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-u238rounds.dds"/>
     </CButton>
 </Catalog>

@@ -12,6 +12,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseChairsandAC">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeChairsandACCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseChemicalPlating">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeChemicalPlatingCompleteOnly"/>
@@ -20,6 +24,14 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeConcussiveShrapnelCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseJetPackOverdrive">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeJetPackOverdriveCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseNeosteelCupHolders">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseSuperStim">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSuperStimCompleteOnly"/>
@@ -27,5 +39,9 @@
     <CRequirement id="UseThornShield">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeThornShieldCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseU240Rounds">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeU240RoundsCompleteOnly"/>
     </CRequirement>
 </Catalog>

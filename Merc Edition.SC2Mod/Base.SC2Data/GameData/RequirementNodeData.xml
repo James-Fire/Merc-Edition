@@ -3,11 +3,20 @@
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeChairsandACCompleteOnly">
+        <Count Link="ChairsandAC" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeChemicalPlatingCompleteOnly">
         <Count Link="ChemicalPlating" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeConcussiveShrapnelCompleteOnly">
         <Count Link="ConcussiveShrapnel" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeJetPackOverdriveCompleteOnly">
+        <Count Link="JetPackOverdrive" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeNeosteelCupHoldersCompleteOnly">
+        <Count Link="NeosteelCupHolders" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSuperStimCompleteOnly">
         <Count Link="SuperStim" State="CompleteOnly"/>
@@ -20,6 +29,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeThornShieldQueuedOrBetter">
         <Count Link="ThornShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeU240RoundsCompleteOnly">
+        <Count Link="U240Rounds" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementLTE id="LTCountUpgradeSuperStimQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeSuperStimQueuedOrBetter"/>
