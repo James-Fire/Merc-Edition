@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CConversationState id="MissionObjective">
+        <Indices index="0">
+            <InfoValue Id="Credits Per Item" Value="5000"/>
+            <InfoValue Id="Item Count" Value="16"/>
+        </Indices>
+    </CConversationState>
+</Catalog>
