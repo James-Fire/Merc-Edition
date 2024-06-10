@@ -69,6 +69,13 @@
         <Icon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
     </CButton>
+    <CButton id="CloakPhantom">
+        <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="CloakOnBanshee"/>
+        <HotkeySet value="Cloak"/>
+    </CButton>
     <CButton id="CombatDrugs">
         <Icon value="Assets\Textures\btn-upgrade-terran-reapercombatdrugs.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-reapercombatdrugs.dds"/>
@@ -85,6 +92,10 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
     </CButton>
+    <CButton id="EnergyRadar">
+        <Icon value="Assets\Textures\btn-status-radar.dds"/>
+        <AlertIcon value="Assets\Textures\btn-status-radar.dds"/>
+    </CButton>
     <CButton id="LowGradeStims">
         <Icon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
@@ -96,6 +107,10 @@
     <CButton id="SignalFlare">
         <Icon value="Assets\Icons and Wireframes\signal flare.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\signal flare.dds"/>
+    </CButton>
+    <CButton id="SnipePhantom">
+        <Icon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
     </CButton>
     <CButton id="ThornShieldWarPig">
         <Icon value="Assets\Textures\btn-techupgrade-terran-combatshield.dds"/>
@@ -201,6 +216,14 @@
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-wraithfighterbronze.dds"/>
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="Wraith"/>
+    </CButton>
+    <CButton id="TyradorImplants">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>
+    </CButton>
+    <CButton id="EidolonSuit">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-criussuit.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-criussuit.dds"/>
     </CButton>
     <CButton id="U240Rounds">
         <Icon value="Assets\Textures\btn-techupgrade-terran-u238rounds.dds"/>

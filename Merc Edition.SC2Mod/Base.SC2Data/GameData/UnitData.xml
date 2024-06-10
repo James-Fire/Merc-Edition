@@ -816,12 +816,11 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
-        <AbilArray Link="GhostCloak"/>
-        <AbilArray Link="Snipe"/>
+        <AbilArray Link="SnipePhantom"/>
         <AbilArray Link="TacNukeStrike"/>
         <AbilArray Link="GhostHoldFire"/>
-        <AbilArray Link="EMP"/>
         <AbilArray Link="GhostWeaponsFree"/>
+        <AbilArray Link="PhantomCloak"/>
         <WeaponArray Link="C11EthereanRifle"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -831,28 +830,14 @@
             <LayoutButtons Face="GhostHoldFire" Type="AbilCmd" AbilCmd="GhostHoldFire,Execute" Row="1" Column="2"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="TacNukeStrike,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="AttackGhost" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="Snipe" Type="AbilCmd" AbilCmd="Snipe,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="NukeCalldown" Type="AbilCmd" AbilCmd="TacNukeStrike,Execute" Row="2" Column="3"/>
-            <LayoutButtons Face="CloakOnGhost" Type="AbilCmd" AbilCmd="GhostCloak,On" Row="2" Column="2"/>
-            <LayoutButtons Face="CloakOff" Type="AbilCmd" AbilCmd="GhostCloak,Off" Row="2" Column="2"/>
-            <LayoutButtons Face="EMP" Type="AbilCmd" AbilCmd="EMP,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="SnipePhantom" Type="AbilCmd" AbilCmd="SnipePhantom,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="EnergyRadar" Type="Passive" Row="2" Column="3"/>
+            <LayoutButtons Face="NukeCalldown" Type="AbilCmd" AbilCmd="TacNukeStrike,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="WeaponsFree" Type="AbilCmd" AbilCmd="GhostWeaponsFree,Execute" Row="1" Column="3"/>
-            <LayoutButtons>
-                <Face value="OcularImplants"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255"/>
-                <Requirements value="UseGhostOcularImplants"/>
-                <Row value="1"/>
-                <Column value="0"/>
-            </LayoutButtons>
-            <LayoutButtons>
-                <Face value="CriusSuit"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255,0"/>
-                <Requirements value="UseGhostCriusSuit"/>
-                <Row value="1"/>
-                <Column value="1"/>
-            </LayoutButtons>
+            <LayoutButtons Face="CloakPhantom" Type="AbilCmd" AbilCmd="PhantomCloak,On" Row="2" Column="1"/>
+            <LayoutButtons Face="WraithCloakOff" Type="AbilCmd" AbilCmd="PhantomCloak,Off" Row="2" Column="1"/>
+            <LayoutButtons Face="TyradorImplants" Type="Passive" Requirements="UseTyradorImplants" Row="1" Column="0"/>
+            <LayoutButtons Face="EidolonSuit" Type="Passive" Requirements="UseEidolonSuit" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -875,6 +860,7 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <BehaviorArray Link="EnergyUserRadar"/>
     </CUnit>
     <CUnit id="Shadow">
         <DeathRevealRadius value="3"/>

@@ -3,10 +3,21 @@
     <CValidatorPlayerRequirement id="HaveConcussiveShrapnel">
         <Value value="UseConcussiveShrapnel"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveEidolonSuit">
+        <Find value="1"/>
+        <Value value="UseEidolonSuit"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveU240Rounds">
         <Find value="1"/>
         <Value value="UseU240Rounds"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveTyradorImplants">
+        <Find value="1"/>
+        <Value value="UseTyradorImplants"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="SuperCloakNotOnCooldown">
+        <Behavior value="SuperCloakCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="TargetDoesntHaveChemicalPlating">
         <Compare value="NE"/>
         <Value value="1"/>

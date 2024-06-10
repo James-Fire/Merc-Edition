@@ -24,6 +24,24 @@
         <Period value="1"/>
         <PeriodicEffect value="DieselBasedNapalmDamage"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="EnergyUserRadar">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-radar.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification Radar="30" RadarFilters="Psionic;RawResource,HarvestableResource,Missile,Destructible,Buried,Cloaked"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PhantomCloak">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <InitialEffect value="SuperCloakSet"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+            <VitalRegenArray index="Energy" value="-1.4765"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="LowGradeStims">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
@@ -47,6 +65,24 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
         <ExpireEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuperCloak">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <RemoveValidatorArray value="IsCloaked"/>
+        <Duration value="7"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuperCloakCooldown">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="168"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ThornShield">
         <InfoFlags index="Hidden" value="1"/>
