@@ -15,6 +15,11 @@
         <EffectArray Reference="Unit,DevilDog,LifeArmor" Value="3"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
+    <CUpgrade id="EidolonSuit">
+        <EffectArray Operation="Set" Reference="Behavior,PhantomCloak,Modification.VitalRegenArray[Energy]" Value="0.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,PhantomCloak,Cost[0].Vital[Energy]" Value="0"/>
+        <AffectedUnitArray value="Phantom"/>
+    </CUpgrade>
     <CUpgrade id="JetPackOverdrive">
         <EffectArray Reference="Unit,BlockB,Speed" Value="1.750000"/>
         <AffectedUnitArray value="BlockB"/>
@@ -41,6 +46,14 @@
     </CUpgrade>
     <CUpgrade id="ConcussiveShrapnel">
         <AffectedUnitArray value="HammerSecurity"/>
+    </CUpgrade>
+    <CUpgrade id="TyradorImplants">
+        <EffectArray Reference="Weapon,C11EthereanRifle,Range" Value="6"/>
+        <EffectArray Reference="Unit,Phantom,Sight" Value="3"/>
+        <EffectArray Operation="Multiply" Reference="Effect,NukePersistent,InitialDelay" Value="0.500000"/>
+        <EffectArray Operation="Set" Reference="Abil,SnipePhantom,Cost[0].Vital[Energy]" Value="22"/>
+        <EffectArray Operation="Set" Reference="Effect,NukePersistent,PeriodCount" Value="25"/>
+        <AffectedUnitArray value="Phantom"/>
     </CUpgrade>
     <CUpgrade id="U240Rounds">
         <EffectArray Reference="Effect,BarBreakersDamage,AttributeBonus[Light]" Value="3"/>

@@ -312,6 +312,26 @@
         <On Terms="Behavior.DieselBasedNapalm.Off" Send="Destroy"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
+    <CActorModel id="GhostNukeIndicator">
+        <On Terms="ActorCreation; ValidatePlayer HaveTyradorImplants" Send="AnimSetTimeScale BSD 2.000000"/>
+    </CActorModel>
+    <CActorSound id="Ghost_CloakOff">
+        <On Terms="Behavior.PhantomCloak.Off" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="Ghost_CloakOn">
+        <On Terms="Behavior.PhantomCloak.On" Send="Create"/>
+    </CActorSound>
+    <CActorAction id="PhantomSnipeAttack" parent="GenericAttack" effectAttack="SnipeDamagePhantom">
+        <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
+        <LaunchAssets Model="GhostSnipeAttackLaunch" Sound="PhantomSnipeLaunch"/>
+        <Beam value="PhantomSnipeBeam"/>
+        <ImpactMap index="None" Model="GhostSnipeAttackImpact" Sound="Ghost_SnipeImpact"/>
+    </CActorAction>
+    <CActorBeamSimple id="PhantomSnipeBeam" parent="GenericAttackBeam">
+        <Model value="GhostSnipeAttackBeam"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,255 4.000000}"/>
+    </CActorBeamSimple>
+    <CActorRange id="PhantomSnipeRange" parent="RangeAbil" abil="SnipePhantom"/>
     <!--                                                                                         -->
     <!-- Hammer Security ....................................................................... -->
     <!--                                                                                         -->
@@ -612,15 +632,14 @@
         <On Terms="Abil.TacNukeStrike.SourceChannelStop" Send="AnimClear SpellB"/>
         <On Terms="Abil.TacNukeStrike.SourceFinishStart" Send="AnimPlay SpellC Spell,C"/>
         <On Terms="Abil.TacNukeStrike.SourceFinishStop" Send="AnimClear SpellC"/>
-        <On Terms="Abil.Snipe.SourceCastStart" Send="AnimBaselineStop"/>
-        <On Terms="Abil.Snipe.SourceCastStart" Send="AnimPlay SpellA Spell,A"/>
-        <On Terms="Abil.Snipe.SourceCastStop" Send="AnimClear SpellA"/>
-        <On Terms="Abil.Snipe.SourceCastStop" Send="AnimBaselineStart"/>
-        <On Terms="Abil.Snipe.SourceChannelStart" Send="AnimPlay SpellB Spell,B PlayForever"/>
-        <On Terms="Abil.Snipe.SourceChannelStop" Send="AnimClear SpellB"/>
-        <On Terms="Abil.Snipe.SourceFinishStart" Send="AnimPlay SpellC Spell,C"/>
+        <On Terms="Abil.SnipePhantom.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.SnipePhantom.SourceCastStart" Send="AnimPlay SpellA Spell,A"/>
+        <On Terms="Abil.SnipePhantom.SourceCastStop" Send="AnimClear SpellA"/>
+        <On Terms="Abil.SnipePhantom.SourceCastStop" Send="AnimBaselineStart"/>
+        <On Terms="Abil.SnipePhantom.SourceChannelStart" Send="AnimPlay SpellB Spell,B PlayForever"/>
+        <On Terms="Abil.SnipePhantom.SourceChannelStop" Send="AnimClear SpellB"/>
+        <On Terms="Abil.SnipePhantom.SourceFinishStart" Send="AnimPlay SpellC Spell,C"/>
         <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying SpellC" Send="AnimClear SpellC"/>
-        <On Terms="Abil.EMP.SourceCastStart" Send="AnimPlay SpellC Spell,C 0 0.000000 0.300000"/>
         <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
         <On Terms="Behavior.GhostHoldFireB.On" Send="AnimGroupApply Cover"/>
         <On Terms="Behavior.GhostHoldFireB.On" Send="AnimPlay MorphStart Cover,Start"/>
@@ -635,7 +654,6 @@
         <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
-        <On Terms="AbilMorph.*.Start; MorphTo GhostAlternate" Send="Destroy"/>
         <AnimBlendTime value="-0.800000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="PhantomDeath" SoundLink="Ghost_Explode"/>
@@ -783,6 +801,25 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
+    <CActorSound id="SuperCloakEnd" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SuperCloak.Off" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="SuperCloakEndModel" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SuperCloak.Off" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,255,255 2.500000}"/>
+    </CActorModel>
+    <CActorModelMaterial id="SuperCloakGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.SuperCloak.On" Send="Create"/>
+        <On index="6" Terms="Behavior.SuperCloak.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.PhantomCloak.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorSound id="SuperCloakLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SuperCloak.On" Send="Create"/>
+    </CActorSound>
     <CActorModel id="ThornShieldDamage" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ThornShieldDamage.Start; At Target" Send="Create"/>

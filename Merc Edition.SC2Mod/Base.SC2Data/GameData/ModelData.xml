@@ -393,6 +393,14 @@
         <Image value="Assets\Textures\WraithPortrait_Static.dds"/>
         <Lighting value="WraithPortrait"/>
     </CModel>
+    <CModelFoliage id="SuperCloakEndModel">
+        <Model value="Assets\Effects\Terran\DisplacementFieldImpact\DisplacementFieldImpact.m3"/>
+        <ScaleMax value="0.700000,0.700000,1.200000"/>
+        <ScaleMin value="0.700000,0.700000,1.200000"/>
+    </CModelFoliage>
+    <CModelFoliage id="SuperCloakGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Dehaka_Psionic\Glaze_Dehaka_Psionic.m3"/>
+    </CModelFoliage>
     <CModelFoliage id="ThornShieldDamage">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModelFoliage>

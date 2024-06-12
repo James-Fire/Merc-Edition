@@ -12,6 +12,9 @@
     <CRequirementCountUpgrade id="CountUpgradeConcussiveShrapnelCompleteOnly">
         <Count Link="ConcussiveShrapnel" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
+        <Count Link="EidolonSuit" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeJetPackOverdriveCompleteOnly">
         <Count Link="JetPackOverdrive" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -29,6 +32,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeThornShieldQueuedOrBetter">
         <Count Link="ThornShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTyradorImplantsCompleteOnly">
+        <Count Link="TyradorImplants" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeU240RoundsCompleteOnly">
         <Count Link="U240Rounds" State="CompleteOnly"/>

@@ -5,13 +5,21 @@ Abil/Name/LowGradeStim=Low Grade Stim
 Abil/Name/MagrailMunitions=Magrail Munitions
 Abil/Name/MorphToAgitator=Morph To Agitator
 Abil/Name/MorphToAnarchist=Morph To Anarchist
+Abil/Name/PhantomCloak=Personal Cloaking
 Abil/Name/SignalFlare=Signal Flare
+Abil/Name/SnipePhantom=Snipe
 Abil/Name/SprayandPay=Spray and Pay
 Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
 Behavior/Name/LowGradeStims=Low Grade Stims
+Behavior/Name/PhantomCloak=Cloak
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
+Behavior/Name/SuperCloak=Super Cloak
+Behavior/Name/SuperCloakCooldown=Super Cloak Cooldown
 Behavior/Tooltip/ConcussiveShrapnel=This unit is slowed.
 Behavior/Tooltip/LowGradeStims=This unit is firing faster.
+Behavior/Tooltip/PhantomCloak=This unit is cloaked and will only be revealed by detectors or effects.
+Behavior/Tooltip/SuperCloak=This unit is invulnerable.
+Behavior/Tooltip/SuperCloakCooldown=Super Cloak cannot activate yet.
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAgitator=Build Agitator
@@ -29,16 +37,20 @@ Button/Name/BuildStarcruiser=Build Starcruiser
 Button/Name/BuildTitan=Build Titan
 Button/Name/BuildZeusLander=Build Zeus Lander
 Button/Name/ChemicalPlating=Chemical Plating
+Button/Name/CloakPhantom=Cloak
 Button/Name/CombatDrugs=Combat Drugs
 Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
 Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
+Button/Name/EidolonSuit=Eidolon Suit
+Button/Name/EnergyRadar=Energy Radar
 Button/Name/LaserTargetingSystem=Laser Targeting System
 Button/Name/LowGradeStims=Low Grade Stims
 Button/Name/MagrailMunitions=Magrail Munitions
 Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
 Button/Name/SignalFlare=Signal Flare
+Button/Name/SnipePhantom=Snipe
 Button/Name/SprayandPay=Spray and Pay
 Button/Name/SuperStim=Super Stim
 Button/Name/ThornShieldSkibidi=Thorn Shield
@@ -50,6 +62,7 @@ Button/Name/TrainPhantom=Train Phantom
 Button/Name/TrainShadow=Train Shadow
 Button/Name/TrainSkibisAngel=Train Skibi's Angel
 Button/Name/TrainWarPig=Train War Pig
+Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Adjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
@@ -73,23 +86,28 @@ Button/Tooltip/BuildTitan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">C
 Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly.
 Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
 Button/Tooltip/ChemicalPlating=Increases the Devil Dog's armor by 3 and grants immunity to acid explosions.
+Button/Tooltip/CloakPhantom=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,PhantomCloak,Modification.VitalRegenArray[2] + Unit,Phantom,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/CombatDrugs=Block B heal for 20% of their maximum life when dealing damage. While out of combat, they regenerate 2 life per second.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby friendly and enemy units.
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
+Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
+Button/Tooltip/EnergyRadar=Phantoms reveal the locations of enemy units with an energy bar in a large area around them. Does not reveal the units.
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
 Button/Tooltip/LowGradeStims=Increase attack speed by 100% for <d time="7"/>.
 Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42"/>.
 Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nukes take <d time="18"/> to land, but they deal up to 400 (+300 vs. structures) damage to enemies in a large radius.
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius to 1 and suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
 Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time="14"/>.
 Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
+Button/Tooltip/SnipePhantom=Deals 55 damage to a biological enemy. Ignores armor.
 Button/Tooltip/SprayandPay=Deal 6 damage in an arc to enemy units.
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
@@ -103,6 +121,7 @@ Button/Tooltip/TrainPhantom=Infiltration unit. Can use Snipe and Cloak abilities
 Button/Tooltip/TrainShadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TrainSkibisAngel=Support trooper. Heals nearby biological units.
 Button/Tooltip/TrainWarPig=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able to calldown nukes 50% faster, and have 10% reduced Snipe energy cost.
 Button/Tooltip/U240Rounds=Increases the Death Head's range by 1 and damage vs Light by 3. Enemies killed detonate a G-4 Clusterbomb.
 Effect/Name/ACVFusionCutter=Fusion Cutter (Damage)
 Effect/Name/AGRShadeHunter=AGR Shade Hunter
@@ -160,9 +179,13 @@ Effect/Name/SignalFlareInitial=Signal Flare Initial
 Effect/Name/SignalFlareRevealLaunchMissile=Signal Flare Reveal Launch Missile
 Effect/Name/SignalFlareSwitch=Signal Flare Switch
 Effect/Name/SkibisAngelHeal=Skibi's Angel Heal
+Effect/Name/SnipeDamagePhantom=Snipe (Damage)
 Effect/Name/SprayandPayCP=Spray and Pay CP
 Effect/Name/SprayandPayDamage=Spray and Pay Damage
 Effect/Name/SprayandPaySA=Spray and Pay SA
+Effect/Name/SuperCloakApplyBehavior=SuperCloakApplyBehavior
+Effect/Name/SuperCloakCooldownApplyBehavior=SuperCloakCooldownApplyBehavior
+Effect/Name/SuperCloakSet=Super Cloak Set
 Effect/Name/ThermalBurst=Thermal Burst
 Effect/Name/ThermalBurstLaunchMissile=Thermal Burst Launch Missile
 Effect/Name/ThornShieldDamage=Thorn Shield Damage
@@ -190,11 +213,13 @@ Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
 Upgrade/Name/ChairsandAC=Chairs and A.C
 Upgrade/Name/ChemicalPlating=Chemical Plating
 Upgrade/Name/ConcussiveShrapnel=Concussive Shrapnel
+Upgrade/Name/EidolonSuit=Eidolon Suit
 Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
 Upgrade/Name/LaserTargetingSystem=Laser Targeting System
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/SuperStim=Super Stim
 Upgrade/Name/ThornShield=Thorn Shield
+Upgrade/Name/TyradorImplants=Tyrador Implants
 Upgrade/Name/U240Rounds=U-240 Rounds
 Weapon/Name/ACVFusionCutter=Fusion Cutter
 Weapon/Name/AGRShadeHunter=AGR Shade Hunter

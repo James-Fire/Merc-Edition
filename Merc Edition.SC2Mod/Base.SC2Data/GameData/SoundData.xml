@@ -264,6 +264,16 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
     </CSound>
+    <CSound id="PhantomSnipeLaunch" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_04.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="0.000000,2.000000"/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
     <CSound id="LowGradeStim">
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_Stimpack1.wav" FacialGroup=""/>
@@ -353,5 +363,19 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
         <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="SuperCloakEnd">
+        <AssetArray File="Assets\Sounds\Protoss\WarpGate\WarpGate_TrainFinish.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="SuperCloakLaunch">
+        <AssetArray File="Assets\Sounds\WarMissile_Impact00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarMissile_Impact01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarMissile_Impact02.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Pitch value="12.000000,12.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
     </CSound>
 </Catalog>

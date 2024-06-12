@@ -206,6 +206,10 @@
         <ImpactEffect value="MagrailMunitionsDamage"/>
         <AmmoUnit value="MagrailMunitionsMissile"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="NukeDamage">
+        <AttributeBonus index="Structure" value="300"/>
+        <Amount value="400"/>
+    </CEffectDamage>
     <CEffectLaunchMissile id="PharaohLaserBatteryLM">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>
@@ -259,6 +263,14 @@
         <CaseDefault value="SignalFlareBlindLaunchMissile"/>
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSwitch>
+    <CEffectDamage id="SnipeDamagePhantom" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <ArmorReduction value="0"/>
+        <Kind value="Spell"/>
+        <Amount value="55"/>
+        <Death value="Silentkill"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="SprayandPayCP">
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="1"/>
@@ -277,6 +289,23 @@
         <LaunchLocation Value="CasterUnit"/>
         <SearchFlags index="CenterAtLaunch" value="1"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="SuperCloakApplyBehavior">
+        <ValidatorArray index="0" value="SuperCloakNotOnCooldown"/>
+        <ValidatorArray value="HaveEidolonSuit"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuperCloak"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SuperCloakCooldownApplyBehavior">
+        <ValidatorArray index="0" value="SuperCloakNotOnCooldown"/>
+        <ValidatorArray value="HaveEidolonSuit"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SuperCloakCooldown"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="SuperCloakSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SuperCloakApplyBehavior"/>
+        <EffectArray value="SuperCloakCooldownApplyBehavior"/>
+    </CEffectSet>
     <CEffectLaunchMissile id="ThermalBurstLaunchMissile">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="ThermalBurst"/>
