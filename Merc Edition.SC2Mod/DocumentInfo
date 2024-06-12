@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DocInfo>
     <Dependencies>
-        <Value>file:Mods\VanillaPlusWOL_BASE.SC2Mod</Value>
         <Value>file:Mods\Merc Edition Assets.SC2Mod</Value>
+        <Value>file:Mods\NightmareMod.SC2Mod</Value>
     </Dependencies>
 </DocInfo>
