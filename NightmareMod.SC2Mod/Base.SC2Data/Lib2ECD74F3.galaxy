@@ -1,0 +1,1065 @@
+include "TriggerLibs/NativeLib"
+include "TriggerLibs/VoidCampaignMissionLib"
+
+include "Lib2ECD74F3_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Nightmare Mod
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib2ECD74F3_InitLibraries () {
+    libNtve_InitVariables();
+    libVCMI_InitVariables();
+}
+
+// Functions
+void lib2ECD74F3_gf_SendFlexibleAttackWave (string lp_unitType, int lp_seconds, int lp_maxAdd, int lp_player) {
+    // Variable Declarations
+    int lv_grace;
+    int lv_plusorMinus90;
+    int lv_extraUnits;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Implementation
+    lv_plusorMinus90 = RandomInt(-90, 90);
+    lv_extraUnits = RoundI((((lv_plusorMinus90 + 90) / 180) * lp_maxAdd));
+    AIAttackWaveAddUnits4(0, 0, lv_extraUnits, lv_extraUnits, lp_unitType);
+    AIAttackWaveSend(lp_player, (lp_seconds + lv_plusorMinus90), false);
+    Wait(lp_seconds, c_timeAI);
+}
+
+void lib2ECD74F3_gf_SendFlexibleAttackWaveNoWait (string lp_unitType, int lp_seconds, int lp_maxAdd, int lp_player) {
+    // Variable Declarations
+    int lv_plusorMinus90;
+    int lv_extraUnits;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Implementation
+    lv_plusorMinus90 = RandomInt(-90, 90);
+    lv_extraUnits = RoundI((((lv_plusorMinus90 + 90) / 180) * lp_maxAdd));
+    AIAttackWaveAddUnits4(0, 0, lv_extraUnits, lv_extraUnits, lp_unitType);
+    AIAttackWaveSend(lp_player, (lp_seconds + lv_plusorMinus90), false);
+}
+
+void lib2ECD74F3_gf_MakeBullies (int lp_amount, string lp_unit, region lp_region, int lp_player, int lp_rebuildCount) {
+    // Automatic Variable Declarations
+    int autoA2B1966A_n;
+    int autoA2B1966A_i;
+
+    // Implementation
+    autoA2B1966A_n = lp_amount;
+    for (autoA2B1966A_i = 1; autoA2B1966A_i <= autoA2B1966A_n; autoA2B1966A_i += 1) {
+        AIAddBully(lp_player, lp_unit, RegionRandomPoint(lp_region), lp_rebuildCount);
+    }
+}
+
+void lib2ECD74F3_gf_TaldarimSkins (int lp_player) {
+    // Automatic Variable Declarations
+    // Implementation
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "NexusForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "PylonForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "AssimilatorForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "GatewayForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "CyberneticsCoreForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "ForgeForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "PhotonCannonForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "ShieldBatteryForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "TwilightCouncilForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "DarkShrineForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "TemplarArchiveForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "RoboticsFacilityForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "RoboticsBayForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "StargateForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "FleetBeaconForged", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "CarrierTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "ColossusTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "DarkTemplarTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "HighTemplarTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "ImmortalTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "PhoenixTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "ProbeTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "ScoutTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "SentryTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "StalkerTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "VoidRayTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "WarpPrismTaldarim", true);
+    libNtve_gf_PlayerApplySkinReplacingExistingUnit(lp_player, "ZealotTaldarim", true);
+}
+
+void lib2ECD74F3_gf_SingleTarget (unit lp_unit, abilcmd lp_ability, int lp_vitality, int lp_amount, int lp_range) {
+    // Automatic Variable Declarations
+    unitgroup auto08E2D980_g;
+    int auto08E2D980_u;
+    unit auto08E2D980_var;
+
+    // Implementation
+    auto08E2D980_g = UnitGroupAlliance(UnitGetOwner(lp_unit), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(lp_unit), lp_range), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    auto08E2D980_u = UnitGroupCount(auto08E2D980_g, c_unitCountAll);
+    for (;; auto08E2D980_u -= 1) {
+        auto08E2D980_var = UnitGroupUnitFromEnd(auto08E2D980_g, auto08E2D980_u);
+        if (auto08E2D980_var == null) { break; }
+        if ((UnitGetPropertyFixed(auto08E2D980_var, lp_vitality, c_unitPropCurrent) >= lp_amount)) {
+            UnitIssueOrder(lp_unit, OrderTargetingUnit(lp_ability, auto08E2D980_var), c_orderQueueAddToFront);
+            AISetUnitScriptControlled(lp_unit, false);
+        }
+
+    }
+}
+
+void lib2ECD74F3_gf_PointAoE (unit lp_unit, abilcmd lp_ability, int lp_amount, int lp_range) {
+    // Automatic Variable Declarations
+    unitgroup auto888ADDAC_g;
+    int auto888ADDAC_u;
+    unit auto888ADDAC_var;
+
+    // Implementation
+    auto888ADDAC_g = UnitGroupAlliance(UnitGetOwner(lp_unit), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(lp_unit), lp_range), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    auto888ADDAC_u = UnitGroupCount(auto888ADDAC_g, c_unitCountAll);
+    for (;; auto888ADDAC_u -= 1) {
+        auto888ADDAC_var = UnitGroupUnitFromEnd(auto888ADDAC_g, auto888ADDAC_u);
+        if (auto888ADDAC_var == null) { break; }
+        if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(lp_unit), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto888ADDAC_var), 2.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > lp_amount)) {
+            UnitIssueOrder(lp_unit, OrderTargetingPoint(lp_ability, UnitGetPosition(auto888ADDAC_var)), c_orderQueueAddToFront);
+            AISetUnitScriptControlled(lp_unit, false);
+        }
+
+    }
+}
+
+void lib2ECD74F3_gf_PointAoEGroundOnly (unit lp_unit, abilcmd lp_ability, int lp_amount, int lp_range) {
+    // Automatic Variable Declarations
+    unitgroup autoDA69157D_g;
+    int autoDA69157D_u;
+    unit autoDA69157D_var;
+
+    // Implementation
+    autoDA69157D_g = UnitGroupAlliance(UnitGetOwner(lp_unit), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(lp_unit), lp_range), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    autoDA69157D_u = UnitGroupCount(autoDA69157D_g, c_unitCountAll);
+    for (;; autoDA69157D_u -= 1) {
+        autoDA69157D_var = UnitGroupUnitFromEnd(autoDA69157D_g, autoDA69157D_u);
+        if (autoDA69157D_var == null) { break; }
+        if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(lp_unit), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoDA69157D_var), 1.5), UnitFilter((1 << c_targetFilterGround), 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > lp_amount)) {
+            UnitIssueOrder(lp_unit, OrderTargetingPoint(lp_ability, UnitGetPosition(autoDA69157D_var)), c_orderQueueAddToFront);
+            AISetUnitScriptControlled(lp_unit, false);
+        }
+
+    }
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Swap Lab Techs
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_SwapLabTechs_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUnitAllow(1, "MercCompound", true);
+    TechTreeAbilityAllow(1, AbilityCommand("TerranBuild", 12), true);
+    if ((TechTreeUpgradeCount(1, "OrbitalRelay", c_techCountQueuedOrBetter) == 1)) {
+        TechTreeAbilityAllow(1, AbilityCommand("SupplyDrop", 0), true);
+        TechTreeAbilityAllow(1, AbilityCommand("CalldownMULE", 0), false);
+    }
+
+    if ((TechTreeUpgradeCount(1, "UltraCapacitors", c_techCountQueuedOrBetter) == 1)) {
+        TechTreeAbilityAllow(1, AbilityCommand("StimpackMarauder", 0), true);
+        TechTreeAbilityAllow(1, AbilityCommand("StimpackReaper", 0), true);
+    }
+
+    if ((TechTreeUpgradeCount(1, "OrbitalStrike", c_techCountQueuedOrBetter) == 1)) {
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "OrbitalStrike", 0);
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "RogueForces", 1);
+    }
+
+    if (((TechTreeUpgradeCount(1, "PermanentCloakGhost", c_techCountQueuedOrBetter) == 1) || (TechTreeUpgradeCount(1, "PermanentCloakSpectre", c_techCountQueuedOrBetter) == 1))) {
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "PermanentCloakSpectre", 0);
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "PermanentCloakGhost", 0);
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "PsionicAbsorption", 1);
+    }
+
+    if ((TechTreeUpgradeCount(1, "TwinLinkedFlameThrowers", c_techCountQueuedOrBetter) == 1)) {
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "TwinLinkedFlameThrowers", 0);
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "HellionSmartServos", 1);
+    }
+
+    if ((TechTreeUpgradeCount(1, "MaelstromRounds", c_techCountQueuedOrBetter) == 1)) {
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "MaelstromRounds", 0);
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "UnknownUpgrade2", 1);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_SwapLabTechs_Init () {
+    lib2ECD74F3_gt_SwapLabTechs = TriggerCreate("lib2ECD74F3_gt_SwapLabTechs_Func");
+    TriggerAddEventTimePeriodic(lib2ECD74F3_gt_SwapLabTechs, 5.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Vanadium
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Vanadium_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    string auto2C81D778_val;
+
+    // Conditions
+    if (testConds) {
+        if (!(((EventUpgradeName() == "TerranVehicleArmorsVanadiumPlatingLevel1") || (EventUpgradeName() == "TerranVehicleArmorsVanadiumPlatingLevel2") || (EventUpgradeName() == "TerranVehicleArmorsVanadiumPlatingLevel3")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto2C81D778_val = EventUpgradeName();
+    if (auto2C81D778_val == "TerranVehicleArmorsVanadiumPlatingLevel1") {
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "TerranShipArmorsVanadiumPlatingLevel1", 1);
+    }
+    else if (auto2C81D778_val == "TerranVehicleArmorsVanadiumPlatingLevel2") {
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "TerranShipArmorsVanadiumPlatingLevel2", 1);
+    }
+    else if (auto2C81D778_val == "TerranVehicleArmorsVanadiumPlatingLevel3") {
+        libNtve_gf_SetUpgradeLevelForPlayer(1, "TerranShipArmorsVanadiumPlatingLevel3", 1);
+    }
+    else {
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Vanadium_Init () {
+    lib2ECD74F3_gt_Vanadium = TriggerCreate("lib2ECD74F3_gt_Vanadium_Func");
+    TriggerAddEventUpgradeLevelChanged(lib2ECD74F3_gt_Vanadium, 1);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Lower Than Brutal
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_LowerThanBrutal_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerIsEnabled(TriggerGetCurrent()) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libNtve_gf_DifficultyValueInt(1, 1, 1, 0) == 1)) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, StringExternal("Param/Value/lib_2ECD74F3_B36C63D9"));
+    }
+
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_LowerThanBrutal_Init () {
+    lib2ECD74F3_gt_LowerThanBrutal = TriggerCreate("lib2ECD74F3_gt_LowerThanBrutal_Func");
+    TriggerAddEventTimePeriodic(lib2ECD74F3_gt_LowerThanBrutal, 5.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Force Cheater
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_ForceCheater_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TriggerIsEnabled(TriggerGetCurrent()) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    AchievementsDisable(1);
+    UIClearMessages(PlayerGroupAll(), c_messageAreaAll);
+    TriggerEnable(libVCMI_gt_PM_AbortMission, false);
+    libVCMI_gf_SetWorkerRallyPointsPlayersNexuses(15);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_ForceCheater_Init () {
+    lib2ECD74F3_gt_ForceCheater = TriggerCreate("lib2ECD74F3_gt_ForceCheater_Func");
+    TriggerAddEventTimePeriodic(lib2ECD74F3_gt_ForceCheater, 0.5, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Run All Custom AI
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_RunAllCustomAI_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerExecute(lib2ECD74F3_gt_RunProtossAI, true, false);
+    TriggerExecute(lib2ECD74F3_gt_RunTerranAI, true, false);
+    TriggerExecute(lib2ECD74F3_gt_RunZergAI, true, false);
+    TechTreeUnitAllow(1, "MercCompound", true);
+    TechTreeAbilityAllow(1, AbilityCommand("TerranBuild", 12), true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_RunAllCustomAI_Init () {
+    lib2ECD74F3_gt_RunAllCustomAI = TriggerCreate("lib2ECD74F3_gt_RunAllCustomAI_Func");
+    TriggerAddEventMapInit(lib2ECD74F3_gt_RunAllCustomAI);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Run Zerg AI
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_RunZergAI_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerExecute(lib2ECD74F3_gt_Infestor, true, false);
+    TriggerExecute(lib2ECD74F3_gt_BroodQueen, true, false);
+    if ((TriggerActiveCount(lib2ECD74F3_gt_SwapLabTechs) == 0)) {
+        TriggerExecute(lib2ECD74F3_gt_SwapLabTechs, true, false);
+        TriggerExecute(lib2ECD74F3_gt_LowerThanBrutal, true, false);
+        TriggerExecute(lib2ECD74F3_gt_Brutalisk, true, false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_RunZergAI_Init () {
+    lib2ECD74F3_gt_RunZergAI = TriggerCreate("lib2ECD74F3_gt_RunZergAI_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Run Terran AI
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_RunTerranAI_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerExecute(lib2ECD74F3_gt_Marine, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Ghost, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Reaper, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Raven, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Banshee, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Wraith, true, false);
+    if ((TriggerActiveCount(lib2ECD74F3_gt_SwapLabTechs) == 0)) {
+        TriggerExecute(lib2ECD74F3_gt_SwapLabTechs, true, false);
+        TriggerExecute(lib2ECD74F3_gt_LowerThanBrutal, true, false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_RunTerranAI_Init () {
+    lib2ECD74F3_gt_RunTerranAI = TriggerCreate("lib2ECD74F3_gt_RunTerranAI_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Run Protoss AI
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_RunProtossAI_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerExecute(lib2ECD74F3_gt_HighTemplar, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Stalker, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Ascendent, true, false);
+    TriggerExecute(lib2ECD74F3_gt_Wrathwalker, true, false);
+    if ((TriggerActiveCount(lib2ECD74F3_gt_SwapLabTechs) == 0)) {
+        TriggerExecute(lib2ECD74F3_gt_SwapLabTechs, true, false);
+        TriggerExecute(lib2ECD74F3_gt_LowerThanBrutal, true, false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_RunProtossAI_Init () {
+    lib2ECD74F3_gt_RunProtossAI = TriggerCreate("lib2ECD74F3_gt_RunProtossAI_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Infestor
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Infestor_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup auto3AEE8CB3_g;
+    int auto3AEE8CB3_u;
+    unit auto3AEE8CB3_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto3AEE8CB3_g = UnitGroup("Infestor", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto3AEE8CB3_u = UnitGroupCount(auto3AEE8CB3_g, c_unitCountAll);
+        for (;; auto3AEE8CB3_u -= 1) {
+            auto3AEE8CB3_var = UnitGroupUnitFromEnd(auto3AEE8CB3_g, auto3AEE8CB3_u);
+            if (auto3AEE8CB3_var == null) { break; }
+            if ((UnitGetOwner(auto3AEE8CB3_var) != 1)) {
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto3AEE8CB3_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto3AEE8CB3_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 4) && (UnitAbilityCheck(auto3AEE8CB3_var, "FungalGrowth", true) == true)) {
+                    lib2ECD74F3_gf_PointAoE(auto3AEE8CB3_var, AbilityCommand("FungalGrowth", 0), 2, 8);
+                }
+                else {
+                    if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto3AEE8CB3_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto3AEE8CB3_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 1)) {
+                        UnitIssueOrder(auto3AEE8CB3_var, OrderTargetingPoint(AbilityCommand("InfestedTerrans", 0), libNtve_gf_PointOffsetTowardsPoint(UnitGetPosition(auto3AEE8CB3_var), 1.5, UnitGetPosition(UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(auto3AEE8CB3_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto3AEE8CB3_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive)))), c_orderQueueAddToFront);
+                    }
+
+                }
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto3AEE8CB3_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto3AEE8CB3_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 1)) {
+                    lv_localUnit = UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(auto3AEE8CB3_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto3AEE8CB3_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterNeutral) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive);
+                    if (((UnitGetPropertyFixed(lv_localUnit, c_unitPropVitalityMax, c_unitPropCurrent) >= 120.0) || (UnitGetType(lv_localUnit) == "SiegeTankSieged") || (UnitGetType(lv_localUnit) == "SiegeTank"))) {
+                        UnitIssueOrder(auto3AEE8CB3_var, OrderTargetingUnit(AbilityCommand("NeuralParasite", 0), lv_localUnit), c_orderQueueReplace);
+                    }
+
+                }
+
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Infestor_Init () {
+    lib2ECD74F3_gt_Infestor = TriggerCreate("lib2ECD74F3_gt_Infestor_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Brood Queen
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_BroodQueen_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup autoE0372F0A_g;
+    int autoE0372F0A_u;
+    unit autoE0372F0A_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        autoE0372F0A_g = UnitGroup("Infestor", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoE0372F0A_u = UnitGroupCount(autoE0372F0A_g, c_unitCountAll);
+        for (;; autoE0372F0A_u -= 1) {
+            autoE0372F0A_var = UnitGroupUnitFromEnd(autoE0372F0A_g, autoE0372F0A_u);
+            if (autoE0372F0A_var == null) { break; }
+            if ((UnitGetOwner(autoE0372F0A_var) != 1)) {
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(autoE0372F0A_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoE0372F0A_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 4)) {
+                    lib2ECD74F3_gf_PointAoE(autoE0372F0A_var, AbilityCommand("QueenMPEnsnare", 0), 2, 8);
+                }
+
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(autoE0372F0A_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoE0372F0A_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 1)) {
+                    lv_localUnit = UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(autoE0372F0A_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoE0372F0A_var), 10.0), UnitFilter(0, 0, (1 << c_targetFilterNeutral) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive);
+                    if (((UnitGetPropertyFixed(lv_localUnit, c_unitPropVitalityMax, c_unitPropCurrent) >= 120.0) || (UnitGetType(lv_localUnit) == "SiegeTankSieged") || (UnitGetType(lv_localUnit) == "SiegeTank"))) {
+                        UnitIssueOrder(autoE0372F0A_var, OrderTargetingUnit(AbilityCommand("QueenMPSpawnBroodlings", 0), lv_localUnit), c_orderQueueReplace);
+                    }
+
+                }
+
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_BroodQueen_Init () {
+    lib2ECD74F3_gt_BroodQueen = TriggerCreate("lib2ECD74F3_gt_BroodQueen_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Brutalisk
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Brutalisk_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup autoDEB49AD4_g;
+    int autoDEB49AD4_u;
+    unit autoDEB49AD4_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        autoDEB49AD4_g = UnitGroup("Brutalisk", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoDEB49AD4_u = UnitGroupCount(autoDEB49AD4_g, c_unitCountAll);
+        for (;; autoDEB49AD4_u -= 1) {
+            autoDEB49AD4_var = UnitGroupUnitFromEnd(autoDEB49AD4_g, autoDEB49AD4_u);
+            if (autoDEB49AD4_var == null) { break; }
+            if ((UnitGetOwner(autoDEB49AD4_var) != 1) && (UnitGetPropertyFixed(autoDEB49AD4_var, c_unitPropLifePercent, c_unitPropCurrent) <= 75.0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(autoDEB49AD4_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoDEB49AD4_var), 6.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 4)) {
+                UnitIssueOrder(autoDEB49AD4_var, Order(AbilityCommand("HybridFAoEStun", 0)), c_orderQueueAddToFront);
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Brutalisk_Init () {
+    lib2ECD74F3_gt_Brutalisk = TriggerCreate("lib2ECD74F3_gt_Brutalisk_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Marine
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Marine_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto72455270_g;
+    int auto72455270_u;
+    unit auto72455270_var;
+    unitgroup autoC7539281_g;
+    int autoC7539281_u;
+    unit autoC7539281_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto72455270_g = UnitGroup("Marine", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto72455270_u = UnitGroupCount(auto72455270_g, c_unitCountAll);
+        for (;; auto72455270_u -= 1) {
+            auto72455270_var = UnitGroupUnitFromEnd(auto72455270_g, auto72455270_u);
+            if (auto72455270_var == null) { break; }
+            if ((UnitGetOwner(auto72455270_var) != 1) && (TechTreeUpgradeCount(UnitGetOwner(auto72455270_var), "MarineStimpack", c_techCountQueuedOrBetter) == 1) && (UnitHasBehavior(auto72455270_var, "Stimpack") == false)) {
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto72455270_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto72455270_var), 5.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto72455270_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto72455270_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2)) {
+                    UnitIssueOrder(auto72455270_var, Order(AbilityCommand("Stimpack", 0)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+            }
+
+        }
+        autoC7539281_g = UnitGroup("WarPig", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoC7539281_u = UnitGroupCount(autoC7539281_g, c_unitCountAll);
+        for (;; autoC7539281_u -= 1) {
+            autoC7539281_var = UnitGroupUnitFromEnd(autoC7539281_g, autoC7539281_u);
+            if (autoC7539281_var == null) { break; }
+            if ((UnitGetOwner(autoC7539281_var) != 1) && (TechTreeUpgradeCount(UnitGetOwner(autoC7539281_var), "MarineStimpack", c_techCountQueuedOrBetter) == 1) && (UnitHasBehavior(autoC7539281_var, "Stimpack") == false)) {
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(autoC7539281_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoC7539281_var), 5.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(autoC7539281_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoC7539281_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2)) {
+                    UnitIssueOrder(autoC7539281_var, Order(AbilityCommand("Stimpack", 0)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Marine_Init () {
+    lib2ECD74F3_gt_Marine = TriggerCreate("lib2ECD74F3_gt_Marine_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Reaper
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Reaper_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup autoB57AE3F2_g;
+    int autoB57AE3F2_u;
+    unit autoB57AE3F2_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        autoB57AE3F2_g = UnitGroup("Reaper", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoB57AE3F2_u = UnitGroupCount(autoB57AE3F2_g, c_unitCountAll);
+        for (;; autoB57AE3F2_u -= 1) {
+            autoB57AE3F2_var = UnitGroupUnitFromEnd(autoB57AE3F2_g, autoB57AE3F2_u);
+            if (autoB57AE3F2_var == null) { break; }
+            if ((UnitGetOwner(autoB57AE3F2_var) != 1)) {
+                lib2ECD74F3_gf_PointAoEGroundOnly(autoB57AE3F2_var, AbilityCommand("D8Charge", 0), 4, 6);
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Reaper_Init () {
+    lib2ECD74F3_gt_Reaper = TriggerCreate("lib2ECD74F3_gt_Reaper_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Ghost
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Ghost_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup auto36AFC29B_g;
+    int auto36AFC29B_u;
+    unit auto36AFC29B_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto36AFC29B_g = UnitGroup("Ghost", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto36AFC29B_u = UnitGroupCount(auto36AFC29B_g, c_unitCountAll);
+        for (;; auto36AFC29B_u -= 1) {
+            auto36AFC29B_var = UnitGroupUnitFromEnd(auto36AFC29B_g, auto36AFC29B_u);
+            if (auto36AFC29B_var == null) { break; }
+            if ((UnitGetOwner(auto36AFC29B_var) != 1)) {
+                lib2ECD74F3_gf_SingleTarget(auto36AFC29B_var, AbilityCommand("Snipe", 0), c_unitPropLife, 100, 8);
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto36AFC29B_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto36AFC29B_var), 10.0), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 4)) {
+                    AISetUnitScriptControlled(UnitLastCreated(), true);
+                    UnitIssueOrder(auto36AFC29B_var, Order(AbilityCommand("GhostCloak", 0)), c_orderQueueReplace);
+                    UnitIssueOrder(EventUnit(), OrderTargetingPoint(AbilityCommand("TacNukeStrike", 0), UnitGetPosition(UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(auto36AFC29B_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto36AFC29B_var), 10.0), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive))), c_orderQueueReplace);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto36AFC29B_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto36AFC29B_var), 5.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto36AFC29B_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto36AFC29B_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2) && (UnitHasBehavior(auto36AFC29B_var, "GhostCloak") == false)) {
+                    UnitIssueOrder(auto36AFC29B_var, Order(AbilityCommand("GhostCloak", 0)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Ghost_Init () {
+    lib2ECD74F3_gt_Ghost = TriggerCreate("lib2ECD74F3_gt_Ghost_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Banshee
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Banshee_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup auto5E6E2EF4_g;
+    int auto5E6E2EF4_u;
+    unit auto5E6E2EF4_var;
+    unitgroup auto98C07EF6_g;
+    int auto98C07EF6_u;
+    unit auto98C07EF6_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto5E6E2EF4_g = UnitGroup("Banshee", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto5E6E2EF4_u = UnitGroupCount(auto5E6E2EF4_g, c_unitCountAll);
+        for (;; auto5E6E2EF4_u -= 1) {
+            auto5E6E2EF4_var = UnitGroupUnitFromEnd(auto5E6E2EF4_g, auto5E6E2EF4_u);
+            if (auto5E6E2EF4_var == null) { break; }
+            if ((UnitGetOwner(auto5E6E2EF4_var) != 1)) {
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto5E6E2EF4_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto5E6E2EF4_var), 5.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto5E6E2EF4_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto5E6E2EF4_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2) && (UnitHasBehavior(auto5E6E2EF4_var, "BansheeCloak") == false)) {
+                    UnitIssueOrder(auto5E6E2EF4_var, Order(AbilityCommand("BansheeCloak", 0)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto5E6E2EF4_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto5E6E2EF4_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) <= 2) && (UnitHasBehavior(auto5E6E2EF4_var, "BansheeCloak") == true)) {
+                    UnitIssueOrder(auto5E6E2EF4_var, Order(AbilityCommand("BansheeCloak", 1)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+            }
+
+        }
+        auto98C07EF6_g = UnitGroup("DuskWing", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto98C07EF6_u = UnitGroupCount(auto98C07EF6_g, c_unitCountAll);
+        for (;; auto98C07EF6_u -= 1) {
+            auto98C07EF6_var = UnitGroupUnitFromEnd(auto98C07EF6_g, auto98C07EF6_u);
+            if (auto98C07EF6_var == null) { break; }
+            if ((UnitGetOwner(auto98C07EF6_var) != 1)) {
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto98C07EF6_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto98C07EF6_var), 5.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto98C07EF6_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto98C07EF6_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2) && (UnitHasBehavior(auto98C07EF6_var, "BansheeCloak") == false)) {
+                    UnitIssueOrder(auto98C07EF6_var, Order(AbilityCommand("DuskWingBansheeCloakingField", 0)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto98C07EF6_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto98C07EF6_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) <= 2) && (UnitHasBehavior(auto98C07EF6_var, "BansheeCloak") == true)) {
+                    UnitIssueOrder(auto98C07EF6_var, Order(AbilityCommand("DuskWingBansheeCloakingField", 1)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Banshee_Init () {
+    lib2ECD74F3_gt_Banshee = TriggerCreate("lib2ECD74F3_gt_Banshee_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Wraith
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Wraith_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup auto5F90A30D_g;
+    int auto5F90A30D_u;
+    unit auto5F90A30D_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto5F90A30D_g = UnitGroup("Wraith", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto5F90A30D_u = UnitGroupCount(auto5F90A30D_g, c_unitCountAll);
+        for (;; auto5F90A30D_u -= 1) {
+            auto5F90A30D_var = UnitGroupUnitFromEnd(auto5F90A30D_g, auto5F90A30D_u);
+            if (auto5F90A30D_var == null) { break; }
+            if ((UnitGetOwner(auto5F90A30D_var) != 1)) {
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto5F90A30D_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto5F90A30D_var), 5.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto5F90A30D_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto5F90A30D_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2) && (UnitHasBehavior(auto5F90A30D_var, "WraithCloak") == false)) {
+                    UnitIssueOrder(auto5F90A30D_var, Order(AbilityCommand("WraithCloak", 0)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+                if ((UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto5F90A30D_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto5F90A30D_var), 9.0), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) <= 2) && (UnitHasBehavior(auto5F90A30D_var, "WraithCloak") == true)) {
+                    UnitIssueOrder(auto5F90A30D_var, Order(AbilityCommand("WraithCloak", 1)), c_orderQueueAddToFront);
+                    AISetUnitScriptControlled(UnitLastCreated(), false);
+                }
+
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Wraith_Init () {
+    lib2ECD74F3_gt_Wraith = TriggerCreate("lib2ECD74F3_gt_Wraith_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Raven
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Raven_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup autoA22275FF_g;
+    int autoA22275FF_u;
+    unit autoA22275FF_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        autoA22275FF_g = UnitGroup("Raven", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoA22275FF_u = UnitGroupCount(autoA22275FF_g, c_unitCountAll);
+        for (;; autoA22275FF_u -= 1) {
+            autoA22275FF_var = UnitGroupUnitFromEnd(autoA22275FF_g, autoA22275FF_u);
+            if (autoA22275FF_var == null) { break; }
+            if ((UnitGetOwner(autoA22275FF_var) != 1) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(autoA22275FF_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoA22275FF_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2)) {
+                lib2ECD74F3_gf_SingleTarget(autoA22275FF_var, AbilityCommand("SeekerMissile", 0), c_unitPropLife, 45, 8);
+                UnitIssueOrder(autoA22275FF_var, OrderTargetingPoint(AbilityCommand("BuildAutoTurret", 0), libNtve_gf_PointOffsetTowardsPoint(UnitGetPosition(autoA22275FF_var), 1.5, UnitGetPosition(UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(autoA22275FF_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoA22275FF_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive)))), c_orderQueueAddToFront);
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Raven_Init () {
+    lib2ECD74F3_gt_Raven = TriggerCreate("lib2ECD74F3_gt_Raven_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Stalker
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Stalker_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup autoE4C945ED_g;
+    int autoE4C945ED_u;
+    unit autoE4C945ED_var;
+    unitgroup auto34584DC3_g;
+    int auto34584DC3_u;
+    unit auto34584DC3_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        autoE4C945ED_g = UnitGroup("Stalker", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoE4C945ED_u = UnitGroupCount(autoE4C945ED_g, c_unitCountAll);
+        for (;; autoE4C945ED_u -= 1) {
+            autoE4C945ED_var = UnitGroupUnitFromEnd(autoE4C945ED_g, autoE4C945ED_u);
+            if (autoE4C945ED_var == null) { break; }
+            if ((UnitGetOwner(autoE4C945ED_var) != 1) && (UnitGetPropertyFixed(autoE4C945ED_var, c_unitPropShields, c_unitPropCurrent) <= 2.0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(autoE4C945ED_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoE4C945ED_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2) && (UnitGetType(AILastAttacker(autoE4C945ED_var)) != "SiegeTankSieged")) {
+                UnitIssueOrder(autoE4C945ED_var, OrderTargetingPoint(AbilityCommand("Blink", 0), libNtve_gf_PointOffsetTowardsPoint(UnitGetPosition(autoE4C945ED_var), -6.0, UnitGetPosition(UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(autoE4C945ED_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(autoE4C945ED_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive)))), c_orderQueueAddToFront);
+            }
+
+        }
+        auto34584DC3_g = UnitGroup("StalkerShakuras", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto34584DC3_u = UnitGroupCount(auto34584DC3_g, c_unitCountAll);
+        for (;; auto34584DC3_u -= 1) {
+            auto34584DC3_var = UnitGroupUnitFromEnd(auto34584DC3_g, auto34584DC3_u);
+            if (auto34584DC3_var == null) { break; }
+            if ((UnitGetOwner(auto34584DC3_var) != 1) && (UnitGetPropertyFixed(auto34584DC3_var, c_unitPropShields, c_unitPropCurrent) <= 2.0) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto34584DC3_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto34584DC3_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 2) && (UnitGetType(AILastAttacker(auto34584DC3_var)) != "SiegeTankSieged")) {
+                UnitIssueOrder(auto34584DC3_var, OrderTargetingPoint(AbilityCommand("BlinkShieldRestore", 0), libNtve_gf_PointOffsetTowardsPoint(UnitGetPosition(auto34584DC3_var), -6.0, UnitGetPosition(UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(auto34584DC3_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto34584DC3_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive)))), c_orderQueueAddToFront);
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Stalker_Init () {
+    lib2ECD74F3_gt_Stalker = TriggerCreate("lib2ECD74F3_gt_Stalker_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: High Templar
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_HighTemplar_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_localUnit;
+
+    // Automatic Variable Declarations
+    unitgroup auto4622DD0C_g;
+    int auto4622DD0C_u;
+    unit auto4622DD0C_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto4622DD0C_g = UnitGroup("HighTemplar", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto4622DD0C_u = UnitGroupCount(auto4622DD0C_g, c_unitCountAll);
+        for (;; auto4622DD0C_u -= 1) {
+            auto4622DD0C_var = UnitGroupUnitFromEnd(auto4622DD0C_g, auto4622DD0C_u);
+            if (auto4622DD0C_var == null) { break; }
+            if ((UnitGetOwner(auto4622DD0C_var) != 1)) {
+                lib2ECD74F3_gf_PointAoE(auto4622DD0C_var, AbilityCommand("PsiStorm", 0), 3, 10);
+                lib2ECD74F3_gf_SingleTarget(auto4622DD0C_var, AbilityCommand("Feedback", 0), c_unitPropEnergy, 72, 7);
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_HighTemplar_Init () {
+    lib2ECD74F3_gt_HighTemplar = TriggerCreate("lib2ECD74F3_gt_HighTemplar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Ascendent
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Ascendent_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto65205BF0_g;
+    int auto65205BF0_u;
+    unit auto65205BF0_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto65205BF0_g = UnitGroup("HighTemplarTaldarim", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto65205BF0_u = UnitGroupCount(auto65205BF0_g, c_unitCountAll);
+        for (;; auto65205BF0_u -= 1) {
+            auto65205BF0_var = UnitGroupUnitFromEnd(auto65205BF0_g, auto65205BF0_u);
+            if (auto65205BF0_var == null) { break; }
+            if ((UnitGetOwner(auto65205BF0_var) != 1)) {
+                lib2ECD74F3_gf_PointAoE(auto65205BF0_var, AbilityCommand("VoidHighTemplarPsiOrb", 0), 5, 8);
+                lib2ECD74F3_gf_SingleTarget(auto65205BF0_var, AbilityCommand("VoidHighTemplarMindBlast", 0), c_unitPropLife, 135, 9);
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Ascendent_Init () {
+    lib2ECD74F3_gt_Ascendent = TriggerCreate("lib2ECD74F3_gt_Ascendent_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Wrathwalker
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_gt_Wrathwalker_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto78706FF1_g;
+    int auto78706FF1_u;
+    unit auto78706FF1_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while (true) {
+        auto78706FF1_g = UnitGroup("ColossusTaldarim", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto78706FF1_u = UnitGroupCount(auto78706FF1_g, c_unitCountAll);
+        for (;; auto78706FF1_u -= 1) {
+            auto78706FF1_var = UnitGroupUnitFromEnd(auto78706FF1_g, auto78706FF1_u);
+            if (auto78706FF1_var == null) { break; }
+            if ((UnitGetOwner(auto78706FF1_var) != 1) && (UnitGroupCount(UnitGroupAlliance(UnitGetOwner(auto78706FF1_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto78706FF1_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 1) && (UnitGetType(AILastAttacker(auto78706FF1_var)) != "SiegeTankSieged")) {
+                UnitIssueOrder(auto78706FF1_var, OrderTargetingPoint(AbilityCommand("move", 0), libNtve_gf_PointOffsetTowardsPoint(UnitGetPosition(auto78706FF1_var), -2.0, UnitGetPosition(UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(auto78706FF1_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto78706FF1_var), 8.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive)))), c_orderQueueAddToFront);
+                UnitIssueOrder(auto78706FF1_var, OrderTargetingPoint(AbilityCommand("attack", 0), UnitGetPosition(UnitGroupRandomUnit(UnitGroupAlliance(UnitGetOwner(auto78706FF1_var), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(auto78706FF1_var), 14.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive))), c_orderQueueAddToEnd);
+            }
+
+        }
+        Wait(0.5, c_timeGame);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib2ECD74F3_gt_Wrathwalker_Init () {
+    lib2ECD74F3_gt_Wrathwalker = TriggerCreate("lib2ECD74F3_gt_Wrathwalker_Func");
+}
+
+void lib2ECD74F3_InitTriggers () {
+    lib2ECD74F3_gt_SwapLabTechs_Init();
+    lib2ECD74F3_gt_Vanadium_Init();
+    lib2ECD74F3_gt_LowerThanBrutal_Init();
+    lib2ECD74F3_gt_ForceCheater_Init();
+    lib2ECD74F3_gt_RunAllCustomAI_Init();
+    lib2ECD74F3_gt_RunZergAI_Init();
+    lib2ECD74F3_gt_RunTerranAI_Init();
+    lib2ECD74F3_gt_RunProtossAI_Init();
+    lib2ECD74F3_gt_Infestor_Init();
+    lib2ECD74F3_gt_BroodQueen_Init();
+    lib2ECD74F3_gt_Brutalisk_Init();
+    lib2ECD74F3_gt_Marine_Init();
+    lib2ECD74F3_gt_Reaper_Init();
+    lib2ECD74F3_gt_Ghost_Init();
+    lib2ECD74F3_gt_Banshee_Init();
+    lib2ECD74F3_gt_Wraith_Init();
+    lib2ECD74F3_gt_Raven_Init();
+    lib2ECD74F3_gt_Stalker_Init();
+    lib2ECD74F3_gt_HighTemplar_Init();
+    lib2ECD74F3_gt_Ascendent_Init();
+    lib2ECD74F3_gt_Wrathwalker_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib2ECD74F3_InitLib_completed = false;
+
+void lib2ECD74F3_InitLib () {
+    if (lib2ECD74F3_InitLib_completed) {
+        return;
+    }
+
+    lib2ECD74F3_InitLib_completed = true;
+
+    lib2ECD74F3_InitLibraries();
+    lib2ECD74F3_InitTriggers();
+}
+

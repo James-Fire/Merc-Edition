@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTargetFindBestPoint id="InfestorDiseaseBestPoint">
+        <DamageBase value="30"/>
+        <Effect value="FungalGrowthSearch"/>
+    </CTargetFindBestPoint>
+    <CTargetFindEffect id="InfestorDiseaseSearch">
+        <Effect value="FungalGrowthSearch"/>
+    </CTargetFindEffect>
+</Catalog>

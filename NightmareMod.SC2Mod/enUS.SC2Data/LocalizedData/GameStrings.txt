@@ -1,0 +1,91 @@
+﻿Abil/Name/StimpackReaper=Stimpack Reaper
+Abil/Name/StimpackReaperRedirect=Stimpack Reaper Redirect
+Behavior/Name/ImmortalityProtocold=Immortality Protocol'd
+Behavior/Name/PlasmaBlastTarget=Plasma Blast Target
+Behavior/Name/PredatorInstincts=Predator Instincts
+Behavior/Name/StimpackReaper=Stimpack
+Behavior/Name/TomahawkPowerCells=Tomahawk Power Cells
+Behavior/Tooltip/ColonyInfestation=This structure is Infested. It has greatly increased durability but takes +100% damage from fire.
+Behavior/Tooltip/Corruption=This unit is taking 20% extra damage.
+Behavior/Tooltip/ImmortalityProtocold=This Thor has already been revived.
+Behavior/Tooltip/PlasmaBlastTarget=A hybrid is about to launch a plasma blast at this unit.
+Behavior/Tooltip/QueenMPEnsnare=Unit's movement speed is slowed and it cannot use movement-based abilities.
+Behavior/Tooltip/StimpackReaper=This unit moves and attacks more quickly while under the effects of Stimpack.
+Behavior/Tooltip/TomahawkPowerCells=The Wraith gains +20% damage for 25 seconds after Cloaking.
+Button/Name/CombatDrugs2=Combat Drugs
+Button/Name/FireOnTheMove2=Fire on the Move
+Button/Name/Heal=Nano-Repair
+Button/Name/PredatorInstincts=Predator Instincts
+Button/Name/PsionicAbsorption=Psionic Absorption
+Button/Name/RogueForces=Rogue Forces
+Button/Name/SmartServos=Smart-Siege Servos
+Button/Name/StimReaper=Use Raider Stimpack
+Button/Tooltip/250mmStrikeCannons=Deals <d ref="Effect,250mmStrikeCannonsCreatePersistent,PeriodCount * Effect,250mmStrikeCannonsDamage,Amount"/> damage to a unit over <d ref="Effect,250mmStrikeCannonsCreatePersistent,PeriodCount * Effect,250mmStrikeCannonsCreatePersistent,PeriodicPeriodArray[0]"/> seconds.
+Button/Tooltip/330mmBarrageCannons=Deals <d ref="Effect,330mmBarrageCannonsPersistent,PeriodCount * Effect,330mmBarrageCannonsDamage,Amount"/> damage in an area over <d ref="Effect,330mmBarrageCannonsPersistent,PeriodCount * Effect,330mmBarrageCannonsPersistent,PeriodicPeriodArray[0]"/> seconds in a larger area.
+Button/Tooltip/AresClassWeaponsSystemviking=Increases missile range by 2 and Autocannon range by 1. Also increases transformation speed.
+Button/Tooltip/CombatDrugs2=Biological units inside the Medivac Heal slowly over time for no energy cost.
+Button/Tooltip/CommandCenterOrbRelay=Primary structure. Used to train SCVs and receive gathered resources. Can use the Lift Off, Calldown: Supplies, and Scanner Sweep abilities.<n/><n/><c val="ffff8a">Enables:</c><n/>- SCVs
+Button/Tooltip/DisplacementField=The Wraith +2% range while cloaked. 
+Button/Tooltip/FireOnTheMove2=The Hellion can fire its Flamethrower while moving.
+Button/Tooltip/Heal=Heals a friendly biological target.<n/><n/><c val="f078ff">2 life per 1 energy.</c>
+Button/Tooltip/HealMedivac=Heals a friendly biological target.<n/><n/><c val="f078ff">3 life per 1 energy.</c>
+Button/Tooltip/Hellion=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/JuggernautPlating=Increases the Firebat's armor by 2 and grants them 75% damage resistance from Baneling attacks.
+Button/Tooltip/NanoRepair=Heals a friendly mechanical unit.<n/><n/><c val="f078ff">Heals 10 life per 4 energy.</c>
+Button/Tooltip/Obliterate=Deals 170 damage to a single target.
+Button/Tooltip/OcularImplants=Increases Ghost sight radius by 3.
+Button/Tooltip/PredatorInstincts=While the Predator is moving, it gains +3 armor.
+Button/Tooltip/PsiStorm=Creates a storm of psionic energy that lasts 4 seconds, causing up to 80 damage to all enemy units in the target area.
+Button/Tooltip/PsionicAbsorption=This unit leeches 15% of Auto-Attack damage dealt as energy.
+Button/Tooltip/RetributionField=The Predator unleashes a deadly field of electricity each time it attacks, dealing 20 damage. The Predator is immune to Baneling Acid.
+Button/Tooltip/RogueForces=Mercenaries no longer consume charges when hired.
+Button/Tooltip/SensorTower=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy. <n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/ShapedHull=Increases Diamondback life by 50 and allows them to be built without a tech lab
+Button/Tooltip/SingularityAnchor=Wraith has +100 starting energy. After cloaking, it gains +20% damage for 25 seconds.
+Button/Tooltip/SmartServos=Siege Tanks can siege and unsiege much faster.
+Button/Tooltip/StimReaper=Injects the Reaper with powerful stimulants that greatly increase attack speeds for a few seconds. Injures the unit for 5 of the unit's life.
+Button/Tooltip/TerranShipPlatingVanadiumPlatingLevel1=Upgrades the armor of units built at a Starport and increases their life by 7.5%.
+Button/Tooltip/TerranShipPlatingVanadiumPlatingLevel2=Further upgrades the armor of units built at a Starport and increases their life by an additional 7.5%.
+Button/Tooltip/TerranShipPlatingVanadiumPlatingLevel3=Maximizes the armor of units built at a Starport and increases their life by an additional 7.5%.
+Button/Tooltip/TerranVehiclePlatingVanadiumPlatingLevel1=Upgrades the armor of vehicles and ships and increases their life by 7.5%.
+Button/Tooltip/TerranVehiclePlatingVanadiumPlatingLevel2=Further upgrades the armor of vehicles and ships and upgrades their life by an additional 7.5%.
+Button/Tooltip/TerranVehiclePlatingVanadiumPlatingLevel3=Maximizes the armor of vehicles and ships and increases their life by an additional 7.5%.
+DocInfo/DescLong=Adds enemy AI (need to "run all custom AI" from triggers<n/>Rebalances some WoL upgrades/units
+DocInfo/DescShort=Any
+DocInfo/Name=WoL Nightmare Mod
+Effect/Name/InfestedAcidSpines=Infested Acid Spines
+Effect/Name/InfestedAcidSpinesLM=Infested Acid Spines LM
+Effect/Name/MedivacLoadHealRB=Medivac Transport Heal RB
+Effect/Name/MindControlMU=Mind Control MU
+Effect/Name/PlasmaBlastWarningAB=HybridC Plasma Blast Warning AB
+Effect/Name/ReviveOrder=Revive Order
+Effect/Name/ReviveSet=Revive Set
+Effect/Name/StimpackReaper=Stim Pack (Apply Buff)
+Effect/Name/TomahawkPowerCellsAB=Tomahawk Power Cells AB
+Effect/Name/ZealotPurifierReviveRemoveBehavior2=Revive Remove Behavior
+Param/Value/lib_2ECD74F3_B36C63D9=<c val="00FF00">Nightmare Difficulty:</c> <c val="FF0000">Detected difficulty lower than Nightmare. Expect drastic difficulty spikes.</c>
+RequirementNode/Tooltip/CountBehaviorThorDontDieCompleteOnlyAtUnit4274112890=Each Thor can only revive once.
+RequirementNode/Tooltip/CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat=Attached Tech Lab
+RequirementNode/Tooltip/Not83801426CountUnitSpectreNukeQueuedOrBetterAtUnit=No Nuke in this Shadow Ops
+RequirementNode/Tooltip/Or96167438CountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheatCountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly13087249115=Factory
+Skin/Info/ScoutTaldarim=There is a time for overwhelming force, and a time to be swift and deadly. The Tal'darim recognize the value in the latter, which is why they maintain a fleet of phoenixes stolen from the Templar.
+Skin/Name/ScoutTaldarim=Forged
+UI/Difficulty04Campaign=NIGHTMARE
+UI/Difficulty04InGame=A.I. SLOT (Hard)
+UI/Difficulty04Tip=Similar to “Normal” campaign difficulty.
+UI/GameMenuAbortMission_Control=Return <h/>to Hyperion
+Unit/Name/Brutalisk=Brutalisk
+Unit/Name/InfestedAcidSpinesWeapon=Infested Acid Spines Weapon
+Unit/ShieldArmorName/BlastBarrier=Blast Barrier
+Upgrade/Name/HellionSmartServos=(Hellion) Smart Servos
+Upgrade/Name/MultiTaskMAFServosSiegeTank=Smart Servos Copy
+Upgrade/Name/PsionicAbsorption=Psionic Absorption
+Upgrade/Name/RogueForces=Rogue Forces
+Upgrade/Name/UnknownUpgrade=Blast Barrier
+Upgrade/Name/UnknownUpgrade2=Smart Servos
+Weapon/Name/D8Charge2=D-8 Charge Copy
+Weapon/Name/InfernalFlameThrower2=Infernal Flamethrower
+Weapon/Name/InfestedAcidSpines=Infested Rockets
+Weapon/Name/NovaBacklashRockets=Blacklash Rockets
+Weapon/Name/VoidRayChargeBeam=Prismatic Charge Beam
+Weapon/Tip/D8Charge2=Only used against structures.

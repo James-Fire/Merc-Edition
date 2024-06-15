@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="BroodLord">
+        <Model value="BroodLord"/>
+        <PortraitModel value="BroodLordPortrait"/>
+    </CActorUnit>
+    <!--                                                                                         -->
+    <!-- Brutalisk ............................................................................. -->
+    <!--                                                                                         -->
+    <CActorUnit id="Brutalisk">
+        <On Terms="Abil.HybridFAoEStun.SourceCastStart" Send="$Spell"/>
+    </CActorUnit>
+    <CActorModel id="HybridCPlasmaAttackImpactModel">
+        <Model value="HybridCPlasmaAttackImpact"/>
+    </CActorModel>
+    <CActorAction id="InfestedAcidSpinesAttack" parent="GenericAttack" effectImpact="InfestedAcidSpines" effectLaunch="InfestedAcidSpinesLM">
+        <LaunchSiteOps Ops=""/>
+        <LaunchAttachQuery Methods="Weapon"/>
+        <LaunchAssets Model="" Sound=""/>
+        <ContainerAssets Model="" Sound=""/>
+        <ImpactMap index="None" Model="" Sound="" ModelReaction=""/>
+        <ImpactMap index="Shield" Sound="" ModelReaction=""/>
+        <ImpactPhysics Name="AcidSpinesImpact" MatchKeys="Basic" Physics="QueenAttackDeathForce"/>
+        <DamageMap index="None" Model="" Sound="" ModelReaction=""/>
+        <DamageMap index="Shield" Sound="" ModelReaction=""/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorMissile id="InfestedAcidSpinesAttackMissile" parent="GenericAttackMissile" unitName="InfestedAcidSpinesWeapon"/>
+    <CActorSound id="InfestedTerran_AirAttackLaunchSwtnrSound" parent="SoundOneShot">
+        <On Terms="Effect.InfestedAcidSpinesLM.Start; At Caster" Send="Create"/>
+        <Sound value=""/>
+    </CActorSound>
+    <CActorSound id="Marauder_Stimpack">
+        <On Terms="Abil.StimpackReaper.SourceCastStart" Send="Create"/>
+    </CActorSound>
+    <CActorMissile id="Reaper">
+        <On Terms="WeaponStart.D8Charge2.AttackStart" Send="AnimBracketStart Attack Spell"/>
+        <On Terms="WeaponStop.D8Charge2.AttackStop" Send="AnimBracketStop Attack"/>
+    </CActorMissile>
+    <CActorSimple id="SeekerMissileTint">
+        <On Terms="Behavior.PlasmaBlastTarget.On" Send="Create"/>
+        <On Terms="Behavior.PlasmaBlastTarget.Off" Target="_Unit" Send="ClearTintColor 0.500000 SeekerTarget"/>
+        <On Terms="Behavior.PlasmaBlastTarget.Off" Target="_Unit" Send="Destroy"/>
+    </CActorSimple>
+    <CActorRange id="SensorTowerDetection">
+        <Inherits index="Visibility" value="0"/>
+        <FogVisibility value="Visible"/>
+        <On Terms="UnitBirth.SensorTower.EditorPlaced" Send="Create"/>
+        <On Terms="Behavior.Detector20.On" Send="Create"/>
+        <On Terms="Behavior.Detector20.Off" Send="Destroy"/>
+        <Range value="20.000000"/>
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+        <RangeFlags index="Minimap" value="1"/>
+    </CActorRange>
+    <CActorSound id="ShieldAbsorbImmortalSound">
+        <On Terms="Behavior.HardenedShieldImmortalMelee.DamageHandled" Send="Create"/>
+    </CActorSound>
+    <!--                                                                                         -->
+    <CActorModel id="ShieldAbsorbImmortalViz">
+        <Remove index="0" removed="1"/>
+    </CActorModel>
+    <CActorModel id="StimpackEndImpact">
+        <On Terms="Behavior.StimpackReaper.Off; ValidateUnit NotDead" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="StimpackStartImpact">
+        <On Terms="Abil.StimpackReaper.SourceCastStart" Send="Create"/>
+    </CActorModel>
+    <CActorUnit id="Thor">
+        <Remove index="0" removed="1"/>
+        <Remove index="1" removed="1"/>
+        <On index="110" removed="1"/>
+        <On index="111" removed="1"/>
+        <On index="112" removed="1"/>
+        <On index="113" removed="1"/>
+        <On index="114" removed="1"/>
+        <On index="115" removed="1"/>
+        <On index="116" removed="1"/>
+        <On index="117" removed="1"/>
+        <On index="118" removed="1"/>
+        <On index="119" removed="1"/>
+        <On index="120" removed="1"/>
+        <On index="121" removed="1"/>
+        <On index="122" removed="1"/>
+        <On index="123" removed="1"/>
+        <On index="124" removed="1"/>
+        <On index="125" removed="1"/>
+        <On index="126" removed="1"/>
+        <On index="127" removed="1"/>
+        <On index="128" removed="1"/>
+        <On index="129" removed="1"/>
+        <On index="130" removed="1"/>
+        <On index="131" removed="1"/>
+        <On index="132" removed="1"/>
+        <On index="133" removed="1"/>
+        <On index="134" removed="1"/>
+        <On index="135" removed="1"/>
+        <On index="136" removed="1"/>
+        <On index="137" removed="1"/>
+        <On index="138" removed="1"/>
+        <On index="139" removed="1"/>
+    </CActorUnit>
+    <!--                                                                                         -->
+    <!-- Thor Wreckage ......................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="ThorWreckage">
+        <On Terms="AbilMorph.*.Finish; MorphTo Thor" Send="Destroy"/>
+    </CActorUnit>
+    <CActorAction id="VoidRayAttack">
+        <On index="5" removed="1"/>
+        <On index="6" removed="1"/>
+        <On index="7" removed="1"/>
+    </CActorAction>
+    <CActorBeamSimple id="VoidRayAttackBeam">
+        <On index="12" removed="1"/>
+        <On index="13" removed="1"/>
+        <On index="14" removed="1"/>
+        <On index="15" removed="1"/>
+        <On index="16" removed="1"/>
+        <On index="17" removed="1"/>
+        <On index="18" removed="1"/>
+        <On index="19" removed="1"/>
+        <On index="20" removed="1"/>
+        <On index="21" removed="1"/>
+        <!--On Terms="TimerExpired; TimerName DelayAnim2" Send="SetTintColor {255,128,32 3.000000}"/>
+        <On Terms="TimerExpired; TimerName DelayAnim3" Send="SetTintColor {255,32,32 2.000000}"/>
+        <On Terms="ActorCreation; ValidateUnit DoubleDamage" Send="SetTintColor {255,128,32 3.000000}"/>
+        <On Terms="ActorCreation; ValidateUnit QuadDamage" Send="SetTintColor {255,32,32 2.000000}"/-->
+    </CActorBeamSimple>
+    <CActorModel id="VoidRayChargeX01">
+        <On index="10" removed="1"/>
+        <On index="11" removed="1"/>
+        <!--On Terms="Effect.PrismaticBeamChargeEffect02.Start; At Source" Send="SetTintColor {255,128,32 3.000000}"/>
+        <On Terms="Effect.PrismaticBeamChargeEffect03.Start; At Source" Send="SetTintColor {255,32,32 2.000000}"/-->
+    </CActorModel>
+    <CActorModel id="VoidRayChargeX02">
+        <On index="9" removed="1"/>
+        <!--On Terms="Effect.PrismaticBeamChargeEffect02.Start; At Source" Send="SetTintColor {255,128,32 3.000000}"/>
+        <On Terms="Effect.PrismaticBeamChargeEffect03.Start; At Source" Send="SetTintColor {255,32,32 2.000000}"/-->
+    </CActorModel>
+    <CActorModel id="VoidRayChargeX03">
+        <On index="7" removed="1"/>
+        <On index="8" removed="1"/>
+        <!--On Terms="Effect.PrismaticBeamChargeEffect03.Start; At Source" Send="SetTintColor {255,32,32 2.000000}"/-->
+    </CActorModel>
+</Catalog>

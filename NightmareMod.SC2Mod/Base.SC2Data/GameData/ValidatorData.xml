@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorPlayerCompareDifficulty id="CasterDifficultyGE1">
+        <Value value="0"/>
+    </CValidatorPlayerCompareDifficulty>
+    <CValidatorPlayerCompareDifficulty id="CasterDifficultyGE2">
+        <Value value="0"/>
+    </CValidatorPlayerCompareDifficulty>
+    <CValidatorPlayerCompareDifficulty id="CasterDifficultyGE3">
+        <Value value="0"/>
+    </CValidatorPlayerCompareDifficulty>
+    <CValidatorPlayerCompareDifficulty id="CasterDifficultyGE4">
+        <Value value="0"/>
+    </CValidatorPlayerCompareDifficulty>
+    <CValidatorCombine id="GravitonBeamValidators">
+        <ResultFailed value="Error"/>
+        <CombineArray index="0" value="CasterHasEnergyAndNotDead"/>
+        <CombineArray index="1" value="NotVortexd"/>
+        <CombineArray index="2" value="NotFrenzied"/>
+        <CombineArray index="3" value="TargetNotDead"/>
+        <CombineArray index="4" removed="1"/>
+        <CombineArray index="5" removed="1"/>
+        <CombineArray index="6" removed="1"/>
+        <CombineArray index="7" removed="1"/>
+        <CombineArray index="8" removed="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="InfestorDiseaseTestBuff">
+        <Behavior value="FungalGrowth"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotBanelingImmune">
+        <Behavior value="MothershipRecalling"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareSpeed id="MovingKindaFast">
+        <Compare value="GE"/>
+        <Value value="2.25"/>
+    </CValidatorUnitCompareSpeed>
+    <CValidatorUnitCompareBehaviorCount id="NotReborn">
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="ImmortalityProtocold"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <!--    -->
+    <!--    Siege Tank Unsieged-->
+    <!--    -->
+    <!--        if ((!forced to move) AND-->
+    <!--            (!wants to move OR (in combat AND units in siege range)) AND-->
+    <!--            (has attack order) AND-->
+    <!--            (!ground enemies in minimimum range) AND-->
+    <!--            (AI Bully Type not set or !AI Bully Type))-->
+    <!--            -->
+    <!--            Siege-->
+    <!--    -->
+    <!--    -->
+    <CValidatorCombine id="TacticalSiegeTankSeige">
+        <CombineArray index="4" removed="1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="TacticalStimpack">
+        <CombineArray index="4" value="TacticalStimpackHostiles"/>
+        <CombineArray index="5" removed="1"/>
+    </CValidatorCombine>
+</Catalog>

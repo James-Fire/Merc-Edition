@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="CombatDrugs2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-reapercombatdrugs.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FireOnTheMove2">
+        <Icon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="FireOnTheMove"/>
+    </CButton>
+    <CButton id="Heal">
+        <Tooltip value="Button/Tooltip/HealMedivac"/>
+    </CButton>
+    <CButton id="HealRedirect"/>
+    <CButton id="PredatorInstincts">
+        <Icon value="Assets\Textures\btn-ability-stetmann-topbar-speedconfiguration.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="PsionicAbsorption">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-snipeenergyrefund.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RogueForces">
+        <Icon value="Assets\Textures\btn-tips-credit.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SmartServos">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-immortalityprotocol.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="StimReaper">
+        <Icon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="Stim"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="TerranShipPlatingVanadiumPlatingLevel2">
+        <HotkeyAlias value="TerranShipPlatingLevel1"/>
+    </CButton>
+    <CButton id="TerranShipPlatingVanadiumPlatingLevel3">
+        <HotkeyAlias value="TerranShipPlatingLevel1"/>
+    </CButton>
+    <CButton id="TerranVehiclePlatingVanadiumPlatingLevel2">
+        <HotkeyAlias value="TerranVehiclePlatingLevel1"/>
+    </CButton>
+    <CButton id="TerranVehiclePlatingVanadiumPlatingLevel3">
+        <HotkeyAlias value="TerranVehiclePlatingLevel1"/>
+    </CButton>
+</Catalog>

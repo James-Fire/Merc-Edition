@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="ATALaserBattery">
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <AllowedMovement value="Moving"/>
+        <Arc value="360"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ATSLaserBattery">
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Brutalize">
+        <Period value="1.2"/>
+        <DamagePoint value="0.6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CrucioShockCannon">
+        <Effect value="CrucioShockCannonSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="D8Charge2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="D8ChargeDamage"/>
+        <TargetFilters value="Ground,Visible,MapBoss;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1.8"/>
+        <Effect value="D8ChargeLaunchMissile"/>
+        <RandomDelayMin value="0.1"/>
+        <RandomDelayMax value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DRBattlecruiserA">
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DRBattlecruiserFakeA">
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DRBattlecruiserFakeG">
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DRBattlecruiserG">
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DRCannonsA">
+        <Options index="Hidden" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DRCannonsG">
+        <Options index="Hidden" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DevilDogFlameThrower">
+        <DamagePoint value="0.005"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Firebat">
+        <DamagePoint value="0.005"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfernalFlameThrower2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="InfernalFlameThrower"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="2.5"/>
+        <DamagePoint value="0.25"/>
+        <Backswing value="0.75"/>
+        <Effect value="InfernalFlameThrowerCP"/>
+        <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfestedAcidSpines">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Period value="1.33"/>
+        <DamagePoint value="0.25"/>
+        <Backswing value="0.75"/>
+        <Effect value="InfestedAcidSpinesLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfestedGuassRifle">
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Lurker">
+        <Range value="9"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NovaBacklashRockets"/>
+    <CWeaponLegacy id="P38ScytheGuassPistol">
+        <TargetFilters value="Ground,Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable,MapBoss"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ShrikeTurret">
+        <Range value="7"/>
+        <Period value="1.2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="StoneZealot">
+        <Period value="1.4"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="UrunEnergyBeam">
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Range value="7"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="VoidRayChargeBeam">
+        <DisplayEffect value="VoidRayChargeBeamBaseDamageCharge1"/>
+    </CWeaponLegacy>
+</Catalog>

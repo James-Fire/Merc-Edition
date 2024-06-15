@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="BanelingImmune">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse ModifyFraction="0">
+            <RequireEffectArray value="HotSBanelingExplodeLargeSearchDamage"/>
+            <RequireEffectArray value="HotSBanelingExplodeLargeDirect"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BanelingImmuneFirebat">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseJuggernautPlatingFirebat"/>
+        <DamageResponse ModifyFraction="0.25">
+            <RequireEffectArray value="HotSBanelingExplodeLargeDirect"/>
+            <RequireEffectArray value="HotSBanelingExplodeLargeSearchDamage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CloakDistortionField">
+        <Modification RangedWeaponRange="2"/>
+        <DamageResponse ModifyFraction="1" ModifyMinimumDamage="0">
+            <Chance value="0"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ColonyInfestation">
+        <Modification>
+            <LifeArmorBonus value="1"/>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="1"/>
+        </Modification>
+        <DamageResponse ModifyFraction="2">
+            <RequireEffectArray value="FirebatUFull"/>
+            <RequireEffectArray value="InfernalFlameThrower"/>
+            <RequireEffectArray value="DevilDogDamage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnergyLeech">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="HavePsionicAbsorption"/>
+        <Modification>
+            <VitalDamageLeechArray index="Energy">
+                <KindArray index="Ranged" value="0.15"/>
+            </VitalDamageLeechArray>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HardenedShieldImmortalMelee">
+        <DamageResponse>
+            <Kind index="Spell" value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImmortalityProtocold">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedivacTransportHeal">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UnitIsBiological"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="0.8007"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedivacTransportHeal2">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.01"/>
+        <InitialEffect value="MedivacLoadHealRB"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NeuralParasite">
+        <FinalEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OracleRevelation2">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
+        <RemoveValidatorArray value="NotOracleStasisTrapped"/>
+        <RemoveValidatorArray value="NoPurificationNova"/>
+        <Duration value="2"/>
+        <Modification>
+            <ModifyFlags index="Reveal" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PlasmaBlastTarget">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-structureovercharge.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="2.75"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PredatorInstincts">
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-topbar-speedconfiguration.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="MovingKindaFast"/>
+        <Modification>
+            <LifeArmorBonus value="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="QueenMPEnsnare">
+        <Modification>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <AbilLinkDisableArray value="ZeratulBlink"/>
+            <AbilLinkDisableArray value="Blink"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StimpackReaper">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-stimpack.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="1.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ThorDontDie">
+        <RemoveValidatorArray value="NotReborn"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TomahawkPowerCells">
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-tomahawkpowercell.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="TomahawkPowerCellsCampaign"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="25"/>
+        <Modification>
+            <DamageTotalMultiplier index="Ranged" value="0.2"/>
+        </Modification>
+        <RemoveValidatorArray value="IsCloaked"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WraithCloak">
+        <InitialEffect value="TomahawkPowerCellsAB"/>
+    </CBehaviorBuff>
+</Catalog>
