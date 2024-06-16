@@ -187,6 +187,42 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="PickupGas100">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupGas200">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupGas25">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupGas50">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupMinerals100">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupMinerals250">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupNovaTechnology">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupPalletGas">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupPalletMinerals">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupScrapLarge">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupScrapMedium">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PickupScrapSmall">
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="SignalFlare">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SignalFlareInitial"/>
