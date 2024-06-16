@@ -2,9 +2,112 @@
 <TriggerData>
     <Library Id="BA5CCDED">
         <Root>
+            <Item Type="Category" Library="BA5CCDED" Id="2851B9D7"/>
             <Item Type="Category" Library="BA5CCDED" Id="FFB39B08"/>
             <Item Type="Category" Library="BA5CCDED" Id="CA3A8D1E"/>
         </Root>
+        <Element Type="Category" Id="2851B9D7">
+            <Item Type="Comment" Library="BA5CCDED" Id="079EA309"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="C7C2E4C6"/>
+        </Element>
+        <Element Type="Comment" Id="079EA309">
+            <Comment>
+                Overarching mission changes best done here
+            </Comment>
+        </Element>
+        <Element Type="Trigger" Id="C7C2E4C6">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="F5703C79"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="EAD5535D"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="885A3E0A"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F5703C79">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EAD5535D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="51A07C05"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="59F49AF9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5B4C65F2"/>
+        </Element>
+        <Element Type="Param" Id="51A07C05">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="7822EBBB"/>
+        </Element>
+        <Element Type="FunctionCall" Id="7822EBBB">
+            <FunctionDef Type="FunctionDef" Library="Camp" Id="2D2C3D99"/>
+        </Element>
+        <Element Type="Param" Id="59F49AF9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="500677B2"/>
+        </Element>
+        <Element Type="Param" Id="5B4C65F2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Preset Type="PresetValue" Library="Camp" Id="F938E18F"/>
+        </Element>
+        <Element Type="FunctionCall" Id="885A3E0A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C4DC760C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="57FB64BF"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="3FF03333"/>
+        </Element>
+        <Element Type="Param" Id="57FB64BF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F96B466D"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E3E7A95C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E3E7A95C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000359"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9DBC2B91"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="533C7C90"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8CA086BF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="651DBE2A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D61D3DE7"/>
+        </Element>
+        <Element Type="Param" Id="9DBC2B91">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000691"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000231"/>
+        </Element>
+        <Element Type="Param" Id="533C7C90">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000692"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="8CA086BF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000693"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C0A20BBA"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C0A20BBA">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000356"/>
+        </Element>
+        <Element Type="Param" Id="651DBE2A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000695"/>
+            <Value>RawResource,HarvestableResource;Missile,Dead,Hidden</Value>
+            <ValueType Type="unitfilter"/>
+        </Element>
+        <Element Type="Param" Id="D61D3DE7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000694"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1468BD55"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3FF03333">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000087"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="9441B8B5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F5ED843A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D7A1D7AD"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E24183D9"/>
+        </Element>
+        <Element Type="Param" Id="F5ED843A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000151"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FA842931"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FA842931">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="19CE733E"/>
+        </Element>
+        <Element Type="Param" Id="D7A1D7AD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000152"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="F6D2A277"/>
+        </Element>
+        <Element Type="Param" Id="E24183D9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000153"/>
+            <Value>5000.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
         <Element Type="Category" Id="FFB39B08">
             <Item Type="FunctionDef" Library="BA5CCDED" Id="F9E916E2"/>
         </Element>
