@@ -1,0 +1,5 @@
+title=Nightmare Difficulty
+desc=Wings of Liberty but with increased difficulty (and some adjustments to some tech)
+author=Rhyme
+campaign=WoL
+version=2.025

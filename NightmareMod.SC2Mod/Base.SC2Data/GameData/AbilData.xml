@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectTarget id="250mmStrikeCannons">
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <CastIntroTime index="0" value="1"/>
+        <CmdButtonArray index="Execute" Requirements="Hide250mmStrikeCannons"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="330mmBarrageCannons">
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <CastIntroTime index="0" value="1"/>
+        <FinishTime index="0" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilBuild id="BarracksAddOns">
+        <InfoArray index="Build3" Time="25"/>
+        <InfoArray index="Build4" Time="25"/>
+    </CAbilBuild>
+    <CAbilTrain id="BarracksTrain">
+        <InfoArray index="Train2" Time="40"/>
+        <InfoArray index="Train5">
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train6">
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="Blink">
+        <!--Effect index="0" value="VoidStalkerBlinkSet"/-->
+        <CmdButtonArray index="Execute" State="Available"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Domination">
+        <Cost index="0">
+            <Charge CountMax="2" CountStart="2" CountUse="1"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DukesRevengeMissilePods">
+        <Flags index="AllowMovement" value="1"/>
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DukesRevengeYamato">
+        <Flags index="AllowMovement" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilBuild id="FactoryAddOns">
+        <InfoArray index="Build3" Time="25"/>
+        <InfoArray index="Build4" Time="25"/>
+    </CAbilBuild>
+    <CAbilTrain id="FactoryTrain">
+        <InfoArray index="Train3" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="40">
+            <Button DefaultButtonFace="Goliath" Requirements=""/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="50">
+            <Button DefaultButtonFace="Diamondback" Requirements="HaveAttachedTechLabOrShapedHull"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="40">
+            <Button DefaultButtonFace="Predator" Requirements=""/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="0">
+            <Button DefaultButtonFace="" State="Available"/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="0">
+            <Button Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Train20" Time="0">
+            <Button DefaultButtonFace="" State="Available"/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train25" Time="0">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="FungalGrowth">
+        <Cost index="0">
+            <Cooldown TimeUse="2"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="GravitonBeam">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <CAbilTransport id="HerculesTransport">
+        <MaxCargoCount value="32"/>
+        <TotalCargoSpace value="32"/>
+    </CAbilTransport>
+    <CAbilEffectTarget id="HeroNuclearStrike">
+        <FinishTime index="0" value="2.5"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="LokiMissilePods">
+        <Flags index="AllowMovement" value="1"/>
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilTransport id="MedivacTransport">
+        <LoadCargoBehavior value="MedivacTransportHeal"/>
+        <UnloadCargoBehavior value="MedivacTransportHeal2"/>
+    </CAbilTransport>
+    <CAbilEffectTarget id="MindControl">
+        <Effect index="0" value="MindControlMU"/>
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <Range index="0" value="8"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MissilePods">
+        <Flags index="AllowMovement" value="1"/>
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Obliterate">
+        <Cost index="0">
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <PrepTime index="0" value="2"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <RefundFraction>
+            <VitalFraction index="Energy" value="100"/>
+        </RefundFraction>
+        <Range index="0" value="10"/>
+    </CAbilEffectTarget>
+    <CAbilBuild id="ProtossBuild">
+        <InfoArray index="Build11">
+            <Button Requirements="HaveTwilightCouncil"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Button Requirements="HaveTwilightCouncil"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Button Requirements="HaveCyberneticsCoreAndNotHaveSOAWarpTech"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilArmMagazine id="SelendisHangar">
+        <InfoArray index="Ammo1">
+            <Cooldown Link="Abil/##id##"/>
+            <Flags index="AutoBuildOn" value="1"/>
+        </InfoArray>
+    </CAbilArmMagazine>
+    <CAbilEffectTarget id="Snipe">
+        <Cost index="0">
+            <Cooldown TimeUse="1.4"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilBuild id="StarportAddOns">
+        <InfoArray index="Build3" Time="25"/>
+        <InfoArray index="Build4" Time="25"/>
+    </CAbilBuild>
+    <CAbilResearch id="StarportTechLabResearch">
+        <InfoArray index="Research11">
+            <Button State="Restricted"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="StarportTrain">
+        <InfoArray index="Train4" Time="110"/>
+        <InfoArray index="Train6">
+            <Button Requirements="HaveAttachedTechLab"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Button DefaultButtonFace="BuildScienceVessel"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train8">
+            <Button Requirements=""/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectInstant id="StimpackMarauder">
+        <CmdButtonArray index="Execute" Requirements="LearnTerranInfantryWeaponUltraCapacitors1"/>
+        <Effect index="0" value="StimpackMarauder"/>
+    </CAbilEffectInstant>
+    <CAbilRedirectInstant id="StimpackReaperRedirect">
+        <DataCollection value="StimpackMarauderRedirect"/>
+        <Abil value="StimpackReaper"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="StimRedirect" State="Restricted" Requirements="UseStimpack">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilRedirectInstant>
+    <CAbilEffectInstant id="StimpackReaper" parent="StimpackMarauder">
+        <Name value="Abil/Name/StimpackReaper"/>
+        <Cost index="0">
+            <Vital index="Life" value="5"/>
+        </Cost>
+        <InterruptCost>
+            <Charge Link="Abil/StimpackReaper"/>
+            <Cooldown Link="Abil/StimpackReaper"/>
+        </InterruptCost>
+        <Effect index="0" value="StimpackReaper"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="StimReaper"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="SupplyDrop">
+        <CmdButtonArray index="Execute" Requirements="HaveOrbitalRelay"/>
+    </CAbilEffectTarget>
+    <CAbilBuild id="TerranBuild">
+        <InfoArray index="Build4">
+            <Button State="Available" Requirements=""/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilMorph id="ThorReborn">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <InfoArray index="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="60"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="55"/>
+                <DurationArray index="Duration" value="5"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="60"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="60"/>
+                <EffectArray index="Finish" value="ZealotPurifierReviveRemoveBehavior2"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastRange value="9"/>
+        <AutoCastCountMax value="100"/>
+        <AutoCastAcquireLevel value="None"/>
+        <Alert value=""/>
+    </CAbilMorph>
+    <CAbilMorph id="ThorWreckage">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="ReviveSet"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="UltrasonicPulse">
+        <Cost index="0">
+            <Cooldown TimeUse="5"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Vortex">
+        <Effect index="0" value="VortexCreatePersistentInitial"/>
+        <TargetFilters index="0" removed="1"/>
+        <Range index="0" value="12"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="WraithCloak">
+        <CmdButtonArray index="On" DefaultButtonFace="WraithCloakOn"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="Yamato">
+        <Cost index="0">
+            <Vital index="Energy" value="125"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilBuild id="ZergBuild">
+        <InfoArray index="Build18" Time="180"/>
+    </CAbilBuild>
+</Catalog>

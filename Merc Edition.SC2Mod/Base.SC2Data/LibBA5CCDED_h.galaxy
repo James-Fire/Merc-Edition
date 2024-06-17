@@ -7,5 +7,6 @@ include "TriggerLibs/natives"
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 
 // Trigger Declarations
+trigger libBA5CCDED_gt_DepositMoney;
 trigger libBA5CCDED_gt_WarPigLaserTargetingSystem;
 

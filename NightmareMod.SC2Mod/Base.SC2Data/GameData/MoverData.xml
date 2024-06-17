@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CMoverMissile id="InfestedAcidSpinesWeapon">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Speed value="30"/>
+            <MaxSpeed value="30"/>
+            <ActorTracking value="Actual"/>
+            <RotationLaunchActorType value="LaunchToTarget"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+</Catalog>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAnd id="AndAllowUnitGhostNotCountUpgradeSpectreTooltipUpgradeQueuedOrBetter">
+        <OperandArray value="AllowUnitGhost"/>
+        <OperandArray value="NotCountUpgradeSpectreTooltipUpgradeQueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranInfantryArmorsLevel1QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranInfantryArmorsLevel1QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranInfantryArmorsLevel2QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranInfantryArmorsLevel2QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranInfantryArmorsLevel3QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranInfantryArmorsLevel3QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranInfantryWeaponsLevel1QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUpgradeTerranInfantryWeaponsLevel1QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranInfantryWeaponsLevel2QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUpgradeTerranInfantryWeaponsLevel2QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranInfantryWeaponsLevel3QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUpgradeTerranInfantryWeaponsLevel3QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranShipWeaponsLevel1QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranShipWeaponsLevel1QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranShipWeaponsLevel2QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranShipWeaponsLevel2QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranShipWeaponsLevel3QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranShipWeaponsLevel3QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranVehicleWeaponsLevel1QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranVehicleWeaponsLevel1QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranVehicleWeaponsLevel2QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranVehicleWeaponsLevel2QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeTerranVehicleWeaponsLevel3QueuedOrBetter">
+        <OperandArray value="NotCountUpgradeTerranVehicleWeaponsLevel3QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr96167438CountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheatCountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOn2253155517">
+        <OperandArray value="Or96167438CountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheatCountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly13087249115"/>
+        <OperandArray value="Not83801426CountUnitNukeQueuedOrBetterAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr96167438CountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheatCountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOn3161309831">
+        <OperandArray value="Or96167438CountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheatCountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly13087249115"/>
+        <OperandArray value="Not83801426CountUnitSpectreNukeQueuedOrBetterAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorThorDontDieCompleteOnlyAtUnit4274112890">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ThorDontDie" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeHellionSmartServosCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="HellionSmartServos" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePsionicAbsorptionCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PsionicAbsorption" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRogueForcesCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RogueForces" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSpectreTooltipUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SpectreTooltipUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUnknownUpgrade2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UnknownUpgrade2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementNot id="NotCountUpgradeSpectreTooltipUpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSpectreTooltipUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTerranInfantryArmorsLevel1QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranInfantryArmorsLevel2QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranInfantryArmorsLevel3QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranInfantryWeaponsLevel1QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranInfantryWeaponsLevel2QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranInfantryWeaponsLevel3QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranShipWeaponsLevel1QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranShipWeaponsLevel2QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranShipWeaponsLevel3QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranVehicleWeaponsLevel1QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranVehicleWeaponsLevel2QueuedOrBetter"/>
+    <CRequirementNot id="NotCountUpgradeTerranVehicleWeaponsLevel3QueuedOrBetter"/>
+    <CRequirementOr id="Or96167438CountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheatCountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly13087249115">
+        <OperandArray value="CountUnitFactoryCompleteOnly96167438TechTreeCheat"/>
+        <OperandArray value="CountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheat"/>
+        <OperandArray value="CountUnitFactoryCompleteOnly96167438TechTreeCheat"/>
+        <OperandArray value="CountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheat"/>
+        <OperandArray value="CountUnitFactoryCompleteOnly96167438TechTreeCheat"/>
+        <OperandArray value="CountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheat"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeShapedHullCompleteOnly">
+        <OperandArray value="CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"/>
+        <OperandArray value="CountUpgradeShapedHullCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradePermanentCloakSpectreCompleteOnlyCountUpgradePermanentCloakGhostCompleteOnlyCountUpgradePsionicAbsorptionCompleteOnly">
+        <OperandArray value="CountUpgradePermanentCloakSpectreCompleteOnly"/>
+        <OperandArray value="CountUpgradePermanentCloakGhostCompleteOnly"/>
+        <OperandArray value="CountUpgradePsionicAbsorptionCompleteOnly"/>
+    </CRequirementOr>
+</Catalog>

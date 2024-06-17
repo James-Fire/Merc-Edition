@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectSet id="250mmStrikeCannonsSet">
+        <EffectArray index="0" value="250mmStrikeCannonsDummy"/>
+        <EffectArray index="1" removed="1"/>
+    </CEffectSet>
+    <CEffectEnumArea id="330mmBarrageCannonsSearch">
+        <AreaArray index="0" Radius="0"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="ArcliteShockCannonBlast">
+        <AttributeBonus index="Armored" value="37"/>
+        <Amount value="53"/>
+    </CEffectDamage>
+    <CEffectDamage id="ArcliteShockCannonDirected">
+        <AttributeBonus index="Armored" value="37"/>
+        <Amount value="53"/>
+    </CEffectDamage>
+    <CEffectDamage id="ArcliteShockCannonDummy">
+        <AttributeBonus index="Armored" value="37"/>
+        <Amount value="53"/>
+    </CEffectDamage>
+    <CEffectDamage id="ArcliteShockCannonEnemyDamage">
+        <AttributeBonus index="Armored" value="37"/>
+        <Amount value="53"/>
+    </CEffectDamage>
+    <CEffectDamage id="ArcliteShockCannonFriendlyDamage">
+        <AttributeBonus index="Armored" value="9"/>
+        <Amount value="13"/>
+    </CEffectDamage>
+    <CEffectDamage id="BrutalizeDamage">
+        <AreaArray Radius="0.8" Fraction="0.8"/>
+        <AreaArray Radius="1.2" Fraction="0.3"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonBlast">
+        <AttributeBonus index="Armored" value="25"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ValidatorArray value="NoShapedBlast"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonDirected">
+        <AttributeBonus index="Armored" value="25"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonDummy">
+        <AttributeBonus index="Armored" value="25"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonEnemyDamage">
+        <AttributeBonus index="Armored" value="25"/>
+        <Amount value="35"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonFriendlyDamage">
+        <AttributeBonus index="Armored" value="6"/>
+        <Amount value="9"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonFriendlyTargetDamage">
+        <AttributeBonus index="Armored" value="16"/>
+        <Amount value="36"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="EnergyNovaPersistent">
+        <ExpireEffect value=""/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="EyeBeamsAirDamage">
+        <Amount value="21"/>
+    </CEffectDamage>
+    <CEffectSet id="EyeBeamsGroundSet">
+        <EffectArray value="ThermalLancesFireBeam"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="GravitonBeam">
+        <ValidatorArray index="0" value="NotFrenzied"/>
+        <ValidatorArray index="1" value="NoGravitonBeamInProgress"/>
+        <ValidatorArray index="2" removed="1"/>
+        <TechAliasArray value=""/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="HotSBanelingExplodeLargeDirect">
+        <AttributeBonus index="Light" value="20"/>
+        <AttributeBonus index="Structure" value="60"/>
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectDamage id="HotSBanelingExplodeLargeSearchDamage">
+        <AttributeBonus index="Light" value="20"/>
+        <AttributeBonus index="Structure" value="60"/>
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectDamage id="InfestedAcidSpines">
+        <EditorCategories value="Race:Zerg"/>
+        <ArmorReduction value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="14"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="InfestedAcidSpinesLM">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="InfestedAcidSpines"/>
+        <AmmoUnit value="InfestedAcidSpinesWeapon"/>
+        <Movers Link="InfestedAcidSpinesWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="InfestedGuassRifle">
+        <Amount value="6"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="Lurker">
+        <PeriodCount value="9"/>
+        <PeriodicOffsetArray value="0,-8,0"/>
+        <PeriodicOffsetArray value="0,-9,0"/>
+    </CEffectCreatePersistent>
+    <CEffectRemoveBehavior id="MedivacLoadHealRB">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="MedivacTransportHeal2"/>
+    </CEffectRemoveBehavior>
+    <!--CEffectRemoveBehavior id="KerriganEpilogue03QuantumRayRB">-->
+    <!--        <EditorCategories value=""/>-->
+    <!--        <WhichUnit Value="Caster"/>-->
+    <!--        <BehaviorLink value="KerriganEpilogue03CastingQuantumRay"/>-->
+    <!--    </CEffectRemoveBehavior-->
+    <CEffectCreateHealer id="NanoRepair">
+        <DrainVitalCostFactor value="0.4"/>
+    </CEffectCreateHealer>
+    <CEffectModifyUnit id="MindControlMU">
+        <ModifyFlags index="Owner" value="1"/>
+        <ValidatorArray value="IsZerg"/>
+        <ValidatorArray value="NotLarvaEgg"/>
+        <ValidatorArray value="NotLarva"/>
+    </CEffectModifyUnit>
+    <CEffectDamage id="Obliterate">
+        <Amount value="170"/>
+    </CEffectDamage>
+    <CEffectDamage id="P38ScytheGuassPistol">
+        <AttributeBonus index="Light" value="5"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="PlasmaBlastWarningAB">
+        <EditorCategories value=""/>
+        <Behavior value="PlasmaBlastTarget"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="PrismaticBeamChargeEffect01">
+        <PeriodicPeriodArray index="1" removed="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="PrismaticBeamChargeEffect02">
+        <PeriodicPeriodArray index="1" removed="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="PrismaticBeamChargeEffect03">
+        <PeriodicPeriodArray index="1" removed="1"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="PsiStormSearch">
+        <SearchFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <!--AreaArray index="0" Radius="1.5" Effect="PsiStormImpactSet"/-->
+    </CEffectEnumArea>
+    <CEffectSet id="ReviveSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="ReviveOrder"/>
+        <EffectArray value="PostMorphHeal"/>
+    </CEffectSet>
+    <CEffectDamage id="ScoutAirU">
+        <AttributeBonus index="Armored" value="7"/>
+        <Amount value="7"/>
+    </CEffectDamage>
+    <CEffectDamage id="ScoutGround">
+        <AttributeBonus index="Light" value="0"/>
+        <Amount value="8"/>
+    </CEffectDamage>
+    <CEffectDamage id="ShrikeTurretDamage">
+        <Amount value="16"/>
+    </CEffectDamage>
+    <CEffectIssueOrder id="ReviveOrder">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Abil value="ThorReborn"/>
+        <CmdFlags index="Preempt" value="1"/>
+    </CEffectIssueOrder>
+    <CEffectDamage id="SnipeDamage">
+        <AttributeBonus index="Psionic" value="0"/>
+        <Amount value="45"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="StimpackReaper">
+        <ValidatorArray index="0" value="StimpackTargetFilters"/>
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/Stimpack"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="ThermalLancesMU">
+        <AttributeBonus index="Light" value="5"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="TomahawkPowerCellsAB">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="TomahawkPowerCells"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="VoidHighTemplarPsiOrbDamage">
+        <Amount value="6"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="VoidRayChargeBeamBounceCasterAB">
+        <ValidatorArray index="0" value="HaveVoidRayBeamCanCharge"/>
+        <ValidatorArray index="1" removed="1"/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="VoidRayChargeBeamDamageSwitch">
+        <CaseArray index="0" Effect="VoidRayChargeBeamBaseDamageCharge2"/>
+        <CaseArray index="1" Effect="VoidRayChargeBeamBaseDamageCharge3"/>
+        <CaseDefault value="VoidRayChargeBeamBaseDamageCharge1"/>
+    </CEffectSwitch>
+    <CEffectApplyBehavior id="VoidRayPhase2">
+        <ValidatorArray index="0" removed="1"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="ZealotPurifierReviveRemoveBehavior2">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="ThorDontDie"/>
+    </CEffectRemoveBehavior>
+</Catalog>
