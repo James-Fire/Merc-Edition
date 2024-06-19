@@ -121,7 +121,7 @@
             <LayoutButtons index="11" Face="TrainBlockB" AbilCmd="BarracksTrain,Train10" Row="0" Column="2"/>
             <LayoutButtons index="12" Face="TrainPhantom" Type="AbilCmd" AbilCmd="BarracksTrain,Train11" Row="0"/>
             <LayoutButtons index="13" Face="TrainShadow" AbilCmd="BarracksTrain,Train15" Row="0" Column="3"/>
-            <LayoutButtons index="15" Face="TechReactorAI" AbilCmd="BarracksAddOns,Build3" Row="2" Column="2"/>
+            <LayoutButtons index="15" Column="2"/>
             <LayoutButtons index="16" Face="TrainSkibisAngel" AbilCmd="BarracksTrain,Train13"/>
             <LayoutButtons index="17" Face="TrainDevilDog" AbilCmd="BarracksTrain,Train14"/>
         </CardLayouts>
@@ -282,8 +282,8 @@
         <BehaviorArray Link="ChemicalPlating"/>
         <EffectArray index="Death" value="DeadMenTellNoTales"/>
         <CardLayouts index="0">
-            <LayoutButtons index="5" Face="BearclawGauntlets" AbilCmd="" Requirements="UseBearclawGauntlets" Column="1"/>
-            <LayoutButtons index="6" Face="ChemicalPlating" AbilCmd="" Requirements="UseChemicalPlating" Column="2"/>
+            <LayoutButtons index="5" Face="BearclawGauntlets" AbilCmd="" Requirements="UseBearclawGauntlets"/>
+            <LayoutButtons index="6" Face="ChemicalPlating" AbilCmd="" Requirements="UseChemicalPlating"/>
             <LayoutButtons Face="DevilDogGrapple" Type="AbilCmd" AbilCmd="DevilDogGrapple,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="DeadMenTellNoTales" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="DieselBasedNapalm" Type="Passive" Row="1" Column="1"/>
@@ -473,7 +473,7 @@
         <AbilArray index="3" Link="MagrailMunitions"/>
         <AbilArray Link="LowGradeStim"/>
         <CardLayouts index="0">
-            <LayoutButtons index="5" Face="MagrailMunitions" Type="AbilCmd" AbilCmd="MagrailMunitions,Execute" Requirements="" Column="1"/>
+            <LayoutButtons index="5" Face="MagrailMunitions" Type="AbilCmd" AbilCmd="MagrailMunitions,Execute" Requirements=""/>
             <LayoutButtons index="6" Face="LowGradeStims" Type="AbilCmd" AbilCmd="LowGradeStim,Execute" Requirements="" Column="0"/>
         </CardLayouts>
     </CUnit>
@@ -573,6 +573,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="GreaterHeal"/>
         <AbilArray Link="SignalFlare"/>
+        <AbilArray Link="StabilizerMedpackHeal"/>
         <BehaviorArray Link="ThornShield"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -581,8 +582,9 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="MedicHeal" Type="AbilCmd" AbilCmd="GreaterHeal,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="MercMedicHeal" Type="AbilCmd" AbilCmd="GreaterHeal,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="SignalFlare" Type="AbilCmd" AbilCmd="SignalFlare,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="MercMedicHeal" Type="AbilCmd" AbilCmd="StabilizerMedpackHeal,Execute" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>

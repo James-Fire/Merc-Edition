@@ -15,6 +15,10 @@
         <Find value="1"/>
         <Value value="UseTyradorImplants"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveStabilizerMedpacks">
+        <Find value="1"/>
+        <Value value="UseStabilizerMedpacksMerc"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="SuperCloakNotOnCooldown">
         <Behavior value="SuperCloakCooldown"/>
     </CValidatorUnitCompareBehaviorCount>

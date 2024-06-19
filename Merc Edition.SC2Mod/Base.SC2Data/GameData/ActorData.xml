@@ -424,6 +424,7 @@
         <Inherits index="Visibility" value="1"/>
         <On Terms="Effect.SkibisAngelHeal.TargetStart" Send="Create"/>
         <On Terms="Effect.SkibisAngelHeal.TargetStop" Send="Destroy"/>
+        <On Terms="ActorCreation; ValidateUnit HaveStabilizerMedpacks" Send="SetTintColor {62,231,255 2.000000}"/>
         <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
         <Model value="MedicHealBeam"/>
         <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
@@ -446,6 +447,8 @@
         <On Terms="ActorOrphan" Send="Destroy"/>
         <On Terms="ActorCreation" Send="Create MedicHealSoundStart"/>
         <On Terms="ActorDestruction" Send="Create MedicHealSoundStop"/>
+        <On Terms="Abil.StabilizerMedpackHeal.TargetChannelStart" Send="Create"/>
+        <On Terms="Abil.StabilizerMedpackHeal.TargetChannelStop" Send="Destroy"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
         <Sound value="Medic_Heal"/>
@@ -566,6 +569,11 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorModel id="StabilizerMedpackField" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StabilizerMedpacksSA.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,0 3.000000}"/>
+    </CActorModel>
     <CActorAction id="StarcruiserLaserAttack" parent="GenericAttack" effectImpact="PharaohLaserBatteryDamage" effectLaunch="PharaohLaserBatteryLM">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0 AMRandomUniform"/>
         <LaunchAssets Sound="Battlecruiser_GroundAttackLaunch"/>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirement id="DontHaveStabilizerMedpacks">
+        <NodeArray index="Show" Link="NotCountUpgradeStabilizerMedpacksMercCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnStabilizerMedpacksMerc">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0"/>
+    </CRequirement>
     <CRequirement id="LearnSuperStim">
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeSuperStimQueuedOrBetter0"/>
@@ -35,6 +42,10 @@
     <CRequirement id="UseNeosteelCupHolders">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseStabilizerMedpacksMerc">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseSuperStim">
         <EditorCategories value="TechType:Ability"/>

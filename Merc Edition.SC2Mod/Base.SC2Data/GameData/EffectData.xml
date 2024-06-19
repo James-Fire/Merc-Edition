@@ -199,11 +199,8 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="LowGradeStims"/>
     </CEffectApplyBehavior>
-    <CEffectDamage id="MagrailMunitionsDamage">
-        <Amount value="20"/>
-    </CEffectDamage>
+    <CEffectDamage id="MagrailMunitionsDamage"/>
     <CEffectLaunchMissile id="MagrailMunitionsLaunchMissile">
-        <ImpactEffect value="MagrailMunitionsDamage"/>
         <AmmoUnit value="MagrailMunitionsMissile"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="NukeDamage">
@@ -263,6 +260,26 @@
         <CaseDefault value="SignalFlareBlindLaunchMissile"/>
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSwitch>
+    <CEffectCreateHealer id="SkibisAngelStabilizerAoEHeal">
+        <ValidatorArray value="noMarkers"/>
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="NotVortexd"/>
+        <DrainVital value="Energy"/>
+        <DrainVitalCostFactor value="0.33"/>
+        <RechargeVitalRate value="12"/>
+    </CEffectCreateHealer>
+    <CEffectSet id="SkibisAngelHealSet">
+        <ValidatorArray value="noMarkers"/>
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="NotVortexd"/>
+        <EditorCategories value=""/>
+        <EffectArray value="SkibisAngelHeal"/>
+        <EffectArray value="SkibisAngelStabilizerAoEHeal"/>
+    </CEffectSet>
     <CEffectDamage id="SnipeDamagePhantom" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
@@ -288,6 +305,14 @@
         <AreaArray Arc="64.995" Radius="6.2" Effect="SprayandPayDamage"/>
         <LaunchLocation Value="CasterUnit"/>
         <SearchFlags index="CenterAtLaunch" value="1"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="StabilizerMedpacksSA">
+        <ValidatorArray value="HaveStabilizerMedpacks"/>
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <ExcludeArray Effect="SkibisAngelHealSet" Value="Target"/>
+        <SearchFilters value="Ground;Self,Enemy,Structure,Missile,Item,Stasis,Dead,Invulnerable,Benign"/>
+        <AreaArray Radius="1.2" Effect="SkibisAngelStabilizerAoEHeal"/>
     </CEffectEnumArea>
     <CEffectApplyBehavior id="SuperCloakApplyBehavior">
         <ValidatorArray index="0" value="SuperCloakNotOnCooldown"/>
@@ -429,7 +454,6 @@
     </CEffectCreateUnit>
     <CEffectSet id="VolatileBurst">
         <EffectArray index="4" value="ChemicalPlatingDummy"/>
-        <EffectArray value="Suicide"/>
     </CEffectSet>
     <CEffectDamage id="VolatileBurstU">
         <ValidatorArray value="TargetDoesntHaveChemicalPlating"/>

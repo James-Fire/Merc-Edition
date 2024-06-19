@@ -68,6 +68,39 @@
             <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="StabilizerMedpackHeal">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SkibisAngelHealSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Flags index="PassengerAcquirePassengers" value="1"/>
+        <TargetFilters value="Ground,Visible;Self,Enemy,Air,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
+            <SortArray value="TSDistance"/>
+            <SortArray value="TSLifeFraction"/>
+        </TargetSorts>
+        <Range value="2"/>
+        <SmartValidatorArray value="healSmartTargetFilters"/>
+        <SmartValidatorArray value="NotWarpingIn"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="healCasterMinEnergy"/>
+        <AutoCastValidatorArray value="NotWarpingIn"/>
+        <Marker Link="Abil/MedivacHeal"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <AINotifyEffect value="SkibisAngelHeal"/>
+        <DefaultError value="RequiresHealTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MedicHeal" Requirements="UseStabilizerMedpacksMerc"/>
+        <AcquireAttackers value="1"/>
+        <FollowRange value="1.5"/>
+    </CAbilEffectTarget>
     <CAbilBehavior id="PhantomCloak">
         <AbilSetId value="Clok"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -113,7 +146,7 @@
         <UseMarkerArray index="Prep" value="0"/>
         <AINotifyEffect value="SkibisAngelHeal"/>
         <DefaultError value="RequiresHealTarget"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MedicHeal"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MedicHeal" Requirements="DontHaveStabilizerMedpacks"/>
         <AcquireAttackers value="1"/>
         <FollowRange value="1.5"/>
     </CAbilEffectTarget>

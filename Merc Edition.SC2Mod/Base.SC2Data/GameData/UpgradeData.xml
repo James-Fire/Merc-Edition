@@ -33,6 +33,14 @@
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
         <AffectedUnitArray value="Bunker"/>
     </CUpgrade>
+    <CUpgrade id="StabilizerMedpacksMerc">
+        <Flags index="UpgradeCheat" value="0"/>
+        <Alert value="ResearchComplete"/>
+        <EffectArray Operation="Multiply" Reference="Effect,SkibisAngelHeal,DrainVitalCostFactor" Value="0.5"/>
+        <EffectArray Operation="Multiply" Reference="Effect,SkibisAngelHeal,RechargeVitalRate" Value="1.351500"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="SkibisAngel"/>
+    </CUpgrade>
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>
     </CUpgrade>
