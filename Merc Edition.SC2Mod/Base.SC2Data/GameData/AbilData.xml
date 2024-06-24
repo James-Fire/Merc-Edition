@@ -70,7 +70,7 @@
     </CAbilTrain>
     <CAbilEffectTarget id="StabilizerMedpackHeal">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <Effect index="0" value="SkibisAngelHealSet"/>
+        <Effect index="0" value="SkibisAngelStabilizerMedpacksSet"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -92,7 +92,7 @@
         <AutoCastRange value="6"/>
         <AutoCastValidatorArray value="healCasterMinEnergy"/>
         <AutoCastValidatorArray value="NotWarpingIn"/>
-        <Marker Link="Abil/MedivacHeal"/>
+        <Marker Link="Abil/StabilizerHeal"/>
         <UseMarkerArray index="Approach" value="0"/>
         <UseMarkerArray index="Prep" value="0"/>
         <AINotifyEffect value="SkibisAngelHeal"/>
@@ -298,5 +298,19 @@
         <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Invulnerable"/>
         <AutoCastRange value="5.8"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SprayandPay"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="TarBomb">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="TarBombLaunchMissile"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Range value="5"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Structure,Missile,Item,Stasis,Dead,Invulnerable,Benign"/>
+        <AutoCastRange value="5"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TarBomb"/>
     </CAbilEffectTarget>
 </Catalog>

@@ -378,4 +378,22 @@
         <Pitch value="12.000000,12.000000"/>
         <Volume value="-5.000000,-5.000000"/>
     </CSound>
+    <CSound id="TarBombImpact">
+        <AssetArray File="Assets\Sounds\WarHound_Melee_Impact00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHound_Melee_Impact01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHound_Melee_Impact02.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="TarBombLaunch">
+        <AssetArray File="Assets\Sounds\Wraith_SpaceStationLaunch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Wraith_SpaceStationLaunch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Wraith_SpaceStationLaunch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Wraith_SpaceStationLaunch_09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Wraith_SpaceStationLaunch_10.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Wraith_SpaceStationLaunch_11.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
 </Catalog>

@@ -30,6 +30,14 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Modification Radar="30" RadarFilters="Psionic;RawResource,HarvestableResource,Missile,Destructible,Buried,Cloaked"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ImmolationFluid">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="ImmolationFluidDamage"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="PhantomCloak">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
@@ -83,6 +91,13 @@
         <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="168"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TarBomb">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Modification MoveSpeedMultiplier="0.25" WeaponRange="-3"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ThornShield">
         <InfoFlags index="Hidden" value="1"/>

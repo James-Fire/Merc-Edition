@@ -30,4 +30,13 @@
             <FlightTime value="1.2"/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="TarBombMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="12"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="0.3"/>
+        </MotionPhases>
+    </CMoverMissile>
 </Catalog>

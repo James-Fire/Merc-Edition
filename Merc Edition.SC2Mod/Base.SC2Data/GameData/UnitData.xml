@@ -245,6 +245,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="MorphToAnarchist"/>
+        <AbilArray Link="TarBomb"/>
         <WeaponArray Link="HellbornFlamethrower" Turret="Hellion"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -253,7 +254,8 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="MorphtoAnarchist" Type="AbilCmd" AbilCmd="MorphToAnarchist,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="FireOnTheMove" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="FireOnTheMoveAgitator" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="TarBomb" Type="AbilCmd" AbilCmd="TarBomb,Execute" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
@@ -582,9 +584,11 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="StabilizerHeal" Type="AbilCmd" AbilCmd="StabilizerMedpackHeal,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="MercMedicHeal" Type="AbilCmd" AbilCmd="GreaterHeal,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="SignalFlare" Type="AbilCmd" AbilCmd="SignalFlare,Execute" Row="2" Column="1"/>
-            <LayoutButtons Face="MercMedicHeal" Type="AbilCmd" AbilCmd="StabilizerMedpackHeal,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="StabilizerMedpacksMerc" Type="Passive" Requirements="UseStabilizerMedpacksMerc" Row="1" Column="0"/>
+            <LayoutButtons Face="ThornShieldSkibidi" Type="Passive" Requirements="UseThornShield" Row="1" Column="2"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -949,6 +953,7 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
     </CUnit>
+    <CUnit id="TarBombMissile" parent="MISSILE"/>
     <CUnit id="Titan">
         <DeathRevealRadius value="3"/>
         <Facing value="135"/>
@@ -1201,7 +1206,7 @@
         <Sight value="10"/>
         <Food value="-2"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Minerals" value="150"/>
         <RepairTime value="30"/>
         <AttackTargetPriority value="20"/>
         <DamageDealtXP value="1"/>
@@ -1211,7 +1216,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="MorphToAgitator"/>
-        <WeaponArray Link="NCWrecker"/>
+        <WeaponArray Link="TheGrill"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
