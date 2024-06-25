@@ -16,6 +16,14 @@
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModelFoliage>
+    <CModelFoliage id="AnarchistJumpJets">
+        <Model value="Assets\Effects\Protoss\Colossus_FireBeam_Impact\Colossus_FireBeam_Impact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistJumpStunModel">
+        <Model value="Assets\Effects\Zerg\BurrowChargeImpact\BurrowChargeImpact.m3"/>
+    </CModelFoliage>
     <CModel id="BlockB">
         <Model value="Assets\Units\Terran\Reaper_Merc_Collection\Reaper_Merc_Collection.m3"/>
     </CModel>
@@ -430,6 +438,8 @@
     </CModelFoliage>
     <CModel id="TarBombMissile">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_SlowBomb_Coop_Missile\MiraHorner_Hellion_SlowBomb_Coop_Missile.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
     <CModelFoliage id="ThornShieldDamage">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>

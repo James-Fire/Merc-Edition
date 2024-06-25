@@ -35,6 +35,22 @@
             <Unit value="Shadow"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="JumpJetAssault">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AnarchistJumpInitialCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="8"/>
+        </Cost>
+        <Range value="4"/>
+        <Arc value="4.9987"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Structure,Missile,Item,Dead,Hidden,Benign"/>
+        <AutoCastRange value="4"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DevilDogGrapple">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
     <CAbilTrain id="FactoryTrain">
         <InfoArray index="Train12" Time="45">
             <Button DefaultButtonFace="BuildSiegeBreaker" State="Restricted" Requirements="HaveAttachedTechLab"/>

@@ -4,6 +4,11 @@
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectEnumArea id="AnarchistJumpStunSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Benign"/>
+        <AreaArray Radius="1.1" Effect="StunnedAnarchistLeapApplyBehavior"/>
+    </CEffectEnumArea>
     <CEffectSet id="BarBreakersSet">
         <EditorCategories value=""/>
         <EffectArray value="BarBreakersDamage"/>
@@ -82,6 +87,56 @@
         <AreaArray Radius="1.4" Fraction="1"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Invulnerable,Benign"/>
     </CEffectDamage>
+    <CEffectCreateUnit id="AnarchistJumpCU">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="Placement" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="AnarchistJumpCUPoint"/>
+        <SpawnRange value="0"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="AnarchistJumpCUClosest">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="AnarchistJumpCUPoint"/>
+        <SpawnRange value="8"/>
+    </CEffectCreateUnit>
+    <CEffectCreatePersistent id="AnarchistJumpCUPoint">
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="MakePrecursor"/>
+        <PeriodicEffectArray value="AnarchistJumpLM"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="AnarchistJumpInitialCP">
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="AnarchistJumpSwitch"/>
+        <FinalEffect value="IncomingAnarchistJumpApplyBehavior"/>
+        <PeriodCount value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="AnarchistJumpLM">
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Effect="AnarchistJumpCUPoint" Value="TargetPoint"/>
+        <ImpactEffect value="AnarchistJumpStunSA"/>
+        <FinishEffect value="AnarchistJumpRemovePrecursor"/>
+        <Flags index="2D" value="1"/>
+        <Movers Link="AnarchistLeapMissile"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="AnarchistJumpRemovePrecursor">
+        <ImpactLocation Effect="AnarchistJumpCUPoint" Value="TargetUnit"/>
+        <Flags index="Kill" value="1"/>
+        <Death value="Remove"/>
+    </CEffectDamage>
+    <CEffectSwitch id="AnarchistJumpSwitch">
+        <CaseArray Validator="GrappleValidator" Effect="AnarchistJumpCU"/>
+        <CaseDefault value="AnarchistJumpCUClosest"/>
+    </CEffectSwitch>
     <CEffectSet id="DevilDogSet">
         <EffectArray value="DieselBasedNapalmAB"/>
     </CEffectSet>
@@ -203,6 +258,10 @@
         <Amount value="5"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="IncomingAnarchistJumpApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="IncomingAnarchistJump"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="LowGradeStimsApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="LowGradeStims"/>
@@ -309,6 +368,9 @@
         <LaunchLocation Value="CasterUnit"/>
         <SearchFlags index="CenterAtLaunch" value="1"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="StunnedAnarchistLeapApplyBehavior">
+        <Behavior value="StunnedAnarchistLeap"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SuperCloakApplyBehavior">
         <ValidatorArray index="0" value="SuperCloakNotOnCooldown"/>
         <ValidatorArray value="HaveEidolonSuit"/>

@@ -87,6 +87,20 @@
         <On Terms="WeaponStart.ACVFusionCutter.AttackStart" Send="Create"/>
         <Sound value="SCV_AttackLaunch"/>
     </CActorSound>
+    <CActorModel id="AnarchistJumpJets" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpLM.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.AnarchistJumpStunSA.Start" Send="Destroy"/>
+    </CActorModel>
+    <CActorSound id="AnarchistJumpJetsLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpLM.Start; At Caster" Send="Create"/>
+        <Sound value="Nova_TurbojetJumpsuit_Movement"/>
+    </CActorSound>
+    <CActorModel id="AnarchistJumpStunModel" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpStunSA.Start" Send="Create"/>
+    </CActorModel>
     <CActorModel id="ChemicalPlating" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ChemicalPlatingDummy.Start; At Target" Send="Create"/>
@@ -304,10 +318,19 @@
         <EditorCategories value=""/>
         <On Terms="Effect.DevilDogGrappleRemovePrecursor.Start" Send="Create"/>
     </CActorSound>
+    <CActorSound id="AnarchistLeapImpact" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpRemovePrecursor.Start" Send="Create"/>
+        <Sound value="DevilDogGrappleLand"/>
+    </CActorSound>
     <CActorSound id="DevilDogGrappleLaunch" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.DevilDogGrappleLM.Start; At Caster" Send="Create"/>
     </CActorSound>
+    <CActorRange id="DevilDogGrappleRange" parent="RangeAbil" abil="DevilDogGrapple">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorModel id="DieselBasedNapalm" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.DieselBasedNapalm.On" Send="Create"/>
@@ -400,6 +423,10 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
+    <CActorRange id="JumpJetAssaultRange" parent="RangeAbil" abil="JumpJetAssault">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorAction id="PhantomSnipeAttack" parent="GenericAttack" effectAttack="SnipeDamagePhantom">
         <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
         <LaunchAssets Model="GhostSnipeAttackLaunch" Sound="PhantomSnipeLaunch"/>

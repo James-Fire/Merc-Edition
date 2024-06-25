@@ -101,6 +101,10 @@
         <Icon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
     </CButton>
+    <CButton id="JumpJetAssault">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
+    </CButton>
     <CButton id="LowGradeStims">
         <Icon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
