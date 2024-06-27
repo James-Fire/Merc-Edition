@@ -42,6 +42,9 @@
         <Backswing value="0.75"/>
         <Effect value="HellbornFlamethrowerCP"/>
         <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="BarBreakers">
         <EditorCategories value="Race:Terran"/>
@@ -151,7 +154,7 @@
         <Backswing value="0"/>
         <Effect value="GreetingGrenadeLM"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="NCWrecker">
+    <CWeaponLegacy id="TheGrill">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="AnarchistWeaponDamage"/>

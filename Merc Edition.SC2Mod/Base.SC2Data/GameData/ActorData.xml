@@ -87,6 +87,20 @@
         <On Terms="WeaponStart.ACVFusionCutter.AttackStart" Send="Create"/>
         <Sound value="SCV_AttackLaunch"/>
     </CActorSound>
+    <CActorModel id="AnarchistJumpJets" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpLM.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.AnarchistJumpStunSA.Start" Send="Destroy"/>
+    </CActorModel>
+    <CActorSound id="AnarchistJumpJetsLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpLM.Start; At Caster" Send="Create"/>
+        <Sound value="Nova_TurbojetJumpsuit_Movement"/>
+    </CActorSound>
+    <CActorModel id="AnarchistJumpStunModel" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpStunSA.Start" Send="Create"/>
+    </CActorModel>
     <CActorModel id="ChemicalPlating" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ChemicalPlatingDummy.Start; At Target" Send="Create"/>
@@ -150,6 +164,8 @@
     <CActorUnit id="Agitator" parent="GenericUnitBase" unitName="Agitator">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Agitator" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom Agitator" Send="Destroy"/>
         <On Terms="UnitMovementUpdate.*.Walk" Send="TimerSet 0.250000 KillBeam"/>
         <On Terms="Abil.attack.ReadyStop" Send="TimerSet 0.250000 KillBeam"/>
         <On Terms="TimerExpired; TimerName KillBeam" Target="HellionAttackBeam" Send="Destroy"/>
@@ -302,10 +318,19 @@
         <EditorCategories value=""/>
         <On Terms="Effect.DevilDogGrappleRemovePrecursor.Start" Send="Create"/>
     </CActorSound>
+    <CActorSound id="AnarchistLeapImpact" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistJumpRemovePrecursor.Start" Send="Create"/>
+        <Sound value="DevilDogGrappleLand"/>
+    </CActorSound>
     <CActorSound id="DevilDogGrappleLaunch" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.DevilDogGrappleLM.Start; At Caster" Send="Create"/>
     </CActorSound>
+    <CActorRange id="DevilDogGrappleRange" parent="RangeAbil" abil="DevilDogGrapple">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorModel id="DieselBasedNapalm" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.DieselBasedNapalm.On" Send="Create"/>
@@ -321,6 +346,87 @@
     <CActorSound id="Ghost_CloakOn">
         <On Terms="Behavior.PhantomCloak.On" Send="Create"/>
     </CActorSound>
+    <CActorUnit id="AgitatorMorphModel" parent="GenericUnitBaseMorphTransition" unitName="TankModeMorphModel">
+        <Aliases value="_UnitMedium"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Agitator" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Agitator" Send="AnimPlay End Morph,End"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Agitator" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Anarchist" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimPlay Visor Morph,End PlayForever,NonLooping 0.250000 0.250000 3.660000 AsDuration"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="PortraitAnimSetTimeFrom Visor MorphStart"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Hellion_Land"/>
+        <On Terms="ActorCreation; ValidateUnit HaveSmartServos" Send="AnimGroupApply Upgrade"/>
+        <On Terms="Upgrade.SmartServos.Add" Send="AnimGroupApply Upgrade"/>
+        <Model value="AgitatorMorphModel"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="TerranLargeUnitDeath" SoundLink="Hellion_Explode"/>
+        <PortraitActor value="HellionPortrait"/>
+        <PortraitModel value="HellionPortrait"/>
+        <BarOffset value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-hellionex1.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-hellion.dds"/>
+        <HighlightTooltip value="Unit/Name/HellionTank"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Hellion_Ready"/>
+        <SoundArray index="Help" value="Hellion_Help"/>
+        <SoundArray index="What" value="Hellion_What"/>
+        <SoundArray index="Yes" value="Hellion_Yes"/>
+        <SoundArray index="Attack" value="Hellion_Attack"/>
+        <SoundArray index="Pissed" value="Hellion_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-hellion.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-hellionex1.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="AnarchistMorphModel" parent="GenericUnitBaseMorphTransition" unitName="SiegeModeMorphModel">
+        <Aliases value="_UnitMedium"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Anarchist" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Anarchist" Send="AnimPlay Start Morph,Start"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Anarchist" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Agitator" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimPlay Visor Morph,Start PlayForever,NonLooping 0.250000 0.250000 3.660000 AsDuration"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="PortraitAnimSetTimeFrom Visor MorphStart"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Hellion_Land"/>
+        <On Terms="ActorCreation; ValidateUnit HaveSmartServos" Send="AnimGroupApply Upgrade"/>
+        <On Terms="Upgrade.SmartServos.Add" Send="AnimGroupApply Upgrade"/>
+        <Model value="AgitatorMorphModel"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="TerranLargeUnitDeath" SoundLink="Hellion_Explode"/>
+        <PortraitActor value="HellionPortrait"/>
+        <PortraitModel value="HellionPortrait"/>
+        <BarOffset value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-HellionTankEx1.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-hellionbattlemode.dds"/>
+        <HighlightTooltip value="Unit/Name/Hellion"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Hellion_Ready"/>
+        <SoundArray index="Help" value="Hellion_Help"/>
+        <SoundArray index="What" value="Hellion_What"/>
+        <SoundArray index="Yes" value="Hellion_Yes"/>
+        <SoundArray index="Attack" value="Hellion_Attack"/>
+        <SoundArray index="Pissed" value="Hellion_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-hellionbattlemode.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-HellionTankEx1.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="ImmolationFluid" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.ImmolationFluid.On" Send="Create"/>
+        <On Terms="Behavior.ImmolationFluid.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,91,91 2.000000}"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorRange id="JumpJetAssaultRange" parent="RangeAbil" abil="JumpJetAssault">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorAction id="PhantomSnipeAttack" parent="GenericAttack" effectAttack="SnipeDamagePhantom">
         <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
         <LaunchAssets Model="GhostSnipeAttackLaunch" Sound="PhantomSnipeLaunch"/>
@@ -424,9 +530,20 @@
         <Inherits index="Visibility" value="1"/>
         <On Terms="Effect.SkibisAngelHeal.TargetStart" Send="Create"/>
         <On Terms="Effect.SkibisAngelHeal.TargetStop" Send="Destroy"/>
-        <On Terms="ActorCreation; ValidateUnit HaveStabilizerMedpacks" Send="SetTintColor {62,231,255 2.000000}"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveStabilizerMedpacks" Send="SetTintColor {255,115,0 11.000000}"/>
         <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
         <Model value="MedicHealBeam"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorBeamSimple id="SkibisAngelHealBeamMechanical" parent="BeamSimpleAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Effect.SkibisAngelHealMechanical.TargetStart" Send="Create"/>
+        <On Terms="Effect.SkibisAngelHealMechanical.TargetStop" Send="Destroy"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Model value="CarrierRepairDroneHealBeam"/>
         <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
         <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
         <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
@@ -569,11 +686,6 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
-    <CActorModel id="StabilizerMedpackField" parent="ModelAnimationStyleContinuous">
-        <EditorCategories value=""/>
-        <On Terms="Effect.StabilizerMedpacksSA.Start; At Target" Send="Create"/>
-        <On Terms="ActorCreation" Send="SetTintColor {0,255,0 3.000000}"/>
-    </CActorModel>
     <CActorAction id="StarcruiserLaserAttack" parent="GenericAttack" effectImpact="PharaohLaserBatteryDamage" effectLaunch="PharaohLaserBatteryLM">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0 AMRandomUniform"/>
         <LaunchAssets Sound="Battlecruiser_GroundAttackLaunch"/>
@@ -828,6 +940,26 @@
         <EditorCategories value=""/>
         <On Terms="Behavior.SuperCloak.On" Send="Create"/>
     </CActorSound>
+    <CActorAction id="TarBomb" parent="GenericAttack" effectLaunch="TarBombLaunchMissile">
+        <LaunchAttachQuery Methods="Weapon 0"/>
+    </CActorAction>
+    <CActorModelMaterial id="TarBombGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.TarBomb.On" Send="Create"/>
+        <On index="6" Terms="Behavior.TarBomb.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorModel id="TarBombGoo" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.TarBombApplyBehavior.Start; At Target" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorMissile id="TarBombMissile" parent="GenericAttackMissile" unitName="TarBombMissile"/>
+    <CActorRange id="TarBombRange" parent="RangeAbil" abil="TarBomb">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorModel id="ThornShieldDamage" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ThornShieldDamage.Start; At Target" Send="Create"/>
@@ -958,8 +1090,8 @@
         <On Terms="Behavior.AnarchistReady.Off" Send="AnimBracketStop CoverA"/>
         <On Terms="WeaponStart.*.AttackStart" Send="AnimPlay CoverB Cover,B PlayForever"/>
         <On Terms="WeaponStop.*.AttackStop" Send="AnimClear CoverB"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo Agitator" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom Agitator" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Agitator" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Agitator" Send="Destroy"/>
         <On Terms="UnitMovementUpdate.*.Walk" Send="TimerSet 0.250000 KillBeam"/>
         <On Terms="Abil.attack.ReadyStop" Send="TimerSet 0.250000 KillBeam"/>
         <On Terms="TimerExpired; TimerName KillBeam" Target="HellionAttackBeam" Send="Destroy"/>
@@ -1040,7 +1172,7 @@
         <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
         <On Terms="ActorCreation" Send="TimerSet 0.750000 Kill"/>
         <On Terms="TimerExpired; TimerName Kill" Send="AnimBracketStop BSD"/>
-        <On Terms="ActorCreation; ValidateUnit HasHighCapacityBarrels" Send="ModelSwap HellionTankAttackLaunchUpgraded"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,128,128 1.500000}"/>
     </CActorModel>
     <CActorModel id="U-240RoundsBombModel" parent="ModelAnimationStyleContinuous">
         <On Terms="Effect.U-240RoundsBombCreateUnit.Start" Send="Create"/>

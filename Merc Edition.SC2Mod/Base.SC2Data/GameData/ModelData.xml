@@ -11,6 +11,19 @@
         <Image value="Assets\Textures\SCVPortrait_Static.dds"/>
         <Lighting value="SCVPortrait"/>
     </CModel>
+    <CModelFoliage id="AgitatorMorphModel">
+        <Model value="Assets\Units\Terran\Hellbatmorph_CovertOps_Collection\Hellbatmorph_CovertOps_Collection.m3"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistJumpJets">
+        <Model value="Assets\Effects\Protoss\Colossus_FireBeam_Impact\Colossus_FireBeam_Impact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistJumpStunModel">
+        <Model value="Assets\Effects\Zerg\BurrowChargeImpact\BurrowChargeImpact.m3"/>
+    </CModelFoliage>
     <CModel id="BlockB">
         <Model value="Assets\Units\Terran\Reaper_Merc_Collection\Reaper_Merc_Collection.m3"/>
     </CModel>
@@ -129,6 +142,11 @@
     </CModelFoliage>
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="ImmolationFluid">
+        <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModelFoliage>
     <CModelFoliage id="LowGradeStimEnd">
         <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
@@ -256,7 +274,7 @@
     </CModelFoliage>
     <CModelFoliage id="StabilizerMedpackField">
         <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Shockwave\Arbiter_StasisField_Shockwave.m3"/>
-        <AnimSpeed value="4.000000"/>
+        <AnimSpeed value="3.000000"/>
         <ScaleMax value="0.300000,0.300000,0.300000"/>
         <ScaleMin value="0.300000,0.300000,0.300000"/>
     </CModelFoliage>
@@ -407,6 +425,22 @@
     <CModelFoliage id="SuperCloakGlaze">
         <Model value="Assets\Effects\Glaze\Glaze_Dehaka_Psionic\Glaze_Dehaka_Psionic.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="TarBombGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_TychusFirebat_OilSpill\Glaze_TychusFirebat_OilSpill.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="TarBombGoo">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellion_SlowBomb_Coop_Goo\MiraHorner_Hellion_SlowBomb_Coop_Goo.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModelFoliage>
+    <CModelFoliage id="TarBombImpact">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellion_SlowBomb_Coop_Impact\MiraHorner_Hellion_SlowBomb_Coop_Impact.m3"/>
+    </CModelFoliage>
+    <CModel id="TarBombMissile">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellion_SlowBomb_Coop_Missile\MiraHorner_Hellion_SlowBomb_Coop_Missile.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
     <CModelFoliage id="ThornShieldDamage">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModelFoliage>

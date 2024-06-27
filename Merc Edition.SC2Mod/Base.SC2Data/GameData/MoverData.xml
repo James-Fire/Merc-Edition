@@ -10,6 +10,16 @@
         </MotionPhases>
         <RotationIgnoredByUnit value="1"/>
     </CMoverMissile>
+    <CMoverMissile id="AnarchistLeapMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="70"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="0.3"/>
+        </MotionPhases>
+        <RotationIgnoredByUnit value="1"/>
+    </CMoverMissile>
     <CMoverMissile id="MagrailMunitionsMissile">
         <MotionPhases>
             <Driver value="Guidance"/>
@@ -28,6 +38,15 @@
             <ThrowBandYaw value="-360,-360,-360,-360"/>
             <ThrowBandPitch value="-360,-360,-360,-360"/>
             <FlightTime value="1.2"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="TarBombMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="45"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="0.5"/>
         </MotionPhases>
     </CMoverMissile>
 </Catalog>

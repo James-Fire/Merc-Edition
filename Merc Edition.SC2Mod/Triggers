@@ -5,6 +5,7 @@
             <Item Type="Category" Library="BA5CCDED" Id="2851B9D7"/>
             <Item Type="Category" Library="BA5CCDED" Id="FFB39B08"/>
             <Item Type="Category" Library="BA5CCDED" Id="CA3A8D1E"/>
+            <Item Type="Category" Library="BA5CCDED" Id="0B90820E"/>
         </Root>
         <Element Type="Category" Id="2851B9D7">
             <Item Type="Comment" Library="BA5CCDED" Id="079EA309"/>
@@ -1823,6 +1824,8 @@
             <Value>LaserTargetingSystem</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Category" Id="0B90820E">
         </Element>
     </Library>
 </TriggerData>

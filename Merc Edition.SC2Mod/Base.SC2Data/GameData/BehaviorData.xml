@@ -30,6 +30,23 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Modification Radar="30" RadarFilters="Psionic;RawResource,HarvestableResource,Missile,Destructible,Buried,Cloaked"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ImmolationFluid">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="ImmolationFluidDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="IncomingAnarchistJump">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <LifeArmorBonus value="4"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="PhantomCloak">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
@@ -66,6 +83,15 @@
         <Duration value="14"/>
         <ExpireEffect value="SuicideRemove"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="StunnedAnarchistLeap">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SuperCloak">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
@@ -83,6 +109,13 @@
         <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="168"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TarBomb">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Modification MoveSpeedMultiplier="0.25" WeaponRange="-3"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ThornShield">
         <InfoFlags index="Hidden" value="1"/>

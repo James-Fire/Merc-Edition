@@ -4,6 +4,11 @@
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectEnumArea id="AnarchistJumpStunSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Benign"/>
+        <AreaArray Radius="1.1" Effect="StunnedAnarchistLeapApplyBehavior"/>
+    </CEffectEnumArea>
     <CEffectSet id="BarBreakersSet">
         <EditorCategories value=""/>
         <EffectArray value="BarBreakersDamage"/>
@@ -82,6 +87,56 @@
         <AreaArray Radius="1.4" Fraction="1"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Invulnerable,Benign"/>
     </CEffectDamage>
+    <CEffectCreateUnit id="AnarchistJumpCU">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="Placement" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="AnarchistJumpCUPoint"/>
+        <SpawnRange value="0"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="AnarchistJumpCUClosest">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="AnarchistJumpCUPoint"/>
+        <SpawnRange value="8"/>
+    </CEffectCreateUnit>
+    <CEffectCreatePersistent id="AnarchistJumpCUPoint">
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="MakePrecursor"/>
+        <PeriodicEffectArray value="AnarchistJumpLM"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="AnarchistJumpInitialCP">
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="AnarchistJumpSwitch"/>
+        <FinalEffect value="IncomingAnarchistJumpApplyBehavior"/>
+        <PeriodCount value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="AnarchistJumpLM">
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Effect="AnarchistJumpCUPoint" Value="TargetPoint"/>
+        <ImpactEffect value="AnarchistJumpStunSA"/>
+        <FinishEffect value="AnarchistJumpRemovePrecursor"/>
+        <Flags index="2D" value="1"/>
+        <Movers Link="AnarchistLeapMissile"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="AnarchistJumpRemovePrecursor">
+        <ImpactLocation Effect="AnarchistJumpCUPoint" Value="TargetUnit"/>
+        <Flags index="Kill" value="1"/>
+        <Death value="Remove"/>
+    </CEffectDamage>
+    <CEffectSwitch id="AnarchistJumpSwitch">
+        <CaseArray Validator="GrappleValidator" Effect="AnarchistJumpCU"/>
+        <CaseDefault value="AnarchistJumpCUClosest"/>
+    </CEffectSwitch>
     <CEffectSet id="DevilDogSet">
         <EffectArray value="DieselBasedNapalmAB"/>
     </CEffectSet>
@@ -195,6 +250,18 @@
         <PeriodicPeriodArray value="0.25"/>
         <PeriodicPeriodArray value="0.125"/>
     </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="ImmolationFluidApplyBehavior">
+        <Behavior value="ImmolationFluid"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="ImmolationFluidDamage">
+        <EditorCategories value=""/>
+        <Amount value="5"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="IncomingAnarchistJumpApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="IncomingAnarchistJump"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="LowGradeStimsApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="LowGradeStims"/>
@@ -260,7 +327,7 @@
         <CaseDefault value="SignalFlareBlindLaunchMissile"/>
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSwitch>
-    <CEffectCreateHealer id="SkibisAngelStabilizerAoEHeal">
+    <CEffectCreateHealer id="SkibisAngelHealMechanical">
         <ValidatorArray value="noMarkers"/>
         <ValidatorArray value="NotWarpingIn"/>
         <ValidatorArray value="HiddenCompareAB"/>
@@ -268,18 +335,13 @@
         <ValidatorArray value="NotVortexd"/>
         <DrainVital value="Energy"/>
         <DrainVitalCostFactor value="0.33"/>
-        <RechargeVitalRate value="12"/>
+        <RechargeVitalRate value="7"/>
     </CEffectCreateHealer>
-    <CEffectSet id="SkibisAngelHealSet">
-        <ValidatorArray value="noMarkers"/>
-        <ValidatorArray value="NotWarpingIn"/>
-        <ValidatorArray value="HiddenCompareAB"/>
-        <ValidatorArray value="HiddenCompareBA"/>
-        <ValidatorArray value="NotVortexd"/>
+    <CEffectSwitch id="SkibisAngelHealSwitch">
         <EditorCategories value=""/>
-        <EffectArray value="SkibisAngelHeal"/>
-        <EffectArray value="SkibisAngelStabilizerAoEHeal"/>
-    </CEffectSet>
+        <CaseArray Validator="IsMechanical" Effect="SkibisAngelHealMechanical"/>
+        <CaseDefault value="SkibisAngelHeal"/>
+    </CEffectSwitch>
     <CEffectDamage id="SnipeDamagePhantom" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
@@ -306,14 +368,9 @@
         <LaunchLocation Value="CasterUnit"/>
         <SearchFlags index="CenterAtLaunch" value="1"/>
     </CEffectEnumArea>
-    <CEffectEnumArea id="StabilizerMedpacksSA">
-        <ValidatorArray value="HaveStabilizerMedpacks"/>
-        <EditorCategories value=""/>
-        <DebugTrace value="1"/>
-        <ExcludeArray Effect="SkibisAngelHealSet" Value="Target"/>
-        <SearchFilters value="Ground;Self,Enemy,Structure,Missile,Item,Stasis,Dead,Invulnerable,Benign"/>
-        <AreaArray Radius="1.2" Effect="SkibisAngelStabilizerAoEHeal"/>
-    </CEffectEnumArea>
+    <CEffectApplyBehavior id="StunnedAnarchistLeapApplyBehavior">
+        <Behavior value="StunnedAnarchistLeap"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SuperCloakApplyBehavior">
         <ValidatorArray index="0" value="SuperCloakNotOnCooldown"/>
         <ValidatorArray value="HaveEidolonSuit"/>
@@ -330,6 +387,26 @@
         <EditorCategories value=""/>
         <EffectArray value="SuperCloakApplyBehavior"/>
         <EffectArray value="SuperCloakCooldownApplyBehavior"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="TarBombApplyBehavior">
+        <Behavior value="TarBomb"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="TarBombDamage">
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="TarBombLaunchMissile">
+        <ImpactEffect value="TarBombSet"/>
+        <AmmoUnit value="TarBombMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectEnumArea id="TarBombSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Item,Stasis,Dead,Benign"/>
+        <AreaArray Radius="2.3" Effect="TarBombApplyBehavior"/>
+    </CEffectEnumArea>
+    <CEffectSet id="TarBombSet">
+        <EditorCategories value=""/>
+        <EffectArray value="TarBombDamage"/>
+        <EffectArray value="TarBombSA"/>
     </CEffectSet>
     <CEffectLaunchMissile id="ThermalBurstLaunchMissile">
         <EditorCategories value="Race:Terran"/>
@@ -410,6 +487,7 @@
         <EffectArray value="AnarchistWeaponAB"/>
         <EffectArray value="AnarchistWeaponDamage"/>
         <EffectArray value="AnarchistWeaponSearch"/>
+        <EffectArray value="ImmolationFluidApplyBehavior"/>
     </CEffectSet>
     <CEffectApplyBehavior id="AnarchistWeaponAB">
         <EditorCategories value="Race:Terran"/>

@@ -1,6 +1,7 @@
 ﻿Abil/Name/ACVHarvest=Gather (ACV)
 Abil/Name/DevilDogGrapple=Grapple
 Abil/Name/GreaterHeal=Greater Heal
+Abil/Name/JumpJetAssault=Jump Jet Assault
 Abil/Name/LowGradeStim=Low Grade Stim
 Abil/Name/MagrailMunitions=Magrail Munitions
 Abil/Name/MorphToAgitator=Morph To Agitator
@@ -10,17 +11,26 @@ Abil/Name/SignalFlare=Signal Flare
 Abil/Name/SnipePhantom=Snipe
 Abil/Name/SprayandPay=Spray and Pay
 Abil/Name/StabilizerMedpackHeal=Stabilizer Medpack Heal
+Abil/Name/TarBomb=Tar Bomb
 Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
+Behavior/Name/ImmolationFluid=Immolation Fluid
+Behavior/Name/IncomingAnarchistJump=Incoming!
 Behavior/Name/LowGradeStims=Low Grade Stims
 Behavior/Name/PhantomCloak=Cloak
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
+Behavior/Name/StunnedAnarchistLeap=Stunned
 Behavior/Name/SuperCloak=Super Cloak
 Behavior/Name/SuperCloakCooldown=Super Cloak Cooldown
+Behavior/Name/TarBomb=Tar Bomb
 Behavior/Tooltip/ConcussiveShrapnel=This unit is slowed.
+Behavior/Tooltip/ImmolationFluid=This unit is burning for damage over time.
+Behavior/Tooltip/IncomingAnarchistJump=The Anarchist has more armor.
 Behavior/Tooltip/LowGradeStims=This unit is firing faster.
 Behavior/Tooltip/PhantomCloak=This unit is cloaked and will only be revealed by detectors or effects.
+Behavior/Tooltip/StunnedAnarchistLeap=This unit is stunned.
 Behavior/Tooltip/SuperCloak=This unit is invulnerable.
 Behavior/Tooltip/SuperCloakCooldown=Super Cloak cannot activate yet.
+Behavior/Tooltip/TarBomb=This unit is slowed and has reduced range.
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAgitator=Build Agitator
@@ -45,6 +55,9 @@ Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/EidolonSuit=Eidolon Suit
 Button/Name/EnergyRadar=Energy Radar
+Button/Name/FireOnTheMoveAgitator=Fire On The Move
+Button/Name/ImmolationFluid=Immolation Fluid
+Button/Name/JumpJetAssault=Jump Jet Assault
 Button/Name/LaserTargetingSystem=Laser Targeting System
 Button/Name/LowGradeStims=Low Grade Stims
 Button/Name/MagrailMunitions=Magrail Munitions
@@ -53,7 +66,10 @@ Button/Name/MorphtoAnarchist=Morph to Anarchist
 Button/Name/SignalFlare=Signal Flare
 Button/Name/SnipePhantom=Snipe
 Button/Name/SprayandPay=Spray and Pay
+Button/Name/StabilizerHeal=Stabilizer Heal
+Button/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Button/Name/SuperStim=Super Stim
+Button/Name/TarBomb=Tar Bomb
 Button/Name/ThornShieldSkibidi=Thorn Shield
 Button/Name/ThornShieldWarPig=Thorn Shield
 Button/Name/TrainBlockB=Train Block B
@@ -91,15 +107,19 @@ Button/Tooltip/CloakPhantom=Cloaks the unit, preventing enemy units from seeing 
 Button/Tooltip/CombatDrugs=Block B heal for 20% of their maximum life when dealing damage. While out of combat, they regenerate 2 life per second.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
-Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby friendly and enemy units.
+Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby enemy units.
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
 Button/Tooltip/EnergyRadar=Phantoms reveal the locations of enemy units with an energy bar in a large area around them. Does not reveal the units.
+Button/Tooltip/FireOnTheMoveAgitator=The Agitator can attack while moving.
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/ImmolationFluid=Anarchist attacks cause enemies to burn for an additional 50 damage over <d time="7"/>.
+Button/Tooltip/JumpJetAssault=Launches the Anarchist to a nearby area, briefly stunning enemy units and giving the Anarchist +4 armor.
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
 Button/Tooltip/LowGradeStims=Increase attack speed by 100% for <d time="7"/>.
 Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42"/>.
+Button/Tooltip/MercMedicHeal=Heals a friendly biological target.<n/><n/><c val="f078ff">Heals <d ref="Effect,SkibisAngelHeal,RechargeVitalRate"/> life per <d ref="Effect,SkibisAngelHeal,RechargeVitalRate * Effect,SkibisAngelHeal,DrainVitalCostFactor"/> energy.
 Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nukes take <d time="18"/> to land, but they deal up to 400 (+300 vs. structures) damage to enemies in a large radius.
@@ -110,8 +130,11 @@ Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time=
 Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
 Button/Tooltip/SnipePhantom=Deals 55 damage to a biological enemy. Ignores armor.
 Button/Tooltip/SprayandPay=Deal 6 damage in an arc to enemy units.
+Button/Tooltip/StabilizerHeal=Heals a friendly biological or mechanical target and up to one unit near them.<n/><n/><c val="f078ff">Heals <d ref="Effect,SkibisAngelHeal,RechargeVitalRate"/> life per <d ref="Effect,SkibisAngelHeal,RechargeVitalRate * Effect,SkibisAngelHeal,DrainVitalCostFactor"/> energy.
+Button/Tooltip/StabilizerMedpacksMerc=Increases heal speed, energy efficiency, Signal Flare range, and heal range. Allows healing of mechanical units.
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
+Button/Tooltip/TarBomb=Deal 20 damage to the target and apply a debuff for <d time="7"/> to enemies in the area that reduces their movement speed by 75% and range by 3.
 Button/Tooltip/ThornShieldSkibidi=Skibi's Angels gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
 Button/Tooltip/ThornShieldWarPig=War Pigs gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
 Button/Tooltip/Titan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -126,6 +149,14 @@ Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able
 Button/Tooltip/U240Rounds=Increases the Death Head's range by 1 and damage vs Light by 3. Enemies killed detonate a G-4 Clusterbomb.
 Effect/Name/ACVFusionCutter=Fusion Cutter (Damage)
 Effect/Name/AGRShadeHunter=AGR Shade Hunter
+Effect/Name/AnarchistJumpCU=Anarchist Jump CU
+Effect/Name/AnarchistJumpCUClosest=Anarchist Jump CU Closest
+Effect/Name/AnarchistJumpCUPoint=Anarchist Jump CU Point
+Effect/Name/AnarchistJumpInitialCP=Anarchist Jump Initial CP
+Effect/Name/AnarchistJumpLM=Anarchist Jump LM
+Effect/Name/AnarchistJumpRemovePrecursor=Anarchist Jump Remove Precursor
+Effect/Name/AnarchistJumpStunSA=Anarchist Jump Stun SA
+Effect/Name/AnarchistJumpSwitch=Anarchist Jump Switch
 Effect/Name/AnarchistWeaponAB=Anarchist Weapon AB
 Effect/Name/AnarchistWeaponDamage=Anarchist Weapon Damage
 Effect/Name/AnarchistWeaponSearch=Anarchist Weapon Search
@@ -163,6 +194,9 @@ Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
 Effect/Name/HellbornFlamethrowerCP=Hellborn Flamethrower CP
 Effect/Name/HellbornFlamethrowerDamage=Hellborn Flamethrower Damage
 Effect/Name/HellbornFlamethrowerSA=Hellborn Flamethrower SA
+Effect/Name/ImmolationFluidApplyBehavior=ImmolationFluidApplyBehavior
+Effect/Name/ImmolationFluidDamage=Immolation Fluid Damage
+Effect/Name/IncomingAnarchistJumpApplyBehavior=IncomingAnarchistJumpApplyBehavior
 Effect/Name/LowGradeStimsApplyBehavior=LowGradeStimsApplyBehavior
 Effect/Name/MagrailMunitionsDamage=Magrail Munitions Damage
 Effect/Name/MagrailMunitionsLaunchMissile=Magrail Munitions Launch Missile
@@ -180,16 +214,21 @@ Effect/Name/SignalFlareInitial=Signal Flare Initial
 Effect/Name/SignalFlareRevealLaunchMissile=Signal Flare Reveal Launch Missile
 Effect/Name/SignalFlareSwitch=Signal Flare Switch
 Effect/Name/SkibisAngelHeal=Skibi's Angel Heal
-Effect/Name/SkibisAngelHealSet=Skibi's Angel Heal Set
-Effect/Name/SkibisAngelStabilizerAoEHeal=Skibi's Angel Stabilizer AoE Heal
+Effect/Name/SkibisAngelHealMechanical=Skibi's Angel Heal (Mechanical)
+Effect/Name/SkibisAngelHealSwitch=Skibi's Angel Heal Switch
 Effect/Name/SnipeDamagePhantom=Snipe (Damage)
 Effect/Name/SprayandPayCP=Spray and Pay CP
 Effect/Name/SprayandPayDamage=Spray and Pay Damage
 Effect/Name/SprayandPaySA=Spray and Pay SA
-Effect/Name/StabilizerMedpacksSA=Stabilizer Medpacks SA
+Effect/Name/StunnedAnarchistLeapApplyBehavior=StunnedAnarchistLeapApplyBehavior
 Effect/Name/SuperCloakApplyBehavior=SuperCloakApplyBehavior
 Effect/Name/SuperCloakCooldownApplyBehavior=SuperCloakCooldownApplyBehavior
 Effect/Name/SuperCloakSet=Super Cloak Set
+Effect/Name/TarBombApplyBehavior=TarBombApplyBehavior
+Effect/Name/TarBombDamage=Tar Bomb Damage
+Effect/Name/TarBombLaunchMissile=Tar Bomb Launch Missile
+Effect/Name/TarBombSA=Tar Bomb SA
+Effect/Name/TarBombSet=Tar Bomb Set
 Effect/Name/ThermalBurst=Thermal Burst
 Effect/Name/ThermalBurstLaunchMissile=Thermal Burst Launch Missile
 Effect/Name/ThornShieldDamage=Thorn Shield Damage
@@ -240,6 +279,7 @@ Unit/Name/SignalFlareTargetDummy=Signal Flare Target Dummy
 Unit/Name/SignalFlareUnit=Signal Flare Unit
 Unit/Name/SkibisAngel=Skibi's Angel
 Unit/Name/Starcruiser=Starcruiser
+Unit/Name/TarBombMissile=Tar Bomb Missile
 Unit/Name/Titan=Titan
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
 Upgrade/Name/ChairsandAC=Chairs and A.C
@@ -264,7 +304,7 @@ Weapon/Name/FRANomadKingCannons=FR-A Nomad King Cannons
 Weapon/Name/FistsofKronos=Fists of Kronos
 Weapon/Name/GreetingGrenade=Greeting Grenade
 Weapon/Name/HellbornFlamethrower=Hellborn Flamethrower
-Weapon/Name/NCWrecker=NC Wrecker
 Weapon/Name/PharaohLaserBattery=Pharaoh Laser Battery
 Weapon/Name/ScorpionMissiles=Scorpion Missiles
+Weapon/Name/TheGrill=The Grill
 Weapon/Name/ThermalBurst=Thermal Burst

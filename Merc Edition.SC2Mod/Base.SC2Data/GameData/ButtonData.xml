@@ -76,10 +76,7 @@
         <HotkeyAlias value="CloakOnBanshee"/>
         <HotkeySet value="Cloak"/>
     </CButton>
-    <CButton id="CombatDrugs">
-        <Icon value="Assets\Textures\btn-upgrade-terran-reapercombatdrugs.dds"/>
-        <AlertIcon value="Assets\Textures\btn-upgrade-terran-reapercombatdrugs.dds"/>
-    </CButton>
+    <CButton id="CombatDrugs"/>
     <CButton id="DeadMenTellNoTales">
         <Icon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
@@ -96,13 +93,29 @@
         <Icon value="Assets\Textures\btn-status-radar.dds"/>
         <AlertIcon value="Assets\Textures\btn-status-radar.dds"/>
     </CButton>
+    <CButton id="FireOnTheMoveAgitator">
+        <Icon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
+    </CButton>
+    <CButton id="ImmolationFluid">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
+    </CButton>
+    <CButton id="JumpJetAssault">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
+    </CButton>
     <CButton id="LowGradeStims">
         <Icon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-marauder-royalstimpack.dds"/>
     </CButton>
     <CButton id="MagrailMunitions">
-        <Icon value="Assets\Textures\btn-upgrade-terran-magrailmunitions.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-magrailmunitions.dds"/>
+    </CButton>
+    <CButton id="StabilizerHeal">
+        <Icon value="Assets\Icons and Wireframes\stabilizerheal.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\stabilizerheal.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="SignalFlare">
         <Icon value="Assets\Icons and Wireframes\signal flare.dds"/>
@@ -111,6 +124,14 @@
     <CButton id="SnipePhantom">
         <Icon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
+    </CButton>
+    <CButton id="StabilizerMedpacksMerc">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-stabilizermedpacks.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-stabilizermedpacks.dds"/>
+    </CButton>
+    <CButton id="TarBomb">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
     </CButton>
     <CButton id="ThornShieldWarPig">
         <Icon value="Assets\Textures\btn-techupgrade-terran-combatshield.dds"/>
@@ -152,8 +173,8 @@
         <Universal value="1"/>
     </CButton>
     <CButton id="ThornShieldSkibidi">
-        <Icon value="Assets\Textures\btn-techupgrade-terran-combatshield-color.dds"/>
-        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-combatshield-color.dds"/>
+        <Icon value="Assets\Textures\btn-techupgrade-terran-combatshield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-combatshield.dds"/>
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="CombatShield"/>
     </CButton>
