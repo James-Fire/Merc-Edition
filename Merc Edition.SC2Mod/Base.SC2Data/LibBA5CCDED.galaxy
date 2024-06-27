@@ -63,6 +63,116 @@ void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Mission Directives
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    int auto8C0CF512_val;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto8C0CF512_val = libCamp_gf_CurrentMap();
+    if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor01) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_1CB39EC9"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor02) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_D6B76FD5"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor03) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_17EC5578"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson01) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_7141E8B8"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson02) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_127D95BD"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03A) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_EA0B8EF6"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03B) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_07E491EB"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh01) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E21786FD"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh02) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_25C3C5EB"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh03A) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E10E7623"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh03B) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_ECC6F2CE"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul01) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_7175B180"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul02) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_6FD51BF1"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul03) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_28C51485"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul04) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_C74680EB"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian01) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_D2BA4636"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02A) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_21BADA4C"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02B) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_8B3D9D37"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus01) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_5DAFE497"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus02) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_FA6B9BAB"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus03) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E07FBC4A"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus04) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_B43DDBEC"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus05) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_D8119886"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner01) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E8245A9A"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner02) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_A54710E3"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner03) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_31446809"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner04) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_DAFDAB1B"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner05S) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_D1EDBD39"));
+    }
+    else {
+    }
+    Wait(15.0, c_timeGame);
+    UIClearMessages(PlayerGroupAll(), c_messageAreaDirective);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MissionDirectives_Init () {
+    libBA5CCDED_gt_MissionDirectives = TriggerCreate("libBA5CCDED_gt_MissionDirectives_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_MissionDirectives);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Deposit Money
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_DepositMoney_Func (bool testConds, bool runActions) {
@@ -120,6 +230,7 @@ void libBA5CCDED_gt_WarPigLaserTargetingSystem_Init () {
 }
 
 void libBA5CCDED_InitTriggers () {
+    libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
 }
