@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CConversationState id="LabResearchConstants">
+        <Indices index="0">
+            <InfoValue index="0" Value="50000"/>
+        </Indices>
+    </CConversationState>
     <CConversationState id="Maps">
         <Indices index="0">
             <InfoValue Id="Reward" Value="55"/>
@@ -19,6 +24,10 @@
         <Indices index="0">
             <InfoValue Id="Credits Per Item" Value="5000"/>
             <InfoValue Id="Item Count" Value="16"/>
+        </Indices>
+        <Indices index="3">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="1"/>
         </Indices>
     </CConversationState>
 </Catalog>
