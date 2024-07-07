@@ -31,6 +31,7 @@ Behavior/Tooltip/StunnedAnarchistLeap=This unit is stunned.
 Behavior/Tooltip/SuperCloak=This unit is invulnerable.
 Behavior/Tooltip/SuperCloakCooldown=Super Cloak cannot activate yet.
 Behavior/Tooltip/TarBomb=This unit is slowed and has reduced range.
+Button/Name/AblativeScalesNew=Ablative Scales
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAgitator=Build Agitator
@@ -50,6 +51,7 @@ Button/Name/BuildZeusLander=Build Zeus Lander
 Button/Name/ChemicalPlating=Chemical Plating
 Button/Name/CloakPhantom=Cloak
 Button/Name/CombatDrugs=Combat Drugs
+Button/Name/ConcussiveShrapnel=Concussive Shrapnel
 Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
 Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
@@ -85,6 +87,7 @@ Button/Name/TrainWarPig=Train War Pig
 Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/AblativeScalesNew=Hammer Securities gain 75 life and immunity to splash damage.
 Button/Tooltip/Adjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -108,6 +111,7 @@ Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
 Button/Tooltip/ChemicalPlating=Increases the Devil Dog's armor by 3 and grants immunity to acid explosions.
 Button/Tooltip/CloakPhantom=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,PhantomCloak,Modification.VitalRegenArray[2] + Unit,Phantom,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/CombatDrugs=Block B heal for 20% of their maximum life when dealing damage. While out of combat, they regenerate 2 life per second.
+Button/Tooltip/ConcussiveShrapnel=Attacks briefly slow enemies in an area and in a cone behind them by 60%.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby enemy units.

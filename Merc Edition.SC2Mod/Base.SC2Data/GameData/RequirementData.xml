@@ -19,10 +19,6 @@
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeThornShieldQueuedOrBetter0"/>
     </CRequirement>
-    <CRequirement id="UseAblativeScales">
-        <EditorCategories value="TechType:Ability"/>
-        <NodeArray index="Show" Link="CountUpgradeAblativeScalesCompleteOnly"/>
-    </CRequirement>
     <CRequirement id="UseBearclawGauntlets">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
@@ -66,6 +62,10 @@
     <CRequirement id="UseTerrazineShots">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeTerrazineShotsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseAblativeScalesNew">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="UseThornShield">
         <EditorCategories value="TechType:Ability"/>

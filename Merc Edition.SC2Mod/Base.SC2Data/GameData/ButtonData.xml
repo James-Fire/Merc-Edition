@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="AblativeScalesNew">
+        <Icon value="Assets\Icons and Wireframes\ablativescales.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\ablativescales.dds"/>
+    </CButton>
     <CButton id="BearclawGauntlets">
         <Icon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
@@ -77,6 +81,10 @@
         <HotkeySet value="Cloak"/>
     </CButton>
     <CButton id="CombatDrugs"/>
+    <CButton id="ConcussiveShrapnel">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-jackhammerconcussion.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-jackhammerconcussion.dds"/>
+    </CButton>
     <CButton id="DeadMenTellNoTales">
         <Icon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>

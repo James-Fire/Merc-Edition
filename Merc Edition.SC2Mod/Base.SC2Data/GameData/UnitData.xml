@@ -477,7 +477,10 @@
         <CardLayouts index="0">
             <LayoutButtons index="5" Face="MagrailMunitions" Type="AbilCmd" AbilCmd="MagrailMunitions,Execute" Requirements=""/>
             <LayoutButtons index="6" Face="LowGradeStims" Type="AbilCmd" AbilCmd="LowGradeStim,Execute" Requirements="" Column="0"/>
+            <LayoutButtons Face="AblativeScalesNew" Type="Passive" Requirements="UseAblativeScalesNew" Row="1" Column="1"/>
+            <LayoutButtons Face="ConcussiveShrapnel" Type="Passive" Requirements="UseConcussiveShrapnel" Row="1" Column="0"/>
         </CardLayouts>
+        <BehaviorArray Link="AblativeScales"/>
     </CUnit>
     <CUnit id="HelsAngelAssault">
         <CostResource index="Minerals" value="225"/>

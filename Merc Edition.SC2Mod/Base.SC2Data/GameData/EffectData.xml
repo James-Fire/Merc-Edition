@@ -47,14 +47,15 @@
     </CEffectModifyUnit>
     <CEffectApplyBehavior id="ConcussiveShrapnelApplyBehavior">
         <Behavior value="ConcussiveShrapnel"/>
+        <ValidatorArray index="0" value="HaveConcussiveShrapnel"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="ConcussiveShrapnelConeSA">
         <EditorCategories value=""/>
-        <DebugTrace value="1"/>
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Arc="69.983" Radius="3" Effect="ConcussiveShrapnelApplyBehavior"/>
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetUnit"/>
+        <ValidatorArray value="HaveConcussiveShrapnel"/>
     </CEffectEnumArea>
     <CEffectSet id="ConcussiveShrapnelDummy">
         <EditorCategories value=""/>
@@ -62,14 +63,15 @@
     </CEffectSet>
     <CEffectEnumArea id="ConcussiveShrapnelSA">
         <EditorCategories value=""/>
-        <DebugTrace value="1"/>
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="0.8" Effect="ConcussiveShrapnelApplyBehavior"/>
+        <ValidatorArray value="HaveConcussiveShrapnel"/>
     </CEffectEnumArea>
     <CEffectSet id="ConcussiveShrapnelSet">
         <EditorCategories value=""/>
         <EffectArray value="ConcussiveShrapnelConeSA"/>
         <EffectArray value="ConcussiveShrapnelSA"/>
+        <ValidatorArray value="HaveConcussiveShrapnel"/>
     </CEffectSet>
     <CEffectDamage id="D8ChargeExplodeDamage">
         <AINotifyFlags index="HurtFriend" value="0"/>
