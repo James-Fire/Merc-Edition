@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade id="AblativeScales">
+        <EffectArray Reference="Unit,HammerSecurity,LifeMax" Value="75"/>
+        <EffectArray Reference="Unit,HammerSecurity,LifeStart" Value="75"/>
+        <AffectedUnitArray value="HammerSecurity"/>
+    </CUpgrade>
     <CUpgrade id="BearclawGauntlets">
         <EffectArray Operation="Set" Reference="Effect,DevilDogSearchArea,AreaArray[0].Radius" Value="0.96"/>
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
@@ -24,10 +29,18 @@
         <EffectArray Reference="Unit,BlockB,Speed" Value="1.750000"/>
         <AffectedUnitArray value="BlockB"/>
     </CUpgrade>
+    <CUpgrade id="JoriumLinedSuit">
+        <EffectArray Operation="Set" Reference="Behavior,SpectreCloaking,Modification.VitalRegenArray[Energy]" Value="0.000000"/>
+        <AffectedUnitArray value="Phantom"/>
+    </CUpgrade>
     <CUpgrade id="LaserTargetingSystem">
         <EffectArray Reference="Weapon,KelmorianMinerGaussRifle,Range" Value="1"/>
         <EffectArray Reference="Unit,WarPig,Sight" Value="2"/>
         <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+    <CUpgrade id="ImpalerRoundsShadow">
+        <EffectArray Reference="Effect,AGRShadeHunter,AttributeBonus[Armored]" Value="7"/>
+        <AffectedUnitArray value="Shadow"/>
     </CUpgrade>
     <CUpgrade id="NeosteelCupHolders">
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
@@ -45,6 +58,17 @@
     </CUpgrade>
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+    <CUpgrade id="TerrazineShots">
+        <EffectArray Operation="Set" Reference="Abil,DarkTemplarShadowFury,Cost[0].Cooldown.TimeUse" Value="6.000000"/>
+        <EffectArray Reference="Weapon,AGRShadeHunter,RateMultiplier" Value="0.25"/>
+        <EffectArray Reference="Unit,Shadow,Sight" Value="2"/>
+        <EffectArray Reference="Unit,Shadow,Speed" Value="1.250000"/>
+        <EffectArray Reference="Weapon,AGRShadeHunter,Range" Value="1.25"/>
+        <EffectArray Operation="Set" Reference="Sound,Spectre_AttackLaunch,AssetArray[0].File" Value="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch01.wav"/>
+        <EffectArray Operation="Set" Reference="Sound,Spectre_AttackLaunch,AssetArray[1].File" Value="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch02.wav"/>
+        <EffectArray Operation="Set" Reference="Sound,Spectre_AttackLaunch,AssetArray[2].File" Value="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch03.wav"/>
+        <AffectedUnitArray value="Shadow"/>
     </CUpgrade>
     <CUpgrade id="ThornShield">
         <EffectArray Reference="Unit,WarPig,LifeMax" Value="15"/>

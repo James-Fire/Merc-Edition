@@ -57,6 +57,8 @@ Button/Name/EidolonSuit=Eidolon Suit
 Button/Name/EnergyRadar=Energy Radar
 Button/Name/FireOnTheMoveAgitator=Fire On The Move
 Button/Name/ImmolationFluid=Immolation Fluid
+Button/Name/ImpalerRoundsShadow=Impaler Rounds
+Button/Name/JoriumLinedSuit=Jorium Lined Suit
 Button/Name/JumpJetAssault=Jump Jet Assault
 Button/Name/LaserTargetingSystem=Laser Targeting System
 Button/Name/LowGradeStims=Low Grade Stims
@@ -70,6 +72,7 @@ Button/Name/StabilizerHeal=Stabilizer Heal
 Button/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Button/Name/SuperStim=Super Stim
 Button/Name/TarBomb=Tar Bomb
+Button/Name/TerrazineShots=Terrazine Shots
 Button/Name/ThornShieldSkibidi=Thorn Shield
 Button/Name/ThornShieldWarPig=Thorn Shield
 Button/Name/TrainBlockB=Train Block B
@@ -115,6 +118,8 @@ Button/Tooltip/EnergyRadar=Phantoms reveal the locations of enemy units with an 
 Button/Tooltip/FireOnTheMoveAgitator=The Agitator can attack while moving.
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/ImmolationFluid=Anarchist attacks cause enemies to burn for an additional 50 damage over <d time="7"/>.
+Button/Tooltip/ImpalerRoundsShadow=Increases damage vs Armored by 7.
+Button/Tooltip/JoriumLinedSuit=Shadows can use Hallucination and Psionic Lash. Cloak cost removed.
 Button/Tooltip/JumpJetAssault=Launches the Anarchist to a nearby area, briefly stunning enemy units and giving the Anarchist +4 armor.
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
 Button/Tooltip/LowGradeStims=Increase attack speed by 100% for <d time="7"/>.
@@ -135,6 +140,7 @@ Button/Tooltip/StabilizerMedpacksMerc=Increases heal speed, energy efficiency, S
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
 Button/Tooltip/TarBomb=Deal 20 damage to the target and apply a debuff for <d time="7"/> to enemies in the area that reduces their movement speed by 75% and range by 3.
+Button/Tooltip/TerrazineShots=Shadows gain more movement speed, attack speed, attack range, sight radius, and lower Shadow Fury cooldown.
 Button/Tooltip/ThornShieldSkibidi=Skibi's Angels gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
 Button/Tooltip/ThornShieldWarPig=War Pigs gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
 Button/Tooltip/Titan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -281,16 +287,20 @@ Unit/Name/SkibisAngel=Skibi's Angel
 Unit/Name/Starcruiser=Starcruiser
 Unit/Name/TarBombMissile=Tar Bomb Missile
 Unit/Name/Titan=Titan
+Upgrade/Name/AblativeScales=Ablative Scales
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
 Upgrade/Name/ChairsandAC=Chairs and A.C
 Upgrade/Name/ChemicalPlating=Chemical Plating
 Upgrade/Name/ConcussiveShrapnel=Concussive Shrapnel
 Upgrade/Name/EidolonSuit=Eidolon Suit
+Upgrade/Name/ImpalerRoundsShadow=Impaler Rounds
 Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
+Upgrade/Name/JoriumLinedSuit=Jorium Lined Suit
 Upgrade/Name/LaserTargetingSystem=Laser Targeting System
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Upgrade/Name/SuperStim=Super Stim
+Upgrade/Name/TerrazineShots=Terrazine Shots
 Upgrade/Name/ThornShield=Thorn Shield
 Upgrade/Name/TyradorImplants=Tyrador Implants
 Upgrade/Name/U240Rounds=U-240 Rounds

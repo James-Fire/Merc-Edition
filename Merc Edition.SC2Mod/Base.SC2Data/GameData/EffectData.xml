@@ -79,6 +79,9 @@
         <AINotifyFlags index="HurtFriend" value="0"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectDamage id="DarkTemplarShadowFuryDamage">
+        <Amount value="40"/>
+    </CEffectDamage>
     <CEffectDamage id="DeadMenTellNoTales">
         <EditorCategories value=""/>
         <Kind value="Ranged"/>

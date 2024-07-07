@@ -2,10 +2,15 @@
 <Catalog>
     <CValidatorPlayerRequirement id="HaveConcussiveShrapnel">
         <Value value="UseConcussiveShrapnel"/>
+        <Find value="1"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveEidolonSuit">
         <Find value="1"/>
         <Value value="UseEidolonSuit"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveTerrazineShots">
+        <Find value="1"/>
+        <Value value="UseTerrazineShots"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveU240Rounds">
         <Find value="1"/>

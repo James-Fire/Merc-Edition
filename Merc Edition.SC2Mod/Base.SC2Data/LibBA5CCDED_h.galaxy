@@ -10,4 +10,5 @@ void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 trigger libBA5CCDED_gt_MissionDirectives;
 trigger libBA5CCDED_gt_DepositMoney;
 trigger libBA5CCDED_gt_WarPigLaserTargetingSystem;
+trigger libBA5CCDED_gt_ShadowImpalerRounsd;
 

@@ -906,10 +906,10 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="RogueGhostCloak"/>
         <AbilArray Link="SpectreNuke"/>
-        <AbilArray Link="UltrasonicPulse"/>
-        <AbilArray Link="Obliterate"/>
         <AbilArray Link="SpectreHoldFire"/>
         <AbilArray Link="SpectreWeaponsFree"/>
+        <AbilArray Link="DarkTemplarShadowFury"/>
+        <AbilArray Link="Obliterate"/>
         <WeaponArray Link="AGRShadeHunter"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -922,17 +922,12 @@
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="SpectreNuke,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="SpectreHoldFire" Type="AbilCmd" AbilCmd="SpectreHoldFire,Execute" Row="1" Column="2"/>
             <LayoutButtons Face="SpectreWeaponsFree" Type="AbilCmd" AbilCmd="SpectreWeaponsFree,Execute" Row="1" Column="3"/>
-            <LayoutButtons>
-                <Face value="NyxClassCloakingModule"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255"/>
-                <Requirements value="UseSpectreNyxSuit"/>
-                <Row value="1"/>
-                <Column value="1"/>
-            </LayoutButtons>
-            <LayoutButtons Face="UltrasonicPulse" Type="AbilCmd" AbilCmd="UltrasonicPulse,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="VoidDarkTemplarShadowFury" Type="AbilCmd" AbilCmd="DarkTemplarShadowFury,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="SpectreNukeCalldown" Type="AbilCmd" AbilCmd="SpectreNuke,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="Obliterate" Type="AbilCmd" AbilCmd="Obliterate,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ImpalerRoundsShadow" Type="Passive" Row="1" Column="4"/>
+            <LayoutButtons Face="TerrazineShots" Type="Passive" Requirements="UseTerrazineShots" Row="1" Column="0"/>
+            <LayoutButtons Face="JoriumLinedSuit" Type="Passive" Requirements="UseJoriumLinedSuit" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>

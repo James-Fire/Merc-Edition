@@ -1790,6 +1790,7 @@
         <Element Type="Category" Id="CA3A8D1E">
             <Item Type="Comment" Library="BA5CCDED" Id="0DFDD577"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="C1709FCF"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="70CCBC1C"/>
         </Element>
         <Element Type="Comment" Id="0DFDD577">
             <Comment>
@@ -1822,6 +1823,35 @@
         <Element Type="Param" Id="016C3267">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
             <Value>LaserTargetingSystem</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Trigger" Id="70CCBC1C">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="CDC58DDD"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="6683F8A5"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CDC58DDD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6683F8A5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B8265CA1"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="15B2C0DB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C11D76DE"/>
+        </Element>
+        <Element Type="Param" Id="B8265CA1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="15B2C0DB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="C11D76DE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>ImpalerRoundsShadow</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
         </Element>

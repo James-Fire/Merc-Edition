@@ -35,6 +35,9 @@
             <Unit value="Shadow"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="DarkTemplarShadowFury">
+        <Range index="0" value="7.3"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="JumpJetAssault">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="AnarchistJumpInitialCP"/>
@@ -84,6 +87,9 @@
             <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="Obliterate">
+        <CmdButtonArray index="Execute" Requirements="UseJoriumLinedSuit"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="StabilizerMedpackHeal">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="SkibisAngelStabilizerMedpacksSet"/>

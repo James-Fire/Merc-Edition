@@ -310,6 +310,16 @@
         <Mode value="3DWorld"/>
         <Volume value="-4.000000,-4.000000"/>
     </CSound>
+    <CSound id="ShadowFuryStrikLaunch">
+        <AssetArray index="0" File="Assets\Sounds\HighTemplar_Taldarim_Launch_01.wav"/>
+        <AssetArray index="1" File="Assets\Sounds\HighTemplar_Taldarim_Launch_02.wav"/>
+        <AssetArray index="2" File="Assets\Sounds\HighTemplar_Taldarim_Launch_03.wav"/>
+        <AssetArray index="3" File="Assets\Sounds\HighTemplar_Taldarim_Launch_04.wav"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <DupeMuteCount value="5"/>
+    </CSound>
     <CSound id="SignalFlareBlindSound">
         <AssetArray File="Assets\Sounds\Marauder_Magrail_Missile_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Marauder_Magrail_Missile_02.wav" FacialGroup=""/>

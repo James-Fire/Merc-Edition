@@ -127,6 +127,21 @@
         <Image value="Assets\Textures\MedivacPortrait_Static.dds"/>
         <Lighting value="MedivacPortrait"/>
     </CModel>
+    <CModel id="DarkTemplarShadowFuryImpact">
+        <Model value="Assets\Effects\Protoss\Supplicant_COOP_Missile_Impact\Supplicant_COOP_Missile_Impact.m3"/>
+        <ScaleMax value="2.500000,2.500000,2.500000"/>
+        <ScaleMin value="2.500000,2.500000,2.500000"/>
+    </CModel>
+    <!--CModel id="DarkTemplarShadowFuryModel" parent="Unit" Race="Protoss">-->
+    <!--        <Model value="Assets\Units\Protoss\Zeratul\Zeratul.m3"/>-->
+    <!--        <Lighting value="MohandarVoid"/>-->
+    <!--        <PlanetPanelCamera value="Star2CameraMid05"/>-->
+    <!--        <TechPurchaseCamera value="Star2CameraMid05"/>-->
+    <!--        <UnitGlossaryCamera value="Star2CameraMid05"/>-->
+    <!--    </CModel-->
+    <CModel id="DarkTemplarShadowFurySmoke">
+        <Model value="Assets\Effects\Neutral\Evolution_Impact_Terran_Coop\Evolution_Impact_Terran_Coop.m3"/>
+    </CModel>
     <CModelFoliage id="DeadMenTellNoTales">
         <Model value="Assets\Effects\Terran\SpidermineExplosion\SpidermineExplosion_Low.m3"/>
         <ScaleMax value="1.500000,1.500000,1.000000"/>
@@ -441,6 +456,9 @@
         <ScaleMax value="0.600000,0.600000,0.600000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
+    <CModelFoliage id="TerrazineShots">
+        <Model value="Assets\Effects\Protoss\AmonShard_Blue_Aoe_Missile_Impact\AmonShard_Blue_Aoe_Missile_Impact.m3"/>
+    </CModelFoliage>
     <CModelFoliage id="ThornShieldDamage">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModelFoliage>
@@ -511,5 +529,10 @@
     </CModelFoliage>
     <CModel id="U-240RoundsBombModel">
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+    </CModel>
+    <CModel id="VoidDarkTemplarShadowFury">
+        <Model value="Assets\Effects\Protoss\ZeratulBlinkOut\ZeratulBlinkOut.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
 </Catalog>

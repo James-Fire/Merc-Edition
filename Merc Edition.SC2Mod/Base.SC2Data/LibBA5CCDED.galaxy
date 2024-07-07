@@ -229,10 +229,31 @@ void libBA5CCDED_gt_WarPigLaserTargetingSystem_Init () {
     TriggerAddEventMapInit(libBA5CCDED_gt_WarPigLaserTargetingSystem);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Shadow - Impaler Rounsd
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_ShadowImpalerRounsd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(1, "ImpalerRoundsShadow", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_ShadowImpalerRounsd_Init () {
+    libBA5CCDED_gt_ShadowImpalerRounsd = TriggerCreate("libBA5CCDED_gt_ShadowImpalerRounsd_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_ShadowImpalerRounsd);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
+    libBA5CCDED_gt_ShadowImpalerRounsd_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

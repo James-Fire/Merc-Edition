@@ -101,6 +101,10 @@
         <Icon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
     </CButton>
+    <CButton id="ImpalerRoundsShadow">
+        <Icon value="Assets\Icons and Wireframes\impaler rounds.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\impaler rounds.dds"/>
+    </CButton>
     <CButton id="JumpJetAssault">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
@@ -132,6 +136,14 @@
     <CButton id="TarBomb">
         <Icon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
+    </CButton>
+    <CButton id="TerrazineShots">
+        <Icon value="Assets\Textures\btn-tips-droppedterrazine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-droppedterrazine.dds"/>
+    </CButton>
+    <CButton id="JoriumLinedSuit">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-nyxcloakingclassmodule.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-nyxcloakingclassmodule.dds"/>
     </CButton>
     <CButton id="ThornShieldWarPig">
         <Icon value="Assets\Textures\btn-techupgrade-terran-combatshield.dds"/>

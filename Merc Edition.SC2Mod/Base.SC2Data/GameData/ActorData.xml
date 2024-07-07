@@ -300,6 +300,9 @@
             <Image value="Assets\Textures\Wireframe-Terran-Medivac.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorSound id="DarkTemplarShadowFurySound">
+        <Sound value="CorsairMP_AttackLaunch"/>
+    </CActorSound>
     <CActorModel id="DeadMenTellNoTales" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.DeadMenTellNoTales.Start" Send="Create"/>
@@ -960,6 +963,13 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorModel id="TerrazineShots" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AGRShadeHunter.Start; ValidatePlayer HaveTerrazineShots" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {226,62,255 2.000000}"/>
+        <Host Scope="Target" Effect="AGRShadeHunter"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
     <CActorModel id="ThornShieldDamage" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ThornShieldDamage.Start; At Target" Send="Create"/>
@@ -1179,5 +1189,8 @@
         <On Terms="Effect.U-240RoundsBombCreateUnit.Stop" Send="AnimBracketStop BSD"/>
         <Host Subject="_Unit" Scope="Source" Actor="Find"/>
         <HostSiteOps Ops="SOpShadow"/>
+    </CActorModel>
+    <CActorModel id="VoidDarkTemplarShadowFury">
+        <On Terms="ActorCreation" Send="SetTintColor 145,0,0"/>
     </CActorModel>
 </Catalog>
