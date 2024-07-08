@@ -249,11 +249,55 @@ void libBA5CCDED_gt_ShadowImpalerRounsd_Init () {
     TriggerAddEventMapInit(libBA5CCDED_gt_ShadowImpalerRounsd);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Block B Fly Heighter
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BlockBFlyHeighter_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.1, c_timeReal);
+    UnitSetHeight(EventUnit(), 3.75, 0.4);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BlockBFlyHeighter_Init () {
+    libBA5CCDED_gt_BlockBFlyHeighter = TriggerCreate("libBA5CCDED_gt_BlockBFlyHeighter_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_BlockBFlyHeighter, null, AbilityCommand("JetPackOverdrive", 0), c_abilMorphStageWait, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Block B Fly Heighter 2
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BlockBFlyHeighter2_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.1, c_timeReal);
+    UnitSetHeight(EventUnit(), 0.5, 0.4);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BlockBFlyHeighter2_Init () {
+    libBA5CCDED_gt_BlockBFlyHeighter2 = TriggerCreate("libBA5CCDED_gt_BlockBFlyHeighter2_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_BlockBFlyHeighter2, null, AbilityCommand("JetPackOverdriveUndo", 0), c_abilMorphStageWait, false);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
     libBA5CCDED_gt_ShadowImpalerRounsd_Init();
+    libBA5CCDED_gt_BlockBFlyHeighter_Init();
+    libBA5CCDED_gt_BlockBFlyHeighter2_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

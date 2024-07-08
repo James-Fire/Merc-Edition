@@ -38,6 +38,41 @@
     <CAbilEffectTarget id="DarkTemplarShadowFury">
         <Range index="0" value="7.3"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="JetPackOverdrive">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="JetPackOverdrive"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="FlyingBlockB">
+            <SectionArray index="Abils">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="JetPackOverdriveUndo">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="JetPackOverdrive"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="BlockB">
+            <SectionArray index="Abils">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilEffectTarget id="JumpJetAssault">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="AnarchistJumpInitialCP"/>

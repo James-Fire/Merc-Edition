@@ -8,6 +8,19 @@
         <Range value="0.1"/>
         <Period value="1.5"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="BarBreakersFlying">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="BarBreakersDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5.5"/>
+        <Range value="4.5"/>
+        <Period value="1.1"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.75"/>
+        <Effect value="BarBreakersCP"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="C11EthereanRifle">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>

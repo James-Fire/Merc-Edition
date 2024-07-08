@@ -15,6 +15,9 @@
         <EffectArray value="CombatDrugsHeal"/>
         <EffectArray value="U-240RoundsBombApplyBehavior"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="BlockBFlightDurationApplyBehavior">
+        <Behavior value="BlockBFlightDuration"/>
+    </CEffectApplyBehavior>
     <CEffectDamage id="C11EthereanRifle" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <AttributeBonus index="Light" value="12"/>

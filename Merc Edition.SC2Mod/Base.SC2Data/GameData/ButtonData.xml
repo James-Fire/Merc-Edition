@@ -113,6 +113,10 @@
         <Icon value="Assets\Icons and Wireframes\impaler rounds.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\impaler rounds.dds"/>
     </CButton>
+    <CButton id="JetPackOverdrive">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-reaper-flightmode.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-reaper-flightmode.dds"/>
+    </CButton>
     <CButton id="JumpJetAssault">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellbatjumpjets.dds"/>

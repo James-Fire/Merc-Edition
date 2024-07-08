@@ -17,6 +17,11 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BlockBFlightDuration">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="14"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ChemicalPlating">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
