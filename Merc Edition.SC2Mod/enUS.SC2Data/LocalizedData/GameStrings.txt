@@ -35,6 +35,8 @@ Behavior/Tooltip/SuperCloak=This unit is invulnerable.
 Behavior/Tooltip/SuperCloakCooldown=Super Cloak cannot activate yet.
 Behavior/Tooltip/TarBomb=This unit is slowed and has reduced range.
 Button/Name/AblativeScalesNew=Ablative Scales
+Button/Name/AdvancedSiegeOptics=Advanced Siege Optics
+Button/Name/AdvancedSiegeTech=Advanced Siege Tech
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAgitator=Build Agitator
@@ -93,6 +95,8 @@ Button/Name/U240Rounds=U-240 Rounds
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AblativeScalesNew=Hammer Securities gain 75 life and immunity to splash damage.
 Button/Tooltip/Adjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/AdvancedSiegeOptics=Siege Breaker sight radius is equal to that of their Arclite Shock Cannon's range.
+Button/Tooltip/AdvancedSiegeTech=Siege Breakers enter and exit siege mode twice as fast, and gain +3 armor in siege mode.
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BearclawGauntlets=Increases the Devil Dog's attack radius by 60% and grants the Grapple ability.

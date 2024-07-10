@@ -125,6 +125,30 @@
     <CAbilEffectTarget id="Obliterate">
         <CmdButtonArray index="Execute" Requirements="UseJoriumLinedSuit"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="SiegeBreakerSiege">
+        <InfoArray index="0" RandomDelayMax="0.25">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.25"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.25"/>
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="SiegeBreakerUnsiege">
+        <InfoArray index="0" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilEffectTarget id="StabilizerMedpackHeal">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="SkibisAngelStabilizerMedpacksSet"/>

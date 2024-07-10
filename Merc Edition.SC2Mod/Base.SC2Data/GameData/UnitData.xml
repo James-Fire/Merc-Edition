@@ -570,10 +570,21 @@
     <CUnit id="SiegeBreaker">
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="185"/>
+        <Sight value="13"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Face="AdvancedSiegeTech" AbilCmd="" Requirements=""/>
+            <LayoutButtons index="7" removed="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="SiegeBreakerSieged">
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="185"/>
+        <LifeArmor value="4"/>
+        <Sight value="13"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Face="AdvancedSiegeOptics" AbilCmd="" Requirements=""/>
+            <LayoutButtons index="7" Face="AdvancedSiegeTech" Requirements=""/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="SignalFlareTargetDummy">
         <Race value="Terr"/>

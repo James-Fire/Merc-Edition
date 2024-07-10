@@ -4,6 +4,14 @@
         <Icon value="Assets\Icons and Wireframes\ablativescales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\ablativescales.dds"/>
     </CButton>
+    <CButton id="AdvancedSiegeOptics">
+        <Icon value="Assets\Textures\btn-upgrade-swann-vehiclerangeincrease.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-vehiclerangeincrease.dds"/>
+    </CButton>
+    <CButton id="AdvancedSiegeTech">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-improvedsiegemode.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-improvedsiegemode.dds"/>
+    </CButton>
     <CButton id="BearclawGauntlets">
         <Icon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
