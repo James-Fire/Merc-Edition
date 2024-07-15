@@ -291,6 +291,33 @@ void libBA5CCDED_gt_BlockBFlyHeighter2_Init () {
     TriggerAddEventUnitAbility(libBA5CCDED_gt_BlockBFlyHeighter2, null, AbilityCommand("JetPackOverdriveUndo", 0), c_abilMorphStageWait, false);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Spartan Company Shell Shower Full
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SpartanCompanyShellShowerFull_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitBehaviorCount(EventUnit(), "ShellShower") == 12))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreateEffectUnit(EventUnit(), "SpartanCompanyShellShowerFull", EventUnit());
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init () {
+    libBA5CCDED_gt_SpartanCompanyShellShowerFull = TriggerCreate("libBA5CCDED_gt_SpartanCompanyShellShowerFull_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_SpartanCompanyShellShowerFull, null, "ShellShower", c_unitBehaviorChangeIncrease);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
@@ -298,6 +325,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_ShadowImpalerRounsd_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
+    libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

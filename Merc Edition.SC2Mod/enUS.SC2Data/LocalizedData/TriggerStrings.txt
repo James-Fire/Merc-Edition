@@ -5,6 +5,7 @@ Category/Name/lib_BA5CCDED_FFB39B08=Skin Stuff
 FunctionDef/Name/lib_BA5CCDED_F9E916E2=Taldarimify
 Library/Name/BA5CCDED=Merc Edition Data
 ParamDef/Name/lib_BA5CCDED_6E697F4C=Players
+Trigger/Name/lib_BA5CCDED_1AF6CB32=Spartan Company Shell Shower Full
 Trigger/Name/lib_BA5CCDED_390A3B5A=Block B Fly Heighter
 Trigger/Name/lib_BA5CCDED_6CD89C64=Block B Fly Heighter 2
 Trigger/Name/lib_BA5CCDED_70CCBC1C=Shadow - Impaler Rounsd

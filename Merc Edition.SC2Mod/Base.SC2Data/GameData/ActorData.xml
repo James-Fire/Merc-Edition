@@ -87,6 +87,25 @@
         <On Terms="WeaponStart.ACVFusionCutter.AttackStart" Send="Create"/>
         <Sound value="SCV_AttackLaunch"/>
     </CActorSound>
+    <CActorModel id="AnarchistFearExplosion" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistFearSA.Start" Send="Create"/>
+        <Host Subject="_Unit"/>
+    </CActorModel>
+    <CActorModelMaterial id="AnarchistFearGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.FearPliableArmor.On" Send="Create"/>
+        <On index="6" Terms="Behavior.FearPliableArmor.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorModel id="AnarchistFearMarker" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FearPliableArmorApplyBehavior.Start; At Target" Send="Create"/>
+        <HostSiteOps Ops="SOpAttachHead"/>
+    </CActorModel>
+    <CActorSound id="AnarchistFearExplode" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnarchistFearSA.Start" Send="Create"/>
+    </CActorSound>
     <CActorModel id="AnarchistJumpJets" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Effect.AnarchistJumpLM.Start; At Caster" Send="Create"/>
@@ -471,6 +490,9 @@
             <Image value="Assets\Textures\Wireframe-Terran-HellionTankEx1.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorAction id="GoliathAirAttack">
+        <LaunchAssets Sound="SpartanCompanyAirAttackLaunch"/>
+    </CActorAction>
     <CActorModel id="ImmolationFluid" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.ImmolationFluid.On" Send="Create"/>
@@ -723,6 +745,23 @@
         <ContainerAssets Model="ReaperBunkerAttackLaunch" Sound="Reaper_BunkerAttackLaunch"/>
         <ImpactMap index="None" Model="ReaperAttackImpact" Sound="Reaper_AttackImpact"/>
     </CActorAction>
+    <CActorAction id="SpartanCompanyAirAttack">
+        <LaunchAssets Sound="SpartanCompanyAirAttackLaunch"/>
+    </CActorAction>
+    <!-- Ground AA attack.                                                                       -->
+    <CActorMissile id="SpartanCompanyAirAttackMissile">
+        <Model value="SpartanCompanyAirMissile"/>
+    </CActorMissile>
+    <CActorModel id="SpartanCompanyAirAttackTrail" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SpartanCompanyAWeapon" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+    </CActorModel>
+    <CActorModel id="SpartanCompanyShellShowerFull" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SpartanCompanyShellShowerFull.Start" Send="Create"/>
+    </CActorModel>
     <CActorModel id="SprayandPayImpactModel" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.SprayandPayDamage.Start" Send="Create"/>

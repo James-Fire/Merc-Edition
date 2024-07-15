@@ -126,6 +126,16 @@
         <Backswing value="1.167"/>
         <RandomDelayMin value="-0.063"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="SpartanCompanyAUpgraded">
+        <Options index="Disabled" value="0"/>
+        <Options index="Hidden" value="0"/>
+        <Effect value="SpartanCompanyAirWeaponSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SpartanCompanyGUpgraded">
+        <Options index="Disabled" value="0"/>
+        <Options index="Hidden" value="0"/>
+        <Effect value="SpartanCompanyWeaponSet"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ThermalBurst">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>

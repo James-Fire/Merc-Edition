@@ -46,6 +46,18 @@
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
         <AffectedUnitArray value="Bunker"/>
     </CUpgrade>
+    <CUpgrade id="PliableArmor">
+        <EffectArray Reference="Unit,Agitator,Speed" Value="2.000000"/>
+        <EffectArray Reference="Unit,Anarchist,Speed" Value="2.000000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAnarchist,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAnarchist,InfoArray[0].SectionArray[Collide].DurationArray[Delay]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAnarchist,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAgitator,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAgitator,InfoArray[0].SectionArray[Collide].DurationArray[Delay]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAgitator,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.500000"/>
+        <AffectedUnitArray value="Anarchist"/>
+        <AffectedUnitArray value="Agitator"/>
+    </CUpgrade>
     <CUpgrade id="StabilizerMedpacksMerc">
         <Flags index="UpgradeCheat" value="0"/>
         <Alert value="ResearchComplete"/>
@@ -93,5 +105,17 @@
         <EffectArray Reference="Effect,BarBreakersDamage,AttributeBonus[Light]" Value="3"/>
         <EffectArray Reference="Weapon,BarBreakers,Range" Value="1"/>
         <AffectedUnitArray value="BlockB"/>
+    </CUpgrade>
+    <CUpgrade id="ViralFlammenwerfer">
+        <EffectArray Reference="Effect,HellbornFlamethrowerDamage,AttributeBonus[Light]" Value="10"/>
+        <EffectArray Reference="Effect,HellbornFlamethrowerDamage,AttributeBonus[Biological]" Value="10"/>
+        <EffectArray Reference="Effect,AnarchistWeaponDamage,AttributeBonus[Biological]" Value="10"/>
+        <EffectArray Reference="Effect,HellbornFlamethrowerSA,AreaArray[0].Radius" Value="0.45"/>
+        <EffectArray Reference="Effect,AnarchistWeaponDamage,AttributeBonus[Light]" Value="10"/>
+        <EffectArray Reference="Effect,AnarchistWeaponSearch,AreaArray[0].Arc" Value="45.000000"/>
+        <EffectArray Operation="Set" Reference="Actor,AgitatorAttackBeam,Scale" Value="3.000000,1.000000,1.000000"/>
+        <EffectArray Operation="Set" Reference="Actor,AnarchistAttackLaunch,Scale" Value="1.500000,1.000000,1.000000"/>
+        <AffectedUnitArray value="Anarchist"/>
+        <AffectedUnitArray value="Agitator"/>
     </CUpgrade>
 </Catalog>

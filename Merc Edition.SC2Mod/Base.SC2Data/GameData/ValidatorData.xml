@@ -12,6 +12,10 @@
         <Find value="1"/>
         <Value value="UseAblativeScalesNew"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HavePliableArmor">
+        <Find value="1"/>
+        <Value value="UsePliableArmor"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveTerrazineShots">
         <Find value="1"/>
         <Value value="UseTerrazineShots"/>

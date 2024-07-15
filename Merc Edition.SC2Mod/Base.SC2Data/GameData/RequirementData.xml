@@ -51,6 +51,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UsePliableArmor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradePliableArmorCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
@@ -78,5 +82,9 @@
     <CRequirement id="UseU240Rounds">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeU240RoundsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseViralFlammenwerfer">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeViralFlammenwerferCompleteOnly"/>
     </CRequirement>
 </Catalog>

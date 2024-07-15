@@ -16,20 +16,24 @@ Abil/Name/StabilizerMedpackHeal=Stabilizer Medpack Heal
 Abil/Name/TarBomb=Tar Bomb
 Behavior/Name/BlockBFlightDuration=Block B Flight Duration
 Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
+Behavior/Name/FearPliableArmor=Fear
 Behavior/Name/ImmolationFluid=Immolation Fluid
 Behavior/Name/IncomingAnarchistJump=Incoming!
 Behavior/Name/LowGradeStims=Low Grade Stims
 Behavior/Name/PhantomCloak=Cloak
+Behavior/Name/ShellShower=Shell Shower
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
 Behavior/Name/StunnedAnarchistLeap=Stunned
 Behavior/Name/SuperCloak=Super Cloak
 Behavior/Name/SuperCloakCooldown=Super Cloak Cooldown
 Behavior/Name/TarBomb=Tar Bomb
 Behavior/Tooltip/ConcussiveShrapnel=This unit is slowed.
+Behavior/Tooltip/FearPliableArmor=This unit is running in fear.
 Behavior/Tooltip/ImmolationFluid=This unit is burning for damage over time.
 Behavior/Tooltip/IncomingAnarchistJump=The Anarchist has more armor.
 Behavior/Tooltip/LowGradeStims=This unit is firing faster.
 Behavior/Tooltip/PhantomCloak=This unit is cloaked and will only be revealed by detectors or effects.
+Behavior/Tooltip/ShellShower=The longer Spartan Company attacks, the faster the attacks become.
 Behavior/Tooltip/StunnedAnarchistLeap=This unit is stunned.
 Behavior/Tooltip/SuperCloak=This unit is invulnerable.
 Behavior/Tooltip/SuperCloakCooldown=Super Cloak cannot activate yet.
@@ -73,6 +77,9 @@ Button/Name/LowGradeStims=Low Grade Stims
 Button/Name/MagrailMunitions=Magrail Munitions
 Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
+Button/Name/OptimizedUEDLogistics=Optimized UED Logistics
+Button/Name/PliableArmor=Pliable Armor
+Button/Name/ShellShower=Shell Shower
 Button/Name/SignalFlare=Signal Flare
 Button/Name/SnipePhantom=Snipe
 Button/Name/SprayandPay=Spray and Pay
@@ -92,6 +99,7 @@ Button/Name/TrainSkibisAngel=Train Skibi's Angel
 Button/Name/TrainWarPig=Train War Pig
 Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
+Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AblativeScalesNew=Hammer Securities gain 75 life and immunity to splash damage.
 Button/Tooltip/Adjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
@@ -142,8 +150,11 @@ Button/Tooltip/MercMedicHeal=Heals a friendly biological target.<n/><n/><c val="
 Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nukes take <d time="18"/> to land, but they deal up to 400 (+300 vs. structures) damage to enemies in a large radius.
+Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to train the unit.
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/PliableArmor=Increases armor by 1 and movement speed by 2. When killed, the area is ignited, causing enemies to run in fear. Transformation time halved.
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/ShellShower=The longer the Spartan Company attacks, the faster the attacks become 
 Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius to 1 and suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
 Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time="14"/>.
 Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
@@ -167,8 +178,12 @@ Button/Tooltip/TrainSkibisAngel=Support trooper. Heals nearby biological units.
 Button/Tooltip/TrainWarPig=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able to calldown nukes 50% faster, and have 10% reduced Snipe energy cost.
 Button/Tooltip/U240Rounds=Increases the Death Head's range by 1 and damage vs Light by 3. Enemies killed detonate a G-4 Clusterbomb.
+Button/Tooltip/ViralFlammenwerfer=Increases range by 3, damage vs Light and Biological by 15, and doubles the width of attacks.
 Effect/Name/ACVFusionCutter=Fusion Cutter (Damage)
 Effect/Name/AGRShadeHunter=AGR Shade Hunter
+Effect/Name/AnarchistFearIO=Anarchist Fear IO
+Effect/Name/AnarchistFearRP=Anarchist Fear RP
+Effect/Name/AnarchistFearSA=Anarchist Fear SA
 Effect/Name/AnarchistJumpCU=Anarchist Jump CU
 Effect/Name/AnarchistJumpCUClosest=Anarchist Jump CU Closest
 Effect/Name/AnarchistJumpCUPoint=Anarchist Jump CU Point
@@ -208,6 +223,7 @@ Effect/Name/DevilDogGrappleSwitch=Devil Dog Grapple Switch
 Effect/Name/DieselBasedNapalmAB=Diesel Based Napalm AB
 Effect/Name/DieselBasedNapalmDamage=Diesel Based Napalm Damage
 Effect/Name/FRANomadKingCannonsDamage=FR-A Nomad King Cannons Damage
+Effect/Name/FearPliableArmorApplyBehavior=FearPliableArmorApplyBehavior
 Effect/Name/FistsofKronosCP=Fists of Kronos CP
 Effect/Name/FistsofKronosDamage=Fists of Kronos Damage
 Effect/Name/GreetingGrenadeDamage=Greeting Grenade Damage
@@ -227,6 +243,7 @@ Effect/Name/ScorpionMissiles=Scorpion Missiles
 Effect/Name/ScorpionMissilesLMLeft=Scorpion Missiles LM Left
 Effect/Name/ScorpionMissilesLMRight=Scorpion Missiles LM Right
 Effect/Name/ScorpionMissilesPersistent=Scorpion Missiles Persistent
+Effect/Name/ShellShowerApplyBehavior=ShellShowerApplyBehavior
 Effect/Name/SignalFlareBlindAB=Signal Flare Blind AB
 Effect/Name/SignalFlareBlindLaunchMissile=Signal Flare Blind Launch Missile
 Effect/Name/SignalFlareCU=Signal Flare CU
@@ -238,6 +255,9 @@ Effect/Name/SkibisAngelHeal=Skibi's Angel Heal
 Effect/Name/SkibisAngelHealMechanical=Skibi's Angel Heal (Mechanical)
 Effect/Name/SkibisAngelHealSwitch=Skibi's Angel Heal Switch
 Effect/Name/SnipeDamagePhantom=Snipe (Damage)
+Effect/Name/SpartanCompanyAirWeaponSet=Spartan Company Air Weapon Set
+Effect/Name/SpartanCompanyShellShowerFull=Spartan Company Shell Shower Full
+Effect/Name/SpartanCompanyWeaponSet=Spartan Company Weapon Set
 Effect/Name/SprayandPayCP=Spray and Pay CP
 Effect/Name/SprayandPayDamage=Spray and Pay Damage
 Effect/Name/SprayandPaySA=Spray and Pay SA
@@ -314,12 +334,14 @@ Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
 Upgrade/Name/JoriumLinedSuit=Jorium Lined Suit
 Upgrade/Name/LaserTargetingSystem=Laser Targeting System
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
+Upgrade/Name/PliableArmor=Pliable Armor
 Upgrade/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Upgrade/Name/SuperStim=Super Stim
 Upgrade/Name/TerrazineShots=Terrazine Shots
 Upgrade/Name/ThornShield=Thorn Shield
 Upgrade/Name/TyradorImplants=Tyrador Implants
 Upgrade/Name/U240Rounds=U-240 Rounds
+Upgrade/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Weapon/Name/ACVFusionCutter=Fusion Cutter
 Weapon/Name/AGRShadeHunter=AGR Shade Hunter
 Weapon/Name/BarBreakers=Bar Breakers

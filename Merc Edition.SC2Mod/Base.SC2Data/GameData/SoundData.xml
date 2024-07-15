@@ -57,6 +57,18 @@
         <Pitch value="9.000000,10.000000"/>
         <Volume value="-10.000000,-9.000000"/>
     </CSound>
+    <CSound id="AnarchistFearExplode" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium9.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="AnarchistHelp" parent="Alert">
         <EditorCategories value="Race:Terran"/>
         <AssetArray>
@@ -359,6 +371,12 @@
         <Pitch value="6.000000,6.000000"/>
         <Volume value="-15.000000,-15.000000"/>
     </CSound>
+    <CSound id="SpartanCompanyShellShowerFullSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Uni\UI\Impact_SwtStrike_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\UI\Impact_SwtStrike_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\UI\Impact_SwtStrike_03.wav" FacialGroup=""/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
     <CSound id="SprayandPayImpactSound">
         <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_02.wav" FacialGroup=""/>
@@ -414,5 +432,23 @@
         <AssetArray File="Assets\Sounds\Wraith_SpaceStationLaunch_11.wav" FacialGroup=""/>
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="SpartanCompanyAirAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_09.wav" FacialGroup=""/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <OverlapTimeDelta value="100"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-7.960000,-6.120000"/>
     </CSound>
 </Catalog>

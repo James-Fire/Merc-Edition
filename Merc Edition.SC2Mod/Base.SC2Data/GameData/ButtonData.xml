@@ -136,6 +136,18 @@
     <CButton id="MagrailMunitions">
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-magrailmunitions.dds"/>
     </CButton>
+    <CButton id="OptimizedUEDLogistics">
+        <Icon value="Assets\Textures\btn-upgrade-terran-optimizedlogistics.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-optimizedlogistics.dds"/>
+    </CButton>
+    <CButton id="PliableArmor">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="ShellShower">
+        <Icon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
+    </CButton>
     <CButton id="StabilizerHeal">
         <Icon value="Assets\Icons and Wireframes\stabilizerheal.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\stabilizerheal.dds"/>
@@ -281,5 +293,9 @@
     <CButton id="U240Rounds">
         <Icon value="Assets\Textures\btn-techupgrade-terran-u238rounds.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-u238rounds.dds"/>
+    </CButton>
+    <CButton id="ViralFlammenwerfer">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-twin-linkedflamethrower.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-twin-linkedflamethrower.dds"/>
     </CButton>
 </Catalog>

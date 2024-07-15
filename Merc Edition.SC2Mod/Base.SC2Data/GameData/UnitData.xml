@@ -332,6 +332,8 @@
             <LayoutButtons Face="MorphtoAnarchist" Type="AbilCmd" AbilCmd="MorphToAnarchist,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="FireOnTheMoveAgitator" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="TarBomb" Type="AbilCmd" AbilCmd="TarBomb,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ViralFlammenwerfer" Type="Passive" Requirements="UseViralFlammenwerfer" Row="2" Column="2"/>
+            <LayoutButtons Face="PliableArmor" Type="Passive" Requirements="UsePliableArmor" Row="2" Column="3"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
@@ -391,7 +393,7 @@
             <LayoutButtons index="15" Face="BuildCondor" AbilCmd="FactoryTrain,Train18"/>
             <LayoutButtons index="16" Face="BuildAnarchist" AbilCmd="FactoryTrain,Train15"/>
             <LayoutButtons index="17" Face="BuildTitan" AbilCmd="FactoryTrain,Train13"/>
-            <LayoutButtons Face="BuildCyberWolf" Type="AbilCmd" AbilCmd="MULEGather,Gather" Row="0" Column="4"/>
+            <LayoutButtons Face="BuildCyberWolf" Type="AbilCmd" AbilCmd="FactoryTrain,Train10" Row="0" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Hellion" Type="AbilCmd" AbilCmd="FactoryTrain,Train6" Row="0" Column="0"/>
@@ -811,6 +813,14 @@
     <CUnit id="SpartanCompany">
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="75"/>
+        <WeaponArray index="0" Link="SpartanCompanyGUpgraded"/>
+        <WeaponArray index="1" Link="SpartanCompanyAUpgraded"/>
+        <WeaponArray index="2" Link=""/>
+        <WeaponArray index="3" Link=""/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="OptimizedUEDLogistics" AbilCmd="" Requirements=""/>
+            <LayoutButtons index="6" Face="ShellShower" AbilCmd="" Requirements=""/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Starcruiser">
         <DeathRevealRadius value="3"/>
@@ -1313,6 +1323,9 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="MorphtoAgitator" Type="AbilCmd" AbilCmd="MorphToAgitator,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="JumpJetAssault" Type="AbilCmd" AbilCmd="JumpJetAssault,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ViralFlammenwerfer" Type="Passive" Requirements="UseViralFlammenwerfer" Row="2" Column="2"/>
+            <LayoutButtons Face="ImmolationFluid" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="PliableArmor" Type="Passive" Requirements="UsePliableArmor" Row="2" Column="3"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.75"/>
@@ -1337,6 +1350,7 @@
         <GlossaryWeakArray value="Marauder"/>
         <GlossaryAlias value="HellionTank"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <EffectArray index="Death" value="AnarchistFearSA"/>
     </CUnit>
     <CUnit id="WarPig">
         <CostResource index="Minerals" value="75"/>

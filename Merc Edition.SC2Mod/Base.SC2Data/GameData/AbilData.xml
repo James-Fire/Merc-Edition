@@ -106,7 +106,7 @@
             <Button DefaultButtonFace="BuildAnarchist" State="Restricted"/>
             <Unit value="Anarchist"/>
         </InfoArray>
-        <InfoArray index="Train16" Time="40">
+        <InfoArray index="Train16" Time="15">
             <Button DefaultButtonFace="BuildSpartanCompany" State="Restricted" Requirements="HaveAttachedTechLab"/>
             <Unit value="SpartanCompany"/>
         </InfoArray>

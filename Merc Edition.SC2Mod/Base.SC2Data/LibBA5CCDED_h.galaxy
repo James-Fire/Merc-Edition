@@ -13,4 +13,5 @@ trigger libBA5CCDED_gt_WarPigLaserTargetingSystem;
 trigger libBA5CCDED_gt_ShadowImpalerRounsd;
 trigger libBA5CCDED_gt_BlockBFlyHeighter;
 trigger libBA5CCDED_gt_BlockBFlyHeighter2;
+trigger libBA5CCDED_gt_SpartanCompanyShellShowerFull;
 

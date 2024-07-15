@@ -16,6 +16,15 @@
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModelFoliage>
+    <CModelFoliage id="AnarchistFearExplosion">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellbat_Coop_DeathRattle\MiraHorner_Hellbat_Coop_DeathRattle.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistFearGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_MiraHorner_Hellbat_Deathrattle\Glaze_MiraHorner_Hellbat_Deathrattle.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistFearMarker">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellbat_Coop_DeathRattle_Fear\MiraHorner_Hellbat_Coop_DeathRattle_Fear.m3"/>
+    </CModelFoliage>
     <CModelFoliage id="AnarchistJumpJets">
         <Model value="Assets\Effects\Protoss\Colossus_FireBeam_Impact\Colossus_FireBeam_Impact.m3"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
@@ -158,6 +167,20 @@
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="PliableArmorFire">
+        <Model value="Assets\Doodads\DOM_Fire_Large\DOM_Fire_Large.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="SpartanCompanyAirAttackTrail">
+        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
+        <ScaleMax value="1.000000,0.100000,1.000000"/>
+        <ScaleMin value="1.000000,0.100000,1.000000"/>
+    </CModelFoliage>
+    <CModel id="SpartanCompanyAirMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\EMPMissile\EMPMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
     <CModelFoliage id="ImmolationFluid">
         <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
@@ -284,6 +307,11 @@
         <Image value="Assets\Textures\ReaperPortrait_Static.dds"/>
         <Lighting value="ReaperPortrait"/>
     </CModel>
+    <CModelFoliage id="SpartanCompanyShellShowerFull">
+        <Model value="Assets\Effects\Terran\Nova_Buff_Damage\Nova_Buff_Damage.m3"/>
+        <ScaleMax value="2.000000,2.000000,0.500000"/>
+        <ScaleMin value="2.000000,2.000000,0.500000"/>
+    </CModelFoliage>
     <CModelFoliage id="SprayandPayLaunchModel">
         <Model value="Assets\Models\Nova_PenetratingShot_Launch.m3"/>
     </CModelFoliage>

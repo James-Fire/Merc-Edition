@@ -4,6 +4,26 @@
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectIssueOrder id="AnarchistFearIO">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Abil value="move"/>
+        <Player Value="Source"/>
+        <Target Value="TargetPoint"/>
+    </CEffectIssueOrder>
+    <CEffectRandomPointInCircle id="AnarchistFearRP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <Effect value="AnarchistFearIO"/>
+        <Radius value="4"/>
+    </CEffectRandomPointInCircle>
+    <CEffectEnumArea id="AnarchistFearSA">
+        <ValidatorArray value="HavePliableArmor"/>
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="2" Effect="FearPliableArmorApplyBehavior"/>
+    </CEffectEnumArea>
     <CEffectEnumArea id="AnarchistJumpStunSA">
         <EditorCategories value=""/>
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Benign"/>
@@ -157,6 +177,9 @@
         <Amount value="5"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="FearPliableArmorApplyBehavior">
+        <Behavior value="FearPliableArmor"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="HammerSecuritySet">
         <EffectArray index="0" value="HammerSecurityDamage"/>
         <EffectArray index="1" value="ConcussiveShrapnelApplyBehavior"/>
@@ -211,6 +234,7 @@
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="0.15" Effect="HellbornFlamethrowerDamage"/>
         <SearchFlags index="CallForHelp" value="1"/>
+        <DebugTrace value="1"/>
     </CEffectEnumArea>
     <CEffectDamage id="BarBreakersDamage" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
@@ -299,6 +323,10 @@
         <Amount value="12"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="ShellShowerApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ShellShower"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SignalFlareBlindAB">
         <EditorCategories value=""/>
         <Behavior value="SignalFlareBlind"/>
@@ -358,6 +386,22 @@
         <Amount value="55"/>
         <Death value="Silentkill"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="SpartanCompanyA">
+        <PeriodicPeriodArray index="1" value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="SpartanCompanyAirWeaponSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ShellShowerApplyBehavior"/>
+        <EffectArray value="SpartanCompanyA"/>
+    </CEffectSet>
+    <CEffectSet id="SpartanCompanyShellShowerFull">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectSet id="SpartanCompanyWeaponSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SpartanCompanyG"/>
+        <EffectArray value="ShellShowerApplyBehavior"/>
+    </CEffectSet>
     <CEffectCreatePersistent id="SprayandPayCP">
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="1"/>
@@ -523,6 +567,7 @@
         <AreaArray Arc="45" Radius="2" Effect="AnarchistWeaponDamage"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <DebugTrace value="1"/>
     </CEffectEnumArea>
     <CEffectDamage id="ThornShieldDamage">
         <EditorCategories value=""/>

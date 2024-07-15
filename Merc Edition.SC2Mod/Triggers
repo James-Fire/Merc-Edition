@@ -1858,6 +1858,7 @@
         <Element Type="Category" Id="0B90820E">
             <Item Type="Trigger" Library="BA5CCDED" Id="390A3B5A"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="6CD89C64"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="1AF6CB32"/>
         </Element>
         <Element Type="Trigger" Id="390A3B5A">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="BF5D9CA2"/>
@@ -1990,6 +1991,94 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="08E56676"/>
             <Value>0.4</Value>
             <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Trigger" Id="1AF6CB32">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="9024599E"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="EFAA93E0"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="CF06AEDC"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9024599E">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3C0566C4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E9B690C3"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4D069871"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D0E4E66B"/>
+        </Element>
+        <Element Type="Param" Id="E9B690C3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F3A8B0DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="4D069871">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1CDCC284"/>
+            <Value>ShellShower</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="D0E4E66B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3029CA3C"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00F337BD"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EFAA93E0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="28684625"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3C636F19"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4806A747"/>
+        </Element>
+        <Element Type="Param" Id="28684625">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="893882ED"/>
+        </Element>
+        <Element Type="FunctionCall" Id="893882ED">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000386"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5C152249"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3978DC04"/>
+        </Element>
+        <Element Type="Param" Id="5C152249">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000765"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="5F4FD311"/>
+        </Element>
+        <Element Type="FunctionCall" Id="5F4FD311">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
+        <Element Type="Param" Id="3978DC04">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000766"/>
+            <Value>ShellShower</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="3C636F19">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="4806A747">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>12</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CF06AEDC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="73C0339B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7CCAECEA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="AC52E072"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8789DBF6"/>
+        </Element>
+        <Element Type="Param" Id="7CCAECEA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2BB8CB05"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B694F12F"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B694F12F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
+        <Element Type="Param" Id="AC52E072">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A7F392A"/>
+            <Value>SpartanCompanyShellShowerFull</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="Param" Id="8789DBF6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="88375332"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CF94A9BB"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CF94A9BB">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
         </Element>
     </Library>
 </TriggerData>

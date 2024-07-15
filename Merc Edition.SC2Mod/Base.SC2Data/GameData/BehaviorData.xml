@@ -47,6 +47,16 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Modification Radar="30" RadarFilters="Psionic;RawResource,HarvestableResource,Missile,Destructible,Buried,Cloaked"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="FearPliableArmor">
+        <Alignment value="Negative"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5.6"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="AnarchistFearRP"/>
+        <Modification>
+            <StateFlags index="Uncommandable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ImmolationFluid">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
@@ -87,6 +97,17 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Precursor">
         <Modification RadiusMultiplier="0"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShellShower">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.08"/>
+        </Modification>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="13"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SignalFlareBlind">
         <InfoFlags index="Hidden" value="1"/>
