@@ -12,6 +12,10 @@
         <Find value="1"/>
         <Value value="UseAblativeScalesNew"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="PlayerIsMercEdition">
+        <Find value="1"/>
+        <Value value="UseMercEdition"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HavePliableArmor">
         <Find value="1"/>
         <Value value="UsePliableArmor"/>
@@ -32,6 +36,15 @@
         <Find value="1"/>
         <Value value="UseStabilizerMedpacksMerc"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="PlayerIsNotMercEdition">
+        <Value value="UseMercEdition"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareChargeUsed id="SpiderMineUsedCondor">
+        <ResultFailed value="Error,VultureMineMax"/>
+        <Compare value="GT"/>
+        <ChargeLink value="Abil/CondorSpiderMines"/>
+        <Location value="Unit"/>
+    </CValidatorUnitCompareChargeUsed>
     <CValidatorUnitCompareBehaviorCount id="SuperCloakNotOnCooldown">
         <Behavior value="SuperCloakCooldown"/>
     </CValidatorUnitCompareBehaviorCount>

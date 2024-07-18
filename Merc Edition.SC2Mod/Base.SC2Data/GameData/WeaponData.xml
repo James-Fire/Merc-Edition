@@ -167,7 +167,7 @@
         <Effect value="FistsofKronosCP"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="GreetingGrenade">
+    <CWeaponLegacy id="RaidersRival">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="GreetingGrenadeDamage"/>

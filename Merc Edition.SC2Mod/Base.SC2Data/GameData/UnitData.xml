@@ -822,6 +822,9 @@
             <LayoutButtons index="6" Face="ShellShower" AbilCmd="" Requirements=""/>
         </CardLayouts>
     </CUnit>
+    <CUnit id="SpiderMineBurrowed">
+        <AbilArray Link="CondorSpiderMineUnburrow"/>
+    </CUnit>
     <CUnit id="Starcruiser">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
@@ -1137,8 +1140,8 @@
         <Collide index="Small" value="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Mechanical" value="1"/>
-        <LifeStart value="75"/>
-        <LifeMax value="75"/>
+        <LifeStart value="90"/>
+        <LifeMax value="90"/>
         <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
         <Speed value="4.25"/>
@@ -1156,27 +1159,20 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
-        <AbilArray Link="VultureSpiderMines"/>
-        <AbilArray Link="MakeVultureSpiderMines"/>
-        <AbilArray Link="VultureQueue3"/>
-        <WeaponArray Link="GreetingGrenade"/>
+        <AbilArray Link="CondorSpiderMines"/>
+        <AbilArray Link="MakeSpiderMinesCondor"/>
+        <AbilArray Link="MakeSpiderMineQueueCondor"/>
+        <WeaponArray Link="RaidersRival"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="SpiderMine" Type="AbilCmd" AbilCmd="VultureSpiderMines,Execute" Row="2" Column="0"/>
-            <LayoutButtons>
-                <Face value="CerberusMines"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255,0"/>
-                <Requirements value="UseCerberusMines"/>
-                <Row value="2"/>
-                <Column value="2"/>
-            </LayoutButtons>
-            <LayoutButtons Face="SpiderMineReplenish" Type="AbilCmd" AbilCmd="MakeVultureSpiderMines,Specialize1" Row="2" Column="1"/>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="VultureQueue3,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="SpiderMine" Type="AbilCmd" AbilCmd="CondorSpiderMines,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SpiderMineReplenishCondor" Type="AbilCmd" AbilCmd="MakeSpiderMinesCondor,Specialize1" Row="2" Column="1"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="MakeSpiderMineQueueCondor,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CerberusHoundMines" Type="Passive" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
@@ -1196,6 +1192,7 @@
         <GlossaryWeakArray value="Colossus"/>
         <GlossaryWeakArray value="SiegeTank"/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
+        <EffectArray index="Death" value="CondorDeathrattleCP"/>
     </CUnit>
     <CUnit id="Harrier">
         <DeathRevealRadius value="3"/>

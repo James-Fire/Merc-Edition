@@ -21,6 +21,7 @@ Button/Hotkey/MorphtoAgitator=C
 Button/Hotkey/MorphtoAnarchist=C
 Button/Hotkey/SignalFlare=F
 Button/Hotkey/SnipePhantom=R
+Button/Hotkey/SpiderMineReplenishCondor=R
 Button/Hotkey/SprayandPay=R
 Button/Hotkey/StabilizerHeal=E
 Button/Hotkey/SuperStim=T

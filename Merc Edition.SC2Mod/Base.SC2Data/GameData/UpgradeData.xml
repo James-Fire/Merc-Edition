@@ -42,6 +42,12 @@
         <EffectArray Reference="Effect,AGRShadeHunter,AttributeBonus[Armored]" Value="7"/>
         <AffectedUnitArray value="Shadow"/>
     </CUpgrade>
+    <CUpgrade id="LooseEngineSeals">
+        <EffectArray Reference="Unit,Condor,Speed" Value="2.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,CondorDeathrattleCP,Chance" Value="1"/>
+        <AffectedUnitArray value="Condor"/>
+    </CUpgrade>
+    <CUpgrade id="MercEdition"/>
     <CUpgrade id="NeosteelCupHolders">
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
         <AffectedUnitArray value="Bunker"/>
@@ -57,6 +63,9 @@
         <EffectArray Operation="Multiply" Reference="Abil,MorphToAgitator,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.500000"/>
         <AffectedUnitArray value="Anarchist"/>
         <AffectedUnitArray value="Agitator"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorSpecial">
+        <AffectedUnitArray value="Condor"/>
     </CUpgrade>
     <CUpgrade id="StabilizerMedpacksMerc">
         <Flags index="UpgradeCheat" value="0"/>

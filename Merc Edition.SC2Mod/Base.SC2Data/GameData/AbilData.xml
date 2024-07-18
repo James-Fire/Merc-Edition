@@ -122,6 +122,24 @@
             <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilSpecialize id="MakeSpiderMinesCondor">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Activity value="UI/SpiderMineBuilding"/>
+        <InfoArray index="Specialize1" Time="12" Effect="ReplenishMinesCondor">
+            <Resource index="Minerals" value="15"/>
+            <Display index="Minerals" value="1"/>
+            <Charge>
+                <CountMax value="4"/>
+                <CountUse value="1"/>
+                <HideCount value="1"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Button DefaultButtonFace="SpiderMineReplenish"/>
+            <Flags index="AutoCast" value="1"/>
+        </InfoArray>
+        <Alert value="BuildComplete"/>
+        <Flags index="BestUnit" value="0"/>
+    </CAbilSpecialize>
     <CAbilEffectTarget id="Obliterate">
         <CmdButtonArray index="Execute" Requirements="UseJoriumLinedSuit"/>
     </CAbilEffectTarget>
@@ -149,6 +167,10 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="SpiderMineUnburrowRangeDummyCondor">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Range value="2.8"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="StabilizerMedpackHeal">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="SkibisAngelStabilizerMedpacksSet"/>
@@ -394,4 +416,52 @@
         <AutoCastRange value="5"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TarBomb"/>
     </CAbilEffectTarget>
+    <CAbilQueue id="MakeSpiderMineQueueCondor">
+        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <QueueSize value="4"/>
+        <Flags index="Passive" value="1"/>
+    </CAbilQueue>
+    <CAbilEffectTarget id="CondorSpiderMines">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SpawnSpiderMineSet"/>
+        <Cost>
+            <Charge>
+                <CountMax value="4"/>
+                <CountStart value="4"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+            </Charge>
+        </Cost>
+        <Placeholder value="SpiderMine"/>
+        <Range value="3"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SpiderMine"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="CondorSpiderMineUnburrow">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <Cost>
+            <Charge Link="Abil/SpiderMineUnburrow"/>
+            <Cooldown Link="Abil/SpiderMineUnburrow"/>
+        </Cost>
+        <InfoArray Unit="SpiderMine">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.6"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0.6"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.6"/>
+                <EffectArray index="Start" value="SpiderMineInvulnerable"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Worker,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="2.8"/>
+        <AutoCastCountMin value="1"/>
+        <ValidatorArray value="PlayerIsMercEdition"/>
+    </CAbilMorph>
 </Catalog>

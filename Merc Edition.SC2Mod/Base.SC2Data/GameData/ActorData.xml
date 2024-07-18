@@ -125,6 +125,15 @@
         <On Terms="AbilMorph.*.Start; MorphTo BlockB" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphTo FlyingBlockB" Send="Create"/>
     </CActorSound>
+    <CActorModel id="CondorSpiderMineExplode" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.CondorSpiderMinesDamage.Start" Send="Create"/>
+        <Model value="CondorSpiderMineAttackImpact"/>
+    </CActorModel>
+    <CActorRange id="CondorSpiderMinesRange" parent="RangeAbil" abil="CondorSpiderMines">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorMissile id="FlyingBlockB" parent="GenericUnitBase" unitName="FlyingBlockB">
         <Aliases value="_MissileHybrids"/>
         <Macros value="D8ChargeAnim"/>
@@ -493,6 +502,12 @@
     <CActorAction id="GoliathAirAttack">
         <LaunchAssets Sound="SpartanCompanyAirAttackLaunch"/>
     </CActorAction>
+    <CActorModel id="HammerSecurityWeaponAttach" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.HammerSecurityLMWeapon" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
     <CActorModel id="ImmolationFluid" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.ImmolationFluid.On" Send="Create"/>
@@ -762,6 +777,10 @@
         <EditorCategories value=""/>
         <On Terms="Effect.SpartanCompanyShellShowerFull.Start" Send="Create"/>
     </CActorModel>
+    <!-- Spider Mine ........................................................................... -->
+    <CActorUnit id="SpiderMineVulture">
+        <On Terms="ActorCreation; ValidatePlayer PlayerIsMercEdition" Send="ModelSwap CondorMine"/>
+    </CActorUnit>
     <CActorModel id="SprayandPayImpactModel" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.SprayandPayDamage.Start" Send="Create"/>
@@ -1288,4 +1307,16 @@
     <CActorModel id="VoidDarkTemplarShadowFury">
         <On Terms="ActorCreation" Send="SetTintColor 145,0,0"/>
     </CActorModel>
+    <CActorSound id="VultureSpiderMineBirthSound">
+        <On Terms="AbilMorph.CondorSpiderMineUnburrow.Start" Send="Create"/>
+    </CActorSound>
+    <CActorRange id="CondorSpiderMineUnburrowRange">
+        <On Terms="SelectionLocalUpdate.SpiderMineBurrowed.Start; ValidatePlayer PlayerIsMercEdition" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.SpiderMineBurrowed.Stop" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SpiderMineBurrowed" Send="Destroy"/>
+        <Abil Link="SpiderMineUnburrowRangeDummyCondor"/>
+    </CActorRange>
+    <CActorRange id="VultureSpiderMineUnburrowRange">
+        <On index="1" Terms="SelectionLocalUpdate.SpiderMineBurrowed.Start; ValidatePlayer PlayerIsNotMercEdition"/>
+    </CActorRange>
 </Catalog>

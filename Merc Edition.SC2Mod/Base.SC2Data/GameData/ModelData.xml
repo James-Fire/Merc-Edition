@@ -167,6 +167,11 @@
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="HammerSecurityWeaponAttach">
+        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
+        <ScaleMax value="1.000000,0.500000,0.500000"/>
+        <ScaleMin value="1.000000,0.500000,0.500000"/>
+    </CModelFoliage>
     <CModelFoliage id="PliableArmorFire">
         <Model value="Assets\Doodads\DOM_Fire_Large\DOM_Fire_Large.m3"/>
     </CModelFoliage>
@@ -312,6 +317,17 @@
         <ScaleMax value="2.000000,2.000000,0.500000"/>
         <ScaleMin value="2.000000,2.000000,0.500000"/>
     </CModelFoliage>
+    <CModel id="CondorMine" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\CondorMine.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow02"/>
+        <Radius value="0.250000"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+        <TechPurchaseCamera value="Star2CameraLow02"/>
+        <UnitGlossaryCamera value="Star2CameraLow02"/>
+    </CModel>
     <CModelFoliage id="SprayandPayLaunchModel">
         <Model value="Assets\Models\Nova_PenetratingShot_Launch.m3"/>
     </CModelFoliage>
@@ -507,8 +523,8 @@
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraMid07"/>
         <Radius value="0.650000"/>
-        <ScaleMax value="0.850000,0.850000,0.850000"/>
-        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <ScaleMax value="1.150000,1.150000,1.150000"/>
+        <ScaleMin value="1.150000,1.150000,1.150000"/>
         <SelectionRadius value="0.722000"/>
         <ShadowRadius value="0.722000"/>
         <TechPurchaseCamera value="TechPurchaseVehicle"/>
@@ -562,5 +578,11 @@
         <Model value="Assets\Effects\Protoss\ZeratulBlinkOut\ZeratulBlinkOut.m3"/>
         <ScaleMax value="0.600000,0.600000,0.600000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="CondorSpiderMineAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
     </CModel>
 </Catalog>

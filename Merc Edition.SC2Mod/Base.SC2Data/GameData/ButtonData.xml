@@ -77,6 +77,10 @@
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="Thor"/>
     </CButton>
+    <CButton id="CerberusHoundMines">
+        <Icon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
+    </CButton>
     <CButton id="ChemicalPlating">
         <Icon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
@@ -147,6 +151,11 @@
     <CButton id="ShellShower">
         <Icon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
+    </CButton>
+    <CButton id="SpiderMineReplenishCondor">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-replenishablemagazine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-spidermine.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="StabilizerHeal">
         <Icon value="Assets\Icons and Wireframes\stabilizerheal.dds"/>

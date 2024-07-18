@@ -96,6 +96,15 @@
         <EffectArray value="ConcussiveShrapnelSA"/>
         <ValidatorArray value="HaveConcussiveShrapnel"/>
     </CEffectSet>
+    <CEffectCreatePersistent id="CondorDeathrattleCP">
+        <EditorCategories value=""/>
+        <Chance value="0"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="CondorDeathrattleCU"/>
+        <PeriodicOffsetArray value="1,1,0"/>
+        <PeriodicOffsetArray value="-1,1,0"/>
+        <PeriodicOffsetArray value="0,0,0"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="D8ChargeExplodeDamage">
         <AINotifyFlags index="HurtFriend" value="0"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -323,6 +332,14 @@
         <Amount value="12"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectModifyUnit id="ReplenishMinesCondor">
+        <ValidatorArray value="SpiderMineUsedCondor"/>
+        <Cost Abil="CondorSpiderMines,Execute" ChargeCountUse="-1"/>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="ReplenishNanoConstructor2">
+        <ImpactUnit Value="Source"/>
+        <Cost Abil="MakeSpiderMinesCondor,Specialize1" ChargeCountUse="-1"/>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="ShellShowerApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="ShellShower"/>
@@ -402,6 +419,21 @@
         <EffectArray value="SpartanCompanyG"/>
         <EffectArray value="ShellShowerApplyBehavior"/>
     </CEffectSet>
+    <CEffectCreateUnit id="CondorDeathrattleCU">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnUnit value="SpiderMineBurrowed"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="SpawnSpiderMineSet">
+        <EffectArray value="ReplenishNanoConstructor2"/>
+    </CEffectSet>
+    <CEffectSwitch id="SpiderMineSwitch">
+        <EditorCategories value=""/>
+        <CaseArray Validator="PlayerIsMercEdition" Effect="CondorSpiderMinesDamage"/>
+        <CaseDefault value="VultureSpiderMinesDamage"/>
+    </CEffectSwitch>
     <CEffectCreatePersistent id="SprayandPayCP">
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="1"/>
@@ -591,5 +623,25 @@
     </CEffectDamage>
     <CEffectDamage id="VolatileBurstU2">
         <ValidatorArray value="TargetDoesntHaveChemicalPlating"/>
+    </CEffectDamage>
+    <CEffectDamage id="CondorSpiderMinesDamage">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ArmorReduction value="1"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Splash"/>
+        <KindSplash value="Splash"/>
+        <Amount value="70"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="0.656" Fraction="1"/>
+        <AreaArray Radius="1.0937" Fraction="0.5"/>
+        <AreaArray Radius="1.75" Fraction="0.25"/>
+        <ExcludeArray Value="Outer"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Ground;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
     </CEffectDamage>
 </Catalog>

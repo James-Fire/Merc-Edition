@@ -47,6 +47,14 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeJoriumLinedSuitCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseLooseEngineSeals">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeLooseEngineSealsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMercEdition">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseNeosteelCupHolders">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
@@ -54,6 +62,10 @@
     <CRequirement id="UsePliableArmor">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePliableArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRaynorSpecial">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRaynorSpecialCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Ability"/>

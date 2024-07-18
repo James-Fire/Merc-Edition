@@ -63,6 +63,26 @@ void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Merc Edition Upgrade
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MercEditionUpgrade_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(1, "MercEdition", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MercEditionUpgrade_Init () {
+    libBA5CCDED_gt_MercEditionUpgrade = TriggerCreate("libBA5CCDED_gt_MercEditionUpgrade_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_MercEditionUpgrade);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Mission Directives
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
@@ -230,9 +250,9 @@ void libBA5CCDED_gt_WarPigLaserTargetingSystem_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Shadow - Impaler Rounsd
+// Trigger: Shadow - Impaler Rounds
 //--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_ShadowImpalerRounsd_Func (bool testConds, bool runActions) {
+bool libBA5CCDED_gt_ShadowImpalerRounds_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
@@ -244,9 +264,9 @@ bool libBA5CCDED_gt_ShadowImpalerRounsd_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_ShadowImpalerRounsd_Init () {
-    libBA5CCDED_gt_ShadowImpalerRounsd = TriggerCreate("libBA5CCDED_gt_ShadowImpalerRounsd_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_ShadowImpalerRounsd);
+void libBA5CCDED_gt_ShadowImpalerRounds_Init () {
+    libBA5CCDED_gt_ShadowImpalerRounds = TriggerCreate("libBA5CCDED_gt_ShadowImpalerRounds_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_ShadowImpalerRounds);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -319,10 +339,11 @@ void libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init () {
 }
 
 void libBA5CCDED_InitTriggers () {
+    libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
-    libBA5CCDED_gt_ShadowImpalerRounsd_Init();
+    libBA5CCDED_gt_ShadowImpalerRounds_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
     libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
