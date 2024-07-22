@@ -502,9 +502,17 @@
     <CActorAction id="GoliathAirAttack">
         <LaunchAssets Sound="SpartanCompanyAirAttackLaunch"/>
     </CActorAction>
+    <CActorModel id="GraduatingRangeApplyBehavior" parent="ModelAnimationStyleContinuous">
+        <On Terms="Effect.GraduatingRangeApplyBehavior.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpShadow"/>
+    </CActorModel>
+    <CActorSound id="GraduatingRangeSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.GraduatingRangeApplyBehavior.Start" Send="Create"/>
+    </CActorSound>
     <CActorModel id="HammerSecurityWeaponAttach" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
-        <On Terms="UnitCreation.HammerSecurityLMWeapon" Send="Create"/>
+        <On Terms="UnitCreation.HammerSecurityLMWeapon; ValidatePlayer HaveConcussiveShrapnel" Send="Create"/>
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
@@ -521,6 +529,15 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorAction id="MagrailMunition" effectImpact="Healing Potion (TEST) (Unknown)" effectLaunch="Healing Potion (TEST) (Unknown) (Unknown)">
+        <On index="0" removed="1"/>
+        <On index="1" removed="1"/>
+        <On index="2" removed="1"/>
+        <On index="3" removed="1"/>
+        <On index="4" removed="1"/>
+        <On index="5" removed="1"/>
+        <On index="6" removed="1"/>
+    </CActorAction>
     <CActorAction id="PhantomSnipeAttack" parent="GenericAttack" effectAttack="SnipeDamagePhantom">
         <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
         <LaunchAssets Model="GhostSnipeAttackLaunch" Sound="PhantomSnipeLaunch"/>
@@ -561,7 +578,7 @@
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
     <CActorAction id="MagrailMunitions" parent="GenericAttack" effectImpact="MagrailMunitionsDamage" effectLaunch="MagrailMunitionsLaunchMissile">
-        <LaunchAttachQuery Methods="Weapon 0"/>
+        <LaunchAttachQuery Methods="Weapon 1"/>
         <BeamScope value="Caster"/>
         <ImpactMap index="None" ModelReaction="MagrailMunitionImpactReaction"/>
         <ImpactMap index="Shield" Sound="MagrailMunitionImpactShield" ModelReaction="MagrailMunitionImpactReactionShield"/>
@@ -569,6 +586,9 @@
         <DamageMap index="Shield" Sound="MagrailMunitionDamageShield" ModelReaction="MagrailMunitionDamageReactionShield"/>
     </CActorAction>
     <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile"/>
+    <CActorSound id="SiegeBreakerSiegeModeSound">
+        <On index="1" Terms="AbilMorph.*.Start; MorphTo SiegeBreakerSieged; ValidatePlayer DontHaveSmartServosMKIV"/>
+    </CActorSound>
     <CActorAction id="SiegeBreakerSiegedAttack">
         <LaunchAssets Model="" Sound=""/>
     </CActorAction>
@@ -583,6 +603,10 @@
         <HostSiteOps Ops="SOpAttachWeapon"/>
         <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
+    <!--                                                                                         -->
+    <CActorSound id="SiegeBreakerTankModeSound">
+        <On index="1" Terms="AbilMorph.*.Start; MorphTo SiegeBreaker; ValidatePlayer DontHaveSmartServosMKIV"/>
+    </CActorSound>
     <CActorModel id="SiegeBreakerUpgradedAttackLaunch2" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ArcliteShockCannonSet.Start; ValidatePlayer HaveIFFSpiderRounds; At Caster" Send="Create"/>
@@ -599,6 +623,14 @@
         <EditorCategories value=""/>
         <On Terms="Effect.ArcliteShockCannonSet.Start; At Caster; ValidatePlayer HaveIFFSpiderRounds" Send="Create"/>
         <Sound value="SiegeBreaker_AttackLaunchUpgraded"/>
+    </CActorSound>
+    <CActorSound id="SiegeBreakerUpgradedSiege" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph; MorphTo SiegeBreakerSieged; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="SiegeBreakerUpgradedUnsiege" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph; MorphTo SiegeBreaker; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
     </CActorSound>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>

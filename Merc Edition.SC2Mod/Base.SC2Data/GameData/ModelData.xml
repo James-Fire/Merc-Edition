@@ -167,10 +167,15 @@
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModel id="GraduatingRangeApplyBehavior">
+        <Model value="Assets\Effects\Protoss\Fenix_Whirlwind_Impact\Fenix_Whirlwind_Impact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
     <CModelFoliage id="HammerSecurityWeaponAttach">
         <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
-        <ScaleMax value="1.000000,0.500000,0.500000"/>
-        <ScaleMin value="1.000000,0.500000,0.500000"/>
+        <ScaleMax value="0.600000,0.500000,0.500000"/>
+        <ScaleMin value="0.600000,0.500000,0.500000"/>
     </CModelFoliage>
     <CModelFoliage id="PliableArmorFire">
         <Model value="Assets\Doodads\DOM_Fire_Large\DOM_Fire_Large.m3"/>
@@ -214,7 +219,7 @@
         <Model value="Assets\Effects\Terran\MagrailMunition_Launch\MagrailMunition_Launch.m3"/>
     </CModelFoliage>
     <CModel id="MagrailMunitionsMissile">
-        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
+        <Model value="Assets\Effects\Protoss\PhoenixMissile_Upgrade\PhoenixMissile_Upgrade.m3"/>
     </CModel>
     <CModelFoliage id="SignalFlareDebuffModel">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop_Impact\MiraHorner_Hellion_DeathRattle_Coop_Impact.m3"/>

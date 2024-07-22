@@ -156,6 +156,10 @@
         <Icon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
     </CButton>
+    <CButton id="SmartServosMKIV">
+        <Icon value="Assets\Textures\btn-upgrade-terran-transformationservos.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-transformationservos.dds"/>
+    </CButton>
     <CButton id="SpiderMineReplenishCondor">
         <Icon value="Assets\Textures\btn-techupgrade-terran-replenishablemagazine.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-spidermine.dds"/>

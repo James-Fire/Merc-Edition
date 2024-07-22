@@ -270,6 +270,26 @@ void libBA5CCDED_gt_ShadowImpalerRounds_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Siege Breaker - Siegemode armor
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(1, "AdvancedSiegeTechArmorOnly", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Init () {
+    libBA5CCDED_gt_SiegeBreakerSiegemodearmor = TriggerCreate("libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_SiegeBreakerSiegemodearmor);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Block B Fly Heighter
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_BlockBFlyHeighter_Func (bool testConds, bool runActions) {
@@ -338,15 +358,44 @@ void libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init () {
     TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_SpartanCompanyShellShowerFull, null, "ShellShower", c_unitBehaviorChangeIncrease);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Siege Breaker Graduating Range
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SiegeBreakerGraduatingRange_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(1, "SmartServosMKIV", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(EventUnit(), "GraduatingRangeController", EventUnit(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init () {
+    libBA5CCDED_gt_SiegeBreakerGraduatingRange = TriggerCreate("libBA5CCDED_gt_SiegeBreakerGraduatingRange_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_SiegeBreakerGraduatingRange, null, AbilityCommand("SiegeBreakerSiege", 0), c_abilMorphStageAbilsEnd, false);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
     libBA5CCDED_gt_ShadowImpalerRounds_Init();
+    libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
     libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
+    libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

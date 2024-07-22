@@ -201,6 +201,10 @@
     <CEffectApplyBehavior id="FearPliableArmorApplyBehavior">
         <Behavior value="FearPliableArmor"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="GraduatingRangeApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="GraduatingRange"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="HammerSecuritySet">
         <EffectArray index="0" value="HammerSecurityDamage"/>
         <EffectArray index="1" value="ConcussiveShrapnelApplyBehavior"/>
@@ -328,6 +332,8 @@
     <CEffectDamage id="MagrailMunitionsDamage"/>
     <CEffectLaunchMissile id="MagrailMunitionsLaunchMissile">
         <AmmoUnit value="MagrailMunitionsMissile"/>
+        <ImpactLocation Effect=""/>
+        <Flags index="Channeled" value="0"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="NukeDamage">
         <AttributeBonus index="Structure" value="300"/>

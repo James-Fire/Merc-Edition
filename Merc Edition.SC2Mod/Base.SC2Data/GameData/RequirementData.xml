@@ -71,6 +71,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeRaynorSpecialCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseSmartServosMKIV">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSmartServosMKIVCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>

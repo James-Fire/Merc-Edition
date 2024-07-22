@@ -1828,6 +1828,7 @@
             <Item Type="Comment" Library="BA5CCDED" Id="0DFDD577"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="C1709FCF"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="70CCBC1C"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="A99734B7"/>
         </Element>
         <Element Type="Comment" Id="0DFDD577">
             <Comment>
@@ -1892,10 +1893,40 @@
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
         </Element>
+        <Element Type="Trigger" Id="A99734B7">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="8E738E09"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="6FF31563"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8E738E09">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6FF31563">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="25326CE4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4EA81103"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A6CA3F12"/>
+        </Element>
+        <Element Type="Param" Id="25326CE4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="4EA81103">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="A6CA3F12">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>AdvancedSiegeTechArmorOnly</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
         <Element Type="Category" Id="0B90820E">
             <Item Type="Trigger" Library="BA5CCDED" Id="390A3B5A"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="6CD89C64"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="1AF6CB32"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="29187CD2"/>
         </Element>
         <Element Type="Trigger" Id="390A3B5A">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="BF5D9CA2"/>
@@ -2115,6 +2146,115 @@
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CF94A9BB"/>
         </Element>
         <Element Type="FunctionCall" Id="CF94A9BB">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
+        <Element Type="Trigger" Id="29187CD2">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="DD13A742"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="944F246C"/>
+            <Action Type="Comment" Library="BA5CCDED" Id="8A5D93BB"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="CDE0B258"/>
+        </Element>
+        <Element Type="FunctionCall" Id="DD13A742">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D00F9D6F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="959AA070"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3CF6609C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F2FBABE7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7470DFEB"/>
+        </Element>
+        <Element Type="Param" Id="959AA070">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EE631277"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="3CF6609C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BB4C37B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00DED951"/>
+        </Element>
+        <Element Type="Param" Id="F2FBABE7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ACC52290"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="03977D39"/>
+        </Element>
+        <Element Type="Param" Id="7470DFEB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3F2584C8"/>
+            <Value>SiegeBreakerSiege</Value>
+            <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="FunctionCall" Id="944F246C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F3BA8B61"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6D3F2AE2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BF669097"/>
+        </Element>
+        <Element Type="Param" Id="F3BA8B61">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="789FA653"/>
+        </Element>
+        <Element Type="FunctionCall" Id="789FA653">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="08A960A4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1728657B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="96A5677D"/>
+        </Element>
+        <Element Type="Param" Id="08A960A4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="448F39DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D78D6018"/>
+        </Element>
+        <Element Type="Param" Id="1728657B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
+            <Value>SmartServosMKIV</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Param" Id="96A5677D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000446"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="6D3F2AE2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="BF669097">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Comment" Id="8A5D93BB">
+            <Comment>
+                I don&apos;t know why, but without this, transforming into siege mode, then out of siege mode, and then back into siege mode, the graduating range controller is just...removed.
+                No need to learn why yet when this impeccably easy trigger fixes it!
+                heheheha
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="CDE0B258">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C47C0524"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="693C58CA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5F031587"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3B07F758"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="51273A61"/>
+        </Element>
+        <Element Type="Param" Id="693C58CA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6F19F7ED"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="5F031587">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A6B09E3"/>
+            <Value>GraduatingRangeController</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="3B07F758">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2E722704"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="83B4617C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="83B4617C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
+        <Element Type="Param" Id="51273A61">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="02BBDCC1"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="6AC0E049"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6AC0E049">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
         </Element>
     </Library>

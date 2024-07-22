@@ -57,6 +57,24 @@
             <StateFlags index="Uncommandable" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="GraduatingRange">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-transformationservos.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="SiegeBreakerIsSieged"/>
+        <RemoveValidatorArray value="HaveSmartServosMKIV"/>
+        <MaxStackCount value="4"/>
+        <Modification RangedWeaponRange="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GraduatingRangeController">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="SiegeBreakerIsSieged"/>
+        <DisableValidatorArray value="HaveSmartServosMKIV"/>
+        <Period value="3"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffect value="GraduatingRangeApplyBehavior"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ImmolationFluid">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>

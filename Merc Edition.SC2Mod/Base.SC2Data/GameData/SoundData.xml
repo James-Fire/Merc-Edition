@@ -285,6 +285,13 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
     </CSound>
+    <CSound id="GraduatingRangeSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_MetalHeavy_Light00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_MetalHeavy_Light01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_MetalHeavy_Light02.wav" FacialGroup=""/>
+        <Pitch value="3.000000,3.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
     <CSound id="PhantomSnipeLaunch" parent="Spell">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_01.wav" FacialGroup=""/>
@@ -341,6 +348,12 @@
         <AssetArray index="6" removed="1"/>
         <DupeMuteCount value="5"/>
     </CSound>
+    <CSound id="SiegeBreakerUpgradedUnsiege" parent="Build">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\SiegeTankMengsk_UnSiege_Fast.wav" FacialGroup=""/>
+        <Pitch value="15.000000,15.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
     <CSound id="SiegeBreaker_AttackLaunchUpgraded" parent="Combat">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_LaunchAttack01_1ch.wav" FacialGroup=""/>
@@ -353,6 +366,18 @@
         <DupeMaximumMethod value="Replace"/>
         <Pitch value="-2.000000,1.000000"/>
         <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="SiegeBreaker_MorphToSiege">
+        <Pitch value="7.000000,7.000000"/>
+    </CSound>
+    <CSound id="SiegeBreakerUpgradedSiege" parent="Build">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\SiegeTankMengsk_Siege_Fast.wav" FacialGroup=""/>
+        <Pitch value="22.000000,22.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="SiegeBreaker_MorphToTank">
+        <Pitch value="7.000000,7.000000"/>
     </CSound>
     <CSound id="SignalFlareBlindSound">
         <AssetArray File="Assets\Sounds\Marauder_Magrail_Missile_01.wav" FacialGroup=""/>

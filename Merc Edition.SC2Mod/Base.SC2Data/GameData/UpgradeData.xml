@@ -53,6 +53,10 @@
         <EffectArray Reference="Effect,AGRShadeHunter,AttributeBonus[Armored]" Value="7"/>
         <AffectedUnitArray value="Shadow"/>
     </CUpgrade>
+    <CUpgrade id="AdvancedSiegeTechArmorOnly">
+        <EffectArray Reference="Unit,SiegeBreakerSieged,LifeArmor" Value="3"/>
+        <AffectedUnitArray value="SiegeBreakerSieged"/>
+    </CUpgrade>
     <CUpgrade id="LooseEngineSeals">
         <EffectArray Reference="Unit,Condor,Speed" Value="2.000000"/>
         <EffectArray Operation="Set" Reference="Effect,CondorDeathrattleCP,Chance" Value="1"/>
@@ -77,6 +81,27 @@
     </CUpgrade>
     <CUpgrade id="RaynorSpecial">
         <AffectedUnitArray value="Condor"/>
+    </CUpgrade>
+    <CUpgrade id="SmartServosMKIV">
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Facing].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Facing].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Set" Reference="Weapon,ArcliteShockCannon,TargetFilters" Value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AffectedUnitArray value="SiegeBreakerSieged"/>
+        <AffectedUnitArray value="SiegeBreaker"/>
     </CUpgrade>
     <CUpgrade id="StabilizerMedpacksMerc">
         <Flags index="UpgradeCheat" value="0"/>

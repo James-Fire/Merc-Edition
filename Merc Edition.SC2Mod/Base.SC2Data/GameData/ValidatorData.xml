@@ -19,6 +19,13 @@
     <CValidatorPlayerRequirement id="DontHaveIFFSpiderRounds">
         <Value value="UseIFFSpiderRounds"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveSmartServosMKIV">
+        <Find value="1"/>
+        <Value value="UseSmartServosMKIV"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DontHaveSmartServosMKIV">
+        <Value value="UseSmartServosMKIV"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="PlayerIsMercEdition">
         <Find value="1"/>
         <Value value="UseMercEdition"/>
@@ -46,6 +53,10 @@
     <CValidatorPlayerRequirement id="PlayerIsNotMercEdition">
         <Value value="UseMercEdition"/>
     </CValidatorPlayerRequirement>
+    <CValidatorUnitType id="SiegeBreakerIsSieged">
+        <WhichUnit Value="Caster"/>
+        <Value value="SiegeBreakerSieged"/>
+    </CValidatorUnitType>
     <CValidatorUnitCompareChargeUsed id="SpiderMineUsedCondor">
         <ResultFailed value="Error,VultureMineMax"/>
         <Compare value="GT"/>

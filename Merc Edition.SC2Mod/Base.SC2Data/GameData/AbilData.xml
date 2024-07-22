@@ -267,7 +267,6 @@
         <Effect index="0" value="MagrailMunitionsLaunchMissile"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
-        <Flags index="TransientPreferred" value="1"/>
         <Cost>
             <Cooldown TimeUse="42"/>
         </Cost>
