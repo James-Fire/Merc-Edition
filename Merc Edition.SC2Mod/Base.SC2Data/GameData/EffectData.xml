@@ -87,14 +87,25 @@
     <CEffectEnumArea id="ConcussiveShrapnelConeSA">
         <EditorCategories value=""/>
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
-        <AreaArray Arc="69.983" Radius="3" Effect="ConcussiveShrapnelApplyBehavior"/>
+        <AreaArray Arc="69.983" Radius="3" Effect="ConcussiveShrapnelImpactSet"/>
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetUnit"/>
         <ValidatorArray value="HaveConcussiveShrapnel"/>
     </CEffectEnumArea>
+    <CEffectDamage id="ConcussiveShrapnelDamage">
+        <EditorCategories value=""/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="7"/>
+    </CEffectDamage>
     <CEffectSet id="ConcussiveShrapnelDummy">
         <EditorCategories value=""/>
         <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectSet id="ConcussiveShrapnelImpactSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ConcussiveShrapnelDamage"/>
+        <EffectArray value="ConcussiveShrapnelApplyBehavior"/>
     </CEffectSet>
     <CEffectEnumArea id="ConcussiveShrapnelSA">
         <EditorCategories value=""/>

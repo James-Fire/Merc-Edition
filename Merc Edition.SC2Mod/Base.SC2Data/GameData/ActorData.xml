@@ -626,11 +626,11 @@
     </CActorSound>
     <CActorSound id="SiegeBreakerUpgradedSiege" parent="SoundOneShot">
         <EditorCategories value=""/>
-        <On Terms="AbilMorph; MorphTo SiegeBreakerSieged; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SiegeBreakerSieged; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
     </CActorSound>
     <CActorSound id="SiegeBreakerUpgradedUnsiege" parent="SoundOneShot">
         <EditorCategories value=""/>
-        <On Terms="AbilMorph; MorphTo SiegeBreaker; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SiegeBreaker; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
     </CActorSound>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
