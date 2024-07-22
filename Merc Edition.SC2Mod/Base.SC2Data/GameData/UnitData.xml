@@ -575,7 +575,7 @@
         <Sight value="13"/>
         <CardLayouts index="0">
             <LayoutButtons index="6" Face="AdvancedSiegeTech" AbilCmd="" Requirements=""/>
-            <LayoutButtons index="7" removed="1"/>
+            <LayoutButtons index="7" Face="IFFSpiderRounds" AbilCmd="" Requirements="UseIFFSpiderRounds" Row="1" Column="0"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SiegeBreakerSieged">
@@ -586,6 +586,7 @@
         <CardLayouts index="0">
             <LayoutButtons index="6" Face="AdvancedSiegeOptics" AbilCmd="" Requirements=""/>
             <LayoutButtons index="7" Face="AdvancedSiegeTech" Requirements=""/>
+            <LayoutButtons Face="IFFSpiderRounds" Type="Passive" Requirements="UseIFFSpiderRounds" Row="1" Column="0"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SignalFlareTargetDummy">

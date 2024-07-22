@@ -73,6 +73,7 @@ Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/EidolonSuit=Eidolon Suit
 Button/Name/EnergyRadar=Energy Radar
 Button/Name/FireOnTheMoveAgitator=Fire On The Move
+Button/Name/IFFSpiderRounds=IFF Spider Rounds
 Button/Name/ImmolationFluid=Immolation Fluid
 Button/Name/ImpalerRoundsShadow=Impaler Rounds
 Button/Name/JetPackOverdrive=Jet Pack Overdrive
@@ -146,6 +147,7 @@ Button/Tooltip/EnergyRadar=Phantoms reveal the locations of enemy units with an 
 Button/Tooltip/FireOnTheMoveAgitator=The Agitator can attack while moving.
 Button/Tooltip/FlyingBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/IFFSpiderRounds=Siege Breakers deal +60 damage to the main target, deal 80% less damage to friendly units, and leave behind a spider mine from sieged attacks.
 Button/Tooltip/ImmolationFluid=Anarchist attacks cause enemies to burn for an additional 50 damage over <d time="7"/>.
 Button/Tooltip/ImpalerRoundsShadow=Increases damage vs Armored by 7.
 Button/Tooltip/JetPackOverdrive=Allows the Block B to temporarily fly in the air, becoming an air unit for <d time="14"/> and allowing it to ht both air and ground targets.
@@ -243,6 +245,7 @@ Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
 Effect/Name/HellbornFlamethrowerCP=Hellborn Flamethrower CP
 Effect/Name/HellbornFlamethrowerDamage=Hellborn Flamethrower Damage
 Effect/Name/HellbornFlamethrowerSA=Hellborn Flamethrower SA
+Effect/Name/IFFSpiderRoundsCU=IFF Spider Rounds CU
 Effect/Name/ImmolationFluidApplyBehavior=ImmolationFluidApplyBehavior
 Effect/Name/ImmolationFluidDamage=Immolation Fluid Damage
 Effect/Name/IncomingAnarchistJumpApplyBehavior=IncomingAnarchistJumpApplyBehavior
@@ -344,6 +347,7 @@ Upgrade/Name/ChairsandAC=Chairs and A.C
 Upgrade/Name/ChemicalPlating=Chemical Plating
 Upgrade/Name/ConcussiveShrapnel=Concussive Shrapnel
 Upgrade/Name/EidolonSuit=Eidolon Suit
+Upgrade/Name/IFFSpiderRounds=IFF Spider Rounds
 Upgrade/Name/ImpalerRoundsShadow=Impaler Rounds
 Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
 Upgrade/Name/JoriumLinedSuit=Jorium Lined Suit

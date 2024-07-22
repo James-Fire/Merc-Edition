@@ -175,6 +175,16 @@
     <CModelFoliage id="PliableArmorFire">
         <Model value="Assets\Doodads\DOM_Fire_Large\DOM_Fire_Large.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="SiegeBreakerUpgradedAttackLaunch">
+        <Model value="Assets\Effects\Protoss\ShadowCannonLaunch\ShadowCannonLaunch.m3"/>
+        <ScaleMax value="3.500000,1.200000,1.000000"/>
+        <ScaleMin value="3.500000,1.200000,1.000000"/>
+    </CModelFoliage>
+    <CModelFoliage id="SiegeBreakerUpgradedAttackLaunch2">
+        <Model value="Assets\Effects\Protoss\ShadowCannonImpact\ShadowCannonImpact.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.300000"/>
+        <ScaleMin value="0.700000,0.700000,0.300000"/>
+    </CModelFoliage>
     <CModelFoliage id="SpartanCompanyAirAttackTrail">
         <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
         <ScaleMax value="1.000000,0.100000,1.000000"/>

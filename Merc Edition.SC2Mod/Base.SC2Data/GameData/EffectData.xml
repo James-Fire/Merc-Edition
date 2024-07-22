@@ -29,6 +29,18 @@
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Benign"/>
         <AreaArray Radius="1.1" Effect="StunnedAnarchistLeapApplyBehavior"/>
     </CEffectEnumArea>
+    <CEffectDamage id="ArcliteShockCannonBlast">
+        <ValidatorArray index="1" value="DontHaveIFFSpiderRounds"/>
+    </CEffectDamage>
+    <CEffectSet id="ArcliteShockCannonBlastSet">
+        <EffectArray value="IFFSpiderRoundsCU"/>
+    </CEffectSet>
+    <CEffectDamage id="ArcliteShockCannonEnemyDamage">
+        <ValidatorArray index="1" value="HaveIFFSpiderRounds"/>
+    </CEffectDamage>
+    <CEffectDamage id="ArcliteShockCannonFriendlyDamage">
+        <ValidatorArray index="1" value="HaveIFFSpiderRounds"/>
+    </CEffectDamage>
     <CEffectSet id="BarBreakersSet">
         <EditorCategories value=""/>
         <EffectArray value="BarBreakersDamage"/>
@@ -291,6 +303,12 @@
         <PeriodicPeriodArray value="0.25"/>
         <PeriodicPeriodArray value="0.125"/>
     </CEffectCreatePersistent>
+    <CEffectCreateUnit id="IFFSpiderRoundsCU">
+        <EditorCategories value=""/>
+        <Chance value="0"/>
+        <CreateFlags index="Placement" value="0"/>
+        <SpawnUnit value="SpiderMineBurrowed"/>
+    </CEffectCreateUnit>
     <CEffectApplyBehavior id="ImmolationFluidApplyBehavior">
         <Behavior value="ImmolationFluid"/>
     </CEffectApplyBehavior>

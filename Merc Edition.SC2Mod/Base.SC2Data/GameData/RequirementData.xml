@@ -39,6 +39,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeEidolonSuitCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseIFFSpiderRounds">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeIFFSpiderRoundsCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseJetPackOverdrive">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeJetPackOverdriveCompleteOnly"/>

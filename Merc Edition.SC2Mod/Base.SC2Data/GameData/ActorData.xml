@@ -569,6 +569,37 @@
         <DamageMap index="Shield" Sound="MagrailMunitionDamageShield" ModelReaction="MagrailMunitionDamageReactionShield"/>
     </CActorAction>
     <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile"/>
+    <CActorAction id="SiegeBreakerSiegedAttack">
+        <LaunchAssets Model="" Sound=""/>
+    </CActorAction>
+    <CActorAction id="SiegeBreakerSiegedAttackDirected">
+        <LaunchAssets Model="" Sound=""/>
+    </CActorAction>
+    <CActorModel id="SiegeBreakerSiegedAttackLaunch" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ArcliteShockCannonSet.Start; At Caster" Send="Create"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveIFFSpiderRounds" Send="ModelSwap SiegeBreakerUpgradedAttackLaunch"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="SiegeBreakerUpgradedAttackLaunch2" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ArcliteShockCannonSet.Start; ValidatePlayer HaveIFFSpiderRounds; At Caster" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorSound id="SiegeBreakerSiegedAttackLaunchSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ArcliteShockCannonSet.Start; At Caster" Send="Create"/>
+        <Sound value="SiegeBreaker_SiegedAttackLaunch"/>
+    </CActorSound>
+    <CActorSound id="SiegeBreakerSiegedAttackUpgradedLaunchSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ArcliteShockCannonSet.Start; At Caster; ValidatePlayer HaveIFFSpiderRounds" Send="Create"/>
+        <Sound value="SiegeBreaker_AttackLaunchUpgraded"/>
+    </CActorSound>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
     </CActorAction>

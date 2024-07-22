@@ -18,6 +18,9 @@
     <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
         <Count Link="EidolonSuit" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeIFFSpiderRoundsCompleteOnly">
+        <Count Link="IFFSpiderRounds" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeJetPackOverdriveCompleteOnly">
         <Count Link="JetPackOverdrive" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

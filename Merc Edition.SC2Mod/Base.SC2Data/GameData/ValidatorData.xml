@@ -12,6 +12,13 @@
         <Find value="1"/>
         <Value value="UseAblativeScalesNew"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveIFFSpiderRounds">
+        <Find value="1"/>
+        <Value value="UseIFFSpiderRounds"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DontHaveIFFSpiderRounds">
+        <Value value="UseIFFSpiderRounds"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="PlayerIsMercEdition">
         <Find value="1"/>
         <Value value="UseMercEdition"/>

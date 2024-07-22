@@ -25,6 +25,17 @@
         <EffectArray Operation="Set" Reference="Abil,PhantomCloak,Cost[0].Vital[Energy]" Value="0"/>
         <AffectedUnitArray value="Phantom"/>
     </CUpgrade>
+    <CUpgrade id="IFFSpiderRounds">
+        <EffectArray Reference="Effect,ArcliteShockCannonEnemyDamage,Amount" Value="60"/>
+        <EffectArray Reference="Effect,ArcliteShockCannonBlast,Amount" Value="60"/>
+        <EffectArray Reference="Effect,ArcliteShockCannonDirected,Amount" Value="60"/>
+        <EffectArray Reference="Effect,ArcliteShockCannonDummy,Amount" Value="60"/>
+        <EffectArray Operation="Set" Reference="Effect,ArcliteShockCannonFriendlyDamage,Amount" Value="3"/>
+        <EffectArray Operation="Set" Reference="Effect,ArcliteShockCannonFriendlyDamage,AttributeBonus[Armored]" Value="2"/>
+        <EffectArray Operation="Set" Reference="Effect,IFFSpiderRoundsCU,Chance" Value="1"/>
+        <AffectedUnitArray value="SiegeBreaker"/>
+        <AffectedUnitArray value="SiegeBreakerSieged"/>
+    </CUpgrade>
     <CUpgrade id="JetPackOverdrive">
         <EffectArray Reference="Unit,BlockB,Speed" Value="1.750000"/>
         <AffectedUnitArray value="BlockB"/>

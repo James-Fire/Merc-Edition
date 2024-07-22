@@ -117,6 +117,10 @@
         <Icon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
     </CButton>
+    <CButton id="IFFSpiderRounds">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-cerberusmine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-cerberusmine.dds"/>
+    </CButton>
     <CButton id="ImmolationFluid">
         <Icon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
