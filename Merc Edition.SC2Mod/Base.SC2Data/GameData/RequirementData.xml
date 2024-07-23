@@ -35,6 +35,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeConcussiveShrapnelCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseConfederateReactor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeConfederateReactorCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseEidolonSuit">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeEidolonSuitCompleteOnly"/>

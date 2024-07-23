@@ -97,6 +97,10 @@
         <Icon value="Assets\Textures\btn-techupgrade-terran-jackhammerconcussion.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-jackhammerconcussion.dds"/>
     </CButton>
+    <CButton id="ConfederateReactor">
+        <Icon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
+    </CButton>
     <CButton id="DeadMenTellNoTales">
         <Icon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>

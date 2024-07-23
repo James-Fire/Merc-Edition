@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorPlayerRequirement id="HaveConfederateReactor">
+        <Find value="1"/>
+        <Value value="UseConfederateReactor"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveConcussiveShrapnel">
         <Value value="UseConcussiveShrapnel"/>
         <Find value="1"/>

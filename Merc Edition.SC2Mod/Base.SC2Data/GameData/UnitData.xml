@@ -255,22 +255,7 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="FireOnTheMove" Type="Passive" Row="2" Column="0"/>
-            <LayoutButtons>
-                <Face value="TriLithiumPowerCells"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255"/>
-                <Requirements value="UseTriLithiumPowerCells"/>
-                <Row value="2"/>
-                <Column value="1"/>
-            </LayoutButtons>
-            <LayoutButtons>
-                <Face value="ShapedHull"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255"/>
-                <Requirements value="UseShapedHull"/>
-                <Row value="2"/>
-                <Column value="2"/>
-            </LayoutButtons>
+            <LayoutButtons Face="ConfederateReactor" Type="Passive" Requirements="UseConfederateReactor" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="0.6875"/>
         <SeparationRadius value="0.65"/>
@@ -278,7 +263,7 @@
         <CargoSize value="4"/>
         <ScoreMake value="375"/>
         <ScoreKill value="750"/>
-        <SubgroupPriority value="16"/>
+        <SubgroupPriority value="8"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
         <GlossaryPriority value="120"/>
@@ -289,6 +274,7 @@
         <GlossaryWeakArray value="Zealot"/>
         <GlossaryWeakArray value="Marauder"/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
+        <WeaponArray Link="ChargedJupiterRail" Turret="Diamondback"/>
     </CUnit>
     <CUnit id="Agitator">
         <DeathRevealRadius value="3"/>

@@ -239,8 +239,13 @@
         <LaunchAssets Sound="Diamondback_AttackImpact"/>
     </CActorAction>
     <CActorBeamSimple id="CopperheadAttackBeam" parent="GenericAttackBeam">
-        <On Terms="ActorCreation; ValidateEffect DiamondbackCharged" Send="ModelSwap DiamondbackAttackBeamCharged"/>
-        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveConfederateReactor" Send="ModelSwap CopperheadUpgradedBeam"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.300000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="TimerSet 0.700000 2"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetOpacity 0.000000 0.700000"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetScale 1.000000,1.000000,0.200000 0.800000"/>
+        <On Terms="TimerExpired; TimerName 2" Send="Destroy"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveConfederateReactor" Send="SetTintColor {77,219,255 3.000000}"/>
         <Model value="DiamondbackAttackBeam"/>
     </CActorBeamSimple>
     <CActorUnit id="Agitator" parent="GenericUnitBase" unitName="Agitator">

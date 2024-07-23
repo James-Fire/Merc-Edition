@@ -69,6 +69,7 @@ Button/Name/ChemicalPlating=Chemical Plating
 Button/Name/CloakPhantom=Cloak
 Button/Name/CombatDrugs=Combat Drugs
 Button/Name/ConcussiveShrapnel=Concussive Shrapnel
+Button/Name/ConfederateReactor=Confederate Reactor
 Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
 Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
@@ -141,12 +142,14 @@ Button/Tooltip/CloakPhantom=Cloaks the unit, preventing enemy units from seeing 
 Button/Tooltip/CombatDrugs=Block B heal for 20% of their maximum life when dealing damage. While out of combat, they regenerate 2 life per second.
 Button/Tooltip/ConcussiveShrapnel=Attacks briefly slow enemies in an area and in a cone behind them by 60%.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/ConfederateReactor=Copperheads gain 1 range and movement speed, and 35% attack speed.
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby enemy units.
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
 Button/Tooltip/EnergyRadar=Phantoms reveal the locations of enemy units with an energy bar in a large area around them. Does not reveal the units.
+Button/Tooltip/FireOnTheMove=The Copperhead can fire its Rail Gun while moving.
 Button/Tooltip/FireOnTheMoveAgitator=The Agitator can attack while moving.
 Button/Tooltip/FlyingBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
@@ -354,6 +357,7 @@ Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
 Upgrade/Name/ChairsandAC=Chairs and A.C
 Upgrade/Name/ChemicalPlating=Chemical Plating
 Upgrade/Name/ConcussiveShrapnel=Concussive Shrapnel
+Upgrade/Name/ConfederateReactor=Confederate Reactor
 Upgrade/Name/EidolonSuit=Eidolon Suit
 Upgrade/Name/IFFSpiderRounds=IFF Spider Rounds
 Upgrade/Name/ImpalerRoundsShadow=Impaler Rounds

@@ -116,6 +116,17 @@
     <CBehaviorBuff id="Precursor">
         <Modification RadiusMultiplier="0"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ReflectiveArmor">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageTakenFraction index="Spell" value="-0.5"/>
+            <DamageTakenFraction index="Melee" value="-0.5"/>
+            <DamageTakenFraction index="Ranged" value="-0.5"/>
+            <DamageTakenFraction index="Splash" value="-0.5"/>
+            <DamageTakenFraction index="NoProc" value="-0.5"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ShellShower">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Icons and Wireframes\hail of bullets.dds"/>

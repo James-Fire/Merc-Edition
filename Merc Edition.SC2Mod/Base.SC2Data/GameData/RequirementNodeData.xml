@@ -15,6 +15,9 @@
     <CRequirementCountUpgrade id="CountUpgradeConcussiveShrapnelCompleteOnly">
         <Count Link="ConcussiveShrapnel" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeConfederateReactorCompleteOnly">
+        <Count Link="ConfederateReactor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
         <Count Link="EidolonSuit" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

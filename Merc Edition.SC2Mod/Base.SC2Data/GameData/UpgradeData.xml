@@ -20,6 +20,12 @@
         <EffectArray Reference="Unit,DevilDog,LifeArmor" Value="3"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
+    <CUpgrade id="ConfederateReactor">
+        <EffectArray Reference="Weapon,ChargedJupiterRail,Range" Value="1"/>
+        <EffectArray Reference="Unit,Copperhead,Speed" Value="1.000000"/>
+        <EffectArray Reference="Weapon,ChargedJupiterRail,RateMultiplier" Value="0.35"/>
+        <AffectedUnitArray value="Copperhead"/>
+    </CUpgrade>
     <CUpgrade id="EidolonSuit">
         <EffectArray Operation="Set" Reference="Behavior,PhantomCloak,Modification.VitalRegenArray[Energy]" Value="0.000000"/>
         <EffectArray Operation="Set" Reference="Abil,PhantomCloak,Cost[0].Vital[Energy]" Value="0"/>
