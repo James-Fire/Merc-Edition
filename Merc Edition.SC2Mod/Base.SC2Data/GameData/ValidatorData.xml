@@ -30,6 +30,9 @@
     <CValidatorPlayerRequirement id="DontHaveSmartServosMKIV">
         <Value value="UseSmartServosMKIV"/>
     </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="NotAlreadyBeingHealedbySignalFlareHealingMistwowwhataname">
+        <Behavior value="SignalFlareMistHeal"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorPlayerRequirement id="PlayerIsMercEdition">
         <Find value="1"/>
         <Value value="UseMercEdition"/>
@@ -57,6 +60,16 @@
     <CValidatorPlayerRequirement id="PlayerIsNotMercEdition">
         <Value value="UseMercEdition"/>
     </CValidatorPlayerRequirement>
+    <CValidatorLocationEnumArea id="SkibidiRepairDroneAutocast">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray>
+            <Compare value="GE"/>
+            <Count value="1"/>
+            <Radius value="3.7"/>
+            <Validator value="TargetLifeNotFull"/>
+        </AreaArray>
+        <SearchFilters value="-;Neutral,Enemy,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CValidatorLocationEnumArea>
     <CValidatorUnitType id="SiegeBreakerIsSieged">
         <WhichUnit Value="Caster"/>
         <Value value="SiegeBreakerSieged"/>

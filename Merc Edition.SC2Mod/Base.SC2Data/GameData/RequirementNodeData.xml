@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementCountUpgrade id="CountUpgradeAIEnhancementCompleteOnly">
+        <Count Link="AIEnhancement" State="CompleteOnly"/>
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat">
         <Count Link="AblativeScales" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -101,4 +105,9 @@
     <CRequirementNot id="NotCountUpgradeStabilizerMedpacksMercCompleteOnly">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirementNot>
+    <CRequirementOr id="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"/>
+        <OperandArray value="CountUpgradeAIEnhancementCompleteOnly"/>
+    </CRequirementOr>
 </Catalog>

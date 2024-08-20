@@ -23,7 +23,7 @@
             <Unit value="HammerSecurity"/>
         </InfoArray>
         <InfoArray index="Train13" Time="25">
-            <Button DefaultButtonFace="TrainSkibisAngel" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Button DefaultButtonFace="TrainSkibisAngel" State="Restricted" Requirements="TechLaborMedicUpgrade"/>
             <Unit value="SkibisAngel"/>
         </InfoArray>
         <InfoArray index="Train14" Time="30">
@@ -122,6 +122,34 @@
             <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilArmMagazine id="SkibisAngelRepairDrone">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Launch value="ReleaseAtSource"/>
+        <Flags index="AutoCreate" value="1"/>
+        <Flags index="Retarget" value="1"/>
+        <Flags index="ShowStatus" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Leash value="0.1"/>
+        <InfoArray index="Ammo1" CountStart="1" Manage="Recall" Unit="BioMechanicalRepairDrone">
+            <Charge HideCount="1" Link="KaraxMicroBotActivated" Location="Unit"/>
+            <Cooldown Link="Abil/##id##"/>
+            <Button DefaultButtonFace="Servitors" State="Suppressed" Requirements="UseAIEnhancement">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Flags index="AutoBuild" value="1"/>
+            <Flags index="AutoBuildOn" value="1"/>
+            <Flags index="External" value="1"/>
+        </InfoArray>
+        <ExternalAngle value="0"/>
+        <ExternalAngle value="45"/>
+        <ExternalAngle value="90"/>
+        <ExternalAngle value="135"/>
+        <ExternalAngle value="180"/>
+        <ExternalAngle value="225"/>
+        <ExternalAngle value="270"/>
+        <ExternalAngle value="315"/>
+        <MaxCount value="1"/>
+    </CAbilArmMagazine>
     <CAbilSpecialize id="MakeSpiderMinesCondor">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Activity value="UI/SpiderMineBuilding"/>
@@ -143,6 +171,21 @@
     <CAbilEffectTarget id="Obliterate">
         <CmdButtonArray index="Execute" Requirements="UseJoriumLinedSuit"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="RepairDroneHeal">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RepairDroneHealCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Range value="1000"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy,Structure,Missile,Item,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="4"/>
+        <AutoCastValidatorArray value="SkibidiRepairDroneAutocast"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0059_01"/>
+    </CAbilEffectInstant>
     <CAbilMorph id="SiegeBreakerSiege">
         <InfoArray index="0" RandomDelayMax="0.25">
             <SectionArray index="Abils">
@@ -249,7 +292,7 @@
         <UseMarkerArray index="Prep" value="0"/>
         <AINotifyEffect value="SkibisAngelHeal"/>
         <DefaultError value="RequiresHealTarget"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MedicHeal" Requirements="DontHaveStabilizerMedpacks"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MedicHeal"/>
         <AcquireAttackers value="1"/>
         <FollowRange value="1.5"/>
     </CAbilEffectTarget>
@@ -401,6 +444,14 @@
         <AutoCastRange value="5.8"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SprayandPay"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="SuperStim">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SuperStimApplyBehavior"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SuperStim" Requirements="UseSuperStim"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="TarBomb">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="TarBombLaunchMissile"/>

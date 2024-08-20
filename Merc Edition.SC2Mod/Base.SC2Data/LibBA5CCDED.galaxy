@@ -385,6 +385,34 @@ void libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init () {
     TriggerAddEventUnitAbility(libBA5CCDED_gt_SiegeBreakerGraduatingRange, null, AbilityCommand("SiegeBreakerSiege", 0), c_abilMorphStageAbilsEnd, false);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Skibi's Angel Repair Drone
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SkibisAngelRepairDrone_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((TechTreeUpgradeCount(EventPlayer(), "AIEnhancement", c_techCountCompleteOnly) == 1)) {
+        UnitAbilityAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "SkibisAngelRepairDrone");
+    }
+    else {
+        if ((GameIsTestMap(false) == false)) {
+            TriggerEnable(TriggerGetCurrent(), false);
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SkibisAngelRepairDrone_Init () {
+    libBA5CCDED_gt_SkibisAngelRepairDrone = TriggerCreate("libBA5CCDED_gt_SkibisAngelRepairDrone_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_SkibisAngelRepairDrone, c_playerAny, "SkibisAngelSpawnDummy");
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
@@ -396,6 +424,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
     libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
     libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
+    libBA5CCDED_gt_SkibisAngelRepairDrone_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

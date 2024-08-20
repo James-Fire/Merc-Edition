@@ -338,6 +338,16 @@
         <Mode value="3DWorld"/>
         <Volume value="-4.000000,-4.000000"/>
     </CSound>
+    <CSound id="RepairDroneHealLaunchMerc" parent="Combat">
+        <AssetArray File="Assets\Sounds\WarpPrismTaldarim_AttackLaunch01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarpPrismTaldarim_AttackLaunch02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarpPrismTaldarim_AttackLaunch03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarpPrismTaldarim_AttackLaunch04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarpPrismTaldarim_AttackLaunch05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarpPrismTaldarim_AttackLaunch06.wav" FacialGroup=""/>
+        <Pitch value="12.000000,12.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
     <CSound id="ShadowFuryStrikLaunch">
         <AssetArray index="0" File="Assets\Sounds\HighTemplar_Taldarim_Launch_01.wav"/>
         <AssetArray index="1" File="Assets\Sounds\HighTemplar_Taldarim_Launch_02.wav"/>
@@ -408,6 +418,40 @@
         <Mode value="3DWorld"/>
         <Pitch value="6.000000,6.000000"/>
         <Volume value="-15.000000,-15.000000"/>
+    </CSound>
+    <CSound id="SignalFlareMistLoop" parent="Combat">
+        <AssetArray>
+            <File value="Assets\Sounds\SOA_ShieldOvercharge_Loop01_1ch.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,219907"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray>
+            <File value="Assets\Sounds\SOA_ShieldOvercharge_Loop02_1ch.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,212788"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray>
+            <File value="Assets\Sounds\SOA_ShieldOvercharge_Loop03_1ch.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,259599"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray>
+            <File value="Assets\Sounds\SOA_ShieldOvercharge_Loop04_1ch.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,311278"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray>
+            <File value="Assets\Sounds\SOA_ShieldOvercharge_Loop05_1ch.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,335819"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <Pitch value="6.000000,6.000000"/>
+        <Volume value="-10.000000,-10.000000"/>
     </CSound>
     <CSound id="SpartanCompanyShellShowerFullSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Uni\UI\Impact_SwtStrike_01.wav" FacialGroup=""/>

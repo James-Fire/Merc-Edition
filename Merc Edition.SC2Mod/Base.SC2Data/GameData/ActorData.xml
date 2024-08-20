@@ -534,6 +534,15 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorUnit id="BioMechanicalRepairDrone" parent="GenericUnitMorph" unitName="BioMechanicalRepairDrone">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Target="ServitorWeaponBeamA" Send="Destroy"/>
+        <BarOffset value="25"/>
+        <BarWidth value="36"/>
+        <HeroIcon value=""/>
+        <HighlightTooltip value=""/>
+        <UnitIcon value="Assets\Textures\btn-unit-biomechanicaldrone.dds"/>
+    </CActorUnit>
     <CActorAction id="MagrailMunition" effectImpact="Healing Potion (TEST) (Unknown)" effectLaunch="Healing Potion (TEST) (Unknown) (Unknown)">
         <On index="0" removed="1"/>
         <On index="1" removed="1"/>
@@ -579,6 +588,7 @@
     <CActorModel id="LowGradeStimEnd" parent="ModelAnimationStyleOneShot">
         <Inherits index="CloakEffect" value="1"/>
         <On Terms="Behavior.LowGradeStims.Off" Send="Create"/>
+        <On Terms="Behavior.SuperStim.Off" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
@@ -591,6 +601,11 @@
         <DamageMap index="Shield" Sound="MagrailMunitionDamageShield" ModelReaction="MagrailMunitionDamageReactionShield"/>
     </CActorAction>
     <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile"/>
+    <CActorAction id="RepairDroneHeal" parent="GenericAttack" effectImpact="RepairDroneHeal" effectLaunch="RepairDroneHealLaunchMissile">
+        <LaunchAttachQuery Methods="Weapon 0"/>
+        <LaunchAssets Sound="RepairDroneHealLaunchMerc"/>
+    </CActorAction>
+    <CActorMissile id="RepairDroneHealMissile" parent="GenericAttackMissile" unitName="RepairDroneHealMissile"/>
     <CActorSound id="SiegeBreakerSiegeModeSound">
         <On index="1" Terms="AbilMorph.*.Start; MorphTo SiegeBreakerSieged; ValidatePlayer DontHaveSmartServosMKIV"/>
     </CActorSound>
@@ -651,6 +666,11 @@
         <HostSiteOps Ops="SOpAttachHead"/>
         <Host Subject="_Unit"/>
     </CActorModel>
+    <CActorModel id="SignalFlareHealingMist2" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SignalFlareMistCP.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,255 3.000000}"/>
+    </CActorModel>
     <CActorSiteOpLocalOffset id="SignalFlareHeightSOp">
         <EditorCategories value=""/>
         <LocalOffset value="0.000000,0.000000,15.000000"/>
@@ -662,10 +682,19 @@
     <CActorSound id="SignalFlareLoop" parent="SoundContinuous">
         <EditorCategories value=""/>
     </CActorSound>
+    <CActorSound id="SignalFlareHealingMistLoop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <Sound value="SignalFlareMistLoop"/>
+    </CActorSound>
     <CActorMissile id="SignalFlareMissile" parent="GenericAttackMissile" unitName="SignalFlareMissile">
-        <On Terms="ActorCreation" Send="SetTintColor {255,128,128 15.000000}"/>
         <HostSiteOps Ops="SOpPointUpWorld" HoldRotation="1"/>
     </CActorMissile>
+    <CActorModel id="SignalFlareHealingMist" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SignalFlareMistCP.Start" Send="Create"/>
+        <On Terms="Effect.SignalFlareMistCP.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,255 3.000000}"/>
+    </CActorModel>
     <CActorRange id="SignalFlareRange" parent="RangeAbil" abil="SignalFlare">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
@@ -673,8 +702,10 @@
     <CActorModel id="SignalFlareSmoke" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="UnitCreation.SignalFlareUnit" Send="Create"/>
-        <On Terms="UnitCreation.SignalFlareMissile" Send="Create"/>
         <On Terms="ActorCreation" Send="SetTintColor {255,128,128 2.000000}"/>
+        <On Terms="ActorCreation" Send="SetOpacity"/>
+        <On Terms="ActorCreation" Send="SetOpacity 1.000000 2.000000"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveStabilizerMedpacks" Send="SetTintColor {0,153,0 2.000000}"/>
     </CActorModel>
     <CActorUnit id="SignalFlareTargetDummy" parent="GenericUnitStandard" unitName="SignalFlareTargetDummy">
         <EditorCategories value=""/>
@@ -683,10 +714,11 @@
     </CActorUnit>
     <CActorUnit id="SignalFlareUnit" parent="GenericUnitStandard" unitName="SignalFlareUnit">
         <EditorCategories value=""/>
-        <HighlightTooltip value="Unit/Name/Bogus"/>
-        <On Terms="ActorCreation" Send="SetTintColor {255,128,128 15.000000}"/>
         <On Terms="ActorCreation" Send="Create SignalFlareLoop"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveStabilizerMedpacks" Send="Create SignalFlareHealingMistLoop"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,255,255 2.500000}"/>
         <HostSiteOps Ops="SOpPointUpWorld" HoldRotation="1"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
     </CActorUnit>
     <CActorBeamSimple id="SkibisAngelHealBeam" parent="BeamSimpleAnimationStyleContinuous">
         <Inherits index="Visibility" value="1"/>
@@ -1103,6 +1135,7 @@
     <CActorModel id="LowGradeStimStart" parent="ModelAnimationStyleOneShot">
         <Inherits index="CloakEffect" value="1"/>
         <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
+        <On Terms="Behavior.SuperStim.On" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>

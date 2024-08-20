@@ -367,6 +367,33 @@
         <Amount value="12"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectModifyUnit id="RepairDroneHeal">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="20"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectCreatePersistent id="RepairDroneHealCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="RepairDroneHealSA"/>
+        <PeriodicPeriodArray value="0.5"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="RepairDroneHealLaunchMissile">
+        <ValidatorArray index="0" value="TargetLifeNotFull"/>
+        <ImpactEffect value="RepairDroneHeal"/>
+        <AmmoUnit value="RepairDroneHealMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectEnumArea id="RepairDroneHealSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Neutral,Enemy,Structure,Missile,Item,Dead,Hidden,Invulnerable,Benign"/>
+        <TargetSorts>
+            <SortArray value="TSAllianceControl"/>
+            <SortArray value="TSLife"/>
+        </TargetSorts>
+        <AreaArray MaxCount="1" Radius="3.5" Effect="RepairDroneHealLaunchMissile"/>
+    </CEffectEnumArea>
     <CEffectModifyUnit id="ReplenishMinesCondor">
         <ValidatorArray value="SpiderMineUsedCondor"/>
         <Cost Abil="CondorSpiderMines,Execute" ChargeCountUse="-1"/>
@@ -399,6 +426,28 @@
         <WhichLocation Value="TargetUnitOrPoint"/>
         <InitialEffect value="SignalFlareSwitch"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="SignalFlareMistCP">
+        <ValidatorArray value="HaveStabilizerMedpacks"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="65535"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="SignalFlareMistSA"/>
+        <PeriodicPeriodArray value="0.2"/>
+    </CEffectCreatePersistent>
+    <CEffectModifyUnit id="SignalFlareMistHeal">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="5"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectApplyBehavior id="SignalFlareMistHealApplyBehavior">
+        <Behavior value="SignalFlareMistHeal"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="SignalFlareMistSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Biological;Neutral,Enemy,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="4" Effect="SignalFlareMistHealApplyBehavior"/>
+    </CEffectEnumArea>
     <CEffectLaunchMissile id="SignalFlareRevealLaunchMissile">
         <ImpactEffect value="SignalFlareCU"/>
         <AmmoUnit value="SignalFlareMissile"/>
@@ -430,6 +479,9 @@
         <CaseArray Validator="IsMechanical" Effect="SkibisAngelHealMechanical"/>
         <CaseDefault value="SkibisAngelHeal"/>
     </CEffectSwitch>
+    <CEffectSet id="SkibisAngelSpawnDummy">
+        <EditorCategories value=""/>
+    </CEffectSet>
     <CEffectDamage id="SnipeDamagePhantom" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
@@ -507,6 +559,15 @@
         <EffectArray value="SuperCloakApplyBehavior"/>
         <EffectArray value="SuperCloakCooldownApplyBehavior"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="SuperStimApplyBehavior">
+        <Behavior value="SuperStim"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="SuperStimHeal">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="30"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="TarBombApplyBehavior">
         <Behavior value="TarBomb"/>
     </CEffectApplyBehavior>

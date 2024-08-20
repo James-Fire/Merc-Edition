@@ -17,4 +17,5 @@ trigger libBA5CCDED_gt_BlockBFlyHeighter;
 trigger libBA5CCDED_gt_BlockBFlyHeighter2;
 trigger libBA5CCDED_gt_SpartanCompanyShellShowerFull;
 trigger libBA5CCDED_gt_SiegeBreakerGraduatingRange;
+trigger libBA5CCDED_gt_SkibisAngelRepairDrone;
 

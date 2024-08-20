@@ -3,6 +3,10 @@
     <CRequirement id="DontHaveStabilizerMedpacks">
         <NodeArray index="Show" Link="NotCountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="TechLaborMedicUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="LearnStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0"/>
@@ -18,6 +22,10 @@
     <CRequirement id="LearnThornShield">
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeThornShieldQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="UseAIEnhancement">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAIEnhancementCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseBearclawGauntlets">
         <EditorCategories value="TechType:Ability"/>

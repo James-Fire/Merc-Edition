@@ -557,7 +557,45 @@
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="125"/>
     </CUnit>
+    <CUnit id="BioMechanicalRepairDrone">
+        <Facing value="135"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="AISupport" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Mover value="Fly"/>
+        <Speed value="2.5"/>
+        <Acceleration value="2.125"/>
+        <Height value="0.5"/>
+        <CostCategory value="Army"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="RepairDroneHeal"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
+            <LayoutButtons Face="TarBomb" Type="AbilCmd" AbilCmd="RepairDroneHeal,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="4"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+    </CUnit>
     <CUnit id="MagrailMunitionsMissile" parent="MISSILE"/>
+    <CUnit id="RepairDroneHealMissile" parent="MISSILE"/>
     <CUnit id="SiegeBreaker">
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="185"/>
@@ -621,6 +659,7 @@
         <FlagArray index="Undetectable" value="1"/>
         <FlagArray index="Invulnerable" value="1"/>
         <FlagArray index="Unstoppable" value="1"/>
+        <EffectArray index="Create" value="SignalFlareMistCP"/>
     </CUnit>
     <CUnit id="SignalFlareMissile" parent="MISSILE"/>
     <CUnit id="SkibisAngel">
@@ -660,7 +699,6 @@
         <AbilArray Link="move"/>
         <AbilArray Link="GreaterHeal"/>
         <AbilArray Link="SignalFlare"/>
-        <AbilArray Link="StabilizerMedpackHeal"/>
         <BehaviorArray Link="ThornShield"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -669,11 +707,11 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="StabilizerHeal" Type="AbilCmd" AbilCmd="StabilizerMedpackHeal,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="MercMedicHeal" Type="AbilCmd" AbilCmd="GreaterHeal,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="SignalFlare" Type="AbilCmd" AbilCmd="SignalFlare,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="StabilizerMedpacksMerc" Type="Passive" Requirements="UseStabilizerMedpacksMerc" Row="1" Column="0"/>
             <LayoutButtons Face="ThornShieldSkibidi" Type="Passive" Requirements="UseThornShield" Row="1" Column="2"/>
+            <LayoutButtons Face="AIEnhancement" Type="Passive" Requirements="UseAIEnhancement" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -692,6 +730,7 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <EffectArray index="Create" value="SkibisAngelSpawnDummy"/>
     </CUnit>
     <CUnit id="Nomad">
         <DeathRevealRadius value="3"/>
@@ -1345,10 +1384,11 @@
     <CUnit id="WarPig">
         <CostResource index="Minerals" value="75"/>
         <AbilArray index="3" Link="SprayandPay"/>
+        <AbilArray Link="SuperStim"/>
         <BehaviorArray Link="ThornShield"/>
         <CardLayouts index="0">
             <LayoutButtons index="5" Face="SprayandPay" AbilCmd="SprayandPay,Execute"/>
-            <LayoutButtons index="6" Face="SuperStim" AbilCmd="" Requirements="UseSuperStim"/>
+            <LayoutButtons index="6" Face="SuperStim" Type="AbilCmd" AbilCmd="SuperStim,Execute" Requirements="UseSuperStim"/>
             <LayoutButtons Face="ThornShieldWarPig" Type="Passive" Requirements="UseThornShield" Row="2" Column="2"/>
             <LayoutButtons Face="LaserTargetingSystem" Type="Passive" Row="1" Column="0"/>
         </CardLayouts>

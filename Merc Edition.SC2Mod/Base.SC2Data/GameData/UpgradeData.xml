@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade id="AIEnhancement">
+        <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Vespene]" Value="25"/>
+        <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Minerals]" Value="35"/>
+        <AffectedUnitArray value="SkibisAngel"/>
+    </CUpgrade>
     <CUpgrade id="AblativeScales">
         <EffectArray Reference="Unit,HammerSecurity,LifeMax" Value="75"/>
         <EffectArray Reference="Unit,HammerSecurity,LifeStart" Value="75"/>
@@ -116,6 +121,7 @@
         <EffectArray Operation="Multiply" Reference="Effect,SkibisAngelHeal,RechargeVitalRate" Value="1.351500"/>
         <EffectArray Reference="Abil,GreaterHeal,Range[0]" Value="1"/>
         <EffectArray Reference="Abil,SignalFlare,Range[0]" Value="2"/>
+        <EffectArray Operation="Set" Reference="Button,SignalFlare,Icon" Value="Assets\Icons and Wireframes\signal flare heal.dds"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <AffectedUnitArray value="SkibisAngel"/>
     </CUpgrade>

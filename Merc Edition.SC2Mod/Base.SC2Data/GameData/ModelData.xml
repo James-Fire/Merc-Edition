@@ -132,9 +132,9 @@
         <Model value="Assets\Units\Terran\MedivacDeathEx1\MedivacDeathEx1.m3"/>
     </CModel>
     <CModel id="CharonDropshipPortrait" parent="MedivacPortraitBase">
-        <Model value="Assets\Portraits\Terran\Liberator_Silver_Portrait\Liberator_Silver_Portrait.m3"/>
-        <Image value="Assets\Textures\MedivacPortrait_Static.dds"/>
-        <Lighting value="MedivacPortrait"/>
+        <Model value="Assets\Portraits\Terran\Liberator_HornerHan_Portrait\Liberator_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\liberator_hornerhan_portrait_static.dds"/>
+        <Lighting value="Liberator_Junker_Collection_Portrait"/>
     </CModel>
     <CModel id="DarkTemplarShadowFuryImpact">
         <Model value="Assets\Effects\Protoss\Supplicant_COOP_Missile_Impact\Supplicant_COOP_Missile_Impact.m3"/>
@@ -184,9 +184,23 @@
         <ScaleMax value="0.600000,0.500000,0.500000"/>
         <ScaleMin value="0.600000,0.500000,0.500000"/>
     </CModelFoliage>
+    <CModel id="BioMechanicalRepairDrone" parent="Unit">
+        <Model value="Assets\Models\SkibidiRepairDroneWoohoo.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.450000,0.450000,0.450000"/>
+        <ScaleMin value="0.450000,0.450000,0.450000"/>
+    </CModel>
     <CModelFoliage id="PliableArmorFire">
         <Model value="Assets\Doodads\DOM_Fire_Large\DOM_Fire_Large.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="RepairDroneHealImpact">
+        <Model value="Assets\Effects\Zerg\CorruptedMissileImpact\CorruptedMissileImpact.m3"/>
+    </CModelFoliage>
+    <CModel id="RepairDroneHealMissile">
+        <Model value="Assets\Models\RepairDroneMissileSkibidi.m3"/>
+        <ScaleMax value="0.500000,0.500000,1.000000"/>
+        <ScaleMin value="0.500000,0.500000,1.000000"/>
+    </CModel>
     <CModelFoliage id="SiegeBreakerUpgradedAttackLaunch">
         <Model value="Assets\Effects\Protoss\ShadowCannonLaunch\ShadowCannonLaunch.m3"/>
         <ScaleMax value="3.500000,1.200000,1.000000"/>
@@ -196,6 +210,11 @@
         <Model value="Assets\Effects\Protoss\ShadowCannonImpact\ShadowCannonImpact.m3"/>
         <ScaleMax value="0.700000,0.700000,0.300000"/>
         <ScaleMin value="0.700000,0.700000,0.300000"/>
+    </CModelFoliage>
+    <CModelFoliage id="SignalFlareHealingMist2">
+        <Model value="Assets\Effects\Zerg\MiasmaliskPoisonCloudBirth\MiasmaliskPoisonCloudBirth.m3"/>
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
     </CModelFoliage>
     <CModelFoliage id="SpartanCompanyAirAttackTrail">
         <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
@@ -234,14 +253,16 @@
         <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModelFoliage>
     <CModel id="SignalFlareMissile">
-        <Model value="Assets\Effects\Terran\BansheeMissile\BansheeMissile.m3"/>
+        <Model value="Assets\Models\TR17StarburstMissile.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
     </CModel>
     <CModelFoliage id="SignalFlareSmoke">
         <Model value="Assets\Effects\Neutral\SmokeStack_Smoke_Constant_Sm\SmokeStack_Smoke_Constant_Sm.m3"/>
         <AnimSpeed value="2.000000"/>
     </CModelFoliage>
     <CModelFoliage id="SignalFlareUnit">
-        <Model value="Assets\Effects\Terran\BansheeMissile\BansheeMissile.m3"/>
+        <Model value="Assets\Models\TR17StarburstMissile.m3"/>
     </CModelFoliage>
     <CModel id="SkibisAngel" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\MedicMercenary\MedicMercenary.m3"/>
@@ -353,11 +374,8 @@
     <CModelFoliage id="SprayandPayLaunchModel">
         <Model value="Assets\Models\Nova_PenetratingShot_Launch.m3"/>
     </CModelFoliage>
-    <CModelFoliage id="StabilizerMedpackField">
-        <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Shockwave\Arbiter_StasisField_Shockwave.m3"/>
-        <AnimSpeed value="3.000000"/>
-        <ScaleMax value="0.300000,0.300000,0.300000"/>
-        <ScaleMin value="0.300000,0.300000,0.300000"/>
+    <CModelFoliage id="SignalFlareHealingMist">
+        <Model value="Assets\Effects\Zerg\MiasmaliskPoisonCloud\MiasmaliskPoisonCloud.m3"/>
     </CModelFoliage>
     <CModel id="Starcruiser" parent="Unit">
         <Model value="Assets\Units\Terran\BattleCruiser_Merc_Collection\BattleCruiser_Merc_Collection.m3"/>

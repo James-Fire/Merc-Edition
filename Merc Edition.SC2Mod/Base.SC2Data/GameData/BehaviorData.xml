@@ -145,6 +145,13 @@
             <StateFlags index="SuppressDetection" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="SignalFlareMistHeal">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.3"/>
+        <Period value="0.25"/>
+        <PeriodicEffect value="SignalFlareMistHeal"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SignalFlareTimedLife">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
@@ -176,6 +183,16 @@
         <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="168"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuperStim">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-stimpack.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.5"/>
+            <AdditiveAttackSpeedFactor value="0.5"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="TarBomb">
         <Alignment value="Positive"/>

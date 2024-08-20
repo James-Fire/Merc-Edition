@@ -186,6 +186,10 @@
         <Icon value="Assets\Textures\btn-techupgrade-terran-stabilizermedpacks.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-stabilizermedpacks.dds"/>
     </CButton>
+    <CButton id="AIEnhancement">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-nano-botinjectors.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-nano-botinjectors.dds"/>
+    </CButton>
     <CButton id="TarBomb">
         <Icon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>
