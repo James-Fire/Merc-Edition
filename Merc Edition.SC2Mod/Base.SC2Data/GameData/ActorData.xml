@@ -125,6 +125,16 @@
         <On Terms="AbilMorph.*.Start; MorphTo BlockB" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphTo FlyingBlockB" Send="Create"/>
     </CActorSound>
+    <CActorModel id="ConcussiveShrapnelModel" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ConcussiveShrapnelDummy.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.300000"/>
+    </CActorModel>
+    <CActorSound id="ConcussiveShrapnelSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ConcussiveShrapnelDummy.Start; ValidatePlayer HaveConcussiveShrapnel" Send="Create"/>
+        <Sound value="ConcussiveShrapnelImpact"/>
+    </CActorSound>
     <CActorModel id="CondorSpiderMineExplode" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.CondorSpiderMinesDamage.Start" Send="Create"/>
@@ -584,6 +594,7 @@
     <CActorSound id="LowGradeStim" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
+        <On Terms="Behavior.SuperStim.On" Send="Create"/>
     </CActorSound>
     <CActorModel id="LowGradeStimEnd" parent="ModelAnimationStyleOneShot">
         <Inherits index="CloakEffect" value="1"/>

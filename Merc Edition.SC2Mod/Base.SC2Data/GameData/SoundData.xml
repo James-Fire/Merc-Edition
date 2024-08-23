@@ -269,6 +269,17 @@
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="-14.000000,-14.000000"/>
     </CSound>
+    <CSound id="ConcussiveShrapnelImpact" parent="Combat">
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_09.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
     <CSound id="DevilDogGrappleLand">
         <AssetArray File="Assets\Sounds\Immortal_Explode_Body_Impact_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Immortal_Explode_Body_Impact_02.wav" FacialGroup=""/>

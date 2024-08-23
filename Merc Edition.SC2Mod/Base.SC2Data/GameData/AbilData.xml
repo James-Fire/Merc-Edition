@@ -446,11 +446,12 @@
     </CAbilEffectTarget>
     <CAbilEffectInstant id="SuperStim">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="SuperStimApplyBehavior"/>
+        <Effect index="0" value="SuperStimSet"/>
         <Cost>
             <Cooldown TimeUse="20"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="SuperStim" Requirements="UseSuperStim"/>
+        <Flags index="Transient" value="1"/>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="TarBomb">
         <EditorCategories value="AbilityorEffectType:Units"/>

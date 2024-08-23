@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreatePersistent id="ConcussiveShrapnelCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <OffsetVectorStartLocation Value="SourcePoint"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="ConcussiveShrapnelDummy"/>
+        <PeriodicOffsetArray value="0,0.5,0"/>
+        <PeriodicOffsetArray value="0,1,0"/>
+        <PeriodicOffsetArray value="0,1.5,0"/>
+        <PeriodicOffsetArray value="0,2,0"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.1"/>
+        <PeriodicPeriodArray value="0.1"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="ACVFusionCutter" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
@@ -83,6 +98,7 @@
     <CEffectApplyBehavior id="ConcussiveShrapnelApplyBehavior">
         <Behavior value="ConcussiveShrapnel"/>
         <ValidatorArray index="0" value="HaveConcussiveShrapnel"/>
+        <ValidatorArray value="TargetIsEnemyOrNeutral"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="ConcussiveShrapnelConeSA">
         <EditorCategories value=""/>
@@ -91,6 +107,7 @@
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetUnit"/>
         <ValidatorArray value="HaveConcussiveShrapnel"/>
+        <DebugTrace value="1"/>
     </CEffectEnumArea>
     <CEffectDamage id="ConcussiveShrapnelDamage">
         <EditorCategories value=""/>
@@ -106,12 +123,14 @@
         <EditorCategories value=""/>
         <EffectArray value="ConcussiveShrapnelDamage"/>
         <EffectArray value="ConcussiveShrapnelApplyBehavior"/>
+        <EffectArray value="ConcussiveShrapnelCP"/>
     </CEffectSet>
     <CEffectEnumArea id="ConcussiveShrapnelSA">
         <EditorCategories value=""/>
-        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <SearchFilters value="Ground;Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="0.8" Effect="ConcussiveShrapnelApplyBehavior"/>
         <ValidatorArray value="HaveConcussiveShrapnel"/>
+        <DebugTrace value="1"/>
     </CEffectEnumArea>
     <CEffectSet id="ConcussiveShrapnelSet">
         <EditorCategories value=""/>
@@ -568,6 +587,11 @@
             <Change value="30"/>
         </VitalArray>
     </CEffectModifyUnit>
+    <CEffectSet id="SuperStimSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SuperStimApplyBehavior"/>
+        <EffectArray value="SuperStimHeal"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="TarBombApplyBehavior">
         <Behavior value="TarBomb"/>
     </CEffectApplyBehavior>

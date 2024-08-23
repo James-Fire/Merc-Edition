@@ -181,8 +181,8 @@
     </CModel>
     <CModelFoliage id="HammerSecurityWeaponAttach">
         <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
-        <ScaleMax value="0.600000,0.500000,0.500000"/>
-        <ScaleMin value="0.600000,0.500000,0.500000"/>
+        <ScaleMax value="0.600000,0.200000,0.500000"/>
+        <ScaleMin value="0.600000,0.200000,0.500000"/>
     </CModelFoliage>
     <CModel id="BioMechanicalRepairDrone" parent="Unit">
         <Model value="Assets\Models\SkibidiRepairDroneWoohoo.m3"/>
@@ -376,6 +376,11 @@
     </CModelFoliage>
     <CModelFoliage id="SignalFlareHealingMist">
         <Model value="Assets\Effects\Zerg\MiasmaliskPoisonCloud\MiasmaliskPoisonCloud.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="ConcussiveShrapnelModel">
+        <Model value="Assets\Effects\Terran\MarauderMissileImpact\MarauderMissileImpact.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
     </CModelFoliage>
     <CModel id="Starcruiser" parent="Unit">
         <Model value="Assets\Units\Terran\BattleCruiser_Merc_Collection\BattleCruiser_Merc_Collection.m3"/>
