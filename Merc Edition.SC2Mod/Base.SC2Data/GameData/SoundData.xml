@@ -278,7 +278,15 @@
         <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_08.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_09.wav" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
-        <Volume value="-9.000000,-9.000000"/>
+        <Volume value="-13.000000,-13.000000"/>
+    </CSound>
+    <CSound id="CopperheadEmpoweredBeam" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackLaunch2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackLaunch3.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
     </CSound>
     <CSound id="DevilDogGrappleLand">
         <AssetArray File="Assets\Sounds\Immortal_Explode_Body_Impact_01.wav" FacialGroup=""/>

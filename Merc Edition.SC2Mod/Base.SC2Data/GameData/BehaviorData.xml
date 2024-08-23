@@ -126,6 +126,25 @@
             <DamageTakenFraction index="Splash" value="-0.5"/>
             <DamageTakenFraction index="NoProc" value="-0.5"/>
         </Modification>
+        <Requirements value="UseReflectiveArmor"/>
+        <DamageResponse Handled="ReflectiveArmorActiveforBeamVisualApplyBehavior">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReflectiveArmorActiveforBeamVisual">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReflectiveArmorBonusDamage">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-shapedhull.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseReflectiveArmor"/>
+        <DisableValidatorArray value="CopperheadRecentlyTookDamage"/>
+        <Modification>
+            <DamageDealtFraction index="Ranged" value="0.25"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShellShower">
         <Alignment value="Positive"/>

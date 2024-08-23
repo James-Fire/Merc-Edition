@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareBehaviorCount id="CopperheadReflectiveArmorActive">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="ReflectiveArmorActiveforBeamVisual"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorPlayerRequirement id="HaveConfederateReactor">
         <Find value="1"/>
         <Value value="UseConfederateReactor"/>
@@ -7,6 +12,10 @@
     <CValidatorPlayerRequirement id="HaveConcussiveShrapnel">
         <Value value="UseConcussiveShrapnel"/>
         <Find value="1"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveReflectiveArmor">
+        <Find value="1"/>
+        <Value value="UseReflectiveArmor"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveEidolonSuit">
         <Find value="1"/>
@@ -30,6 +39,10 @@
     <CValidatorPlayerRequirement id="DontHaveSmartServosMKIV">
         <Value value="UseSmartServosMKIV"/>
     </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareDamageTakenTime id="CopperheadRecentlyTookDamage">
+        <Compare value="LE"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareDamageTakenTime>
     <CValidatorUnitCompareBehaviorCount id="NotAlreadyBeingHealedbySignalFlareHealingMistwowwhataname">
         <Behavior value="SignalFlareMistHeal"/>
     </CValidatorUnitCompareBehaviorCount>

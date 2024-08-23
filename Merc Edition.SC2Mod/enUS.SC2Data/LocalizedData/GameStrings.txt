@@ -30,6 +30,7 @@ Behavior/Name/ImmolationFluid=Immolation Fluid
 Behavior/Name/IncomingAnarchistJump=Incoming!
 Behavior/Name/LowGradeStims=Low Grade Stims
 Behavior/Name/PhantomCloak=Cloak
+Behavior/Name/ReflectiveArmorBonusDamage=Reflective Armor
 Behavior/Name/ShellShower=Shell Shower
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
 Behavior/Name/StunnedAnarchistLeap=Stunned
@@ -44,6 +45,7 @@ Behavior/Tooltip/ImmolationFluid=This unit is burning for damage over time.
 Behavior/Tooltip/IncomingAnarchistJump=The Anarchist has more armor.
 Behavior/Tooltip/LowGradeStims=This unit is firing faster.
 Behavior/Tooltip/PhantomCloak=This unit is cloaked and will only be revealed by detectors or effects.
+Behavior/Tooltip/ReflectiveArmorBonusDamage=Copperheads deal more damage when taking damage.
 Behavior/Tooltip/ShellShower=The longer Spartan Company attacks, the faster the attacks become.
 Behavior/Tooltip/StunnedAnarchistLeap=This unit is stunned.
 Behavior/Tooltip/SuperCloak=This unit is invulnerable.
@@ -53,6 +55,7 @@ Button/Name/AIEnhancement=A.I Enhancement
 Button/Name/AblativeScalesNew=Ablative Scales
 Button/Name/AdvancedSiegeOptics=Advanced Siege Optics
 Button/Name/AdvancedSiegeTech=Advanced Siege Tech
+Button/Name/AspisBlinkShield=Aspis Blink Shield
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAgitator=Build Agitator
@@ -88,12 +91,14 @@ Button/Name/JetPackOverdrive=Jet Pack Overdrive
 Button/Name/JoriumLinedSuit=Jorium Lined Suit
 Button/Name/JumpJetAssault=Jump Jet Assault
 Button/Name/LaserTargetingSystem=Laser Targeting System
+Button/Name/LegionSystems=Legion Systems
 Button/Name/LowGradeStims=Low Grade Stims
 Button/Name/MagrailMunitions=Magrail Munitions
 Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
 Button/Name/OptimizedUEDLogistics=Optimized UED Logistics
 Button/Name/PliableArmor=Pliable Armor
+Button/Name/ReflectiveArmor=Reflective Armor
 Button/Name/ShellShower=Shell Shower
 Button/Name/SignalFlare=Signal Flare
 Button/Name/SmartServosMKIV=Smart Servos MKIV
@@ -125,6 +130,7 @@ Button/Tooltip/AdvancedSiegeOptics=Siege Breaker sight radius is equal to that o
 Button/Tooltip/AdvancedSiegeTech=Siege Breakers enter and exit siege mode twice as fast, and gain +3 armor in siege mode.
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
 Button/Tooltip/BearclawGauntlets=Increases the Devil Dog's attack radius by 60% and grants the Grapple ability.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/BuildAgitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -166,6 +172,7 @@ Button/Tooltip/JetPackOverdrive=Allows the Block B to temporarily fly in the air
 Button/Tooltip/JoriumLinedSuit=Shadows can use Hallucination and Psionic Lash. Cloak cost removed.
 Button/Tooltip/JumpJetAssault=Launches the Anarchist to a nearby area, briefly stunning enemy units and giving the Anarchist +4 armor.
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
+Button/Tooltip/LegionSystems=Spartan Companies gain +3 missile range, +2 cannon range, and can attack ground and air units simultaneously.
 Button/Tooltip/LowGradeStims=Increase attack speed by 100% for <d time="7"/>.
 Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42"/>.
 Button/Tooltip/MercMedicHeal=Heals a friendly biological target.<n/><n/><c val="f078ff">Heals <d ref="Effect,SkibisAngelHeal,RechargeVitalRate"/> life per <d ref="Effect,SkibisAngelHeal,RechargeVitalRate * Effect,SkibisAngelHeal,DrainVitalCostFactor"/> energy.
@@ -175,6 +182,7 @@ Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nu
 Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to train the unit.
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/PliableArmor=Increases armor by 1 and movement speed by 2. When killed, the area is ignited, causing enemies to run in fear. Transformation time halved.
+Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. When taking damage, damage dealt is briefly increased.
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ShellShower=The longer the Spartan Company attacks, the faster the attacks become 
 Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius to 1 and suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
@@ -273,6 +281,7 @@ Effect/Name/NanobotInjectorsDamage=NanobotInjectorsDamage
 Effect/Name/NanobotInjectorsLaunchMissile=NanobotInjectorsLaunchMissile
 Effect/Name/PharaohLaserBatteryDamage=Pharaoh Laser Battery Damage
 Effect/Name/PharaohLaserBatteryLM=Pharaoh Laser Battery LM
+Effect/Name/ReflectiveArmorActiveforBeamVisualApplyBehavior=ReflectiveArmorActiveforBeamVisualApplyBehavior
 Effect/Name/RepairDroneHeal=Repair Drone Heal
 Effect/Name/RepairDroneHealCP=Repair Drone Heal CP
 Effect/Name/RepairDroneHealLaunchMissile=Repair Drone Heal Launch Missile
@@ -389,11 +398,13 @@ Upgrade/Name/ImpalerRoundsShadow=Impaler Rounds
 Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
 Upgrade/Name/JoriumLinedSuit=Jorium Lined Suit
 Upgrade/Name/LaserTargetingSystem=Laser Targeting System
+Upgrade/Name/LegionSystems=Legion Systems
 Upgrade/Name/LooseEngineSeals=Loose Engine Seals
 Upgrade/Name/MercEdition=Merc Edition
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/PliableArmor=Pliable Armor
 Upgrade/Name/RaynorSpecial=Raynor Special
+Upgrade/Name/ReflectiveArmor=Reflective Armor
 Upgrade/Name/SmartServosMKIV=Smart Servos MKIV
 Upgrade/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Upgrade/Name/SuperStim=Super Stim

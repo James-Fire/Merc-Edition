@@ -256,6 +256,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="FireOnTheMove" Type="Passive" Row="2" Column="0"/>
             <LayoutButtons Face="ConfederateReactor" Type="Passive" Requirements="UseConfederateReactor" Row="1" Column="0"/>
+            <LayoutButtons Face="ReflectiveArmor" Type="Passive" Requirements="UseReflectiveArmor" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.6875"/>
         <SeparationRadius value="0.65"/>
@@ -275,6 +276,8 @@
         <GlossaryWeakArray value="Marauder"/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
         <WeaponArray Link="ChargedJupiterRail" Turret="Diamondback"/>
+        <BehaviorArray Link="ReflectiveArmor"/>
+        <BehaviorArray Link="ReflectiveArmorBonusDamage"/>
     </CUnit>
     <CUnit id="Agitator">
         <DeathRevealRadius value="3"/>
@@ -845,13 +848,11 @@
     <CUnit id="SpartanCompany">
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="75"/>
-        <WeaponArray index="0" Link="SpartanCompanyGUpgraded"/>
-        <WeaponArray index="1" Link="SpartanCompanyAUpgraded"/>
-        <WeaponArray index="2" Link=""/>
-        <WeaponArray index="3" Link=""/>
         <CardLayouts index="0">
             <LayoutButtons index="5" Face="OptimizedUEDLogistics" AbilCmd="" Requirements=""/>
             <LayoutButtons index="6" Face="ShellShower" AbilCmd="" Requirements=""/>
+            <LayoutButtons Face="LegionSystems" Type="Passive" Requirements="UseLegionSystems" Row="1" Column="0"/>
+            <LayoutButtons Face="AspisBlinkShield" Type="Passive" Requirements="UseAspisBlinkShield" Row="1" Column="1"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SpiderMineBurrowed">

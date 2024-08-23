@@ -2,14 +2,13 @@
 <Catalog>
     <CEffectCreatePersistent id="ConcussiveShrapnelCP">
         <EditorCategories value=""/>
-        <WhichLocation Value="TargetUnit"/>
         <OffsetVectorStartLocation Value="SourcePoint"/>
         <PeriodCount value="4"/>
         <PeriodicEffectArray value="ConcussiveShrapnelDummy"/>
-        <PeriodicOffsetArray value="0,0.5,0"/>
-        <PeriodicOffsetArray value="0,1,0"/>
-        <PeriodicOffsetArray value="0,1.5,0"/>
-        <PeriodicOffsetArray value="0,2,0"/>
+        <PeriodicOffsetArray value="0,-0.5,0"/>
+        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="0,-1.5,0"/>
+        <PeriodicOffsetArray value="0,-2,0"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.1"/>
         <PeriodicPeriodArray value="0.1"/>
@@ -107,7 +106,6 @@
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetUnit"/>
         <ValidatorArray value="HaveConcussiveShrapnel"/>
-        <DebugTrace value="1"/>
     </CEffectEnumArea>
     <CEffectDamage id="ConcussiveShrapnelDamage">
         <EditorCategories value=""/>
@@ -123,14 +121,12 @@
         <EditorCategories value=""/>
         <EffectArray value="ConcussiveShrapnelDamage"/>
         <EffectArray value="ConcussiveShrapnelApplyBehavior"/>
-        <EffectArray value="ConcussiveShrapnelCP"/>
     </CEffectSet>
     <CEffectEnumArea id="ConcussiveShrapnelSA">
         <EditorCategories value=""/>
         <SearchFilters value="Ground;Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="0.8" Effect="ConcussiveShrapnelApplyBehavior"/>
         <ValidatorArray value="HaveConcussiveShrapnel"/>
-        <DebugTrace value="1"/>
     </CEffectEnumArea>
     <CEffectSet id="ConcussiveShrapnelSet">
         <EditorCategories value=""/>
@@ -240,6 +236,7 @@
         <EffectArray index="1" value="ConcussiveShrapnelApplyBehavior"/>
         <EffectArray index="2" value="ConcussiveShrapnelSA"/>
         <EffectArray value="ConcussiveShrapnelConeSA"/>
+        <EffectArray value="ConcussiveShrapnelCP"/>
     </CEffectSet>
     <CEffectDamage id="HellbornFlamethrowerDamage" parent="DU_WEAP">
         <ValidatorArray value="noMarkers"/>
@@ -386,6 +383,10 @@
         <Amount value="12"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="ReflectiveArmorActiveforBeamVisualApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ReflectiveArmorActiveforBeamVisual"/>
+    </CEffectApplyBehavior>
     <CEffectModifyUnit id="RepairDroneHeal">
         <EditorCategories value=""/>
         <VitalArray index="Life">

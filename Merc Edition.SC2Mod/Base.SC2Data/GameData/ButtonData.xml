@@ -101,6 +101,18 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
     </CButton>
+    <CButton id="LegionSystems">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-multilocktargetingsystem.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-multilocktargetingsystem.dds"/>
+    </CButton>
+    <CButton id="AspisBlinkShield">
+        <Icon value="Assets\Textures\btn-ability-protoss-blinkshieldrestore.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-blinkshieldrestore.dds"/>
+    </CButton>
+    <CButton id="ReflectiveArmor">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-shapedhull.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-shapedhull.dds"/>
+    </CButton>
     <CButton id="DeadMenTellNoTales">
         <Icon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
