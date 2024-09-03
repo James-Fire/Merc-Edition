@@ -105,6 +105,10 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
     </CButton>
+    <CButton id="FerrierofSouls">
+        <Icon value="Assets\Textures\btn-ability-mengsk-ghost-supercloak.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-ghost-supercloak.dds"/>
+    </CButton>
     <CButton id="IgniteAfterburnersHelsAngel">
         <Icon value="Assets\Textures\btn-ability-mengsk-viking-speed.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-viking-speed.dds"/>
@@ -124,6 +128,10 @@
     <CButton id="AspisBlinkShield">
         <Icon value="Assets\Textures\btn-ability-protoss-blinkshieldrestore.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-blinkshieldrestore.dds"/>
+    </CButton>
+    <CButton id="LowCostSeating">
+        <Icon value="Assets\Textures\btn-upgrade-terran-neosteelframe.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-neosteelframe.dds"/>
     </CButton>
     <CButton id="RapidAlgorithms">
         <Icon value="Assets\Textures\btn-techupgrade-terran-rapiddeployment.dds"/>

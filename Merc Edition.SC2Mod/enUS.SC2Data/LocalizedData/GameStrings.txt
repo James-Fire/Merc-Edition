@@ -93,6 +93,7 @@ Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/EidolonSuit=Eidolon Suit
 Button/Name/EnergyRadar=Energy Radar
+Button/Name/FerrierofSouls=Ferrier of Souls
 Button/Name/FireOnTheMoveAgitator=Fire On The Move
 Button/Name/IFFSpiderRounds=IFF Spider Rounds
 Button/Name/IgniteAfterburnersHelsAngel=Ignite Afterburners
@@ -105,6 +106,7 @@ Button/Name/JotunnSystems=Jotunn Systems
 Button/Name/JumpJetAssault=Jump Jet Assault
 Button/Name/LaserTargetingSystem=Laser Targeting System
 Button/Name/LegionSystems=Legion Systems
+Button/Name/LowCostSeating=Low Cost Seating
 Button/Name/LowGradeStims=Low Grade Stims
 Button/Name/MagrailMunitions=Magrail Munitions
 Button/Name/MorphtoAgitator=Morph to Agitator
@@ -179,6 +181,7 @@ Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
 Button/Tooltip/EnergyRadar=Phantoms reveal the locations of enemy units with an energy bar in a large area around them. Does not reveal the units.
+Button/Tooltip/FerrierofSouls=Upon taking damage, become Super Cloaked and gain +3 movement speed for <d time="7"/>. Cannot occur more than once every <d time="84"/>.
 Button/Tooltip/FireOnTheMove=The Copperhead can fire its Rail Gun while moving.
 Button/Tooltip/FireOnTheMoveAgitator=The Agitator can attack while moving.
 Button/Tooltip/FlyingBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -194,6 +197,7 @@ Button/Tooltip/JotunnSystems=Increases missile and cannon range by 2, reduces tr
 Button/Tooltip/JumpJetAssault=Launches the Anarchist to a nearby area, briefly stunning enemy units and giving the Anarchist +4 armor.
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
 Button/Tooltip/LegionSystems=Spartan Companies gain +3 missile range, +2 cannon range, and can attack ground and air units simultaneously.
+Button/Tooltip/LowCostSeating=Charon Dropships have a cargo space of 14.
 Button/Tooltip/LowGradeStims=Increase attack speed by 100% for <d time="7"/>.
 Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42"/>.
 Button/Tooltip/MedivacSpeedBoost=Increases the Charon Dropship's movement speed by 70% for <d time="8"/>.

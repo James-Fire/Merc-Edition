@@ -544,8 +544,10 @@
             <LayoutButtons Face="Heal" Type="AbilCmd" AbilCmd="MedivacHeal,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="Heal" Type="AbilCmd" AbilCmd="MedivacDoubleBeamHeal,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="MedivacUnloadAll" Type="AbilCmd" AbilCmd="MedivacTransport,UnloadAt" Row="2" Column="3"/>
-            <LayoutButtons Face="RapidAlgorithms" Type="Passive" Requirements="UseRapidAlgorithms" Row="1" Column="0"/>
+            <LayoutButtons Face="LowCostSeating" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="MedivacSpeedBoost" Type="AbilCmd" AbilCmd="MedivacSpeedBoost,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="FerrierofSouls" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="RapidAlgorithms" Type="Passive" Requirements="UseRapidAlgorithms" Row="1" Column="2"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
