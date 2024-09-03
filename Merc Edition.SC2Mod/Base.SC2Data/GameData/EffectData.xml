@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="AfterburnersHelsAngelApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AfterburnersHelsAngel"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="ConcussiveShrapnelCP">
         <EditorCategories value=""/>
-        <OffsetVectorStartLocation Value="SourcePoint"/>
         <PeriodCount value="4"/>
         <PeriodicEffectArray value="ConcussiveShrapnelDummy"/>
         <PeriodicOffsetArray value="0,-0.5,0"/>
@@ -13,6 +16,7 @@
         <PeriodicPeriodArray value="0.1"/>
         <PeriodicPeriodArray value="0.1"/>
         <PeriodicPeriodArray value="0.1"/>
+        <WhichLocation Value="SourceUnit"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ACVFusionCutter" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
@@ -224,6 +228,32 @@
         <Amount value="5"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="ScreecherMissilesCreatePersistentSecondary">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <ExpireDelay value="0.8"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="ScreecherMissilesLaunchMissileSecondary"/>
+        <PeriodicEffectArray value="ScreecherMissilesLaunchMissileSecondary"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="ScreecherMissilesCreatePersistentTertiary">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <ExpireDelay value="0.8"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="ScreecherMissilesLaunchMissileTertiary"/>
+        <PeriodicEffectArray value="ScreecherMissilesLaunchMissileTertiary"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="ScreecherMissilesLaunchMissileSecondary">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="DuskWingScreecherMissilesSet"/>
+        <AmmoUnit value="DuskWingWeaponSecondary"/>
+    </CEffectLaunchMissile>
+    <CEffectEnumArea id="DuskWingScreecherMissilesCarpetBombSearchArea">
+        <ValidatorArray index="0" value="HaveASPRocketPods"/>
+    </CEffectEnumArea>
     <CEffectApplyBehavior id="FearPliableArmorApplyBehavior">
         <Behavior value="FearPliableArmor"/>
     </CEffectApplyBehavior>
@@ -231,6 +261,32 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="GraduatingRange"/>
     </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="ScreecherMissilesLaunchMissileTertiary">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="DuskWingScreecherMissilesSet"/>
+        <AmmoUnit value="DuskWingWeaponTertiary"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="ShredderRoundsCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourcePoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="ShredderRoundsSA"/>
+        <PeriodicOffsetArray value="0,-4.5,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="ShredderRoundsSA">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray RectangleWidth="1.5" RectangleHeight="9" Effect="WreckingCrewAssault"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectEnumArea>
+    <CEffectSet id="HaloRocketsSet">
+        <EditorCategories value=""/>
+        <EffectArray value="WreckingCrewFighterU"/>
+        <EffectArray value="SulfurMissilesSA"/>
+    </CEffectSet>
     <CEffectSet id="HammerSecuritySet">
         <EffectArray index="0" value="HammerSecurityDamage"/>
         <EffectArray index="1" value="ConcussiveShrapnelApplyBehavior"/>
@@ -334,6 +390,11 @@
         <PeriodicPeriodArray value="0.25"/>
         <PeriodicPeriodArray value="0.125"/>
     </CEffectCreatePersistent>
+    <CEffectSet id="HelsAngelWeaponSet">
+        <EditorCategories value=""/>
+        <EffectArray value="WreckingCrewAssault"/>
+        <EffectArray value="ShredderRoundsCP"/>
+    </CEffectSet>
     <CEffectCreateUnit id="IFFSpiderRoundsCU">
         <EditorCategories value=""/>
         <Chance value="0"/>
@@ -562,6 +623,36 @@
     <CEffectApplyBehavior id="StunnedAnarchistLeapApplyBehavior">
         <Behavior value="StunnedAnarchistLeap"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SulfurMissilesApplyBehavior">
+        <Behavior value="SulfurMissiles"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="SulfurMissilesDamage">
+        <EditorCategories value=""/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="SulfurMissilesSA">
+        <ValidatorArray value="HaveSulfurMissiles"/>
+        <EditorCategories value=""/>
+        <SearchFilters value="Air;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="2.5" Effect="SulfurMissilesApplyBehavior"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="SulfurSuicideSA">
+        <ValidatorArray value="HaveSulfurMissiles"/>
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <SearchFilters value="Air;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="7" Effect="SulfurMissilesApplyBehavior"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="SulfurSuicideDamage">
+        <EditorCategories value=""/>
+        <Amount value="55"/>
+    </CEffectDamage>
+    <CEffectSet id="SulfurSuicideSet">
+        <ValidatorArray value="HaveSulfurMissiles"/>
+        <EditorCategories value=""/>
+        <EffectArray value="SulfurSuicideDamage"/>
+        <EffectArray value="SulfurMissilesApplyBehavior"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="SuperCloakApplyBehavior">
         <ValidatorArray index="0" value="SuperCloakNotOnCooldown"/>
         <ValidatorArray value="HaveEidolonSuit"/>
@@ -593,6 +684,9 @@
         <EffectArray value="SuperStimApplyBehavior"/>
         <EffectArray value="SuperStimHeal"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="TacticalRealignmentApplyBehavior">
+        <Behavior value="TacticalRealignment"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="TarBombApplyBehavior">
         <Behavior value="TarBomb"/>
     </CEffectApplyBehavior>
@@ -764,5 +858,13 @@
         <SearchFilters value="Ground;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CallForHelp" value="1"/>
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="WreckingCrewFighterLM">
+        <ImpactEffect value="HaloRocketsSet"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="WreckingCrewFighterU">
+        <AreaArray index="0" Validator="HaveSulfurMissiles"/>
+        <AreaArray index="1" Validator="HaveSulfurMissiles"/>
+        <AreaArray index="2" Validator="HaveSulfurMissiles"/>
     </CEffectDamage>
 </Catalog>

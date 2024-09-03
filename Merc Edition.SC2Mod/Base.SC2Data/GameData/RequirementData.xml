@@ -27,6 +27,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeAIEnhancementCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseASPRocketPods">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeASPRocketPodsCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBearclawGauntlets">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
@@ -63,6 +67,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeJoriumLinedSuitCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseJotunnSystems">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeJotunnSystemsCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseLegionSystems">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeLegionSystemsCompleteOnly"/>
@@ -91,6 +99,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeReflectiveArmorCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseShimmerScreen">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeShimmerScreenCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseSmartServosMKIV">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSmartServosMKIVCompleteOnly"/>
@@ -98,6 +110,10 @@
     <CRequirement id="UseStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSulfurMissiles">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSulfurMissilesCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseSuperStim">
         <EditorCategories value="TechType:Ability"/>

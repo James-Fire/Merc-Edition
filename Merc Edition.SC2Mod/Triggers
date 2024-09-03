@@ -1928,6 +1928,7 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="1AF6CB32"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="29187CD2"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="542E9C4A"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="9268A1E3"/>
         </Element>
         <Element Type="Trigger" Id="390A3B5A">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="BF5D9CA2"/>
@@ -2406,6 +2407,90 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
             <Value>1</Value>
             <ValueType Type="int"/>
+        </Element>
+        <Element Type="Trigger" Id="9268A1E3">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="537C7DC5"/>
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="663EB07C"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="2AE5D085"/>
+        </Element>
+        <Element Type="FunctionCall" Id="537C7DC5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D00F9D6F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="579E0B08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B9CFD883"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A3C73D3E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D1AE7496"/>
+        </Element>
+        <Element Type="Param" Id="579E0B08">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EE631277"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="B9CFD883">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BB4C37B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="A7A8E3B2"/>
+        </Element>
+        <Element Type="Param" Id="A3C73D3E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ACC52290"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="03977D39"/>
+        </Element>
+        <Element Type="Param" Id="D1AE7496">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3F2584C8"/>
+            <Value>WreckingCrewAssaultMode</Value>
+            <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="FunctionCall" Id="663EB07C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D00F9D6F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="73FCBC85"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="56228D33"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="823E321A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BF829A1B"/>
+        </Element>
+        <Element Type="Param" Id="73FCBC85">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EE631277"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="56228D33">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BB4C37B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="A7A8E3B2"/>
+        </Element>
+        <Element Type="Param" Id="823E321A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ACC52290"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="03977D39"/>
+        </Element>
+        <Element Type="Param" Id="BF829A1B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3F2584C8"/>
+            <Value>WreckingCrewFighterMode</Value>
+            <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2AE5D085">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000089"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9D3D462D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="76247C44"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8955D8A7"/>
+        </Element>
+        <Element Type="Param" Id="9D3D462D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000156"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="2DEBE003"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2DEBE003">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
+        <Element Type="Param" Id="76247C44">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000157"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="87BF4B1C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="87BF4B1C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="59BA1DDF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="51FB1559"/>
+        </Element>
+        <Element Type="Param" Id="51FB1559">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C2F687E6"/>
+            <Value>TacticalRealignment</Value>
+            <ValueType Type="abilcmd"/>
+            <ValueTypeInfo Value="0"/>
+        </Element>
+        <Element Type="Param" Id="8955D8A7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000158"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000039"/>
         </Element>
     </Library>
 </TriggerData>

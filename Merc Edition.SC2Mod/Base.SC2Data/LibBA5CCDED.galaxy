@@ -413,6 +413,27 @@ void libBA5CCDED_gt_SkibisAngelRepairDrone_Init () {
     TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_SkibisAngelRepairDrone, c_playerAny, "SkibisAngelSpawnDummy");
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Hel's Angel Tactical Realignment
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_HelsAngelTacticalRealignment_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitIssueOrder(EventUnit(), Order(AbilityCommand("TacticalRealignment", 0)), c_orderQueueReplace);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_HelsAngelTacticalRealignment_Init () {
+    libBA5CCDED_gt_HelsAngelTacticalRealignment = TriggerCreate("libBA5CCDED_gt_HelsAngelTacticalRealignment_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_HelsAngelTacticalRealignment, null, AbilityCommand("WreckingCrewAssaultMode", 0), c_abilMorphStageStatsEnd, false);
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_HelsAngelTacticalRealignment, null, AbilityCommand("WreckingCrewFighterMode", 0), c_abilMorphStageStatsEnd, false);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
@@ -425,6 +446,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
     libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
     libBA5CCDED_gt_SkibisAngelRepairDrone_Init();
+    libBA5CCDED_gt_HelsAngelTacticalRealignment_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

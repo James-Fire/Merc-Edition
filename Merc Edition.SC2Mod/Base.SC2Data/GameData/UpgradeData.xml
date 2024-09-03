@@ -5,6 +5,11 @@
         <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Minerals]" Value="35"/>
         <AffectedUnitArray value="SkibisAngel"/>
     </CUpgrade>
+    <CUpgrade id="ASPRocketPods">
+        <AffectedUnitArray value="DuskWing"/>
+        <EffectArray Operation="Set" Reference="Weapon,DuskWingBanshee2,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DuskWingBanshee3,Options[Disabled]" Value="0"/>
+    </CUpgrade>
     <CUpgrade id="AblativeScales">
         <EffectArray Reference="Unit,HammerSecurity,LifeMax" Value="75"/>
         <EffectArray Reference="Unit,HammerSecurity,LifeStart" Value="75"/>
@@ -30,6 +35,24 @@
         <EffectArray Reference="Unit,Copperhead,Speed" Value="1.000000"/>
         <EffectArray Reference="Weapon,ChargedJupiterRail,RateMultiplier" Value="0.35"/>
         <AffectedUnitArray value="Copperhead"/>
+    </CUpgrade>
+    <CUpgrade id="JotunnSystems">
+        <EffectArray Operation="Set" Reference="Weapon,WreckingCrewAssault,Effect" Value="HelsAngelWeaponSet"/>
+        <EffectArray Reference="Weapon,WreckingCrewAssault,Range" Value="2"/>
+        <EffectArray Reference="Weapon,WreckingCrewFighter,Range" Value="2"/>
+        <EffectArray Operation="Set" Reference="Effect,WreckingCrewFighter,PeriodicPeriodArray[1]" Value="0.000000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Mover].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <AffectedUnitArray value="HelsAngelAssault"/>
+        <AffectedUnitArray value="HelsAngelFighter"/>
     </CUpgrade>
     <CUpgrade id="LegionSystems">
         <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyG,Options[Disabled]" Value="1"/>
@@ -109,6 +132,12 @@
     <CUpgrade id="RaynorSpecial">
         <AffectedUnitArray value="Condor"/>
     </CUpgrade>
+    <CUpgrade id="ShimmerScreen">
+        <AffectedUnitArray value="DuskWing"/>
+        <EffectArray Operation="Set" Reference="Abil,DuskWingBansheeCloakingField,BehaviorArray[0]" Value="PermanentCloakDuskWing"/>
+        <EffectArray Operation="Set" Reference="Button,CloakOnBanshee,Tooltip" Value="Button/Tooltip/PermanentCloakDuskWing"/>
+        <EffectArray Operation="Set" Reference="Abil,DuskWingBansheeCloakingField,Cost[0].Vital[Energy]" Value="0"/>
+    </CUpgrade>
     <CUpgrade id="SmartServosMKIV">
         <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
         <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
@@ -140,6 +169,9 @@
         <EffectArray Operation="Set" Reference="Button,SignalFlare,Icon" Value="Assets\Icons and Wireframes\signal flare heal.dds"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <AffectedUnitArray value="SkibisAngel"/>
+    </CUpgrade>
+    <CUpgrade id="SulfurMissiles">
+        <AffectedUnitArray value="HelsAngelFighter"/>
     </CUpgrade>
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>

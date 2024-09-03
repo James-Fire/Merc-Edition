@@ -5,6 +5,18 @@
         <Value value="1"/>
         <Behavior value="ReflectiveArmorActiveforBeamVisual"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="HaveASPRocketPods">
+        <Find value="1"/>
+        <Value value="UseASPRocketPods"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveJotunnSystems">
+        <Find value="1"/>
+        <Value value="UseJotunnSystems"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveSulfurMissiles">
+        <Find value="1"/>
+        <Value value="UseSulfurMissiles"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveConfederateReactor">
         <Find value="1"/>
         <Value value="UseConfederateReactor"/>
@@ -43,6 +55,19 @@
         <Compare value="LE"/>
         <Value value="1"/>
     </CValidatorUnitCompareDamageTakenTime>
+    <CValidatorUnitCompareBehaviorCount id="HelsAngelIsAssaultMode">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="HelsAngelIsAssaultMode"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HelsAngelIsFighterMode">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="HelsAngelIsFighterMode"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationCompareRange id="IsTarget">
+        <Value Effect="LiberatorCP" Value="TargetUnit"/>
+    </CValidatorLocationCompareRange>
     <CValidatorUnitCompareBehaviorCount id="NotAlreadyBeingHealedbySignalFlareHealingMistwowwhataname">
         <Behavior value="SignalFlareMistHeal"/>
     </CValidatorUnitCompareBehaviorCount>

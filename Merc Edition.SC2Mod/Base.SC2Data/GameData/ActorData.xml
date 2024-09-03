@@ -125,6 +125,12 @@
         <On Terms="AbilMorph.*.Start; MorphTo BlockB" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphTo FlyingBlockB" Send="Create"/>
     </CActorSound>
+    <CActorSound id="CloakOff">
+        <On Terms="Behavior.PermanentCloakDuskWing.Off" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="CloakOn">
+        <On Terms="Behavior.PermanentCloakDuskWing.On" Send="Create"/>
+    </CActorSound>
     <CActorModel id="ConcussiveShrapnelModel" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.ConcussiveShrapnelDummy.Start" Send="Create"/>
@@ -149,6 +155,31 @@
         <On Terms="Effect.ChargedJupiterRailDamage.Start; ValidateEffect CopperheadReflectiveArmorActive; At Caster" Send="Create"/>
         <Sound value="CopperheadEmpoweredBeam"/>
     </CActorSound>
+    <CActorMissile id="DuskWingAttackMissileTertiary" parent="GenericAttackMissile" unitName="DuskWingWeaponTertiary">
+        <Model value="DuskWingWeapon"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveASPRocketPods" Send="ModelSwap ASPRocketsWeapon"/>
+    </CActorMissile>
+    <CActorAction id="DuskWingAttackSecondary" parent="GenericAttack" effectImpact="DuskWingBansheeDamage" effectLaunch="ScreecherMissilesLaunchMissileSecondary">
+        <LaunchAttachQuery Methods="AMPatternDuskWingBanshee"/>
+        <LaunchAssets Sound="Banshee_AttackLaunch2"/>
+        <Missile value="DuskWingAttackMissileSecondary"/>
+        <ImpactMap index="None" Model="BansheeAttackImpact" Sound="Banshee_AttackImpact2"/>
+        <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
+    </CActorAction>
+    <CActorMissile id="DuskWingAttackMissileSecondary" parent="GenericAttackMissile" unitName="DuskWingWeaponSecondary">
+        <Model value="DuskWingWeapon"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveASPRocketPods" Send="ModelSwap ASPRocketsWeapon"/>
+    </CActorMissile>
+    <CActorAction id="DuskWingAttackTertiary" parent="GenericAttack" effectImpact="DuskWingBansheeDamage" effectLaunch="ScreecherMissilesLaunchMissileTertiary">
+        <LaunchAttachQuery Methods="AMPatternDuskWingBanshee"/>
+        <LaunchAssets Sound="Banshee_AttackLaunch2"/>
+        <Missile value="DuskWingAttackMissileTertiary"/>
+        <ImpactMap index="None" Model="BansheeAttackImpact" Sound="Banshee_AttackImpact2"/>
+        <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
+    </CActorAction>
+    <CActorMissile id="DuskWingBansheeAttackMissile">
+        <On Terms="ActorCreation; ValidatePlayer HaveASPRocketPods" Send="ModelSwap ASPRocketsWeapon"/>
+    </CActorMissile>
     <CActorMissile id="FlyingBlockB" parent="GenericUnitBase" unitName="FlyingBlockB">
         <Aliases value="_MissileHybrids"/>
         <Macros value="D8ChargeAnim"/>
@@ -530,12 +561,92 @@
         <EditorCategories value=""/>
         <On Terms="Effect.GraduatingRangeApplyBehavior.Start" Send="Create"/>
     </CActorSound>
+    <CActorModel id="HHVikingAssaultLeft1LaunchSquib" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.062500 Pierce"/>
+        <On Terms="TimerExpired; TimerName Pierce" Send="Create HHVikingAssaultLeft2LaunchSquib"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeaponLeft HHVikingAssaultLeftSiteOp1" HoldPosition="1" HoldRotation="1"/>
+        <Model value="HHVikingAssaultAttackBeam"/>
+    </CActorModel>
+    <CActorModel id="HHVikingAssaultLeft2LaunchSquib" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeaponLeft HHVikingAssaultLeftSiteOp2" HoldPosition="1" HoldRotation="1"/>
+        <Model value="HHVikingAssaultAttackBeam"/>
+    </CActorModel>
+    <CActorModel id="HHVikingAssaultLeftLaunchSquib" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="Effect.WreckingCrewAssault.Start; ValidatePlayer HaveJotunnSystems; At Caster" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.062500 Pierce"/>
+        <On Terms="TimerExpired; TimerName Pierce" Send="Create HHVikingAssaultLeft1LaunchSquib"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeaponLeft" HoldPosition="1" HoldRotation="1"/>
+        <Model value="HHVikingAssaultAttackBeam"/>
+    </CActorModel>
+    <CActorSiteOpRotationExplicit id="HHVikingAssaultLeftSiteOp1">
+        <HoldPosition value="1"/>
+        <HoldRotation value="1"/>
+        <Forward value="-0.230000,-1.000000,-0.083600"/>
+        <IsLocal value="1"/>
+    </CActorSiteOpRotationExplicit>
+    <CActorSiteOpRotationExplicit id="HHVikingAssaultLeftSiteOp2">
+        <HoldPosition value="1"/>
+        <HoldRotation value="1"/>
+        <Forward value="-0.130000,-1.000000,0.083600"/>
+        <IsLocal value="1"/>
+    </CActorSiteOpRotationExplicit>
+    <CActorModel id="HHVikingAssaultRight1LaunchSquib" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.062500 Pierce"/>
+        <On Terms="TimerExpired; TimerName Pierce" Send="Create HHVikingAssaultRight2LaunchSquib"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeaponRight HHVikingAssaultRightSiteOp1" HoldPosition="1" HoldRotation="1"/>
+        <Model value="HHVikingAssaultAttackBeam"/>
+    </CActorModel>
+    <CActorModel id="HHVikingAssaultRight2LaunchSquib" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeaponRight HHVikingAssaultRightSiteOp2" HoldPosition="1" HoldRotation="1"/>
+        <Model value="HHVikingAssaultAttackBeam"/>
+    </CActorModel>
+    <CActorModel id="HHVikingAssaultRightLaunchSquib" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="Effect.WreckingCrewAssault.Start; ValidatePlayer HaveJotunnSystems; At Caster" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.062500 Pierce"/>
+        <On Terms="TimerExpired; TimerName Pierce" Send="Create HHVikingAssaultRight1LaunchSquib"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeaponRight" HoldPosition="1" HoldRotation="1"/>
+        <Model value="HHVikingAssaultAttackBeam"/>
+    </CActorModel>
+    <CActorSiteOpRotationExplicit id="HHVikingAssaultRightSiteOp1">
+        <HoldPosition value="1"/>
+        <HoldRotation value="1"/>
+        <Forward value="0.230000,-1.000000,-0.083600"/>
+        <IsLocal value="1"/>
+    </CActorSiteOpRotationExplicit>
+    <CActorSiteOpRotationExplicit id="HHVikingAssaultRightSiteOp2">
+        <HoldPosition value="1"/>
+        <HoldRotation value="1"/>
+        <Forward value="0.130000,-1.000000,0.083600"/>
+        <IsLocal value="1"/>
+    </CActorSiteOpRotationExplicit>
     <CActorModel id="HammerSecurityWeaponAttach" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="UnitCreation.HammerSecurityLMWeapon; ValidatePlayer HaveConcussiveShrapnel" Send="Create"/>
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
+    <CActorModel id="HelsAngelRipwave" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.WreckingCrewFighterU.Start; ValidateEffect HaveSulfurMissiles; At Target" Send="Create"/>
+        <Model value="VikingFighterRipWaveAttackImpact"/>
+    </CActorModel>
+    <CActorSound id="HelsAngelWeaponLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.WreckingCrewAssault.Start; !ValidatePlayer HaveJotunnSystems" Send="Create"/>
+        <Sound value="VikingAssault_AttackLaunch"/>
+    </CActorSound>
     <CActorModel id="ImmolationFluid" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.ImmolationFluid.On" Send="Create"/>
@@ -545,6 +656,10 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
+    <CActorSound id="JotunnMissilesAddon" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.HelsAngelFighterWeapon; ValidatePlayer HaveJotunnSystems" Send="Create"/>
+    </CActorSound>
     <CActorRange id="JumpJetAssaultRange" parent="RangeAbil" abil="JumpJetAssault">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
@@ -567,6 +682,9 @@
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
     </CActorAction>
+    <CActorSound id="Medivac_IgniteAfterburners">
+        <On Terms="Behavior.AfterburnersHelsAngel.On" Send="Create"/>
+    </CActorSound>
     <CActorAction id="PhantomSnipeAttack" parent="GenericAttack" effectAttack="SnipeDamagePhantom">
         <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
         <LaunchAssets Model="GhostSnipeAttackLaunch" Sound="PhantomSnipeLaunch"/>
@@ -622,6 +740,10 @@
         <LaunchAssets Sound="RepairDroneHealLaunchMerc"/>
     </CActorAction>
     <CActorMissile id="RepairDroneHealMissile" parent="GenericAttackMissile" unitName="RepairDroneHealMissile"/>
+    <CActorSound id="ShredderRoundsLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ShredderRoundsSA.Start; At Caster; ValidatePlayer HaveJotunnSystems" Send="Create"/>
+    </CActorSound>
     <CActorSound id="SiegeBreakerSiegeModeSound">
         <On index="1" Terms="AbilMorph.*.Start; MorphTo SiegeBreakerSieged; ValidatePlayer DontHaveSmartServosMKIV"/>
     </CActorSound>
@@ -1155,6 +1277,23 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
+    <CActorModelMaterial id="SulfurMissilesGlaze" parent="BehaviorGlaze" buff="SulfurMissiles">
+        <EditorCategories value=""/>
+    </CActorModelMaterial>
+    <CActorModel id="SulfurMissilesImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SulfurMissilesSA.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor 255,183,85"/>
+    </CActorModel>
+    <CActorModel id="SulfurSuicide" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SulfurSuicideSet.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor 255,192,130"/>
+    </CActorModel>
+    <CActorSound id="SulfurSuicideSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SulfurSuicideSet.Start" Send="Create"/>
+    </CActorSound>
     <CActorSound id="SuperCloakEnd" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.SuperCloak.Off" Send="Create"/>
@@ -1174,6 +1313,9 @@
         <EditorCategories value=""/>
         <On Terms="Behavior.SuperCloak.On" Send="Create"/>
     </CActorSound>
+    <CActorModelMaterial id="TacticalRealignment" parent="BehaviorGlaze" buff="TacticalRealignment">
+        <EditorCategories value=""/>
+    </CActorModelMaterial>
     <CActorAction id="TarBomb" parent="GenericAttack" effectLaunch="TarBombLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
     </CActorAction>
@@ -1436,4 +1578,18 @@
     <CActorRange id="VultureSpiderMineUnburrowRange">
         <On index="1" Terms="SelectionLocalUpdate.SpiderMineBurrowed.Start; ValidatePlayer PlayerIsNotMercEdition"/>
     </CActorRange>
+    <!-- Ground attack.                                                                          -->
+    <CActorAction id="WreckingCrewAssaultAttack">
+        <LaunchAssets Sound=""/>
+    </CActorAction>
+    <CActorUnit id="WreckingCrewFighter">
+        <On Terms="Behavior.AfterburnersHelsAngel.On" Send="StatusSet Turbo 1"/>
+        <On Terms="Behavior.AfterburnersHelsAngel.Off" Send="StatusSet Turbo 0"/>
+        <On Terms="UnitMovementUpdate.*.Walk; IsStatus Turbo 1" Send="Create Medivac_MovementAfterburner"/>
+        <On Terms="Behavior.AfterburnersHelsAngel.On" Send="$Spell"/>
+    </CActorUnit>
+    <!-- Fighter attack.                                                                         -->
+    <CActorMissile id="WreckingCrewFighterAttackMissile">
+        <On Terms="ActorCreation; ValidatePlayer HaveJotunnSystems" Send="SetTintColor {255,128,0 3.000000}"/>
+    </CActorMissile>
 </Catalog>

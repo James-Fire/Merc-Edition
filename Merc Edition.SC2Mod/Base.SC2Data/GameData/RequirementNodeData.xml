@@ -4,6 +4,9 @@
         <Count Link="AIEnhancement" State="CompleteOnly"/>
         <Flags index="TechTreeCheat" value="0"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeASPRocketPodsCompleteOnly">
+        <Count Link="ASPRocketPods" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat">
         <Count Link="AblativeScales" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -34,6 +37,9 @@
     <CRequirementCountUpgrade id="CountUpgradeJoriumLinedSuitCompleteOnly">
         <Count Link="JoriumLinedSuit" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeJotunnSystemsCompleteOnly">
+        <Count Link="JotunnSystems" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeLegionSystemsCompleteOnly">
         <Count Link="LegionSystems" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -55,6 +61,9 @@
     <CRequirementCountUpgrade id="CountUpgradeReflectiveArmorCompleteOnly">
         <Count Link="ReflectiveArmor" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeShimmerScreenCompleteOnly">
+        <Count Link="ShimmerScreen" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSmartServosMKIVCompleteOnly">
         <Count Link="SmartServosMKIV" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -64,6 +73,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeStabilizerMedpacksMercQueuedOrBetter">
         <Count Link="StabilizerMedpacksMerc" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSulfurMissilesCompleteOnly">
+        <Count Link="SulfurMissiles" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSuperStimCompleteOnly">
         <Count Link="SuperStim" State="CompleteOnly"/>

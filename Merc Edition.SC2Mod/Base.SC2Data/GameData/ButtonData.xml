@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="ASPRocketPods">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
+    </CButton>
     <CButton id="AblativeScalesNew">
         <Icon value="Assets\Icons and Wireframes\ablativescales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\ablativescales.dds"/>
@@ -101,6 +105,18 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
     </CButton>
+    <CButton id="IgniteAfterburnersHelsAngel">
+        <Icon value="Assets\Textures\btn-ability-mengsk-viking-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-viking-speed.dds"/>
+    </CButton>
+    <CButton id="InternalizedTechModule">
+        <Icon value="Assets\Textures\btn-upgrade-terran-internalizedtechmodule.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-internalizedtechmodule.dds"/>
+    </CButton>
+    <CButton id="JotunnSystems">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-jotunboosters.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-jotunboosters.dds"/>
+    </CButton>
     <CButton id="LegionSystems">
         <Icon value="Assets\Textures\btn-techupgrade-terran-multilocktargetingsystem.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-multilocktargetingsystem.dds"/>
@@ -172,6 +188,10 @@
         <Icon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
     </CButton>
+    <CButton id="ShimmerScreen">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-crossspectrumdampeners.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-crossspectrumdampeners.dds"/>
+    </CButton>
     <CButton id="SmartServosMKIV">
         <Icon value="Assets\Textures\btn-upgrade-terran-transformationservos.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-transformationservos.dds"/>
@@ -201,6 +221,13 @@
     <CButton id="AIEnhancement">
         <Icon value="Assets\Textures\btn-techupgrade-terran-nano-botinjectors.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-nano-botinjectors.dds"/>
+    </CButton>
+    <CButton id="SulfurMissiles">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-ripwavemissiles.dds"/>
+    </CButton>
+    <CButton id="TacticalRealignment">
+        <Icon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
     </CButton>
     <CButton id="TarBomb">
         <Icon value="Assets\Textures\btn-ability-hornerhan-hellion-slowbomb.dds"/>

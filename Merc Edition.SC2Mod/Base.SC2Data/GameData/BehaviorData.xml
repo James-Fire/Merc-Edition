@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="ASPRocketPods">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseASPRocketPods"/>
+        <DisableValidatorArray value="IsCloaked"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="0.25"/>
+            <DamageDealtFraction index="Melee" value="0.25"/>
+            <DamageDealtFraction index="Ranged" value="0.25"/>
+            <DamageDealtFraction index="Splash" value="0.25"/>
+            <DamageDealtFraction index="NoProc" value="0.25"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="AblativeScales">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -12,10 +25,28 @@
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <CBehaviorBuff id="AfterburnersHelsAngel">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-mengsk-viking-speed.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="HelsAngelIsFighterMode"/>
+        <Duration value="7"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="AnarchistReady">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Duration value="4"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PermanentCloakDuskWing">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="BlockBFlightDuration">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -75,6 +106,10 @@
         <PeriodCount value="4"/>
         <PeriodicEffect value="GraduatingRangeApplyBehavior"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="HelsAngelIsAssaultMode">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ImmolationFluid">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-hornerhan-hellbat-dot.dds"/>
@@ -91,6 +126,10 @@
         <Modification>
             <LifeArmorBonus value="4"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HelsAngelIsFighterMode">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="PhantomCloak">
         <Alignment value="Positive"/>
@@ -157,6 +196,20 @@
         <BuffFlags index="RefreshStack" value="1"/>
         <MaxStackCount value="13"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ShimmerScreen">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseShimmerScreen"/>
+        <DisableValidatorArray value="IsCloaked"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.25"/>
+            <DamageTakenFraction index="Spell" value="-0.15"/>
+            <DamageTakenFraction index="Melee" value="-0.15"/>
+            <DamageTakenFraction index="Ranged" value="-0.15"/>
+            <DamageTakenFraction index="Splash" value="-0.15"/>
+            <DamageTakenFraction index="NoProc" value="-0.15"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SignalFlareBlind">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -185,6 +238,13 @@
             <StateFlags index="Stun" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="SulfurMissiles">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="SulfurMissilesDamage"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SuperCloak">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
@@ -211,6 +271,19 @@
         <Modification>
             <AdditiveMoveSpeedFactor value="0.5"/>
             <AdditiveAttackSpeedFactor value="0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TacticalRealignment">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="0.5"/>
+            <DamageDealtFraction index="Melee" value="0.5"/>
+            <DamageDealtFraction index="Ranged" value="0.5"/>
+            <DamageDealtFraction index="Splash" value="0.5"/>
+            <DamageDealtFraction index="NoProc" value="0.5"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="TarBomb">

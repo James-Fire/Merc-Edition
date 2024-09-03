@@ -311,6 +311,33 @@
         <Pitch value="3.000000,3.000000"/>
         <Volume value="-7.000000,-7.000000"/>
     </CSound>
+    <CSound id="JotunnMissilesAddon" parent="Combat">
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_09.wav" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="ShredderRoundsLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\HHViking_UpgradedAttackLaunch01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HHViking_UpgradedAttackLaunch02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HHViking_UpgradedAttackLaunch03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HHViking_UpgradedAttackLaunch04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HHViking_UpgradedAttackLaunch05.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="1.000000,2.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
     <CSound id="PhantomSnipeLaunch" parent="Spell">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_01.wav" FacialGroup=""/>
@@ -500,6 +527,14 @@
         <AssetArray File="Assets\Sounds\Hellfire_Shotgun_08.wav" FacialGroup=""/>
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="SulfurSuicideSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_05.wav" FacialGroup=""/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
     <CSound id="SuperCloakEnd">
