@@ -91,6 +91,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePliableArmorCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseRapidAlgorithms">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRapidAlgorithmsCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseRaynorSpecial">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeRaynorSpecialCompleteOnly"/>

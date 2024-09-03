@@ -131,6 +131,9 @@
             <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectInstant id="MedivacSpeedBoost">
+        <CmdButtonArray index="Execute" Requirements="UseRapidAlgorithms"/>
+    </CAbilEffectInstant>
     <CAbilArmMagazine id="SkibisAngelRepairDrone">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <Launch value="ReleaseAtSource"/>

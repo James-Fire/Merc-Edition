@@ -11,6 +11,7 @@ Abil/Name/LowGradeStim=Low Grade Stim
 Abil/Name/MagrailMunitions=Magrail Munitions
 Abil/Name/MakeSpiderMineQueueCondor=Make Spider Mine Queue
 Abil/Name/MakeSpiderMinesCondor=Make Spider Mines
+Abil/Name/MedivacSpeedBoost=Ignite Afterburners
 Abil/Name/MorphToAgitator=Morph To Agitator
 Abil/Name/MorphToAnarchist=Morph To Anarchist
 Abil/Name/PhantomCloak=Personal Cloaking
@@ -110,6 +111,7 @@ Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
 Button/Name/OptimizedUEDLogistics=Optimized UED Logistics
 Button/Name/PliableArmor=Pliable Armor
+Button/Name/RapidAlgorithms=Rapid Algorithms
 Button/Name/ReflectiveArmor=Reflective Armor
 Button/Name/ShellShower=Shell Shower
 Button/Name/ShimmerScreen=Shimmer Screen
@@ -194,6 +196,7 @@ Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range
 Button/Tooltip/LegionSystems=Spartan Companies gain +3 missile range, +2 cannon range, and can attack ground and air units simultaneously.
 Button/Tooltip/LowGradeStims=Increase attack speed by 100% for <d time="7"/>.
 Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42"/>.
+Button/Tooltip/MedivacSpeedBoost=Increases the Charon Dropship's movement speed by 70% for <d time="8"/>.
 Button/Tooltip/MercMedicHeal=Heals a friendly biological target.<n/><n/><c val="f078ff">Heals <d ref="Effect,SkibisAngelHeal,RechargeVitalRate"/> life per <d ref="Effect,SkibisAngelHeal,RechargeVitalRate * Effect,SkibisAngelHeal,DrainVitalCostFactor"/> energy.
 Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -202,6 +205,7 @@ Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to 
 Button/Tooltip/PermanentCloakDuskWing=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/PliableArmor=Increases armor by 1 and movement speed by 2. When killed, the area is ignited, causing enemies to run in fear. Transformation time halved.
+Button/Tooltip/RapidAlgorithms=Allows the Ignite Afterburners ability, increases speed by 2, and makes deploying units instant.
 Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. When taking damage, damage dealt is briefly increased.
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ShellShower=The longer the Spartan Company attacks, the faster the attacks become 
@@ -446,6 +450,7 @@ Upgrade/Name/LooseEngineSeals=Loose Engine Seals
 Upgrade/Name/MercEdition=Merc Edition
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/PliableArmor=Pliable Armor
+Upgrade/Name/RapidAlgorithms=Rapid Algorithms
 Upgrade/Name/RaynorSpecial=Raynor Special
 Upgrade/Name/ReflectiveArmor=Reflective Armor
 Upgrade/Name/ShimmerScreen=Shimmer Screen

@@ -67,6 +67,11 @@
         <EffectArray Reference="Weapon,SpartanCompanyAUpgraded,Range" Value="3"/>
         <AffectedUnitArray value="SpartanCompany"/>
     </CUpgrade>
+    <CUpgrade id="RapidAlgorithms">
+        <EffectArray Reference="Unit,CharonDropship,Speed" Value="2.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,MedivacTransport,UnloadPeriod" Value="0.000000"/>
+        <AffectedUnitArray value="CharonDropship"/>
+    </CUpgrade>
     <CUpgrade id="ReflectiveArmor">
         <AffectedUnitArray value="Copperhead"/>
     </CUpgrade>

@@ -532,6 +532,7 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="move"/>
         <AbilArray Link="MedivacTransport"/>
+        <AbilArray Link="MedivacSpeedBoost"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -541,10 +542,10 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
             <LayoutButtons Face="Heal" Type="AbilCmd" AbilCmd="MedivacHeal,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="MedivacUnloadAll" Type="AbilCmd" AbilCmd="MedivacTransport,UnloadAt" Row="2" Column="3"/>
             <LayoutButtons Face="Heal" Type="AbilCmd" AbilCmd="MedivacDoubleBeamHeal,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="RapidDeploymentTubes" Type="Passive" Requirements="RapidDeploymentResearched" Row="1" Column="0"/>
-            <LayoutButtons Face="AdvancedHealingAI" Type="Passive" Requirements="AdvancedHealingAIPurchased" Row="1" Column="1"/>
+            <LayoutButtons Face="MedivacUnloadAll" Type="AbilCmd" AbilCmd="MedivacTransport,UnloadAt" Row="2" Column="3"/>
+            <LayoutButtons Face="RapidAlgorithms" Type="Passive" Requirements="UseRapidAlgorithms" Row="1" Column="0"/>
+            <LayoutButtons Face="MedivacSpeedBoost" Type="AbilCmd" AbilCmd="MedivacSpeedBoost,Execute" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>

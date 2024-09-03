@@ -125,6 +125,10 @@
         <Icon value="Assets\Textures\btn-ability-protoss-blinkshieldrestore.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-blinkshieldrestore.dds"/>
     </CButton>
+    <CButton id="RapidAlgorithms">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-rapiddeployment.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-rapiddeployment.dds"/>
+    </CButton>
     <CButton id="ReflectiveArmor">
         <Icon value="Assets\Textures\btn-techupgrade-terran-shapedhull.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-shapedhull.dds"/>

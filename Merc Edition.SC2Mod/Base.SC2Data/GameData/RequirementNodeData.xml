@@ -55,6 +55,9 @@
     <CRequirementCountUpgrade id="CountUpgradePliableArmorCompleteOnly">
         <Count Link="PliableArmor" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRapidAlgorithmsCompleteOnly">
+        <Count Link="RapidAlgorithms" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorSpecialCompleteOnly">
         <Count Link="RaynorSpecial" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
