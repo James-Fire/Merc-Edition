@@ -473,6 +473,20 @@
         <On Terms="Behavior.DieselBasedNapalm.Off" Send="Destroy"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
+    <CActorModelMaterial id="ForceMissilesGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.ForceMissiles.On" Send="Create"/>
+        <On index="6" Terms="Behavior.ForceMissiles.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorSound id="ForceMissilesLoop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.ForceMissiles.On" Send="Create"/>
+        <On Terms="Behavior.ForceMissiles.Off" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="ForceMissilesSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.ForceMissiles.On" Send="Create"/>
+    </CActorSound>
     <CActorModel id="GhostNukeIndicator">
         <On Terms="ActorCreation; ValidatePlayer HaveTyradorImplants" Send="AnimSetTimeScale BSD 2.000000"/>
     </CActorModel>
@@ -1218,8 +1232,8 @@
     <CActorUnit id="Harrier" parent="GenericUnitBase" unitName="Harrier">
         <Aliases value="_UnitLarge"/>
         <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On Terms="WeaponStart.WraithA.AttackStart" Send="AnimBracketStart Attack Attack,Superior"/>
-        <On Terms="WeaponStart.WraithG.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStart.ScorpionMissiles.AttackStart" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.ThermalBurst.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
         <HostSiteOps Ops="SOpBankerWraith"/>
@@ -1261,8 +1275,7 @@
     <CActorAction id="HarrierAirAttackLeft" parent="GenericAttack" effectImpact="ScorpionMissiles" effectLaunch="ScorpionMissilesLMLeft">
         <LaunchAttachQuery Methods="AMFilterWeaponLeft"/>
         <LaunchAssets Sound="WraithAWeaponBirth"/>
-        <Missile value="WraithAirAttackLeftMissile"/>
-        <ImpactMap index="None" Model="WraithAirAttackImpact" Sound="WraithAWeaponImpact"/>
+        <ImpactMap index="None" Model="HarrierAirAttackImpactLeft" Sound="WraithAWeaponImpact"/>
     </CActorAction>
     <CActorAction id="HarrierAirAttackRight" parent="GenericAttack" effectImpact="ScorpionMissiles" effectLaunch="ScorpionMissilesLMRight">
         <LaunchAttachQuery Methods="AMFilterWeaponRight"/>
@@ -1578,6 +1591,9 @@
     <CActorRange id="VultureSpiderMineUnburrowRange">
         <On index="1" Terms="SelectionLocalUpdate.SpiderMineBurrowed.Start; ValidatePlayer PlayerIsNotMercEdition"/>
     </CActorRange>
+    <CActorMissile id="HarrierAirAttackLeftMissile" parent="GenericAttackMissile" unitName="HarrierAirLeft">
+        <Model value="HarrierAirWeaponLeft"/>
+    </CActorMissile>
     <!-- Ground attack.                                                                          -->
     <CActorAction id="WreckingCrewAssaultAttack">
         <LaunchAssets Sound=""/>

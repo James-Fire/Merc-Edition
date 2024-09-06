@@ -9,6 +9,10 @@
         <Find value="1"/>
         <Value value="UseASPRocketPods"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBurstAmplifier">
+        <Find value="1"/>
+        <Value value="UseBurstAmplifier"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveJotunnSystems">
         <Find value="1"/>
         <Value value="UseJotunnSystems"/>

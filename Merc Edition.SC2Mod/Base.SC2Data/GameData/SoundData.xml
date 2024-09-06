@@ -304,6 +304,22 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
     </CSound>
+    <CSound id="ForceMissilesLoop" parent="Combat">
+        <AssetArray>
+            <File value="Assets\Sounds\Goliath_BlackOps_Lockdown_Loop_01.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,176399"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="ForceMissilesSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Goliath_BlackOps_Lockdown_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Goliath_BlackOps_Lockdown_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Goliath_BlackOps_Lockdown_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Goliath_BlackOps_Lockdown_04.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
     <CSound id="GraduatingRangeSound" parent="Combat">
         <AssetArray File="Assets\Sounds\PhysicsImpactSound_MetalHeavy_Light00.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\PhysicsImpactSound_MetalHeavy_Light01.wav" FacialGroup=""/>

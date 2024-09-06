@@ -20,6 +20,14 @@
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
+    <CUpgrade id="BurstAmplifier">
+        <EffectArray Reference="Weapon,ScorpionMissiles,DisplayAttackCount" Value="2"/>
+        <EffectArray Reference="Weapon,ThermalBurst,DisplayAttackCount" Value="3"/>
+        <AffectedUnitArray value="Harrier"/>
+    </CUpgrade>
+    <CUpgrade id="RevivalField">
+        <AffectedUnitArray value="Harrier"/>
+    </CUpgrade>
     <CUpgrade id="ChairsandAC">
         <EffectArray Reference="Unit,Bunker,LifeArmor" Value="3"/>
         <EffectArray Reference="Abil,BunkerTransport,MaxCargoCount" Value="4"/>

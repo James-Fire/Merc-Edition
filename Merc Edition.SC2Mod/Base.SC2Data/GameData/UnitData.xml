@@ -334,7 +334,7 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="MorphtoAnarchist" Type="AbilCmd" AbilCmd="MorphToAnarchist,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="FireOnTheMoveAgitator" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="FireOnTheMoveUniversal" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="TarBomb" Type="AbilCmd" AbilCmd="TarBomb,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="ViralFlammenwerfer" Type="Passive" Requirements="UseViralFlammenwerfer" Row="2" Column="2"/>
             <LayoutButtons Face="PliableArmor" Type="Passive" Requirements="UsePliableArmor" Row="2" Column="3"/>
@@ -1349,7 +1349,6 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="WraithCloak"/>
-        <BehaviorArray Link="CloakDistortionField"/>
         <WeaponArray Link="ScorpionMissiles"/>
         <WeaponArray Link="ThermalBurst"/>
         <CardLayouts>
@@ -1360,22 +1359,11 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="WraithCloakOn" Type="AbilCmd" AbilCmd="WraithCloak,On" Row="2" Column="0"/>
             <LayoutButtons Face="WraithCloakOff" Type="AbilCmd" AbilCmd="WraithCloak,Off" Row="2" Column="1"/>
-            <LayoutButtons>
-                <Face value="DisplacementField"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255"/>
-                <Requirements value="CloakDistortionFieldResearched"/>
-                <Row value="2"/>
-                <Column value="2"/>
-            </LayoutButtons>
-            <LayoutButtons>
-                <Face value="SingularityAnchor"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255"/>
-                <Requirements value="DynamicPowerRoutingResearched"/>
-                <Row value="2"/>
-                <Column value="3"/>
-            </LayoutButtons>
+            <LayoutButtons Face="TriggerOverdrive" Type="Passive" Row="2" Column="2"/>
+            <LayoutButtons Face="ForceMissiles" Type="Passive" Row="2" Column="3"/>
+            <LayoutButtons Face="FireOnTheMoveUniversal" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="BurstAmplifier" Type="Passive" Requirements="UseBurstAmplifier" Row="1" Column="1"/>
+            <LayoutButtons Face="RevivalField" Type="Passive" Requirements="UseRevivalField" Row="1" Column="2"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
@@ -1480,5 +1468,10 @@
             <LayoutButtons Face="ThornShieldWarPig" Type="Passive" Requirements="UseThornShield" Row="2" Column="2"/>
             <LayoutButtons Face="LaserTargetingSystem" Type="Passive" Row="1" Column="0"/>
         </CardLayouts>
+    </CUnit>
+    <CUnit id="HarrierAirLeft" parent="MISSILE">
+        <Race value="Terr"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
     </CUnit>
 </Catalog>

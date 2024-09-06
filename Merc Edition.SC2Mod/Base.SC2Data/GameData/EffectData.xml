@@ -228,6 +228,30 @@
         <Amount value="5"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="ForceMissilesApplyBehavior">
+        <Behavior value="ForceMissiles"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="ScorpionMissilesInitialSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ScorpionMissilesPersistent"/>
+        <EffectArray value="ScorpionMissilesUpgradedPersistent"/>
+    </CEffectSet>
+    <CEffectSet id="ScorpionMissilesLeftSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ScorpionMissiles"/>
+        <EffectArray value="ForceMissilesApplyBehavior"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="ScorpionMissilesUpgradedPersistent">
+        <ValidatorArray value="HaveBurstAmplifier"/>
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="ScorpionMissilesLMLeft"/>
+        <PeriodicEffectArray value="ScorpionMissilesLMRight"/>
+        <PeriodicPeriodArray value="0.4"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
     <CEffectCreatePersistent id="ScreecherMissilesCreatePersistentSecondary">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
@@ -720,8 +744,8 @@
     </CEffectDamage>
     <CEffectLaunchMissile id="ScorpionMissilesLMLeft">
         <EditorCategories value="Race:Terran"/>
-        <ImpactEffect value="ScorpionMissiles"/>
-        <AmmoUnit value="WraithAirWeaponLeft"/>
+        <ImpactEffect value="ScorpionMissilesLeftSet"/>
+        <AmmoUnit value="HarrierAirLeft"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="ScorpionMissilesPersistent">
         <EditorCategories value="Race:Terran"/>
@@ -821,6 +845,10 @@
         <ShieldBonus value="5"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="TriggerOverdriveApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="TriggerOverdrive"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="U-240RoundsBombApplyBehavior">
         <ValidatorArray index="0" value="HaveU240Rounds"/>
         <Behavior value="U-240RoundsBomb"/>

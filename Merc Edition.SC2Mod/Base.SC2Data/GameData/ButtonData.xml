@@ -81,6 +81,10 @@
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="Thor"/>
     </CButton>
+    <CButton id="BurstAmplifier">
+        <Icon value="Assets\Textures\btn-upgrade-swann-improvedburstlaser.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-improvedburstlaser.dds"/>
+    </CButton>
     <CButton id="CerberusHoundMines">
         <Icon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
@@ -108,6 +112,10 @@
     <CButton id="FerrierofSouls">
         <Icon value="Assets\Textures\btn-ability-mengsk-ghost-supercloak.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-ghost-supercloak.dds"/>
+    </CButton>
+    <CButton id="ForceMissiles">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
     </CButton>
     <CButton id="IgniteAfterburnersHelsAngel">
         <Icon value="Assets\Textures\btn-ability-mengsk-viking-speed.dds"/>
@@ -157,7 +165,7 @@
         <Icon value="Assets\Textures\btn-status-radar.dds"/>
         <AlertIcon value="Assets\Textures\btn-status-radar.dds"/>
     </CButton>
-    <CButton id="FireOnTheMoveAgitator">
+    <CButton id="FireOnTheMoveUniversal">
         <Icon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-fireonthemove.dds"/>
     </CButton>
@@ -195,6 +203,10 @@
     <CButton id="PliableArmor">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="RevivalField">
+        <Icon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
     </CButton>
     <CButton id="ShellShower">
         <Icon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
@@ -357,6 +369,10 @@
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-wraithfighterbronze.dds"/>
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="Wraith"/>
+    </CButton>
+    <CButton id="TriggerOverdrive">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-wraith-attackspeed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-wraith-attackspeed.dds"/>
     </CButton>
     <CButton id="TyradorImplants">
         <Icon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>

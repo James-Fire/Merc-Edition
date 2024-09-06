@@ -35,6 +35,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBurstAmplifier">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBurstAmplifierCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseChairsandAC">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeChairsandACCompleteOnly"/>
@@ -102,6 +106,10 @@
     <CRequirement id="UseReflectiveArmor">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeReflectiveArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRevivalField">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRevivalFieldCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseShimmerScreen">
         <EditorCategories value="TechType:Ability"/>

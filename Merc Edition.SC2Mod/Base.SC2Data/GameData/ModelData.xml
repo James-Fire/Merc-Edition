@@ -178,6 +178,9 @@
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="ForceMissilesGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Goliath_Lockdown\Glaze_Goliath_Lockdown.m3"/>
+    </CModelFoliage>
     <CModel id="GraduatingRangeApplyBehavior">
         <Model value="Assets\Effects\Protoss\Fenix_Whirlwind_Impact\Fenix_Whirlwind_Impact.m3"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
@@ -665,5 +668,13 @@
         <EditorCategories value="Race:Terran"/>
         <ScaleMax value="1.400000,1.400000,1.400000"/>
         <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModel id="HarrierAirAttackImpactLeft" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HarrierAirWeaponLeft" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Missile\Goliath_Lockdown_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
     </CModel>
 </Catalog>

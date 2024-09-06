@@ -211,7 +211,11 @@
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.694"/>
         <Effect value="ThermalBurstLaunchMissile"/>
-        <AllowedMovement value="Slowing"/>
+        <AllowedMovement value="Moving"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <PreEffect value="TriggerOverdriveApplyBehavior"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ScorpionMissiles">
         <EditorCategories value="Race:Terran"/>
@@ -219,8 +223,12 @@
         <DisplayAttackCount value="2"/>
         <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.25"/>
-        <Effect value="ScorpionMissilesPersistent"/>
-        <AllowedMovement value="Slowing"/>
+        <Effect value="ScorpionMissilesInitialSet"/>
+        <AllowedMovement value="Moving"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <PreEffect value="TriggerOverdriveApplyBehavior"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="FistsofKronos">
         <EditorCategories value="Race:Terran"/>

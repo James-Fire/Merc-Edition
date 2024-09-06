@@ -13,6 +13,9 @@
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurstAmplifierCompleteOnly">
+        <Count Link="BurstAmplifier" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeChairsandACCompleteOnly">
         <Count Link="ChairsandAC" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -63,6 +66,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeReflectiveArmorCompleteOnly">
         <Count Link="ReflectiveArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRevivalFieldCompleteOnly">
+        <Count Link="RevivalField" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeShimmerScreenCompleteOnly">
         <Count Link="ShimmerScreen" State="CompleteOnly"/>

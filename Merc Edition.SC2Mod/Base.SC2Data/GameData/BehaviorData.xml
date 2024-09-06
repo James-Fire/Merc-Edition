@@ -40,6 +40,15 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ForceMissiles">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="PermanentCloakDuskWing">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
@@ -304,6 +313,17 @@
             <Kind index="NoProc" value="0"/>
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TriggerOverdrive">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-wraith-attackspeed.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="10"/>
+        <Duration value="6"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="U-240RoundsBomb">
         <InfoFlags index="Hidden" value="1"/>
