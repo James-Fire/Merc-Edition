@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="250mmUranusCarronades">
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="250mmUranusCarronadesDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSLifeLargestFirst"/>
+        </AcquireTargetSorts>
+        <Range value="11"/>
+        <Arc value="360"/>
+        <Period value="1.32"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="250mmUranusCarronadesCP"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ACVFusionCutter">
         <EditorCategories value="Race:Terran"/>
         <Options index="Melee" value="1"/>
@@ -42,6 +60,16 @@
         <Effect value="ChargedJupiterRailDamage"/>
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="DevastatorMissilesMerc">
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="DevastatorMissilesMercDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Period value="0.7607"/>
+        <Effect value="DevastatorMissilesMercLaunchMissile"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="DuskWingBanshee">
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
@@ -75,8 +103,6 @@
         <DamagePoint value="0"/>
         <Effect value="ScreecherMissilesCreatePersistentSecondary"/>
         <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="-0.1"/>
-        <RandomDelayMax value="0.3"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DuskWingBanshee3">
         <EditorCategories value="Race:Terran"/>
@@ -106,8 +132,21 @@
         <DamagePoint value="0"/>
         <Effect value="ScreecherMissilesCreatePersistentTertiary"/>
         <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="-0.1"/>
-        <RandomDelayMax value="0.3"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HailstormMissilePodsMerc">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-weapon-terran-hailstormmissiles.dds"/>
+        <DisplayEffect value="HellstormMissilePodsDamageMerc"/>
+        <DisplayAttackCount value="8"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <RangeSlop value="0"/>
+        <Period value="1.31"/>
+        <Backswing value="0.25"/>
+        <Effect value="HailstormMissilePodsCreatePersistentMerc"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="HellbornFlamethrower">
         <EditorCategories value="Race:Terran"/>
@@ -151,23 +190,62 @@
         <Period value="3"/>
         <Effect value="CoeusMissileCP"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="PharaohLaserBattery">
+    <CWeaponLegacy id="PharaohBatteryTertiary">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Options index="IgnoreThreat" value="1"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <DisplayEffect value="PharaohLaserBatteryDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquirePrioritization value="ByAngle"/>
-        <Range value="2"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSRandom"/>
+        </AcquireTargetSorts>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Link="Weapon/PharaohLaserBattery"/>
         <Period value="0.225"/>
-        <Effect value="PharaohLaserBatteryLM"/>
-        <AllowedMovement value="Slowing"/>
+        <DamagePoint value="0"/>
+        <Effect value="PharaohLaserBatteryLMTertiary"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMax value="0.1875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PharaohBatteryQuarternary">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Options index="IgnoreThreat" value="1"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="PharaohLaserBatteryDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSRandom"/>
+        </AcquireTargetSorts>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Link="Weapon/PharaohLaserBattery"/>
+        <Period value="0.225"/>
+        <DamagePoint value="0"/>
+        <Effect value="PharaohLaserBatteryLMQuarternary"/>
+        <AllowedMovement value="Moving"/>
         <RandomDelayMax value="0.1875"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="FRANomadKingCannons">
         <EditorCategories value="Race:Terran"/>
-        <Options index="Hidden" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <DisplayEffect value="FRANomadKingCannonsDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -193,6 +271,86 @@
         <Backswing value="1.167"/>
         <RandomDelayMin value="-0.063"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="PharaohBatterySecondary">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Options index="IgnoreThreat" value="1"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="PharaohLaserBatteryDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSRandom"/>
+        </AcquireTargetSorts>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Link="Weapon/PharaohLaserBattery"/>
+        <Period value="0.225"/>
+        <DamagePoint value="0"/>
+        <Effect value="PharaohLaserBatteryLMSecondary"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMax value="0.1875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LogiLaserBattery">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="LogiLaserBatteryDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Link="Weapon/PharaohLaserBattery"/>
+        <Period value="0.225"/>
+        <Effect value="PharaohLaserBatteryLM"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMax value="0.1875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PointBreakDroneWeapon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <TargetFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Marker Link="Weapon/PointDefenseLaser">
+            <MatchFlags index="Link" value="1"/>
+        </Marker>
+        <Period value="0"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="PointDefenseLaserInitialSet"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Arc value="360"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RagnarokNRoll">
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="RagnarokNRollDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <Arc value="9.9975"/>
+        <Period value="1.98"/>
+        <Effect value="RagnarokNRollDamage"/>
+        <AllowedMovement value="Moving"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="SpartanCompanyA">
         <Effect value="SpartanCompanyAirWeaponSet"/>
     </CWeaponLegacy>
@@ -216,6 +374,8 @@
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="LinkedCooldown" value="0"/>
         <PreEffect value="TriggerOverdriveApplyBehavior"/>
+        <Arc value="4.9987"/>
+        <ArcSlop value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ScorpionMissiles">
         <EditorCategories value="Race:Terran"/>
@@ -223,12 +383,14 @@
         <DisplayAttackCount value="2"/>
         <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.25"/>
-        <Effect value="ScorpionMissilesInitialSet"/>
+        <Effect value="ScorpionMissilesPersistent"/>
         <AllowedMovement value="Moving"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="LinkedCooldown" value="0"/>
         <PreEffect value="TriggerOverdriveApplyBehavior"/>
+        <Arc value="4.9987"/>
+        <ArcSlop value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="FistsofKronos">
         <EditorCategories value="Race:Terran"/>
@@ -263,5 +425,15 @@
         <Range value="2"/>
         <Period value="2"/>
         <Effect value="AnarchistWeaponSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Railcannon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="RailcannonDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="7"/>
+        <Period value="1.3"/>
+        <Effect value="RailcannonLM"/>
     </CWeaponLegacy>
 </Catalog>

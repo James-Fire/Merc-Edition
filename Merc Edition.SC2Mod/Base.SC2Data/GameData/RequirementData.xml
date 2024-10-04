@@ -31,6 +31,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeASPRocketPodsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseArmoredHousing">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeArmoredHousingCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBearclawGauntlets">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
@@ -54,6 +58,14 @@
     <CRequirement id="UseConfederateReactor">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeConfederateReactorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseDeadManSwitch">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeDeadManSwitchCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseDevastatorOverride">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeDevastatorOverrideCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseEidolonSuit">
         <EditorCategories value="TechType:Ability"/>
@@ -83,6 +95,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeLooseEngineSealsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseMASH">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMASHCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseMercEdition">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
@@ -94,6 +110,10 @@
     <CRequirement id="UsePliableArmor">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePliableArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRagnarokWeapons">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRagnarokWeaponsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseRapidAlgorithms">
         <EditorCategories value="TechType:Ability"/>
@@ -110,6 +130,10 @@
     <CRequirement id="UseRevivalField">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeRevivalFieldCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRorkesRedline">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRorkesRedlineCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseShimmerScreen">
         <EditorCategories value="TechType:Ability"/>
@@ -150,6 +174,10 @@
     <CRequirement id="UseU240Rounds">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeU240RoundsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseUranusProtocol">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeUranusProtocolCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseViralFlammenwerfer">
         <EditorCategories value="TechType:Ability"/>

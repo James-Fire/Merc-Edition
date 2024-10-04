@@ -40,6 +40,33 @@
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BurstAmplifierSpeed">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseBurstAmplifier"/>
+        <DisableValidatorArray value="CasterNotRecentlyDealtDamage"/>
+        <Modification MoveSpeedBonus="1.25"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FerrierofSouls">
+        <Tooltip value="Button/Tooltip/FerrierofSouls"/>
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-mengsk-ghost-supercloak.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Modification MoveSpeedBonus="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedivacTransportHeal">
+        <Requirements value="UseMASH"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="1.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RevivalFieldCooldown">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="336"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ForceMissiles">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
@@ -164,6 +191,25 @@
     <CBehaviorBuff id="Precursor">
         <Modification RadiusMultiplier="0"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="RagnarokOn">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <WeaponEnableArray value="RagnarokNRoll"/>
+            <WeaponDisableArray value="PharaohBatteryTertiary"/>
+            <WeaponDisableArray value="PharaohBatteryQuarternary"/>
+            <WeaponDisableArray value="PharaohBatterySecondary"/>
+            <WeaponDisableArray value="LogiLaserBattery"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RedlineReactor">
+        <Alignment value="Positive"/>
+        <Duration value="8.4"/>
+        <Modification AccelerationBonus="3">
+            <AdditiveMoveSpeedFactor value="1"/>
+            <DamageDealtUnscaled index="Ranged" value="10"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ReflectiveArmor">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -193,6 +239,23 @@
         <Modification>
             <DamageDealtFraction index="Ranged" value="0.25"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RevivalFieldController">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseRevivalField"/>
+        <DamageResponse Handled="RevivalFieldONSet">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RevivalFieldDodge">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseRevivalField"/>
+        <DamageResponse Handled="RevivalFieldOFFSet" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShellShower">
         <Alignment value="Positive"/>
@@ -237,6 +300,12 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
         <ExpireEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StarcruiserShieldGlaze">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseRorkesRedline"/>
+        <Duration value="2"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="StunnedAnarchistLeap">
         <Alignment value="Negative"/>
@@ -302,6 +371,17 @@
         <Duration value="7"/>
         <Modification MoveSpeedMultiplier="0.25" WeaponRange="-3"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="TitanDontDie">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\BTN-techupgrade-terran-combatshield-color.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="UseDeadManSwitch"/>
+        <RemoveValidatorArray value="NotReborn"/>
+        <DamageResponse Fatal="1" Handled="TitanWreckageAbil" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ThornShield">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -311,6 +391,16 @@
             <Kind index="Ranged" value="0"/>
             <Kind index="Splash" value="0"/>
             <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HarrierDontDie">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="HarrierCantRevive"/>
+        <DisableValidatorArray value="HaveRevivalField"/>
+        <DamageResponse Fatal="1" Handled="HarrierRecall" ModifyFraction="0">
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
@@ -332,5 +422,33 @@
         <DamageResponse Fatal="1" Handled="U-240RoundsBombCreateUnit">
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="UranusProtocol">
+        <Tooltip value="Button/Tooltip/ActivateUranusProtocol"/>
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-hydraliskmissilepoweron.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="21"/>
+        <Modification>
+            <WeaponArray Link="250mmUranusCarronades"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WolverinesOrders">
+        <Tooltip value="Button/Tooltip/MercCommander"/>
+        <InfoIcon value="Assets\Icons and Wireframes\merc commander.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="2"/>
+        <Duration value="0.5"/>
+        <Modification SightBonus="1" MoveSpeedBonus="0.5" RangedWeaponRange="0.5">
+            <AdditiveAttackSpeedFactor value="0.1"/>
+        </Modification>
+        <MaxStackCountPerCaster value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AURAWolverinesOrders">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.3"/>
+        <PeriodicEffect value="MercCommanderSA"/>
     </CBehaviorBuff>
 </Catalog>

@@ -10,6 +10,9 @@
     <CRequirementCountUpgrade id="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat">
         <Count Link="AblativeScales" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeArmoredHousingCompleteOnly">
+        <Count Link="ArmoredHousing" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -27,6 +30,12 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeConfederateReactorCompleteOnly">
         <Count Link="ConfederateReactor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadManSwitchCompleteOnly">
+        <Count Link="DeadManSwitch" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDevastatorOverrideCompleteOnly">
+        <Count Link="DevastatorOverride" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
         <Count Link="EidolonSuit" State="CompleteOnly"/>
@@ -49,6 +58,9 @@
     <CRequirementCountUpgrade id="CountUpgradeLooseEngineSealsCompleteOnly">
         <Count Link="LooseEngineSeals" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMASHCompleteOnly">
+        <Count Link="MASH" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMercEditionCompleteOnly">
         <Count Link="MercEdition" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -57,6 +69,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradePliableArmorCompleteOnly">
         <Count Link="PliableArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRagnarokWeaponsCompleteOnly">
+        <Count Link="RagnarokWeapons" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRapidAlgorithmsCompleteOnly">
         <Count Link="RapidAlgorithms" State="CompleteOnly"/>
@@ -69,6 +84,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRevivalFieldCompleteOnly">
         <Count Link="RevivalField" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRorkesRedlineCompleteOnly">
+        <Count Link="RorkesRedline" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeShimmerScreenCompleteOnly">
         <Count Link="ShimmerScreen" State="CompleteOnly"/>
@@ -109,6 +127,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeU240RoundsCompleteOnly">
         <Count Link="U240Rounds" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUranusProtocolCompleteOnly">
+        <Count Link="UranusProtocol" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeViralFlammenwerferCompleteOnly">
         <Count Link="ViralFlammenwerfer" State="CompleteOnly"/>

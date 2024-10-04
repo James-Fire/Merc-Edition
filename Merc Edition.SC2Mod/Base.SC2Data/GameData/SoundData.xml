@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="250mmUranusCarronadesImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Explosion_CarpetBurn_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Explosion_CarpetBurn_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Explosion_CarpetBurn_5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Explosion_CarpetBurn_3.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="250mmUranusCarronadesLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_10.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_11.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\WarHawk_Missile_Launch_12.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="AmplifiedThermalBurstImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_08.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="AnarchistAttack" parent="TerranAck">
         <AssetArray>
             <File value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_018.ogg"/>
@@ -239,6 +275,87 @@
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_017.fxe"/>
         </AssetArray>
     </CSound>
+    <CSound id="DevastatorMissilesMercImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_06.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="DevastatorMissilesMercLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Liberator_AA_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AA_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AA_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AA_Launch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AA_Launch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AA_Launch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AA_Launch_07.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="MissileTurret_HellstormAttackImpact">
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="MissileTurret_HellstormAttackLaunch">
+        <Volume value="-11.000000,-9.000000"/>
+    </CSound>
+    <CSound id="RailcannonImpact" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_05.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Spread value="20.000000"/>
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="RailcannonLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact04_1ch.wav" FacialGroup=""/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <OverlapTimeDelta value="50"/>
+        <Pitch value="5.000000,5.000000"/>
+        <Volume value="-1.000000,-1.000000"/>
+        <VolumeRolloffPoints Distance="15.472779"/>
+        <VolumeRolloffPoints Distance="30.802292" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="RevivalFieldDodgeSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact05_1ch.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="StarcruiserAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\StarcruiserAttack1.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\StarcruiserAttack2.mp3" FacialGroup=""/>
+        <DupeDestroyCount value="12"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="12"/>
+        <Pitch value="3.000000,7.000000"/>
+        <Volume value="-4.400000,-2.500000"/>
+    </CSound>
     <CSound id="BlockBJetpack">
         <AssetArray File="Assets\Sounds\Hellbat_JumpJet_Launch01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Hellbat_JumpJet_Launch02.wav" FacialGroup=""/>
@@ -339,6 +456,42 @@
         <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_08.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_09.wav" FacialGroup=""/>
         <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="RagnarokNRollImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact05_1ch.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="RagnarokNRollLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact05_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact06_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact07_1ch.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="RedlineReactor" parent="Combat">
+        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_TerrainObjectBraxisAlphaReactorDoodadStandArmAttach0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_TerrainObjectBraxisAlphaReactorDoodadStandArmAttach1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_TerrainObjectBraxisAlphaReactorDoodadStandArmAttach2.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RedlineReactorLoop" parent="ConstantFlames">
+        <AssetArray>
+            <File value="Assets\Sounds\Uni\Doodads\Doodad_TerrainObjectBraxisAlphaReactorDoodadStandLoop.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,753458"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="ShredderRoundsLaunch" parent="Combat">
         <EditorCategories value="Race:Terran"/>
@@ -544,6 +697,12 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
         <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="StarcruiserShieldBirth" parent="Combat">
+        <AssetArray File="Assets\Sounds\SOA_ShieldOverCharge_End01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ShieldOverCharge_End02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ShieldOverCharge_End03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ShieldOverCharge_End04_1ch.wav" FacialGroup=""/>
     </CSound>
     <CSound id="SulfurSuicideSound" parent="Combat">
         <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_01.wav" FacialGroup=""/>

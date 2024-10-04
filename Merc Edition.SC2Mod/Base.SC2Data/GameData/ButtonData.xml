@@ -8,6 +8,14 @@
         <Icon value="Assets\Icons and Wireframes\ablativescales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\ablativescales.dds"/>
     </CButton>
+    <CButton id="ActivateUranusProtocol">
+        <Icon value="Assets\Textures\btn-ability-stetmann-hydraliskmissilepoweron.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-hydraliskmissilepoweron.dds"/>
+    </CButton>
+    <CButton id="DeadManSwitch">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-immortalityprotocol.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-immortalityprotocol.dds"/>
+    </CButton>
     <CButton id="AdvancedSiegeOptics">
         <Icon value="Assets\Textures\btn-upgrade-swann-vehiclerangeincrease.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-swann-vehiclerangeincrease.dds"/>
@@ -15,6 +23,10 @@
     <CButton id="AdvancedSiegeTech">
         <Icon value="Assets\Textures\btn-upgrade-raynor-improvedsiegemode.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-raynor-improvedsiegemode.dds"/>
+    </CButton>
+    <CButton id="ArmoredHousing">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="BearclawGauntlets">
         <Icon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
@@ -89,6 +101,22 @@
         <Icon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
     </CButton>
+    <CButton id="DivineArmor">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="MagMine">
+        <Icon value="Assets\Textures\btn-doodad-magmine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-doodad-magmine.dds"/>
+    </CButton>
+    <CButton id="MercCommander">
+        <Icon value="Assets\Icons and Wireframes\merc commander.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\merc commander.dds"/>
+    </CButton>
+    <CButton id="NeosteelCupHolders">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="ChemicalPlating">
         <Icon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds"/>
@@ -109,6 +137,18 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
     </CButton>
+    <CButton id="DevastatorOverride">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-hailstormmissilepods.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-hailstormmissilepods.dds"/>
+    </CButton>
+    <CButton id="EnableBatteries">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-battlecruiser-laser.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-battlecruiser-laser.dds"/>
+    </CButton>
+    <CButton id="EnableRagnarok">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-battlecruiser-yamato.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-battlecruiser-yamato.dds"/>
+    </CButton>
     <CButton id="FerrierofSouls">
         <Icon value="Assets\Textures\btn-ability-mengsk-ghost-supercloak.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-ghost-supercloak.dds"/>
@@ -116,6 +156,10 @@
     <CButton id="ForceMissiles">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+    </CButton>
+    <CButton id="HyperjumpStarcruiser">
+        <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
     </CButton>
     <CButton id="IgniteAfterburnersHelsAngel">
         <Icon value="Assets\Textures\btn-ability-mengsk-viking-speed.dds"/>
@@ -141,9 +185,37 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-neosteelframe.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-neosteelframe.dds"/>
     </CButton>
+    <CButton id="MASH">
+        <Icon value="Assets\Textures\btn-ability-terran-advancedhealingai.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-advancedhealingai.dds"/>
+    </CButton>
+    <CButton id="ChairsandAC">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="PointBreakDrone">
+        <Icon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+    </CButton>
+    <CButton id="PsychoMissiles">
+        <Icon value="Assets\Icons and Wireframes\pyshco missiles.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\pyshco missiles.dds"/>
+    </CButton>
+    <CButton id="R31TearGasRounds">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-warhound-fearrounds.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-warhound-fearrounds.dds"/>
+    </CButton>
+    <CButton id="RagnarokWeapons">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-battlecruiser-yamato.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-battlecruiser-yamato.dds"/>
+    </CButton>
     <CButton id="RapidAlgorithms">
         <Icon value="Assets\Textures\btn-techupgrade-terran-rapiddeployment.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-rapiddeployment.dds"/>
+    </CButton>
+    <CButton id="RedlineReactor">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="ReflectiveArmor">
         <Icon value="Assets\Textures\btn-techupgrade-terran-shapedhull.dds"/>
@@ -207,6 +279,10 @@
     <CButton id="RevivalField">
         <Icon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
+    </CButton>
+    <CButton id="RorkesRedline">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="ShellShower">
         <Icon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
@@ -345,6 +421,13 @@
         <AlertIcon value="Assets\Textures\btn-unit-terran-maraudermercenary.dds"/>
         <EditorCategories value="Race:Terran"/>
         <HotkeyAlias value="Marauder"/>
+    </CButton>
+    <CButton id="CharonDropshipTrainSkibisAngel">
+        <Icon value="Assets\Textures\btn-unit-terran-medicmercenary.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-medicmercenary.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="Medic"/>
+        <ChargeText value="SkibidiSkibidiHeHeHaHa"/>
     </CButton>
     <CButton id="TrainWarPig">
         <Icon value="Assets\Textures\btn-unit-terran-marinemercenary.dds"/>

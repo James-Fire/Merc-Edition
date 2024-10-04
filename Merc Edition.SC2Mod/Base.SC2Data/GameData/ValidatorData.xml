@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareVital id="OwningTitanofPointBreakDronehas10Energy">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="10"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareDamageDealtTime id="CasterNotRecentlyDealtDamage">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Value value="3"/>
+    </CValidatorUnitCompareDamageDealtTime>
     <CValidatorUnitCompareBehaviorCount id="CopperheadReflectiveArmorActive">
         <WhichUnit Value="Caster"/>
         <Value value="1"/>
         <Behavior value="ReflectiveArmorActiveforBeamVisual"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HarrierCantRevive">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="RevivalFieldCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorPlayerRequirement id="HaveASPRocketPods">
         <Find value="1"/>
         <Value value="UseASPRocketPods"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveDevastatorOverride">
+        <Find value="1"/>
+        <Value value="UseDevastatorOverride"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveBurstAmplifier">
         <Find value="1"/>
         <Value value="UseBurstAmplifier"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveRevivalField">
+        <Find value="1"/>
+        <Value value="UseRevivalField"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveRorkesRedline">
+        <Find value="1"/>
+        <Value value="UseRorkesRedline"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveJotunnSystems">
         <Find value="1"/>
@@ -69,6 +96,11 @@
         <Value value="1"/>
         <Behavior value="HelsAngelIsFighterMode"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IsMovingandHasBurstAmplifiers">
+        <Type value="And"/>
+        <CombineArray value="HaveBurstAmplifier"/>
+        <CombineArray value="CasterIsMoving"/>
+    </CValidatorCombine>
     <CValidatorLocationCompareRange id="IsTarget">
         <Value Effect="LiberatorCP" Value="TargetUnit"/>
     </CValidatorLocationCompareRange>
@@ -102,6 +134,11 @@
     <CValidatorPlayerRequirement id="PlayerIsNotMercEdition">
         <Value value="UseMercEdition"/>
     </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="RedlineReactorActive">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="RedlineReactor"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorLocationEnumArea id="SkibidiRepairDroneAutocast">
         <WhichLocation Value="CasterUnit"/>
         <AreaArray>

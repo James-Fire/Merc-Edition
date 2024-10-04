@@ -15,6 +15,12 @@
         <EffectArray Reference="Unit,HammerSecurity,LifeStart" Value="75"/>
         <AffectedUnitArray value="HammerSecurity"/>
     </CUpgrade>
+    <CUpgrade id="ArmoredHousing">
+        <EffectArray Reference="Unit,MissileTurret,LifeMax" Value="100"/>
+        <EffectArray Reference="Unit,MissileTurret,LifeStart" Value="100"/>
+        <EffectArray Reference="Unit,MissileTurret,LifeArmor" Value="2"/>
+        <AffectedUnitArray value="MissileTurret"/>
+    </CUpgrade>
     <CUpgrade id="BearclawGauntlets">
         <EffectArray Operation="Set" Reference="Effect,DevilDogSearchArea,AreaArray[0].Radius" Value="0.96"/>
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
@@ -24,6 +30,22 @@
         <EffectArray Reference="Weapon,ScorpionMissiles,DisplayAttackCount" Value="2"/>
         <EffectArray Reference="Weapon,ThermalBurst,DisplayAttackCount" Value="3"/>
         <AffectedUnitArray value="Harrier"/>
+    </CUpgrade>
+    <CUpgrade id="DeadManSwitch">
+        <AffectedUnitArray value="Titan"/>
+    </CUpgrade>
+    <CUpgrade id="DevastatorOverride">
+        <EffectArray Operation="Set" Reference="Weapon,DevastatorMissilesMerc,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DevastatorMissilesMerc,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,LongboltMissile,Options[Hidden]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,LongboltMissile,Options[Disabled]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,HailstormMissilePodsMerc,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,HailstormMissilePodsMerc,Options[Hidden]" Value="0"/>
+        <AffectedUnitArray value="MissileTurret"/>
+    </CUpgrade>
+    <CUpgrade id="RagnarokWeapons">
+        <EffectArray Operation="Set" Reference="Weapon,RagnarokNRoll,Options[Hidden]" Value="0"/>
+        <AffectedUnitArray value="Starcruiser"/>
     </CUpgrade>
     <CUpgrade id="RevivalField">
         <AffectedUnitArray value="Harrier"/>
@@ -128,6 +150,7 @@
     <CUpgrade id="MercEdition"/>
     <CUpgrade id="NeosteelCupHolders">
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
+        <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.SightBonus" Value="3"/>
         <AffectedUnitArray value="Bunker"/>
     </CUpgrade>
     <CUpgrade id="PliableArmor">
@@ -144,6 +167,11 @@
     </CUpgrade>
     <CUpgrade id="RaynorSpecial">
         <AffectedUnitArray value="Condor"/>
+    </CUpgrade>
+    <CUpgrade id="RorkesRedline">
+        <AffectedUnitArray value="Starcruiser"/>
+        <EffectArray Reference="Unit,Starcruiser,ShieldsMax" Value="250"/>
+        <EffectArray Reference="Unit,Starcruiser,ShieldsStart" Value="250"/>
     </CUpgrade>
     <CUpgrade id="ShimmerScreen">
         <AffectedUnitArray value="DuskWing"/>
@@ -223,6 +251,15 @@
         <EffectArray Reference="Effect,BarBreakersDamage,AttributeBonus[Light]" Value="3"/>
         <EffectArray Reference="Weapon,BarBreakers,Range" Value="1"/>
         <AffectedUnitArray value="BlockB"/>
+    </CUpgrade>
+    <CUpgrade id="MASH">
+        <EffectArray Operation="Set" Reference="Effect,MedivacHeal,DrainVitalCostFactor" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,CharonDropship,EnergyMax" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,CharonDropship,EnergyStart" Value="0"/>
+        <AffectedUnitArray value="CharonDropship"/>
+    </CUpgrade>
+    <CUpgrade id="UranusProtocol">
+        <AffectedUnitArray value="Titan"/>
     </CUpgrade>
     <CUpgrade id="ViralFlammenwerfer">
         <EffectArray Reference="Effect,HellbornFlamethrowerDamage,AttributeBonus[Light]" Value="10"/>

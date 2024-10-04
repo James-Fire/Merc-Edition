@@ -5,6 +5,13 @@
         <ResourceAmountBonus index="Minerals" value="10"/>
         <ResourceAmountBonus index="Vespene" value="4"/>
     </CAbilHarvest>
+    <CAbilEffectInstant id="ActivateUranus">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="63"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SJGriffon" Requirements="UseUranusProtocol"/>
+    </CAbilEffectInstant>
     <CAbilTrain id="BarracksTrain">
         <InfoArray index="Train9" Time="25">
             <Button DefaultButtonFace="TrainWarPig" State="Restricted"/>
@@ -33,6 +40,17 @@
         <InfoArray index="Train15" Time="50">
             <Button DefaultButtonFace="TrainShadow" State="Restricted" Requirements="HaveAttachedBarrTechLabOrAttachedTechReactorAndShadowOps"/>
             <Unit value="Shadow"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="CharonDropshipTrain">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <InfoArray index="Train1" Time="19">
+            <Resource index="Minerals" value="-50"/>
+            <Resource index="Vespene" value="-25"/>
+            <Button DefaultButtonFace="MercMedic" State="Restricted" Requirements="UseMASH"/>
+            <Unit value="MercMedic"/>
+            <Unit value="MercMedic"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilEffectTarget id="DarkTemplarShadowFury">
@@ -131,9 +149,62 @@
             <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="MagMine">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MagMineCU"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MagMine"/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="MedivacSpeedBoost">
         <CmdButtonArray index="Execute" Requirements="UseRapidAlgorithms"/>
     </CAbilEffectInstant>
+    <CAbilBehavior id="RagnarokToggle">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="EnableRagnarok" Requirements="UseRagnarokWeapons"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="EnableBatteries" Requirements="UseRagnarokWeapons"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="0.7"/>
+        </Cost>
+        <BehaviorArray value="RagnarokOn"/>
+    </CAbilBehavior>
+    <CAbilEffectInstant id="RedlineReactor">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RedlineReactorAB"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RedlineReactor" Requirements="UseRorkesRedline"/>
+        <Flags index="Transient" value="1"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="RevivalField">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="336"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RevivalField" Requirements="UseRevivalField">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilBehavior id="MissileTurretSalvage">
+        <Name value="Abil/Name/Salvage"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="On" DefaultButtonFace="Salvage" Requirements="UseArmoredHousing">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="SalvageShared"/>
+        <ValidatorArray value="HasNoCargo"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="SJCloakedMineAttack">
+        <AutoCastFilters value="-;Self,Player,Ally,Neutral,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="8"/>
+    </CAbilEffectTarget>
     <CAbilArmMagazine id="SkibisAngelRepairDrone">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <Launch value="ReleaseAtSource"/>
@@ -560,4 +631,91 @@
         <AutoCastCountMin value="1"/>
         <ValidatorArray value="PlayerIsMercEdition"/>
     </CAbilMorph>
+    <CAbilMorph id="TitanReborn">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Thor"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <RefundFraction>
+            <Resource index="Minerals" value="0"/>
+            <Resource index="Vespene" value="0"/>
+            <Resource index="Terrazine" value="0"/>
+            <Resource index="Custom" value="0"/>
+        </RefundFraction>
+        <InfoArray Score="1" Unit="Titan">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="60"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="60"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="60"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="60"/>
+                <EffectArray index="Finish" value="ZealotPurifierReviveRemoveBehavior2"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastAcquireLevel value="None"/>
+        <AutoCastRange value="9"/>
+        <AutoCastCountMax value="100"/>
+    </CAbilMorph>
+    <CAbilMorph id="TitanWreckage">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Thor"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="TitanWreckage">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="ReviveSet"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilArmMagazine id="TitanDroneMagazine">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Launch value="ReleaseAtSource"/>
+        <Flags index="ShowStatus" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Leash value="0.5"/>
+        <InfoArray index="Ammo1" CountStart="1" Manage="Recall" Unit="PointBreakDrone">
+            <Charge Link="Abil/##id##"/>
+            <Cooldown Link="Abil/##id##"/>
+            <Button DefaultButtonFace="PointBreakDrone"/>
+            <Flags index="AutoBuild" value="1"/>
+            <Flags index="AutoBuildOn" value="1"/>
+            <Flags index="External" value="1"/>
+        </InfoArray>
+        <MaxCount value="1"/>
+    </CAbilArmMagazine>
+    <CAbilEffectInstant id="TitanDroneMagazineDummy">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HireSiegeBreakersPH">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilAugment id="PsychoMissiles">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TornadoMissile"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Cooldown TimeUse="6"/>
+        </Cost>
+        <Effect value="PsychoMissilesCP"/>
+        <AutoCastFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilAugment>
 </Catalog>

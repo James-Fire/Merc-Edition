@@ -230,9 +230,9 @@ void libBA5CCDED_gt_DepositMoney_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: War Pig - Laser Targeting System
+// Trigger: Passive Upgrades
 //--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_WarPigLaserTargetingSystem_Func (bool testConds, bool runActions) {
+bool libBA5CCDED_gt_PassiveUpgrades_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
@@ -240,53 +240,15 @@ bool libBA5CCDED_gt_WarPigLaserTargetingSystem_Func (bool testConds, bool runAct
     }
 
     TechTreeUpgradeAddLevel(1, "LaserTargetingSystem", 1);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_WarPigLaserTargetingSystem_Init () {
-    libBA5CCDED_gt_WarPigLaserTargetingSystem = TriggerCreate("libBA5CCDED_gt_WarPigLaserTargetingSystem_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_WarPigLaserTargetingSystem);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Shadow - Impaler Rounds
-//--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_ShadowImpalerRounds_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
     TechTreeUpgradeAddLevel(1, "ImpalerRoundsShadow", 1);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_ShadowImpalerRounds_Init () {
-    libBA5CCDED_gt_ShadowImpalerRounds = TriggerCreate("libBA5CCDED_gt_ShadowImpalerRounds_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_ShadowImpalerRounds);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Siege Breaker - Siegemode armor
-//--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
     TechTreeUpgradeAddLevel(1, "AdvancedSiegeTechArmorOnly", 1);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Init () {
-    libBA5CCDED_gt_SiegeBreakerSiegemodearmor = TriggerCreate("libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_SiegeBreakerSiegemodearmor);
+void libBA5CCDED_gt_PassiveUpgrades_Init () {
+    libBA5CCDED_gt_PassiveUpgrades = TriggerCreate("libBA5CCDED_gt_PassiveUpgrades_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_PassiveUpgrades);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -434,19 +396,47 @@ void libBA5CCDED_gt_HelsAngelTacticalRealignment_Init () {
     TriggerAddEventUnitAbility(libBA5CCDED_gt_HelsAngelTacticalRealignment, null, AbilityCommand("WreckingCrewFighterMode", 0), c_abilMorphStageStatsEnd, false);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Harrier Recall
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_HarrierRecall_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitHasBehavior2(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RevivalFieldCooldown") == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RevivalFieldCooldown", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
+    UnitSetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster), UnitGetPosition(UnitGroupClosestToPoint(UnitGroup("Starport", EventPlayer(), RegionEntireMap(), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), UnitGetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster)))), false);
+    UnitAbilitySpendExplicit(EventPlayerEffectUsedUnit(c_effectUnitCaster), AbilityCommand("RevivalField", 0), c_spendLocationAll, 1.0, 1.0, 1.0, 1.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_HarrierRecall_Init () {
+    libBA5CCDED_gt_HarrierRecall = TriggerCreate("libBA5CCDED_gt_HarrierRecall_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_HarrierRecall, c_playerAny, "HarrierRecall");
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
-    libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
-    libBA5CCDED_gt_ShadowImpalerRounds_Init();
-    libBA5CCDED_gt_SiegeBreakerSiegemodearmor_Init();
+    libBA5CCDED_gt_PassiveUpgrades_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
     libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
     libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
     libBA5CCDED_gt_SkibisAngelRepairDrone_Init();
     libBA5CCDED_gt_HelsAngelTacticalRealignment_Init();
+    libBA5CCDED_gt_HarrierRecall_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

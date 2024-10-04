@@ -10,13 +10,12 @@ void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 trigger libBA5CCDED_gt_MercEditionUpgrade;
 trigger libBA5CCDED_gt_MissionDirectives;
 trigger libBA5CCDED_gt_DepositMoney;
-trigger libBA5CCDED_gt_WarPigLaserTargetingSystem;
-trigger libBA5CCDED_gt_ShadowImpalerRounds;
-trigger libBA5CCDED_gt_SiegeBreakerSiegemodearmor;
+trigger libBA5CCDED_gt_PassiveUpgrades;
 trigger libBA5CCDED_gt_BlockBFlyHeighter;
 trigger libBA5CCDED_gt_BlockBFlyHeighter2;
 trigger libBA5CCDED_gt_SpartanCompanyShellShowerFull;
 trigger libBA5CCDED_gt_SiegeBreakerGraduatingRange;
 trigger libBA5CCDED_gt_SkibisAngelRepairDrone;
 trigger libBA5CCDED_gt_HelsAngelTacticalRealignment;
+trigger libBA5CCDED_gt_HarrierRecall;
 
