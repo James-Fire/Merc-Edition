@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectCreateUnit id="PlaceNomadDroneRelease">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="PlaceNomadDroneReleaseLaunch"/>
+        <SpawnUnit value="NomadDrone"/>
+        <SpawnRange value="0"/>
+    </CEffectCreateUnit>
+    <CEffectLaunchMissile id="PlaceNomadDroneReleaseLM">
+        <EditorCategories value="Race:Terran"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <FinishEffect value="RemovePrecursor"/>
+        <AmmoUnit value="PlaceNomadDroneRelease"/>
+        <PlaceholderUnit value="NomadDrone"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="PlaceNomadDroneReleaseLaunch">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="PlaceNomadDroneReleaseLM"/>
+        <EffectArray value="MakePrecursor"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="NomadMissileAB">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Effect="SeekerMissileLaunchMissile"/>
+        <Behavior value="NomadMissileTint"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="NomadMissileDamage">
+        <EditorCategories value="Race:Terran"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="75"/>
+        <AreaArray Radius="0.6" Fraction="1"/>
+        <AreaArray Radius="1.2" Fraction="0.5"/>
+        <AreaArray Radius="2.4" Fraction="0.25"/>
+        <ExcludeArray Value="Target"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="NomadMissileLaunchCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourceUnit"/>
+        <ExpireEffect value="NomadMissileSuicideSet"/>
+        <PeriodCount value="10"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="NomadMissileLM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="NomadMissileDamage"/>
+        <AmmoUnit value="NomadMissile"/>
+        <Movers Link="NomadMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="NomadMissileLaunchSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="NomadMissileLaunchCP"/>
+        <EffectArray value="NomadMissileLaunchTintCP"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="NomadMissileLaunchTintCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourceUnit"/>
+        <PeriodCount value="250"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="NomadMissileAB"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="NomadMissileSuicide">
+        <ValidatorArray value="NovaRavenSeekerMissileMaxLaunchRange"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="SourceUnit"/>
+        <Flags index="Kill" value="1"/>
+    </CEffectDamage>
+    <CEffectSet id="NomadMissileSuicideSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="NomadMissileSuicide"/>
+    </CEffectSet>
+    <CEffectDamage id="NomadTurretWeaponDamage" parent="DU_WEAP">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="30"/>
+    </CEffectDamage>
+    <CEffectModifyUnit id="NomadTurretWeaponLaunchDummy">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactUnit Value="Caster"/>
+    </CEffectModifyUnit>
+    <CEffectEnumArea id="NomadTurretWeaponSA">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ExcludeArray Value="Target"/>
+        <IncludeArray Effect="RailGunTurretSearchCP" Value="Target"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray RectangleWidth="0.3" RectangleHeight="6.8" Effect="NomadTurretWeaponDamage"/>
+        <AreaRelativeOffset value="0,3.2"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="NomadTurretWeaponCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourcePoint"/>
+        <InitialEffect value="NomadTurretWeaponLaunchDummy"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="NomadTurretWeaponSA"/>
+        <PeriodicOffsetArray value="0,-6.8,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="PlaceNomadTurretRelease">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="PlaceNomadTurretSet"/>
+        <SpawnUnit value="RailGunTurret"/>
+        <SpawnRange value="0"/>
+    </CEffectCreateUnit>
+    <CEffectLaunchMissile id="PlaceNomadTurretReleaseLM">
+        <EditorCategories value="Race:Terran"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <FinishEffect value="RemovePrecursor"/>
+        <AmmoUnit value="PlaceNomadTurretRelease"/>
+        <PlaceholderUnit value="RailGunTurret"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="PlaceNomadTurretReleaseLaunch">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="PlaceNomadTurretReleaseLM"/>
+        <EffectArray value="MakePrecursor"/>
+    </CEffectSet>
+    <CEffectSet id="PlaceNomadTurretSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="PlaceNomadTurretTimedLife"/>
+        <EffectArray value="PlaceNomadTurretReleaseLaunch"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="PlaceNomadTurretTimedLife">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="NomadTurretTimedLife"/>
+    </CEffectApplyBehavior>
+    <CAbilEffectTarget id="PlaceNomadDrone">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="21"/>
+        <Effect index="0" value="PlaceNomadDroneRelease"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown Link="Raven Build Link" Location="Unit"/>
+        </Cost>
+        <Placeholder value="NomadDrone"/>
+        <Range value="3"/>
+        <Marker Link="Abil/AutoTurret"/>
+        <ErrorAlert value="Error"/>
+        <ProducedUnitArray value="NomadDrone"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0059_01"/>
+        <PlaceUnit value="NomadDrone"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PlaceNomadTurret">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="21"/>
+        <Effect index="0" value="PlaceNomadTurretRelease"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown Link="Raven Build Link" Location="Unit"/>
+        </Cost>
+        <Placeholder value="RailGunTurret"/>
+        <Range value="3"/>
+        <Marker Link="Abil/AutoTurret"/>
+        <ErrorAlert value="Error"/>
+        <ProducedUnitArray value="RailGunTurret"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0059_01"/>
+        <PlaceUnit value="RailGunTurret"/>
+    </CAbilEffectTarget>
+    <CActorMissile id="NomadMissile" parent="GenericAttackMissile" unitName="NomadMissile">
+        <Remove Terms="MotionPhaseStart; MotionPhase 3" Send="Create HunterSeekerHappySound"/>
+        <On Terms="MotionPhaseStart; MotionPhase 1" Send="Create HunterSeekerTrackingBeam"/>
+        <On Terms="MotionPhaseStart; MotionPhase 3" Send="Create HunterSeekerHappySound"/>
+        <On Terms="MotionPhaseStart; MotionPhase" Send="Create HunterSeekerLaunchSound"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Target="HunterSeekerLaunchSound" Send="Destroy"/>
+        <On Terms="UnitDeath" Target="HunterSeekerLaunchSound" Send="Destroy"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="Create HunterSeekerHappySound"/>
+    </CActorMissile>
+    <CActorAction id="NomadMissileAttack" parent="GenericAttack" effectImpact="NomadMissileDamage" effectLaunch="NomadMissileLM">
+        <Beam value="HunterSeekerAttackBeam"/>
+        <Missile value="NomadMissile"/>
+        <ImpactMap index="None" Model="NomadMissileImpact" Sound="NomadMissileImpact"/>
+        <ImpactPhysics Name="HunterSeekerImpact" MatchKeys="Basic" Physics="HunterSeekerAttackForce"/>
+        <ImpactPhysics Name="HunterSeekerImpactAir" MatchKeys="BasicAir" Physics="HunterSeekerAttackForceAir"/>
+    </CActorAction>
+    <CActorSimple id="NomadMissileTint">
+        <Aliases value="_AngryTinter"/>
+        <Remove Terms="Effect.NomadMissileLM.Start; At Target" Send="Create"/>
+        <Remove Terms="ActorCreation" Send="TimerSet 0.500000 SeekerTintInitialTimer"/>
+        <Remove Terms="TimerExpired; TimerName SeekerTintInitialTimer" Target="_Unit" Send="SetTintColor 255,50,50 0.500000 OneShot SeekerTarget"/>
+        <Remove Terms="TimerExpired; TimerName SeekerTintInitialTimer" Send="TimerSet 2.000000 SeekerTintDuration"/>
+        <Remove Terms="TimerExpired; TimerName SeekerTintDuration" Target="_Unit" Send="ClearTintColor 0.500000 SeekerTarget"/>
+        <Remove Terms="TimerExpired; TimerName SeekerTintDuration" Send="Destroy"/>
+        <On Terms="Effect.NomadMissileLM.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.500000 SeekerTintInitialTimer"/>
+        <On Terms="TimerExpired; TimerName SeekerTintInitialTimer" Target="_Unit" Send="SetTintColor 255,50,50 0.500000 OneShot SeekerTarget"/>
+        <On Terms="TimerExpired; TimerName SeekerTintInitialTimer" Send="TimerSet 2.000000 SeekerTintDuration"/>
+        <On Terms="TimerExpired; TimerName SeekerTintDuration" Target="_Unit" Send="ClearTintColor 0.500000 SeekerTarget"/>
+        <On Terms="TimerExpired; TimerName SeekerTintDuration" Send="Destroy"/>
+        <On Terms="Behavior.NomadMissileTint.On" Send="Create"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor 255,50,50 0.500000 OneShot SeekerTarget"/>
+        <On Terms="Behavior.NomadMissileTint.Off" Target="_Unit" Send="ClearTintColor 0.500000 SeekerTarget"/>
+        <On Terms="Behavior.NomadMissileTint.Off" Send="Destroy"/>
+    </CActorSimple>
+    <CActorUnit id="NomadTurret" parent="GenericUnitBase" unitName="RailGunTurret">
+        <Aliases value="_CreepEngulfable"/>
+        <Aliases value="_UnitMedium"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Spell,D"/>
+        <On Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="Behavior.Precursor.Off" Send="Create NomadTurretReleaseMissileImpact"/>
+        <On Terms="Behavior.Precursor.Off" Send="$Birth"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="NomadTurretDeath" SoundLink="Raven_AutoTurretExplode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Raven_AutoTurretExplode"/>
+        <PlacementModel value="NomadTurretPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <BarOffset value="50"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Sound="Raven_Pissed"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-AutoTurret.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-autoturret.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="Raven_AutoTurretBirth"/>
+        <SoundArray index="Ready" value="Raven_AutoTurretReady"/>
+        <SoundArray index="What" value="Raven_AutoTurretWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-autoturret.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-AutoTurret.dds"/>
+        </Wireframe>
+        <HighlightTooltip value="Unit/Name/NomadTurret"/>
+        <Model value="NomadTurret"/>
+        <BuildModel value=""/>
+    </CActorUnit>
+    <CActorModel id="NomadTurretWeaponLaunchSquib" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="Effect.NomadTurretWeaponDamage.Start; At Caster" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+        <Model value="GhostSnipeAttackLaunch"/>
+    </CActorModel>
+    <CActorAction id="NomadTurretWeaponAttack" parent="GenericAttack" effectAttack="NomadTurretWeaponLaunchDummy">
+        <LaunchAssets Model="NomadTurretWeaponLaunch" Sound="NomadTurretWeaponLaunch"/>
+        <ImpactSiteOps HoldPosition="1"/>
+    </CActorAction>
+    <CActorBeamSimple id="NomadTurretWeaponBeamPoint" parent="BeamSimpleAnimationStyleOneShot">
+        <On Terms="Effect.NomadTurretWeaponSA.Start; At Caster" Send="Create"/>
+        <On Terms="ActorCreation; ValidateEffect HaveExplosiveCalibrations" Send="SetTintColor {0,121,255 5.000000}"/>
+        <Model value="NomadTurretWeaponMissile"/>
+        <HostLaunch Subject="_Unit"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon" HoldPosition="1"/>
+        <HostImpactSiteOps Ops="SOpTargetPoint"/>
+    </CActorBeamSimple>
+    <CActorAction id="NomadTurretWeaponAttackImpact" parent="GenericAttack" effectAttack="NomadTurretWeaponDamage">
+        <ImpactMap index="None" Model="NomadTurretWeaponImpact" Sound="NomadTurretWeaponImpact"/>
+    </CActorAction>
+    <CActorTurret id="NomadTurretTurret">
+        <On Terms="TurretEnable.NomadTurret" Send="Create"/>
+    </CActorTurret>
+    <CActorRange id="PlaceNomadTurretRange" parent="RangeAbil" abil="PlaceNomadTurret"/>
+    <CActorAction id="PlaceNomadTurretRelease" parent="GenericAttack" effectImpact="RemovePrecursor" effectLaunch="PlaceNomadTurretReleaseLM">
+        <LaunchAssets Sound="Raven_AutoTurretReleaseLaunch"/>
+        <ImpactSiteOps Ops="SOpAttachOrigin SOpShadow"/>
+        <ImpactMap index="None" Sound="Raven_AutoTurretReleaseImpact"/>
+        <ShieldFlashType value="None"/>
+    </CActorAction>
+    <CActorAction id="PlaceNomadDroneRelease" parent="GenericAttack" effectImpact="RemovePrecursor" effectLaunch="PlaceNomadDroneReleaseLM">
+        <LaunchAssets Sound="Raven_AutoTurretReleaseLaunch"/>
+        <ImpactSiteOps Ops="SOpAttachOrigin SOpShadow"/>
+        <ImpactMap index="None" Sound="Raven_AutoTurretReleaseImpact"/>
+        <ShieldFlashType value="None"/>
+    </CActorAction>
+    <CActorMissile id="PlaceNomadTurretReleaseMissile" parent="GenericAttackMissile" unitName="PlaceNomadTurretRelease">
+        <Model value="PlaceNomadTurretReleaseWeapon"/>
+    </CActorMissile>
+    <CActorMissile id="PlaceNomadDroneReleaseMissile" parent="GenericAttackMissile" unitName="PlaceNomadDroneRelease">
+        <Model value="PlaceNomadTurretReleaseWeapon"/>
+    </CActorMissile>
+    <CModel id="NomadTurretWeaponImpact" parent="RaceImpactFX" Race="Terran">
+        <Model value="Assets\Effects\Terran\MagrailMunition_Impact\MagrailMunition_Impact.m3"/>
+        <Events>
+            <Anim value="Birth,00"/>
+            <Name value="RailGun_Model_Impact"/>
+            <Type value="Sound"/>
+            <Time value="0.081000"/>
+            <Payload value="RailGun_Model_Impact"/>
+        </Events>
+    </CModel>
+    <CModel id="NomadTurretWeaponLaunch" parent="RaceLaunchFX" Race="Terran">
+        <Model value="Assets\Effects\Terran\MagrailMunition_Launch\MagrailMunition_Launch.m3"/>
+    </CModel>
+    <CModel id="NomadTurretWeaponMissile" parent="RaceMissileFX" Race="Terran">
+        <Model value="Assets\Effects\Terran\MagrailMunition_Missile\MagrailMunition_Missile.m3"/>
+    </CModel>
+    <CModel id="NomadMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\HunterKillerMissile\HunterKillerMissile.m3"/>
+        <LowQualityModel value="HunterSeekerWeaponLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <PhysicsMaterialOverride value="MetalLight"/>
+    </CModel>
+    <CModel id="NomadMissileImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponImpact\SiegeTankWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="NomadTurret" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\AutoTurret_BlackOps\AutoTurret_BlackOps.m3"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.937500"/>
+        <ShadowRadius value="0.937500"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModel id="NomadTurretDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Terran\AutoTurret_BlackOps_Death\AutoTurret_BlackOps_Death.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="-1.000000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="NomadTurretPlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Buildings\Terran\AutoturretPlacement\AutoturretPlacement.m3"/>
+        <LowQualityModel value="RailGunTurret"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+    </CModel>
+    <CModel id="PlaceNomadTurretReleaseWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\AutoTurretPodMissile\AutoTurretPodMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CWeaponLegacy id="NomadMissile">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\BTN-Ability-Terran-HunterMissile-color.dds"/>
+        <DisplayEffect value="NomadMissileDamage"/>
+        <Range value="10"/>
+        <Period value="7"/>
+        <Effect value="NomadMissileLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NomadTurretWeapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="NomadTurretWeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1"/>
+        <Effect value="NomadTurretWeaponCP"/>
+    </CWeaponLegacy>
+    <CMoverMissile id="PlaceNomadTurretWeapon">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <Speed value="12"/>
+            <MaxSpeed value="12"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
+    </CMoverMissile>
+    <CMoverMissile id="NomadMissile">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="3200"/>
+            <Speed value="1"/>
+            <MaxSpeed value="1"/>
+            <Clearance value="0.5"/>
+            <ClearanceLookahead value="3"/>
+            <ClearanceAcceleration value="75"/>
+            <ClearanceIgnoresTargetProximity value="1"/>
+            <Outro value="0.9"/>
+            <Timeout value="0.9"/>
+            <ThrowVector value="0,-1,0"/>
+            <FlightTime value="0.9"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Speed value="0.0078"/>
+            <MaxSpeed value="0.0078"/>
+            <Clearance value="0.5"/>
+            <ClearanceLookahead value="3"/>
+            <ClearanceAcceleration value="75"/>
+            <ClearanceIgnoresTargetProximity value="1"/>
+            <Outro value="0.9"/>
+            <Timeout value="2.1"/>
+            <ThrowVector value="0,-1,0"/>
+            <YawPitchRoll value="MAX"/>
+            <FlightTime value="1.1"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="4"/>
+            <MaxSpeed value="16"/>
+            <Clearance value="0.5"/>
+            <ClearanceLookahead value="3"/>
+            <Outro value="3"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="4"/>
+            <MaxSpeed value="16"/>
+            <Clearance value="0.5"/>
+            <ClearanceLookahead value="3"/>
+            <Outro value="-2.25,-2"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="16"/>
+            <MaxSpeed value="16"/>
+            <Clearance value="0.25"/>
+            <ClearanceLookahead value="3"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CSound id="NomadMissileImpact" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Raven_SeekerMissile_Explosion_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Raven_SeekerMissile_Explosion_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Raven_SeekerMissile_Explosion_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Raven_SeekerMissile_Explosion_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Raven_SeekerMissile_Explosion_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Raven_SeekerMissile_Explosion_06.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-3.000000,3.000000"/>
+        <Volume value="1.000000,4.000000"/>
+    </CSound>
+    <CSound id="NomadTurretWeaponImpact" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_08.wav" FacialGroup=""/>
+        <DupeDestroyCount value="6"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="6"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="-3.000000,-1.000000"/>
+        <Select value="Random"/>
+        <Spread value="20.000000"/>
+        <Volume value="-5.500000,-4.000000"/>
+    </CSound>
+    <CSound id="NomadTurretWeaponLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Launch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Launch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Launch_06.wav" FacialGroup=""/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <OverlapTimeDelta value="50"/>
+        <Pitch value="-2.000000,0.000000"/>
+        <Volume value="-10.000000,-8.000000"/>
+        <VolumeRolloffPoints Distance="15.472779"/>
+        <VolumeRolloffPoints Distance="30.802292" Volume="-96.000000"/>
+    </CSound>
+    <CUnit id="PlaceNomadDroneRelease" parent="MISSILE_INVULNERABLE">
+        <Race value="Terr"/>
+        <Mover value="PlaceNomadTurretWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="NomadMissile" parent="MISSILE_INVULNERABLE">
+        <Race value="Terr"/>
+        <LifeStart value="5"/>
+        <LifeMax value="5"/>
+        <BehaviorArray Link="SeekerMissileTimeout"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="RailGunTurret">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="150"/>
+        <LifeMax value="150"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="7"/>
+        <CostResource index="Minerals" value="100"/>
+        <RepairTime value="50"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <BehaviorArray Link="TerranBuildingBurnDown"/>
+        <BehaviorArray Link="FireSuppressionSystem"/>
+        <WeaponArray Link="NomadTurretWeapon" Turret="NomadTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="AttackBuilding" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="0.75"/>
+        <Footprint value="FootprintAutoTurret"/>
+        <PlacementFootprint value="FootprintAutoTurret"/>
+        <SubgroupPriority value="2"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <GlossaryPriority value="346"/>
+        <KillDisplay value="Never"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="PlaceNomadTurretRelease" parent="MISSILE_INVULNERABLE">
+        <Race value="Terr"/>
+        <Mover value="PlaceNomadTurretWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CBehaviorBuff id="NomadMissileTint">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-huntermissile-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.2"/>
+        <AINotifyEffect value="SeekerMissileDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NomadTurretTimedLife" parent="TimedLife">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="126"/>
+    </CBehaviorBuff>
+</Catalog>

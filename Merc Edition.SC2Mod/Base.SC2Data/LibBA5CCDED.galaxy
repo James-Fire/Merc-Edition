@@ -425,6 +425,46 @@ void libBA5CCDED_gt_HarrierRecall_Init () {
     TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_HarrierRecall, c_playerAny, "HarrierRecall");
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nomad Silent Mode Height Up
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NomadSilentModeHeightUp_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitSetHeight(EventUnit(), (UnitGetHeight(EventUnit()) + 1.5), 1.5);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NomadSilentModeHeightUp_Init () {
+    libBA5CCDED_gt_NomadSilentModeHeightUp = TriggerCreate("libBA5CCDED_gt_NomadSilentModeHeightUp_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_NomadSilentModeHeightUp, null, "NomadSilentMode", c_unitBehaviorChangeCreate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nomad Silent Mode Height Down
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NomadSilentModeHeightDown_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitSetHeight(EventUnit(), (UnitGetHeight(EventUnit()) - 1.5), 1.5);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NomadSilentModeHeightDown_Init () {
+    libBA5CCDED_gt_NomadSilentModeHeightDown = TriggerCreate("libBA5CCDED_gt_NomadSilentModeHeightDown_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_NomadSilentModeHeightDown, null, "NomadSilentMode", c_unitBehaviorChangeDestroy);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
@@ -437,6 +477,8 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_SkibisAngelRepairDrone_Init();
     libBA5CCDED_gt_HelsAngelTacticalRealignment_Init();
     libBA5CCDED_gt_HarrierRecall_Init();
+    libBA5CCDED_gt_NomadSilentModeHeightUp_Init();
+    libBA5CCDED_gt_NomadSilentModeHeightDown_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

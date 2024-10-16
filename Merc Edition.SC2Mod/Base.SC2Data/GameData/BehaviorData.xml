@@ -55,12 +55,57 @@
         <Duration value="7"/>
         <Modification MoveSpeedBonus="3"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="Irradiate">
+        <Modification>
+            <StateFlags index="SuppressCloak" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="MedivacTransportHeal">
         <Requirements value="UseMASH"/>
         <Modification>
             <VitalRegenArray index="Life" value="1.5"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="NomadSilentMode">
+        <Modification SightBonus="6">
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Cloak" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <AbilClassDisableArray index="CAbilMove" value="1"/>
+            <AbilClassDisableArray index="CAbilStop" value="1"/>
+            <AbilLinkDisableArray value="PlaceSJPointDefenseDrone"/>
+            <AbilLinkDisableArray value="PlaceNomadDrone"/>
+            <AbilLinkDisableArray value="PlaceNomadTurret"/>
+            <AbilLinkDisableArray value="PlacePointDefenseDrone"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PointBreakDrone">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="PointBreakDroneLaserSearch"/>
+    </CBehaviorBuff>
+    <CBehaviorJump id="CondorJump">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="UseRaynorSpecial"/>
+        <TriggerHeightDeltaMin value="1.5"/>
+        <TriggerHeightDeltaMax value="4.5"/>
+        <InitiateRangeUp value="1.5"/>
+        <InitiateRangeDown value="0.5"/>
+        <JumpRangeMax value="12"/>
+        <Mover value="CliffJumper"/>
+        <MoverUp value="ReaperJumpDown"/>
+        <MoverDown value="ReaperJumpDown"/>
+        <DurationPreLaunch value="0.05"/>
+        <DurationPostLand value="0.075"/>
+        <DurationMoveOut value="0.08"/>
+        <Placeholder value="ReaperPlaceholder"/>
+        <LandAdjustmentDown value="1"/>
+        <LandArrivalRange value="0.05"/>
+        <LandCheckRadius value="5"/>
+    </CBehaviorJump>
     <CBehaviorBuff id="RevivalFieldCooldown">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
@@ -432,6 +477,22 @@
         <Duration value="21"/>
         <Modification>
             <WeaponArray Link="250mmUranusCarronades"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WolverineFearImmunity">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="6"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WolverineFeared">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="AnarchistFearRP"/>
+        <Modification>
+            <StateFlags index="Uncommandable" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="WolverinesOrders">

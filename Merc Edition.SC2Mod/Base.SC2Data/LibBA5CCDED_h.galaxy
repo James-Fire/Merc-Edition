@@ -18,4 +18,6 @@ trigger libBA5CCDED_gt_SiegeBreakerGraduatingRange;
 trigger libBA5CCDED_gt_SkibisAngelRepairDrone;
 trigger libBA5CCDED_gt_HelsAngelTacticalRealignment;
 trigger libBA5CCDED_gt_HarrierRecall;
+trigger libBA5CCDED_gt_NomadSilentModeHeightUp;
+trigger libBA5CCDED_gt_NomadSilentModeHeightDown;
 

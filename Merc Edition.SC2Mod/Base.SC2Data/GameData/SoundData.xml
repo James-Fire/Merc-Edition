@@ -304,6 +304,11 @@
     <CSound id="MissileTurret_HellstormAttackLaunch">
         <Volume value="-11.000000,-9.000000"/>
     </CSound>
+    <CSound id="NomadSilentMode" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Raven\Raven_PointDefenseDroneReleaseImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Raven\Raven_PointDefenseDroneReleaseImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Raven\Raven_PointDefenseDroneReleaseImpact2.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="RailcannonImpact" parent="Combat">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_01.wav" FacialGroup=""/>

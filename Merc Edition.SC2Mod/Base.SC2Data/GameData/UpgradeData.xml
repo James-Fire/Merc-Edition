@@ -31,6 +31,11 @@
         <EffectArray Reference="Weapon,ThermalBurst,DisplayAttackCount" Value="3"/>
         <AffectedUnitArray value="Harrier"/>
     </CUpgrade>
+    <CUpgrade id="ChaoticPower">
+        <EffectArray Operation="Multiply" Reference="Abil,MagMine,Cost[0].Cooldown.TimeUse" Value="0.500000"/>
+        <EffectArray Reference="Effect,MagMineCU,SpawnCount" Value="1"/>
+        <AffectedUnitArray value="Wolverine"/>
+    </CUpgrade>
     <CUpgrade id="DeadManSwitch">
         <AffectedUnitArray value="Titan"/>
     </CUpgrade>
@@ -42,6 +47,18 @@
         <EffectArray Operation="Set" Reference="Weapon,HailstormMissilePodsMerc,Options[Disabled]" Value="0"/>
         <EffectArray Operation="Set" Reference="Weapon,HailstormMissilePodsMerc,Options[Hidden]" Value="0"/>
         <AffectedUnitArray value="MissileTurret"/>
+    </CUpgrade>
+    <CUpgrade id="ExplosiveCalibrations">
+        <EffectArray Reference="Effect,NomadMissileDamage,Amount" Value="30"/>
+        <EffectArray Reference="Effect,NomadTurretWeaponDamage,Amount" Value="12"/>
+        <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[0].Radius" Value="0.18"/>
+        <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[1].Radius" Value="0.36"/>
+        <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[2].Radius" Value="0.72"/>
+        <EffectArray Operation="Subtract" Reference="Abil,PlaceNomadTurret,Cost[0].Vital[Energy]" Value="20"/>
+        <AffectedUnitArray value="Nomad"/>
+    </CUpgrade>
+    <CUpgrade id="PiercingStrike">
+        <AffectedUnitArray value="Wolverine"/>
     </CUpgrade>
     <CUpgrade id="RagnarokWeapons">
         <EffectArray Operation="Set" Reference="Weapon,RagnarokNRoll,Options[Hidden]" Value="0"/>
@@ -167,6 +184,10 @@
     </CUpgrade>
     <CUpgrade id="RaynorSpecial">
         <AffectedUnitArray value="Condor"/>
+        <EffectArray Operation="Set" Reference="Weapon,RaidersRival,Options[OnlyFireAtAttackOrderTarget]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,RaidersRival,Options[OnlyFireWhileInAttackOrder]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,RaidersRival,AllowedMovement" Value="Moving"/>
+        <EffectArray Operation="Set" Reference="Unit,Condor,Mover" Value="CliffJumper"/>
     </CUpgrade>
     <CUpgrade id="RorkesRedline">
         <AffectedUnitArray value="Starcruiser"/>
@@ -178,6 +199,9 @@
         <EffectArray Operation="Set" Reference="Abil,DuskWingBansheeCloakingField,BehaviorArray[0]" Value="PermanentCloakDuskWing"/>
         <EffectArray Operation="Set" Reference="Button,CloakOnBanshee,Tooltip" Value="Button/Tooltip/PermanentCloakDuskWing"/>
         <EffectArray Operation="Set" Reference="Abil,DuskWingBansheeCloakingField,Cost[0].Vital[Energy]" Value="0"/>
+    </CUpgrade>
+    <CUpgrade id="SilentMode">
+        <AffectedUnitArray value="Nomad"/>
     </CUpgrade>
     <CUpgrade id="SmartServosMKIV">
         <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>

@@ -56,6 +56,43 @@
     <CAbilEffectTarget id="DarkTemplarShadowFury">
         <Range index="0" value="7.3"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="NomadTargetLock">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="NomadTargetLockCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Location="Unit" TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Invulnerable"/>
+        <TargetSorts>
+            <SortArray value="TSLifeLargestFirst"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <AutoCastRange value="8"/>
+        <AutoCastValidatorArray value="NotHaveTargetLock"/>
+        <AutoCastValidatorArray value="NotInterceptor"/>
+        <CastOutroTime value="0.5"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TargetLock" Requirements="IsInSilentMode"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="SilentMode">
+        <AbilSetId value="SilentMode"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="CloakOnGhost" Requirements="UseSilentMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="CloakOff">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <BehaviorArray value="NomadSilentMode"/>
+    </CAbilBehavior>
     <CAbilEffectInstant id="IgniteAfterburnersHelsAngel">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="AfterburnersHelsAngelApplyBehavior"/>

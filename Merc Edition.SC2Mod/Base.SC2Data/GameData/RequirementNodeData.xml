@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementCountBehavior id="CountBehaviorNomadSilentModeCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="NomadSilentMode" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
     <CRequirementCountUpgrade id="CountUpgradeAIEnhancementCompleteOnly">
         <Count Link="AIEnhancement" State="CompleteOnly"/>
         <Flags index="TechTreeCheat" value="0"/>
@@ -22,6 +27,9 @@
     <CRequirementCountUpgrade id="CountUpgradeChairsandACCompleteOnly">
         <Count Link="ChairsandAC" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeChaoticPowerCompleteOnly">
+        <Count Link="ChaoticPower" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeChemicalPlatingCompleteOnly">
         <Count Link="ChemicalPlating" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -39,6 +47,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
         <Count Link="EidolonSuit" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeExplosiveCalibrationsCompleteOnly">
+        <Count Link="ExplosiveCalibrations" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeIFFSpiderRoundsCompleteOnly">
         <Count Link="IFFSpiderRounds" State="CompleteOnly"/>
@@ -67,6 +78,9 @@
     <CRequirementCountUpgrade id="CountUpgradeNeosteelCupHoldersCompleteOnly">
         <Count Link="NeosteelCupHolders" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePiercingStrikeCompleteOnly">
+        <Count Link="PiercingStrike" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradePliableArmorCompleteOnly">
         <Count Link="PliableArmor" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -90,6 +104,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeShimmerScreenCompleteOnly">
         <Count Link="ShimmerScreen" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSilentModeCompleteOnly">
+        <Count Link="SilentMode" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSmartServosMKIVCompleteOnly">
         <Count Link="SmartServosMKIV" State="CompleteOnly"/>

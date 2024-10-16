@@ -217,7 +217,7 @@
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <EnergyStart value="200"/>
         <EnergyMax value="200"/>
-        <EnergyRegenRate value="1000"/>
+        <EnergyRegenRate value="1"/>
         <Mover value="Fly"/>
         <Speed value="2"/>
         <Acceleration value="1000"/>
@@ -229,7 +229,6 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="move"/>
-        <WeaponArray Link="PointBreakDroneWeapon" Turret="PointDefenseDrone"/>
         <CardLayouts>
             <LayoutButtons Face="PointDefense" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -248,6 +247,7 @@
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
+        <BehaviorArray Link="PointBreakDrone"/>
     </CUnit>
     <CUnit id="MagMine">
         <DeathRevealRadius value="3"/>
@@ -299,6 +299,40 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <EquipmentArray Weapon="SJCloakedMineExplodeDummy"/>
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
+    </CUnit>
+    <CUnit id="NomadDrone">
+        <Name value="Unit/Name/MineDrone"/>
+        <Description value="Button/Tooltip/MineDrone"/>
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Cloaked" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="25"/>
+        <LifeMax value="25"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <Acceleration value="1000"/>
+        <StationaryTurningRate value="2292.8906"/>
+        <Sight value="4"/>
+        <RepairTime value="33.3332"/>
+        <CardLayouts>
+            <LayoutButtons Face="ActivateShieldGenerator" Type="AbilCmd" AbilCmd="NomadMineDroneMagazine,Ammo1" Row="0" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.125"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="15"/>
+        <MinimapRadius value="0.25"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="SpiderMineBurrowed">
+        <AbilArray Link="CondorSpiderMineUnburrow"/>
     </CUnit>
     <CUnit id="StarcruiserLaserBattery" parent="MISSILE">
         <Race value="Terr"/>
@@ -583,7 +617,7 @@
             <LayoutButtons Face="Goliath" Type="AbilCmd" AbilCmd="FactoryTrain,Train7" Row="1" Column="2"/>
         </CardLayouts>
     </CUnit>
-    <CUnit id="Adjucator">
+    <CUnit id="Adjudicator">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -965,19 +999,24 @@
         <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Mechanical" value="1"/>
-        <LifeStart value="65"/>
-        <LifeMax value="65"/>
+        <LifeStart value="175"/>
+        <LifeMax value="175"/>
         <Mover value="Fly"/>
-        <Speed value="1.875"/>
-        <Acceleration value="2.125"/>
-        <Sight value="7"/>
+        <Speed value="2.25"/>
+        <Acceleration value="3.5"/>
+        <Sight value="11"/>
         <Height value="3.75"/>
         <VisionHeight value="2"/>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="300"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="move"/>
-        <AbilArray Link="Rally"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="PlacePointDefenseDrone"/>
+        <AbilArray Link="PlaceNomadTurret"/>
+        <AbilArray Link="PlaceNomadDrone"/>
+        <AbilArray Link="SilentMode"/>
+        <AbilArray Link="NomadTargetLock"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -985,10 +1024,27 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="2" Column="4"/>
+            <LayoutButtons Face="AftermarketRailgunTurret" Type="AbilCmd" AbilCmd="PlaceNomadTurret,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="PointDefenseDrone" Type="AbilCmd" AbilCmd="PlacePointDefenseDrone,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="MineDrone" Type="AbilCmd" AbilCmd="PlaceNomadDrone,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Detector" Type="Passive" Behavior="Detector11" Row="1" Column="0"/>
+            <LayoutButtons Face="ExplosiveCalibrations" Type="Passive" Requirements="UseExplosiveCalibrations" Row="1" Column="1"/>
+            <LayoutButtons Face="SilentMode" Type="AbilCmd" AbilCmd="SilentMode,On" Row="1" Column="2"/>
+            <LayoutButtons Face="NormalModeNomad" Type="AbilCmd" AbilCmd="SilentMode,Off" Row="1" Column="3"/>
+            <LayoutButtons Face="TargetLock" Type="AbilCmd" AbilCmd="NomadTargetLock,Execute" Row="2" Column="3"/>
         </CardLayouts>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
         <TacticalAI value=""/>
         <LeaderAlias value=""/>
+        <BehaviorArray Link="Detector11"/>
+        <LifeArmor value="1"/>
+        <EnergyStart value="200"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.8125"/>
+        <Deceleration value="1000"/>
+        <Radius value="0.6875"/>
+        <SeparationRadius value="0.6875"/>
+        <WeaponArray Link="NomadMissile"/>
     </CUnit>
     <CUnit id="BlockB">
         <DeathRevealRadius value="3"/>
@@ -1078,9 +1134,6 @@
             <LayoutButtons Face="LegionSystems" Type="Passive" Requirements="UseLegionSystems" Row="1" Column="0"/>
             <LayoutButtons Face="AspisBlinkShield" Type="Passive" Requirements="UseAspisBlinkShield" Row="1" Column="1"/>
         </CardLayouts>
-    </CUnit>
-    <CUnit id="SpiderMineBurrowed">
-        <AbilArray Link="CondorSpiderMineUnburrow"/>
     </CUnit>
     <CUnit id="Starcruiser">
         <DeathRevealRadius value="3"/>
@@ -1541,7 +1594,7 @@
         <AbilArray Link="CondorSpiderMines"/>
         <AbilArray Link="MakeSpiderMinesCondor"/>
         <AbilArray Link="MakeSpiderMineQueueCondor"/>
-        <WeaponArray Link="RaidersRival"/>
+        <WeaponArray Link="RaidersRival" Turret="Phoenix"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -1552,6 +1605,8 @@
             <LayoutButtons Face="SpiderMineReplenishCondor" Type="AbilCmd" AbilCmd="MakeSpiderMinesCondor,Specialize1" Row="2" Column="1"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="MakeSpiderMineQueueCondor,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CerberusHoundMines" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="LooseEngineSeals" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="RaynorSpecial" Type="Passive" Row="1" Column="2"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
@@ -1572,6 +1627,8 @@
         <GlossaryWeakArray value="SiegeTank"/>
         <HotkeyCategory value="Unit/Category/TerranStory"/>
         <EffectArray index="Death" value="CondorDeathrattleCP"/>
+        <BehaviorArray Link="CondorJump"/>
+        <TurretArray value="Phoenix"/>
     </CUnit>
     <CUnit id="Harrier">
         <DeathRevealRadius value="3"/>
@@ -1800,6 +1857,7 @@
         <GlossaryWeakArray value="Marauder"/>
         <TauntDuration index="Dance" value="5"/>
         <BehaviorArray Link="AURAWolverinesOrders"/>
+        <EffectArray index="Death" value="MagmineDeathrattleCP"/>
     </CUnit>
     <CUnit id="WarPig">
         <CostResource index="Minerals" value="75"/>

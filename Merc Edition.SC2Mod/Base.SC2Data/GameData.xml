@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Includes>
     <Catalog path="GameData/Grapple.xml"/>
+    <Catalog path="GameData/NomadTurret.xml"/>
+    <Catalog path="GameData/NomadWeapon.xml"/>
 </Includes>

@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorPlayerRequirement id="HaveExplosiveCalibrations">
+        <Find value="1"/>
+        <Value value="UseExplosiveCalibrations"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveChaoticPower">
+        <Find value="1"/>
+        <Value value="UseChaoticPower"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="IsInSilentMode">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="NomadSilentMode"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoFearImmunityWolverine">
+        <Behavior value="WolverineFearImmunity"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareVital id="OwningTitanofPointBreakDronehas10Energy">
         <WhichUnit Value="Source"/>
         <Compare value="GE"/>

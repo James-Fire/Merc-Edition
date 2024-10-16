@@ -3,6 +3,9 @@
     <CRequirement id="DontHaveStabilizerMedpacks">
         <NodeArray index="Show" Link="NotCountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="IsInSilentMode">
+        <NodeArray index="Show" Link="CountBehaviorNomadSilentModeCompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="TechLaborMedicUpgrade">
         <EditorCategories value="Race:Terran,TechType:Unit"/>
         <NodeArray index="Use" Link="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly"/>
@@ -47,6 +50,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeChairsandACCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseChaoticPower">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeChaoticPowerCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseChemicalPlating">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeChemicalPlatingCompleteOnly"/>
@@ -70,6 +77,10 @@
     <CRequirement id="UseEidolonSuit">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeEidolonSuitCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseExplosiveCalibrations">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeExplosiveCalibrationsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseIFFSpiderRounds">
         <EditorCategories value="TechType:Ability"/>
@@ -107,6 +118,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UsePiercingStrike">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradePiercingStrikeCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UsePliableArmor">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePliableArmorCompleteOnly"/>
@@ -138,6 +153,10 @@
     <CRequirement id="UseShimmerScreen">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeShimmerScreenCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSilentMode">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSilentModeCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseSmartServosMKIV">
         <EditorCategories value="TechType:Ability"/>

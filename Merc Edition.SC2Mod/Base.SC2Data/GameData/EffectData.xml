@@ -299,7 +299,21 @@
         <EditorCategories value=""/>
         <WhichLocation Value="TargetPoint"/>
         <SpawnUnit value="MagMine"/>
+        <SpawnOffset value="0,0"/>
+        <SpawnOffset value="1.5,1.5"/>
     </CEffectCreateUnit>
+    <CEffectCreatePersistent id="MagmineDeathrattleCP">
+        <ValidatorArray value="HaveChaoticPower"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="MagmineDeathrattleRP"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectRandomPointInCircle id="MagmineDeathrattleRP">
+        <EditorCategories value=""/>
+        <Effect value="MagMineCU"/>
+        <Radius value="2"/>
+    </CEffectRandomPointInCircle>
     <CEffectApplyBehavior id="MercCommanderAB">
         <EditorCategories value=""/>
         <Behavior value="WolverinesOrders"/>
@@ -309,6 +323,18 @@
         <SearchFilters value="-;Self,Ally,Neutral,Enemy,Structure,Worker,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="7.5" Effect="MercCommanderAB"/>
     </CEffectEnumArea>
+    <CEffectCreatePersistent id="NomadTargetLockCP">
+        <ValidatorArray value="IsInSilentMode"/>
+        <ValidatorArray value="NotHaveTargetLock"/>
+        <ValidatorArray value="CasterNotMaxTargetLocks"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <InitialEffect value="ObserverTargetLockStartSet"/>
+        <FinalEffect value="ObserverTargetLockFinishSet"/>
+        <PeriodicValidator value="MonitorTargetLockChecks"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
     <CEffectLaunchMissile id="PharaohLaserBatteryLMSecondary">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>
@@ -327,10 +353,12 @@
     <CEffectSet id="PointBreakDroneLaserSet">
         <ValidatorArray value="PointDefenseDroneUnitFilter"/>
         <ValidatorArray value="CasterHas10Energy"/>
+        <ValidatorArray value="noMarkers"/>
         <EditorCategories value="Race:Terran"/>
         <EffectArray value="PointDefenseLaserDamage"/>
         <EffectArray value="PointDefenseLaserDummy"/>
         <EffectArray value="PointDefenseApplyBehavior"/>
+        <EffectArray value="PointDefenseLaserEnergy"/>
     </CEffectSet>
     <CEffectEnumArea id="PointBreakDroneLaserSearch">
         <ValidatorArray value="PointDefenseSearchTargetFilters"/>
@@ -341,10 +369,12 @@
     </CEffectEnumArea>
     <CEffectSet id="PointBreakDroneLaserInitialSet">
         <ValidatorArray value="PointDefenseDroneUnitFilter"/>
-        <ValidatorArray value="OwningTitanofPointBreakDronehas10Energy"/>
         <EditorCategories value=""/>
         <EffectArray value="PointBreakDroneLaserSearch"/>
         <EffectArray value="PointDefenseApplyBehavior"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
     </CEffectSet>
     <CEffectDamage id="RagnarokNRollDamage" parent="DU_WEAP">
         <ArmorReduction value="0"/>
@@ -352,9 +382,22 @@
         <Death value="Blast"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectSet id="RailcannonSet">
+        <EditorCategories value=""/>
+        <EffectArray value="RailcannonDamage"/>
+        <EffectArray value="WolverineFearSA"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="RedlineReactorAB">
         <WhichUnit Value="Caster"/>
         <Behavior value="RedlineReactor"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="RemoveSpiderMineBurrowBehavior">
+        <EditorCategories value=""/>
+        <BehaviorLink value="VultureSpiderMineBurrowFirst"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="ApplySpiderMineBurrowBehavior">
+        <EditorCategories value=""/>
+        <Behavior value="VultureSpiderMineBurrowFirst"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="RevivalFieldControllerAB">
         <EditorCategories value=""/>
@@ -1136,9 +1179,28 @@
     </CEffectDamage>
     <CEffectLaunchMissile id="RailcannonLM">
         <EditorCategories value="Race:Terran"/>
-        <ImpactEffect value="RailcannonDamage"/>
+        <ImpactEffect value="RailcannonSet"/>
         <AmmoUnit value="WolverineWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="WolverineFearAB">
+        <Behavior value="WolverineFeared"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="WolverineFearImmunityAB">
+        <EditorCategories value=""/>
+        <Behavior value="WolverineFearImmunity"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="WolverineFearSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="2.2" Effect="WolverineFearSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="WolverineFearSet">
+        <ValidatorArray value="NoFearImmunityWolverine"/>
+        <EditorCategories value=""/>
+        <Chance value="0.1"/>
+        <EffectArray value="WolverineFearAB"/>
+        <EffectArray value="WolverineFearImmunityAB"/>
+    </CEffectSet>
     <CEffectLaunchMissile id="WreckingCrewFighterLM">
         <ImpactEffect value="HaloRocketsSet"/>
     </CEffectLaunchMissile>

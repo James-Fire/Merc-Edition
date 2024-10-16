@@ -109,7 +109,7 @@
         <Image value="Assets\Textures\HellionPortrait_Static.dds"/>
         <Lighting value="HellionPortrait"/>
     </CModel>
-    <CModel id="Adjucator" parent="Unit">
+    <CModel id="Adjudicator" parent="Unit">
         <Model value="Assets\Models\ScienceVesselBW.m3"/>
         <EditorCategories value="Race:Terran"/>
         <Occlusion value="Show"/>
@@ -174,6 +174,17 @@
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop\MiraHorner_Hellion_DeathRattle_Coop.m3"/>
         <Radius value="1.000000"/>
     </CModelFoliage>
+    <CModelFoliage id="NomadMissileImpactUpgrade">
+        <Model value="Assets\Effects\Terran\Swann_PulseCannon_Beam_Impact\Swann_PulseCannon_Beam_Impact.m3"/>
+        <AnimSpeed value="2.000000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModelFoliage>
+    <CModel id="NomadSilentMode">
+        <Model value="Assets\Effects\Protoss\TemporalFieldImpact\TemporalFieldImpact.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
     <CModel id="RagnarokNRollDamageBeam">
         <Model value="Assets\Effects\Protoss\SuppressionTower_PurificationLaser\SuppressionTower_PurificationLaser.m3"/>
     </CModel>
@@ -261,6 +272,17 @@
     <CModel id="SJCloakedMineAttackMissileDeath">
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="NomadDrone" parent="Unit" Race="Terran">
+        <Model value="Assets\Effects\Terran\AutoTurretPodMissile\AutoTurretPodMissile.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow02"/>
+        <Radius value="0.250000"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+        <TechPurchaseCamera value="Star2CameraLow02"/>
+        <UnitGlossaryCamera value="Star2CameraLow02"/>
     </CModel>
     <CModel id="StarcruiserLaserBattery" parent="MissileFX">
         <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>
