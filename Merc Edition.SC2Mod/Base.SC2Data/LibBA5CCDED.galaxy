@@ -63,6 +63,26 @@ void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Merc Edition Upgrade
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MercEditionUpgrade_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(1, "MercEdition", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MercEditionUpgrade_Init () {
+    libBA5CCDED_gt_MercEditionUpgrade = TriggerCreate("libBA5CCDED_gt_MercEditionUpgrade_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_MercEditionUpgrade);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Mission Directives
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
@@ -210,9 +230,9 @@ void libBA5CCDED_gt_DepositMoney_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: War Pig - Laser Targeting System
+// Trigger: Passive Upgrades
 //--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_WarPigLaserTargetingSystem_Func (bool testConds, bool runActions) {
+bool libBA5CCDED_gt_PassiveUpgrades_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
@@ -220,19 +240,245 @@ bool libBA5CCDED_gt_WarPigLaserTargetingSystem_Func (bool testConds, bool runAct
     }
 
     TechTreeUpgradeAddLevel(1, "LaserTargetingSystem", 1);
+    TechTreeUpgradeAddLevel(1, "ImpalerRoundsShadow", 1);
+    TechTreeUpgradeAddLevel(1, "AdvancedSiegeTechArmorOnly", 1);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_WarPigLaserTargetingSystem_Init () {
-    libBA5CCDED_gt_WarPigLaserTargetingSystem = TriggerCreate("libBA5CCDED_gt_WarPigLaserTargetingSystem_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_WarPigLaserTargetingSystem);
+void libBA5CCDED_gt_PassiveUpgrades_Init () {
+    libBA5CCDED_gt_PassiveUpgrades = TriggerCreate("libBA5CCDED_gt_PassiveUpgrades_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_PassiveUpgrades);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Block B Fly Heighter
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BlockBFlyHeighter_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.1, c_timeReal);
+    UnitSetHeight(EventUnit(), 3.75, 0.4);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BlockBFlyHeighter_Init () {
+    libBA5CCDED_gt_BlockBFlyHeighter = TriggerCreate("libBA5CCDED_gt_BlockBFlyHeighter_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_BlockBFlyHeighter, null, AbilityCommand("JetPackOverdrive", 0), c_abilMorphStageWait, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Block B Fly Heighter 2
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BlockBFlyHeighter2_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.1, c_timeReal);
+    UnitSetHeight(EventUnit(), 0.5, 0.4);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BlockBFlyHeighter2_Init () {
+    libBA5CCDED_gt_BlockBFlyHeighter2 = TriggerCreate("libBA5CCDED_gt_BlockBFlyHeighter2_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_BlockBFlyHeighter2, null, AbilityCommand("JetPackOverdriveUndo", 0), c_abilMorphStageWait, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Spartan Company Shell Shower Full
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SpartanCompanyShellShowerFull_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitBehaviorCount(EventUnit(), "ShellShower") == 12))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreateEffectUnit(EventUnit(), "SpartanCompanyShellShowerFull", EventUnit());
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init () {
+    libBA5CCDED_gt_SpartanCompanyShellShowerFull = TriggerCreate("libBA5CCDED_gt_SpartanCompanyShellShowerFull_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_SpartanCompanyShellShowerFull, null, "ShellShower", c_unitBehaviorChangeIncrease);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Siege Breaker Graduating Range
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SiegeBreakerGraduatingRange_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(1, "SmartServosMKIV", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(EventUnit(), "GraduatingRangeController", EventUnit(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init () {
+    libBA5CCDED_gt_SiegeBreakerGraduatingRange = TriggerCreate("libBA5CCDED_gt_SiegeBreakerGraduatingRange_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_SiegeBreakerGraduatingRange, null, AbilityCommand("SiegeBreakerSiege", 0), c_abilMorphStageAbilsEnd, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Skibi's Angel Repair Drone
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SkibisAngelRepairDrone_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((TechTreeUpgradeCount(EventPlayer(), "AIEnhancement", c_techCountCompleteOnly) == 1)) {
+        UnitAbilityAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "SkibisAngelRepairDrone");
+    }
+    else {
+        if ((GameIsTestMap(false) == false)) {
+            TriggerEnable(TriggerGetCurrent(), false);
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SkibisAngelRepairDrone_Init () {
+    libBA5CCDED_gt_SkibisAngelRepairDrone = TriggerCreate("libBA5CCDED_gt_SkibisAngelRepairDrone_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_SkibisAngelRepairDrone, c_playerAny, "SkibisAngelSpawnDummy");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Hel's Angel Tactical Realignment
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_HelsAngelTacticalRealignment_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitIssueOrder(EventUnit(), Order(AbilityCommand("TacticalRealignment", 0)), c_orderQueueReplace);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_HelsAngelTacticalRealignment_Init () {
+    libBA5CCDED_gt_HelsAngelTacticalRealignment = TriggerCreate("libBA5CCDED_gt_HelsAngelTacticalRealignment_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_HelsAngelTacticalRealignment, null, AbilityCommand("WreckingCrewAssaultMode", 0), c_abilMorphStageStatsEnd, false);
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_HelsAngelTacticalRealignment, null, AbilityCommand("WreckingCrewFighterMode", 0), c_abilMorphStageStatsEnd, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Harrier Recall
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_HarrierRecall_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitHasBehavior2(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RevivalFieldCooldown") == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RevivalFieldCooldown", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
+    UnitSetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster), UnitGetPosition(UnitGroupClosestToPoint(UnitGroup("Starport", EventPlayer(), RegionEntireMap(), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), UnitGetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster)))), false);
+    UnitAbilitySpendExplicit(EventPlayerEffectUsedUnit(c_effectUnitCaster), AbilityCommand("RevivalField", 0), c_spendLocationAll, 1.0, 1.0, 1.0, 1.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_HarrierRecall_Init () {
+    libBA5CCDED_gt_HarrierRecall = TriggerCreate("libBA5CCDED_gt_HarrierRecall_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_HarrierRecall, c_playerAny, "HarrierRecall");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nomad Silent Mode Height Up
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NomadSilentModeHeightUp_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitSetHeight(EventUnit(), (UnitGetHeight(EventUnit()) + 1.5), 1.5);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NomadSilentModeHeightUp_Init () {
+    libBA5CCDED_gt_NomadSilentModeHeightUp = TriggerCreate("libBA5CCDED_gt_NomadSilentModeHeightUp_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_NomadSilentModeHeightUp, null, "NomadSilentMode", c_unitBehaviorChangeCreate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nomad Silent Mode Height Down
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NomadSilentModeHeightDown_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitSetHeight(EventUnit(), (UnitGetHeight(EventUnit()) - 1.5), 1.5);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NomadSilentModeHeightDown_Init () {
+    libBA5CCDED_gt_NomadSilentModeHeightDown = TriggerCreate("libBA5CCDED_gt_NomadSilentModeHeightDown_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_NomadSilentModeHeightDown, null, "NomadSilentMode", c_unitBehaviorChangeDestroy);
 }
 
 void libBA5CCDED_InitTriggers () {
+    libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
-    libBA5CCDED_gt_WarPigLaserTargetingSystem_Init();
+    libBA5CCDED_gt_PassiveUpgrades_Init();
+    libBA5CCDED_gt_BlockBFlyHeighter_Init();
+    libBA5CCDED_gt_BlockBFlyHeighter2_Init();
+    libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
+    libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
+    libBA5CCDED_gt_SkibisAngelRepairDrone_Init();
+    libBA5CCDED_gt_HelsAngelTacticalRealignment_Init();
+    libBA5CCDED_gt_HarrierRecall_Init();
+    libBA5CCDED_gt_NomadSilentModeHeightUp_Init();
+    libBA5CCDED_gt_NomadSilentModeHeightDown_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

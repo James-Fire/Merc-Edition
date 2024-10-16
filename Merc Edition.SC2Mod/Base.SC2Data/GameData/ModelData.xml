@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="250mmUranusCarronadesImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Griffin_BombRun_Impact_COOP\Griffin_BombRun_Impact_COOP.m3"/>
+    </CModel>
+    <CModel id="250mmUranusCarronadesLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\BansheeMissileImpact\BansheeMissileImpact.m3"/>
+    </CModel>
+    <CModel id="250mmUranusCarronadesMissileModel" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MiraHorner_Carrier_Coop_Missile\MiraHorner_Carrier_Coop_Missile.m3"/>
+        <ScaleMax value="1.300000,1.600000,1.300000"/>
+        <ScaleMin value="1.300000,1.600000,1.300000"/>
+    </CModel>
     <CModel id="ACV" parent="SCVBase">
         <Model value="Assets\Units\Terran\SCV_Merc_Collection\SCV_Merc_Collection.m3"/>
     </CModel>
@@ -16,6 +27,18 @@
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModelFoliage>
+    <CModelFoliage id="AmplifiedThermalBurstImpact">
+        <Model value="Assets\Effects\Protoss\Scout_Purifier_AOE_AirMissile_Impact\Scout_Purifier_AOE_AirMissile_Impact.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistFearExplosion">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellbat_Coop_DeathRattle\MiraHorner_Hellbat_Coop_DeathRattle.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistFearGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_MiraHorner_Hellbat_Deathrattle\Glaze_MiraHorner_Hellbat_Deathrattle.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="AnarchistFearMarker">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellbat_Coop_DeathRattle_Fear\MiraHorner_Hellbat_Coop_DeathRattle_Fear.m3"/>
+    </CModelFoliage>
     <CModelFoliage id="AnarchistJumpJets">
         <Model value="Assets\Effects\Protoss\Colossus_FireBeam_Impact\Colossus_FireBeam_Impact.m3"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
@@ -24,6 +47,10 @@
     <CModelFoliage id="AnarchistJumpStunModel">
         <Model value="Assets\Effects\Zerg\BurrowChargeImpact\BurrowChargeImpact.m3"/>
     </CModelFoliage>
+    <CModel id="ASPRocketsWeapon" parent="MissileFX">
+        <Model value="Assets\Models\ASP_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
     <CModel id="BlockB">
         <Model value="Assets\Units\Terran\Reaper_Merc_Collection\Reaper_Merc_Collection.m3"/>
     </CModel>
@@ -82,7 +109,7 @@
         <Image value="Assets\Textures\HellionPortrait_Static.dds"/>
         <Lighting value="HellionPortrait"/>
     </CModel>
-    <CModel id="Adjucator" parent="Unit">
+    <CModel id="Adjudicator" parent="Unit">
         <Model value="Assets\Models\ScienceVesselBW.m3"/>
         <EditorCategories value="Race:Terran"/>
         <Occlusion value="Show"/>
@@ -123,9 +150,158 @@
         <Model value="Assets\Units\Terran\MedivacDeathEx1\MedivacDeathEx1.m3"/>
     </CModel>
     <CModel id="CharonDropshipPortrait" parent="MedivacPortraitBase">
-        <Model value="Assets\Portraits\Terran\Liberator_Silver_Portrait\Liberator_Silver_Portrait.m3"/>
-        <Image value="Assets\Textures\MedivacPortrait_Static.dds"/>
-        <Lighting value="MedivacPortrait"/>
+        <Model value="Assets\Portraits\Terran\Liberator_HornerHan_Portrait\Liberator_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\liberator_hornerhan_portrait_static.dds"/>
+        <Lighting value="Liberator_Junker_Collection_Portrait"/>
+    </CModel>
+    <CModel id="DevastatorMissilesMercImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb_Impact_Charged\Dragoon_Purifier_Coop_AirBomb_Impact_Charged.m3"/>
+    </CModel>
+    <CModel id="DevastatorMissilesMercMissileModel" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\GoliathAirMissile\GoliathAirMissile.m3"/>
+        <ScaleMax value="1.500000,2.000000,1.500000"/>
+        <ScaleMin value="1.500000,2.000000,1.500000"/>
+    </CModel>
+    <CModel id="HellStormMissileTurret">
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+    </CModel>
+    <CModel id="HellStormMissileTurretDeath">
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+    </CModel>
+    <CModelFoliage id="MercCommanderBuff">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop\MiraHorner_Hellion_DeathRattle_Coop.m3"/>
+        <Radius value="1.000000"/>
+    </CModelFoliage>
+    <CModelFoliage id="NomadMissileImpactUpgrade">
+        <Model value="Assets\Effects\Terran\Swann_PulseCannon_Beam_Impact\Swann_PulseCannon_Beam_Impact.m3"/>
+        <AnimSpeed value="2.000000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModelFoliage>
+    <CModel id="NomadSilentMode">
+        <Model value="Assets\Effects\Protoss\TemporalFieldImpact\TemporalFieldImpact.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="RagnarokNRollDamageBeam">
+        <Model value="Assets\Effects\Protoss\SuppressionTower_PurificationLaser\SuppressionTower_PurificationLaser.m3"/>
+    </CModel>
+    <CModel id="RagnarokNRollImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb_Impact\Dragoon_Purifier_Coop_AirBomb_Impact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="RagnarokNRollLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb_Charged\Dragoon_Purifier_Coop_AirBomb_Charged.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="RedlineReactor">
+        <Model value="Assets\Effects\Protoss\Sentry_Purifier_ChronoBeam_Impact\Sentry_Purifier_ChronoBeam_Impact.m3"/>
+        <ScaleMax value="0.400000,2.000000,1.000000"/>
+        <ScaleMin value="0.400000,2.000000,1.000000"/>
+    </CModel>
+    <CModelFoliage id="RevivalFieldDodge">
+        <Model value="Assets\Effects\Other\PhysicsImpactDustLarge\PhysicsImpactDustLarge.m3"/>
+        <AnimSpeed value="3.000000"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModelFoliage>
+    <CModel id="MagMine" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\SpaceMine\SpaceMine.m3"/>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="SJCloakedMine_StandWork"/>
+            <Type value="Sound"/>
+            <Time value="0.640000"/>
+            <Payload value="SJCloakedMine_StandWork"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="SJCloakedMine_StandWork"/>
+            <Type value="Sound"/>
+            <Time value="1.310000"/>
+            <Payload value="SJCloakedMine_StandWork"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="SJCloakedMine_StandWork"/>
+            <Type value="Sound"/>
+            <Time value="1.980000"/>
+            <Payload value="SJCloakedMine_StandWork"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="SJCloakedMine_StandWork"/>
+            <Type value="Sound"/>
+            <Time value="2.650000"/>
+            <Payload value="SJCloakedMine_StandWork"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="SJCloakedMine_StandWork"/>
+            <Type value="Sound"/>
+            <Time value="3.310000"/>
+            <Payload value="SJCloakedMine_StandWork"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="SJCloakedMine_StandWork"/>
+            <Type value="Sound"/>
+            <Time value="3.990000"/>
+            <Payload value="SJCloakedMine_StandWork"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="SJCloakedMine_StandWork"/>
+            <Type value="Sound"/>
+            <Time value="4.660000"/>
+            <Payload value="SJCloakedMine_StandWork"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow07"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.100000"/>
+        <SquibTypeDefault value="Metal"/>
+        <UnitGlossaryCamera value="Star2CameraLow07"/>
+    </CModel>
+    <CModel id="SJCloakedMineAttackMissileDeath">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="NomadDrone" parent="Unit" Race="Terran">
+        <Model value="Assets\Effects\Terran\AutoTurretPodMissile\AutoTurretPodMissile.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow02"/>
+        <Radius value="0.250000"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+        <TechPurchaseCamera value="Star2CameraLow02"/>
+        <UnitGlossaryCamera value="Star2CameraLow02"/>
+    </CModel>
+    <CModel id="StarcruiserLaserBattery" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DarkTemplarShadowFuryImpact">
+        <Model value="Assets\Effects\Protoss\Supplicant_COOP_Missile_Impact\Supplicant_COOP_Missile_Impact.m3"/>
+        <ScaleMax value="2.500000,2.500000,2.500000"/>
+        <ScaleMin value="2.500000,2.500000,2.500000"/>
+    </CModel>
+    <!--CModel id="DarkTemplarShadowFuryModel" parent="Unit" Race="Protoss">-->
+    <!--        <Model value="Assets\Units\Protoss\Zeratul\Zeratul.m3"/>-->
+    <!--        <Lighting value="MohandarVoid"/>-->
+    <!--        <PlanetPanelCamera value="Star2CameraMid05"/>-->
+    <!--        <TechPurchaseCamera value="Star2CameraMid05"/>-->
+    <!--        <UnitGlossaryCamera value="Star2CameraMid05"/>-->
+    <!--    </CModel-->
+    <CModel id="DarkTemplarShadowFurySmoke">
+        <Model value="Assets\Effects\Neutral\Evolution_Impact_Terran_Coop\Evolution_Impact_Terran_Coop.m3"/>
     </CModel>
     <CModelFoliage id="DeadMenTellNoTales">
         <Model value="Assets\Effects\Terran\SpidermineExplosion\SpidermineExplosion_Low.m3"/>
@@ -140,9 +316,87 @@
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModelFoliage>
+    <CModel id="CopperheadUpgradedBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\NullifierBeam\NullifierBeam_Low.m3"/>
+        <LowQualityModel value="DiamondbackAttackBeamLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
     <CModelFoliage id="DieselBasedNapalm">
         <Model value="Assets\Effects\Terran\TerranBuildingFireSmall\TerranBuildingFireSmall.m3"/>
     </CModelFoliage>
+    <CModelFoliage id="ForceMissilesGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Goliath_Lockdown\Glaze_Goliath_Lockdown.m3"/>
+    </CModelFoliage>
+    <CModel id="GraduatingRangeApplyBehavior">
+        <Model value="Assets\Effects\Protoss\Fenix_Whirlwind_Impact\Fenix_Whirlwind_Impact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="HHVikingAssaultAttackBeam" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\GhostSnipeBeam\GhostSnipeBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value=""/>
+        <ScaleMax value="1.000000,1.500000,1.000000"/>
+        <ScaleMin value="1.000000,1.500000,1.000000"/>
+    </CModel>
+    <CModelFoliage id="HammerSecurityWeaponAttach">
+        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
+        <ScaleMax value="0.600000,0.200000,0.500000"/>
+        <ScaleMin value="0.600000,0.200000,0.500000"/>
+    </CModelFoliage>
+    <CModel id="BioMechanicalRepairDrone" parent="Unit">
+        <Model value="Assets\Models\SkibidiRepairDroneWoohoo.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.450000,0.450000,0.450000"/>
+        <ScaleMin value="0.450000,0.450000,0.450000"/>
+    </CModel>
+    <CModelFoliage id="HelsAngelAfterburners">
+        <Model value="Assets\Effects\Terran\MiraHorner_Wraith_Coop_Missile\MiraHorner_Wraith_Coop_Missile.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModelFoliage>
+    <CModel id="HelsAngelFighter">
+        <Model value="Assets\Models\HelsAngelsNew.m3"/>
+    </CModel>
+    <CModelFoliage id="PliableArmorFire">
+        <Model value="Assets\Doodads\DOM_Fire_Large\DOM_Fire_Large.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="RepairDroneHealImpact">
+        <Model value="Assets\Effects\Zerg\CorruptedMissileImpact\CorruptedMissileImpact.m3"/>
+    </CModelFoliage>
+    <CModel id="RepairDroneHealMissile">
+        <Model value="Assets\Models\RepairDroneMissileSkibidi.m3"/>
+        <ScaleMax value="0.500000,0.500000,1.000000"/>
+        <ScaleMin value="0.500000,0.500000,1.000000"/>
+    </CModel>
+    <CModelFoliage id="SiegeBreakerUpgradedAttackLaunch">
+        <Model value="Assets\Effects\Protoss\ShadowCannonLaunch\ShadowCannonLaunch.m3"/>
+        <ScaleMax value="3.500000,1.200000,1.000000"/>
+        <ScaleMin value="3.500000,1.200000,1.000000"/>
+    </CModelFoliage>
+    <CModelFoliage id="SiegeBreakerUpgradedAttackLaunch2">
+        <Model value="Assets\Effects\Protoss\ShadowCannonImpact\ShadowCannonImpact.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.300000"/>
+        <ScaleMin value="0.700000,0.700000,0.300000"/>
+    </CModelFoliage>
+    <CModelFoliage id="SignalFlareHealingMist2">
+        <Model value="Assets\Effects\Zerg\MiasmaliskPoisonCloudBirth\MiasmaliskPoisonCloudBirth.m3"/>
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModelFoliage>
+    <CModelFoliage id="SpartanCompanyAirAttackTrail">
+        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
+        <ScaleMax value="1.000000,0.100000,1.000000"/>
+        <ScaleMin value="1.000000,0.100000,1.000000"/>
+    </CModelFoliage>
+    <CModel id="SpartanCompanyAirMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\EMPMissile\EMPMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
     <CModelFoliage id="ImmolationFluid">
         <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
@@ -161,7 +415,7 @@
         <Model value="Assets\Effects\Terran\MagrailMunition_Launch\MagrailMunition_Launch.m3"/>
     </CModelFoliage>
     <CModel id="MagrailMunitionsMissile">
-        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
+        <Model value="Assets\Effects\Protoss\PhoenixMissile_Upgrade\PhoenixMissile_Upgrade.m3"/>
     </CModel>
     <CModelFoliage id="SignalFlareDebuffModel">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop_Impact\MiraHorner_Hellion_DeathRattle_Coop_Impact.m3"/>
@@ -169,14 +423,16 @@
         <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModelFoliage>
     <CModel id="SignalFlareMissile">
-        <Model value="Assets\Effects\Terran\BansheeMissile\BansheeMissile.m3"/>
+        <Model value="Assets\Models\TR17StarburstMissile.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
     </CModel>
     <CModelFoliage id="SignalFlareSmoke">
         <Model value="Assets\Effects\Neutral\SmokeStack_Smoke_Constant_Sm\SmokeStack_Smoke_Constant_Sm.m3"/>
         <AnimSpeed value="2.000000"/>
     </CModelFoliage>
     <CModelFoliage id="SignalFlareUnit">
-        <Model value="Assets\Effects\Terran\BansheeMissile\BansheeMissile.m3"/>
+        <Model value="Assets\Models\TR17StarburstMissile.m3"/>
     </CModelFoliage>
     <CModel id="SkibisAngel" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\MedicMercenary\MedicMercenary.m3"/>
@@ -269,14 +525,32 @@
         <Image value="Assets\Textures\ReaperPortrait_Static.dds"/>
         <Lighting value="ReaperPortrait"/>
     </CModel>
+    <CModelFoliage id="SpartanCompanyShellShowerFull">
+        <Model value="Assets\Effects\Terran\Nova_Buff_Damage\Nova_Buff_Damage.m3"/>
+        <ScaleMax value="2.000000,2.000000,0.500000"/>
+        <ScaleMin value="2.000000,2.000000,0.500000"/>
+    </CModelFoliage>
+    <CModel id="CondorMine" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\CondorMine.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow02"/>
+        <Radius value="0.250000"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+        <TechPurchaseCamera value="Star2CameraLow02"/>
+        <UnitGlossaryCamera value="Star2CameraLow02"/>
+    </CModel>
     <CModelFoliage id="SprayandPayLaunchModel">
         <Model value="Assets\Models\Nova_PenetratingShot_Launch.m3"/>
     </CModelFoliage>
-    <CModelFoliage id="StabilizerMedpackField">
-        <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Shockwave\Arbiter_StasisField_Shockwave.m3"/>
-        <AnimSpeed value="3.000000"/>
-        <ScaleMax value="0.300000,0.300000,0.300000"/>
-        <ScaleMin value="0.300000,0.300000,0.300000"/>
+    <CModelFoliage id="SignalFlareHealingMist">
+        <Model value="Assets\Effects\Zerg\MiasmaliskPoisonCloud\MiasmaliskPoisonCloud.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="ConcussiveShrapnelModel">
+        <Model value="Assets\Effects\Terran\MarauderMissileImpact\MarauderMissileImpact.m3"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
     </CModelFoliage>
     <CModel id="Starcruiser" parent="Unit">
         <Model value="Assets\Units\Terran\BattleCruiser_Merc_Collection\BattleCruiser_Merc_Collection.m3"/>
@@ -325,8 +599,8 @@
         <EditorCategories value="Race:Terran"/>
         <Occlusion value="Show"/>
         <Radius value="1.300000"/>
-        <ScaleMax value="0.800000,0.800000,0.800000"/>
-        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
         <SelectionOffset value="0.000000,0.000000,-0.700000"/>
         <SelectionRadius value="1.562500"/>
         <ShadowRadius value="1.562500"/>
@@ -417,13 +691,33 @@
         <Image value="Assets\Textures\WraithPortrait_Static.dds"/>
         <Lighting value="WraithPortrait"/>
     </CModel>
+    <CModelFoliage id="StarcruiserShieldGlaze">
+        <Model value="Assets\Models\StarcruiserShieldGlaze.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="SulfurMissilesGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_AmonShards_Orange_AnimaShower\Glaze_AmonShards_Orange_AnimaShower.m3"/>
+    </CModelFoliage>
+    <CModel id="SulfurMissilesImpact">
+        <Model value="Assets\Effects\Other\GenericImpactSmear\GenericImpactSmear.m3"/>
+        <AnimSpeed value="2.000000"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModelFoliage id="SulfurSuicide">
+        <Model value="Assets\Effects\Terran\RipWaveMissileImpact\RipWaveMissileImpact.m3"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModelFoliage>
     <CModelFoliage id="SuperCloakEndModel">
-        <Model value="Assets\Effects\Terran\DisplacementFieldImpact\DisplacementFieldImpact.m3"/>
+        <Model value="Assets\Models\SuperCloakEndShockwave.m3"/>
         <ScaleMax value="0.700000,0.700000,1.200000"/>
         <ScaleMin value="0.700000,0.700000,1.200000"/>
     </CModelFoliage>
     <CModelFoliage id="SuperCloakGlaze">
         <Model value="Assets\Effects\Glaze\Glaze_Dehaka_Psionic\Glaze_Dehaka_Psionic.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="TacticalRealignment">
+        <Model value="Assets\Effects\Glaze\Glaze_Nova_Buff_Damage\Glaze_Nova_Buff_Damage.m3"/>
     </CModelFoliage>
     <CModelFoliage id="TarBombGlaze">
         <Model value="Assets\Effects\Glaze\Glaze_TychusFirebat_OilSpill\Glaze_TychusFirebat_OilSpill.m3"/>
@@ -441,14 +735,151 @@
         <ScaleMax value="0.600000,0.600000,0.600000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
+    <CModelFoliage id="TerrazineShots">
+        <Model value="Assets\Effects\Protoss\AmonShard_Blue_Aoe_Missile_Impact\AmonShard_Blue_Aoe_Missile_Impact.m3"/>
+    </CModelFoliage>
+    <CModel id="TitanWreckage" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\ThorWrecked\ThorWrecked.m3"/>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="CustomA" value="1"/>
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetA" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="CustomA" value="1"/>
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 08">
+            <Keys index="SetB" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 15">
+            <Keys index="SetA" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 16">
+            <Keys index="SetA" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 17">
+            <Keys index="SetA" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 18">
+            <Keys index="SetA" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Center">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <Events>
+            <Anim value="Stand,Morph,Start"/>
+            <Name value="ThorImmortalityProtocolBirth"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Thor_ImmortalityProtocolBirth"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Morph,End"/>
+            <Name value="ThorImmortalityProtocolDeath"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Thor_ImmortalityProtocolDeath"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Morph,00"/>
+            <Name value="Thor_ImmortalityProtocolWeld"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+            <Payload value="Thor_ImmortalityProtocolWeld"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Morph,00"/>
+            <Name value="Thor_ImmortalityProtocolWeld"/>
+            <Type value="Sound"/>
+            <Time value="1.933000"/>
+            <Payload value="Thor_ImmortalityProtocolWeld"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Morph,00"/>
+            <Name value="Thor_ImmortalityProtocolWeld"/>
+            <Type value="Sound"/>
+            <Time value="3.100000"/>
+            <Payload value="Thor_ImmortalityProtocolWeld"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Morph,00"/>
+            <Name value="Thor_ImmortalityProtocolWeld"/>
+            <Type value="Sound"/>
+            <Time value="4.433000"/>
+            <Payload value="Thor_ImmortalityProtocolWeld"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Morph,00"/>
+            <Name value="Thor_ImmortalityProtocolWeld"/>
+            <Type value="Sound"/>
+            <Time value="5.733000"/>
+            <Payload value="Thor_ImmortalityProtocolWeld"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Morph,00"/>
+            <Name value="Thor_ImmortalityProtocolWeld"/>
+            <Type value="Sound"/>
+            <Time value="6.933000"/>
+            <Payload value="Thor_ImmortalityProtocolWeld"/>
+        </Events>
+        <Events>
+            <Anim value="Birth,00"/>
+            <Name value="ThorWreckageSparks"/>
+            <Type value="Sound"/>
+            <Time value="0.210000"/>
+            <Payload value="ThorWreckageSparks"/>
+        </Events>
+        <Events>
+            <Anim value="Birth,00"/>
+            <Name value="ThorWreckageSparks"/>
+            <Type value="Sound"/>
+            <Time value="0.370000"/>
+            <Payload value="ThorWreckageSparks"/>
+        </Events>
+        <Events>
+            <Anim value="Birth,00"/>
+            <Name value="ThorWreckageSparks"/>
+            <Type value="Sound"/>
+            <Time value="1.430000"/>
+            <Payload value="ThorWreckageSparks"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <Radius value="0.800000"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <SelectionRadius value="1.845700"/>
+        <ShadowRadius value="1.230700"/>
+    </CModel>
     <CModelFoliage id="ThornShieldDamage">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModelFoliage>
     <CModel id="Titan" parent="ThorBase">
         <Model value="Assets\Units\Terran\Thor_Merc_Collection\Thor_Merc_Collection.m3"/>
+        <RequiredAnims index="0" value="Assets\Units\Terran\ThorCE_SwarmAnims\ThorCE_SwarmAnims.m3a"/>
+        <RequiredAnims index="1" removed="1"/>
     </CModel>
     <CModel id="TitanDeath" parent="ThorDeathBase">
         <Model value="Assets\Units\Terran\Thor_Merc_Collection_Death\Thor_Merc_Collection_Death_00.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+        <Events index="4" removed="1"/>
     </CModel>
     <CModel id="TitanPortrait" parent="ThorPortraitBase">
         <Model value="Assets\Portraits\Protoss\Thor_Merc_Collection_Portrait\Thor_Merc_Collection_Portrait.m3"/>
@@ -461,8 +892,8 @@
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraMid07"/>
         <Radius value="0.650000"/>
-        <ScaleMax value="0.850000,0.850000,0.850000"/>
-        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <ScaleMax value="1.150000,1.150000,1.150000"/>
+        <ScaleMin value="1.150000,1.150000,1.150000"/>
         <SelectionRadius value="0.722000"/>
         <ShadowRadius value="0.722000"/>
         <TechPurchaseCamera value="TechPurchaseVehicle"/>
@@ -509,7 +940,80 @@
     <CModelFoliage id="SprayandPayImpactModel">
         <Model value="Assets\Models\Nova_PenetratingShot_Impact.m3"/>
     </CModelFoliage>
+    <CModel id="PsychoMissilesDummyAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissileLaunch\WarHoundHaywireMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PsychoMissilesImpact" parent="ImpactFX">
+        <Model value="Assets\StoryModeSets\Terran\SMX2_KorhalArrival_Explosion\SMX2_KorhalArrival_Explosion.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.300000,0.300000,0.300000"/>
+        <ScaleMin value="0.300000,0.300000,0.300000"/>
+    </CModel>
+    <CModel id="PsychoMissilesLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissileLaunch\WarHoundHaywireMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TornadoMissileDummyWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissile\WarHoundHaywireMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PsychoMissilesDummyWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissile\WarHoundHaywireMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PsychoMissilesMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\ArcadeVikingMissile\ArcadeVikingMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
     <CModel id="U-240RoundsBombModel">
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+    </CModel>
+    <CModelFoliage id="UranusProtocol">
+        <Model value="Assets\Buildings\Terran\GunTowerSmall\GunTowerSmall.m3"/>
+    </CModelFoliage>
+    <CModel id="VoidDarkTemplarShadowFury">
+        <Model value="Assets\Effects\Protoss\ZeratulBlinkOut\ZeratulBlinkOut.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="CondorSpiderMineAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModel id="HarrierAirAttackImpactLeft" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HarrierAirWeaponLeft" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Missile\Goliath_Lockdown_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RailcannonImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ArchAngel_Xanthos_Experimentation_Railgun_Impact\ArchAngel_Xanthos_Experimentation_Railgun_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RailcannonBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\ArchAngel_Xanthos_Experimentation_Railgun\ArchAngel_Xanthos_Experimentation_Railgun.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Wolverine" parent="Unit">
+        <Model value="Assets\Models\Warhound_Mercenary.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <PlanetPanelCamera value="Star2CameraHigh07"/>
+        <Radius value="0.820000"/>
+        <SelectionRadius value="0.700000"/>
+        <ShadowRadius value="2.000000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh07"/>
+    </CModel>
+    <CModel id="WolverinePortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Models\Warhound_Mercenary_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\WarhoundPortrait.fxa"/>
+        <Image value="Assets\Textures\WarhoundPortrait_Static.dds"/>
+        <Lighting value="WarhoundPortrait"/>
     </CModel>
 </Catalog>

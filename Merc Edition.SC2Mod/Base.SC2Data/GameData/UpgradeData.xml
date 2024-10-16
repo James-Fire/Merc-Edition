@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade id="AIEnhancement">
+        <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Vespene]" Value="25"/>
+        <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Minerals]" Value="35"/>
+        <AffectedUnitArray value="SkibisAngel"/>
+    </CUpgrade>
+    <CUpgrade id="ASPRocketPods">
+        <AffectedUnitArray value="DuskWing"/>
+        <EffectArray Operation="Set" Reference="Weapon,DuskWingBanshee2,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DuskWingBanshee3,Options[Disabled]" Value="0"/>
+    </CUpgrade>
+    <CUpgrade id="AblativeScales">
+        <EffectArray Reference="Unit,HammerSecurity,LifeMax" Value="75"/>
+        <EffectArray Reference="Unit,HammerSecurity,LifeStart" Value="75"/>
+        <AffectedUnitArray value="HammerSecurity"/>
+    </CUpgrade>
+    <CUpgrade id="ArmoredHousing">
+        <EffectArray Reference="Unit,MissileTurret,LifeMax" Value="100"/>
+        <EffectArray Reference="Unit,MissileTurret,LifeStart" Value="100"/>
+        <EffectArray Reference="Unit,MissileTurret,LifeArmor" Value="2"/>
+        <AffectedUnitArray value="MissileTurret"/>
+    </CUpgrade>
     <CUpgrade id="BearclawGauntlets">
         <EffectArray Operation="Set" Reference="Effect,DevilDogSearchArea,AreaArray[0].Radius" Value="0.96"/>
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
         <AffectedUnitArray value="DevilDog"/>
+    </CUpgrade>
+    <CUpgrade id="BurstAmplifier">
+        <EffectArray Reference="Weapon,ScorpionMissiles,DisplayAttackCount" Value="2"/>
+        <EffectArray Reference="Weapon,ThermalBurst,DisplayAttackCount" Value="3"/>
+        <AffectedUnitArray value="Harrier"/>
+    </CUpgrade>
+    <CUpgrade id="ChaoticPower">
+        <EffectArray Operation="Multiply" Reference="Abil,MagMine,Cost[0].Cooldown.TimeUse" Value="0.500000"/>
+        <EffectArray Reference="Effect,MagMineCU,SpawnCount" Value="1"/>
+        <AffectedUnitArray value="Wolverine"/>
+    </CUpgrade>
+    <CUpgrade id="DeadManSwitch">
+        <AffectedUnitArray value="Titan"/>
+    </CUpgrade>
+    <CUpgrade id="DevastatorOverride">
+        <EffectArray Operation="Set" Reference="Weapon,DevastatorMissilesMerc,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DevastatorMissilesMerc,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,LongboltMissile,Options[Hidden]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,LongboltMissile,Options[Disabled]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,HailstormMissilePodsMerc,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,HailstormMissilePodsMerc,Options[Hidden]" Value="0"/>
+        <AffectedUnitArray value="MissileTurret"/>
+    </CUpgrade>
+    <CUpgrade id="ExplosiveCalibrations">
+        <EffectArray Reference="Effect,NomadMissileDamage,Amount" Value="30"/>
+        <EffectArray Reference="Effect,NomadTurretWeaponDamage,Amount" Value="12"/>
+        <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[0].Radius" Value="0.18"/>
+        <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[1].Radius" Value="0.36"/>
+        <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[2].Radius" Value="0.72"/>
+        <EffectArray Operation="Subtract" Reference="Abil,PlaceNomadTurret,Cost[0].Vital[Energy]" Value="20"/>
+        <AffectedUnitArray value="Nomad"/>
+    </CUpgrade>
+    <CUpgrade id="PiercingStrike">
+        <AffectedUnitArray value="Wolverine"/>
+    </CUpgrade>
+    <CUpgrade id="RagnarokWeapons">
+        <EffectArray Operation="Set" Reference="Weapon,RagnarokNRoll,Options[Hidden]" Value="0"/>
+        <AffectedUnitArray value="Starcruiser"/>
+    </CUpgrade>
+    <CUpgrade id="RevivalField">
+        <AffectedUnitArray value="Harrier"/>
     </CUpgrade>
     <CUpgrade id="ChairsandAC">
         <EffectArray Reference="Unit,Bunker,LifeArmor" Value="3"/>
@@ -15,23 +77,152 @@
         <EffectArray Reference="Unit,DevilDog,LifeArmor" Value="3"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
+    <CUpgrade id="ConfederateReactor">
+        <EffectArray Reference="Weapon,ChargedJupiterRail,Range" Value="1"/>
+        <EffectArray Reference="Unit,Copperhead,Speed" Value="1.000000"/>
+        <EffectArray Reference="Weapon,ChargedJupiterRail,RateMultiplier" Value="0.35"/>
+        <AffectedUnitArray value="Copperhead"/>
+    </CUpgrade>
+    <CUpgrade id="JotunnSystems">
+        <EffectArray Operation="Set" Reference="Weapon,WreckingCrewAssault,Effect" Value="HelsAngelWeaponSet"/>
+        <EffectArray Reference="Weapon,WreckingCrewAssault,Range" Value="2"/>
+        <EffectArray Reference="Weapon,WreckingCrewFighter,Range" Value="2"/>
+        <EffectArray Operation="Set" Reference="Effect,WreckingCrewFighter,PeriodicPeriodArray[1]" Value="0.000000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Mover].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewFighterMode,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <AffectedUnitArray value="HelsAngelAssault"/>
+        <AffectedUnitArray value="HelsAngelFighter"/>
+    </CUpgrade>
+    <CUpgrade id="LegionSystems">
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyG,Options[Disabled]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyG,Options[Hidden]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyA,Options[Hidden]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyA,Options[Disabled]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyAUpgraded,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyAUpgraded,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyGUpgraded,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyGUpgraded,Options[Hidden]" Value="0"/>
+        <EffectArray Reference="Weapon,SpartanCompanyGUpgraded,Range" Value="2"/>
+        <EffectArray Reference="Weapon,SpartanCompanyAUpgraded,Range" Value="3"/>
+        <AffectedUnitArray value="SpartanCompany"/>
+    </CUpgrade>
+    <CUpgrade id="RapidAlgorithms">
+        <EffectArray Reference="Unit,CharonDropship,Speed" Value="2.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,MedivacTransport,UnloadPeriod" Value="0.000000"/>
+        <AffectedUnitArray value="CharonDropship"/>
+    </CUpgrade>
+    <CUpgrade id="ReflectiveArmor">
+        <AffectedUnitArray value="Copperhead"/>
+    </CUpgrade>
     <CUpgrade id="EidolonSuit">
         <EffectArray Operation="Set" Reference="Behavior,PhantomCloak,Modification.VitalRegenArray[Energy]" Value="0.000000"/>
         <EffectArray Operation="Set" Reference="Abil,PhantomCloak,Cost[0].Vital[Energy]" Value="0"/>
         <AffectedUnitArray value="Phantom"/>
     </CUpgrade>
+    <CUpgrade id="IFFSpiderRounds">
+        <EffectArray Reference="Effect,ArcliteShockCannonEnemyDamage,Amount" Value="60"/>
+        <EffectArray Reference="Effect,ArcliteShockCannonBlast,Amount" Value="60"/>
+        <EffectArray Reference="Effect,ArcliteShockCannonDirected,Amount" Value="60"/>
+        <EffectArray Reference="Effect,ArcliteShockCannonDummy,Amount" Value="60"/>
+        <EffectArray Operation="Set" Reference="Effect,ArcliteShockCannonFriendlyDamage,Amount" Value="3"/>
+        <EffectArray Operation="Set" Reference="Effect,ArcliteShockCannonFriendlyDamage,AttributeBonus[Armored]" Value="2"/>
+        <EffectArray Operation="Set" Reference="Effect,IFFSpiderRoundsCU,Chance" Value="1"/>
+        <AffectedUnitArray value="SiegeBreaker"/>
+        <AffectedUnitArray value="SiegeBreakerSieged"/>
+    </CUpgrade>
     <CUpgrade id="JetPackOverdrive">
         <EffectArray Reference="Unit,BlockB,Speed" Value="1.750000"/>
         <AffectedUnitArray value="BlockB"/>
+    </CUpgrade>
+    <CUpgrade id="JoriumLinedSuit">
+        <EffectArray Operation="Set" Reference="Behavior,SpectreCloaking,Modification.VitalRegenArray[Energy]" Value="0.000000"/>
+        <AffectedUnitArray value="Phantom"/>
     </CUpgrade>
     <CUpgrade id="LaserTargetingSystem">
         <EffectArray Reference="Weapon,KelmorianMinerGaussRifle,Range" Value="1"/>
         <EffectArray Reference="Unit,WarPig,Sight" Value="2"/>
         <AffectedUnitArray value="WarPig"/>
     </CUpgrade>
+    <CUpgrade id="ImpalerRoundsShadow">
+        <EffectArray Reference="Effect,AGRShadeHunter,AttributeBonus[Armored]" Value="7"/>
+        <AffectedUnitArray value="Shadow"/>
+    </CUpgrade>
+    <CUpgrade id="AdvancedSiegeTechArmorOnly">
+        <EffectArray Reference="Unit,SiegeBreakerSieged,LifeArmor" Value="3"/>
+        <AffectedUnitArray value="SiegeBreakerSieged"/>
+    </CUpgrade>
+    <CUpgrade id="LooseEngineSeals">
+        <EffectArray Reference="Unit,Condor,Speed" Value="2.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,CondorDeathrattleCP,Chance" Value="1"/>
+        <AffectedUnitArray value="Condor"/>
+    </CUpgrade>
+    <CUpgrade id="MercEdition"/>
     <CUpgrade id="NeosteelCupHolders">
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
+        <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.SightBonus" Value="3"/>
         <AffectedUnitArray value="Bunker"/>
+    </CUpgrade>
+    <CUpgrade id="PliableArmor">
+        <EffectArray Reference="Unit,Agitator,Speed" Value="2.000000"/>
+        <EffectArray Reference="Unit,Anarchist,Speed" Value="2.000000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAnarchist,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAnarchist,InfoArray[0].SectionArray[Collide].DurationArray[Delay]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAnarchist,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAgitator,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAgitator,InfoArray[0].SectionArray[Collide].DurationArray[Delay]" Value="0.500000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,MorphToAgitator,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.500000"/>
+        <AffectedUnitArray value="Anarchist"/>
+        <AffectedUnitArray value="Agitator"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorSpecial">
+        <AffectedUnitArray value="Condor"/>
+        <EffectArray Operation="Set" Reference="Weapon,RaidersRival,Options[OnlyFireAtAttackOrderTarget]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,RaidersRival,Options[OnlyFireWhileInAttackOrder]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,RaidersRival,AllowedMovement" Value="Moving"/>
+        <EffectArray Operation="Set" Reference="Unit,Condor,Mover" Value="CliffJumper"/>
+    </CUpgrade>
+    <CUpgrade id="RorkesRedline">
+        <AffectedUnitArray value="Starcruiser"/>
+        <EffectArray Reference="Unit,Starcruiser,ShieldsMax" Value="250"/>
+        <EffectArray Reference="Unit,Starcruiser,ShieldsStart" Value="250"/>
+    </CUpgrade>
+    <CUpgrade id="ShimmerScreen">
+        <AffectedUnitArray value="DuskWing"/>
+        <EffectArray Operation="Set" Reference="Abil,DuskWingBansheeCloakingField,BehaviorArray[0]" Value="PermanentCloakDuskWing"/>
+        <EffectArray Operation="Set" Reference="Button,CloakOnBanshee,Tooltip" Value="Button/Tooltip/PermanentCloakDuskWing"/>
+        <EffectArray Operation="Set" Reference="Abil,DuskWingBansheeCloakingField,Cost[0].Vital[Energy]" Value="0"/>
+    </CUpgrade>
+    <CUpgrade id="SilentMode">
+        <AffectedUnitArray value="Nomad"/>
+    </CUpgrade>
+    <CUpgrade id="SmartServosMKIV">
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Facing].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Facing].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerUnsiege,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Set" Reference="Weapon,ArcliteShockCannon,TargetFilters" Value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AffectedUnitArray value="SiegeBreakerSieged"/>
+        <AffectedUnitArray value="SiegeBreaker"/>
     </CUpgrade>
     <CUpgrade id="StabilizerMedpacksMerc">
         <Flags index="UpgradeCheat" value="0"/>
@@ -40,11 +231,26 @@
         <EffectArray Operation="Multiply" Reference="Effect,SkibisAngelHeal,RechargeVitalRate" Value="1.351500"/>
         <EffectArray Reference="Abil,GreaterHeal,Range[0]" Value="1"/>
         <EffectArray Reference="Abil,SignalFlare,Range[0]" Value="2"/>
+        <EffectArray Operation="Set" Reference="Button,SignalFlare,Icon" Value="Assets\Icons and Wireframes\signal flare heal.dds"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <AffectedUnitArray value="SkibisAngel"/>
     </CUpgrade>
+    <CUpgrade id="SulfurMissiles">
+        <AffectedUnitArray value="HelsAngelFighter"/>
+    </CUpgrade>
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+    <CUpgrade id="TerrazineShots">
+        <EffectArray Operation="Set" Reference="Abil,DarkTemplarShadowFury,Cost[0].Cooldown.TimeUse" Value="6.000000"/>
+        <EffectArray Reference="Weapon,AGRShadeHunter,RateMultiplier" Value="0.25"/>
+        <EffectArray Reference="Unit,Shadow,Sight" Value="2"/>
+        <EffectArray Reference="Unit,Shadow,Speed" Value="1.250000"/>
+        <EffectArray Reference="Weapon,AGRShadeHunter,Range" Value="1.25"/>
+        <EffectArray Operation="Set" Reference="Sound,Spectre_AttackLaunch,AssetArray[0].File" Value="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch01.wav"/>
+        <EffectArray Operation="Set" Reference="Sound,Spectre_AttackLaunch,AssetArray[1].File" Value="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch02.wav"/>
+        <EffectArray Operation="Set" Reference="Sound,Spectre_AttackLaunch,AssetArray[2].File" Value="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch03.wav"/>
+        <AffectedUnitArray value="Shadow"/>
     </CUpgrade>
     <CUpgrade id="ThornShield">
         <EffectArray Reference="Unit,WarPig,LifeMax" Value="15"/>
@@ -69,5 +275,26 @@
         <EffectArray Reference="Effect,BarBreakersDamage,AttributeBonus[Light]" Value="3"/>
         <EffectArray Reference="Weapon,BarBreakers,Range" Value="1"/>
         <AffectedUnitArray value="BlockB"/>
+    </CUpgrade>
+    <CUpgrade id="MASH">
+        <EffectArray Operation="Set" Reference="Effect,MedivacHeal,DrainVitalCostFactor" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,CharonDropship,EnergyMax" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,CharonDropship,EnergyStart" Value="0"/>
+        <AffectedUnitArray value="CharonDropship"/>
+    </CUpgrade>
+    <CUpgrade id="UranusProtocol">
+        <AffectedUnitArray value="Titan"/>
+    </CUpgrade>
+    <CUpgrade id="ViralFlammenwerfer">
+        <EffectArray Reference="Effect,HellbornFlamethrowerDamage,AttributeBonus[Light]" Value="10"/>
+        <EffectArray Reference="Effect,HellbornFlamethrowerDamage,AttributeBonus[Biological]" Value="10"/>
+        <EffectArray Reference="Effect,AnarchistWeaponDamage,AttributeBonus[Biological]" Value="10"/>
+        <EffectArray Reference="Effect,HellbornFlamethrowerSA,AreaArray[0].Radius" Value="0.45"/>
+        <EffectArray Reference="Effect,AnarchistWeaponDamage,AttributeBonus[Light]" Value="10"/>
+        <EffectArray Reference="Effect,AnarchistWeaponSearch,AreaArray[0].Arc" Value="45.000000"/>
+        <EffectArray Operation="Set" Reference="Actor,AgitatorAttackBeam,Scale" Value="3.000000,1.000000,1.000000"/>
+        <EffectArray Operation="Set" Reference="Actor,AnarchistAttackLaunch,Scale" Value="1.500000,1.000000,1.000000"/>
+        <AffectedUnitArray value="Anarchist"/>
+        <AffectedUnitArray value="Agitator"/>
     </CUpgrade>
 </Catalog>

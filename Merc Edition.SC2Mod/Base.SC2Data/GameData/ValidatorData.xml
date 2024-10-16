@@ -1,11 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorPlayerRequirement id="HaveExplosiveCalibrations">
+        <Find value="1"/>
+        <Value value="UseExplosiveCalibrations"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveChaoticPower">
+        <Find value="1"/>
+        <Value value="UseChaoticPower"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="IsInSilentMode">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="NomadSilentMode"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoFearImmunityWolverine">
+        <Behavior value="WolverineFearImmunity"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="OwningTitanofPointBreakDronehas10Energy">
+        <WhichUnit Value="Source"/>
+        <Compare value="GE"/>
+        <Value value="10"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareDamageDealtTime id="CasterNotRecentlyDealtDamage">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Value value="3"/>
+    </CValidatorUnitCompareDamageDealtTime>
+    <CValidatorUnitCompareBehaviorCount id="CopperheadReflectiveArmorActive">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="ReflectiveArmorActiveforBeamVisual"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HarrierCantRevive">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="RevivalFieldCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="HaveASPRocketPods">
+        <Find value="1"/>
+        <Value value="UseASPRocketPods"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveDevastatorOverride">
+        <Find value="1"/>
+        <Value value="UseDevastatorOverride"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBurstAmplifier">
+        <Find value="1"/>
+        <Value value="UseBurstAmplifier"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveRevivalField">
+        <Find value="1"/>
+        <Value value="UseRevivalField"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveRorkesRedline">
+        <Find value="1"/>
+        <Value value="UseRorkesRedline"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveJotunnSystems">
+        <Find value="1"/>
+        <Value value="UseJotunnSystems"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveSulfurMissiles">
+        <Find value="1"/>
+        <Value value="UseSulfurMissiles"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveConfederateReactor">
+        <Find value="1"/>
+        <Value value="UseConfederateReactor"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveConcussiveShrapnel">
         <Value value="UseConcussiveShrapnel"/>
+        <Find value="1"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveReflectiveArmor">
+        <Find value="1"/>
+        <Value value="UseReflectiveArmor"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveEidolonSuit">
         <Find value="1"/>
         <Value value="UseEidolonSuit"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveAblativeScales">
+        <Find value="1"/>
+        <Value value="UseAblativeScalesNew"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveIFFSpiderRounds">
+        <Find value="1"/>
+        <Value value="UseIFFSpiderRounds"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DontHaveIFFSpiderRounds">
+        <Value value="UseIFFSpiderRounds"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveSmartServosMKIV">
+        <Find value="1"/>
+        <Value value="UseSmartServosMKIV"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DontHaveSmartServosMKIV">
+        <Value value="UseSmartServosMKIV"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareDamageTakenTime id="CopperheadRecentlyTookDamage">
+        <Compare value="LE"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareDamageTakenTime>
+    <CValidatorUnitCompareBehaviorCount id="HelsAngelIsAssaultMode">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="HelsAngelIsAssaultMode"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HelsAngelIsFighterMode">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="HelsAngelIsFighterMode"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IsMovingandHasBurstAmplifiers">
+        <Type value="And"/>
+        <CombineArray value="HaveBurstAmplifier"/>
+        <CombineArray value="CasterIsMoving"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="IsTarget">
+        <Value Effect="LiberatorCP" Value="TargetUnit"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="NotAlreadyBeingHealedbySignalFlareHealingMistwowwhataname">
+        <Behavior value="SignalFlareMistHeal"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="PlayerIsMercEdition">
+        <Find value="1"/>
+        <Value value="UseMercEdition"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HavePliableArmor">
+        <Find value="1"/>
+        <Value value="UsePliableArmor"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveTerrazineShots">
+        <Find value="1"/>
+        <Value value="UseTerrazineShots"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveU240Rounds">
         <Find value="1"/>
@@ -19,6 +147,34 @@
         <Find value="1"/>
         <Value value="UseStabilizerMedpacksMerc"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="PlayerIsNotMercEdition">
+        <Value value="UseMercEdition"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="RedlineReactorActive">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="RedlineReactor"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="SkibidiRepairDroneAutocast">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray>
+            <Compare value="GE"/>
+            <Count value="1"/>
+            <Radius value="3.7"/>
+            <Validator value="TargetLifeNotFull"/>
+        </AreaArray>
+        <SearchFilters value="-;Neutral,Enemy,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitType id="SiegeBreakerIsSieged">
+        <WhichUnit Value="Caster"/>
+        <Value value="SiegeBreakerSieged"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareChargeUsed id="SpiderMineUsedCondor">
+        <ResultFailed value="Error,VultureMineMax"/>
+        <Compare value="GT"/>
+        <ChargeLink value="Abil/CondorSpiderMines"/>
+        <Location value="Unit"/>
+    </CValidatorUnitCompareChargeUsed>
     <CValidatorUnitCompareBehaviorCount id="SuperCloakNotOnCooldown">
         <Behavior value="SuperCloakCooldown"/>
     </CValidatorUnitCompareBehaviorCount>

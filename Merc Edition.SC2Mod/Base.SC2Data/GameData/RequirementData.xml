@@ -3,6 +3,13 @@
     <CRequirement id="DontHaveStabilizerMedpacks">
         <NodeArray index="Show" Link="NotCountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="IsInSilentMode">
+        <NodeArray index="Show" Link="CountBehaviorNomadSilentModeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="TechLaborMedicUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="LearnStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0"/>
@@ -11,17 +18,41 @@
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeSuperStimQueuedOrBetter0"/>
     </CRequirement>
+    <CRequirement id="LearnTerrazineShots">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTCountUpgradeTerrazineShotsQueuedOrBetter0"/>
+    </CRequirement>
     <CRequirement id="LearnThornShield">
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeThornShieldQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="UseAIEnhancement">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAIEnhancementCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseASPRocketPods">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeASPRocketPodsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseArmoredHousing">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeArmoredHousingCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseBearclawGauntlets">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBurstAmplifier">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBurstAmplifierCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseChairsandAC">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeChairsandACCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseChaoticPower">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeChaoticPowerCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseChemicalPlating">
         <EditorCategories value="TechType:Ability"/>
@@ -31,25 +62,125 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeConcussiveShrapnelCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseConfederateReactor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeConfederateReactorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseDeadManSwitch">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeDeadManSwitchCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseDevastatorOverride">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeDevastatorOverrideCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseEidolonSuit">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeEidolonSuitCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseExplosiveCalibrations">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeExplosiveCalibrationsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseIFFSpiderRounds">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeIFFSpiderRoundsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseJetPackOverdrive">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeJetPackOverdriveCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseJoriumLinedSuit">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeJoriumLinedSuitCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseJotunnSystems">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeJotunnSystemsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseLegionSystems">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeLegionSystemsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseLooseEngineSeals">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeLooseEngineSealsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMASH">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMASHCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMercEdition">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseNeosteelCupHolders">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UsePiercingStrike">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradePiercingStrikeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UsePliableArmor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradePliableArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRagnarokWeapons">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRagnarokWeaponsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRapidAlgorithms">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRapidAlgorithmsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRaynorSpecial">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRaynorSpecialCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseReflectiveArmor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeReflectiveArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRevivalField">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRevivalFieldCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRorkesRedline">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRorkesRedlineCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseShimmerScreen">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeShimmerScreenCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSilentMode">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSilentModeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSmartServosMKIV">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSmartServosMKIVCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseSulfurMissiles">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSulfurMissilesCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseSuperStim">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSuperStimCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseTerrazineShots">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeTerrazineShotsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseAblativeScalesNew">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="UseThornShield">
         <EditorCategories value="TechType:Ability"/>
@@ -62,5 +193,13 @@
     <CRequirement id="UseU240Rounds">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeU240RoundsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseUranusProtocol">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeUranusProtocolCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseViralFlammenwerfer">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeViralFlammenwerferCompleteOnly"/>
     </CRequirement>
 </Catalog>

@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementCountBehavior id="CountBehaviorNomadSilentModeCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="NomadSilentMode" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUpgrade id="CountUpgradeAIEnhancementCompleteOnly">
+        <Count Link="AIEnhancement" State="CompleteOnly"/>
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeASPRocketPodsCompleteOnly">
+        <Count Link="ASPRocketPods" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat">
+        <Count Link="AblativeScales" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeArmoredHousingCompleteOnly">
+        <Count Link="ArmoredHousing" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurstAmplifierCompleteOnly">
+        <Count Link="BurstAmplifier" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeChairsandACCompleteOnly">
         <Count Link="ChairsandAC" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeChaoticPowerCompleteOnly">
+        <Count Link="ChaoticPower" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeChemicalPlatingCompleteOnly">
         <Count Link="ChemicalPlating" State="CompleteOnly"/>
@@ -12,14 +36,80 @@
     <CRequirementCountUpgrade id="CountUpgradeConcussiveShrapnelCompleteOnly">
         <Count Link="ConcussiveShrapnel" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeConfederateReactorCompleteOnly">
+        <Count Link="ConfederateReactor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadManSwitchCompleteOnly">
+        <Count Link="DeadManSwitch" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDevastatorOverrideCompleteOnly">
+        <Count Link="DevastatorOverride" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
         <Count Link="EidolonSuit" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeExplosiveCalibrationsCompleteOnly">
+        <Count Link="ExplosiveCalibrations" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeIFFSpiderRoundsCompleteOnly">
+        <Count Link="IFFSpiderRounds" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeJetPackOverdriveCompleteOnly">
         <Count Link="JetPackOverdrive" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeJoriumLinedSuitCompleteOnly">
+        <Count Link="JoriumLinedSuit" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeJotunnSystemsCompleteOnly">
+        <Count Link="JotunnSystems" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeLegionSystemsCompleteOnly">
+        <Count Link="LegionSystems" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeLooseEngineSealsCompleteOnly">
+        <Count Link="LooseEngineSeals" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMASHCompleteOnly">
+        <Count Link="MASH" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMercEditionCompleteOnly">
+        <Count Link="MercEdition" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeNeosteelCupHoldersCompleteOnly">
         <Count Link="NeosteelCupHolders" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePiercingStrikeCompleteOnly">
+        <Count Link="PiercingStrike" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePliableArmorCompleteOnly">
+        <Count Link="PliableArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRagnarokWeaponsCompleteOnly">
+        <Count Link="RagnarokWeapons" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRapidAlgorithmsCompleteOnly">
+        <Count Link="RapidAlgorithms" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorSpecialCompleteOnly">
+        <Count Link="RaynorSpecial" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReflectiveArmorCompleteOnly">
+        <Count Link="ReflectiveArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRevivalFieldCompleteOnly">
+        <Count Link="RevivalField" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRorkesRedlineCompleteOnly">
+        <Count Link="RorkesRedline" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeShimmerScreenCompleteOnly">
+        <Count Link="ShimmerScreen" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSilentModeCompleteOnly">
+        <Count Link="SilentMode" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSmartServosMKIVCompleteOnly">
+        <Count Link="SmartServosMKIV" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeStabilizerMedpacksMercCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -28,11 +118,20 @@
     <CRequirementCountUpgrade id="CountUpgradeStabilizerMedpacksMercQueuedOrBetter">
         <Count Link="StabilizerMedpacksMerc" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSulfurMissilesCompleteOnly">
+        <Count Link="SulfurMissiles" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSuperStimCompleteOnly">
         <Count Link="SuperStim" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSuperStimQueuedOrBetter">
         <Count Link="SuperStim" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTerrazineShotsCompleteOnly">
+        <Count Link="TerrazineShots" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTerrazineShotsQueuedOrBetter">
+        <Count Link="TerrazineShots" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeThornShieldCompleteOnly">
         <Count Link="ThornShield" State="CompleteOnly"/>
@@ -46,6 +145,12 @@
     <CRequirementCountUpgrade id="CountUpgradeU240RoundsCompleteOnly">
         <Count Link="U240Rounds" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUranusProtocolCompleteOnly">
+        <Count Link="UranusProtocol" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeViralFlammenwerferCompleteOnly">
+        <Count Link="ViralFlammenwerfer" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementLTE id="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
@@ -54,12 +159,19 @@
         <OperandArray index="0" value="CountUpgradeSuperStimQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
+    <CRequirementLTE id="LTCountUpgradeTerrazineShotsQueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeTerrazineShotsQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
     <CRequirementLTE id="LTCountUpgradeThornShieldQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeThornShieldQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
     <CRequirementNot id="NotCountUpgradeStabilizerMedpacksMercCompleteOnly">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirementNot>
+    <CRequirementOr id="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly">
+        <OperandArray value="CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"/>
+        <OperandArray value="CountUpgradeAIEnhancementCompleteOnly"/>
+    </CRequirementOr>
 </Catalog>

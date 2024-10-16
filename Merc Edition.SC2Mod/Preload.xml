@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Preload>
+<Abil id="SkibisAngelRepairDrone"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="RevivalFieldCooldown"/>
+<Behavior id="GraduatingRangeController"/>
+<Effect id="SpartanCompanyShellShowerFull"/>
 </Preload>
