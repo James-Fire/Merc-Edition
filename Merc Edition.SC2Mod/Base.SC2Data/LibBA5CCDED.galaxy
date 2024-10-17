@@ -287,7 +287,7 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void libBA5CCDED_gt_MissionDirectives_Init () {
     libBA5CCDED_gt_MissionDirectives = TriggerCreate("libBA5CCDED_gt_MissionDirectives_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_MissionDirectives);
+    TriggerAddEventTimeElapsed(libBA5CCDED_gt_MissionDirectives, 2.0, c_timeGame);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -324,7 +324,7 @@ bool libBA5CCDED_gt_DepositMoney_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void libBA5CCDED_gt_DepositMoney_Init () {
     libBA5CCDED_gt_DepositMoney = TriggerCreate("libBA5CCDED_gt_DepositMoney_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_DepositMoney);
+    TriggerAddEventTimeElapsed(libBA5CCDED_gt_DepositMoney, 2.0, c_timeGame);
 }
 
 //--------------------------------------------------------------------------------------------------
