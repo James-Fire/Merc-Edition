@@ -12,6 +12,42 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="SJGriffon" Requirements="UseUranusProtocol"/>
     </CAbilEffectInstant>
+    <CAbilArmMagazine id="AdjudicatorArmMagazineNuke">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <Launch value="ReleaseAtSource"/>
+        <Flags index="BestUnit" value="1"/>
+        <InfoArray index="Ammo1" Time="38" Unit="Nuke">
+            <Resource index="Minerals" value="-50"/>
+            <Resource index="Vespene" value="-50"/>
+            <Charge Link="Abil/##id##"/>
+            <Cooldown Link="Abil/##id##"/>
+            <Button DefaultButtonFace="NukeArm" Requirements="TrainNukeAdjudicator"/>
+        </InfoArray>
+        <CalldownEffect value="Nuke"/>
+    </CAbilArmMagazine>
+    <CAbilEffectInstant id="NomadClusterMissileDummy">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown Link="NomadClusterMissileDummy" TimeUse="42"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ExplosiveCalibrations" Requirements="UseExplosiveCalibrations">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="Transwarp">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ArbiterMPRecallSearch"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CursorEffect value="ArbiterMPRecallSearch"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ArbiterMPRecall"/>
+    </CAbilEffectTarget>
     <CAbilTrain id="BarracksTrain">
         <InfoArray index="Train9" Time="25">
             <Button DefaultButtonFace="TrainWarPig" State="Restricted"/>
@@ -182,8 +218,9 @@
             <Button DefaultButtonFace="BuildCondor" State="Restricted"/>
             <Unit value="Vulture"/>
         </InfoArray>
-        <InfoArray index="Train19" Time="40">
-            <Button DefaultButtonFace="BuildCyberWolf" Requirements="HaveAttachedTechLab"/>
+        <InfoArray index="Train19" Time="55">
+            <Button DefaultButtonFace="BuildWolverine" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Wolverine"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilEffectTarget id="MagMine">
@@ -584,6 +621,14 @@
         <InfoArray index="Train14" Time="50">
             <Button DefaultButtonFace="BuildHarrier"/>
             <Unit value="Harrier"/>
+        </InfoArray>
+        <InfoArray index="Train15" Time="60">
+            <Button DefaultButtonFace="BuildAdjudicator" Requirements="BuildScienceVessel"/>
+            <Unit value="Adjudicator"/>
+        </InfoArray>
+        <InfoArray index="Train16" Time="60">
+            <Button DefaultButtonFace="BuildNomad" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Nomad"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilEffectInstant id="SuperStim">

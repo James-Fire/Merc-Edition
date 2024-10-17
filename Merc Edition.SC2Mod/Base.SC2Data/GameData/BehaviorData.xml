@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="AdjudicatorNanites">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="NanitesHeal"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ASPRocketPods">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -66,6 +72,22 @@
             <VitalRegenArray index="Life" value="1.5"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorSpawn id="MineDroneSpawn">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray>
+            <Unit value="SpiderMineBurrowed"/>
+            <MaxCount value="4"/>
+            <Requirements value="MineDroneBuild"/>
+            <Delay value="12"/>
+        </InfoArray>
+        <Offset value="3,-3"/>
+        <Offset value="-3,-3"/>
+        <Offset value="-3,3"/>
+        <Offset value="1,1"/>
+        <Limit value="4"/>
+        <Slop value="500"/>
+    </CBehaviorSpawn>
     <CBehaviorBuff id="NomadSilentMode">
         <Modification SightBonus="6">
             <ModifyFlags index="DisableWeapons" value="1"/>

@@ -1,4 +1,5 @@
-﻿Category/Name/lib_BA5CCDED_0B90820E=Unit Shit
+﻿Category/Name/lib_BA5CCDED_0B90820E=Data Shit
+Category/Name/lib_BA5CCDED_1C9D5AF2=Campaign Unit Requirements
 Category/Name/lib_BA5CCDED_2851B9D7=Mission Changes
 Category/Name/lib_BA5CCDED_CA3A8D1E=Passive Upgrades
 Category/Name/lib_BA5CCDED_FFB39B08=Skin Stuff
@@ -18,4 +19,5 @@ Trigger/Name/lib_BA5CCDED_B3349A44=Nomad Silent Mode Height Down
 Trigger/Name/lib_BA5CCDED_BDEEDBEA=Nomad Silent Mode Height Up
 Trigger/Name/lib_BA5CCDED_BF2FDC58=Mission Directives
 Trigger/Name/lib_BA5CCDED_C7C2E4C6=Deposit Money
+Trigger/Name/lib_BA5CCDED_FB26A66C=Allowing Units
 Variable/Name/lib_BA5CCDED_1F02B372=Player

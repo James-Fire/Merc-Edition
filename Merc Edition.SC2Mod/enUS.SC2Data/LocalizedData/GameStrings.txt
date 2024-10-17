@@ -1,5 +1,6 @@
 ﻿Abil/Name/ACVHarvest=Gather (ACV)
 Abil/Name/ActivateUranus=Activate Uranus
+Abil/Name/AdjudicatorArmMagazineNuke=Arm Magazine (Nuke)
 Abil/Name/CharonDropshipTrain=Train
 Abil/Name/CondorSpiderMineUnburrow=Spider Mine Unburrow
 Abil/Name/CondorSpiderMines=Use Spider Mines
@@ -17,6 +18,7 @@ Abil/Name/MakeSpiderMinesCondor=Make Spider Mines
 Abil/Name/MedivacSpeedBoost=Ignite Afterburners
 Abil/Name/MorphToAgitator=Morph To Agitator
 Abil/Name/MorphToAnarchist=Morph To Anarchist
+Abil/Name/NomadClusterMissileDummy=Nomad Cluster Missile Dummy
 Abil/Name/NomadTargetLock=Target Lock
 Abil/Name/PhantomCloak=Personal Cloaking
 Abil/Name/PlaceNomadDrone=Place Nomad Drone
@@ -40,6 +42,7 @@ Abil/Name/TitanDroneMagazine=Drone Magazine
 Abil/Name/TitanDroneMagazineDummy=Drone Magazine Dummy
 Abil/Name/TitanReborn=Titan Reborn
 Abil/Name/TitanWreckage=Titan Wreckage
+Abil/Name/Transwarp=Transwarp
 Behavior/Name/AfterburnersHelsAngel=Afterburners
 Behavior/Name/BlockBFlightDuration=Block B Flight Duration
 Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
@@ -99,10 +102,12 @@ Button/Name/AdjudicatorCloakingField=Cloaking Field
 Button/Name/AdvancedSiegeOptics=Advanced Siege Optics
 Button/Name/AdvancedSiegeTech=Advanced Siege Tech
 Button/Name/AftermarketRailgunTurret=Aftermarket Railgun Turret
+Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
 Button/Name/AspisBlinkShield=Aspis Blink Shield
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
 Button/Name/BuildAdjucator=Build Adjucator
+Button/Name/BuildAdjudicator=Build Adjudicator
 Button/Name/BuildAgitator=Build Agitator
 Button/Name/BuildAnarchist=Build Anarchist
 Button/Name/BuildCharonDropship=Build Charon Dropship
@@ -112,10 +117,12 @@ Button/Name/BuildCyberWolf=Build Cyber Wolf
 Button/Name/BuildDuskWing=Build Dusk Wing
 Button/Name/BuildHarrier=Build Harrier
 Button/Name/BuildHelsAngel=Build Hel's Angel
+Button/Name/BuildNomad=Build Nomad
 Button/Name/BuildSiegeBreaker=Build Siege Breaker
 Button/Name/BuildSpartanCompany=Build Spartan Company
 Button/Name/BuildStarcruiser=Build Starcruiser
 Button/Name/BuildTitan=Build Titan
+Button/Name/BuildWolverine=Build Wolverine
 Button/Name/BuildZeusLander=Build Zeus Lander
 Button/Name/BurstAmplifier=Burst Amplifier
 Button/Name/CerberusHoundMines=Cerberus Hound Mines
@@ -190,6 +197,7 @@ Button/Name/StabilizerHeal=Stabilizer Heal
 Button/Name/StabilizerMedpacksMerc=Advanced Stabilizers
 Button/Name/SulfurMissiles=Sulfur Missiles
 Button/Name/SuperStim=Super Stim
+Button/Name/SwannNanites=Swann Nanites
 Button/Name/TacticalRealignment=Tactical Realignment
 Button/Name/TarBomb=Tar Bomb
 Button/Name/TerrazineShots=Terrazine Shots
@@ -211,16 +219,18 @@ Button/Tooltip/AIEnhancement=Reduces unit cost, removes the need for a Tech Lab,
 Button/Tooltip/ASPRocketPods=Causes missiles to deal damage in a line, increases damage while cloaked by 25%, and adds another two Screecher Missile weapons.
 Button/Tooltip/AblativeScalesNew=Hammer Securities gain 75 life and immunity to splash damage.
 Button/Tooltip/ActivateUranusProtocol=Enable the powerful 250mm Uranus Carronades for <d time="21"/> to attack alongside the Coeus Missile Battery.
-Button/Tooltip/Adjudicator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/Adjudicator=Aerial support unit. Can use Irradiate, Transwarp, and Nano-Repair abilities. Cloaks nearby units.<n/><n/><c val="FFE303">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/AdjudicatorCloakingField=Cloaking Field passively cloaks friendly nearby units and structures.<n/><n/><c val="ffff8a">Passive ability.</c>
 Button/Tooltip/AdvancedSiegeOptics=Siege Breaker sight radius is equal to that of their Arclite Shock Cannon's range.
 Button/Tooltip/AdvancedSiegeTech=Siege Breakers enter and exit siege mode twice as fast, and gain +3 armor in siege mode.
 Button/Tooltip/AftermarketRailgunTurret=Timed turret. Deals damage in a line.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
 Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
 Button/Tooltip/BearclawGauntlets=Increases the Devil Dog's attack radius by 60% and grants the Grapple ability.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/BuildAdjudicator=Tactical support craft. Cloaks nearby units and attacks enemies for damage over time. Can use Nano-Repair, Irradiate, and Transwarp.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BuildAgitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildCharonDropship=Air transport. Heals nearby biological units.
@@ -230,6 +240,7 @@ Button/Tooltip/BuildCyberWolf=Anti-infantry specialist that deals area damage wi
 Button/Tooltip/BuildDuskWing=Tactical-strike aircraft.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildHarrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/BuildHelsAngel=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
+Button/Tooltip/BuildNomad=Heavy-fire support craft. Attacks using Seeker Missiles. Can deploy Railgun Turrets, Point Defense Drones, and Mine Drones.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BuildSiegeBreaker=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildSpartanCompany=Heavy-fire support unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildStarcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -257,7 +268,7 @@ Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon clo
 Button/Tooltip/EnableBatteries=Enable numerous rapid-fire laser batteries effective versus groups.
 Button/Tooltip/EnableRagnarok=Enable a slower, stronger cannon effective versus singular targets.
 Button/Tooltip/EnergyRadar=Phantoms reveal the locations of enemy units with an energy bar in a large area around them. Does not reveal the units.
-Button/Tooltip/ExplosiveCalibrations=Railgun Turrets and Seeker Missiles deal 40% more damage, Seeker Missiles have a 30% larger radius, and Railgun Turrets cost 20 less energy.
+Button/Tooltip/ExplosiveCalibrations=Seeker Missiles deal 40% more damage, have a 30% larger radius, and every <d time="42"/>, the next one splits into smaller bombs on impact. Railgun Turrets drop one of these bombs when dying.
 Button/Tooltip/FerrierofSouls=Upon taking damage, become Super Cloaked and gain +3 movement speed for <d time="7"/>. Cannot occur more than once every <d time="84"/>.
 Button/Tooltip/FireOnTheMove=The Copperhead can fire its Rail Gun while moving.
 Button/Tooltip/FireOnTheMoveUniversal=Can attack while moving.
@@ -324,6 +335,7 @@ Button/Tooltip/StabilizerMedpacksMerc=Increases heal speed, energy efficiency, a
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SulfurMissiles=Missiles now deal area damage and apply more damage over time. On death, the Hel's Angel explodes to deal damage and damage over time.
 Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
+Button/Tooltip/SwannNanites=Nano-Repair no longer costs energy, heals 50% faster, and can heal structures. Irradiation now damages enemy mechanical units and heals allied mechanical units.
 Button/Tooltip/TacticalRealignment=After transforming, damage dealt is increased by 50% for <d time="7"/>. Cannot occur more than once every <d time="21"/>.
 Button/Tooltip/TarBomb=Deal 20 damage to the target and apply a debuff for <d time="7"/> to enemies in the area that reduces their movement speed by 75% and range by 3.
 Button/Tooltip/TerrazineShots=Shadows gain more movement speed, attack speed, attack range, sight radius, and lower Shadow Fury cooldown.
@@ -343,13 +355,16 @@ Button/Tooltip/TriggerOverdrive=Attacks increase attack speed by 10% for a short
 Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able to calldown nukes 50% faster, and have 10% reduced Snipe energy cost.
 Button/Tooltip/U240Rounds=Increases the Death Head's range by 1 and damage vs Light by 3. Enemies killed detonate a G-4 Clusterbomb.
 Button/Tooltip/ViralFlammenwerfer=Increases range by 3, damage vs Light and Biological by 15, and doubles the width of attacks.
-Button/Tooltip/Wolverine=Anti-vehicle mech. Haywire missiles do bonus damage to mechanical units. <n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Effect/Name/250mmUranusCarronadesCP=250mmUranusCarronadesCP
 Effect/Name/250mmUranusCarronadesDamage=250mmUranusCarronadesDamage
 Effect/Name/250mmUranusCarronadesLaunchMissile=250mmUranusCarronadesLaunchMissile
 Effect/Name/ACVFusionCutter=Fusion Cutter (Damage)
 Effect/Name/AGRShadeHunter=AGR Shade Hunter
 Effect/Name/ActivateUranus=Activate Uranus
+Effect/Name/AdjudicatorWeaponDamage=Adjudicator Weapon Damage
+Effect/Name/AdjudicatorWeaponLM=Adjudicator Weapon LM
+Effect/Name/AdjudicatorWeaponSet=Adjudicator Weapon Set
 Effect/Name/AfterburnersHelsAngelApplyBehavior=AfterburnersHelsAngelApplyBehavior
 Effect/Name/AnarchistFearIO=Anarchist Fear IO
 Effect/Name/AnarchistFearRP=Anarchist Fear RP
@@ -431,10 +446,17 @@ Effect/Name/MagrailMunitionsDamage=Magrail Munitions Damage
 Effect/Name/MagrailMunitionsLaunchMissile=Magrail Munitions Launch Missile
 Effect/Name/MercCommanderAB=Merc Commander AB
 Effect/Name/MercCommanderSA=Merc Commander SA
+Effect/Name/NanitesHeal=Nanites Heal
 Effect/Name/NanobotInjectorsDamage=NanobotInjectorsDamage
 Effect/Name/NanobotInjectorsLaunchMissile=NanobotInjectorsLaunchMissile
 Effect/Name/NomadMissileAB=Nomad Missile AB
+Effect/Name/NomadMissileClusterCP=Nomad Missile Cluster CP
+Effect/Name/NomadMissileClusterCooldown=Nomad Missile Cluster Cooldown
+Effect/Name/NomadMissileClusterDamage=Nomad Missile Cluster Damage
+Effect/Name/NomadMissileClusterLaunchMissile=Nomad Missile Cluster Launch Missile
+Effect/Name/NomadMissileClusterRP=Nomad Missile Cluster RP
 Effect/Name/NomadMissileDamage=Nomad Missile Damage
+Effect/Name/NomadMissileImpactSet=Nomad Missile Impact Set
 Effect/Name/NomadMissileLM=Nomad Missile LM
 Effect/Name/NomadMissileLaunchCP=Nomad Missile Launch CP
 Effect/Name/NomadMissileLaunchSet=Nomad Missile Launch Set
@@ -607,6 +629,7 @@ Unit/Name/MineDrone=Mine Drone
 Unit/Name/NanobotInjectorsMissile=NanobotInjectorsMissile
 Unit/Name/Nomad=Nomad
 Unit/Name/NomadMissile=Nomad Missile
+Unit/Name/NomadMissileClusterMissile=Nomad Missile Cluster Missile
 Unit/Name/Phantom=Phantom
 Unit/Name/PlaceNomadDroneRelease=Place Nomad Drone Release
 Unit/Name/PlaceNomadTurretRelease=Place Nomad Turret Release
@@ -623,6 +646,7 @@ Unit/Name/SkibisAngel=Skibi's Angel
 Unit/Name/Starcruiser=Starcruiser
 Unit/Name/StarcruiserLaserBattery=Starcruiser Laser Battery
 Unit/Name/TarBombMissile=Tar Bomb Missile
+Unit/Name/TempestWeaponGround2=Tempest Weapon (Ground)
 Unit/Name/Titan=Titan
 Unit/Name/TitanWreckage=Titan Wreckage
 Unit/Name/Wolverine=Wolverine
@@ -653,6 +677,7 @@ Upgrade/Name/LegionSystems=Legion Systems
 Upgrade/Name/LooseEngineSeals=Loose Engine Seals
 Upgrade/Name/MASH=M.A.S.H
 Upgrade/Name/MercEdition=Merc Edition
+Upgrade/Name/MobileStockpile=Mobile Stockpile
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/PiercingStrike=Piercing Strike
 Upgrade/Name/PliableArmor=Pliable Armor
@@ -668,6 +693,7 @@ Upgrade/Name/SmartServosMKIV=Smart Servos MKIV
 Upgrade/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Upgrade/Name/SulfurMissiles=Sulfur Missiles
 Upgrade/Name/SuperStim=Super Stim
+Upgrade/Name/SwannNanites=Swann Nanites
 Upgrade/Name/TerrazineShots=Terrazine Shots
 Upgrade/Name/ThornShield=Thorn Shield
 Upgrade/Name/TyradorImplants=Tyrador Implants
@@ -695,6 +721,7 @@ Weapon/Name/NomadTurretWeapon=RGX Perforator
 Weapon/Name/PharaohBatteryQuarternary=Pharaoh Battery (Quarternary)
 Weapon/Name/PharaohBatterySecondary=Pharaoh Battery (Secondary)
 Weapon/Name/PharaohBatteryTertiary=Pharaoh Battery (Tertiary)
+Weapon/Name/PlasmaTorpedo=Plasma Torpedo
 Weapon/Name/PointBreakDroneWeapon=Point Break Drone Weapon
 Weapon/Name/RagnarokNRoll=Ragnarok N' Roll
 Weapon/Name/RaidersRival=Raider's Rival
@@ -703,3 +730,4 @@ Weapon/Name/ScorpionMissiles=Scorpion Missiles
 Weapon/Name/TheGrill=The Grill
 Weapon/Name/ThermalBurst=Thermal Burst
 Weapon/Tip/NomadMissile=
+Weapon/Tip/PlasmaTorpedo=Deals <d ref="Effect,LightningBombDamage,Amount*Behavior,LightningBomb,Duration/Behavior,LightningBomb,Period"/> damage over <d ref="Behavior,LightningBomb,Duration"/> seconds. Does not stack.

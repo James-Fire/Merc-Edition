@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementAnd id="AndAllowUnitGhostNotCountUpgradeSpectreTooltipUpgradeQueuedOrBetterCountUpgradeMobileStockpileCompleteOnly">
+        <OperandArray value="AllowUnitGhost"/>
+        <OperandArray value="NotCountUpgradeSpectreTooltipUpgradeQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeMobileStockpileCompleteOnly"/>
+    </CRequirementAnd>
     <CRequirementCountBehavior id="CountBehaviorNomadSilentModeCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="NomadSilentMode" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitSpiderMineBurrowedCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="SpiderMineBurrowed" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeAIEnhancementCompleteOnly">
         <Count Link="AIEnhancement" State="CompleteOnly"/>
         <Flags index="TechTreeCheat" value="0"/>
@@ -75,6 +84,10 @@
     <CRequirementCountUpgrade id="CountUpgradeMercEditionCompleteOnly">
         <Count Link="MercEdition" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMobileStockpileCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MobileStockpile" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeNeosteelCupHoldersCompleteOnly">
         <Count Link="NeosteelCupHolders" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -127,6 +140,9 @@
     <CRequirementCountUpgrade id="CountUpgradeSuperStimQueuedOrBetter">
         <Count Link="SuperStim" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSwannNanitesCompleteOnly">
+        <Count Link="SwannNanites" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTerrazineShotsCompleteOnly">
         <Count Link="TerrazineShots" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -151,6 +167,11 @@
     <CRequirementCountUpgrade id="CountUpgradeViralFlammenwerferCompleteOnly">
         <Count Link="ViralFlammenwerfer" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementLT id="LTCountUnitSpiderMineBurrowedCompleteOnlyAtUnit4">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUnitSpiderMineBurrowedCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
     <CRequirementLTE id="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>

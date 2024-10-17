@@ -63,6 +63,104 @@ void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Allowing Units
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_AllowingUnits_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "SCV") == true)) {
+        TechTreeUnitAllow(1, "ACV", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Marine") == true)) {
+        TechTreeUnitAllow(1, "WarPig", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Marauder") == true)) {
+        TechTreeUnitAllow(1, "HammerSecurity", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Medic") == true)) {
+        TechTreeUnitAllow(1, "MercMedic", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Firebat") == true)) {
+        TechTreeUnitAllow(1, "DevilDog", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Reaper") == true)) {
+        TechTreeUnitAllow(1, "BlockB", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Ghost") == true)) {
+        TechTreeUnitAllow(1, "Phantom", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Spectre") == true)) {
+        TechTreeUnitAllow(1, "Shadow", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Hellion") == true)) {
+        TechTreeUnitAllow(1, "Agitator", true);
+        TechTreeUnitAllow(1, "Anarchist", true);
+    }
+
+    if (((TechTreeUnitIsAllowed(1, "SiegeTank") == true) || (TechTreeUnitIsAllowed(1, "SiegeTankSieged") == true))) {
+        TechTreeUnitAllow(1, "SiegeBreakerSieged", true);
+        TechTreeUnitAllow(1, "SiegeBreaker", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Goliath") == true)) {
+        TechTreeUnitAllow(1, "SpartanCompany", true);
+    }
+
+    if (((TechTreeUnitIsAllowed(1, "Thor") == true) || (TechTreeUnitIsAllowed(1, "ThorAP") == true))) {
+        TechTreeUnitAllow(1, "Titan", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Vulture") == true)) {
+        TechTreeUnitAllow(1, "Condor", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Diamondback") == true)) {
+        TechTreeUnitAllow(1, "Copperhead", true);
+    }
+
+    if (((TechTreeUnitIsAllowed(1, "VikingAssault") == true) || (TechTreeUnitIsAllowed(1, "VikingFighter") == true))) {
+        TechTreeUnitAllow(1, "HelsAngelAssault", true);
+        TechTreeUnitAllow(1, "HelsAngelFighter", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Banshee") == true)) {
+        TechTreeUnitAllow(1, "DuskWing", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Medivac") == true)) {
+        TechTreeUnitAllow(1, "CharonDropship", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Harrier") == true)) {
+        TechTreeUnitAllow(1, "Harrier", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Battlecruiser") == true)) {
+        TechTreeUnitAllow(1, "Starcruiser", true);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_AllowingUnits_Init () {
+    libBA5CCDED_gt_AllowingUnits = TriggerCreate("libBA5CCDED_gt_AllowingUnits_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_AllowingUnits);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Merc Edition Upgrade
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_MercEditionUpgrade_Func (bool testConds, bool runActions) {
@@ -466,6 +564,7 @@ void libBA5CCDED_gt_NomadSilentModeHeightDown_Init () {
 }
 
 void libBA5CCDED_InitTriggers () {
+    libBA5CCDED_gt_AllowingUnits_Init();
     libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();

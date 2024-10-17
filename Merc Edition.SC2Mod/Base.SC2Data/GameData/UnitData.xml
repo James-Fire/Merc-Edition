@@ -200,6 +200,7 @@
             <LayoutButtons Face="ArmoredHousing" Type="Passive" Requirements="UseArmoredHousing" Row="2" Column="1"/>
         </CardLayouts>
     </CUnit>
+    <CUnit id="NomadMissileClusterMissile" parent="MISSILE"/>
     <CUnit id="PointBreakDrone">
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>
@@ -322,14 +323,12 @@
         <StationaryTurningRate value="2292.8906"/>
         <Sight value="4"/>
         <RepairTime value="33.3332"/>
-        <CardLayouts>
-            <LayoutButtons Face="ActivateShieldGenerator" Type="AbilCmd" AbilCmd="NomadMineDroneMagazine,Ammo1" Row="0" Column="0"/>
-        </CardLayouts>
         <Radius value="0.125"/>
         <SeparationRadius value="0"/>
         <SubgroupPriority value="15"/>
         <MinimapRadius value="0.25"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <BehaviorArray Link="MineDroneSpawn"/>
     </CUnit>
     <CUnit id="SpiderMineBurrowed">
         <AbilArray Link="CondorSpiderMineUnburrow"/>
@@ -604,8 +603,8 @@
             <LayoutButtons index="14" Face="BuildCopperhead" AbilCmd="FactoryTrain,Train17"/>
             <LayoutButtons index="15" Face="BuildCondor" AbilCmd="FactoryTrain,Train18"/>
             <LayoutButtons index="16" Face="BuildAnarchist" AbilCmd="FactoryTrain,Train15"/>
-            <LayoutButtons index="17" Face="BuildTitan" AbilCmd="FactoryTrain,Train13"/>
-            <LayoutButtons Face="BuildCyberWolf" Type="AbilCmd" AbilCmd="FactoryTrain,Train10" Row="0" Column="4"/>
+            <LayoutButtons index="17" Face="BuildTitan" AbilCmd="FactoryTrain,Train13" Column="4"/>
+            <LayoutButtons Face="BuildWolverine" Type="AbilCmd" AbilCmd="FactoryTrain,Train19" Row="0" Column="3"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Hellion" Type="AbilCmd" AbilCmd="FactoryTrain,Train6" Row="0" Column="0"/>
@@ -657,8 +656,13 @@
         <AbilArray Link="move"/>
         <AbilArray Link="Irradiate"/>
         <AbilArray Link="NanoRepair"/>
+        <AbilArray Link="Transwarp"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="AdjudicatorArmMagazineNuke"/>
+        <AbilArray Link="HangarQueue5"/>
         <BehaviorArray Link="Detector11"/>
-        <WeaponArray Turret="ScienceVesselRotate"/>
+        <BehaviorArray Link="CloakField"/>
+        <WeaponArray Link="PlasmaTorpedo" Turret="ScienceVesselRotate"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -669,6 +673,9 @@
             <LayoutButtons Face="Detector" Type="Passive" Row="2" Column="3"/>
             <LayoutButtons Face="Irradiate" Type="AbilCmd" AbilCmd="Irradiate,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="NanoRepair" Type="AbilCmd" AbilCmd="NanoRepair,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="AdjudicatorCloakingField" Type="Passive" Behavior="CloakField" Row="1" Column="0"/>
+            <LayoutButtons Face="Transwarp" Type="AbilCmd" AbilCmd="Transwarp,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="ArmAdjudicatorwithNuke" Type="AbilCmd" AbilCmd="AdjudicatorArmMagazineNuke,Ammo1" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
@@ -1017,6 +1024,7 @@
         <AbilArray Link="PlaceNomadDrone"/>
         <AbilArray Link="SilentMode"/>
         <AbilArray Link="NomadTargetLock"/>
+        <AbilArray Link="NomadClusterMissileDummy"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -1028,7 +1036,14 @@
             <LayoutButtons Face="PointDefenseDrone" Type="AbilCmd" AbilCmd="PlacePointDefenseDrone,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="MineDrone" Type="AbilCmd" AbilCmd="PlaceNomadDrone,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="Detector" Type="Passive" Behavior="Detector11" Row="1" Column="0"/>
-            <LayoutButtons Face="ExplosiveCalibrations" Type="Passive" Requirements="UseExplosiveCalibrations" Row="1" Column="1"/>
+            <LayoutButtons>
+                <Face value="ExplosiveCalibrations"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="NomadClusterMissileDummy,Execute"/>
+                <Requirements value="UseExplosiveCalibrations"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
             <LayoutButtons Face="SilentMode" Type="AbilCmd" AbilCmd="SilentMode,On" Row="1" Column="2"/>
             <LayoutButtons Face="NormalModeNomad" Type="AbilCmd" AbilCmd="SilentMode,Off" Row="1" Column="3"/>
             <LayoutButtons Face="TargetLock" Type="AbilCmd" AbilCmd="NomadTargetLock,Execute" Row="2" Column="3"/>
@@ -1045,6 +1060,7 @@
         <Radius value="0.6875"/>
         <SeparationRadius value="0.6875"/>
         <WeaponArray Link="NomadMissile"/>
+        <FlagArray index="ArmySelect" value="1"/>
     </CUnit>
     <CUnit id="BlockB">
         <DeathRevealRadius value="3"/>
@@ -1398,8 +1414,8 @@
             <LayoutButtons index="13" Face="BuildDuskWing" Type="AbilCmd" AbilCmd="StarportTrain,Train11" Row="0"/>
             <LayoutButtons index="14" Face="BuildStarcruiser" AbilCmd="StarportTrain,Train12" Row="0" Column="4"/>
             <LayoutButtons index="15" Face="BuildHarrier" AbilCmd="StarportTrain,Train14" Row="1"/>
-            <LayoutButtons index="16" removed="1"/>
-            <LayoutButtons index="17" removed="1"/>
+            <LayoutButtons index="16" Face="BuildNomad" AbilCmd="StarportTrain,Train16" Row="0" Column="2"/>
+            <LayoutButtons index="17" Face="BuildAdjudicator" AbilCmd="StarportTrain,Train15" Row="0" Column="2"/>
             <LayoutButtons index="18" removed="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
@@ -1414,6 +1430,11 @@
         <!--BehaviorArray Link="FireSuppressionSystem"/-->
     </CUnit>
     <CUnit id="TarBombMissile" parent="MISSILE"/>
+    <CUnit id="TempestWeaponGround2" parent="MISSILE">
+        <Race value="Prot"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Projectile"/>
+    </CUnit>
     <CUnit id="TitanWreckage">
         <DeathRevealRadius value="3"/>
         <ReviveType value="Thor"/>

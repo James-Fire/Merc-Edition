@@ -50,12 +50,13 @@
     </CUpgrade>
     <CUpgrade id="ExplosiveCalibrations">
         <EffectArray Reference="Effect,NomadMissileDamage,Amount" Value="30"/>
-        <EffectArray Reference="Effect,NomadTurretWeaponDamage,Amount" Value="12"/>
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[0].Radius" Value="0.18"/>
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[1].Radius" Value="0.36"/>
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[2].Radius" Value="0.72"/>
-        <EffectArray Operation="Subtract" Reference="Abil,PlaceNomadTurret,Cost[0].Vital[Energy]" Value="20"/>
         <AffectedUnitArray value="Nomad"/>
+    </CUpgrade>
+    <CUpgrade id="MobileStockpile">
+        <AffectedUnitArray value="Adjudicator"/>
     </CUpgrade>
     <CUpgrade id="PiercingStrike">
         <AffectedUnitArray value="Wolverine"/>
@@ -240,6 +241,11 @@
     </CUpgrade>
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>
+    </CUpgrade>
+    <CUpgrade id="SwannNanites">
+        <AffectedUnitArray value="Adjudicator"/>
+        <EffectArray Operation="Multiply" Reference="Effect,NanoRepair,RechargeVitalRate" Value="1.398400"/>
+        <EffectArray Operation="Set" Reference="Effect,NanoRepair,DrainVitalCostFactor" Value="0"/>
     </CUpgrade>
     <CUpgrade id="TerrazineShots">
         <EffectArray Operation="Set" Reference="Abil,DarkTemplarShadowFury,Cost[0].Cooldown.TimeUse" Value="6.000000"/>

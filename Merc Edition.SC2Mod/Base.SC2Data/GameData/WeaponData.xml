@@ -363,6 +363,18 @@
     <CWeaponLegacy id="SpartanCompanyGUpgraded">
         <Effect value="SpartanCompanyWeaponSet"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="PlasmaTorpedo">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="AdjudicatorWeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <Arc value="360"/>
+        <Period value="2.8"/>
+        <Effect value="AdjudicatorWeaponLM"/>
+        <LegacyOptions index="FaceTargetWhileInCooldown" value="0"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ThermalBurst">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>

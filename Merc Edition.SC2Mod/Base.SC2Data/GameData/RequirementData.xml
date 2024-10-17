@@ -6,6 +6,9 @@
     <CRequirement id="IsInSilentMode">
         <NodeArray index="Show" Link="CountBehaviorNomadSilentModeCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="MineDroneBuild">
+        <NodeArray index="Use" Link="LTCountUnitSpiderMineBurrowedCompleteOnlyAtUnit4"/>
+    </CRequirement>
     <CRequirement id="TechLaborMedicUpgrade">
         <EditorCategories value="Race:Terran,TechType:Unit"/>
         <NodeArray index="Use" Link="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly"/>
@@ -25,6 +28,11 @@
     <CRequirement id="LearnThornShield">
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTCountUpgradeThornShieldQueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="TrainNukeAdjudicator">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="AndOr96167438CountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOnly1718561093TechTreeCheatCountUnitFactoryCompleteOnly96167438TechTreeCheatCountUnitFactoryFlyingCompleteOn2253155517"/>
+        <NodeArray index="Show" Link="AndAllowUnitGhostNotCountUpgradeSpectreTooltipUpgradeQueuedOrBetterCountUpgradeMobileStockpileCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseAIEnhancement">
         <EditorCategories value="TechType:Ability"/>
@@ -114,6 +122,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseMobileStockpile">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMobileStockpileCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseNeosteelCupHolders">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
@@ -173,6 +185,10 @@
     <CRequirement id="UseSuperStim">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSuperStimCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSwannNanites">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSwannNanitesCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseTerrazineShots">
         <EditorCategories value="TechType:Ability"/>

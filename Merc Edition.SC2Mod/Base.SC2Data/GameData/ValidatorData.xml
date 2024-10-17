@@ -16,6 +16,11 @@
     <CValidatorUnitCompareBehaviorCount id="NoFearImmunityWolverine">
         <Behavior value="WolverineFearImmunity"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareCooldown id="NomadClusterMissileNotonCooldown">
+        <WhichUnit Value="Caster"/>
+        <CooldownLink value="NomadClusterMissileDummy"/>
+        <Ability value="NomadClusterMissileDummy"/>
+    </CValidatorUnitCompareCooldown>
     <CValidatorUnitCompareVital id="OwningTitanofPointBreakDronehas10Energy">
         <WhichUnit Value="Source"/>
         <Compare value="GE"/>

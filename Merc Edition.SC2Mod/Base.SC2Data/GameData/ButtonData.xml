@@ -16,13 +16,26 @@
         <Icon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
     </CButton>
+    <CButton id="BuildAdjudicator">
+        <Icon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
+    </CButton>
+    <CButton id="BuildNomad">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="BuildWolverine">
+        <Icon value="Assets\Textures\btn-unit-terran-warhound.dds"/>
+        <AlertTooltip value="Button/Tooltip/Wolverine"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-warhound.dds"/>
+    </CButton>
     <CButton id="ChaoticPower">
         <Icon value="Assets\Textures\btn-top-hornerhan-magmines.dds"/>
         <AlertIcon value="Assets\Textures\btn-top-hornerhan-magmines.dds"/>
     </CButton>
     <CButton id="AdjudicatorCloakingField">
-        <Icon value="Assets\Textures\btn-ability-protoss-cloakfield-color.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-protoss-cloakfield-color.dds"/>
+        <Icon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
         <EditorCategories value="Race:Protoss"/>
     </CButton>
     <CButton id="DeadManSwitch">
@@ -138,6 +151,10 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="NanoRepair">
+        <Icon value="Assets\Icons and Wireframes\nano repair.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\nano repair.dds"/>
+    </CButton>
     <CButton id="NeosteelCupHolders">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -221,6 +238,11 @@
     <CButton id="NormalModeNomad">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="ArmAdjudicatorwithNuke">
+        <Icon value="Assets\Textures\btn-ability-terran-armnuke.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-armnuke.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="PiercingStrike">
         <Icon value="Assets\Textures\btn-ability-hornerhan-viking-piercingattacks.dds"/>
@@ -365,6 +387,10 @@
     </CButton>
     <CButton id="SulfurMissiles">
         <Icon value="Assets\Textures\btn-techupgrade-terran-ripwavemissiles.dds"/>
+    </CButton>
+    <CButton id="SwannNanites">
+        <Icon value="Assets\Icons and Wireframes\nano repair.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\nano repair.dds"/>
     </CButton>
     <CButton id="TacticalRealignment">
         <Icon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>

@@ -49,7 +49,7 @@
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="NomadMissileLM">
         <EditorCategories value="Race:Terran"/>
-        <ImpactEffect value="NomadMissileDamage"/>
+        <ImpactEffect value="NomadMissileImpactSet"/>
         <AmmoUnit value="NomadMissile"/>
         <Movers Link="NomadMissile"/>
     </CEffectLaunchMissile>
@@ -362,18 +362,6 @@
         <Period value="1"/>
         <Effect value="NomadTurretWeaponCP"/>
     </CWeaponLegacy>
-    <CMoverMissile id="PlaceNomadTurretWeapon">
-        <MotionPhases>
-            <Driver value="Guidance"/>
-            <Acceleration value="3200"/>
-            <Speed value="12"/>
-            <MaxSpeed value="12"/>
-            <ClearanceAcceleration value="75"/>
-            <Outro value="-1"/>
-            <YawPitchRoll value="719.2968"/>
-        </MotionPhases>
-        <MotionPhases YawPitchRoll="MAX"/>
-    </CMoverMissile>
     <CMoverMissile id="NomadMissile">
         <MotionPhases>
             <Driver value="Throw"/>
@@ -384,10 +372,10 @@
             <ClearanceLookahead value="3"/>
             <ClearanceAcceleration value="75"/>
             <ClearanceIgnoresTargetProximity value="1"/>
-            <Outro value="0.9"/>
-            <Timeout value="0.9"/>
+            <Outro value="0.1"/>
+            <Timeout value="0.1"/>
             <ThrowVector value="0,-1,0"/>
-            <FlightTime value="0.9"/>
+            <FlightTime value="0.1"/>
         </MotionPhases>
         <MotionPhases>
             <Driver value="Throw"/>
@@ -397,8 +385,8 @@
             <ClearanceLookahead value="3"/>
             <ClearanceAcceleration value="75"/>
             <ClearanceIgnoresTargetProximity value="1"/>
-            <Outro value="0.9"/>
-            <Timeout value="2.1"/>
+            <Outro value="0.1"/>
+            <Timeout value="1.1"/>
             <ThrowVector value="0,-1,0"/>
             <YawPitchRoll value="MAX"/>
             <FlightTime value="1.1"/>
@@ -409,7 +397,7 @@
             <MaxSpeed value="16"/>
             <Clearance value="0.5"/>
             <ClearanceLookahead value="3"/>
-            <Outro value="3"/>
+            <Outro value="1"/>
             <YawPitchRoll value="MAX"/>
         </MotionPhases>
         <MotionPhases>
@@ -429,6 +417,18 @@
             <ClearanceLookahead value="3"/>
             <YawPitchRoll value="MAX"/>
         </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="PlaceNomadTurretWeapon">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <Speed value="12"/>
+            <MaxSpeed value="12"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
     </CMoverMissile>
     <CSound id="NomadMissileImpact" parent="Spell">
         <EditorCategories value="Race:Terran"/>

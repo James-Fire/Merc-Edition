@@ -23,6 +23,11 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="UranusProtocol"/>
     </CEffectApplyBehavior>
+    <CEffectSet id="AdjudicatorWeaponSet">
+        <EditorCategories value=""/>
+        <EffectArray value="AdjudicatorWeaponDamage"/>
+        <EffectArray value="LightningBombAB"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="AfterburnersHelsAngelApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="AfterburnersHelsAngel"/>
@@ -323,6 +328,49 @@
         <SearchFilters value="-;Self,Ally,Neutral,Enemy,Structure,Worker,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="7.5" Effect="MercCommanderAB"/>
     </CEffectEnumArea>
+    <CEffectModifyUnit id="NanitesHeal">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="2"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectCreatePersistent id="NomadMissileClusterCP">
+        <ValidatorArray value="HaveExplosiveCalibrations"/>
+        <ValidatorArray value="NomadClusterMissileNotonCooldown"/>
+        <EditorCategories value=""/>
+        <InitialEffect value="NomadMissileClusterCooldown"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="NomadMissileClusterRP"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectModifyUnit id="NomadMissileClusterCooldown">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <Cost Abil="NomadClusterMissileDummy,Execute" CooldownTimeUse="42"/>
+    </CEffectModifyUnit>
+    <CEffectDamage id="NomadMissileClusterDamage">
+        <Amount value="50"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="1" Fraction="1"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="NomadMissileClusterLaunchMissile">
+        <LaunchLocation Effect="NomadMissileClusterCP" Value="TargetPoint"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="NomadMissileClusterDamage"/>
+        <AmmoUnit value="NomadMissileClusterMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectRandomPointInCircle id="NomadMissileClusterRP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="NomadMissileClusterLaunchMissile"/>
+        <Radius value="3.5"/>
+    </CEffectRandomPointInCircle>
+    <CEffectSet id="NomadMissileImpactSet">
+        <EditorCategories value=""/>
+        <EffectArray value="NomadMissileDamage"/>
+        <EffectArray value="NomadMissileClusterCP"/>
+    </CEffectSet>
     <CEffectCreatePersistent id="NomadTargetLockCP">
         <ValidatorArray value="IsInSilentMode"/>
         <ValidatorArray value="NotHaveTargetLock"/>
@@ -946,6 +994,23 @@
         <EffectArray value="TarBombDamage"/>
         <EffectArray value="TarBombSA"/>
     </CEffectSet>
+    <CEffectDamage id="AdjudicatorWeaponDamage">
+        <EditorCategories value="Race:Protoss"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <ArmorReduction value="1"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="AdjudicatorWeaponLM">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="AdjudicatorWeaponSet"/>
+        <AmmoUnit value="TempestWeaponGround2"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="ThermalBurstAmplifiedDamage">
         <EditorCategories value=""/>
         <ResponseFlags index="Acquire" value="1"/>

@@ -47,6 +47,15 @@
         </MotionPhases>
         <MotionPhases index="1" removed="1"/>
     </CMoverMissile>
+    <CMoverMissile id="NomadMissileClusterMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="20"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="1"/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverMissile id="StarcruiserLaserBattery">
         <MotionPhases>
             <Driver value="Guidance"/>
