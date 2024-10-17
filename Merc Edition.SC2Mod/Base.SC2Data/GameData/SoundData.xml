@@ -298,6 +298,18 @@
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="IrradiateNanitesLoop" parent="Combat">
+        <AssetArray>
+            <File value="Assets\Sounds\Thor_Repair_Loop.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,375173"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <DupeDestroyCount value="2"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="2"/>
+        <Volume value="-18.000000,-18.000000"/>
+    </CSound>
     <CSound id="MissileTurret_HellstormAttackImpact">
         <Volume value="-9.000000,-9.000000"/>
     </CSound>

@@ -3,6 +3,15 @@
     <CRequirement id="DontHaveStabilizerMedpacks">
         <NodeArray index="Show" Link="NotCountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="FireSuppressionSystemsNotResearched">
+        <NodeArray index="Use" Link="NotAndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="FireSuppressionSystemsResearched">
+        <NodeArray index="Use" Link="OrCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveOrbitalRelay">
+        <NodeArray index="Show" Link="OrCountUpgradeOrbitalRelayCompleteOnlyCountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="IsInSilentMode">
         <NodeArray index="Show" Link="CountBehaviorNomadSilentModeCompleteOnlyAtUnit"/>
     </CRequirement>
@@ -41,6 +50,10 @@
     <CRequirement id="UseASPRocketPods">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeASPRocketPodsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseAdvancedOrbitalCommand">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseArmoredHousing">
         <EditorCategories value="TechType:Ability"/>
@@ -106,6 +119,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeJotunnSystemsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseKelmorianCutters">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeKelmorianCuttersCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseLegionSystems">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeLegionSystemsCompleteOnly"/>
@@ -121,6 +138,10 @@
     <CRequirement id="UseMercEdition">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMicroFusionReactor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMicroFusionReactorCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseMobileStockpile">
         <EditorCategories value="TechType:Ability"/>
@@ -189,6 +210,10 @@
     <CRequirement id="UseSwannNanites">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSwannNanitesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSwannsSuppression">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSwannsSuppressionCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseTerrazineShots">
         <EditorCategories value="TechType:Ability"/>

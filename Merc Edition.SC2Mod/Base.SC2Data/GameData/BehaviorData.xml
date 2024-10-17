@@ -3,8 +3,34 @@
     <CBehaviorBuff id="AdjudicatorNanites">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="IsIrradiated"/>
         <Period value="0.1"/>
         <PeriodicEffect value="NanitesHeal"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AdjudicatorCloakField">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\BTN-Ability-Protoss-CloakField.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Period value="0.2"/>
+        <PeriodicEffect value="AdjudicatorCloakingFieldSearch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AdjudicatorCloakingField">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-cloakfield.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="IsNotAdjudicator"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.5417"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BunkerWeaponRangeBonus">
+        <Modification>
+            <AbilLinkEnableArray value="Repair"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ASPRocketPods">
         <InfoFlags index="Hidden" value="1"/>
@@ -60,6 +86,9 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="7"/>
         <Modification MoveSpeedBonus="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FireSuppressionSystem">
+        <DisableValidatorArray index="1" value="SwannSuppressorRegularSuppressValidator"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Irradiate">
         <Modification>
@@ -417,6 +446,30 @@
             <AdditiveMoveSpeedFactor value="0.5"/>
             <AdditiveAttackSpeedFactor value="0.5"/>
         </Modification>
+    </CBehaviorBuff>
+    <!--CBehaviorBuff id="LocustSpawnDummy">-->
+    <!--        <InfoFlags index="Hidden" value="1"/>-->
+    <!--        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>-->
+    <!--        <MaxStackCount value="0"/>-->
+    <!--    </CBehaviorBuff>-->
+    <!--    <CBehaviorSpawn id="SpawnLocusts">-->
+    <!--        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>-->
+    <!--        <InfoArray>-->
+    <!--            <Unit value="LocustDummy"/>-->
+    <!--            <MaxCount value="2"/>-->
+    <!--            <Requirements value="SwarmHostSpawnLocusts"/>-->
+    <!--            <Delay value="0.0625"/>-->
+    <!--            <Effect value="LocustsRemoveSpawnBehavior"/>-->
+    <!--        </InfoArray>-->
+    <!--        <Slop value="1"/>-->
+    <!--        <InfoFlags index="Hidden" value="1"/>-->
+    <!--        <Range value="5"/>-->
+    <!--        <Limit value="4"/>-->
+    <!--        <Offset value="0,0"/>-->
+    <!--        <Flags index="HideCount" value="1"/>-->
+    <!--    </CBehaviorSpawn-->
+    <CBehaviorBuff id="SupplyDrop">
+        <Modification Food="12"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TacticalRealignment">
         <Alignment value="Positive"/>

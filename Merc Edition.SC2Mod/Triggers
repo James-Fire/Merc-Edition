@@ -5,7 +5,6 @@
             <Item Type="Category" Library="BA5CCDED" Id="1C9D5AF2"/>
             <Item Type="Category" Library="BA5CCDED" Id="2851B9D7"/>
             <Item Type="Category" Library="BA5CCDED" Id="FFB39B08"/>
-            <Item Type="Category" Library="BA5CCDED" Id="CA3A8D1E"/>
             <Item Type="Category" Library="BA5CCDED" Id="0B90820E"/>
         </Root>
         <Element Type="Category" Id="1C9D5AF2">
@@ -1502,7 +1501,6 @@
         </Element>
         <Element Type="Category" Id="2851B9D7">
             <Item Type="Comment" Library="BA5CCDED" Id="079EA309"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="682B4DB0"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="BF2FDC58"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="C7C2E4C6"/>
         </Element>
@@ -1510,42 +1508,6 @@
             <Comment>
                 Overarching mission changes best done here
             </Comment>
-        </Element>
-        <Element Type="Trigger" Id="682B4DB0">
-            <Event Type="FunctionCall" Library="BA5CCDED" Id="AF878B57"/>
-            <Action Type="Comment" Library="BA5CCDED" Id="80556B95"/>
-            <Action Type="FunctionCall" Library="BA5CCDED" Id="9F37DC1F"/>
-        </Element>
-        <Element Type="FunctionCall" Id="AF878B57">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
-        </Element>
-        <Element Type="Comment" Id="80556B95">
-            <Comment>
-                This upgrade only exists as something for other data or triggers to reference; essentially, the player with this upgrade (always and only player 1) is playing with the Merc Edition WoL tech tree and not vanilla.
-                Note: this does not disable or enable anything on its own; only things that refer to it! Used for Condor spider mines right now, and probably other things later on.
-            </Comment>
-        </Element>
-        <Element Type="FunctionCall" Id="9F37DC1F">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="F119A941"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="2587588E"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="692EA014"/>
-        </Element>
-        <Element Type="Param" Id="F119A941">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
-            <Value>1</Value>
-            <ValueType Type="int"/>
-        </Element>
-        <Element Type="Param" Id="2587588E">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
-            <Value>1</Value>
-            <ValueType Type="int"/>
-        </Element>
-        <Element Type="Param" Id="692EA014">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
-            <Value>MercEdition</Value>
-            <ValueType Type="gamelink"/>
-            <ValueGameType Type="Upgrade"/>
         </Element>
         <Element Type="Trigger" Id="BF2FDC58">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="D009B05C"/>
@@ -3339,23 +3301,74 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="6C335833"/>
             <Preset Type="PresetValue" Library="Ntve" Id="E5424C71"/>
         </Element>
-        <Element Type="Category" Id="CA3A8D1E">
-            <Item Type="Comment" Library="BA5CCDED" Id="0DFDD577"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="3E2B2051"/>
+        <Element Type="Category" Id="0B90820E">
+            <Item Type="Category" Library="BA5CCDED" Id="B5DA121D"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="390A3B5A"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="6CD89C64"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="1AF6CB32"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="29187CD2"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="542E9C4A"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="9268A1E3"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="79A437F4"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="BDEEDBEA"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="B3349A44"/>
         </Element>
-        <Element Type="Comment" Id="0DFDD577">
+        <Element Type="Category" Id="B5DA121D">
+            <Item Type="Trigger" Library="BA5CCDED" Id="BAAF1922"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="682B4DB0"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="3E2B2051"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="FBF6D743"/>
+        </Element>
+        <Element Type="Trigger" Id="BAAF1922">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="FAD5B72E"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FAD5B72E">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="Trigger" Id="682B4DB0">
+            <Action Type="Comment" Library="BA5CCDED" Id="80556B95"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="9F37DC1F"/>
+        </Element>
+        <Element Type="Comment" Id="80556B95">
             <Comment>
-                Some units have passives that are better done via adding an Upgrade at the start in order to give it that nice yellow text and combined number.
+                This upgrade only exists as something for other data or triggers to reference; essentially, the player with this upgrade (always and only player 1) is playing with the Merc Edition WoL tech tree and not vanilla.
+                Note: this does not disable or enable anything on its own; only things that refer to it! Used for Condor spider mines right now, and probably other things later on.
+                
+                edit several months later: lmao i dont think this is gonna be used for anything else
             </Comment>
         </Element>
+        <Element Type="FunctionCall" Id="9F37DC1F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F119A941"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2587588E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="692EA014"/>
+        </Element>
+        <Element Type="Param" Id="F119A941">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="2587588E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="692EA014">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>MercEdition</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
         <Element Type="Trigger" Id="3E2B2051">
-            <Event Type="FunctionCall" Library="BA5CCDED" Id="1374DB87"/>
+            <Action Type="Comment" Library="BA5CCDED" Id="242A1D0F"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="4036ED91"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="E41C79DA"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="93AA6EDD"/>
         </Element>
-        <Element Type="FunctionCall" Id="1374DB87">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        <Element Type="Comment" Id="242A1D0F">
+            <Comment>
+                Some units have passives that are better done via adding an Upgrade at the start in order to give it that nice yellow text and combined number.
+            </Comment>
         </Element>
         <Element Type="FunctionCall" Id="4036ED91">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
@@ -3423,16 +3436,120 @@
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
         </Element>
-        <Element Type="Category" Id="0B90820E">
-            <Item Type="Trigger" Library="BA5CCDED" Id="390A3B5A"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="6CD89C64"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="1AF6CB32"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="29187CD2"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="542E9C4A"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="9268A1E3"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="79A437F4"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="BDEEDBEA"/>
-            <Item Type="Trigger" Library="BA5CCDED" Id="B3349A44"/>
+        <Element Type="Trigger" Id="FBF6D743">
+            <Action Type="Comment" Library="BA5CCDED" Id="4EF3661F"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="0967F8A2"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="A3CEABED"/>
+        </Element>
+        <Element Type="Comment" Id="4EF3661F">
+            <Comment>
+                i think its done like this??? the base advanced construction ability has no requirements, so i can only assume its trigger based.
+                the wait action is to make sure this runs after aforementioned potentially-existing trigger runs.
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="0967F8A2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000242"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0A26764A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A94E0213"/>
+        </Element>
+        <Element Type="Param" Id="0A26764A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000419"/>
+            <Value>1.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="A94E0213">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000420"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000013"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A3CEABED">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FAD2A397"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EFEDEE7A"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="48B67646"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FAD2A397">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="0F7C3248"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A5F384C5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="53942F47"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6731E759"/>
+        </Element>
+        <Element Type="Param" Id="A5F384C5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BFF56EB0"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="53942F47">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="09B7BAEA"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000106"/>
+        </Element>
+        <Element Type="Param" Id="6731E759">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9B01128C"/>
+            <Value>AdvancedConstruction</Value>
+            <ValueType Type="abilcmd"/>
+            <ValueId Id="1"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EFEDEE7A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="0F7C3248"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7489875B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="EF15783A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="14680F28"/>
+        </Element>
+        <Element Type="Param" Id="7489875B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BFF56EB0"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="EF15783A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="09B7BAEA"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000106"/>
+        </Element>
+        <Element Type="Param" Id="14680F28">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9B01128C"/>
+            <Value>AdvancedConstruction</Value>
+            <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="FunctionCall" Id="48B67646">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C616319D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F8CEF19F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F92626D2"/>
+        </Element>
+        <Element Type="Param" Id="C616319D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="8C0A3CDA"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8C0A3CDA">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BA310FF5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F7245337"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3914C855"/>
+        </Element>
+        <Element Type="Param" Id="BA310FF5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="448F39DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D78D6018"/>
+        </Element>
+        <Element Type="Param" Id="F7245337">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
+            <Value>MicroFusionReactor</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Param" Id="3914C855">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000446"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="F8CEF19F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="F92626D2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
         </Element>
         <Element Type="Trigger" Id="390A3B5A">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="BF5D9CA2"/>

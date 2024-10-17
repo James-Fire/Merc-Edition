@@ -8,14 +8,53 @@
         <Find value="1"/>
         <Value value="UseChaoticPower"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveKelmorianCutters">
+        <Find value="1"/>
+        <Value value="UseKelmorianCutters"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveSwannNanites">
+        <Find value="1"/>
+        <Value value="UseSwannNanites"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveSwannSuppressionSystems">
+        <Find value="1"/>
+        <Value value="UseSwannsSuppression"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DontHaveSwannSuppressionSystems">
+        <Value value="UseSwannsSuppression"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="IsInSilentMode">
         <WhichUnit Value="Caster"/>
         <Value value="1"/>
         <Behavior value="NomadSilentMode"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsIrradiated">
+        <Compare value="GT"/>
+        <Behavior value="Irradiate"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="IsNotAdjudicator">
+        <Value value="Adjudicator"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareVital id="LifeBelow80">
+        <ResultFailed value="TooMuchLife"/>
+        <Compare value="LT"/>
+        <Type value="Fraction"/>
+        <Value value="0.8"/>
+    </CValidatorUnitCompareVital>
     <CValidatorUnitCompareBehaviorCount id="NoFearImmunityWolverine">
         <Behavior value="WolverineFearImmunity"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="NoSwannANDBelow50Life">
+        <Type value="And"/>
+        <CombineArray value="LifeLTHalf"/>
+        <CombineArray value="DontHaveSwannSuppressionSystems"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SwannANDBelow80Life">
+        <Type value="And"/>
+        <CombineArray value="LifeBelow80"/>
+        <CombineArray value="HaveSwannSuppressionSystems"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareCooldown id="NomadClusterMissileNotonCooldown">
         <WhichUnit Value="Caster"/>
         <CooldownLink value="NomadClusterMissileDummy"/>
@@ -160,6 +199,15 @@
         <Value value="1"/>
         <Behavior value="RedlineReactor"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SCVRepairinbunkercombine">
+        <CombineArray value="HaveKelmorianCutters"/>
+        <CombineArray value="SCVRepairinbunkercombine2"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SCVRepairinbunkercombine2">
+        <Type value="And"/>
+        <CombineArray value="HiddenCompareBA"/>
+        <CombineArray value="HiddenCompareAB"/>
+    </CValidatorCombine>
     <CValidatorLocationEnumArea id="SkibidiRepairDroneAutocast">
         <WhichLocation Value="CasterUnit"/>
         <AreaArray>
@@ -183,6 +231,10 @@
     <CValidatorUnitCompareBehaviorCount id="SuperCloakNotOnCooldown">
         <Behavior value="SuperCloakCooldown"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SwannSuppressorRegularSuppressValidator">
+        <CombineArray value="NoSwannANDBelow50Life"/>
+        <CombineArray value="SwannANDBelow80Life"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="TargetDoesntHaveChemicalPlating">
         <Compare value="NE"/>
         <Value value="1"/>

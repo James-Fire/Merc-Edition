@@ -201,6 +201,21 @@
         </CardLayouts>
     </CUnit>
     <CUnit id="NomadMissileClusterMissile" parent="MISSILE"/>
+    <CUnit id="OrbitalCommand">
+        <CostResource index="Minerals" value="400"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Face="SupplyDrop" AbilCmd="SupplyDrop,Execute" Column="1"/>
+            <LayoutButtons index="7">
+                <Face value="Detector"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Behavior value="Detector20"/>
+                <Requirements value="UseAdvancedOrbitalCommand"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="CalldownMULE" Type="AbilCmd" AbilCmd="CalldownMULE,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="PointBreakDrone">
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>
@@ -329,6 +344,15 @@
         <MinimapRadius value="0.25"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
         <BehaviorArray Link="MineDroneSpawn"/>
+    </CUnit>
+    <CUnit id="SensorTower">
+        <EnergyStart value="50"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.8632"/>
+        <AbilArray Link="ScannerSweep"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="Scan" Type="AbilCmd" AbilCmd="ScannerSweep,Execute" Row="2" Column="0"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="SpiderMineBurrowed">
         <AbilArray Link="CondorSpiderMineUnburrow"/>
@@ -661,7 +685,7 @@
         <AbilArray Link="AdjudicatorArmMagazineNuke"/>
         <AbilArray Link="HangarQueue5"/>
         <BehaviorArray Link="Detector11"/>
-        <BehaviorArray Link="CloakField"/>
+        <BehaviorArray Link="AdjudicatorCloakField"/>
         <WeaponArray Link="PlasmaTorpedo" Turret="ScienceVesselRotate"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -673,7 +697,7 @@
             <LayoutButtons Face="Detector" Type="Passive" Row="2" Column="3"/>
             <LayoutButtons Face="Irradiate" Type="AbilCmd" AbilCmd="Irradiate,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="NanoRepair" Type="AbilCmd" AbilCmd="NanoRepair,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="AdjudicatorCloakingField" Type="Passive" Behavior="CloakField" Row="1" Column="0"/>
+            <LayoutButtons Face="AdjudicatorCloakingField" Type="Passive" Behavior="AdjudicatorCloakField" Row="1" Column="0"/>
             <LayoutButtons Face="Transwarp" Type="AbilCmd" AbilCmd="Transwarp,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="ArmAdjudicatorwithNuke" Type="AbilCmd" AbilCmd="AdjudicatorArmMagazineNuke,Ammo1" Row="1" Column="1"/>
         </CardLayouts>

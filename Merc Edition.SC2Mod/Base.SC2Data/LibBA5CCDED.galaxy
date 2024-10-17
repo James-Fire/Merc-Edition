@@ -161,26 +161,6 @@ void libBA5CCDED_gt_AllowingUnits_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Merc Edition Upgrade
-//--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_MercEditionUpgrade_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    TechTreeUpgradeAddLevel(1, "MercEdition", 1);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_MercEditionUpgrade_Init () {
-    libBA5CCDED_gt_MercEditionUpgrade = TriggerCreate("libBA5CCDED_gt_MercEditionUpgrade_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_MercEditionUpgrade);
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: Mission Directives
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
@@ -328,9 +308,42 @@ void libBA5CCDED_gt_DepositMoney_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Passive Upgrades
+// Trigger: Init
 //--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_PassiveUpgrades_Func (bool testConds, bool runActions) {
+bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_Init_Init () {
+    libBA5CCDED_gt_Init = TriggerCreate("libBA5CCDED_gt_Init_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_Init);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init...Merc Edition Upgrade
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_InitMercEditionUpgrade_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(1, "MercEdition", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_InitMercEditionUpgrade_Init () {
+    libBA5CCDED_gt_InitMercEditionUpgrade = TriggerCreate("libBA5CCDED_gt_InitMercEditionUpgrade_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init...Passive Upgrades
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_InitPassiveUpgrades_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
@@ -344,9 +357,32 @@ bool libBA5CCDED_gt_PassiveUpgrades_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_PassiveUpgrades_Init () {
-    libBA5CCDED_gt_PassiveUpgrades = TriggerCreate("libBA5CCDED_gt_PassiveUpgrades_Func");
-    TriggerAddEventMapInit(libBA5CCDED_gt_PassiveUpgrades);
+void libBA5CCDED_gt_InitPassiveUpgrades_Init () {
+    libBA5CCDED_gt_InitPassiveUpgrades = TriggerCreate("libBA5CCDED_gt_InitPassiveUpgrades_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init...ACV Multibuild
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_InitACVMultibuild_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(1.0, c_timeGame);
+    if ((TechTreeUpgradeCount(1, "MicroFusionReactor", c_techCountCompleteOnly) == 1)) {
+        TechTreeAbilityAllow(1, AbilityCommand("AdvancedConstruction", 1), true);
+        TechTreeAbilityAllow(1, AbilityCommand("AdvancedConstruction", 0), true);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_InitACVMultibuild_Init () {
+    libBA5CCDED_gt_InitACVMultibuild = TriggerCreate("libBA5CCDED_gt_InitACVMultibuild_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -565,10 +601,12 @@ void libBA5CCDED_gt_NomadSilentModeHeightDown_Init () {
 
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_AllowingUnits_Init();
-    libBA5CCDED_gt_MercEditionUpgrade_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
-    libBA5CCDED_gt_PassiveUpgrades_Init();
+    libBA5CCDED_gt_Init_Init();
+    libBA5CCDED_gt_InitMercEditionUpgrade_Init();
+    libBA5CCDED_gt_InitPassiveUpgrades_Init();
+    libBA5CCDED_gt_InitACVMultibuild_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
     libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();

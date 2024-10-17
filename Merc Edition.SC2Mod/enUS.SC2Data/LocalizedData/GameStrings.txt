@@ -43,6 +43,7 @@ Abil/Name/TitanDroneMagazineDummy=Drone Magazine Dummy
 Abil/Name/TitanReborn=Titan Reborn
 Abil/Name/TitanWreckage=Titan Wreckage
 Abil/Name/Transwarp=Transwarp
+Behavior/Name/AdjudicatorCloakingField=Cloaking Field
 Behavior/Name/AfterburnersHelsAngel=Afterburners
 Behavior/Name/BlockBFlightDuration=Block B Flight Duration
 Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
@@ -73,6 +74,7 @@ Behavior/Name/TarBomb=Tar Bomb
 Behavior/Name/TriggerOverdrive=Trigger Overdrive
 Behavior/Name/UranusProtocol=Uranus Protocol
 Behavior/Name/WolverinesOrders=Wolverine's Orders
+Behavior/Tooltip/AdjudicatorCloakingField=This unit is cloaked unless revealed by detectors or effects.
 Behavior/Tooltip/AfterburnersHelsAngel=This unit is moving faster.
 Behavior/Tooltip/ConcussiveShrapnel=This unit is slowed.
 Behavior/Tooltip/FearPliableArmor=This unit is running in fear.
@@ -217,7 +219,7 @@ Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Reduces unit cost, removes the need for a Tech Lab, and equips the unit with an automatic heal drone.
 Button/Tooltip/ASPRocketPods=Causes missiles to deal damage in a line, increases damage while cloaked by 25%, and adds another two Screecher Missile weapons.
-Button/Tooltip/AblativeScalesNew=Hammer Securities gain 75 life and immunity to splash damage.
+Button/Tooltip/AblativeScalesNew=Increases life by 75 and grants immunity to splash damage.
 Button/Tooltip/ActivateUranusProtocol=Enable the powerful 250mm Uranus Carronades for <d time="21"/> to attack alongside the Coeus Missile Battery.
 Button/Tooltip/Adjudicator=Aerial support unit. Can use Irradiate, Transwarp, and Nano-Repair abilities. Cloaks nearby units.<n/><n/><c val="FFE303">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/AdjudicatorCloakingField=Cloaking Field passively cloaks friendly nearby units and structures.<n/><n/><c val="ffff8a">Passive ability.</c>
@@ -228,7 +230,7 @@ Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy un
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
 Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
-Button/Tooltip/BearclawGauntlets=Increases the Devil Dog's attack radius by 60% and grants the Grapple ability.
+Button/Tooltip/BearclawGauntlets=Increases attack radius by 60% and grants the Grapple ability.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/BuildAdjudicator=Tactical support craft. Cloaks nearby units and attacks enemies for damage over time. Can use Nano-Repair, Irradiate, and Transwarp.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BuildAgitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -251,10 +253,10 @@ Button/Tooltip/CerberusHoundMines=Increases the detonation and trigger radius of
 Button/Tooltip/ChaoticPower=Upon death, spawn 5 mag mines. Halves cooldown of Mag Mine ability and causes it to deploy an additional Mag Mine.
 Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
 Button/Tooltip/CharonDropshipTrainSkibisAngel=Support troopers. Heals nearby biological units. Trained cheaper and faster at Charon Dropships, and in pairs.
-Button/Tooltip/ChemicalPlating=Increases the Devil Dog's armor by 3 and grants immunity to acid explosions.
+Button/Tooltip/ChemicalPlating=Increases armor by 3 and grants immunity to acid explosions.
 Button/Tooltip/CloakPhantom=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,PhantomCloak,Modification.VitalRegenArray[2] + Unit,Phantom,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/CombatDrugs=Block B heal for 20% of their maximum life when dealing damage. While out of combat, they regenerate 2 life per second.
-Button/Tooltip/ConcussiveShrapnel=Attacks briefly slow enemies in an area and in a cone behind them by 60%.
+Button/Tooltip/ConcussiveShrapnel=Attacks deal slight damage to enemies in an area and cone behind the target, and briefly slow all units hit.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ConfederateReactor=Copperheads gain 1 range and movement speed, and 35% attack speed.
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -281,7 +283,7 @@ Button/Tooltip/IgniteAfterburnersHelsAngel=Increase movement speed by 100% for <
 Button/Tooltip/ImmolationFluid=Anarchist attacks cause enemies to burn for an additional 50 damage over <d time="7"/>.
 Button/Tooltip/ImpalerRoundsShadow=Increases damage vs Armored by 7.
 Button/Tooltip/InternalizedTechModule=Removes the need for a Tech Lab.
-Button/Tooltip/Irradiate=Irradiates a single target, causing damage over time to target and any nearby units for <d ref="Behavior,Irradiate,Duration"/> seconds. Irradiate does not damage mechanical units, but nearby biological units will take damage from an Irradiated mechanical unit. Irradiated units cannot cloak.
+Button/Tooltip/Irradiate=Irradiates a single target, causing damage over time to target and any nearby enemies for <d ref="Behavior,Irradiate,Duration"/> seconds. Irradiate does not damage mechanical units, but nearby biological units will take damage from an Irradiated mechanical unit. Irradiated units cannot cloak.
 Button/Tooltip/JetPackOverdrive=Allows the Block B to temporarily fly in the air, becoming an air unit for <d time="14"/> and allowing it to ht both air and ground targets.
 Button/Tooltip/JoriumLinedSuit=Shadows can use Hallucination and Psionic Lash. Cloak cost removed.
 Button/Tooltip/JotunnSystems=Increases missile and cannon range by 2, reduces transformation time, and causes the Gatling Cannon to deal damage in a line.
@@ -319,6 +321,7 @@ Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. Wh
 Button/Tooltip/RevivalField=While cloaked, every other attack is avoided. When taking fatal damage, recall to the nearest Command Center, at most once every <d time="336"/>.
 Button/Tooltip/RorkesRedline=Gives 250 shields and enables the Redline Reactor ability.
 Button/Tooltip/Salvage=Salvages the structure, removing it and returning 100% of its mineral and gas value. Salvage takes <d time="5"/> to finish. Warning: once Salvage is triggered, it cannot be canceled.
+Button/Tooltip/SensorTower2=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy. <n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ShellShower=The longer the Spartan Company attacks, the faster the attacks become 
 Button/Tooltip/ShimmerScreen=Allows permanent cloaking, as well as increasing speed by 25% and reducing damage taken by 15% while cloaked.
@@ -340,7 +343,7 @@ Button/Tooltip/TacticalRealignment=After transforming, damage dealt is increased
 Button/Tooltip/TarBomb=Deal 20 damage to the target and apply a debuff for <d time="7"/> to enemies in the area that reduces their movement speed by 75% and range by 3.
 Button/Tooltip/TerrazineShots=Shadows gain more movement speed, attack speed, attack range, sight radius, and lower Shadow Fury cooldown.
 Button/Tooltip/ThornShieldSkibidi=Skibi's Angels gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
-Button/Tooltip/ThornShieldWarPig=War Pigs gain 15 life and deal 5 (+5 vs Shields) damage back to the attacker when taking melee damage.
+Button/Tooltip/ThornShieldWarPig=Increases life by 15. Melee damage taken deals 5 (+5 vs Shields) damage back to the attacker.
 Button/Tooltip/Titan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TitanWreckage=Heavy assault mech. Can use 250mm Strike Cannons.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TrainBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -362,6 +365,9 @@ Effect/Name/250mmUranusCarronadesLaunchMissile=250mmUranusCarronadesLaunchMissil
 Effect/Name/ACVFusionCutter=Fusion Cutter (Damage)
 Effect/Name/AGRShadeHunter=AGR Shade Hunter
 Effect/Name/ActivateUranus=Activate Uranus
+Effect/Name/AdjudicatorCloakingField=Cloaking Field
+Effect/Name/AdjudicatorCloakingFieldSearch=Cloaking Field Search
+Effect/Name/AdjudicatorNanitesApplyBehavior=AdjudicatorNanitesApplyBehavior
 Effect/Name/AdjudicatorWeaponDamage=Adjudicator Weapon Damage
 Effect/Name/AdjudicatorWeaponLM=Adjudicator Weapon LM
 Effect/Name/AdjudicatorWeaponSet=Adjudicator Weapon Set
@@ -654,6 +660,7 @@ Unit/Name/WolverineWeapon=Wolverine
 Upgrade/Name/AIEnhancement=A.I Enhancement
 Upgrade/Name/ASPRocketPods=ASP Rocket Pods
 Upgrade/Name/AblativeScales=Ablative Scales
+Upgrade/Name/AdvancedOrbitalCommand=Advanced Orbital Command
 Upgrade/Name/AdvancedSiegeTechArmorOnly=Advanced Siege Tech Armor Only
 Upgrade/Name/ArmoredHousing=Armored Housing
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
@@ -672,11 +679,13 @@ Upgrade/Name/ImpalerRoundsShadow=Impaler Rounds
 Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
 Upgrade/Name/JoriumLinedSuit=Jorium Lined Suit
 Upgrade/Name/JotunnSystems=Jotunn Systems
+Upgrade/Name/KelmorianCutters=Kelmorian Cutters
 Upgrade/Name/LaserTargetingSystem=Laser Targeting System
 Upgrade/Name/LegionSystems=Legion Systems
 Upgrade/Name/LooseEngineSeals=Loose Engine Seals
 Upgrade/Name/MASH=M.A.S.H
 Upgrade/Name/MercEdition=Merc Edition
+Upgrade/Name/MicroFusionReactor=Micro Fusion Reactor
 Upgrade/Name/MobileStockpile=Mobile Stockpile
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/PiercingStrike=Piercing Strike
@@ -694,6 +703,7 @@ Upgrade/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Upgrade/Name/SulfurMissiles=Sulfur Missiles
 Upgrade/Name/SuperStim=Super Stim
 Upgrade/Name/SwannNanites=Swann Nanites
+Upgrade/Name/SwannsSuppression=Swann's Suppression
 Upgrade/Name/TerrazineShots=Terrazine Shots
 Upgrade/Name/ThornShield=Thorn Shield
 Upgrade/Name/TyradorImplants=Tyrador Implants

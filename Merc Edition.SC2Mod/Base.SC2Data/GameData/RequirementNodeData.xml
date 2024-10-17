@@ -5,13 +5,16 @@
         <OperandArray value="NotCountUpgradeSpectreTooltipUpgradeQueuedOrBetter"/>
         <OperandArray value="CountUpgradeMobileStockpileCompleteOnly"/>
     </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly">
+        <OperandArray value="CountUpgradeFireSuppressionSystemsCompleteOnly"/>
+        <OperandArray value="CountUpgradeSwannsSuppressionCompleteOnly"/>
+    </CRequirementAnd>
     <CRequirementCountBehavior id="CountBehaviorNomadSilentModeCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="NomadSilentMode" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
     <CRequirementCountUnit id="CountUnitSpiderMineBurrowedCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="SpiderMineBurrowed" State="CompleteOnlyAtUnit"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeAIEnhancementCompleteOnly">
@@ -23,6 +26,10 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat">
         <Count Link="AblativeScales" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAdvancedOrbitalCommandCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AdvancedOrbitalCommand" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeArmoredHousingCompleteOnly">
         <Count Link="ArmoredHousing" State="CompleteOnly"/>
@@ -72,6 +79,9 @@
     <CRequirementCountUpgrade id="CountUpgradeJotunnSystemsCompleteOnly">
         <Count Link="JotunnSystems" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKelmorianCuttersCompleteOnly">
+        <Count Link="KelmorianCutters" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeLegionSystemsCompleteOnly">
         <Count Link="LegionSystems" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -83,6 +93,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMercEditionCompleteOnly">
         <Count Link="MercEdition" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMicroFusionReactorCompleteOnly">
+        <Count Link="MicroFusionReactor" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMobileStockpileCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -143,6 +156,10 @@
     <CRequirementCountUpgrade id="CountUpgradeSwannNanitesCompleteOnly">
         <Count Link="SwannNanites" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSwannsSuppressionCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SwannsSuppression" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTerrazineShotsCompleteOnly">
         <Count Link="TerrazineShots" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -168,7 +185,6 @@
         <Count Link="ViralFlammenwerfer" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementLT id="LTCountUnitSpiderMineBurrowedCompleteOnlyAtUnit4">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUnitSpiderMineBurrowedCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="4"/>
     </CRequirementLT>
@@ -188,11 +204,23 @@
         <OperandArray index="0" value="CountUpgradeThornShieldQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
+    <CRequirementNot id="NotAndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly">
+        <OperandArray index="0" value="AndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly"/>
+    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeStabilizerMedpacksMercCompleteOnly">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirementNot>
     <CRequirementOr id="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly">
         <OperandArray value="CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"/>
         <OperandArray value="CountUpgradeAIEnhancementCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly">
+        <OperandArray value="CountUpgradeFireSuppressionSystemsCompleteOnly"/>
+        <OperandArray value="CountUpgradeSwannsSuppressionCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeOrbitalRelayCompleteOnlyCountUpgradeAdvancedOrbitalCommandCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUpgradeOrbitalRelayCompleteOnly"/>
+        <OperandArray value="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
     </CRequirementOr>
 </Catalog>

@@ -34,6 +34,9 @@
             <Flags index="IgnoreUser" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="Repair">
+        <Flags index="PassengerAcquireTransport" value="1"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="Transwarp">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <Effect index="0" value="ArbiterMPRecallSearch"/>

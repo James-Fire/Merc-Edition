@@ -15,6 +15,7 @@
         <EffectArray Reference="Unit,HammerSecurity,LifeStart" Value="75"/>
         <AffectedUnitArray value="HammerSecurity"/>
     </CUpgrade>
+    <CUpgrade id="AdvancedOrbitalCommand"/>
     <CUpgrade id="ArmoredHousing">
         <EffectArray Reference="Unit,MissileTurret,LifeMax" Value="100"/>
         <EffectArray Reference="Unit,MissileTurret,LifeStart" Value="100"/>
@@ -54,6 +55,23 @@
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[1].Radius" Value="0.36"/>
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[2].Radius" Value="0.72"/>
         <AffectedUnitArray value="Nomad"/>
+    </CUpgrade>
+    <CUpgrade id="KelmorianCutters">
+        <EffectArray Operation="Set" Reference="Abil,SCVHarvest,ResourceAmountBonus[Minerals]" Value="15"/>
+        <EffectArray Operation="Set" Reference="Effect,Repair,DrainResourceCostFactor[Custom]" Value="0.1875"/>
+        <EffectArray Operation="Set" Reference="Effect,Repair,DrainResourceCostFactor[Minerals]" Value="0.1875"/>
+        <EffectArray Operation="Set" Reference="Effect,Repair,DrainResourceCostFactor[Terrazine]" Value="0.1875"/>
+        <EffectArray Operation="Set" Reference="Effect,Repair,DrainResourceCostFactor[Vespene]" Value="0.1875"/>
+        <EffectArray Operation="Multiply" Reference="Effect,Repair,TimeFactor" Value="0.5"/>
+        <EffectArray Operation="Multiply" Reference="Effect,Repair,RechargeVitalRate" Value="2.000000"/>
+        <AffectedUnitArray value="ACV"/>
+    </CUpgrade>
+    <CUpgrade id="MicroFusionReactor">
+        <EffectArray Reference="Unit,ACV,Speed" Value="1.500000"/>
+        <EffectArray Operation="Set" Reference="Abil,BuildInProgress,MaxBuilders" Value="10"/>
+        <EffectArray Operation="Set" Reference="Abil,BuildInProgress,PowerBuildBonusRate" Value="0.6"/>
+        <EffectArray Operation="Set" Reference="Abil,BuildInProgress,PowerBuildCostFactor" Value="0.0"/>
+        <AffectedUnitArray value="ACV"/>
     </CUpgrade>
     <CUpgrade id="MobileStockpile">
         <AffectedUnitArray value="Adjudicator"/>
@@ -247,6 +265,7 @@
         <EffectArray Operation="Multiply" Reference="Effect,NanoRepair,RechargeVitalRate" Value="1.398400"/>
         <EffectArray Operation="Set" Reference="Effect,NanoRepair,DrainVitalCostFactor" Value="0"/>
     </CUpgrade>
+    <CUpgrade id="SwannsSuppression"/>
     <CUpgrade id="TerrazineShots">
         <EffectArray Operation="Set" Reference="Abil,DarkTemplarShadowFury,Cost[0].Cooldown.TimeUse" Value="6.000000"/>
         <EffectArray Reference="Weapon,AGRShadeHunter,RateMultiplier" Value="0.25"/>

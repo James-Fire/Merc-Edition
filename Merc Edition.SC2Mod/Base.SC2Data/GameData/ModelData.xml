@@ -170,6 +170,12 @@
         <ScaleMax value="1.100000,1.100000,1.100000"/>
         <ScaleMin value="1.100000,1.100000,1.100000"/>
     </CModel>
+    <CModelFoliage id="HitTestSphere">
+        <Model value="Assets\Units\Test\HitTestSphere\HitTestSphere.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="IrradiateNanitesHeal">
+        <Model value="Assets\Effects\Glaze\Glaze_Dehaka_PrimalRegeneration\Glaze_Dehaka_PrimalRegeneration.m3"/>
+    </CModelFoliage>
     <CModelFoliage id="MercCommanderBuff">
         <Model value="Assets\Effects\Terran\MiraHorner_Hellion_DeathRattle_Coop\MiraHorner_Hellion_DeathRattle_Coop.m3"/>
         <Radius value="1.000000"/>
@@ -291,6 +297,9 @@
         <ShadowRadius value="0.250000"/>
         <TechPurchaseCamera value="Star2CameraLow02"/>
         <UnitGlossaryCamera value="Star2CameraLow02"/>
+    </CModel>
+    <CModel id="RadarTower" parent="SensorTowerBase">
+        <Model value="Assets\Models\RadarTower.m3"/>
     </CModel>
     <CModel id="StarcruiserLaserBattery" parent="MissileFX">
         <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>

@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="HitTestSphere" parent="ModelAddition">
+        <EditorCategories value=""/>
+    </CActorModel>
+    <CActorModelMaterial id="IrradiateNanitesHeal" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.AdjudicatorNanites.On" Send="Create"/>
+        <On index="6" Terms="Behavior.AdjudicatorNanites.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorSound id="IrradiateNanitesLoop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.AdjudicatorNanites.On" Send="Create"/>
+        <On Terms="Behavior.AdjudicatorNanites.Off" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="Mothership_CloakFieldOff">
+        <On Terms="Behavior.AdjudicatorCloakingField.Off" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="Mothership_CloakFieldOn">
+        <On Terms="Behavior.AdjudicatorCloakingField.On" Send="Create"/>
+    </CActorSound>
     <CActorModel id="NomadMissileClusterImpactModel" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.NomadMissileClusterDamage.Start" Send="Create"/>
@@ -714,6 +733,7 @@
     <CActorUnit id="Adjudicator" parent="GenericUnitBase" unitName="Adjudicator">
         <Aliases value="_UnitHuge"/>
         <On Terms="Abil.Irradiate.SourceCastStart" Send="$Spell"/>
+        <On Terms="ActorCreation" Send="Create HitTestSphere"/>
         <DeathArray index="Normal" ModelLink="AdjucatorDeath" SoundLink=""/>
         <DeathActorModel value="ScienceVesselDeathModel"/>
         <PortraitModel value="AdjucatorPortrait"/>
@@ -2047,6 +2067,11 @@
     <CActorModel id="VoidDarkTemplarShadowFury">
         <On Terms="ActorCreation" Send="SetTintColor 145,0,0"/>
     </CActorModel>
+    <CActorSimple id="VoidDetectorRadarSetup">
+        <On Terms="Behavior.AdjudicatorCloakingField.On" Send="Create"/>
+        <On Terms="Behavior.AdjudicatorCloakingField.On" Send="StatusIncrement ActiveCount"/>
+        <On Terms="Behavior.AdjudicatorCloakingField.Off" Send="StatusDecrement ActiveCount"/>
+    </CActorSimple>
     <CActorSound id="VultureSpiderMineBirthSound">
         <On Terms="AbilMorph.CondorSpiderMineUnburrow.Start" Send="Create"/>
         <On Terms="Behavior.MineDroneSpawn.Spawn" Send="Create"/>
