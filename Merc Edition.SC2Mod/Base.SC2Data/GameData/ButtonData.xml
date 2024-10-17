@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="ARESTargetLock">
+        <Icon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
+    </CButton>
     <CButton id="ASPRocketPods">
         <Icon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
@@ -343,6 +347,10 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="SentinelMissilesAres">
+        <Icon value="Assets\Textures\btn-ability-terran-unstablepayload.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-unstablepayload.dds"/>
+    </CButton>
     <CButton id="ShellShower">
         <Icon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\hail of bullets.dds"/>
@@ -363,6 +371,10 @@
         <Icon value="Assets\Textures\btn-techupgrade-terran-replenishablemagazine.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-spidermine.dds"/>
         <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SquadSIghtAres">
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-improvedbunkersights.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-improvedbunkersights.dds"/>
     </CButton>
     <CButton id="StabilizerHeal">
         <Icon value="Assets\Icons and Wireframes\stabilizerheal.dds"/>

@@ -108,6 +108,7 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
     </CUnit>
+    <CUnit id="ARESMissileMissile" parent="MISSILE"/>
     <CUnit id="Archon">
         <AbilArray index="6" removed="1"/>
         <!--BehaviorArray Link="SOACheatDeathSupply4"/-->
@@ -1831,6 +1832,66 @@
         <Race value="Terr"/>
         <Mover value="TornadoMissileWeapon"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="ARESWarbotMercMod">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
+        <LifeArmor value="3"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <Sight value="11"/>
+        <RepairTime value="41.667"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="ARESTargetLock"/>
+        <AbilArray Link="SentinelMissilesAres"/>
+        <BehaviorArray Link="Detector11"/>
+        <BehaviorArray Link="SquadSightGiver"/>
+        <WeaponArray Link="Warbot120mmCannon" Turret="Warbot"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Detector" Type="Passive" Behavior="Detector11" Row="1" Column="0"/>
+            <LayoutButtons Face="SquadSIghtAres" Type="Passive" Behavior="SquadSightGiver" Row="1" Column="1"/>
+            <LayoutButtons Face="ARESTargetLock" Type="AbilCmd" AbilCmd="ARESTargetLock,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SentinelMissilesAres" Type="AbilCmd" AbilCmd="SentinelMissilesAres,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.6875"/>
+        <SeparationRadius value="0.6875"/>
+        <InnerRadius value="0.6875"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="300"/>
+        <ScoreKill value="600"/>
+        <SubgroupPriority value="15"/>
+        <MinimapRadius value="0.6875"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Campaign"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="345"/>
+        <HotkeyCategory value="Unit/Category/TerranStory"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
     </CUnit>
     <CUnit id="WolverineWeapon" parent="MISSILE">
         <Race value="Terr"/>

@@ -34,8 +34,50 @@
             <Flags index="IgnoreUser" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="ARESTargetLock">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ARESTargetLockCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown Location="Unit" TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Invulnerable"/>
+        <TargetSorts>
+            <SortArray value="TSLifeLargestFirst"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <AutoCastRange value="8"/>
+        <AutoCastValidatorArray value="NotHaveTargetLockARES"/>
+        <AutoCastValidatorArray value="NotInterceptor"/>
+        <CastOutroTime value="0.5"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TargetLock"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="Repair">
         <Flags index="PassengerAcquireTransport" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SentinelMissilesAres">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ARESMissileLaunchMissile"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="-;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SentinelMissilesAres"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Transwarp">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>

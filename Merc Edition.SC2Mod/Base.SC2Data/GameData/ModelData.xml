@@ -22,6 +22,9 @@
         <Image value="Assets\Textures\SCVPortrait_Static.dds"/>
         <Lighting value="SCVPortrait"/>
     </CModel>
+    <CModel id="ARESMissileMissile">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissile\WarHoundHaywireMissile.m3"/>
+    </CModel>
     <CModelFoliage id="AgitatorMorphModel">
         <Model value="Assets\Units\Terran\Hellbatmorph_CovertOps_Collection\Hellbatmorph_CovertOps_Collection.m3"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -1017,6 +1020,18 @@
     <CModel id="RailcannonBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\ArchAngel_Xanthos_Experimentation_Railgun\ArchAngel_Xanthos_Experimentation_Railgun.m3"/>
         <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ARESMercEdition" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\ARES\ARES.m3"/>
+        <Flags index="AutoUnload" value="1"/>
+        <PlanetPanelCamera value="Star2CameraHigher10"/>
+        <Radius value="1.200000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <SelectionRadius value="1.999500"/>
+        <ShadowRadius value="1.999500"/>
+        <TechPurchaseCamera value="Star2CameraHigher10"/>
+        <UnitGlossaryCamera value="Star2CameraHigher10"/>
     </CModel>
     <CModel id="Wolverine" parent="Unit">
         <Model value="Assets\Models\Warhound_Mercenary.m3"/>

@@ -1,4 +1,5 @@
-﻿Button/Hotkey/ActivateUranusProtocol=R
+﻿Button/Hotkey/ARESTargetLock=T
+Button/Hotkey/ActivateUranusProtocol=R
 Button/Hotkey/AdjudicatorCloakingField=
 Button/Hotkey/AftermarketRailgunTurret=R
 Button/Hotkey/ArmAdjudicatorwithNuke=N
@@ -37,6 +38,7 @@ Button/Hotkey/MorphtoAnarchist=C
 Button/Hotkey/NormalModeNomad=D
 Button/Hotkey/PointBreakDrone=D
 Button/Hotkey/RedlineReactor=E
+Button/Hotkey/SentinelMissilesAres=E
 Button/Hotkey/SignalFlare=F
 Button/Hotkey/SilentMode=T
 Button/Hotkey/SnipePhantom=R

@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="ARESMissile" parent="GenericAttack" effectImpact="ARESMissileDamage" effectLaunch="ARESMissileLaunchMissile">
+        <LaunchAttachQuery Methods="Weapon 0"/>
+        <LaunchAssets Sound="WidowMine_Attack"/>
+        <ImpactMap index="None" Model="WidowMineAttackImpact" Sound="Raven_HunterSeekerAttackImpact"/>
+    </CActorAction>
+    <CActorMissile id="ARESMissileMissile" parent="GenericAttackMissile" unitName="ARESMissileMissile"/>
+    <CActorRange id="ARESTargetLockRange" parent="RangeAbil" abil="ARESTargetLock">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorBeamSimple id="ARESTargetLockLaserBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Effect.ARESTargetLockCP.Start; At Target" Send="Create"/>
+        <On Terms="Effect.ARESTargetLockCP.Stop" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="Create SentryMonitor_TargetLock_Loop_ActorSound"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Model value="TargetLockLaserBeam"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <HostLaunch Subject="_Unit" Scope="Caster"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="_Unit" Scope="Target"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
     <CActorModel id="HitTestSphere" parent="ModelAddition">
         <EditorCategories value=""/>
     </CActorModel>
@@ -495,10 +518,33 @@
     <CActorGlobalConfig id="SYSTEM_ActorConfig">
         <DeathCustomPriorityList value="Hellstorm"/>
     </CActorGlobalConfig>
+    <CActorRange id="SentinelMissilesAresRange" parent="RangeAbil" abil="SentinelMissilesAres">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorSound id="SentryMonitor_TargetLock_On_ActorSound">
         <On Terms="Effect.NomadTargetLockCP.Start; At Caster" Send="Create"/>
         <On Terms="Effect.NomadTargetLockCP.Stop" Send="AnimBracketStop BSD"/>
     </CActorSound>
+    <CActorSound id="ARESTargetLockOnSound" parent="SoundOneShot">
+        <On Terms="Effect.ARESTargetLockCP.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.ARESTargetLockCP.Stop" Send="AnimBracketStop BSD"/>
+        <Sound value="SentryMonitor_TargetLock_Ping"/>
+        <Layers Sound="SentryMonitor_TargetLock_On">
+            <Chance value="0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorSound id="ARESTargetLockPingSound" parent="SoundOneShot">
+        <On Terms="Behavior.ARESTargetLock.On; ValidateUnit TargetLockUnitRadiusLarge" Send="Create"/>
+        <Sound value="SentryMonitor_TargetLock_On"/>
+    </CActorSound>
+    <CActorModel id="SquadSightAttachment">
+        <On Terms="Behavior.SquadSightGiver.On" Send="Create"/>
+        <On Terms="Behavior.SquadSightGiver.Off" Send="AnimBracketStop BSD"/>
+    </CActorModel>
     <CActorAction id="StarcruiserLaserAttackSecondary" parent="GenericAttack" effectImpact="PharaohLaserBatteryDamage" effectLaunch="PharaohLaserBatteryLMSecondary">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0 AMRandomUniform"/>
         <Missile value="StarcruiserLaserBattery"/>
@@ -1781,6 +1827,29 @@
         <ModelFlags index="AutomateGlobalLoops" value="1"/>
         <PreHost value="_ActorAction"/>
     </CActorMissile>
+    <CActorModel id="ARESTargetLockAttachment" parent="ModelAnimationStyleContinuous">
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Behavior.ARESTargetLock.On; ValidateUnit TargetLockUnitRadiusSmall" Send="Create"/>
+        <On Terms="Behavior.ARESTargetLock.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter" HoldRotation="1"/>
+        <Model value="TargetLockAttachment"/>
+        <AutoScaleFactor value="0.700000"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
+    <CActorModel id="ARESTargetLockAttachmentLarge" parent="ModelAnimationStyleContinuous">
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Behavior.ARESTargetLock.On; ValidateUnit TargetLockUnitRadiusLarge" Send="Create"/>
+        <On Terms="Behavior.ARESTargetLock.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter" HoldRotation="1"/>
+        <Model value="TargetLockAttachmentLarge"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
     <CActorModel id="TerrazineShots" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.AGRShadeHunter.Start; ValidatePlayer HaveTerrazineShots" Send="Create"/>
@@ -2091,6 +2160,58 @@
     <CActorMissile id="HarrierAirAttackLeftMissile" parent="GenericAttackMissile" unitName="HarrierAirLeft">
         <Model value="HarrierAirWeaponLeft"/>
     </CActorMissile>
+    <CActorUnit id="ARESMercEdition" parent="GenericUnitBase" unitName="ARESWarbotMercMod">
+        <Aliases value="_UnitLarge"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsWarbotB" Send="DeathCustomize Variation2"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsWarbotC" Send="DeathCustomize Variation3"/>
+        <On Terms="Effect.ARESAttackRightMercEdition.Start; At Caster" Send="AnimPlay Attack Attack,Right"/>
+        <On Terms="Effect.ARESAttackLeftMercEdition.Start; At Caster" Send="AnimPlay Attack Attack,Left"/>
+        <On Terms="Effect.ARESAttackCPMercEdition.Start" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="AnimBracketState.*.BeforeOpening; AnimName Morph" Send="AnimGroupRemove Work"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="TimerSet 0.250000 KillBeam"/>
+        <On Terms="TimerExpired; TimerName KillBeam" Target="WarbotCAttackBeam" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply A"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart Morph Stand,Work,End IGNORE Stand,Work,Start"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupRemove A"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupRemove B"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupRemove C"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupApply Work"/>
+        <Model value="ARESMercEdition"/>
+        <BuildModel value="ARESMercEdition"/>
+        <DeathArray index="Normal" ModelLink="WarbotDeath" SoundLink="Terran_ExplosionLarge"/>
+        <DeathCustoms ModelLink="WarbotDeathB" Name="Variation2"/>
+        <DeathCustoms ModelLink="WarbotDeathC" Name="Variation3"/>
+        <DeathActorModelLow value="UnitDeathModel"/>
+        <PlacementModel value="ARESMercEdition"/>
+        <PortraitModel value="ARESPortrait"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-terran-warbot.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="Unit/Name/ARESMercEdition"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="Warbot_Ready"/>
+        <SoundArray index="What" value="Warbot_What"/>
+        <SoundArray index="Yes" value="Warbot_Yes"/>
+        <SoundArray index="Attack" value="Warbot_Attack"/>
+        <SoundArray index="Pissed" value="Warbot_Pissed"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitFlags index="SuppressStandIntro" value="1"/>
+        <UnitFlags index="SuppressWalkIntro" value="1"/>
+        <UnitFlags index="SuppressWalkOutro" value="1"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+        <UnitKillRank Text="UnitKillRank/ARESMercEdition"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-terran-warbot.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="ARESAttackMercEdition" parent="GenericAttack" effectAttack="ARESAttackRightMercEdition">
+        <On Terms="Effect.ARESAttackLeftMercEdition.Start; At Caster" Send="Create"/>
+        <LaunchAssets Sound="Warbot_GatlingGunAttackLaunch"/>
+        <ImpactMap index="None" Model="WarbotAAttackImpact" Sound="Warbot_GatlingGunAttackImpact"/>
+    </CActorAction>
     <CActorAction id="WolverineAttack" parent="GenericAttack" effectImpact="RailcannonDamage" effectLaunch="RailcannonLM">
         <LaunchAssets Sound="RailcannonLaunch"/>
         <BeamScope value="Caster"/>

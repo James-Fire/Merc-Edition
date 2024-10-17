@@ -18,6 +18,31 @@
         <ImpactEffect value="250mmUranusCarronadesDamage"/>
         <AmmoUnit value="250mmUranusCarronadesWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="ARESMissileDamage">
+        <ShieldBonus value="35"/>
+        <Amount value="145"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectDamage id="ARESMissileDamageOuter">
+        <ShieldBonus value="25"/>
+        <Amount value="50"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ARESMissileLaunchMissile">
+        <ImpactEffect value="ARESMissileSet"/>
+        <AmmoUnit value="ARESMissileMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectEnumArea id="ARESMissileSA">
+        <EditorCategories value=""/>
+        <ExcludeArray Effect="ARESMissileLaunchMissile" Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="1.75" Effect="ARESMissileDamageOuter"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ARESMissileSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ARESMissileDamage"/>
+        <EffectArray value="ARESMissileSA"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="ActivateUranus">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
@@ -409,6 +434,45 @@
         <PeriodicValidator value="MonitorTargetLockChecks"/>
         <PeriodicPeriodArray value="1"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="ARESTargetLockCP">
+        <ValidatorArray value="NotHaveTargetLockARES"/>
+        <ValidatorArray value="CasterNotMaxTargetLocksARES"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <InitialEffect value="ARESTargetLockStartSet"/>
+        <FinalEffect value="ARESTargetLockFinishSet"/>
+        <PeriodicValidator value="MonitorTargetLockChecks"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="ARESTargetLockABCaster">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ARESTargetLockCaster"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ARESTargetLockABTarget">
+        <EditorCategories value="Race:Protoss"/>
+        <Behavior value="ARESTargetLock"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="ARESTargetLockFinishSet">
+        <EffectArray value="ARESTargetLockRB"/>
+        <EffectArray value="ARESTargetLockRBCaster"/>
+    </CEffectSet>
+    <CEffectRemoveBehavior id="ARESTargetLockRB">
+        <EditorCategories value=""/>
+        <BehaviorLink value="ARESTargetLock"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="ARESTargetLockRBCaster">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="ARESTargetLockCaster"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="ARESTargetLockStartSet">
+        <EffectArray value="ARESTargetLockABTarget"/>
+        <EffectArray value="ARESTargetLockABCaster"/>
+    </CEffectSet>
     <CEffectLaunchMissile id="PharaohLaserBatteryLMSecondary">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>
@@ -941,6 +1005,14 @@
         <LaunchLocation Value="CasterUnit"/>
         <SearchFlags index="CenterAtLaunch" value="1"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="SquadSightAresApplyBehavior">
+        <Behavior value="SquadSightAres"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="SquadSightSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Self,Neutral,Enemy,Worker,Missile,Item,Stasis,Dead,Hidden,Benign"/>
+        <AreaArray Radius="4" Effect="SquadSightAresApplyBehavior"/>
+    </CEffectEnumArea>
     <CEffectApplyBehavior id="StunnedAnarchistLeapApplyBehavior">
         <Behavior value="StunnedAnarchistLeap"/>
     </CEffectApplyBehavior>
@@ -1281,6 +1353,24 @@
         <ImpactEffect value="RailcannonSet"/>
         <AmmoUnit value="WolverineWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="ARESAttackCPMercEdition">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="ARESAttackRightMercEdition"/>
+        <ExpireDelay value="0.4"/>
+        <FinalEffect value="ARESAttackLeftMercEdition"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="ARESAttackLeftMercEdition">
+        <EditorCategories value="Race:Terran"/>
+        <ArmorReduction value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="15"/>
+    </CEffectDamage>
+    <CEffectDamage id="ARESAttackRightMercEdition" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <Amount value="15"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="WolverineFearAB">
         <Behavior value="WolverineFeared"/>
     </CEffectApplyBehavior>

@@ -132,6 +132,22 @@
             <AbilLinkDisableArray value="PlacePointDefenseDrone"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ARESTargetLock">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <MaxStackCount value="3"/>
+        <Modification>
+            <DamageTakenFraction index="Spell" value="0.3"/>
+            <DamageTakenFraction index="Melee" value="0.3"/>
+            <DamageTakenFraction index="Ranged" value="0.3"/>
+            <DamageTakenFraction index="Splash" value="0.3"/>
+            <DamageTakenFraction index="NoProc" value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ARESTargetLockCaster">
+        <InfoFlags index="Hidden" value="1"/>
+        <MaxStackCount value="3"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="PointBreakDrone">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.1"/>
@@ -396,6 +412,19 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
         <ExpireEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SquadSightAres">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-improvedbunkersights.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.5"/>
+        <Modification RangedWeaponRange="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SquadSightGiver">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.4"/>
+        <PeriodicEffect value="SquadSightSA"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="StarcruiserShieldGlaze">
         <InfoFlags index="Hidden" value="1"/>

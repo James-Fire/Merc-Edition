@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareBehaviorCount id="CasterNotMaxTargetLocksARES">
+        <ResultFailed value="Error,Error\TooManyLockTargets"/>
+        <WhichUnit Value="Caster"/>
+        <Compare value="LT"/>
+        <Value value="2"/>
+        <Behavior value="ARESTargetLockCaster"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorPlayerRequirement id="HaveExplosiveCalibrations">
         <Find value="1"/>
         <Value value="UseExplosiveCalibrations"/>
@@ -50,6 +57,10 @@
         <CombineArray value="LifeLTHalf"/>
         <CombineArray value="DontHaveSwannSuppressionSystems"/>
     </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveTargetLockARES">
+        <ResultFailed value="Error,Error\TargetLock"/>
+        <Behavior value="ARESTargetLock"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorCombine id="SwannANDBelow80Life">
         <Type value="And"/>
         <CombineArray value="LifeBelow80"/>
