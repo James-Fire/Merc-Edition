@@ -1875,14 +1875,11 @@
             <LayoutButtons Face="ARESTargetLock" Type="AbilCmd" AbilCmd="ARESTargetLock,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="SentinelMissilesAres" Type="AbilCmd" AbilCmd="SentinelMissilesAres,Execute" Row="2" Column="1"/>
         </CardLayouts>
-        <Radius value="0.6875"/>
-        <SeparationRadius value="0.6875"/>
-        <InnerRadius value="0.6875"/>
+        <InnerRadius value="0.5"/>
         <CargoSize value="2"/>
         <ScoreMake value="300"/>
         <ScoreKill value="600"/>
         <SubgroupPriority value="15"/>
-        <MinimapRadius value="0.6875"/>
         <EditorCategories value="ObjectType:Hero,ObjectFamily:Campaign"/>
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
         <GlossaryPriority value="345"/>

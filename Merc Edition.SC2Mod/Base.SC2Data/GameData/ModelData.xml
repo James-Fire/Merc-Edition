@@ -1026,8 +1026,8 @@
         <Flags index="AutoUnload" value="1"/>
         <PlanetPanelCamera value="Star2CameraHigher10"/>
         <Radius value="1.200000"/>
-        <ScaleMax value="0.650000,0.650000,0.650000"/>
-        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
         <SelectionRadius value="1.999500"/>
         <ShadowRadius value="1.999500"/>
         <TechPurchaseCamera value="Star2CameraHigher10"/>
