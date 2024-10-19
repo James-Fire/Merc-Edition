@@ -256,4 +256,20 @@
     <CValidatorUnitOrderTargetType id="TargetIsPoint">
         <Type value="Point"/>
     </CValidatorUnitOrderTargetType>
+    <CValidatorUnitCompareBehaviorCount id="bunkerunitisinsideofisnotburrowed">
+        <WhichUnit Value="CasterOuter"/>
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="BunkerBurrowed"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="burrowbunkerspraynpayvalidators">
+        <CombineArray value="bunkerunitisinsideofisnotburrowed"/>
+        <CombineArray value="casterisnotinbunker"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="casterisnotinbunker">
+        <WhichUnit Value="Caster"/>
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="BunkerWeaponRangeBonus"/>
+    </CValidatorUnitCompareBehaviorCount>
 </Catalog>

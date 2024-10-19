@@ -54,3 +54,4 @@ Button/Hotkey/TrainPhantom=G
 Button/Hotkey/TrainShadow=G
 Button/Hotkey/TrainSkibisAngel=E
 Button/Hotkey/TrainWarPig=A
+Button/Hotkey/ZeusLanderTacticalJump=T

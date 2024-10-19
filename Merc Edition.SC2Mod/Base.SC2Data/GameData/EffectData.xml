@@ -74,6 +74,17 @@
         <AreaArray Radius="5" Effect="AdjudicatorCloakingField"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="BunkerBurrowedApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BunkerBurrowed"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="BunkerBurrowedRB">
+        <EditorCategories value=""/>
+        <BehaviorLink value="BunkerBurrowed"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="BunkerMorphingApplyBehavior">
+        <Behavior value="BunkerMorphing"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="ConcussiveShrapnelCP">
         <EditorCategories value=""/>
         <PeriodCount value="4"/>
@@ -379,6 +390,12 @@
         <SearchFilters value="-;Self,Ally,Neutral,Enemy,Structure,Worker,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="7.5" Effect="MercCommanderAB"/>
     </CEffectEnumArea>
+    <CEffectDamage id="MilitarizedColonistShipAirDamage">
+        <Amount value="7"/>
+    </CEffectDamage>
+    <CEffectDamage id="MilitarizedColonistShipGroundDamage">
+        <Amount value="7"/>
+    </CEffectDamage>
     <CEffectModifyUnit id="NanitesHeal">
         <EditorCategories value=""/>
         <VitalArray index="Life">
@@ -993,6 +1010,7 @@
         <PeriodicEffectArray value="SprayandPaySA"/>
         <PeriodicOffsetArray value="0,-2.5,0"/>
         <PeriodicPeriodArray value="0"/>
+        <ValidatorArray value="burrowbunkerspraynpayvalidators"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="SprayandPayDamage">
         <EditorCategories value=""/>

@@ -22,11 +22,20 @@
         <EffectArray Reference="Unit,MissileTurret,LifeArmor" Value="2"/>
         <AffectedUnitArray value="MissileTurret"/>
     </CUpgrade>
+    <CUpgrade id="BattleBunker">
+        <EffectArray Operation="Set" Reference="Weapon,ShrikeTurret,Options[0]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,ShrikeTurret,Options[1]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Actor,Bunker,UnitIcon" Value="Assets\Textures\BTN-Building-Terran-BunkerShrikeTurret.dds"/>
+        <EffectArray Reference="Unit,Bunker,LifeMax" Value="200"/>
+        <EffectArray Reference="Unit,Bunker,LifeStart" Value="200"/>
+        <EffectArray Reference="Unit,Bunker,LifeArmor" Value="2"/>
+    </CUpgrade>
     <CUpgrade id="BearclawGauntlets">
         <EffectArray Operation="Set" Reference="Effect,DevilDogSearchArea,AreaArray[0].Radius" Value="0.96"/>
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
+    <CUpgrade id="BurrowBunker"/>
     <CUpgrade id="BurstAmplifier">
         <EffectArray Reference="Weapon,ScorpionMissiles,DisplayAttackCount" Value="2"/>
         <EffectArray Reference="Weapon,ThermalBurst,DisplayAttackCount" Value="3"/>

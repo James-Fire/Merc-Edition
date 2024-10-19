@@ -59,6 +59,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeArmoredHousingCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBattleBunker">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBattleBunkerCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBearclawGauntlets">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>

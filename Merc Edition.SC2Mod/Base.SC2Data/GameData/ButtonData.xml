@@ -139,6 +139,14 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
     </CButton>
+    <CButton id="ZeusLanderTacticalJump">
+        <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
+    </CButton>
+    <CButton id="LandingGear">
+        <Icon value="Assets\Icons and Wireframes\landing gear.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\landing gear.dds"/>
+    </CButton>
     <CButton id="LooseEngineSeals">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -399,6 +407,10 @@
     </CButton>
     <CButton id="SulfurMissiles">
         <Icon value="Assets\Textures\btn-techupgrade-terran-ripwavemissiles.dds"/>
+    </CButton>
+    <CButton id="SurvivorsGuilt">
+        <Icon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
     </CButton>
     <CButton id="SwannNanites">
         <Icon value="Assets\Icons and Wireframes\nano repair.dds"/>

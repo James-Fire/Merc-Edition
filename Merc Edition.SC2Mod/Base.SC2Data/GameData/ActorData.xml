@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
+        <Aliases value="_CreepEngulfable"/>
+        <Aliases value="_UnitHuge"/>
+        <Macros value="RemoveFlyerHelperMacro"/>
+        <On Terms="UnitBirth.ZeusLanderLanded" Send="CreepEngulfmentStartTransition"/>
+        <On Terms="UnitBirth.MilitarizedColonistShipFlying" Send="Create"/>
+        <On Terms="UnitBirth.MilitarizedColonistShipFlying" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="UnitBirth.MilitarizedColonistShipFlying" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying; ScopeContains GroundLocalSelection" Send="StatusIncrement FlyerHelper"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip" Send="AnimGroupRemove Fly"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip; ScopeContains FlyerHelperSplat; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip" Send="CreepEngulfmentStartTransition"/>
+        <On Terms="UnitDeathCustomize.MilitarizedColonistShipFlying" Send="DeathCustomize Flying"/>
+        <On Terms="UnitDeathCustomize; ModelIsLowQuality" Send="DeathCustomize Low"/>
+        <Model value="ZeusLander"/>
+        <CreepHeightClass value="Medium"/>
+        <BuildModel value="ZeusLander"/>
+        <DeathArray index="Normal" ModelLink="MilitarizedColonistShipDeath" SoundLink=""/>
+        <DeathCustoms ModelLink="MilitarizedColonistShipFlyingDeath" Name="Flying"/>
+        <DeathCustoms SoundLink="Terran_ExplosionLarge" Name="Low"/>
+        <PlacementModel value="ZeusLander"/>
+        <PortraitModel value="TransportPilotPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-MilitarizedColonistShip.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\Wireframe-Terran-MilitarizedColonistShip.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="80"/>
+        <SoundArray index="Birth" value="MedivacBirth"/>
+        <SoundArray index="Ready" value="MedivacReady"/>
+        <SoundArray index="Help" value="MedivacHelp"/>
+        <SoundArray index="What" value="MedivacWhat"/>
+        <SoundArray index="Yes" value="MedivacYes"/>
+        <SoundArray index="Attack" value="MedivacYes"/>
+        <SoundArray index="Pissed" value="MedivacPissed"/>
+        <SoundArray index="Movement" value="ColonistShip_Movement"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <UnitIcon value="Assets\Textures\Wireframe-Terran-MilitarizedColonistShip.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-MilitarizedColonistShip.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorAction id="ARESMissile" parent="GenericAttack" effectImpact="ARESMissileDamage" effectLaunch="ARESMissileLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
         <LaunchAssets Sound="WidowMine_Attack"/>
@@ -23,6 +71,133 @@
         <HostImpact Subject="_Unit" Scope="Target"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
     </CActorBeamSimple>
+    <CActorUnit id="Bunker">
+        <On Terms="AbilMorph.*.Finish; MorphTo BunkerBurrowed" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Bunker" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetScale 1.000000,1.000000,0.350000 1.000000"/>
+        <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetTintColor 128,128,128 1.000000"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Bunker" Send="SetScale 1.000000 1.000000"/>
+        <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetTintColor 255,255,255 1.000000"/>
+    </CActorUnit>
+    <CActorUnit id="BunkerBurrowed" parent="TerranBuildingEx" unitName="BunkerBurrowed">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="BunkerTransportAnim"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit BunkerIsEmpty" Send="DeathCustomize Empty"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit NeosteelFramePurchasedNoConstruction" Send="DeathCustomize Upgrade"/>
+        <On Terms="Upgrade.NeosteelFrame.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="UnitBirth.BunkerBurrowed; ValidateUnit NeosteelFramePurchased" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="Upgrade.NeosteelFrame.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Send="StatusSet BunkerBuilt 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="StatusSet ShrikeTurret 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="Create ShrikeTurret"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Send="Create ShrikeTurretPlaceholder"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Target="ShrikeTurret" Send="Signal TurretHide"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurret" Send="Signal TurretDeath"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurretPlaceholder" Send="Signal TurretDeath"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Target="ShrikeTurretPlaceholder" Send="Destroy"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Target="ShrikeTurret" Send="Signal TurretShow"/>
+        <On Terms="Upgrade.TerranBuildingArmor.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="Upgrade.TerranBuildingArmor.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Send="StatusSet BunkerBuilt 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="StatusSet ShrikeTurret 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="Create ShrikeTurret"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Send="Create ShrikeTurretPlaceholder"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Target="ShrikeTurret" Send="Signal TurretHide"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurret" Send="Signal TurretDeath"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurretPlaceholder" Send="Signal TurretDeath"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Target="ShrikeTurretPlaceholder" Send="Destroy"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Target="ShrikeTurret" Send="Signal TurretShow"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Send="StatusSet BunkerBuilt 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="StatusSet ShrikeTurret 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="Create ShrikeTurret"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Send="Create ShrikeTurretPlaceholder"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Target="ShrikeTurret" Send="Signal TurretHide"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurret" Send="Signal TurretDeath"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurretPlaceholder" Send="Signal TurretDeath"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Target="ShrikeTurretPlaceholder" Send="Destroy"/>
+        <On Terms="UnitBirth.BunkerBurrowed" Target="ShrikeTurret" Send="Signal TurretShow"/>
+        <On Terms="Upgrade.FortifiedBunkerCarapace.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap JumboBunker"/>
+        <On Terms="UnitBirth.BunkerBurrowed; ValidatePlayer FortifiedNoShrike" Send="ModelSwap JumboBunker"/>
+        <On Terms="Upgrade.NeoSteelFrame.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap JumboBunker"/>
+        <On Terms="UnitBirth.BunkerBurrowed; ValidatePlayer JumboBunkerResearched" Send="ModelSwap JumboBunker"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit JumboBunkerResearched" Send="DeathCustomize Upgrade"/>
+        <On Terms="ActorCreation" Send="SetTintColor 128,128,128"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Bunker" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Bunker" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Bunker" Send="SetTintColor 255,255,255 1.000000"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Bunker" Send="SetScale 1.000000 1.000000"/>
+        <Scale value="1.000000,1.000000,0.350000"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Bunker_Explode"/>
+        <DeathCustoms ModelLink="BunkerUpgradeDeath" Name="Upgrade"/>
+        <DeathCustoms ModelLink="BunkerDeathEmpty" Name="Empty"/>
+        <PlacementModel value="BunkerPlacement"/>
+        <PlacementActorModel value="BunkerPlacementModelCampaign"/>
+        <PlaceholderActorModel value="BunkerPlaceholderModelCampaign"/>
+        <PortraitModel value="BunkerPortrait"/>
+        <BarOffset value="80"/>
+        <BarWidth value="85"/>
+        <GlossaryAnim value="Stand,Work"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Bunker.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Bunker.dds"/>
+        <NameOffset value="70"/>
+        <SoundArray index="Ready" value="Bunker_Ready"/>
+        <SoundArray index="What" value="Bunker_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Bunker.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Bunker.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="ZeusLanderFlying" parent="GenericUnitStandard" unitName="HerculesLander">
+        <Aliases value="_UnitHuge"/>
+        <On Terms="UnitBirth.ZeusLanderFlying" Send="Create"/>
+        <On Terms="UnitBirth.ZeusLanderFlying" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderLanded; MorphTo ZeusLanderFlying" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderFlying; MorphTo ZeusLanderLanded" Send="AnimGroupRemove Fly"/>
+        <On Terms="UnitDeathCustomize.ZeusLanderFlying" Send="DeathCustomize Flying"/>
+        <On Terms="UnitDeathCustomize; ModelIsLowQuality" Send="DeathCustomize Low"/>
+        <Model value="ZeusLander"/>
+        <Baselines index="Stand" BlendIn="6.000000"/>
+        <BuildModel value="ZeusLander"/>
+        <DeathArray index="Normal" ModelLink="ZeusLanderDeath" SoundLink=""/>
+        <DeathCustoms ModelLink="ZeusLanderFlyingDeath" Name="Flying"/>
+        <DeathCustoms SoundLink="Terran_ExplosionLarge" Name="Low"/>
+        <PlacementModel value="ZeusLander"/>
+        <PortraitModel value="HerculesPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-hercules.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Hercules_What"/>
+        <GroupSoundArray index="Yes" value="Hercules_Yes"/>
+        <GroupSoundArray index="Attack" value="Hercules_Yes"/>
+        <GroupSoundArray index="Board" value="MedivacGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-hercules.dds"/>
+        <HighlightTooltip value="Unit/Name/ZeusLanderFlying"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <SoundArray index="Birth" value="Hercules_Birth"/>
+        <SoundArray index="Ready" value="Hercules_Ready"/>
+        <SoundArray index="Help" value="Hercules_Help"/>
+        <SoundArray index="What" value="Hercules_What"/>
+        <SoundArray index="Yes" value="Hercules_Yes"/>
+        <SoundArray index="Attack" value="Hercules_Yes"/>
+        <SoundArray index="Pissed" value="Hercules_Pissed"/>
+        <SoundArray index="Movement" value="Hercules_Movement"/>
+        <SoundArray index="Turning" value="MedivacTurning"/>
+        <SoundArray index="Board" value="MedivacBoard"/>
+        <SoundArray index="Click" value="MedivacClick"/>
+        <SoundArray index="ClickError" value="MedivacClickError"/>
+        <SoundArray index="Highlight" value="MedivacHighlight"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-hercules.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-hercules.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="HitTestSphere" parent="ModelAddition">
         <EditorCategories value=""/>
     </CActorModel>

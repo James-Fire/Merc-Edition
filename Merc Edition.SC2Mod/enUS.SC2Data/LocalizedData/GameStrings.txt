@@ -2,6 +2,8 @@
 Abil/Name/ARESTargetLock=Target Lock
 Abil/Name/ActivateUranus=Activate Uranus
 Abil/Name/AdjudicatorArmMagazineNuke=Arm Magazine (Nuke)
+Abil/Name/BunkerLower=Lower
+Abil/Name/BunkerRaise=Raise
 Abil/Name/CharonDropshipTrain=Train
 Abil/Name/CondorSpiderMineUnburrow=Spider Mine Unburrow
 Abil/Name/CondorSpiderMines=Use Spider Mines
@@ -49,6 +51,8 @@ Behavior/Name/ARESTargetLock=Target Lock
 Behavior/Name/AdjudicatorCloakingField=Cloaking Field
 Behavior/Name/AfterburnersHelsAngel=Afterburners
 Behavior/Name/BlockBFlightDuration=Block B Flight Duration
+Behavior/Name/BunkerBurrowed=Bunker Burrowed
+Behavior/Name/BunkerMorphing=Bunker Morphing
 Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
 Behavior/Name/FearPliableArmor=Fear
 Behavior/Name/FerrierofSouls=Ferrier of Souls
@@ -167,6 +171,7 @@ Button/Name/JetPackOverdrive=Jet Pack Overdrive
 Button/Name/JoriumLinedSuit=Jorium Lined Suit
 Button/Name/JotunnSystems=Jotunn Systems
 Button/Name/JumpJetAssault=Jump Jet Assault
+Button/Name/LandingGear=Landing Gear
 Button/Name/LaserTargetingSystem=Laser Targeting System
 Button/Name/LegionSystems=Legion Systems
 Button/Name/LooseEngineSeals=Loose Engine Seals
@@ -208,6 +213,7 @@ Button/Name/StabilizerHeal=Stabilizer Heal
 Button/Name/StabilizerMedpacksMerc=Advanced Stabilizers
 Button/Name/SulfurMissiles=Sulfur Missiles
 Button/Name/SuperStim=Super Stim
+Button/Name/SurvivorsGuilt=Survivor's Guilt
 Button/Name/SwannNanites=Swann Nanites
 Button/Name/TacticalRealignment=Tactical Realignment
 Button/Name/TarBomb=Tar Bomb
@@ -225,6 +231,7 @@ Button/Name/TriggerOverdrive=Trigger Overdrive
 Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
 Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
+Button/Name/ZeusLanderTacticalJump=Tactical Jump
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Reduces unit cost, removes the need for a Tech Lab, and equips the unit with an automatic heal drone.
 Button/Tooltip/ARESTargetLock=Increases damage dealt to the target enemy unit by 30%. Effect lasts as long as the ARES remains locked onto the target.
@@ -259,6 +266,7 @@ Button/Tooltip/BuildSpartanCompany=Heavy-fire support unit.<n/><n/><c val="#Colo
 Button/Tooltip/BuildStarcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildTitan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly.
+Button/Tooltip/BunkerBurrowed=Defensive structure. Able to protect up to <d ref="Abil,BunkerTransport,TotalCargoSpace"/> infantry unit slots. Units inside the Bunker have +1 range to their attacks. Bunkers can be salvaged.
 Button/Tooltip/BurstAmplifier=Movement speed is increased while not attacking. While moving, damage is increased significantly.
 Button/Tooltip/CerberusHoundMines=Increases the detonation and trigger radius of Spider Mines by 40%.
 Button/Tooltip/ChaoticPower=Upon death, spawn 5 mag mines. Halves cooldown of Mag Mine ability and causes it to deploy an additional Mag Mine.
@@ -288,7 +296,7 @@ Button/Tooltip/FireOnTheMoveUniversal=Can attack while moving.
 Button/Tooltip/FlyingBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ForceMissiles=Scorpion Missiles stun their target for a short time.
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
-Button/Tooltip/HyperjumpStarcruiser=After <d time="6"/>, warps to the target location. Starcruiser is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
+Button/Tooltip/HyperjumpStarcruiser=After <d time="6"/>, warps to the target location. The Starcruiser is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Button/Tooltip/IFFSpiderRounds=Siege Breakers deal +60 damage to the main target, deal 80% less damage to friendly units, and leave behind a spider mine from sieged attacks.
 Button/Tooltip/IgniteAfterburnersHelsAngel=Increase movement speed by 100% for <d time="14"/> seconds.
 Button/Tooltip/ImmolationFluid=Anarchist attacks cause enemies to burn for an additional 50 damage over <d time="7"/>.
@@ -299,6 +307,7 @@ Button/Tooltip/JetPackOverdrive=Allows the Block B to temporarily fly in the air
 Button/Tooltip/JoriumLinedSuit=Shadows can use Hallucination and Psionic Lash. Cloak cost removed.
 Button/Tooltip/JotunnSystems=Increases missile and cannon range by 2, reduces transformation time, and causes the Gatling Cannon to deal damage in a line.
 Button/Tooltip/JumpJetAssault=Launches the Anarchist to a nearby area, briefly stunning enemy units and giving the Anarchist +4 armor.
+Button/Tooltip/LandingGear=Land at an area. While landed, the Zeus acts like a Barracks, but trains units faster and has no need for a Tech Lab.
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
 Button/Tooltip/LegionSystems=Spartan Companies gain +3 missile range, +2 cannon range, and can attack ground and air units simultaneously.
 Button/Tooltip/LooseEngineSeals=Movement speed increased by 2. Upon death, leaves behind 3 Spider Mines.
@@ -351,6 +360,7 @@ Button/Tooltip/StabilizerMedpacksMerc=Increases heal speed, energy efficiency, a
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SulfurMissiles=Missiles now deal area damage and apply more damage over time. On death, the Hel's Angel explodes to deal damage and damage over time.
 Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
+Button/Tooltip/SurvivorsGuilt=When destroyed, dropped units gain a temporary boost to damage, attack speed, and movement speed.<n/><s><c val="C0C0C0">Avenge our fallen comrade!</c>
 Button/Tooltip/SwannNanites=Nano-Repair no longer costs energy, heals 50% faster, and can heal structures. Irradiation now damages enemy mechanical units and heals allied mechanical units.
 Button/Tooltip/TacticalRealignment=After transforming, damage dealt is increased by 50% for <d time="7"/>. Cannot occur more than once every <d time="21"/>.
 Button/Tooltip/TarBomb=Deal 20 damage to the target and apply a debuff for <d time="7"/> to enemies in the area that reduces their movement speed by 75% and range by 3.
@@ -372,6 +382,8 @@ Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able
 Button/Tooltip/U240Rounds=Increases the Death Head's range by 1 and damage vs Light by 3. Enemies killed detonate a G-4 Clusterbomb.
 Button/Tooltip/ViralFlammenwerfer=Increases range by 3, damage vs Light and Biological by 15, and doubles the width of attacks.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/ZeusLanderFlying=Massive transport ship.
+Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Effect/Name/250mmUranusCarronadesCP=250mmUranusCarronadesCP
 Effect/Name/250mmUranusCarronadesDamage=250mmUranusCarronadesDamage
 Effect/Name/250mmUranusCarronadesLaunchMissile=250mmUranusCarronadesLaunchMissile
@@ -420,6 +432,9 @@ Effect/Name/BarBreakersCP=Bar Breakers CP
 Effect/Name/BarBreakersDamage=Bar Breakers Damage
 Effect/Name/BarBreakersSet=Bar Breakers Set
 Effect/Name/BlockBFlightDurationApplyBehavior=BlockBFlightDurationApplyBehavior
+Effect/Name/BunkerBurrowedApplyBehavior=BunkerBurrowedApplyBehavior
+Effect/Name/BunkerBurrowedRB=BunkerBurrowedRB
+Effect/Name/BunkerMorphingApplyBehavior=BunkerMorphingApplyBehavior
 Effect/Name/C11EthereanRifle=C-11 Etherean Rifle
 Effect/Name/ChargedJupiterRailDamage=Charged Jupiter Rail Damage
 Effect/Name/ChemicalPlatingDummy=Chemical Plating Dummy
@@ -652,6 +667,7 @@ Unit/Name/Adjudicator=Adjudicator
 Unit/Name/Agitator=Agitator
 Unit/Name/Anarchist=Anarchist
 Unit/Name/BioMechanicalRepairDrone=Bio-Mechanical Repair Drone
+Unit/Name/BunkerBurrowed=Bunker Burrowed
 Unit/Name/CharonDropship=Charon Dropship
 Unit/Name/Condor=Condor
 Unit/Name/Copperhead=Copperhead
@@ -689,6 +705,8 @@ Unit/Name/Titan=Titan
 Unit/Name/TitanWreckage=Titan Wreckage
 Unit/Name/Wolverine=Wolverine
 Unit/Name/WolverineWeapon=Wolverine
+Unit/Name/ZeusLanderFlying=Samson
+Unit/Name/ZeusLanderLanded=Samson
 UnitKillRank/ARESMercEdition=Security Robot 
 Upgrade/Name/AIEnhancement=A.I Enhancement
 Upgrade/Name/ASPRocketPods=ASP Rocket Pods
@@ -696,7 +714,9 @@ Upgrade/Name/AblativeScales=Ablative Scales
 Upgrade/Name/AdvancedOrbitalCommand=Advanced Orbital Command
 Upgrade/Name/AdvancedSiegeTechArmorOnly=Advanced Siege Tech Armor Only
 Upgrade/Name/ArmoredHousing=Armored Housing
+Upgrade/Name/BattleBunker=Battle Bunker
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
+Upgrade/Name/BurrowBunker=Burrow Bunker
 Upgrade/Name/BurstAmplifier=Burst Amplifier
 Upgrade/Name/ChairsandAC=Chairs and A.C
 Upgrade/Name/ChaoticPower=Chaotic Power

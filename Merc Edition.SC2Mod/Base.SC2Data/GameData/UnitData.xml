@@ -148,7 +148,7 @@
     </CUnit>
     <CUnit id="Bunker">
         <AbilArray index="13" Link="StimpackReaperRedirect"/>
-        <AbilArray index="14" removed="1"/>
+        <AbilArray index="14" Link="BunkerLower"/>
         <AbilArray index="15" removed="1"/>
         <CardLayouts index="0">
             <LayoutButtons index="13">
@@ -184,12 +184,209 @@
                 <Row value="1"/>
                 <Column value="0"/>
             </LayoutButtons>
-            <LayoutButtons index="18" removed="1"/>
+            <LayoutButtons index="18" Face="Lower" AbilCmd="BunkerLower,Execute" Row="1" Column="2"/>
             <LayoutButtons index="19" removed="1"/>
         </CardLayouts>
     </CUnit>
+    <CUnit id="BunkerBurrowed">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <Sight value="10"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="100"/>
+        <RepairTime value="40"/>
+        <AttackTargetPriority value="19"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="BunkerTransport"/>
+        <AbilArray Link="SalvageShared"/>
+        <AbilArray Link="SalvageBunkerRefund"/>
+        <AbilArray Link="Rally"/>
+        <AbilArray Link="StimpackRedirect"/>
+        <AbilArray Link="StimpackMarauderRedirect"/>
+        <AbilArray Link="StopRedirect"/>
+        <AbilArray Link="AttackRedirect"/>
+        <AbilArray Link="healRedirect"/>
+        <AbilArray Link="BunkerAttack"/>
+        <AbilArray Link="BunkerStop"/>
+        <AbilArray Link="healRedirect"/>
+        <AbilArray Link="StimpackReaperRedirect"/>
+        <AbilArray Link="BunkerRaise"/>
+        <BehaviorArray Link="TerranBuildingBurnDown"/>
+        <BehaviorArray Link="BunkerNotJumbo"/>
+        <BehaviorArray Link="ShrikeTurret"/>
+        <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="BunkerNotJumbo"/>
+        <BehaviorArray Link="ShrikeTurret"/>
+        <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="BunkerBurrowed"/>
+        <WeaponArray Link="ShrikeTurret" Turret="ShrikeTurret"/>
+        <WeaponArray Link="ShrikeTurret" Turret="ShrikeTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="AttackRedirect" Type="AbilCmd" AbilCmd="AttackRedirect,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="BunkerAttack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="StopRedirect,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="StopBunker" Type="AbilCmd" AbilCmd="BunkerStop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="StopBunker" Type="AbilCmd" AbilCmd="BunkerStop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="StimRedirect" Type="AbilCmd" AbilCmd="StimpackRedirect,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="StimRedirect" Type="AbilCmd" AbilCmd="StimpackMarauderRedirect,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="StimRedirect" Type="AbilCmd" AbilCmd="StimpackReaperRedirect,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SetBunkerRallyPoint" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="BunkerLoad" Type="AbilCmd" AbilCmd="BunkerTransport,Load" Row="2" Column="1"/>
+            <LayoutButtons Face="BunkerUnloadAll" Type="AbilCmd" AbilCmd="BunkerTransport,UnloadAll" Row="2" Column="2"/>
+            <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="SalvageShared,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="ChairsandAC" Type="Passive" Requirements="UseChairsandAC" Row="1" Column="1"/>
+            <LayoutButtons Face="NeosteelCupHolders" Type="Passive" Requirements="UseNeosteelCupHolders" Row="1" Column="0"/>
+            <LayoutButtons Face="Raise" Type="AbilCmd" AbilCmd="BunkerRaise,Execute" Row="1" Column="2"/>
+        </CardLayouts>
+        <Radius value="1.25"/>
+        <SeparationRadius value="1.25"/>
+        <PlacementFootprint value="Footprint3x3Underground"/>
+        <ScoreMake value="100"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="1.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <TacticalAIThink value="AIThinkBunker"/>
+        <AIEvalFactor value="1.1"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="300"/>
+        <GlossaryStrongArray value="Zergling"/>
+        <GlossaryStrongArray value="InfestedTerranCampaign"/>
+        <GlossaryStrongArray value="Zealot"/>
+        <GlossaryStrongArray value="Marine"/>
+        <GlossaryWeakArray value="Baneling"/>
+        <GlossaryWeakArray value="Colossus"/>
+        <GlossaryWeakArray value="SiegeTank"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+    </CUnit>
     <CUnit id="DevastatorMissilesMercWeapon" parent="MISSILE">
         <Mover value="DevastatorMissilesMercMissile"/>
+    </CUnit>
+    <CUnit id="ZeusLanderLanded">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Colossus" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="1000"/>
+        <LifeMax value="1000"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <Food value="-2"/>
+        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Vespene" value="200"/>
+        <RepairTime value="80"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="MilitarizedColonistShipLiftOff"/>
+        <AbilArray Link="ZeusTransport"/>
+        <WeaponArray Link="MilitarizedColonistShipAir" Turret="MilitarizedColonistShip"/>
+        <CardLayouts>
+            <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="MilitarizedColonistShipLiftOff,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="ZeusLoad" Type="AbilCmd" AbilCmd="ZeusTransport,Load" Row="2" Column="1"/>
+            <LayoutButtons Face="ZeusUnloadAll" Type="AbilCmd" AbilCmd="ZeusTransport,UnloadAt" Row="2" Column="2"/>
+            <LayoutButtons Face="ZeusRapidDeployment" Type="Passive" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="2.5"/>
+        <SeparationRadius value="2.5"/>
+        <ScoreMake value="300"/>
+        <ScoreKill value="600"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="10"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <LeaderAlias value=""/>
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="ZeusLanderFlying">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <LifeStart value="650"/>
+        <LifeMax value="650"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
+        <Mover value="Fly"/>
+        <Speed value="2.75"/>
+        <Acceleration value="2.3125"/>
+        <Sight value="11"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-6"/>
+        <CostResource index="Minerals" value="450"/>
+        <CostResource index="Vespene" value="300"/>
+        <RepairTime value="41.6667"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="40"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="ZeusTransport"/>
+        <AbilArray Link="attack"/>
+        <WeaponArray Link="MilitarizedColonistShipAir"/>
+        <WeaponArray Link="MilitarizedColonistShipGround"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MedivacLoad" Type="AbilCmd" AbilCmd="HerculesTransport,Load" Row="2" Column="1"/>
+            <LayoutButtons Face="MedivacUnloadAll" Type="AbilCmd" AbilCmd="HerculesTransport,UnloadAt" Row="2" Column="2"/>
+            <LayoutButtons Face="MothershipCoreAttack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="HerculesLand" Type="AbilCmd" AbilCmd="HerculesLand,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="ZeusRapidDeployment" Row="1" Column="0"/>
+            <LayoutButtons Face="SurvivorsGuilt" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="LandingGear" Type="Passive" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <ScoreMake value="900"/>
+        <ScoreKill value="1800"/>
+        <SubgroupPriority value="11"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
     </CUnit>
     <CUnit id="MissileTurret">
         <AbilArray index="4" Link="MissileTurretSalvage"/>

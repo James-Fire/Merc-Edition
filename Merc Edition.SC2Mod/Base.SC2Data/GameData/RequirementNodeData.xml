@@ -34,6 +34,9 @@
     <CRequirementCountUpgrade id="CountUpgradeArmoredHousingCompleteOnly">
         <Count Link="ArmoredHousing" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBattleBunkerCompleteOnly">
+        <Count Link="BattleBunker" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -219,7 +222,6 @@
         <OperandArray value="CountUpgradeSwannsSuppressionCompleteOnly"/>
     </CRequirementOr>
     <CRequirementOr id="OrCountUpgradeOrbitalRelayCompleteOnlyCountUpgradeAdvancedOrbitalCommandCompleteOnly">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="CountUpgradeOrbitalRelayCompleteOnly"/>
         <OperandArray value="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
     </CRequirementOr>

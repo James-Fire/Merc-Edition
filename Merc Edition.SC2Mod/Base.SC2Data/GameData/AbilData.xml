@@ -25,6 +25,9 @@
         </InfoArray>
         <CalldownEffect value="Nuke"/>
     </CAbilArmMagazine>
+    <CAbilAttack id="BunkerAttack">
+        <CmdButtonArray index="Execute" Requirements="UseBattleBunker"/>
+    </CAbilAttack>
     <CAbilEffectInstant id="NomadClusterMissileDummy">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Cost>
@@ -79,6 +82,47 @@
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SentinelMissilesAres"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="BunkerLower">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Lower"/>
+        <InfoArray Unit="BunkerBurrowed" CollideRange="0">
+            <SectionArray index="Abils">
+                <EffectArray index="Start" value="BunkerBurrowedApplyBehavior"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BunkerRaise">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Raise"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="MoveBlockers" value="1"/>
+        <InfoArray Unit="Bunker" CollideRange="0">
+            <SectionArray index="Abils">
+                <EffectArray index="Finish" value="BunkerMorphingApplyBehavior"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilEffectTarget id="Transwarp">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <Effect index="0" value="ArbiterMPRecallSearch"/>

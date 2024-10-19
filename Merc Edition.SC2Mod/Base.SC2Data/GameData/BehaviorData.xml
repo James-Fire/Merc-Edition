@@ -27,6 +27,29 @@
             <StateFlags index="Cloak" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BunkerBurrowed">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AbilLinkDisableArray value="BunkerAttack"/>
+            <AbilLinkDisableArray value="BunkerTransport"/>
+            <AbilLinkDisableArray value="StimpackMarauderRedirect"/>
+            <AbilLinkDisableArray value="StimpackRedirect"/>
+            <AbilLinkDisableArray value="SalvageShared"/>
+            <AbilLinkDisableArray value="SalvageBunkerRefund"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BunkerMorphing">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification>
+            <AbilLinkDisableArray value="BunkerAttack"/>
+            <AbilLinkDisableArray value="BunkerTransport"/>
+            <AbilLinkDisableArray value="StimpackMarauderRedirect"/>
+            <AbilLinkDisableArray value="StimpackRedirect"/>
+            <AbilLinkDisableArray value="SalvageShared"/>
+            <AbilLinkDisableArray value="SalvageBunkerRefund"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="BunkerWeaponRangeBonus">
         <Modification>
             <AbilLinkEnableArray value="Repair"/>
@@ -394,6 +417,9 @@
             <DamageTakenFraction index="NoProc" value="-0.15"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ShrikeTurret">
+        <Requirements value="UseBattleBunker"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SignalFlareBlind">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -519,6 +545,18 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="7"/>
         <Modification MoveSpeedMultiplier="0.25" WeaponRange="-3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BunkerThorns">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseThornShield"/>
+        <DamageResponse Handled="ThornShieldDamage">
+            <Kind index="Spell" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <Chance value="1"/>
+        </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="TitanDontDie">
         <Alignment value="Positive"/>
