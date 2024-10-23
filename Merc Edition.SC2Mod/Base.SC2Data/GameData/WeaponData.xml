@@ -457,9 +457,10 @@
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="6.5"/>
         <Range value="6"/>
-        <Period value="0.8"/>
+        <Period value="1.5"/>
         <Effect value="ARESAttackCPMercEdition"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
+        <DisplayAttackCount value="2"/>
     </CWeaponLegacy>
 </Catalog>

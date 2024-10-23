@@ -490,6 +490,12 @@
         <EffectArray value="ARESTargetLockABTarget"/>
         <EffectArray value="ARESTargetLockABCaster"/>
     </CEffectSet>
+    <CEffectIssueOrder id="NaniteTurretBurrowOrder">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="NaniteCloudEmitterBurrow"/>
+        <CmdFlags index="Preempt" value="1"/>
+    </CEffectIssueOrder>
     <CEffectLaunchMissile id="PharaohLaserBatteryLMSecondary">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>
@@ -532,7 +538,6 @@
         </Marker>
     </CEffectSet>
     <CEffectEnumArea id="PoisonGasCloudSearch">
-        <DebugTrace value="1"/>
         <SearchFilters value="Visible;Self,Player,Ally,Structure,Missile,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray index="0" Radius="6"/>
     </CEffectEnumArea>
@@ -556,6 +561,11 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="RedlineReactor"/>
     </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="NaniteTurretRemoveBurrowTimer">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="NaniteTurretBurrow"/>
+    </CEffectRemoveBehavior>
     <CEffectRemoveBehavior id="RemoveSpiderMineBurrowBehavior">
         <EditorCategories value=""/>
         <BehaviorLink value="VultureSpiderMineBurrowFirst"/>
@@ -563,6 +573,11 @@
     <CEffectApplyBehavior id="ApplySpiderMineBurrowBehavior">
         <EditorCategories value=""/>
         <Behavior value="VultureSpiderMineBurrowFirst"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="NaniteTurretRenewBurrowTimer">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="NaniteTurretBurrow"/>
     </CEffectApplyBehavior>
     <CEffectCreateHealer id="Repair">
         <ValidatorArray index="1" value="SCVRepairinbunkercombine"/>
@@ -1385,7 +1400,6 @@
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <InitialEffect value="ARESAttackRightMercEdition"/>
-        <ExpireDelay value="0.4"/>
         <FinalEffect value="ARESAttackLeftMercEdition"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ARESAttackLeftMercEdition">
@@ -1393,11 +1407,17 @@
         <ArmorReduction value="1"/>
         <Kind value="Ranged"/>
         <Amount value="15"/>
+        <AreaArray Radius="1" Fraction="0.5"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
     </CEffectDamage>
     <CEffectDamage id="ARESAttackRightMercEdition" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="15"/>
+        <AreaArray Radius="1" Fraction="0.5"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="WolverineFearAB">
         <Behavior value="WolverineFeared"/>

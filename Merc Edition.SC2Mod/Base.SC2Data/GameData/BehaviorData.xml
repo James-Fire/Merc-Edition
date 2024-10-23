@@ -200,6 +200,8 @@
         <Duration value="0.22"/>
         <Period value="0.2"/>
         <PeriodicEffect value="PoisonGasDamage"/>
+        <MaxStackCount value="2"/>
+        <MaxStackCountPerCaster value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="PoisonGasFiring">
         <Period value="0.2"/>
@@ -615,6 +617,12 @@
         <Modification>
             <AdditiveAttackSpeedFactor value="0.1"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaniteTurretBurrow">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <Period value="1"/>
+        <PeriodicEffect value="NaniteTurretBurrowOrder"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="U-240RoundsBomb">
         <InfoFlags index="Hidden" value="1"/>

@@ -31,7 +31,10 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <ActorKey value="BurrowUp"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
         <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
         <Flags index="MoveBlockers" value="1"/>
         <Flags index="SuppressMovement" value="1"/>
         <InfoArray Unit="NaniteCloudEmitter" CollideRange="0">
@@ -45,6 +48,10 @@
                 <DurationArray index="Duration" value="0.6"/>
             </SectionArray>
         </InfoArray>
+        <ErrorAlert value=""/>
+        <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Hover,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="6.5"/>
+        <AutoCastCountMin value="1"/>
     </CAbilMorph>
     <CAbilMorph id="NaniteCloudEmitterBurrow">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -65,12 +72,17 @@
                 <DurationArray index="Delay" value="1"/>
             </SectionArray>
         </InfoArray>
+        <ValidatorArray value="NoEnemiesNearby"/>
     </CAbilMorph>
     <CAbilMorphPlacement id="MilitarizedColonistShipLand">
         <InfoArray index="0" Unit="ZeusLanderLanded"/>
     </CAbilMorphPlacement>
     <CAbilMorph id="MilitarizedColonistShipLiftOff">
         <InfoArray index="0" Unit="ZeusLanderFlying"/>
+    </CAbilMorph>
+    <CAbilMorph id="PerditionTurretBurrow">
+        <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="6.5"/>
     </CAbilMorph>
     <CAbilBuild id="TerranBuild">
         <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">

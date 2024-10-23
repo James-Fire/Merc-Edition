@@ -2,15 +2,53 @@
 <Catalog>
     <CActorUnit id="NaniteCloudEmitter" parent="TerranBuilding" unitName="NaniteCloudEmitterBurrowed">
         <Aliases value="_UnitLarge"/>
-        <On Terms="UnitBirth.NaniteCloudEmitterBurrowed" Send="Create"/>
-        <On Terms="UnitBirth.NaniteCloudEmitterBurrowed" Send="AnimBracketStart Work Stand,Work,Start Stand,Work Stand,Work,End ClosingFull,OpeningPlayForever,Instant"/>
-        <On Terms="AbilMorph.*.Start; MorphTo NaniteCloudEmitter" Send="AnimBracketStart Work Stand,Work,Start Stand,Work Stand,Work,End ClosingFull,OpeningPlayForever"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo NaniteCloudEmitter" Send="Create Doodad_UmojanLabGasTurret_StandWork"/>
-        <On Terms="AbilMorph.*.Start; MorphTo NaniteCloudEmitterBurrowed" Target="Doodad_UmojanLabGasTurret_StandWork" Send="Destroy"/>
+        <On index="35" Terms="UnitFidget" Send="AnimPlay Fidget Fidget"/>
+        <On index="36" Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Fidget"/>
+        <On index="37" Terms="UnitDetectedByViewer.*.On; ValidateUnit IsHallucination" Target="_HallucinationTinter" Send="Signal HallucinationTintOn"/>
+        <On index="38" Terms="UnitDetectedByViewer.*.Off; ValidateUnit IsHallucination" Send="Signal HallucinationTintOff"/>
+        <On index="39" Terms="UnitDeathCustomize; ValidateUnit NotStructure; IsStatus InAir 1" Target="" Send="DeathCustomize AntiGravGeneric"/>
+        <On index="40" Terms="UnitDeathCustomize; ValidateUnit IsProtossUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="41" Terms="UnitDeathCustomize; ValidateUnit IsTerranUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravTerran"/>
+        <On index="42" Terms="UnitDeathCustomize; ValidateUnit IsZergUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravZerg"/>
+        <On index="43" Terms="UnitDeathCustomize; ValidateUnit IsVortexed" Send="DeathCustomize Vortex"/>
+        <On index="44" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathProtoss" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="45" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathZerg" Send="DeathCustomize AntiGravZerg"/>
+        <On index="46" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathTerran" Send="DeathCustomize AntiGravTerran"/>
+        <On index="47" Terms="Behavior.PhoenixAntiGrav.On" Send="ModelSuddenMotionStart"/>
+        <On index="48" Terms="Behavior.PhoenixAntiGrav.Off" Send="ModelSuddenMotionStop"/>
+        <On index="49" Terms="Behavior.ForceLowDeath.On" Send="DeathCustomsEnablePhysics 0"/>
+        <On index="50" Terms="UnitTaunt.*.Start; Taunt" Send="AnimPlay Cheer Stand,Victory"/>
+        <On index="51" Terms="UnitTaunt.*.Stop; Taunt" Send="AnimClear Cheer"/>
+        <On index="52" Terms="UnitTaunt.*.Start; Taunt Dance" Send="AnimPlay Dance Stand,Dance"/>
+        <On index="53" Terms="UnitTaunt.*.Stop; Taunt Dance" Send="AnimClear Dance"/>
+        <On index="54" Terms="UnitTaunt.*.Start; Taunt Tease" Send="AnimPlay Taunt Taunt"/>
+        <On index="55" Terms="UnitTaunt.*.Stop; Taunt Tease" Send="AnimClear Taunt"/>
+        <On index="56" Terms="ActorCreation" Send="StatusSet InAir 0"/>
+        <On index="57" Terms="UnitHeightUpdate.*.Lift" Send="StatusSet InAir 1"/>
+        <On index="58" Terms="UnitHeightUpdate.*.Land" Send="StatusSet InAir 0"/>
+        <On index="59" Terms="BuildCoachHover.*.On" Send="TimerKill DelayUnhighlight"/>
+        <On index="60" Send="SetTintColor 0,255,0 0.100000"/>
+        <On index="61" Terms="BuildCoachHover.*.Off" Send="TimerSet 0.300000 DelayUnhighlight"/>
+        <On index="62" Terms="TimerExpired; TimerName DelayUnhighlight" Send="SetTintColor 255,255,255 0.500000"/>
+        <On index="63" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On index="64" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="65" Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On index="66" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="67" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On index="68" Terms="UnitConstruction.NaniteCloudEmitterBurrowed.Start" Send="Create PerditionTurretBuild"/>
+        <On index="69" Terms="UnitConstruction.NaniteCloudEmitterBurrowed.Start" Send="Create BuildingTerrainFlatten"/>
+        <On index="70" Terms="UnitConstruction.NaniteCloudEmitterBurrowed.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="71" Terms="UnitConstruction.NaniteCloudEmitterBurrowed.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="72" Terms="UnitConstruction.NaniteCloudEmitterBurrowed.Start" Target="" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="73" Terms="UnitBirth.NaniteCloudEmitterBurrowed.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On index="74" Terms="UnitBirth.NaniteCloudEmitterBurrowed.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On index="75" Terms="UnitBirth.NaniteCloudEmitterBurrowed.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On index="76" Terms="UnitDeath.NaniteCloudEmitterBurrowed" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="77" Terms="UnitDeathCustomize; CreepEngulfs" Target="" Send="CreepEngulfmentStopTransition"/>
+        <On index="78" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="79" Terms="AbilMorph.*.Start; MorphTo NaniteCloudEmitter" Send="AnimBracketStart Work Stand,Work,Start Stand,Work Stand,Work,End ClosingFull,OpeningPlayForever"/>
         <On Terms="AbilMorph.*.Start; MorphTo NaniteCloudEmitterBurrowed" Send="AnimBracketStop Work"/>
         <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD_B GLbirth,B GLstand,B GLdeath,B"/>
-        <On Terms="AbilMorph.*.Start; MorphTo NaniteCloudEmitter" Send="Create LabTurretPoisonGasCloud"/>
-        <On Terms="AbilMorph.*.Start; MorphTo NaniteCloudEmitterBurrowed" Target="LabTurretPoisonGasCloud" Send="Destroy"/>
         <On Terms="UnitBirth.NaniteCloudEmitter" Send="Create"/>
         <Model value="NaniteCloudEmitter"/>
         <CreepHeightClass value="Small"/>
@@ -2372,20 +2410,10 @@
     </CActorMissile>
     <CActorUnit id="ARESMercEdition" parent="GenericUnitBase" unitName="ARESWarbotMercMod">
         <Aliases value="_UnitLarge"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit IsWarbotB" Send="DeathCustomize Variation2"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit IsWarbotC" Send="DeathCustomize Variation3"/>
-        <On Terms="Effect.ARESAttackRightMercEdition.Start; At Caster" Send="AnimPlay Attack Attack,Right"/>
-        <On Terms="Effect.ARESAttackLeftMercEdition.Start; At Caster" Send="AnimPlay Attack Attack,Left"/>
-        <On Terms="Effect.ARESAttackCPMercEdition.Start" Send="AnimBracketStart Attack Attack"/>
         <On Terms="AnimBracketState.*.BeforeOpening; AnimName Morph" Send="AnimGroupRemove Work"/>
         <On Terms="UnitMovementUpdate.*.Walk" Send="TimerSet 0.250000 KillBeam"/>
-        <On Terms="TimerExpired; TimerName KillBeam" Target="WarbotCAttackBeam" Send="Destroy"/>
-        <On Terms="ActorCreation" Send="AnimGroupApply A"/>
-        <On Terms="ActorCreation" Send="AnimBracketStart Morph Stand,Work,End IGNORE Stand,Work,Start"/>
-        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupRemove A"/>
-        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupRemove B"/>
-        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupRemove C"/>
-        <On Terms="AnimBracketState.*.AfterClosing; AnimName Morph" Send="AnimGroupApply Work"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
         <Model value="ARESMercEdition"/>
         <BuildModel value="ARESMercEdition"/>
         <DeathArray index="Normal" ModelLink="WarbotDeath" SoundLink="Terran_ExplosionLarge"/>
@@ -2419,8 +2447,9 @@
     </CActorUnit>
     <CActorAction id="ARESAttackMercEdition" parent="GenericAttack" effectAttack="ARESAttackRightMercEdition">
         <On Terms="Effect.ARESAttackLeftMercEdition.Start; At Caster" Send="Create"/>
-        <LaunchAssets Sound="Warbot_GatlingGunAttackLaunch"/>
-        <ImpactMap index="None" Model="WarbotAAttackImpact" Sound="Warbot_GatlingGunAttackImpact"/>
+        <LaunchAssets Sound="ZeusBattleTankAttackLaunch"/>
+        <ImpactMap index="None" Model="ImmortalAttackImpact" Sound="Warbot_GatlingGunAttackImpact"/>
+        <LaunchAttachQuery Methods="AMFilterWeaponLeft AMFilterWeaponRight"/>
     </CActorAction>
     <CActorAction id="WolverineAttack" parent="GenericAttack" effectImpact="RailcannonDamage" effectLaunch="RailcannonLM">
         <LaunchAssets Sound="RailcannonLaunch"/>

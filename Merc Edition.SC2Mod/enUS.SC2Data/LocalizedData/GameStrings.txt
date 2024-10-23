@@ -265,7 +265,7 @@ Button/Tooltip/BuildCyberWolf=Anti-infantry specialist that deals area damage wi
 Button/Tooltip/BuildDuskWing=Tactical-strike aircraft.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildHarrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/BuildHelsAngel=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
-Button/Tooltip/BuildNaniteCloudEmitter=Deals damage in an area around it. Burrows when no enemies are nearby.<n/><n/><c val="FFFF80">Can attack ground units.</c>
+Button/Tooltip/BuildNaniteCloudEmitter=Emits a field that damages enemies in a radius. Burrows when no enemies are nearby. Damage only stacks twice.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/BuildNomad=Heavy-fire support craft. Attacks using Seeker Missiles. Can deploy Railgun Turrets, Point Defense Drones, and Mine Drones.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BuildSiegeBreaker=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildSpartanCompany=Heavy-fire support unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -503,6 +503,9 @@ Effect/Name/MagrailMunitionsDamage=Magrail Munitions Damage
 Effect/Name/MagrailMunitionsLaunchMissile=Magrail Munitions Launch Missile
 Effect/Name/MercCommanderAB=Merc Commander AB
 Effect/Name/MercCommanderSA=Merc Commander SA
+Effect/Name/NaniteTurretBurrowOrder=Nanite Turret Burrow Order
+Effect/Name/NaniteTurretRemoveBurrowTimer=Nanite Turret Remove Burrow Timer
+Effect/Name/NaniteTurretRenewBurrowTimer=Nanite Turret Renew Burrow Timer
 Effect/Name/NanitesHeal=Nanites Heal
 Effect/Name/NanobotInjectorsDamage=NanobotInjectorsDamage
 Effect/Name/NanobotInjectorsLaunchMissile=NanobotInjectorsLaunchMissile
@@ -671,7 +674,7 @@ StarcruiserShields=Shield Generator
 Unit/Name/250mmUranusCarronadesWeapon=250mm Uranus Carronades Projectile
 Unit/Name/ACV=ACV
 Unit/Name/ARESMissileMissile=ARES Missile Missile
-Unit/Name/ARESWarbotMercMod=A.R.E.S Warbot
+Unit/Name/ARESWarbotMercMod=Zeus Battle Tank
 Unit/Name/Adjudicator=Adjudicator
 Unit/Name/Agitator=Agitator
 Unit/Name/Anarchist=Anarchist

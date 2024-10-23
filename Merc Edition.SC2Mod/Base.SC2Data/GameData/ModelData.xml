@@ -1119,12 +1119,12 @@
         <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="ARESMercEdition" parent="Unit" Race="Terran">
-        <Model value="Assets\Units\Terran\ARES\ARES.m3"/>
+        <Model value="Assets\Models\Zeus_battle_tank.m3"/>
         <Flags index="AutoUnload" value="1"/>
         <PlanetPanelCamera value="Star2CameraHigher10"/>
         <Radius value="1.200000"/>
-        <ScaleMax value="0.500000,0.500000,0.500000"/>
-        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
         <SelectionRadius value="1.999500"/>
         <ShadowRadius value="1.999500"/>
         <TechPurchaseCamera value="Star2CameraHigher10"/>
