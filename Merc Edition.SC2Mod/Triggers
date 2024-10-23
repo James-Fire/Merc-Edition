@@ -3,7 +3,6 @@
     <Library Id="BA5CCDED">
         <Root>
             <Item Type="Category" Library="BA5CCDED" Id="B5DA121D"/>
-            <Item Type="Category" Library="BA5CCDED" Id="1C9D5AF2"/>
             <Item Type="Category" Library="BA5CCDED" Id="2851B9D7"/>
             <Item Type="Category" Library="BA5CCDED" Id="FFB39B08"/>
             <Item Type="Category" Library="BA5CCDED" Id="0B90820E"/>
@@ -2034,7 +2033,7 @@
         </Element>
         <Element Type="Param" Id="E89666E1">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000695"/>
-            <Value>-;Missile,Dead,Hidden</Value>
+            <Value>-;Missile</Value>
             <ValueType Type="unitfilter"/>
         </Element>
         <Element Type="Param" Id="A116BFD8">
@@ -3028,8 +3027,6 @@
             <Value>CharonDropship</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Unit"/>
-        </Element>
-        <Element Type="Category" Id="1C9D5AF2">
         </Element>
         <Element Type="Category" Id="2851B9D7">
             <Item Type="Comment" Library="BA5CCDED" Id="079EA309"/>
