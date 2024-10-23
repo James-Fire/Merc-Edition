@@ -531,6 +531,16 @@
             <MatchFlags index="Id" value="1"/>
         </Marker>
     </CEffectSet>
+    <CEffectEnumArea id="PoisonGasCloudSearch">
+        <DebugTrace value="1"/>
+        <SearchFilters value="Visible;Self,Player,Ally,Structure,Missile,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray index="0" Radius="6"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="PoisonGasDamage">
+        <EditorCategories value=""/>
+        <Amount value="3"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
     <CEffectDamage id="RagnarokNRollDamage" parent="DU_WEAP">
         <ArmorReduction value="0"/>
         <Amount value="200"/>

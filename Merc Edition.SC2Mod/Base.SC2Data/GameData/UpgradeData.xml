@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade default="1" id="TerranInfantryWeaponsUltraCapacitors">
+        <EffectArray index="37" Value="0.1"/>
+        <EffectArray index="38" Value="0.1"/>
+        <EffectArray index="39" Value="0.1"/>
+        <EffectArray index="40" Value="0.1"/>
+        <EffectArray index="41" Value="0.1"/>
+        <EffectArray index="42" Value="0.1"/>
+        <EffectArray index="43" Value="0.1"/>
+        <EffectArray index="44" Value="0.1"/>
+        <EffectArray index="45" Value="0.1"/>
+        <EffectArray index="46" Value="0.1"/>
+        <EffectArray index="47" Value="0.1"/>
+        <EffectArray index="48" Value="0.1"/>
+        <EffectArray index="49" Value="0.1"/>
+        <EffectArray index="50" Value="0.1"/>
+        <EffectArray index="51" Value="0.1"/>
+        <EffectArray index="52" Value="0.1"/>
+        <EffectArray index="53" Value="0.1"/>
+        <EffectArray index="54" Value="0.1"/>
+        <EffectArray Reference="Weapon,BarBreakers,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,BarBreakers,Level" Value="1"/>
+        <EffectArray Reference="Weapon,NomadMissile,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,NomadMissile,Level" Value="1"/>
+        <EffectArray Reference="Weapon,C11EthereanRifle,Level" Value="1"/>
+        <EffectArray Reference="Weapon,C11EthereanRifle,RateMultiplier" Value="0.05"/>
+        <EffectArray Reference="Weapon,AGRShadeHunter,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,AGRShadeHunter,Level" Value="1"/>
+    </CUpgrade>
     <CUpgrade id="AIEnhancement">
         <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Vespene]" Value="25"/>
         <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Minerals]" Value="35"/>

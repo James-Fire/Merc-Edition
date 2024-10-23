@@ -13,6 +13,7 @@
         <Element Type="Trigger" Id="FB26A66C">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="0E4C650F"/>
             <Action Type="Comment" Library="BA5CCDED" Id="AC259180"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="600A8A1C"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="099E1A7C"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="DC4609B2"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="921BFE96"/>
@@ -25,6 +26,168 @@
             <Comment>
                 surely theres a better way to do this
             </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="600A8A1C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="75796BFD"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="34850181"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="6A5F8301"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9DE3B1AB"/>
+        </Element>
+        <Element Type="Param" Id="34850181">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="459BACBC"/>
+            <Value>Structures</Value>
+            <ValueType Type="string"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6A5F8301">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="C4F06699"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="55483456"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="46AE52A1"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C1DFC1DC"/>
+        </Element>
+        <Element Type="FunctionCall" Id="55483456">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="51A273F5"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="DB946ADB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="27CAF316"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FCD0310D"/>
+        </Element>
+        <Element Type="Param" Id="DB946ADB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B15D29C1"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="27CAF316">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C26556EA"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000106"/>
+        </Element>
+        <Element Type="Param" Id="FCD0310D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BC66D9AD"/>
+            <Value>NaniteCloudEmitter</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Unit"/>
+        </Element>
+        <Element Type="FunctionCall" Id="46AE52A1">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="51A273F5"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="58F466A5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="69ABFE11"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CEEE9371"/>
+        </Element>
+        <Element Type="Param" Id="58F466A5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B15D29C1"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="69ABFE11">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C26556EA"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000106"/>
+        </Element>
+        <Element Type="Param" Id="CEEE9371">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BC66D9AD"/>
+            <Value>NaniteCloudEmitterBurrowed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Unit"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C1DFC1DC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3483CC46"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="528D0650"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9CB2C681"/>
+        </Element>
+        <Element Type="Param" Id="3483CC46">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="AA9C11C7"/>
+        </Element>
+        <Element Type="FunctionCall" Id="AA9C11C7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="DC0FD1CA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="52685C8F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7ABA3900"/>
+        </Element>
+        <Element Type="Param" Id="52685C8F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A450004F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="7ABA3900">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4C95FC54"/>
+            <Value>Bunker</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Unit"/>
+        </Element>
+        <Element Type="Param" Id="528D0650">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="9CB2C681">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>true</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9DE3B1AB">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="C4F06699"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EF53D6C1"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="095F35F3"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EF53D6C1">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="51A273F5"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7B8F7830"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FCF30A10"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="517B79D1"/>
+        </Element>
+        <Element Type="Param" Id="7B8F7830">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B15D29C1"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="FCF30A10">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C26556EA"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000106"/>
+        </Element>
+        <Element Type="Param" Id="517B79D1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BC66D9AD"/>
+            <Value>BunkerBurrowed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Unit"/>
+        </Element>
+        <Element Type="FunctionCall" Id="095F35F3">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="52F24E8A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5AE8A4A9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="AB0D22A1"/>
+        </Element>
+        <Element Type="Param" Id="52F24E8A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4A2D029D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4A2D029D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="DC0FD1CA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A8B38D31"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4BC41B4B"/>
+        </Element>
+        <Element Type="Param" Id="A8B38D31">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A450004F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="4BC41B4B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4C95FC54"/>
+            <Value>Bunker</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Unit"/>
+        </Element>
+        <Element Type="Param" Id="5AE8A4A9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="AB0D22A1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>true</Value>
+            <ValueType Type="bool"/>
         </Element>
         <Element Type="FunctionCall" Id="099E1A7C">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="75796BFD"/>
@@ -3333,7 +3496,6 @@
             <Comment>
                 This upgrade only exists as something for other data or triggers to reference; essentially, the player with this upgrade (always and only player 1) is playing with the Merc Edition WoL tech tree and not vanilla.
                 Note: this does not disable or enable anything on its own; only things that refer to it! Used for Condor spider mines right now, and probably other things later on.
-                
                 edit several months later: lmao i dont think this is gonna be used for anything else
             </Comment>
         </Element>

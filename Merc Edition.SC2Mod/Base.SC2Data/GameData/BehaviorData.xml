@@ -196,6 +196,14 @@
         <LandArrivalRange value="0.05"/>
         <LandCheckRadius value="5"/>
     </CBehaviorJump>
+    <CBehaviorBuff id="PoisonGas">
+        <Duration value="0.22"/>
+        <Period value="0.2"/>
+        <PeriodicEffect value="PoisonGasDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PoisonGasFiring">
+        <Period value="0.2"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="RevivalFieldCooldown">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
@@ -391,6 +399,12 @@
         <DamageResponse Handled="RevivalFieldOFFSet" ModifyFraction="0">
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SamsonTrainingBuff">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <RateMultiplierArray index="Queueable" value="1.25"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShellShower">
         <Alignment value="Positive"/>

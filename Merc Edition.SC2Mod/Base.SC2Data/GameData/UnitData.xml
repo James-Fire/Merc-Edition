@@ -63,21 +63,22 @@
         </CardLayouts>
         <CardLayouts CardId="TBl1">
             <LayoutButtons Face="CommandCenter" Type="AbilCmd" AbilCmd="TerranBuild,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="CommandCenterOrbRelay" Type="AbilCmd" AbilCmd="TerranBuild,Build21" Row="0" Column="0"/>
             <LayoutButtons Face="Refinery" Type="AbilCmd" AbilCmd="TerranBuild,Build3" Row="0" Column="1"/>
+            <LayoutButtons Face="AutomatedRefinery" Type="AbilCmd" AbilCmd="TerranBuild,Build19" Row="0" Column="1"/>
             <LayoutButtons Face="SupplyDepot" Type="AbilCmd" AbilCmd="TerranBuild,Build2" Row="0" Column="2"/>
+            <LayoutButtons Face="SupplyDepotDrop" Type="AbilCmd" AbilCmd="TerranBuildDrop,Build1" Row="0" Column="2"/>
             <LayoutButtons Face="Barracks" Type="AbilCmd" AbilCmd="TerranBuild,Build4" Row="1" Column="0"/>
             <LayoutButtons Face="EngineeringBay" Type="AbilCmd" AbilCmd="TerranBuild,Build5" Row="1" Column="1"/>
             <LayoutButtons Face="Bunker" Type="AbilCmd" AbilCmd="TerranBuild,Build7" Row="2" Column="0"/>
+            <LayoutButtons Face="BunkerFortified" Type="AbilCmd" AbilCmd="TerranBuild,Build23" Row="2" Column="0"/>
             <LayoutButtons Face="MissileTurret" Type="AbilCmd" AbilCmd="TerranBuild,Build6" Row="2" Column="1"/>
             <LayoutButtons Face="SensorTower" Type="AbilCmd" AbilCmd="TerranBuild,Build9" Row="2" Column="2"/>
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
-            <LayoutButtons Face="CommandCenterOrbRelay" Type="AbilCmd" AbilCmd="TerranBuild,Build21" Row="0" Column="0"/>
-            <LayoutButtons Face="AutomatedRefinery" Type="AbilCmd" AbilCmd="TerranBuild,Build19" Row="0" Column="1"/>
-            <LayoutButtons Face="SupplyDepotDrop" Type="AbilCmd" AbilCmd="TerranBuildDrop,Build1" Row="0" Column="2"/>
+            <LayoutButtons Face="BuildNaniteCloudEmitter" Type="AbilCmd" AbilCmd="TerranBuild,Build25" Row="1" Column="2"/>
             <LayoutButtons Face="PerditionTurret" Type="AbilCmd" AbilCmd="TerranBuild,Build20" Row="1" Column="2"/>
             <LayoutButtons Face="HiveMindEmulator" Type="AbilCmd" AbilCmd="TerranBuild,Build22" Row="2" Column="3"/>
             <LayoutButtons Face="PsiDisruptor" Type="AbilCmd" AbilCmd="TerranBuild,Build8" Row="2" Column="3"/>
-            <LayoutButtons Face="BunkerFortified" Type="AbilCmd" AbilCmd="TerranBuild,Build23" Row="2" Column="0"/>
         </CardLayouts>
         <CardLayouts CardId="TBl2">
             <LayoutButtons Face="GhostAcademy" Type="AbilCmd" AbilCmd="TerranBuild,Build10" Row="0" Column="0"/>
@@ -288,6 +289,117 @@
     <CUnit id="DevastatorMissilesMercWeapon" parent="MISSILE">
         <Mover value="DevastatorMissilesMercMissile"/>
     </CUnit>
+    <CUnit id="NaniteCloudEmitter">
+        <DeathRevealRadius value="3"/>
+        <Facing value="29.9926"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <Sight value="7"/>
+        <CostResource index="Minerals" value="75"/>
+        <CostResource index="Vespene" value="75"/>
+        <RepairTime value="33.3332"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="NaniteCloudEmitterBurrow"/>
+        <AbilArray Link="BuildInProgress"/>
+        <BehaviorArray Link="TerranBuildingBurnDown"/>
+        <BehaviorArray Link="PoisonGasFiring"/>
+        <WeaponArray Turret="LabTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="Detector" Type="Passive" Behavior="DistortionSensors" Row="2" Column="3"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="NaniteCloudEmitterBurrow,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="150"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="12"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="263"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+    </CUnit>
+    <CUnit id="NaniteCloudEmitterBurrowed">
+        <DeathRevealRadius value="3"/>
+        <Facing value="29.9926"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <Sight value="7"/>
+        <CostResource index="Minerals" value="75"/>
+        <CostResource index="Vespene" value="75"/>
+        <RepairTime value="33.3332"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="NaniteCloudEmitterUnburrow"/>
+        <AbilArray Link="BuildInProgress"/>
+        <BehaviorArray Link="TerranBuildingBurnDown"/>
+        <WeaponArray Turret="LabTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="Detector" Type="Passive" Behavior="DistortionSensors" Row="2" Column="3"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="NaniteCloudEmitterUnburrow,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="150"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="12"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="263"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+    </CUnit>
     <CUnit id="ZeusLanderLanded">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
@@ -308,19 +420,28 @@
         <TurningRate value="719.4726"/>
         <Sight value="9"/>
         <Food value="-2"/>
-        <CostResource index="Minerals" value="200"/>
-        <CostResource index="Vespene" value="200"/>
+        <CostResource index="Minerals" value="450"/>
+        <CostResource index="Vespene" value="300"/>
         <RepairTime value="80"/>
         <AttackTargetPriority value="11"/>
         <AbilArray Link="MilitarizedColonistShipLiftOff"/>
         <AbilArray Link="ZeusTransport"/>
-        <WeaponArray Link="MilitarizedColonistShipAir" Turret="MilitarizedColonistShip"/>
+        <AbilArray Link="que8"/>
+        <AbilArray Link="Rally"/>
+        <AbilArray Link="ZeusLanderTrain"/>
         <CardLayouts>
             <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="MilitarizedColonistShipLiftOff,Execute" Row="2" Column="3"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="ZeusLoad" Type="AbilCmd" AbilCmd="ZeusTransport,Load" Row="2" Column="1"/>
             <LayoutButtons Face="ZeusUnloadAll" Type="AbilCmd" AbilCmd="ZeusTransport,UnloadAt" Row="2" Column="2"/>
-            <LayoutButtons Face="ZeusRapidDeployment" Type="Passive" Row="2" Column="3"/>
+            <LayoutButtons Face="TrainWarPig" Type="AbilCmd" AbilCmd="ZeusLanderTrain,Train9" Row="0" Column="0"/>
+            <LayoutButtons Face="TrainHammerSecurity" Type="AbilCmd" AbilCmd="ZeusLanderTrain,Train12" Row="0" Column="1"/>
+            <LayoutButtons Face="TrainBlockB" Type="AbilCmd" AbilCmd="ZeusLanderTrain,Train10" Row="0" Column="2"/>
+            <LayoutButtons Face="TrainPhantom" Type="AbilCmd" AbilCmd="ZeusLanderTrain,Train11" Row="0" Column="3"/>
+            <LayoutButtons Face="TrainShadow" Type="AbilCmd" AbilCmd="ZeusLanderTrain,Train15" Row="0" Column="3"/>
+            <LayoutButtons Face="TrainSkibisAngel" Type="AbilCmd" AbilCmd="ZeusLanderTrain,Train13" Row="1" Column="0"/>
+            <LayoutButtons Face="TrainDevilDog" Type="AbilCmd" AbilCmd="ZeusLanderTrain,Train14" Row="1" Column="1"/>
+            <LayoutButtons Face="Rally" Row="1" Column="4"/>
+            <LayoutButtons Face="LandingGear" Type="Passive" Row="2" Column="0"/>
         </CardLayouts>
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
@@ -332,6 +453,7 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
         <LeaderAlias value=""/>
         <HotkeyAlias value=""/>
+        <BehaviorArray Link="SamsonTrainingBuff"/>
     </CUnit>
     <CUnit id="ZeusLanderFlying">
         <DeathRevealRadius value="3"/>
@@ -365,6 +487,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="ZeusTransport"/>
         <AbilArray Link="attack"/>
+        <AbilArray Link="MilitarizedColonistShipLand"/>
         <WeaponArray Link="MilitarizedColonistShipAir"/>
         <WeaponArray Link="MilitarizedColonistShipGround"/>
         <CardLayouts>
@@ -372,10 +495,10 @@
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="MedivacLoad" Type="AbilCmd" AbilCmd="HerculesTransport,Load" Row="2" Column="1"/>
-            <LayoutButtons Face="MedivacUnloadAll" Type="AbilCmd" AbilCmd="HerculesTransport,UnloadAt" Row="2" Column="2"/>
+            <LayoutButtons Face="MedivacLoad" Type="AbilCmd" AbilCmd="ZeusTransport,Load" Row="2" Column="1"/>
+            <LayoutButtons Face="MedivacUnloadAll" Type="AbilCmd" AbilCmd="ZeusTransport,UnloadAt" Row="2" Column="2"/>
             <LayoutButtons Face="MothershipCoreAttack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="HerculesLand" Type="AbilCmd" AbilCmd="HerculesLand,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="HerculesLand" Type="AbilCmd" AbilCmd="MilitarizedColonistShipLand,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="ZeusRapidDeployment" Row="1" Column="0"/>
             <LayoutButtons Face="SurvivorsGuilt" Type="Passive" Row="1" Column="1"/>
             <LayoutButtons Face="LandingGear" Type="Passive" Row="2" Column="0"/>

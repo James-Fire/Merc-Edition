@@ -24,6 +24,10 @@
         <Icon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
     </CButton>
+    <CButton id="BuildNaniteCloudEmitter">
+        <Icon value="Assets\Textures\wireframe-terran-labgasturret.dds"/>
+        <AlertIcon value="Assets\Textures\wireframe-terran-labgasturret.dds"/>
+    </CButton>
     <CButton id="BuildNomad">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>

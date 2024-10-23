@@ -21,6 +21,8 @@ Abil/Name/MakeSpiderMinesCondor=Make Spider Mines
 Abil/Name/MedivacSpeedBoost=Ignite Afterburners
 Abil/Name/MorphToAgitator=Morph To Agitator
 Abil/Name/MorphToAnarchist=Morph To Anarchist
+Abil/Name/NaniteCloudEmitterBurrow=Nanite Cloud Emitter Burrow
+Abil/Name/NaniteCloudEmitterUnburrow=Nanite Cloud Emitter Unburrow
 Abil/Name/NomadClusterMissileDummy=Nomad Cluster Missile Dummy
 Abil/Name/NomadTargetLock=Target Lock
 Abil/Name/PhantomCloak=Personal Cloaking
@@ -47,6 +49,7 @@ Abil/Name/TitanDroneMagazineDummy=Drone Magazine Dummy
 Abil/Name/TitanReborn=Titan Reborn
 Abil/Name/TitanWreckage=Titan Wreckage
 Abil/Name/Transwarp=Transwarp
+Abil/Name/ZeusLanderTrain=Train
 Behavior/Name/ARESTargetLock=Target Lock
 Behavior/Name/AdjudicatorCloakingField=Cloaking Field
 Behavior/Name/AfterburnersHelsAngel=Afterburners
@@ -70,6 +73,7 @@ Behavior/Name/RedlineReactor=Redline Reactor
 Behavior/Name/ReflectiveArmorBonusDamage=Reflective Armor
 Behavior/Name/RevivalFieldCooldown=Revival Field Cooldown
 Behavior/Name/RevivalFieldDodge=Revival Field Dodge
+Behavior/Name/SamsonTrainingBuff=Samson Training Buff
 Behavior/Name/ShellShower=Shell Shower
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
 Behavior/Name/SquadSightAres=Squad Sight
@@ -130,13 +134,14 @@ Button/Name/BuildCyberWolf=Build Cyber Wolf
 Button/Name/BuildDuskWing=Build Dusk Wing
 Button/Name/BuildHarrier=Build Harrier
 Button/Name/BuildHelsAngel=Build Hel's Angel
+Button/Name/BuildNaniteCloudEmitter=Build Nanite Cloud Emitter
 Button/Name/BuildNomad=Build Nomad
 Button/Name/BuildSiegeBreaker=Build Siege Breaker
 Button/Name/BuildSpartanCompany=Build Spartan Company
 Button/Name/BuildStarcruiser=Build Starcruiser
 Button/Name/BuildTitan=Build Titan
 Button/Name/BuildWolverine=Build Wolverine
-Button/Name/BuildZeusLander=Build Zeus Lander
+Button/Name/BuildZeusLander=Build Samson
 Button/Name/BurstAmplifier=Burst Amplifier
 Button/Name/CerberusHoundMines=Cerberus Hound Mines
 Button/Name/ChairsandAC=Chairs and AC
@@ -260,12 +265,13 @@ Button/Tooltip/BuildCyberWolf=Anti-infantry specialist that deals area damage wi
 Button/Tooltip/BuildDuskWing=Tactical-strike aircraft.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildHarrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/BuildHelsAngel=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
+Button/Tooltip/BuildNaniteCloudEmitter=Deals damage in an area around it. Burrows when no enemies are nearby.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/BuildNomad=Heavy-fire support craft. Attacks using Seeker Missiles. Can deploy Railgun Turrets, Point Defense Drones, and Mine Drones.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BuildSiegeBreaker=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildSpartanCompany=Heavy-fire support unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildStarcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildTitan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
-Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly.
+Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly. Can train Barracks units while landed.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BunkerBurrowed=Defensive structure. Able to protect up to <d ref="Abil,BunkerTransport,TotalCargoSpace"/> infantry unit slots. Units inside the Bunker have +1 range to their attacks. Bunkers can be salvaged.
 Button/Tooltip/BurstAmplifier=Movement speed is increased while not attacking. While moving, damage is increased significantly.
 Button/Tooltip/CerberusHoundMines=Increases the detonation and trigger radius of Spider Mines by 40%.
@@ -307,7 +313,7 @@ Button/Tooltip/JetPackOverdrive=Allows the Block B to temporarily fly in the air
 Button/Tooltip/JoriumLinedSuit=Shadows can use Hallucination and Psionic Lash. Cloak cost removed.
 Button/Tooltip/JotunnSystems=Increases missile and cannon range by 2, reduces transformation time, and causes the Gatling Cannon to deal damage in a line.
 Button/Tooltip/JumpJetAssault=Launches the Anarchist to a nearby area, briefly stunning enemy units and giving the Anarchist +4 armor.
-Button/Tooltip/LandingGear=Land at an area. While landed, the Zeus acts like a Barracks, but trains units faster and has no need for a Tech Lab.
+Button/Tooltip/LandingGear=While landed, the Samson acts like a Barracks, but trains units faster and has no need for a Tech Lab.
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
 Button/Tooltip/LegionSystems=Spartan Companies gain +3 missile range, +2 cannon range, and can attack ground and air units simultaneously.
 Button/Tooltip/LooseEngineSeals=Movement speed increased by 2. Upon death, leaves behind 3 Spider Mines.
@@ -322,6 +328,8 @@ Button/Tooltip/MercMedicHeal=Heals a friendly biological target.<n/><n/><c val="
 Button/Tooltip/MineDrone=Cloaked device that automatically deploys and replenishes spider mines.
 Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/NaniteCloudEmitter=Automated Gas Defense system. Destroy to open the containment door.
+Button/Tooltip/NaniteCloudEmitterBurrowed=Automated Gas Defense system. Destroy to open the containment door.
 Button/Tooltip/NormalModeNomad=Exit Silent Mode, allowing movement and other abilities again.
 Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nukes take <d time="18"/> to land, but they deal up to 400 (+300 vs. structures) damage to enemies in a large radius.
 Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to train the unit.
@@ -533,6 +541,7 @@ Effect/Name/PlaceNomadTurretTimedLife=Place Nomad Turret Timed Life
 Effect/Name/PointBreakDroneLaserInitialSet=Laser Initial Set
 Effect/Name/PointBreakDroneLaserSearch=Laser Search
 Effect/Name/PointBreakDroneLaserSet=Laser Set
+Effect/Name/PoisonGasDamage=Poison Gas Damage
 Effect/Name/PsychoMissilesCP=Psycho Missiles CP
 Effect/Name/PsychoMissilesDamage=Psycho Missiles Damage
 Effect/Name/PsychoMissilesDamageDummy=Psycho Missiles Damage Dummy
@@ -680,6 +689,8 @@ Unit/Name/HarrierAirLeft=Harrier Air Left
 Unit/Name/MagMine=Mag Mine
 Unit/Name/MagrailMunitionsMissile=Magrail Munitions Missile
 Unit/Name/MineDrone=Mine Drone
+Unit/Name/NaniteCloudEmitter=Nanite Cloud Emitter
+Unit/Name/NaniteCloudEmitterBurrowed=Nanite Cloud Emitter
 Unit/Name/NanobotInjectorsMissile=NanobotInjectorsMissile
 Unit/Name/Nomad=Nomad
 Unit/Name/NomadMissile=Nomad Missile

@@ -72,6 +72,15 @@ bool libBA5CCDED_gt_AllowingUnits_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    if ((TechTreeUnitIsAllowed(1, "Bunker") == true)) {
+        TechTreeUnitAllow(1, "NaniteCloudEmitter", true);
+        TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", true);
+    }
+
+    if ((TechTreeUnitIsAllowed(1, "Bunker") == true)) {
+        TechTreeUnitAllow(1, "BunkerBurrowed", true);
+    }
+
     if ((TechTreeUnitIsAllowed(1, "SCV") == true)) {
         TechTreeUnitAllow(1, "ACV", true);
     }

@@ -68,6 +68,33 @@
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModelFoliage>
+    <CModel id="NaniteCloudEmitter" parent="Building" Race="Terran">
+        <Model value="Assets\Units\Terran\NaniteCloudTurret\NaniteCloudTurret.m3"/>
+        <Events>
+            <Anim value="Stand,Work,Start,00"/>
+            <Name value="Doodad_UmojanLabGasTurret_StandWorkStart"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Doodad_UmojanLabGasTurret_StandWorkStart"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work,End,00"/>
+            <Name value="Doodad_UmojanLabGasTurret_StandWorkEnd"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Doodad_UmojanLabGasTurret_StandWorkEnd"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.937500"/>
+        <ShadowRadius value="0.937500"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
     <CModel id="ZeusLanderDeath" parent="UnitDeath">
         <Model value="Assets\Units\Terran\MilitarizedColonistShipDeath\MilitarizedColonistShipDeath.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
@@ -592,8 +619,8 @@
         <Flags index="AutoUnload" value="1"/>
         <Occlusion value="Show"/>
         <Radius value="1.000000"/>
-        <ScaleMax value="0.650000,0.650000,0.650000"/>
-        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
         <SelectionOffset value="0.000000,0.000000,-0.350000"/>
         <SelectionRadius value="1.666500"/>
         <ShadowRadius value="1.666500"/>
