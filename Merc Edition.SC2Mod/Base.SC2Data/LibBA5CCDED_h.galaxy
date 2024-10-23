@@ -7,13 +7,14 @@ include "TriggerLibs/natives"
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 
 // Trigger Declarations
-trigger libBA5CCDED_gt_AllowingUnits;
-trigger libBA5CCDED_gt_MissionDirectives;
-trigger libBA5CCDED_gt_DepositMoney;
 trigger libBA5CCDED_gt_Init;
+trigger libBA5CCDED_gt_InitACVMultibuild;
+trigger libBA5CCDED_gt_InitAllowingUnits;
 trigger libBA5CCDED_gt_InitMercEditionUpgrade;
 trigger libBA5CCDED_gt_InitPassiveUpgrades;
-trigger libBA5CCDED_gt_InitACVMultibuild;
+trigger libBA5CCDED_gt_InitUnitReplace;
+trigger libBA5CCDED_gt_MissionDirectives;
+trigger libBA5CCDED_gt_DepositMoney;
 trigger libBA5CCDED_gt_BlockBFlyHeighter;
 trigger libBA5CCDED_gt_BlockBFlyHeighter2;
 trigger libBA5CCDED_gt_SpartanCompanyShellShowerFull;

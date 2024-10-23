@@ -91,7 +91,6 @@
         <On Terms="AbilMorph.*.Finish; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip" Send="CreepEngulfmentStartTransition"/>
         <On Terms="UnitDeathCustomize.MilitarizedColonistShipFlying" Send="DeathCustomize Flying"/>
         <On Terms="UnitDeathCustomize; ModelIsLowQuality" Send="DeathCustomize Low"/>
-        <Model value="ZeusLander"/>
         <CreepHeightClass value="Medium"/>
         <BuildModel value="ZeusLander"/>
         <DeathArray index="Normal" ModelLink="MilitarizedColonistShipDeath" SoundLink=""/>

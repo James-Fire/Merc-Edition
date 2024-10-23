@@ -95,6 +95,21 @@
         <TechPurchaseCamera value="Star2CameraMid05"/>
         <UnitGlossaryCamera value="Star2CameraMid05"/>
     </CModel>
+    <CModel id="ZeusLanderLanded" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\MilitarizedColonistShip\MilitarizedColonistShip.m3"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow26"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <SelectionLayer value="2"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="2.499700"/>
+        <ShadowRadius value="2.499700"/>
+        <TechPurchaseCamera value="Star2CameraLow26"/>
+        <UnitGlossaryCamera value="Star2CameraLow26"/>
+    </CModel>
     <CModel id="ZeusLanderDeath" parent="UnitDeath">
         <Model value="Assets\Units\Terran\MilitarizedColonistShipDeath\MilitarizedColonistShipDeath.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
