@@ -3333,7 +3333,6 @@
             <Comment>
                 This upgrade only exists as something for other data or triggers to reference; essentially, the player with this upgrade (always and only player 1) is playing with the Merc Edition WoL tech tree and not vanilla.
                 Note: this does not disable or enable anything on its own; only things that refer to it! Used for Condor spider mines right now, and probably other things later on.
-                
                 edit several months later: lmao i dont think this is gonna be used for anything else
             </Comment>
         </Element>
