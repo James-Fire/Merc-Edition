@@ -114,6 +114,14 @@
         <AbilArray index="6" removed="1"/>
         <!--BehaviorArray Link="SOACheatDeathSupply4"/-->
     </CUnit>
+    <CUnit id="AutomatedRefinery">
+        <AbilArray Link="SalvageShared"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="1" AbilCmd="255,255"/>
+            <LayoutButtons index="2" AbilCmd="255,255"/>
+            <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="Barracks">
         <CardLayouts index="0">
             <LayoutButtons index="0" Face="Rally" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
@@ -130,12 +138,12 @@
             <LayoutButtons index="11" Face="TrainBlockB" AbilCmd="BarracksTrain,Train10" Row="0" Column="2"/>
             <LayoutButtons index="12" Face="TrainPhantom" Type="AbilCmd" AbilCmd="BarracksTrain,Train11" Row="0"/>
             <LayoutButtons index="13" Face="TrainShadow" AbilCmd="BarracksTrain,Train15" Row="0" Column="3"/>
-            <LayoutButtons index="15" Column="2"/>
+            <LayoutButtons index="15" Face="Salvage" AbilCmd="SalvageShared,On" Column="2"/>
             <LayoutButtons index="16" Face="TrainSkibisAngel" AbilCmd="BarracksTrain,Train13"/>
             <LayoutButtons index="17" Face="TrainDevilDog" AbilCmd="BarracksTrain,Train14"/>
             <LayoutButtons index="18" Face="TechReactorAI" AbilCmd="BarracksAddOns,Build3" Row="2" Column="2"/>
             <LayoutButtons index="19" Face="TechReactor" AbilCmd="BarracksAddOns,Build4" Column="0"/>
-            <LayoutButtons index="20" removed="1"/>
+            <LayoutButtons index="20" Face="TechReactorAI" AbilCmd="BarracksAddOns,Build3" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Marine" Type="AbilCmd" AbilCmd="BarracksTrain,Train1" Row="0" Column="0"/>
@@ -146,6 +154,7 @@
             <LayoutButtons Face="Medic" Type="AbilCmd" AbilCmd="BarracksTrain,Train5" Row="1" Column="0"/>
             <LayoutButtons Face="Firebat" Type="AbilCmd" AbilCmd="BarracksTrain,Train6" Row="1" Column="1"/>
         </CardLayouts>
+        <AbilArray Link="SalvageShared"/>
     </CUnit>
     <CUnit id="Bunker">
         <AbilArray index="13" Link="StimpackReaperRedirect"/>
@@ -286,8 +295,38 @@
         <GlossaryWeakArray value="SiegeTank"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
+    <CUnit id="CommandCenter">
+        <AbilArray Link="SalvageShared"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="SupplyDrop" AbilCmd="SupplyDrop,Execute" Row="1" Column="2"/>
+            <LayoutButtons index="1" Face="UpgradeToPlanetaryFortress" AbilCmd="UpgradeToPlanetaryFortress,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="2" Face="Rally" AbilCmd="RallyCommand,Rally1" Row="1"/>
+            <LayoutButtons index="3" Face="CommandCenterLoad" AbilCmd="CommandCenterTransport,LoadAll" Row="2" Column="0"/>
+            <LayoutButtons index="4" Face="CommandCenterUnloadAll" AbilCmd="CommandCenterTransport,UnloadAll" Column="1"/>
+            <LayoutButtons index="5" Face="Lift" AbilCmd="CommandCenterLiftOff,Execute" Column="3"/>
+            <LayoutButtons index="6" Face="Halt" AbilCmd="BuildInProgress,Halt"/>
+            <LayoutButtons index="7" Face="Cancel" AbilCmd="que5CancelToSelection,CancelLast" Column="4"/>
+            <LayoutButtons index="8" Face="CancelUpgradeMorph" AbilCmd="UpgradeToPlanetaryFortress,Cancel"/>
+            <LayoutButtons index="9" AbilCmd="UpgradeToOrbital,Cancel"/>
+            <LayoutButtons index="10" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel"/>
+            <LayoutButtons index="11" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="CommandCenterTrain,Train1" Row="1" Column="3"/>
+            <LayoutButtons index="12" Face="Scan" Type="AbilCmd" AbilCmd="ScannerSweep,Execute" Column="1"/>
+            <LayoutButtons index="13" Face="TrainACV" AbilCmd="CommandCenterTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="SCV" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="DevastatorMissilesMercWeapon" parent="MISSILE">
         <Mover value="DevastatorMissilesMercMissile"/>
+    </CUnit>
+    <CUnit id="EngineeringBay">
+        <AbilArray Link="SalvageShared"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="13" Column="0"/>
+            <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="NaniteCloudEmitter">
         <DeathRevealRadius value="3"/>
@@ -401,6 +440,26 @@
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
     </CUnit>
+    <CUnit id="Refinery">
+        <AbilArray Link="SalvageShared"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="3" AbilCmd="255,255"/>
+            <LayoutButtons index="4" AbilCmd="255,255"/>
+            <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SupplyDepot">
+        <AbilArray Link="SalvageShared"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SupplyDepotLowered">
+        <AbilArray Link="SalvageShared"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="ZeusLanderLanded">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
@@ -513,11 +572,11 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
     </CUnit>
     <CUnit id="MissileTurret">
-        <AbilArray index="4" Link="MissileTurretSalvage"/>
+        <AbilArray index="4" Link="SalvageShared"/>
         <WeaponArray index="1" Link="HailstormMissilePodsMerc"/>
         <WeaponArray index="2" Link="DevastatorMissilesMerc"/>
         <CardLayouts index="0">
-            <LayoutButtons index="6" Face="Salvage" Type="AbilCmd" AbilCmd="MissileTurretSalvage,On" Requirements="" Column="2"/>
+            <LayoutButtons index="6" Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Requirements="" Column="2"/>
             <LayoutButtons index="7" Face="DevastatorOverride" AbilCmd="" Requirements="UseDevastatorOverride" Column="0"/>
             <LayoutButtons Face="ArmoredHousing" Type="Passive" Requirements="UseArmoredHousing" Row="2" Column="1"/>
         </CardLayouts>
@@ -945,11 +1004,12 @@
             <LayoutButtons index="10" Face="BuildSiegeBreaker" AbilCmd="FactoryTrain,Train12" Row="0" Column="1"/>
             <LayoutButtons index="11" Face="BuildSpartanCompany" Type="AbilCmd" AbilCmd="FactoryTrain,Train16" Row="0" Column="2"/>
             <LayoutButtons index="12" Face="TechReactor" AbilCmd="FactoryAddOns,Build4" Column="0"/>
-            <LayoutButtons index="13" Face="TechReactorAI" AbilCmd="FactoryAddOns,Build3" Column="2"/>
+            <LayoutButtons index="13" Face="Salvage" AbilCmd="SalvageShared,On" Column="2"/>
             <LayoutButtons index="14" Face="BuildCopperhead" AbilCmd="FactoryTrain,Train17"/>
             <LayoutButtons index="15" Face="BuildCondor" AbilCmd="FactoryTrain,Train18"/>
             <LayoutButtons index="16" Face="BuildAnarchist" AbilCmd="FactoryTrain,Train15"/>
             <LayoutButtons index="17" Face="BuildTitan" AbilCmd="FactoryTrain,Train13" Column="4"/>
+            <LayoutButtons Face="TechReactorAI" Type="AbilCmd" AbilCmd="FactoryAddOns,Build3" Row="2" Column="2"/>
             <LayoutButtons Face="BuildWolverine" Type="AbilCmd" AbilCmd="FactoryTrain,Train19" Row="0" Column="3"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
@@ -961,6 +1021,7 @@
             <LayoutButtons Face="Diamondback" Type="AbilCmd" AbilCmd="FactoryTrain,Train8" Row="1" Column="1"/>
             <LayoutButtons Face="Goliath" Type="AbilCmd" AbilCmd="FactoryTrain,Train7" Row="1" Column="2"/>
         </CardLayouts>
+        <AbilArray Link="SalvageShared"/>
     </CUnit>
     <CUnit id="Adjudicator">
         <DeathRevealRadius value="3"/>
@@ -1007,7 +1068,6 @@
         <AbilArray Link="AdjudicatorArmMagazineNuke"/>
         <AbilArray Link="HangarQueue5"/>
         <BehaviorArray Link="Detector11"/>
-        <BehaviorArray Link="AdjudicatorCloakField"/>
         <WeaponArray Link="PlasmaTorpedo" Turret="ScienceVesselRotate"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -1019,9 +1079,9 @@
             <LayoutButtons Face="Detector" Type="Passive" Row="2" Column="3"/>
             <LayoutButtons Face="Irradiate" Type="AbilCmd" AbilCmd="Irradiate,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="NanoRepair" Type="AbilCmd" AbilCmd="NanoRepair,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="AdjudicatorCloakingField" Type="Passive" Behavior="AdjudicatorCloakField" Row="1" Column="0"/>
+            <LayoutButtons Face="ArmAdjudicatorwithNuke" Type="AbilCmd" AbilCmd="AdjudicatorArmMagazineNuke,Ammo1" Row="1" Column="0"/>
             <LayoutButtons Face="Transwarp" Type="AbilCmd" AbilCmd="Transwarp,Execute" Row="2" Column="2"/>
-            <LayoutButtons Face="ArmAdjudicatorwithNuke" Type="AbilCmd" AbilCmd="AdjudicatorArmMagazineNuke,Ammo1" Row="1" Column="1"/>
+            <LayoutButtons Face="SwannNanites" Type="Passive" Requirements="UseSwannNanites" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>

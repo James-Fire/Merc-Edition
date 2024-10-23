@@ -72,6 +72,7 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    Wait(1.0, c_timeGame);
     TriggerExecute(libBA5CCDED_gt_InitACVMultibuild, true, false);
     TriggerExecute(libBA5CCDED_gt_InitMercEditionUpgrade, true, false);
     TriggerExecute(libBA5CCDED_gt_InitPassiveUpgrades, true, false);
@@ -96,6 +97,7 @@ bool libBA5CCDED_gt_InitACVMultibuild_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_3BD21F4E"), true);
     Wait(1.0, c_timeGame);
     if ((TechTreeUpgradeCount(1, "MicroFusionReactor", c_techCountCompleteOnly) == 1)) {
         TechTreeAbilityAllow(1, AbilityCommand("AdvancedConstruction", 1), true);
@@ -120,6 +122,7 @@ bool libBA5CCDED_gt_InitAllowingUnits_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_49305883"), true);
     if ((TechTreeUnitIsAllowed(1, "Bunker") == true)) {
         TechTreeUnitAllow(1, "NaniteCloudEmitter", true);
         TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", true);
@@ -226,6 +229,7 @@ bool libBA5CCDED_gt_InitMercEditionUpgrade_Func (bool testConds, bool runActions
         return true;
     }
 
+    TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_6D5A7B80"), true);
     TechTreeUpgradeAddLevel(1, "MercEdition", 1);
     return true;
 }
@@ -245,6 +249,7 @@ bool libBA5CCDED_gt_InitPassiveUpgrades_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_37EA2574"), true);
     TechTreeUpgradeAddLevel(1, "LaserTargetingSystem", 1);
     TechTreeUpgradeAddLevel(1, "ImpalerRoundsShadow", 1);
     TechTreeUpgradeAddLevel(1, "AdvancedSiegeTechArmorOnly", 1);
@@ -271,6 +276,7 @@ bool libBA5CCDED_gt_InitUnitReplace_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_C69916B1"), true);
     auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), 0), 0);
     auto5694256B_u = UnitGroupCount(auto5694256B_g, c_unitCountAll);
     for (;; auto5694256B_u -= 1) {

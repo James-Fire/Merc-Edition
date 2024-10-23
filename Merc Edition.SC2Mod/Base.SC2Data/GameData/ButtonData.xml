@@ -143,6 +143,12 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
     </CButton>
+    <CButton id="TrainACV">
+        <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <Universal value="1"/>
+    </CButton>
     <CButton id="ZeusLanderTacticalJump">
         <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
@@ -561,8 +567,8 @@
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>
     </CButton>
     <CButton id="EidolonSuit">
-        <Icon value="Assets\Textures\btn-techupgrade-terran-criussuit.dds"/>
-        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-criussuit.dds"/>
+        <Icon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
     </CButton>
     <CButton id="U240Rounds">
         <Icon value="Assets\Textures\btn-techupgrade-terran-u238rounds.dds"/>

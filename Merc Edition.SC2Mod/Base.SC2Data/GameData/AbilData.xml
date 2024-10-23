@@ -25,6 +25,12 @@
         </InfoArray>
         <CalldownEffect value="Nuke"/>
     </CAbilArmMagazine>
+    <CAbilTrain id="CommandCenterTrain">
+        <InfoArray index="Train2" Time="17">
+            <Button DefaultButtonFace="TrainACV" State="Restricted"/>
+            <Unit value="ACV"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilMorph id="NaniteCloudEmitterUnburrow">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">

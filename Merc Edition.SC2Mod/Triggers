@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TriggerData>
     <Library Id="BA5CCDED">
+        <LibraryShareToMods/>
         <Root>
             <Item Type="Category" Library="BA5CCDED" Id="B5DA121D"/>
             <Item Type="Category" Library="BA5CCDED" Id="2851B9D7"/>
@@ -17,6 +18,7 @@
         </Element>
         <Element Type="Trigger" Id="BAAF1922">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="FAD5B72E"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="17498274"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="D99729DE"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="A1AFF159"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="966990D5"/>
@@ -25,6 +27,20 @@
         </Element>
         <Element Type="FunctionCall" Id="FAD5B72E">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="17498274">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000242"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="07EAA048"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1644A66E"/>
+        </Element>
+        <Element Type="Param" Id="07EAA048">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000419"/>
+            <Value>1.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="1644A66E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000420"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000013"/>
         </Element>
         <Element Type="FunctionCall" Id="D99729DE">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000116"/>
@@ -123,6 +139,7 @@
         </Element>
         <Element Type="Trigger" Id="FBF6D743">
             <Action Type="Comment" Library="BA5CCDED" Id="4EF3661F"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="E8299039"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="0967F8A2"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="A3CEABED"/>
         </Element>
@@ -131,6 +148,24 @@
                 i think its done like this??? the base advanced construction ability has no requirements, so i can only assume its trigger based.
                 the wait action is to make sure this runs after aforementioned potentially-existing trigger runs.
             </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="E8299039">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000118"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2D8F922D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="41B830DE"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3BD21F4E"/>
+        </Element>
+        <Element Type="Param" Id="2D8F922D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C3CF50B0"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="AEB4446D"/>
+        </Element>
+        <Element Type="Param" Id="41B830DE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000187"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000071"/>
+        </Element>
+        <Element Type="Param" Id="3BD21F4E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000186"/>
+            <ValueType Type="text"/>
         </Element>
         <Element Type="FunctionCall" Id="0967F8A2">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000242"/>
@@ -238,6 +273,7 @@
         </Element>
         <Element Type="Trigger" Id="FB26A66C">
             <Action Type="Comment" Library="BA5CCDED" Id="AC259180"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="93E91EC7"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="600A8A1C"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="099E1A7C"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="DC4609B2"/>
@@ -248,6 +284,24 @@
             <Comment>
                 surely theres a better way to do this
             </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="93E91EC7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000118"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1473EFD3"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="ED4F9745"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="49305883"/>
+        </Element>
+        <Element Type="Param" Id="1473EFD3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C3CF50B0"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="AEB4446D"/>
+        </Element>
+        <Element Type="Param" Id="ED4F9745">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000187"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000071"/>
+        </Element>
+        <Element Type="Param" Id="49305883">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000186"/>
+            <ValueType Type="text"/>
         </Element>
         <Element Type="FunctionCall" Id="600A8A1C">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="75796BFD"/>
@@ -1886,6 +1940,7 @@
         </Element>
         <Element Type="Trigger" Id="682B4DB0">
             <Action Type="Comment" Library="BA5CCDED" Id="80556B95"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="86B62A68"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="9F37DC1F"/>
         </Element>
         <Element Type="Comment" Id="80556B95">
@@ -1894,6 +1949,24 @@
                 Note: this does not disable or enable anything on its own; only things that refer to it! Used for Condor spider mines right now, and probably other things later on.
                 edit several months later: lmao i dont think this is gonna be used for anything else
             </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="86B62A68">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000118"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="164232F9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5BD6456C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6D5A7B80"/>
+        </Element>
+        <Element Type="Param" Id="164232F9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C3CF50B0"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="AEB4446D"/>
+        </Element>
+        <Element Type="Param" Id="5BD6456C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000187"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000071"/>
+        </Element>
+        <Element Type="Param" Id="6D5A7B80">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000186"/>
+            <ValueType Type="text"/>
         </Element>
         <Element Type="FunctionCall" Id="9F37DC1F">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
@@ -1919,6 +1992,7 @@
         </Element>
         <Element Type="Trigger" Id="3E2B2051">
             <Action Type="Comment" Library="BA5CCDED" Id="242A1D0F"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="9B281D43"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="4036ED91"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="E41C79DA"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="93AA6EDD"/>
@@ -1927,6 +2001,24 @@
             <Comment>
                 Some units have passives that are better done via adding an Upgrade at the start in order to give it that nice yellow text and combined number.
             </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="9B281D43">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000118"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="389A32D4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FA17556A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="37EA2574"/>
+        </Element>
+        <Element Type="Param" Id="389A32D4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C3CF50B0"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="AEB4446D"/>
+        </Element>
+        <Element Type="Param" Id="FA17556A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000187"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000071"/>
+        </Element>
+        <Element Type="Param" Id="37EA2574">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000186"/>
+            <ValueType Type="text"/>
         </Element>
         <Element Type="FunctionCall" Id="4036ED91">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
@@ -1995,7 +2087,26 @@
             <ValueGameType Type="Upgrade"/>
         </Element>
         <Element Type="Trigger" Id="28D36327">
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="642DFE44"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="5694256B"/>
+        </Element>
+        <Element Type="FunctionCall" Id="642DFE44">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000118"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BCA76781"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E524AFCF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C69916B1"/>
+        </Element>
+        <Element Type="Param" Id="BCA76781">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C3CF50B0"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="AEB4446D"/>
+        </Element>
+        <Element Type="Param" Id="E524AFCF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000187"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000071"/>
+        </Element>
+        <Element Type="Param" Id="C69916B1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000186"/>
+            <ValueType Type="text"/>
         </Element>
         <Element Type="FunctionCall" Id="5694256B">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="C4DC760C"/>
