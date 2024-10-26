@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="BlinkStopSound">
+        <On Terms="Effect.AspisBlink.Start; At Source" Send="Create"/>
+    </CActorSound>
     <CActorSound id="ColonistShip_Land">
         <On Terms="AbilMorph.*.Start; MorphTo ZeusLanderLanded" Send="Create"/>
     </CActorSound>
@@ -87,6 +90,8 @@
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
         <On index="6" Terms="Behavior.SurvivorsGuilt.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.SurvivorsGuiltApollo.On" Send="Create"/>
+        <On Terms="Behavior.SurvivorsGuiltApollo.Off" Send="AnimBracketStop BSD"/>
     </CActorModelMaterial>
     <CActorSound id="SurvivorsGuiltScream" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -95,6 +100,7 @@
     <CActorSound id="SurvivorsGuiltSound" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
+        <On Terms="Behavior.SurvivorsGuiltApollo.On" Send="Create"/>
     </CActorSound>
     <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
         <Aliases value="_CreepEngulfable"/>

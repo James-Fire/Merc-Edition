@@ -577,6 +577,7 @@
             <DamageDealtFraction index="Ranged" value="0.2"/>
             <DamageDealtFraction index="Splash" value="0.2"/>
         </Modification>
+        <RemoveValidatorArray value="DontHaveSurvivorsGuilt"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SurvivorsGuiltApolloCD">
         <InfoFlags index="Hidden" value="1"/>
@@ -716,5 +717,14 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.3"/>
         <PeriodicEffect value="MercCommanderSA"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AspisBlink">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Requirements value="UseAspisBlinkShield"/>
+        <DisableValidatorArray value="CasterShieldsLT1"/>
+        <DamageResponse Handled="AspisBlinkCP">
+            <Chance value="1"/>
+        </DamageResponse>
     </CBehaviorBuff>
 </Catalog>

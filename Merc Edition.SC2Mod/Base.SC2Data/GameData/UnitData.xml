@@ -1558,8 +1558,20 @@
             <LayoutButtons index="5" Face="OptimizedUEDLogistics" AbilCmd="" Requirements=""/>
             <LayoutButtons index="6" Face="ShellShower" AbilCmd="" Requirements=""/>
             <LayoutButtons Face="LegionSystems" Type="Passive" Requirements="UseLegionSystems" Row="1" Column="0"/>
-            <LayoutButtons Face="AspisBlinkShield" Type="Passive" Requirements="UseAspisBlinkShield" Row="1" Column="1"/>
+            <LayoutButtons>
+                <Face value="AspisBlinkShield"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="AspisBlink,Execute"/>
+                <Requirements value="UseAspisBlinkShield"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
         </CardLayouts>
+        <ShieldRegenDelay value="10"/>
+        <ShieldRegenRate value="2"/>
+        <ShieldArmorName value="AspisShield"/>
+        <AbilArray Link="AspisBlink"/>
+        <BehaviorArray index="1" Link="AspisBlink"/>
     </CUnit>
     <CUnit id="Starcruiser">
         <DeathRevealRadius value="3"/>
@@ -2131,6 +2143,7 @@
         <HotkeyCategory value="Unit/Category/TerranStory"/>
         <BehaviorArray Link="BurstAmplifierSpeed"/>
         <BehaviorArray Link="RevivalFieldController"/>
+        <BehaviorArray Link="HarrierDontDie"/>
         <TurretArray value="Phoenix"/>
     </CUnit>
     <CUnit id="Anarchist">

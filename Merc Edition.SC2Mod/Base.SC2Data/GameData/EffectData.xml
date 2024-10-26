@@ -74,6 +74,11 @@
         <AreaArray Radius="5" Effect="AdjudicatorCloakingField"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
+    <CEffectModifyUnit id="AspisBlinkCooldown">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <Cost Abil="AspisBlink,Execute" CooldownTimeUse="8"/>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="BunkerBurrowedApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="BunkerBurrowed"/>
@@ -100,6 +105,7 @@
         <WhichLocation Value="SourceUnit"/>
         <OffsetVectorStartLocation Value="CasterUnit"/>
         <OffsetVectorEndLocation Value="TargetUnit"/>
+        <ValidatorArray value="HaveConcussiveShrapnel"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ACVFusionCutter" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
@@ -198,7 +204,8 @@
         <EditorCategories value=""/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
-        <Amount value="7"/>
+        <Amount value="4"/>
+        <ArmorReduction value="1"/>
     </CEffectDamage>
     <CEffectSet id="ConcussiveShrapnelDummy">
         <EditorCategories value=""/>
@@ -1186,6 +1193,15 @@
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="ThermalBurstCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="ThermalBurstLaunchMissile"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.2"/>
+        <PeriodicPeriodArray value="0.2"/>
+    </CEffectCreatePersistent>
     <CEffectLaunchMissile id="ThermalBurstLaunchMissile">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="ThermalBurstSwitch"/>
@@ -1210,6 +1226,8 @@
         <PeriodicEffectArray value="ScorpionMissilesLMLeft"/>
         <PeriodicEffectArray value="ScorpionMissilesLMRight"/>
         <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.33"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="ScorpionMissilesLMRight">
@@ -1459,4 +1477,22 @@
         <AreaArray index="1" Validator="HaveSulfurMissiles"/>
         <AreaArray index="2" Validator="HaveSulfurMissiles"/>
     </CEffectDamage>
+    <CEffectTeleport id="AspisBlink">
+        <ValidatorArray value="CasterNotFungalGrowthed"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Caster"/>
+        <ClearQueuedOrders value="0"/>
+        <PlacementAround Value="CasterUnit"/>
+        <PlacementRange value="8"/>
+        <Range value="8"/>
+        <TargetLocation Value="TargetPoint"/>
+        <TeleportFlags index="TestCliff" value="1"/>
+    </CEffectTeleport>
+    <CEffectCreatePersistent id="AspisBlinkCP">
+        <ValidatorArray value="AspisBlinkNotOnCooldown"/>
+        <ValidatorArray value="CasterInCombat"/>
+        <InitialEffect value="AspisBlink"/>
+        <InitialOffset value="0,12,0"/>
+        <FinalEffect value="AspisBlinkCooldown"/>
+    </CEffectCreatePersistent>
 </Catalog>

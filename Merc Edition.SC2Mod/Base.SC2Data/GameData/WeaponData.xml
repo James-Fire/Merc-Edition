@@ -384,7 +384,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.694"/>
-        <Effect value="ThermalBurstLaunchMissile"/>
+        <Effect value="ThermalBurstCP"/>
         <AllowedMovement value="Moving"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>

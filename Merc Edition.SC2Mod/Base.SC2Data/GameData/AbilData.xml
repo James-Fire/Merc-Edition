@@ -95,6 +95,29 @@
             <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Restricted" Requirements="HaveEngineeringBay"/>
         </InfoArray>
     </CAbilBuild>
+    <CAbilEffectTarget id="AspisBlink">
+        <AbilSetId value="AspisBlink"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="8"/>
+            </Charge>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Enemy"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0059_01">
+            <Flags index="IgnoreUser" value="1"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
     <CAbilTrain id="ZeusLanderTrain">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <Range value="5"/>

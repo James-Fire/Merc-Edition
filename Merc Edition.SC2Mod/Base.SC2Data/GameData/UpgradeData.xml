@@ -61,6 +61,11 @@
         <EffectArray Reference="Unit,MissileTurret,LifeArmor" Value="2"/>
         <AffectedUnitArray value="MissileTurret"/>
     </CUpgrade>
+    <CUpgrade id="AspisBlinkShield">
+        <EffectArray Reference="Unit,SpartanCompany,ShieldsMax" Value="50"/>
+        <EffectArray Reference="Unit,SpartanCompany,ShieldsStart" Value="50"/>
+        <AffectedUnitArray value="SpartanCompany"/>
+    </CUpgrade>
     <CUpgrade id="BattleBunker">
         <EffectArray Operation="Set" Reference="Weapon,ShrikeTurret,Options[0]" Value="0"/>
         <EffectArray Operation="Set" Reference="Weapon,ShrikeTurret,Options[1]" Value="0"/>
@@ -78,6 +83,7 @@
     <CUpgrade id="BurstAmplifier">
         <EffectArray Reference="Weapon,ScorpionMissiles,DisplayAttackCount" Value="2"/>
         <EffectArray Reference="Weapon,ThermalBurst,DisplayAttackCount" Value="3"/>
+        <EffectArray Reference="Effect,ScorpionMissilesPersistent,PeriodCount" Value="2"/>
         <AffectedUnitArray value="Harrier"/>
     </CUpgrade>
     <CUpgrade id="ChaoticPower">
@@ -207,6 +213,7 @@
     </CUpgrade>
     <CUpgrade id="JetPackOverdrive">
         <EffectArray Reference="Unit,BlockB,Speed" Value="1.750000"/>
+        <EffectArray Reference="Unit,FlyingBlockB,Speed" Value="1.750000"/>
         <AffectedUnitArray value="BlockB"/>
     </CUpgrade>
     <CUpgrade id="JoriumLinedSuit">

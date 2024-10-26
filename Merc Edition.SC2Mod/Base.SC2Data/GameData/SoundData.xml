@@ -766,7 +766,6 @@
     <CSound id="SurvivorsGuiltScream" parent="Combat">
         <DupeDestroyCount value="1"/>
         <DupeMuteCount value="1"/>
-        <Volume value="-6.000000,-6.000000"/>
         <AssetArray File="Assets\Sounds\varian_colossus_smash01.mp3" FacialGroup=""/>
     </CSound>
     <CSound id="SurvivorsGuiltSound" parent="Combat">
@@ -776,7 +775,6 @@
         <DupeDestroyCount value="5"/>
         <DupeMuteCount value="5"/>
         <Pitch value="-5.000000,3.000000"/>
-        <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="TarBombImpact">
         <AssetArray File="Assets\Sounds\WarHound_Melee_Impact00.wav" FacialGroup=""/>

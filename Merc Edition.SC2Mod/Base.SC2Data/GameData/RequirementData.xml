@@ -67,6 +67,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeArmoredHousingCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseAspisBlinkShield">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAspisBlinkShieldCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBattleBunker">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBattleBunkerCompleteOnly"/>

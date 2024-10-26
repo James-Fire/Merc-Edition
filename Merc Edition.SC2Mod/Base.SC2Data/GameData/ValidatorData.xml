@@ -16,6 +16,9 @@
         <Value value="2"/>
         <Behavior value="ARESTargetLockCaster"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DontHaveSurvivorsGuilt">
+        <Behavior value="SurvivorsGuilt"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorPlayerRequirement id="HaveATXOrdnance">
         <Find value="1"/>
         <Value value="UseATXOrdnance"/>
@@ -94,6 +97,11 @@
         <ResultFailed value="Error,Error\TargetLock"/>
         <Behavior value="ARESTargetLock"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareCooldown id="AspisBlinkNotOnCooldown">
+        <WhichUnit Value="Caster"/>
+        <CooldownLink value="Abil/AspisBlink"/>
+        <Ability value="AspisBlink"/>
+    </CValidatorUnitCompareCooldown>
     <CValidatorCombine id="SwannANDBelow80Life">
         <Type value="And"/>
         <CombineArray value="LifeBelow80"/>

@@ -40,6 +40,9 @@
     <CRequirementCountUpgrade id="CountUpgradeArmoredHousingCompleteOnly">
         <Count Link="ArmoredHousing" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAspisBlinkShieldCompleteOnly">
+        <Count Link="AspisBlinkShield" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBattleBunkerCompleteOnly">
         <Count Link="BattleBunker" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
