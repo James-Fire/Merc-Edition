@@ -24,4 +24,5 @@ trigger libBA5CCDED_gt_HelsAngelTacticalRealignment;
 trigger libBA5CCDED_gt_HarrierRecall;
 trigger libBA5CCDED_gt_NomadSilentModeHeightUp;
 trigger libBA5CCDED_gt_NomadSilentModeHeightDown;
+trigger libBA5CCDED_gt_SamsonZeusInjectionPods;
 

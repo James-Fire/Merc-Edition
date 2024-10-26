@@ -193,6 +193,10 @@
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="LinkedCooldown" value="0"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MilitarizedColonistShipGround">
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="PharaohBatteryTertiary">
         <EditorCategories value="Race:Terran"/>
@@ -414,7 +418,7 @@
         <Range value="7"/>
         <Period value="1.93"/>
         <DamagePoint value="0.831"/>
-        <Backswing value="0.25"/>
+        <Backswing value="0"/>
         <Effect value="FistsofKronosCP"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
     </CWeaponLegacy>

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="ColonistShip_Land">
+        <On Terms="AbilMorph.*.Start; MorphTo ZeusLanderLanded" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="ColonistShip_LiftOff">
+        <On Terms="AbilMorph.*.Start; MorphTo ZeusLanderFlying" Send="Create"/>
+    </CActorSound>
+    <!-- Ground Attack                                                                           -->
+    <CActorMissile id="MilitarizedColonistShipGroundAttackMissile">
+        <On Terms="ActorCreation; ValidateUnit HaveATXOrdnance" Send="ModelSwap ATXOrdnance"/>
+    </CActorMissile>
     <CActorUnit id="NaniteCloudEmitter" parent="TerranBuilding" unitName="NaniteCloudEmitterBurrowed">
         <Aliases value="_UnitLarge"/>
         <On index="35" Terms="UnitFidget" Send="AnimPlay Fidget Fidget"/>
@@ -73,30 +83,39 @@
             <Image value="Assets\Textures\Wireframe-Terran-LabGasTurret.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorModelMaterial id="SurvivorsGuilt" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
+        <On index="6" Terms="Behavior.SurvivorsGuilt.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorSound id="SurvivorsGuiltScream" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SurvivorsGuilt.On; ValidateUnit HaveApolloInjectionPods" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="SurvivorsGuiltSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
+    </CActorSound>
     <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>
         <Macros value="RemoveFlyerHelperMacro"/>
         <On Terms="UnitBirth.ZeusLanderLanded" Send="CreepEngulfmentStartTransition"/>
-        <On Terms="UnitBirth.MilitarizedColonistShipFlying" Send="Create"/>
-        <On Terms="UnitBirth.MilitarizedColonistShipFlying" Send="CreepEngulfmentStopTransition"/>
-        <On Terms="UnitBirth.MilitarizedColonistShipFlying" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying; ScopeContains GroundLocalSelection" Send="StatusIncrement FlyerHelper"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip" Send="AnimGroupRemove Fly"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip" Send="Create BuildingTerrainFlatten"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip; ScopeContains FlyerHelperSplat; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom MilitarizedColonistShip; MorphTo MilitarizedColonistShipFlying" Send="CreepEngulfmentStopTransition"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom MilitarizedColonistShipFlying; MorphTo MilitarizedColonistShip" Send="CreepEngulfmentStartTransition"/>
-        <On Terms="UnitDeathCustomize.MilitarizedColonistShipFlying" Send="DeathCustomize Flying"/>
+        <On Terms="UnitBirth.ZeusLanderLanded" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderLanded; MorphTo MilitarizedColonistShipFlying" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderLanded; MorphTo MilitarizedColonistShipFlying" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderLanded; MorphTo MilitarizedColonistShipFlying; ScopeContains GroundLocalSelection" Send="StatusIncrement FlyerHelper"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderFlying; MorphTo MilitarizedColonistShip" Send="AnimGroupRemove Fly"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderFlying; MorphTo MilitarizedColonistShip" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderFlying; MorphTo MilitarizedColonistShip; ScopeContains FlyerHelperSplat; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom ZeusLanderLanded; MorphTo MilitarizedColonistShipFlying" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom ZeusLanderFlying; MorphTo MilitarizedColonistShip" Send="CreepEngulfmentStartTransition"/>
+        <On Terms="UnitDeathCustomize.ZeusLanderFlying" Send="DeathCustomize Flying"/>
         <On Terms="UnitDeathCustomize; ModelIsLowQuality" Send="DeathCustomize Low"/>
         <CreepHeightClass value="Medium"/>
-        <BuildModel value="ZeusLander"/>
         <DeathArray index="Normal" ModelLink="MilitarizedColonistShipDeath" SoundLink=""/>
         <DeathCustoms ModelLink="MilitarizedColonistShipFlyingDeath" Name="Flying"/>
         <DeathCustoms SoundLink="Terran_ExplosionLarge" Name="Low"/>
-        <PlacementModel value="ZeusLander"/>
         <PortraitModel value="TransportPilotPortrait"/>
         <BarOffset value="50"/>
         <BarWidth value="102"/>
@@ -223,14 +242,15 @@
             <Image value="Assets\Textures\Wireframe-Terran-Bunker.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorUnit id="ZeusLanderFlying" parent="GenericUnitStandard" unitName="HerculesLander">
+    <CActorUnit id="ZeusLanderFlying" parent="GenericUnitStandard" unitName="ZeusLanderFlying">
         <Aliases value="_UnitHuge"/>
-        <On Terms="UnitBirth.ZeusLanderFlying" Send="Create"/>
         <On Terms="UnitBirth.ZeusLanderFlying" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
         <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderLanded; MorphTo ZeusLanderFlying" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
         <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderFlying; MorphTo ZeusLanderLanded" Send="AnimGroupRemove Fly"/>
         <On Terms="UnitDeathCustomize.ZeusLanderFlying" Send="DeathCustomize Flying"/>
         <On Terms="UnitDeathCustomize; ModelIsLowQuality" Send="DeathCustomize Low"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderLanded; MorphTo ZeusLanderFlying" Send="ModelSwap ZeusLander"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeusLanderFlying; MorphTo ZeusLanderLanded" Send="ModelSwap ZeusLanderLanded"/>
         <Model value="ZeusLander"/>
         <Baselines index="Stand" BlendIn="6.000000"/>
         <BuildModel value="ZeusLander"/>
@@ -249,7 +269,6 @@
         <GroupSoundArray index="Attack" value="Hercules_Yes"/>
         <GroupSoundArray index="Board" value="MedivacGroupBoard"/>
         <HeroIcon value="Assets\Textures\btn-unit-terran-hercules.dds"/>
-        <HighlightTooltip value="Unit/Name/ZeusLanderFlying"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
         <NameOffset value="50"/>
         <SoundArray index="Birth" value="Hercules_Birth"/>

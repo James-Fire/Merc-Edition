@@ -51,9 +51,17 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeASPRocketPodsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseATXOrdnance">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeATXOrdnanceCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseAdvancedOrbitalCommand">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseApolloInjectionPods">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeApolloInjectionPodsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseArmoredHousing">
         <EditorCategories value="TechType:Ability"/>

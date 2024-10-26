@@ -25,6 +25,11 @@
     <CModel id="ARESMissileMissile">
         <Model value="Assets\Effects\Terran\WarHoundHaywireMissile\WarHoundHaywireMissile.m3"/>
     </CModel>
+    <CModelFoliage id="ATXOrdnance">
+        <Model value="Assets\Effects\Terran\PlanetaryFortressMissile\PlanetaryFortressMissile.m3"/>
+        <ScaleMax value="0.200000,0.800000,1.000000"/>
+        <ScaleMin value="0.200000,0.800000,1.000000"/>
+    </CModelFoliage>
     <CModelFoliage id="AgitatorMorphModel">
         <Model value="Assets\Units\Terran\Hellbatmorph_CovertOps_Collection\Hellbatmorph_CovertOps_Collection.m3"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -95,6 +100,9 @@
         <TechPurchaseCamera value="Star2CameraMid05"/>
         <UnitGlossaryCamera value="Star2CameraMid05"/>
     </CModel>
+    <CModelFoliage id="SurvivorsGuilt">
+        <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>
+    </CModelFoliage>
     <CModel id="ZeusLanderLanded" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\MilitarizedColonistShip\MilitarizedColonistShip.m3"/>
         <Flags index="AutoUnload" value="1"/>

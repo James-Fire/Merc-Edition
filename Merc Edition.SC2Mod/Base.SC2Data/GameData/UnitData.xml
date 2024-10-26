@@ -472,8 +472,8 @@
         <Collide index="Small" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
-        <LifeStart value="1000"/>
-        <LifeMax value="1000"/>
+        <LifeStart value="650"/>
+        <LifeMax value="650"/>
         <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
         <StationaryTurningRate value="719.4726"/>
@@ -514,6 +514,8 @@
         <LeaderAlias value=""/>
         <HotkeyAlias value=""/>
         <BehaviorArray Link="SamsonTrainingBuff"/>
+        <BehaviorArray Link="ATXPointDefense"/>
+        <EffectArray index="Death" value="ZeusDeathrattleDummy"/>
     </CUnit>
     <CUnit id="ZeusLanderFlying">
         <DeathRevealRadius value="3"/>
@@ -548,7 +550,6 @@
         <AbilArray Link="ZeusTransport"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="MilitarizedColonistShipLand"/>
-        <WeaponArray Link="MilitarizedColonistShipAir"/>
         <WeaponArray Link="MilitarizedColonistShipGround"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -562,6 +563,7 @@
             <LayoutButtons Face="ZeusRapidDeployment" Row="1" Column="0"/>
             <LayoutButtons Face="SurvivorsGuilt" Type="Passive" Row="1" Column="1"/>
             <LayoutButtons Face="LandingGear" Type="Passive" Row="2" Column="0"/>
+            <LayoutButtons Face="ATXOrdnance" Type="Passive" Requirements="UseATXOrdnance" Row="1" Column="2"/>
         </CardLayouts>
         <Radius value="1.5"/>
         <SeparationRadius value="1.5"/>
@@ -570,6 +572,8 @@
         <SubgroupPriority value="11"/>
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <EffectArray index="Death" value="ZeusDeathrattleDummy"/>
+        <BehaviorArray Link="ATXPointDefense"/>
     </CUnit>
     <CUnit id="MissileTurret">
         <AbilArray index="4" Link="SalvageShared"/>

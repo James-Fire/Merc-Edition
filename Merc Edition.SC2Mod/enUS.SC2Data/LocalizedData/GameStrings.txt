@@ -73,7 +73,6 @@ Behavior/Name/RedlineReactor=Redline Reactor
 Behavior/Name/ReflectiveArmorBonusDamage=Reflective Armor
 Behavior/Name/RevivalFieldCooldown=Revival Field Cooldown
 Behavior/Name/RevivalFieldDodge=Revival Field Dodge
-Behavior/Name/SamsonTrainingBuff=Samson Training Buff
 Behavior/Name/ShellShower=Shell Shower
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
 Behavior/Name/SquadSightAres=Squad Sight
@@ -81,6 +80,8 @@ Behavior/Name/StunnedAnarchistLeap=Stunned
 Behavior/Name/SuperCloak=Super Cloak
 Behavior/Name/SuperCloakCooldown=Super Cloak Cooldown
 Behavior/Name/SuperStim=Super Stim
+Behavior/Name/SurvivorsGuilt=Survivor's Guilt
+Behavior/Name/SurvivorsGuiltApollo=Survivor's Guilt
 Behavior/Name/TacticalRealignment=Tactical Realignment
 Behavior/Name/TarBomb=Tar Bomb
 Behavior/Name/TriggerOverdrive=Trigger Overdrive
@@ -107,18 +108,22 @@ Behavior/Tooltip/SquadSightAres=This unit has increased range.
 Behavior/Tooltip/StunnedAnarchistLeap=This unit is stunned.
 Behavior/Tooltip/SuperCloak=This unit is invulnerable.
 Behavior/Tooltip/SuperCloakCooldown=Super Cloak cannot activate yet.
+Behavior/Tooltip/SurvivorsGuilt=This unit wishes to avenge their fallen comrade.
+Behavior/Tooltip/SurvivorsGuiltApollo=This unit is filled with drug-induced rage.
 Behavior/Tooltip/TacticalRealignment=This unit is dealing more damage.
 Behavior/Tooltip/TarBomb=This unit is slowed and has reduced range.
 Behavior/Tooltip/TriggerOverdrive=This unit has increased attack speed.
 Button/Name/AIEnhancement=A.I Enhancement
 Button/Name/ARESTargetLock=Target Lock
 Button/Name/ASPRocketPods=ASP Rocket Pods
+Button/Name/ATXOrdnance=ATX Ordnance
 Button/Name/AblativeScalesNew=Ablative Scales
 Button/Name/ActivateUranusProtocol=Activate Uranus Protocol
 Button/Name/AdjudicatorCloakingField=Cloaking Field
 Button/Name/AdvancedSiegeOptics=Advanced Siege Optics
 Button/Name/AdvancedSiegeTech=Advanced Siege Tech
 Button/Name/AftermarketRailgunTurret=Aftermarket Railgun Turret
+Button/Name/ApolloInjectionPods=Apollo Injection Pods
 Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
 Button/Name/AspisBlinkShield=Aspis Blink Shield
@@ -243,6 +248,7 @@ Button/Tooltip/AIEnhancement=Reduces unit cost, removes the need for a Tech Lab,
 Button/Tooltip/ARESTargetLock=Increases damage dealt to the target enemy unit by 30%. Effect lasts as long as the ARES remains locked onto the target.
 Button/Tooltip/ARESWarbotMercMod=Armored weapons platform. Can use Target Lock and Sentinel Missiles.<n/><n/><c val="FFFF00">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/ASPRocketPods=Causes missiles to deal damage in a line, increases damage while cloaked by 25%, and adds another two Screecher Missile weapons.
+Button/Tooltip/ATXOrdnance=Replaces weaponry with ATX Laser Batteries and ATX Point Defense.
 Button/Tooltip/AblativeScalesNew=Increases life by 75 and grants immunity to splash damage.
 Button/Tooltip/ActivateUranusProtocol=Enable the powerful 250mm Uranus Carronades for <d time="21"/> to attack alongside the Coeus Missile Battery.
 Button/Tooltip/Adjudicator=Aerial support unit. Can use Irradiate, Transwarp, and Nano-Repair abilities. Cloaks nearby units.<n/><n/><c val="FFE303">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
@@ -252,6 +258,7 @@ Button/Tooltip/AdvancedSiegeTech=Siege Breakers enter and exit siege mode twice 
 Button/Tooltip/AftermarketRailgunTurret=Timed turret. Deals damage in a line.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/ApolloInjectionPods=Survivor's Guilt applies when unloading units, with a cooldown. Suvivor's Guilt duration when the Samson is destroyed is doubled.
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
 Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
 Button/Tooltip/BearclawGauntlets=Increases attack radius by 60% and grants the Grapple ability.
@@ -369,7 +376,7 @@ Button/Tooltip/StabilizerMedpacksMerc=Increases heal speed, energy efficiency, a
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SulfurMissiles=Missiles now deal area damage and apply more damage over time. On death, the Hel's Angel explodes to deal damage and damage over time.
 Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
-Button/Tooltip/SurvivorsGuilt=When destroyed, dropped units gain a temporary boost to damage, attack speed, and movement speed.<n/><s><c val="C0C0C0">Avenge our fallen comrade!</c>
+Button/Tooltip/SurvivorsGuilt=When destroyed, dropped units gain a temporary boost to damage, attack speed, and movement speed.
 Button/Tooltip/SwannNanites=Nano-Repair no longer costs energy, heals 50% faster, and can heal structures. Irradiation now damages enemy mechanical units and heals allied mechanical units.
 Button/Tooltip/TacticalRealignment=After transforming, damage dealt is increased by 50% for <d time="7"/>. Cannot occur more than once every <d time="21"/>.
 Button/Tooltip/TarBomb=Deal 20 damage to the target and apply a debuff for <d time="7"/> to enemies in the area that reduces their movement speed by 75% and range by 3.
@@ -624,6 +631,8 @@ Effect/Name/SuperCloakSet=Super Cloak Set
 Effect/Name/SuperStimApplyBehavior=SuperStimApplyBehavior
 Effect/Name/SuperStimHeal=Super Stim Heal
 Effect/Name/SuperStimSet=Super Stim Set
+Effect/Name/SurvivorsGuiltApolloApplyBehavior=SurvivorsGuiltApolloApplyBehavior
+Effect/Name/SurvivorsGuiltApplyBehavior=Survivors Guilt Apply Behavior
 Effect/Name/TacticalRealignmentApplyBehavior=TacticalRealignmentApplyBehavior
 Effect/Name/TarBombApplyBehavior=TarBombApplyBehavior
 Effect/Name/TarBombDamage=Tar Bomb Damage
@@ -731,9 +740,11 @@ Unit/Name/ZeusLanderLanded=Samson
 UnitKillRank/ARESMercEdition=Security Robot 
 Upgrade/Name/AIEnhancement=A.I Enhancement
 Upgrade/Name/ASPRocketPods=ASP Rocket Pods
+Upgrade/Name/ATXOrdnance=ATX Ordnance
 Upgrade/Name/AblativeScales=Ablative Scales
 Upgrade/Name/AdvancedOrbitalCommand=Advanced Orbital Command
 Upgrade/Name/AdvancedSiegeTechArmorOnly=Advanced Siege Tech Armor Only
+Upgrade/Name/ApolloInjectionPods=Apollo Injection Pods
 Upgrade/Name/ArmoredHousing=Armored Housing
 Upgrade/Name/BattleBunker=Battle Bunker
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets

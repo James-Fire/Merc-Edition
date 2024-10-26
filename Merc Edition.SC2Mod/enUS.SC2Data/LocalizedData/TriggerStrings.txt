@@ -22,4 +22,5 @@ Trigger/Name/lib_BA5CCDED_BF2FDC58=Mission Directives
 Trigger/Name/lib_BA5CCDED_C7C2E4C6=Deposit Money
 Trigger/Name/lib_BA5CCDED_FB26A66C=Init...Allowing Units
 Trigger/Name/lib_BA5CCDED_FBF6D743=Init...ACV Multibuild
+Trigger/Name/lib_BA5CCDED_FC9E70A1=Samson(Zeus) Injection Pods
 Variable/Name/lib_BA5CCDED_1F02B372=Player

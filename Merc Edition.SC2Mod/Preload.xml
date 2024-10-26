@@ -4,5 +4,7 @@
 <Actor id="SYSTEM_ActorConfig"/>
 <Behavior id="RevivalFieldCooldown"/>
 <Behavior id="GraduatingRangeController"/>
+<Behavior id="SurvivorsGuiltApolloCD"/>
 <Effect id="SpartanCompanyShellShowerFull"/>
+<Effect id="SurvivorsGuiltApolloApplyBehavior"/>
 </Preload>

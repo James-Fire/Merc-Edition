@@ -38,12 +38,23 @@
         <EffectArray Operation="Set" Reference="Weapon,DuskWingBanshee2,Options[Disabled]" Value="0"/>
         <EffectArray Operation="Set" Reference="Weapon,DuskWingBanshee3,Options[Disabled]" Value="0"/>
     </CUpgrade>
+    <CUpgrade id="ATXOrdnance">
+        <EffectArray Reference="Effect,MilitarizedColonistShipGroundDamage,Amount" Value="5"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,MilitarizedColonistShipGround,Period" Value="0.050000"/>
+        <AffectedUnitArray value="ZeusLanderLanded"/>
+        <AffectedUnitArray value="ZeusLanderFlying"/>
+    </CUpgrade>
     <CUpgrade id="AblativeScales">
         <EffectArray Reference="Unit,HammerSecurity,LifeMax" Value="75"/>
         <EffectArray Reference="Unit,HammerSecurity,LifeStart" Value="75"/>
         <AffectedUnitArray value="HammerSecurity"/>
     </CUpgrade>
     <CUpgrade id="AdvancedOrbitalCommand"/>
+    <CUpgrade id="ApolloInjectionPods">
+        <EffectArray Operation="Multiply" Reference="Behavior,SurvivorsGuilt,Duration" Value="2.000000"/>
+        <AffectedUnitArray value="ZeusLanderLanded"/>
+        <AffectedUnitArray value="ZeusLanderFlying"/>
+    </CUpgrade>
     <CUpgrade id="ArmoredHousing">
         <EffectArray Reference="Unit,MissileTurret,LifeMax" Value="100"/>
         <EffectArray Reference="Unit,MissileTurret,LifeStart" Value="100"/>

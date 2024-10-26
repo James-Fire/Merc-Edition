@@ -24,12 +24,18 @@
     <CRequirementCountUpgrade id="CountUpgradeASPRocketPodsCompleteOnly">
         <Count Link="ASPRocketPods" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeATXOrdnanceCompleteOnly">
+        <Count Link="ATXOrdnance" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat">
         <Count Link="AblativeScales" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAdvancedOrbitalCommandCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AdvancedOrbitalCommand" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeApolloInjectionPodsCompleteOnly">
+        <Count Link="ApolloInjectionPods" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeArmoredHousingCompleteOnly">
         <Count Link="ArmoredHousing" State="CompleteOnly"/>

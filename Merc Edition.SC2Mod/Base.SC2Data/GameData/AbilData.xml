@@ -818,6 +818,7 @@
         <Range value="250"/>
         <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Invulnerable"/>
         <AutoCastRange value="5.8"/>
+        <AutoCastValidatorArray value="burrowbunkerspraynpayvalidators"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SprayandPay"/>
     </CAbilEffectTarget>
     <CAbilTrain id="StarportTrain">

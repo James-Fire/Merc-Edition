@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="ATXPointDefense">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseATXOrdnance"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="PointDefenseSearch"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="AdjudicatorNanites">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -407,6 +414,7 @@
         <Modification>
             <RateMultiplierArray index="Queueable" value="1.25"/>
         </Modification>
+        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShellShower">
         <Alignment value="Positive"/>
@@ -541,6 +549,39 @@
     <!--    </CBehaviorSpawn-->
     <CBehaviorBuff id="SupplyDrop">
         <Modification Food="12"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SurvivorsGuilt">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="14"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.5"/>
+            <AdditiveAttackSpeedFactor value="0.5"/>
+            <DamageDealtFraction index="Spell" value="0.2"/>
+            <DamageDealtFraction index="Melee" value="0.2"/>
+            <DamageDealtFraction index="Ranged" value="0.2"/>
+            <DamageDealtFraction index="Splash" value="0.2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SurvivorsGuiltApollo">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Icons and Wireframes\dead men tell no tales.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="14"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.5"/>
+            <AdditiveAttackSpeedFactor value="0.5"/>
+            <DamageDealtFraction index="Spell" value="0.2"/>
+            <DamageDealtFraction index="Melee" value="0.2"/>
+            <DamageDealtFraction index="Ranged" value="0.2"/>
+            <DamageDealtFraction index="Splash" value="0.2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SurvivorsGuiltApolloCD">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="84"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TacticalRealignment">
         <Alignment value="Positive"/>

@@ -8,6 +8,10 @@
         <Icon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
     </CButton>
+    <CButton id="ATXOrdnance">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="AblativeScalesNew">
         <Icon value="Assets\Icons and Wireframes\ablativescales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\ablativescales.dds"/>
@@ -19,6 +23,10 @@
     <CButton id="AftermarketRailgunTurret">
         <Icon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
+    </CButton>
+    <CButton id="ApolloInjectionPods">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="BuildAdjudicator">
         <Icon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>

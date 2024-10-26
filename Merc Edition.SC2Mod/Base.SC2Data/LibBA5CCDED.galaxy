@@ -733,6 +733,38 @@ void libBA5CCDED_gt_NomadSilentModeHeightDown_Init () {
     TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_NomadSilentModeHeightDown, null, "NomadSilentMode", c_unitBehaviorChangeDestroy);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Samson(Zeus) Injection Pods
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SamsonZeusInjectionPods_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetType(EventUnit()) == "ZeusLanderFlying") || (UnitGetType(EventUnit()) == "ZeusLanderLanded")))) {
+            return false;
+        }
+
+        if (!((TechTreeUpgradeCount(EventPlayer(), "ApolloInjectionPods", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreateEffectUnit(EventUnitCargo(), "SurvivorsGuiltApolloApplyBehavior", EventUnitCargo());
+    UnitBehaviorAdd(EventUnitCargo(), "SurvivorsGuiltApolloCD", EventUnitCargo(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SamsonZeusInjectionPods_Init () {
+    libBA5CCDED_gt_SamsonZeusInjectionPods = TriggerCreate("libBA5CCDED_gt_SamsonZeusInjectionPods_Func");
+    TriggerAddEventUnitCargo(libBA5CCDED_gt_SamsonZeusInjectionPods, null, false);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_Init_Init();
     libBA5CCDED_gt_InitACVMultibuild_Init();
@@ -751,6 +783,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_HarrierRecall_Init();
     libBA5CCDED_gt_NomadSilentModeHeightUp_Init();
     libBA5CCDED_gt_NomadSilentModeHeightDown_Init();
+    libBA5CCDED_gt_SamsonZeusInjectionPods_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
