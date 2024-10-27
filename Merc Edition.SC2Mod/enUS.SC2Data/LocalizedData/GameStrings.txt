@@ -9,6 +9,7 @@ Abil/Name/CharonDropshipTrain=Train
 Abil/Name/CondorSpiderMineUnburrow=Spider Mine Unburrow
 Abil/Name/CondorSpiderMines=Use Spider Mines
 Abil/Name/DevilDogGrapple=Grapple
+Abil/Name/FortressBombardment=Fortress Bombardment
 Abil/Name/GreaterHeal=Greater Heal
 Abil/Name/IgniteAfterburnersHelsAngel=Ignite Afterburners
 Abil/Name/JetPackOverdrive=Jet Pack Overdrive
@@ -62,10 +63,12 @@ Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
 Behavior/Name/FearPliableArmor=Fear
 Behavior/Name/FerrierofSouls=Ferrier of Souls
 Behavior/Name/ForceMissiles=Force Missiles
+Behavior/Name/FortressBombardmentFiring=Fortress Bombardment Firing
 Behavior/Name/GraduatingRange=Graduating Range
 Behavior/Name/ImmolationFluid=Immolation Fluid
 Behavior/Name/IncomingAnarchistJump=Incoming!
 Behavior/Name/LowGradeStims=Low Grade Stims
+Behavior/Name/NanitePulse=Nanite Pulse
 Behavior/Name/NomadMissileTint=Fuck-You Inbound
 Behavior/Name/NomadSilentMode=Nomad Silent Mode
 Behavior/Name/PermanentCloakDuskWing=Permanent Cloak
@@ -130,6 +133,8 @@ Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
 Button/Name/AspisBlinkShield=Aspis Blink Shield
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
+Button/Name/BombardmentFortress=Bombardment
+Button/Name/BoxofScraps=Box of Scraps
 Button/Name/BuildAdjucator=Build Adjucator
 Button/Name/BuildAdjudicator=Build Adjudicator
 Button/Name/BuildAgitator=Build Agitator
@@ -196,6 +201,7 @@ Button/Name/MercCommander=Merc Commander
 Button/Name/MineDrone=Mine Drone
 Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
+Button/Name/NanitePulse=Nanite Pulse
 Button/Name/NeosteelCupHolders=Neosteel Cup Holders
 Button/Name/NormalModeNomad=Normal Mode
 Button/Name/OptimizedUEDLogistics=Optimized UED Logistics
@@ -243,6 +249,7 @@ Button/Name/TrainWarPig=Train War Pig
 Button/Name/TriggerOverdrive=Trigger Overdrive
 Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
+Button/Name/UpgradeToPlanetaryFortress=Upgrade to Bombardment Fortress
 Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Button/Name/ZeusLanderTacticalJump=Tactical Jump
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -264,6 +271,8 @@ Button/Tooltip/ApolloInjectionPods=Survivor's Guilt applies when unloading units
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
 Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
 Button/Tooltip/BearclawGauntlets=Increases Devil Dog attack radius by 60% and grants the Grapple ability.
+Button/Tooltip/BombardmentFortress=Randomly bombard a location with 4 missiles, each dealing up to 225 (+200 vs Structure) damage in an area. Fires an additional missile per SCV loaded.
+Button/Tooltip/BoxofScraps=Nanite Cloud Emitters gain 2 armor and are built nearly instantly.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/BuildAdjudicator=Tactical support craft. Cloaks nearby units and attacks enemies for damage over time. Can use Nano-Repair, Irradiate, and Transwarp.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BuildAgitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -275,7 +284,7 @@ Button/Tooltip/BuildCyberWolf=Anti-infantry specialist that deals area damage wi
 Button/Tooltip/BuildDuskWing=Tactical-strike aircraft.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildHarrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/BuildHelsAngel=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
-Button/Tooltip/BuildNaniteCloudEmitter=Emits a field that damages enemies in a radius. Burrows when no enemies are nearby. Damage only stacks twice.<n/><n/><c val="FFFF80">Can attack ground units.</c>
+Button/Tooltip/BuildNaniteCloudEmitter=Emits a field that damages biological enemies in a radius. Burrows when no enemies are nearby. Damage only stacks twice.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/BuildNomad=Heavy-fire support craft. Attacks using Seeker Missiles. Can deploy Railgun Turrets, Point Defense Drones, and Mine Drones.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BuildSiegeBreaker=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/BuildSpartanCompany=Heavy-fire support unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -340,6 +349,7 @@ Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small 
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/NaniteCloudEmitter=Automated Gas Defense system. Destroy to open the containment door.
 Button/Tooltip/NaniteCloudEmitterBurrowed=Automated Gas Defense system. Destroy to open the containment door.
+Button/Tooltip/NanitePulse=Nanite Cloud Emitters now affect mechanical units, and will periodically emit a pulse to deal additional damage. 
 Button/Tooltip/NormalModeNomad=Exit Silent Mode, allowing movement and other abilities again.
 Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nukes take <d time="18"/> to land, but they deal up to 400 (+300 vs. structures) damage to enemies in a large radius.
 Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to train the unit.
@@ -399,6 +409,7 @@ Button/Tooltip/Transwarp=All of your units in the target area are warped back to
 Button/Tooltip/TriggerOverdrive=Attacks increase attack speed by 10% for a short time, up to 100%.
 Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able to calldown nukes 50% faster, and have 10% reduced Snipe energy cost.
 Button/Tooltip/U240Rounds=Increases the Block B's range by 1 and damage vs Light by 3. Enemies killed release a G-4 Clusterbomb.
+Button/Tooltip/UpgradeToPlanetaryFortress=Adds a powerful turret, and increases armor. Removes Lift Off, Scanner Sweep, and MULE abilities, but allows it to fire powerful missiles at long range.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Light and Biological by 15, and doubles the width of attacks.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
@@ -492,6 +503,18 @@ Effect/Name/FearPliableArmorApplyBehavior=FearPliableArmorApplyBehavior
 Effect/Name/FistsofKronosCP=Fists of Kronos CP
 Effect/Name/FistsofKronosDamage=Fists of Kronos Damage
 Effect/Name/ForceMissilesApplyBehavior=ForceMissilesApplyBehavior
+Effect/Name/FortressBombardmentCP4=Fortress Bombardment CP (4)
+Effect/Name/FortressBombardmentCP5=Fortress Bombardment CP (5)
+Effect/Name/FortressBombardmentCP6=Fortress Bombardment CP (6)
+Effect/Name/FortressBombardmentCP7=Fortress Bombardment CP (7)
+Effect/Name/FortressBombardmentCP8=Fortress Bombardment CP (8)
+Effect/Name/FortressBombardmentCP9=Fortress Bombardment CP (9)
+Effect/Name/FortressBombardmentDamage2=Fortress Bombardment Damage
+Effect/Name/FortressBombardmentFiringApplyBehavior=FortressBombardmentFiringApplyBehavior
+Effect/Name/FortressBombardmentLaunchMissile=Fortress Bombardment Launch Missile
+Effect/Name/FortressBombardmentRP=Fortress Bombardment RP
+Effect/Name/FortressBombardmentSet=Fortress Bombardment Set
+Effect/Name/FortressBombardmentSwitch=Fortress Bombardment Switch
 Effect/Name/GraduatingRangeApplyBehavior=GraduatingRangeApplyBehavior
 Effect/Name/GreetingGrenadeDamage=Greeting Grenade Damage
 Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
@@ -517,9 +540,9 @@ Effect/Name/MagrailMunitionsDamage=Magrail Munitions Damage
 Effect/Name/MagrailMunitionsLaunchMissile=Magrail Munitions Launch Missile
 Effect/Name/MercCommanderAB=Merc Commander AB
 Effect/Name/MercCommanderSA=Merc Commander SA
+Effect/Name/NanitePulseDamage=Nanite Pulse Damage
+Effect/Name/NanitePulseSA=Nanite Pulse SA
 Effect/Name/NaniteTurretBurrowOrder=Nanite Turret Burrow Order
-Effect/Name/NaniteTurretRemoveBurrowTimer=Nanite Turret Remove Burrow Timer
-Effect/Name/NaniteTurretRenewBurrowTimer=Nanite Turret Renew Burrow Timer
 Effect/Name/NanitesHeal=Nanites Heal
 Effect/Name/NanobotInjectorsDamage=NanobotInjectorsDamage
 Effect/Name/NanobotInjectorsLaunchMissile=NanobotInjectorsLaunchMissile
@@ -658,6 +681,7 @@ Effect/Name/WolverineFearAB=Fear AB
 Effect/Name/WolverineFearImmunityAB=Fear Immunity AB
 Effect/Name/WolverineFearSA=Fear SA
 Effect/Name/WolverineFearSet=Fear Set
+MinimumRange15=Too close
 Param/Value/lib_BA5CCDED_07E491EB=Not much to be made here sadly...although with the Zerg infesting the civilian settlements we could technically let them become infested and then purge them so we can sell the scraps to make a profit. If we do this the infested attacks will ramp up on our base significantly so be prepared.  Just don't take too long to take action sir, the Protoss are still hanging around and I have no idea just how charitable they are willing to be.
 Param/Value/lib_BA5CCDED_127D95BD=Dominion contractors have decided to retake the planet and require us to sanitize the two Command Centers in this area.  Position four of our Skibis Angels near each Command Center to begin the sanitization. Once sanitized you may use them as forward bases until the mission is complete.  Also, surviving Colonists report flying queens in the A.O so be careful at night if you plan to go out past the defenses.
 Param/Value/lib_BA5CCDED_17EC5578=Mar Sara rebels have informed us of an old Confederate Starport in the area that we can use to leave sooner. Unfortunately for us we do not know its exact position, we will have to rescue the rebels in order to find its exact location. 
@@ -709,6 +733,7 @@ Unit/Name/DevastatorMissilesMercWeapon=Devastator Missiles Projectile
 Unit/Name/DuskWingWeaponSecondary=Dusk Wing Secondary
 Unit/Name/DuskWingWeaponTertiary=Dusk Wing Tertiary
 Unit/Name/FlyingBlockB=Flying Block B
+Unit/Name/FortressBombardmentMissile=Fortress Bombardment Missile
 Unit/Name/Harrier=Harrier
 Unit/Name/HarrierAirLeft=Harrier Air Left
 Unit/Name/MagMine=Mag Mine
@@ -723,6 +748,7 @@ Unit/Name/NomadMissileClusterMissile=Nomad Missile Cluster Missile
 Unit/Name/Phantom=Phantom
 Unit/Name/PlaceNomadDroneRelease=Place Nomad Drone Release
 Unit/Name/PlaceNomadTurretRelease=Place Nomad Turret Release
+Unit/Name/PlanetaryFortress=Bombardment Fortress
 Unit/Name/PointBreakDrone=Point Break Drone
 Unit/Name/PsychoMissileWeapon=Psycho Missile
 Unit/Name/PsychoMissilesDummyWeapon=Psycho Missiles Dummy
@@ -755,6 +781,7 @@ Upgrade/Name/ArmoredHousing=Armored Housing
 Upgrade/Name/AspisBlinkShield=Aspis Blink Shield
 Upgrade/Name/BattleBunker=Battle Bunker
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
+Upgrade/Name/BoxofScraps=Box of Scraps
 Upgrade/Name/BurrowBunker=Burrow Bunker
 Upgrade/Name/BurstAmplifier=Burst Amplifier
 Upgrade/Name/ChairsandAC=Chairs and A.C
@@ -779,6 +806,7 @@ Upgrade/Name/MASH=M.A.S.H
 Upgrade/Name/MercEdition=Merc Edition
 Upgrade/Name/MicroFusionReactor=Micro Fusion Reactor
 Upgrade/Name/MobileStockpile=Mobile Stockpile
+Upgrade/Name/NanitePulse=Nanite Pulse
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/PiercingStrike=Piercing Strike
 Upgrade/Name/PliableArmor=Pliable Armor

@@ -79,6 +79,13 @@
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
+    <CUpgrade id="BoxofScraps">
+        <EffectArray Reference="Unit,NaniteCloudEmitter,LifeArmor" Value="2"/>
+        <EffectArray Reference="Unit,NaniteCloudEmitterBurrowed,LifeArmor" Value="2"/>
+        <EffectArray Operation="Set" Reference="Abil,TerranBuild,InfoArray[Build25].Time" Value="0.000000"/>
+        <AffectedUnitArray value="NaniteCloudEmitterBurrowed"/>
+        <AffectedUnitArray value="NaniteCloudEmitter"/>
+    </CUpgrade>
     <CUpgrade id="BurrowBunker"/>
     <CUpgrade id="BurstAmplifier">
         <EffectArray Reference="Weapon,ScorpionMissiles,DisplayAttackCount" Value="2"/>
@@ -130,6 +137,7 @@
     <CUpgrade id="MobileStockpile">
         <AffectedUnitArray value="Adjudicator"/>
     </CUpgrade>
+    <CUpgrade id="NanitePulse"/>
     <CUpgrade id="PiercingStrike">
         <AffectedUnitArray value="Wolverine"/>
     </CUpgrade>

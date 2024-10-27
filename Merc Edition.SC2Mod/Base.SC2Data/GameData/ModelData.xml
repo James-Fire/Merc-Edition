@@ -73,6 +73,19 @@
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModelFoliage>
+    <CModelFoliage id="FortressBombardmentImpactModel">
+        <Model value="Assets\Effects\Terran\MiraHorner_NapalmBomb_Coop_Explosion\MiraHorner_NapalmBomb_Coop_Explosion.m3"/>
+        <ScaleMax value="1.800000,1.800000,1.500000"/>
+        <ScaleMin value="1.800000,1.800000,1.500000"/>
+    </CModelFoliage>
+    <CModelFoliage id="FortressBombardmentMarker">
+        <Model value="Assets\COOP\Mengsk\Splats\Artillery_Mengsk_COOP_Splat\Artillery_Mengsk_COOP_Splat.m3"/>
+    </CModelFoliage>
+    <CModel id="FortressBombardmentMissile">
+        <Model value="Assets\Effects\Terran\Mutator_Nuke_Missile\Mutator_Nuke_Missile.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
     <CModel id="NaniteCloudEmitter" parent="Building" Race="Terran">
         <Model value="Assets\Units\Terran\NaniteCloudTurret\NaniteCloudTurret.m3"/>
         <Events>
@@ -100,6 +113,11 @@
         <TechPurchaseCamera value="Star2CameraMid05"/>
         <UnitGlossaryCamera value="Star2CameraMid05"/>
     </CModel>
+    <CModelFoliage id="NanitePulse">
+        <Model value="Assets\Effects\Protoss\ScatterCannonMissileImpact_COOP\ScatterCannonMissileImpact_COOP.m3"/>
+        <ScaleMax value="3.800000,3.800000,0.150000"/>
+        <ScaleMin value="3.800000,3.800000,0.150000"/>
+    </CModelFoliage>
     <CModelFoliage id="SurvivorsGuilt">
         <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>
     </CModelFoliage>

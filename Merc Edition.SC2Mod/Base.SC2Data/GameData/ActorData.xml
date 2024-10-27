@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="FortressBombardmentMarker">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FortressBombardmentLaunchMissile.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand"/>
+        <On Terms="ActorCreation" Send="TimerSet 2.000000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetOpacity 0.000000 0.500000"/>
+        <On Terms="TimerExpired; TimerName 1" Send="TimerSet 0.600000 2"/>
+        <On Terms="TimerExpired; TimerName 2" Send="Destroy"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+    </CActorModel>
+    <CActorMissile id="FortressBombardmentMissile" parent="GenericAttackMissile" unitName="FortressBombardmentMissile"/>
+    <CActorRange id="FortressBombardmentMinimumRange" parent="RangeAbil" abil="FortressBombardment">
+        <Abil Link=""/>
+        <Range value="14.500000"/>
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconScale value="0.090000,0.010000"/>
+        <IconArcLength value="3.250000"/>
+        <IconTint value="255,255,0,0"/>
+        <RangeFlags index="Minimap" value="1"/>
+    </CActorRange>
+    <CActorModel id="NanitePulse" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.NanitePulseSA.Start" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="NanitePulseSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.NanitePulseSA.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="FortressBombardmentLaunchSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FortressBombardmentRP.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <CActorRange id="FortressBombardmentRange" parent="RangeAbil" abil="FortressBombardment">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+        <RangeFlags index="Minimap" value="1"/>
+    </CActorRange>
     <CActorSound id="BlinkStopSound">
         <On Terms="Effect.AspisBlink.Start; At Source" Send="Create"/>
     </CActorSound>
@@ -8,6 +45,14 @@
     </CActorSound>
     <CActorSound id="ColonistShip_LiftOff">
         <On Terms="AbilMorph.*.Start; MorphTo ZeusLanderFlying" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="FortressBombardmentImpactModel" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FortressBombardmentDamage2.Start" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="FortressBombardmentImpactSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FortressBombardmentDamage2.Start" Send="Create"/>
     </CActorSound>
     <!-- Ground Attack                                                                           -->
     <CActorMissile id="MilitarizedColonistShipGroundAttackMissile">
@@ -63,6 +108,7 @@
         <On Terms="AbilMorph.*.Start; MorphTo NaniteCloudEmitterBurrowed" Send="AnimBracketStop Work"/>
         <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD_B GLbirth,B GLstand,B GLdeath,B"/>
         <On Terms="UnitBirth.NaniteCloudEmitter" Send="Create"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBoxofScraps" Send="$Birth"/>
         <Model value="NaniteCloudEmitter"/>
         <CreepHeightClass value="Small"/>
         <BuildModel value="NaniteCloudEmitter"/>

@@ -298,6 +298,17 @@
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="FortressBombardmentImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Explosion_Metal_Fire_04.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="FortressBombardmentLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_04.wav" FacialGroup=""/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="60.102039" Volume="-96.000000"/>
+    </CSound>
     <CSound id="IrradiateNanitesLoop" parent="Combat">
         <AssetArray>
             <File value="Assets\Sounds\Thor_Repair_Loop.wav"/>
@@ -315,6 +326,14 @@
     </CSound>
     <CSound id="MissileTurret_HellstormAttackLaunch">
         <Volume value="-11.000000,-9.000000"/>
+    </CSound>
+    <CSound id="NanitePulseSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact3.wav" FacialGroup=""/>
+        <Pitch value="4.000000,6.000000"/>
+        <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="NomadMineDrone" parent="Combat">
         <AssetArray File="Assets\Sounds\WidowMine_Armed1a.wav" FacialGroup=""/>

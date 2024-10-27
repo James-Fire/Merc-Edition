@@ -72,12 +72,13 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    Wait(1.0, c_timeGame);
+    Wait(0.1, c_timeGame);
+    TriggerExecute(libBA5CCDED_gt_InitUnitReplace, true, false);
+    Wait(2.0, c_timeGame);
     TriggerExecute(libBA5CCDED_gt_InitACVMultibuild, true, false);
     TriggerExecute(libBA5CCDED_gt_InitMercEditionUpgrade, true, false);
     TriggerExecute(libBA5CCDED_gt_InitPassiveUpgrades, true, false);
     TriggerExecute(libBA5CCDED_gt_InitAllowingUnits, true, false);
-    TriggerExecute(libBA5CCDED_gt_InitUnitReplace, true, false);
     return true;
 }
 
@@ -277,7 +278,7 @@ bool libBA5CCDED_gt_InitUnitReplace_Func (bool testConds, bool runActions) {
     }
 
     TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_C69916B1"), true);
-    auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), 0), 0);
+    auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterHidden - 32))), 0);
     auto5694256B_u = UnitGroupCount(auto5694256B_g, c_unitCountAll);
     for (;; auto5694256B_u -= 1) {
         auto5694256B_var = UnitGroupUnitFromEnd(auto5694256B_g, auto5694256B_u);
@@ -765,6 +766,33 @@ void libBA5CCDED_gt_SamsonZeusInjectionPods_Init () {
     TriggerAddEventUnitCargo(libBA5CCDED_gt_SamsonZeusInjectionPods, null, false);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nanite Emitter Burrow
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NaniteEmitterBurrow_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGroupCount(UnitGroupAlliance(EventPlayer(), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster)), 6.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) == 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitIssueOrder(EventPlayerEffectUsedUnit(c_effectUnitCaster), Order(AbilityCommand("NaniteCloudEmitterBurrow", 0)), c_orderQueueReplace);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NaniteEmitterBurrow_Init () {
+    libBA5CCDED_gt_NaniteEmitterBurrow = TriggerCreate("libBA5CCDED_gt_NaniteEmitterBurrow_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_NaniteEmitterBurrow, c_playerAny, "NaniteTurretBurrowOrder");
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_Init_Init();
     libBA5CCDED_gt_InitACVMultibuild_Init();
@@ -784,6 +812,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_NomadSilentModeHeightUp_Init();
     libBA5CCDED_gt_NomadSilentModeHeightDown_Init();
     libBA5CCDED_gt_SamsonZeusInjectionPods_Init();
+    libBA5CCDED_gt_NaniteEmitterBurrow_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

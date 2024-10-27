@@ -31,6 +31,17 @@
             <Unit value="ACV"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="FortressBombardment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FortressBombardmentSwitch"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="75"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BombardmentFortress"/>
+        <Flags index="Transient" value="1"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
     <CAbilMorph id="NaniteCloudEmitterUnburrow">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
@@ -78,7 +89,6 @@
                 <DurationArray index="Delay" value="1"/>
             </SectionArray>
         </InfoArray>
-        <ValidatorArray value="NoEnemiesNearby"/>
     </CAbilMorph>
     <CAbilMorphPlacement id="MilitarizedColonistShipLand">
         <InfoArray index="0" Unit="ZeusLanderLanded"/>

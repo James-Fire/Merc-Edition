@@ -328,6 +328,7 @@
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
         </CardLayouts>
     </CUnit>
+    <CUnit id="FortressBombardmentMissile" parent="MISSILE"/>
     <CUnit id="NaniteCloudEmitter">
         <DeathRevealRadius value="3"/>
         <Facing value="29.9926"/>
@@ -348,8 +349,8 @@
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Structure" value="1"/>
-        <LifeStart value="250"/>
-        <LifeMax value="250"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
         <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <Sight value="7"/>
@@ -362,13 +363,15 @@
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="PoisonGasFiring"/>
         <BehaviorArray Link="NaniteTurretBurrow"/>
+        <BehaviorArray Link="NanitePulse"/>
         <WeaponArray Turret="LabTurret"/>
         <CardLayouts>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="Detector" Type="Passive" Behavior="DistortionSensors" Row="2" Column="3"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="NaniteCloudEmitterBurrow,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="BoxofScraps" Type="Passive" Requirements="UseBoxofScraps" Row="1" Column="0"/>
+            <LayoutButtons Face="NanitePulse" Type="Passive" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
@@ -405,8 +408,8 @@
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Structure" value="1"/>
-        <LifeStart value="250"/>
-        <LifeMax value="250"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
         <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <Sight value="7"/>
@@ -423,7 +426,8 @@
             <LayoutButtons Face="Detector" Type="Passive" Behavior="DistortionSensors" Row="2" Column="3"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="NaniteCloudEmitterUnburrow,Execute" Row="1" Column="4"/>
+            <LayoutButtons Face="NanitePulse" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="BoxofScraps" Type="Passive" Requirements="UseBoxofScraps" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
@@ -439,6 +443,14 @@
         <GlossaryPriority value="263"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
+    </CUnit>
+    <CUnit id="PlanetaryFortress">
+        <AbilArray Link="FortressBombardment"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Column="1"/>
+            <LayoutButtons index="1" Column="2"/>
+            <LayoutButtons Face="BombardmentFortress" Type="AbilCmd" AbilCmd="FortressBombardment,Execute" Row="2" Column="0"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Refinery">
         <AbilArray Link="SalvageShared"/>

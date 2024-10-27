@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareCargo id="1CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="2CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="3CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="3"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="4CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="4"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="5CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="5"/>
+    </CValidatorUnitCompareCargo>
     <CValidatorUnitAbil id="CasterCanAttack">
         <WhichUnit Value="Caster"/>
         <Find value="1"/>
@@ -26,6 +51,10 @@
     <CValidatorPlayerRequirement id="HaveApolloInjectionPods">
         <Find value="1"/>
         <Value value="UseApolloInjectionPods"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBoxofScraps">
+        <Find value="1"/>
+        <Value value="UseBoxofScraps"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveExplosiveCalibrations">
         <Find value="1"/>
@@ -82,6 +111,11 @@
         <Type value="Fraction"/>
         <Value value="0.8"/>
     </CValidatorUnitCompareVital>
+    <CValidatorLocationCompareRange id="MinimumRange15">
+        <ResultFailed value="Error,MinimumRange15"/>
+        <Compare value="GE"/>
+        <Range value="15"/>
+    </CValidatorLocationCompareRange>
     <CValidatorUnitCompareBehaviorCount id="NoApolloSurvivorGuiltCooldown">
         <Behavior value="SurvivorsGuiltApolloCD"/>
     </CValidatorUnitCompareBehaviorCount>

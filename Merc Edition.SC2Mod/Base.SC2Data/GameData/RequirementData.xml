@@ -79,6 +79,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBoxofScraps">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBoxofScrapsCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBurstAmplifier">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBurstAmplifierCompleteOnly"/>
@@ -162,6 +166,10 @@
     <CRequirement id="UseMobileStockpile">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeMobileStockpileCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseNanitePulse">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeNanitePulseCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseNeosteelCupHolders">
         <EditorCategories value="TechType:Ability"/>

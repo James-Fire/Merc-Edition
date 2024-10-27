@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="NanitePulseDamage">
+        <EditorCategories value=""/>
+        <Amount value="10"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="NanitePulseSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="7" Effect="NanitePulseDamage"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="250mmUranusCarronadesCP">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetUnit"/>
@@ -329,6 +339,96 @@
     <CEffectApplyBehavior id="ForceMissilesApplyBehavior">
         <Behavior value="ForceMissiles"/>
     </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="FortressBombardmentCP4">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="4"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP5">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="5"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP6">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="6"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP7">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="7"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP8">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="8"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP9">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="9"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="FortressBombardmentDamage2">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AttributeBonus index="Structure" value="200"/>
+        <Amount value="225"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="1" Fraction="1"/>
+        <AreaArray Radius="2.5" Fraction="0.5"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="FortressBombardmentFiringApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="FortressBombardmentFiring"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="FortressBombardmentLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="FortressBombardmentDamage2"/>
+        <AmmoUnit value="FortressBombardmentMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectRandomPointInCircle id="FortressBombardmentRP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="FortressBombardmentLaunchMissile"/>
+        <Radius value="8"/>
+        <DebugTrace value="1"/>
+    </CEffectRandomPointInCircle>
+    <CEffectSet id="FortressBombardmentSet">
+        <EditorCategories value=""/>
+        <EffectArray value="FortressBombardmentRP"/>
+        <EffectArray value="FortressBombardmentFiringApplyBehavior"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectSwitch id="FortressBombardmentSwitch">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <CaseArray Validator="1CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP5"/>
+        <CaseArray Validator="2CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP6"/>
+        <CaseArray Validator="3CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP7"/>
+        <CaseArray Validator="4CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP8"/>
+        <CaseArray Validator="5CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP9"/>
+        <CaseDefault value="FortressBombardmentCP4"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSwitch>
     <CEffectCreatePersistent id="HailstormMissilePodsCreatePersistentMerc">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
@@ -497,12 +597,9 @@
         <EffectArray value="ARESTargetLockABTarget"/>
         <EffectArray value="ARESTargetLockABCaster"/>
     </CEffectSet>
-    <CEffectIssueOrder id="NaniteTurretBurrowOrder">
+    <CEffectSet id="NaniteTurretBurrowOrder">
         <EditorCategories value="Race:Terran"/>
-        <WhichUnit Value="Caster"/>
-        <Abil value="NaniteCloudEmitterBurrow"/>
-        <CmdFlags index="Preempt" value="1"/>
-    </CEffectIssueOrder>
+    </CEffectSet>
     <CEffectLaunchMissile id="PharaohLaserBatteryLMSecondary">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>
@@ -548,12 +645,12 @@
         <ValidatorArray index="1" value="IsSamsonOR10energy"/>
     </CEffectSet>
     <CEffectEnumArea id="PoisonGasCloudSearch">
-        <SearchFilters value="Visible;Self,Player,Ally,Structure,Missile,Dead,Hidden,Invulnerable,Benign"/>
+        <SearchFilters value="Ground,Visible;Self,Player,Ally,Mechanical,Structure,Missile,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray index="0" Radius="6"/>
     </CEffectEnumArea>
     <CEffectDamage id="PoisonGasDamage">
         <EditorCategories value=""/>
-        <Amount value="3"/>
+        <Amount value="2"/>
         <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectDamage id="RagnarokNRollDamage" parent="DU_WEAP">
@@ -571,11 +668,6 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="RedlineReactor"/>
     </CEffectApplyBehavior>
-    <CEffectRemoveBehavior id="NaniteTurretRemoveBurrowTimer">
-        <EditorCategories value="Race:Terran"/>
-        <WhichUnit Value="Caster"/>
-        <BehaviorLink value="NaniteTurretBurrow"/>
-    </CEffectRemoveBehavior>
     <CEffectRemoveBehavior id="RemoveSpiderMineBurrowBehavior">
         <EditorCategories value=""/>
         <BehaviorLink value="VultureSpiderMineBurrowFirst"/>
@@ -583,11 +675,6 @@
     <CEffectApplyBehavior id="ApplySpiderMineBurrowBehavior">
         <EditorCategories value=""/>
         <Behavior value="VultureSpiderMineBurrowFirst"/>
-    </CEffectApplyBehavior>
-    <CEffectApplyBehavior id="NaniteTurretRenewBurrowTimer">
-        <EditorCategories value="Race:Terran"/>
-        <WhichUnit Value="Caster"/>
-        <Behavior value="NaniteTurretBurrow"/>
     </CEffectApplyBehavior>
     <CEffectCreateHealer id="Repair">
         <ValidatorArray index="1" value="SCVRepairinbunkercombine"/>

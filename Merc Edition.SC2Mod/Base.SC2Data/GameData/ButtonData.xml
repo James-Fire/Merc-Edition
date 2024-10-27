@@ -28,6 +28,14 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="BombardmentFortress">
+        <Icon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
+    </CButton>
+    <CButton id="BoxofScraps">
+        <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+    </CButton>
     <CButton id="BuildAdjudicator">
         <Icon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
@@ -151,12 +159,17 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
     </CButton>
+    <CButton id="NanitePulse">
+        <Icon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+    </CButton>
     <CButton id="TrainACV">
         <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>
         <EditorCategories value="Race:Terran"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="UpgradeToPlanetaryFortress"/>
     <CButton id="ZeusLanderTacticalJump">
         <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>

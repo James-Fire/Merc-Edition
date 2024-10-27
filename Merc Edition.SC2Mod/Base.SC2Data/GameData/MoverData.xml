@@ -73,6 +73,15 @@
         </MotionPhases>
         <MotionPhases index="1" removed="1"/>
     </CMoverMissile>
+    <CMoverMissile id="FortressBombardmentMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="55"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="3"/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverMissile id="NomadMissileClusterMissile">
         <MotionPhases>
             <Driver value="Ballistic"/>

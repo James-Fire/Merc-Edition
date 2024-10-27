@@ -120,6 +120,13 @@
     <CBehaviorBuff id="FireSuppressionSystem">
         <DisableValidatorArray index="1" value="SwannSuppressorRegularSuppressValidator"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="FortressBombardmentFiring">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1.2"/>
+        <Modification>
+            <AbilLinkDisableArray value="CommandCenterTransport"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="Irradiate">
         <Modification>
             <StateFlags index="SuppressCloak" value="1"/>
@@ -147,6 +154,23 @@
         <Limit value="4"/>
         <Slop value="500"/>
     </CBehaviorSpawn>
+    <CBehaviorBuff id="NaniteEmitterInstabuilddelay">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseBoxofScraps"/>
+        <Duration value="4"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Benign" value="1"/>
+            <AbilLinkDisableArray value="NaniteCloudEmitterUnburrow"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NanitePulse">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseNanitePulse"/>
+        <Period value="3"/>
+        <PeriodicEffect value="NanitePulseSA"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="NomadSilentMode">
         <Modification SightBonus="6">
             <ModifyFlags index="DisableWeapons" value="1"/>
@@ -663,7 +687,7 @@
     <CBehaviorBuff id="NaniteTurretBurrow">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <Period value="1"/>
+        <Period value="2"/>
         <PeriodicEffect value="NaniteTurretBurrowOrder"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="U-240RoundsBomb">
