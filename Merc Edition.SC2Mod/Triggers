@@ -189,7 +189,7 @@
         </Element>
         <Element Type="Param" Id="0A26764A">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000419"/>
-            <Value>1.0</Value>
+            <Value>2.0</Value>
             <ValueType Type="fixed"/>
         </Element>
         <Element Type="Param" Id="A94E0213">

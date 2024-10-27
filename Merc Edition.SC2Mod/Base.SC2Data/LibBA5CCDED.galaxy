@@ -99,7 +99,7 @@ bool libBA5CCDED_gt_InitACVMultibuild_Func (bool testConds, bool runActions) {
     }
 
     TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_3BD21F4E"), true);
-    Wait(1.0, c_timeGame);
+    Wait(2.0, c_timeGame);
     if ((TechTreeUpgradeCount(1, "MicroFusionReactor", c_techCountCompleteOnly) == 1)) {
         TechTreeAbilityAllow(1, AbilityCommand("AdvancedConstruction", 1), true);
         TechTreeAbilityAllow(1, AbilityCommand("AdvancedConstruction", 0), true);

@@ -246,7 +246,9 @@
         <EffectArray Operation="Set" Reference="Effect,CondorDeathrattleCP,Chance" Value="1"/>
         <AffectedUnitArray value="Condor"/>
     </CUpgrade>
-    <CUpgrade id="MercEdition"/>
+    <CUpgrade id="MercEdition">
+        <EffectArray Operation="Set" Reference="Unit,PlanetaryFortress,Name" Value="Unit/Name/BombardmentFortress"/>
+    </CUpgrade>
     <CUpgrade id="NeosteelCupHolders">
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.SightBonus" Value="3"/>

@@ -395,6 +395,7 @@
         <Death value="Blast"/>
         <AreaArray Radius="1" Fraction="1"/>
         <AreaArray Radius="2.5" Fraction="0.5"/>
+        <SearchFilters value="-;Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="FortressBombardmentFiringApplyBehavior">
         <WhichUnit Value="Caster"/>
