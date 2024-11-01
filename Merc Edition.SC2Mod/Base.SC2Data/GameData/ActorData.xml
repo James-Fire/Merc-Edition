@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="BurrowBunkerFrame" parent="ModelAddition">
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Opacity" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <Inherits index="TintColor" value="0"/>
+        <EditorCategories value=""/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Burrow Stand,Burrow Stand,Burrow Instant"/>
+    </CActorModel>
     <CActorModel id="FortressBombardmentMarker">
         <EditorCategories value=""/>
         <On Terms="Effect.FortressBombardmentLaunchMissile.Start; At Target" Send="Create"/>
@@ -20,6 +28,19 @@
         <IconTint value="255,255,0,0"/>
         <RangeFlags index="Minimap" value="1"/>
     </CActorRange>
+    <CActorModel id="GenericStunOverheadModel">
+        <On Terms="Behavior.StunnedPenetratorRound.On" Send="Create"/>
+        <On Terms="Behavior.StunnedPenetratorRound.Off" Send="Destroy"/>
+    </CActorModel>
+    <CActorModel id="Inspire" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Inspire.On" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.000000 1.000000"/>
+    </CActorModel>
+    <CActorSound id="InspireApply" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Inspire.On" Send="Create"/>
+    </CActorSound>
     <CActorModel id="NanitePulse" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.NanitePulseSA.Start" Send="Create"/>
@@ -132,6 +153,63 @@
             <Image value="Assets\Textures\Wireframe-Terran-LabGasTurret.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorBeamSimple id="PenetratorRoundCPBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <On Terms="Effect.PenetratorRoundCP.Initial" Send="Create"/>
+        <On Terms="Effect.PenetratorRoundCP.Initial" Send="TimerSet 1.500000 Kill"/>
+        <On Terms="TimerExpired; TimerName Kill" Send="Destroy"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="PenetratorRoundCPSite"/>
+        <HostImpactSiteOps Ops="SOpTargetPointStationary SOpShadow SOpMoveUpByDot5"/>
+    </CActorBeamSimple>
+    <CActorSiteMover id="PenetratorRoundCPSite">
+        <Sharing value="PerEffectTree"/>
+        <On Terms="Effect.PenetratorRoundCP.Initial" Send="Create"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow"/>
+    </CActorSiteMover>
+    <CActorSound id="PenetratorRoundLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.PenetratorRoundCP.Start" Send="Create"/>
+    </CActorSound>
+    <CActorUnit id="MercRaynor" parent="GenericUnitStandard" unitName="JimRaynor">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Effect.PenetratorRoundCP.Start" Send="AnimPlay Attack Attack"/>
+        <On Terms="ActorCreation" Send="TextureSelectById Decal_Terran_0002_01"/>
+        <On Terms="Abil.PenetratorRound.SourceFinishStop" Send="AnimClear Attack"/>
+        <Model value="RaynorLab"/>
+        <ModelFlags index="SuppressPlayerDecals" value="1"/>
+        <BuildModel value="RaynorLab"/>
+        <DeathArray index="Normal" ModelLink="MarineRaynorDeath" SoundLink="Raynor_Explode"/>
+        <DeathArray index="Fire" ModelLink="RaynorDeathFire" SoundLink="Uni_DeathFXFire"/>
+        <DeathActorModelLow value="UnitDeathModel"/>
+        <PlacementModel value="RaynorLab"/>
+        <PortraitModel value="RaynorMarinePortrait"/>
+        <StandAnimTurnTime value="5"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="60"/>
+        <BarWidth value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Marine-Raynor.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui-heroicon-raynor.dds"/>
+        <HighlightTooltip value="Unit/Name/MercRaynor"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Raynor_Ready"/>
+        <SoundArray index="Help" value="Raynor_Help"/>
+        <SoundArray index="What" value="Raynor_What"/>
+        <SoundArray index="Yes" value="Raynor_Yes"/>
+        <SoundArray index="Attack" value="Raynor_Attack"/>
+        <SoundArray index="Pissed" value="Raynor_Pissed"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-MarineRaynor.dds"/>
+        <UnitKillRank Text="UnitKillRank/MercRaynor"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Marine-Raynor.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModelMaterial id="SurvivorsGuilt" parent="BehaviorGlaze">
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
@@ -221,6 +299,7 @@
         <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetTintColor 128,128,128 1.000000"/>
         <On Terms="AbilMorph.*.Start; MorphTo Bunker" Send="SetScale 1.000000 1.000000"/>
         <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetTintColor 255,255,255 1.000000"/>
+        <On Terms="ActorCreation; ValidateUnit HaveBurrowBunker" Send="Create BurrowBunkerFrame"/>
     </CActorUnit>
     <CActorUnit id="BunkerBurrowed" parent="TerranBuildingEx" unitName="BunkerBurrowed">
         <Aliases value="_UnitHuge"/>

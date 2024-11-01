@@ -68,6 +68,11 @@
     <CModel id="BunkerBurrowedDeath" parent="BunkerDeathBase">
         <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
     </CModel>
+    <CModelFoliage id="BurrowBunkerFrame">
+        <Model value="Assets\Buildings\Terran\SupplyDepotEx1\SupplyDepotEx1.m3"/>
+        <ScaleMax value="0.800000,0.800000,0.500000"/>
+        <ScaleMin value="0.800000,0.800000,0.500000"/>
+    </CModelFoliage>
     <CModelFoliage id="ChemicalPlating">
         <Model value="Assets\Effects\Terran\Nanocloud_Damage_Shield\Nanocloud_Damage_Shield.m3"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
@@ -85,6 +90,9 @@
         <Model value="Assets\Effects\Terran\Mutator_Nuke_Missile\Mutator_Nuke_Missile.m3"/>
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="Inspire">
+        <Model value="Assets\Effects\Terran\Nova_Buff_Damage\Nova_Buff_Damage.m3"/>
     </CModel>
     <CModel id="NaniteCloudEmitter" parent="Building" Race="Terran">
         <Model value="Assets\Units\Terran\NaniteCloudTurret\NaniteCloudTurret.m3"/>
@@ -118,6 +126,27 @@
         <ScaleMax value="3.800000,3.800000,0.150000"/>
         <ScaleMin value="3.800000,3.800000,0.150000"/>
     </CModelFoliage>
+    <CModel id="PenetratorRoundCPBeam">
+        <Model value="Assets\Effects\Terran\ArchAngel_Xanthos_Experimentation_Railgun\ArchAngel_Xanthos_Experimentation_Railgun.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="Raynor2" parent="Unit">
+        <Model value="Assets\Units\Terran\MarineRaynor\MarineRaynor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="RaynorAttackImpact">
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
     <CModelFoliage id="SurvivorsGuilt">
         <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>
     </CModelFoliage>

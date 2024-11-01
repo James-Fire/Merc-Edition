@@ -127,6 +127,20 @@
             <AbilLinkDisableArray value="CommandCenterTransport"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="Inspire">
+        <Alignment value="Positive"/>
+        <Duration value="1"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.15"/>
+            <AdditiveAttackSpeedFactor value="0.15"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InspireAura">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.2"/>
+        <PeriodicEffect value="InspireAura"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="Irradiate">
         <Modification>
             <StateFlags index="SuppressCloak" value="1"/>
@@ -513,6 +527,17 @@
         <Duration value="1"/>
         <Modification>
             <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StunnedPenetratorRound">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-tosh-mindblast.dds"/>
+        <Duration value="5.6"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="Reveal" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SulfurMissiles">

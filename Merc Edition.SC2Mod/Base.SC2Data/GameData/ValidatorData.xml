@@ -56,6 +56,10 @@
         <Find value="1"/>
         <Value value="UseBoxofScraps"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBurrowBunker">
+        <Find value="1"/>
+        <Value value="UseBurrowBunker"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveExplosiveCalibrations">
         <Find value="1"/>
         <Value value="UseExplosiveCalibrations"/>

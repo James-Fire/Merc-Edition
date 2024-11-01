@@ -38,6 +38,7 @@ Button/Hotkey/MineDrone=E
 Button/Hotkey/MorphtoAgitator=C
 Button/Hotkey/MorphtoAnarchist=C
 Button/Hotkey/NormalModeNomad=D
+Button/Hotkey/PenetratorRound=Z
 Button/Hotkey/PointBreakDrone=D
 Button/Hotkey/RedlineReactor=E
 Button/Hotkey/Salvage=V

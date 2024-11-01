@@ -159,9 +159,21 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
     </CButton>
+    <CButton id="GiveEmSomePepper">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Inspire">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="NanitePulse">
         <Icon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+    </CButton>
+    <CButton id="PenetratorRound">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="TrainACV">
         <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>

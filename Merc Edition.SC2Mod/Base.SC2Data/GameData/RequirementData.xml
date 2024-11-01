@@ -83,6 +83,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBoxofScrapsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBurrowBunker">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBurrowBunkerCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBurstAmplifier">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBurstAmplifierCompleteOnly"/>

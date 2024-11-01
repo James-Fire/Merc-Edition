@@ -52,6 +52,9 @@
     <CRequirementCountUpgrade id="CountUpgradeBoxofScrapsCompleteOnly">
         <Count Link="BoxofScraps" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurrowBunkerCompleteOnly">
+        <Count Link="BurrowBunker" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBurstAmplifierCompleteOnly">
         <Count Link="BurstAmplifier" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

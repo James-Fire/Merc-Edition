@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="InspireApplyBehavior">
+        <Behavior value="Inspire"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="InspireAura">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="8" Effect="InspireApplyBehavior"/>
+    </CEffectEnumArea>
     <CEffectDamage id="NanitePulseDamage">
         <EditorCategories value=""/>
         <Amount value="10"/>
@@ -601,6 +609,22 @@
     <CEffectSet id="NaniteTurretBurrowOrder">
         <EditorCategories value="Race:Terran"/>
     </CEffectSet>
+    <CEffectDamage id="PenetratorRoundDamage">
+        <EditorCategories value=""/>
+        <Amount value="200"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="PenetratorRoundSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray RectangleWidth="1.5" RectangleHeight="7" Effect="PenetratorRoundSet"/>
+        <AreaRelativeOffset value="0,-1.5"/>
+    </CEffectEnumArea>
+    <CEffectSet id="PenetratorRoundSet">
+        <EditorCategories value=""/>
+        <EffectArray value="PenetratorRoundDamage"/>
+        <EffectArray value="StunnedPenetratorRoundApplyBehavior"/>
+    </CEffectSet>
     <CEffectLaunchMissile id="PharaohLaserBatteryLMSecondary">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>
@@ -665,6 +689,10 @@
         <EffectArray value="RailcannonDamage"/>
         <EffectArray value="WolverineFearSA"/>
     </CEffectSet>
+    <CEffectDamage id="RaynorWeaponU">
+        <AreaArray Radius="1.6" Fraction="0.5"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="RedlineReactorAB">
         <WhichUnit Value="Caster"/>
         <Behavior value="RedlineReactor"/>
@@ -1138,6 +1166,14 @@
         <PeriodicPeriodArray value="0"/>
         <ValidatorArray value="burrowbunkerspraynpayvalidators"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="PenetratorRoundCP">
+        <WhichLocation Value="CasterPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="PenetratorRoundSA"/>
+        <PeriodicOffsetArray value="0,-2.5,0"/>
+        <PeriodicPeriodArray value="0"/>
+        <InitialDelay value="0.15"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="SprayandPayDamage">
         <EditorCategories value=""/>
         <Amount value="6"/>
@@ -1159,6 +1195,9 @@
     </CEffectEnumArea>
     <CEffectApplyBehavior id="StunnedAnarchistLeapApplyBehavior">
         <Behavior value="StunnedAnarchistLeap"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="StunnedPenetratorRoundApplyBehavior">
+        <Behavior value="StunnedPenetratorRound"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SulfurMissilesApplyBehavior">
         <Behavior value="SulfurMissiles"/>
