@@ -369,6 +369,7 @@
     </CSound>
     <CSound id="PenetratorRoundLaunch" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Raynor\Raynor_PenetratorRoundLaunch0.wav" FacialGroup=""/>
+        <Volume value="3.000000,3.000000"/>
     </CSound>
     <CSound id="RailcannonImpact" parent="Combat">
         <EditorCategories value="Race:Terran"/>

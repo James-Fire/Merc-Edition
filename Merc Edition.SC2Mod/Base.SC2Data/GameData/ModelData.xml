@@ -78,6 +78,37 @@
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModelFoliage>
+    <CModel id="HankFlashFlameSABeam">
+        <Model value="Assets\Effects\Terran\FlameTurretLaunch\FlameTurretLaunch.m3"/>
+    </CModel>
+    <CModel id="HankHarnack" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\FirebatMercenary\FirebatMercenary.m3"/>
+        <Occlusion value="Show"/>
+        <TextureDeclares Prefix="incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="merc_incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="HankHarnackDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\FirebatMercenaryDeath\FirebatMercenaryDeath.m3"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <TextureDeclares Prefix="incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="merc_incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="HankHarnackPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\FirebatMercenaryPortrait\FirebatMercenaryPortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\FirebatPortrait.fxa"/>
+        <Image value="Assets\Textures\FirebatMercenaryPortrait_Static.dds"/>
+        <Lighting value="FirebatMercenaryPortrait"/>
+    </CModel>
     <CModelFoliage id="FortressBombardmentImpactModel">
         <Model value="Assets\Effects\Terran\MiraHorner_NapalmBomb_Coop_Explosion\MiraHorner_NapalmBomb_Coop_Explosion.m3"/>
         <ScaleMax value="1.800000,1.800000,1.500000"/>
@@ -144,8 +175,8 @@
         <UnitGlossaryCamera value="Star2CameraMid03"/>
     </CModel>
     <CModel id="RaynorAttackImpact">
-        <ScaleMax value="3.000000,3.000000,3.000000"/>
-        <ScaleMin value="3.000000,3.000000,3.000000"/>
+        <ScaleMax value="6.000000,6.000000,6.000000"/>
+        <ScaleMin value="6.000000,6.000000,6.000000"/>
     </CModel>
     <CModelFoliage id="SurvivorsGuilt">
         <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>

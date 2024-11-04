@@ -9,6 +9,7 @@ Abil/Name/CharonDropshipTrain=Train
 Abil/Name/CondorSpiderMineUnburrow=Spider Mine Unburrow
 Abil/Name/CondorSpiderMines=Use Spider Mines
 Abil/Name/DevilDogGrapple=Grapple
+Abil/Name/FlashFlame=Flash Flame
 Abil/Name/FortressBombardment=Fortress Bombardment
 Abil/Name/GreaterHeal=Greater Heal
 Abil/Name/IgniteAfterburnersHelsAngel=Ignite Afterburners
@@ -167,6 +168,7 @@ Button/Name/CharonDropshipTrainSkibisAngel=Train Skibi's Angel
 Button/Name/ChemicalPlating=Chemical Plating
 Button/Name/CloakPhantom=Cloak
 Button/Name/CombatDrugs=Combat Drugs
+Button/Name/Combustion=Combustion
 Button/Name/ConcussiveShrapnel=Concussive Shrapnel
 Button/Name/ConfederateReactor=Confederate Reactor
 Button/Name/DeadManSwitch=Dead Man Switch
@@ -182,6 +184,7 @@ Button/Name/EnergyRadar=Energy Radar
 Button/Name/ExplosiveCalibrations=Explosive Calibrations
 Button/Name/FerrierofSouls=Ferrier of Souls
 Button/Name/FireOnTheMoveUniversal=Fire On The Move
+Button/Name/FlashFlames=Flash Flames
 Button/Name/ForceMissiles=Force Missiles
 Button/Name/GiveEmSomePepper=Give 'Em Some Pepper
 Button/Name/HyperjumpStarcruiser=Tactical Jump
@@ -204,6 +207,7 @@ Button/Name/LowGradeStims=Low Grade Stims
 Button/Name/MASH=M.A.S.H
 Button/Name/MagMine=Mag Mine
 Button/Name/MagrailMunitions=Magrail Munitions
+Button/Name/Meltdown=Meltdown
 Button/Name/MercCommander=Merc Commander
 Button/Name/MineDrone=Mine Drone
 Button/Name/MorphtoAgitator=Morph to Agitator
@@ -308,6 +312,7 @@ Button/Tooltip/CharonDropshipTrainSkibisAngel=Support troopers. Heals nearby bio
 Button/Tooltip/ChemicalPlating=Increases Devil Dog armor by 3 and grants immunity to acid explosions.
 Button/Tooltip/CloakPhantom=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,PhantomCloak,Modification.VitalRegenArray[2] + Unit,Phantom,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/CombatDrugs=Block B heal for 20% of their maximum life when dealing damage. While out of combat, they regenerate 2 life per second.
+Button/Tooltip/Combustion=Hank Harnack constantly emits excess heat from his suit, slowing nearby enemies by 60% and dealing 30 damage per second. Damage dealt this way heals Hank for 25% of the damage amount.
 Button/Tooltip/ConcussiveShrapnel=Hammer Security attacks deal slight damage to enemies in an area and cone behind the target, and briefly slow all units hit.
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ConfederateReactor=Copperheads gain 1 range and movement speed, and 35% attack speed.
@@ -326,9 +331,11 @@ Button/Tooltip/ExplosiveCalibrations=Seeker Missiles deal 40% more damage, have 
 Button/Tooltip/FerrierofSouls=Upon taking damage, become Super Cloaked and gain +3 movement speed for <d time="7"/>. Cannot occur more than once every <d time="84"/>.
 Button/Tooltip/FireOnTheMove=The Copperhead can fire its Rail Gun while moving.
 Button/Tooltip/FireOnTheMoveUniversal=Can attack while moving.
+Button/Tooltip/FlashFlames=Fire two streams of flame that each deal 80 damage.
 Button/Tooltip/FlyingBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ForceMissiles=Scorpion Missiles stun their target for a short time.
 Button/Tooltip/GiveEmSomePepper=Raynor's weapon deals partial splash damage.
+Button/Tooltip/HankHarnack=Specialized anti-infantry attacker.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/HyperjumpStarcruiser=After <d time="6"/>, warps to the target location. The Starcruiser is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Button/Tooltip/IFFSpiderRounds=Siege Breakers deal +60 damage to the main target, deal 80% less damage to friendly units, and leave behind a spider mine from sieged attacks.
@@ -353,6 +360,7 @@ Button/Tooltip/MASH=Removes the Charon Dropship's need for energy, allows healin
 Button/Tooltip/MagMine=Travels in a straight line and deals area damage to nearby units on impact.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/MagrailMunitions=Has an additional attack that deals 20 damage every <d time="42"/>.
 Button/Tooltip/MedivacSpeedBoost=Increases the Charon Dropship's movement speed by 70% for <d time="8"/>.
+Button/Tooltip/Meltdown=When Hank Harnack is defeated, he explodes, dealing 500 damage to enemies in a large area around him.
 Button/Tooltip/MercCommander=The Wolverine provides nearby mercenary units 1 sight radius, 0.5 movement speed, 10% attack speed, and 0.5 range. These buffs stack twice.
 Button/Tooltip/MercMedicHeal=Heals a friendly biological target.<n/><n/><c val="f078ff">Heals <d ref="Effect,SkibisAngelHeal,RechargeVitalRate"/> life per <d ref="Effect,SkibisAngelHeal,RechargeVitalRate * Effect,SkibisAngelHeal,DrainVitalCostFactor"/> energy.
 Button/Tooltip/MineDrone=Cloaked device that automatically deploys and replenishes spider mines.
@@ -532,6 +540,11 @@ Effect/Name/GreetingGrenadeDamage=Greeting Grenade Damage
 Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
 Effect/Name/HailstormMissilePodsCreatePersistentMerc=Hellstorm Missile Pods (Create Persistent) Merc
 Effect/Name/HaloRocketsSet=Halo Rockets Set
+Effect/Name/HankFlashFlameCP=Hank Flash Flame CP
+Effect/Name/HankFlashFlameDamage=Hank Flash Flame Damage
+Effect/Name/HankFlashFlameInitialCP=Hank Flash Flame Initial CP
+Effect/Name/HankFlashFlameSA=Hank Flash Flame SA
+Effect/Name/HankMeltdown=Hank Meltdown
 Effect/Name/HarrierRecall=Recall
 Effect/Name/HellbornFlamethrowerCP=Hellborn Flamethrower CP
 Effect/Name/HellbornFlamethrowerDamage=Hellborn Flamethrower Damage
@@ -754,6 +767,7 @@ Unit/Name/DuskWingWeaponSecondary=Dusk Wing Secondary
 Unit/Name/DuskWingWeaponTertiary=Dusk Wing Tertiary
 Unit/Name/FlyingBlockB=Flying Block B
 Unit/Name/FortressBombardmentMissile=Fortress Bombardment Missile
+Unit/Name/HankHarnack=Hank Harnack
 Unit/Name/Harrier=Harrier
 Unit/Name/HarrierAirLeft=Harrier Air Left
 Unit/Name/JimRaynor=Jim Raynor

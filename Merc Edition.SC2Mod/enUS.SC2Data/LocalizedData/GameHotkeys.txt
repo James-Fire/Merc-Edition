@@ -28,6 +28,7 @@ Button/Hotkey/DeadManSwitch=
 Button/Hotkey/DevilDogGrapple=G
 Button/Hotkey/EnableBatteries=B
 Button/Hotkey/EnableRagnarok=R
+Button/Hotkey/FlashFlames=Z
 Button/Hotkey/HyperjumpStarcruiser=T
 Button/Hotkey/IgniteAfterburnersHelsAngel=B
 Button/Hotkey/JetPackOverdrive=B

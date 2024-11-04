@@ -62,6 +62,10 @@
         <AlertIcon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
         <EditorCategories value="Race:Protoss"/>
     </CButton>
+    <CButton id="Combustion">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_combustion.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_combustion.dds"/>
+    </CButton>
     <CButton id="DeadManSwitch">
         <Icon value="Assets\Textures\btn-techupgrade-terran-immortalityprotocol.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-immortalityprotocol.dds"/>
@@ -159,11 +163,19 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
     </CButton>
+    <CButton id="FlashFlames">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_flame.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_flame.dds"/>
+    </CButton>
     <CButton id="GiveEmSomePepper">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_acquireweakspot.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_acquireweakspot.dds"/>
     </CButton>
     <CButton id="Inspire">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_inspire.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_inspire.dds"/>
+    </CButton>
+    <CButton id="Meltdown">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
@@ -172,8 +184,8 @@
         <AlertIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
     </CButton>
     <CButton id="PenetratorRound">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
     </CButton>
     <CButton id="TrainACV">
         <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>

@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreatePersistent id="HankFlashFlameCP">
+        <EditorCategories value=""/>
+        <OffsetVectorStartLocation Value="CasterPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="HankFlashFlameSA"/>
+        <PeriodicOffsetArray value="0,3,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="HankFlashFlameInitialCP">
+        <EditorCategories value=""/>
+        <OffsetVectorStartLocation Value="CasterPoint"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="HankFlashFlameCP"/>
+        <PeriodicOffsetArray value="-1,0,0"/>
+        <PeriodicOffsetArray value="1,0,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="HankFlashFlameDamage">
+        <EditorCategories value=""/>
+        <Amount value="80"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="HankFlashFlameSA">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray RectangleWidth="1" RectangleHeight="5" Effect="HankFlashFlameDamage"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="HankMeltdown">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <Amount value="500"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="4" Fraction="1"/>
+        <AreaArray Radius="6" Fraction="0.5"/>
+        <AreaArray Radius="9" Fraction="0.25"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="InspireApplyBehavior">
         <Behavior value="Inspire"/>
     </CEffectApplyBehavior>

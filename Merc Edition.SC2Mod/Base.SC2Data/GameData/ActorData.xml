@@ -8,6 +8,60 @@
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="AnimGroupApply Burrow Stand,Burrow Stand,Burrow Instant"/>
     </CActorModel>
+    <CActorBeamSimple id="HankFlashFlameSABeam" parent="BeamSimpleAnimationStyleContinuous">
+        <On Terms="Effect.HankFlashFlameSA.Start" Send="Create"/>
+        <On Terms="Effect.HankFlashFlameSA.Start" Send="TimerSet 1.000000 Kill"/>
+        <On Terms="TimerExpired; TimerName Kill" Send="Destroy"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="HankFlashFlameSASite"/>
+        <HostImpactSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+    </CActorBeamSimple>
+    <CActorSiteMover id="HankFlashFlameSASite">
+        <Sharing value="PerEffectTree"/>
+        <On Terms="Effect.HankFlashFlameSA.Start; At Target" Send="Create"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow"/>
+    </CActorSiteMover>
+    <CActorUnit id="HankHarnack" parent="GenericUnitStandard" unitName="HankHarnack">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Behavior.MercGroundDrop.Create" Send="Create DevilDogDropModel"/>
+        <On Terms="Abil.attack.ReadyStop" Target="DevilDogAttackModel" Send="SetOpacity 0.000000 0.250000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Marauder_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="HankHarnackDeath" SoundLink="Firebat_Explode"/>
+        <PortraitModel value="HankHarnackPortrait"/>
+        <WalkAnimMoveSpeed value="1.875"/>
+        <BarOffset value="77"/>
+        <BarWidth value="45"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-firebat-mercenary.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="FirebatGroupWhat"/>
+        <GroupSoundArray index="Yes" value="FirebatGroupYes"/>
+        <GroupSoundArray index="Attack" value="FirebatGroupAttack"/>
+        <GroupSoundArray index="Board" value="FirebatGroupBoard"/>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-FirebatMercenary.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Birth" value="FirebatBirth"/>
+        <SoundArray index="Ready" value="Firebat_Ready"/>
+        <SoundArray index="Help" value="Firebat_Help"/>
+        <SoundArray index="What" value="Firebat_What"/>
+        <SoundArray index="Yes" value="Firebat_Yes"/>
+        <SoundArray index="Attack" value="Firebat_Attack"/>
+        <SoundArray index="Pissed" value="Firebat_Pissed"/>
+        <SoundArray index="Movement" value="FirebatMovement"/>
+        <SoundArray index="Turning" value="FirebatTurning"/>
+        <SoundArray index="Board" value="FirebatBoard"/>
+        <SoundArray index="Click" value="FirebatClick"/>
+        <SoundArray index="ClickError" value="FirebatClickError"/>
+        <SoundArray index="Highlight" value="FirebatHighlight"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-FirebatMercenary.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-firebat-mercenary.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="FortressBombardmentMarker">
         <EditorCategories value=""/>
         <On Terms="Effect.FortressBombardmentLaunchMissile.Start; At Target" Send="Create"/>

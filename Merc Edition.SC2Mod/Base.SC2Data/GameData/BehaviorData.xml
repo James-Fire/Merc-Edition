@@ -134,6 +134,7 @@
             <AdditiveMoveSpeedFactor value="0.15"/>
             <AdditiveAttackSpeedFactor value="0.15"/>
         </Modification>
+        <InfoIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_inspire.dds"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="InspireAura">
         <InfoFlags index="Hidden" value="1"/>

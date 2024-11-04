@@ -31,6 +31,13 @@
             <Unit value="ACV"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="FlashFlame">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="HankFlashFlameInitialCP"/>
+        <Range value="5"/>
+        <CursorRangeMode value="ForceToMax"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FlashFlames"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="FortressBombardment">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="FortressBombardmentSwitch"/>
