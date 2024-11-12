@@ -8,27 +8,156 @@
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="AnimGroupApply Burrow Stand,Burrow Stand,Burrow Instant"/>
     </CActorModel>
+    <!-- ...Fire!............................................................................... -->
+    <CActorRegionCircle id="FirebatTreeKiller">
+        <On Terms="Effect.HankWeaponSA.Start; At Effect" Send="Create"/>
+        <On Terms="Effect.HankWeaponSA.Start; At Effect" Send="Destroy"/>
+    </CActorRegionCircle>
+    <CActorAction id="RattlesnakeAttack" parent="HammerSecurityAttackBase" effectImpact="RattlesnakeWeaponDamage" effectLaunch="HammerSecurityLM">
+        <On Terms="Effect.RattlesnakeWeaponLM.Start; At Caster; !ValidateEffect PunisherGrenadesResearched" Send="Create"/>
+        <LaunchAttachQuery Methods="AMPatternMarauder"/>
+        <Missile value="RattlesnakeAttackMissile"/>
+        <ImpactPhysics Name="PunisherGrenadesImpact" MatchKeys="Basic" Physics="MarauderAttackDeathForce"/>
+    </CActorAction>
+    <CActorMissile id="RattlesnakeAttackMissile" parent="GenericAttackMissile" unitName="RattlesnakeWeapon"/>
+    <CActorAction id="RattlesnakeUpgradedAttack" parent="HammerSecurityAttackBase" effectImpact="RattlesnakeWeaponDamage" effectLaunch="HammerSecurityLM">
+        <On Terms="Effect.RattlesnakeWeaponLM.Start; At Caster; ValidateEffect PunisherGrenadesResearched" Send="Create"/>
+        <LaunchAttachQuery Methods="AMPatternMarauder"/>
+        <Missile value="RattlesnakeAttackMissile"/>
+        <ImpactMap index="None" Model="MarauderUpgradedAttackImpact"/>
+        <ImpactPhysics Name="PunisherGrenadesImpact" MatchKeys="Basic" Physics="MarauderAttackDeathForce"/>
+    </CActorAction>
+    <CActorUnit id="Rattlesnake" parent="GenericUnitBase" unitName="Rattlesnake">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="ActorCreation" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Behavior.MercGroundDrop.Create" Send="Create HammerSecurityDropModel"/>
+        <On Terms="Effect.HammerSecurityLM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
+        <On Terms="Effect.HammerSecurityLM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.HammerSecurityLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>
+        <On Terms="Effect.HammerSecurityLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackLeft"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackRight"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Marauder_Land"/>
+        <On Terms="Effect.MagrailMunitionsLaunchMissile.Start" Send="AnimPlay Attack Attack"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="RattlesnakeDeath" SoundLink="Marauder_Explode"/>
+        <PortraitModel value="RattlesnakePortrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="60"/>
+        <BarWidth value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Marauder-mercenary.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="MarauderGroupWhat"/>
+        <GroupSoundArray index="Yes" value="MarauderGroupYes"/>
+        <GroupSoundArray index="Attack" value="MarauderGroupAttack"/>
+        <GroupSoundArray index="Board" value="MarauderGroupBoard"/>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-MarauderMercenary.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Birth" value="MarauderBirth"/>
+        <SoundArray index="Ready" value="Marauder_Ready"/>
+        <SoundArray index="Help" value="Marauder_Help"/>
+        <SoundArray index="What" value="Marauder_What"/>
+        <SoundArray index="Yes" value="Marauder_Yes"/>
+        <SoundArray index="Attack" value="Marauder_Attack"/>
+        <SoundArray index="Pissed" value="Marauder_Pissed"/>
+        <SoundArray index="Movement" value="MarauderMovement"/>
+        <SoundArray index="Turning" value="MarauderTurning"/>
+        <SoundArray index="Board" value="MarauderBoard"/>
+        <SoundArray index="Click" value="MarauderClick"/>
+        <SoundArray index="ClickError" value="MarauderClickError"/>
+        <SoundArray index="Highlight" value="MarauderHighlight"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-MarauderMercenary.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Marauder-mercenary.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="HankCombustAura" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.CombustionAura.On" Send="Create"/>
+        <On Terms="Behavior.CombustionAura.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.400000"/>
+        <HostSiteOps Ops="SOpAttachHarness" HoldRotation="1"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
+    <CActorSound id="HankFlashFlame" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.HankFlashFlameInitialCP.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="HankFlashFlame2" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.HankFlashFlameInitialCP.Start" Send="Create"/>
+    </CActorSound>
     <CActorBeamSimple id="HankFlashFlameSABeam" parent="BeamSimpleAnimationStyleContinuous">
-        <On Terms="Effect.HankFlashFlameSA.Start" Send="Create"/>
-        <On Terms="Effect.HankFlashFlameSA.Start" Send="TimerSet 1.000000 Kill"/>
-        <On Terms="TimerExpired; TimerName Kill" Send="Destroy"/>
+        <On Terms="Effect.HankFlashFlameCP.Start" Send="Create"/>
+        <On Terms="Effect.HankFlashFlameCP.Start" Send="TimerSet 0.500000 Kill"/>
+        <On Terms="TimerExpired; TimerName Kill" Send="SetOpacity 0.000000 0.300000"/>
+        <On Terms="ActorCreation" Send="SetOpacity"/>
+        <On Terms="ActorCreation" Send="SetOpacity 1.000000 0.200000"/>
+        <On Terms="TimerExpired; TimerName Kill" Send="TimerSet 0.500000 Kill2"/>
+        <On Terms="TimerExpired; TimerName Kill2" Send="Destroy"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
         <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
-        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
         <HostImpact Subject="HankFlashFlameSASite"/>
-        <HostImpactSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+        <HostImpactSiteOps Ops="SOpTargetPointStationary SOpShadow SOpMoveUpByDot5 SOpMoveUpByDot5"/>
     </CActorBeamSimple>
     <CActorSiteMover id="HankFlashFlameSASite">
         <Sharing value="PerEffectTree"/>
-        <On Terms="Effect.HankFlashFlameSA.Start; At Target" Send="Create"/>
+        <On Terms="Effect.HankFlashFlameCP.Start; At Source" Send="Create"/>
         <On Terms="ActorOrphan" Send="Destroy"/>
         <HostSiteOps Ops="SOpShadow"/>
     </CActorSiteMover>
+    <CActorModel id="HankMeltdown" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.HankMeltdown.Start" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="HankMeltdown2" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.HankMeltdown.Start" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="HankMeltdownSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.HankMeltdown.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="HankMeltdownSound2" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.HankMeltdown.Start" Send="Create"/>
+    </CActorSound>
+    <CActorAction id="HankWeaponAttack" parent="GenericAttackBase" effectAttack="DevilDogCreatePersistent">
+        <On Terms="Effect.HankWeaponSet.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.DevilDogDamage.Start; At Caster; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <LaunchAttachQuery Methods="Weapon"/>
+        <LaunchAssets Model="FirebatAttackLaunch" Sound="FirebatAttackLaunch"/>
+        <LaunchModel value="HankWeaponAttackModel"/>
+        <ContainerAssets Model="FirebatBunkerAttackLaunch" Sound="FirebatAttackLaunch"/>
+        <ImpactMap index="None" Model="FirebatAttackImpact" Sound="Firebat_AttackImpact"/>
+    </CActorAction>
+    <CActorModel id="HankWeaponAttackModel" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="ActorCreation; ValidateUnit BearclawNozzlesPurchased" Send="SetScale 2.250000,1.800000,1.000000"/>
+    </CActorModel>
+    <CActorFoliageFXSpawner id="HankWeaponFoliageFXSpawner" parent="FoliageFXSpawnerFire">
+        <On Terms="Effect.HankWeaponSA.Start" Send="Create"/>
+        <Radius value="0.600000"/>
+    </CActorFoliageFXSpawner>
+    <CActorModel id="HankWeaponImpactModelFlames" parent="ModelAnimationStyleOneShot">
+        <Terms value="Cap 1"/>
+        <On Terms="Effect.HankWeaponDamage.Start; At Target" Send="Create"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachRandomDamage"/>
+        <Model value="ImpactModelFlames"/>
+    </CActorModel>
     <CActorUnit id="HankHarnack" parent="GenericUnitStandard" unitName="HankHarnack">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
         <On Terms="Behavior.MercGroundDrop.Create" Send="Create DevilDogDropModel"/>
         <On Terms="Abil.attack.ReadyStop" Target="DevilDogAttackModel" Send="SetOpacity 0.000000 0.250000"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Marauder_Land"/>
+        <On Terms="Abil.FlashFlame.SourceApproachStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="Abil.FlashFlame.SourceFinishStop" Send="AnimClear Attack"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="HankHarnackDeath" SoundLink="Firebat_Explode"/>
         <PortraitModel value="HankHarnackPortrait"/>
@@ -209,7 +338,7 @@
     </CActorUnit>
     <CActorBeamSimple id="PenetratorRoundCPBeam" parent="BeamSimpleAnimationStyleContinuous">
         <On Terms="Effect.PenetratorRoundCP.Initial" Send="Create"/>
-        <On Terms="Effect.PenetratorRoundCP.Initial" Send="TimerSet 1.500000 Kill"/>
+        <On Terms="Effect.PenetratorRoundCP.Initial" Send="TimerSet 1.200000 Kill"/>
         <On Terms="TimerExpired; TimerName Kill" Send="Destroy"/>
         <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
         <HostLaunchSiteOps Ops="SOpAttachWeapon"/>

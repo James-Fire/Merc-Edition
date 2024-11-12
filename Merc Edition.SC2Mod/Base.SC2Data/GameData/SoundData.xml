@@ -309,6 +309,38 @@
         <VolumeRolloffPoints Distance="10.000000"/>
         <VolumeRolloffPoints Distance="60.102039" Volume="-96.000000"/>
     </CSound>
+    <CSound id="HankFlashFlame" parent="Combat">
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_05.wav" FacialGroup=""/>
+        <Pitch value="4.000000,5.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="HankFlashFlame2" parent="Combat">
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_05.wav" FacialGroup=""/>
+        <Pitch value="4.000000,5.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="HankMeltdownSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Gen_Explo_08.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="HankMeltdownSound2" parent="Combat">
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_04.wav" FacialGroup=""/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="57.686390" Volume="-2.420000"/>
+        <VolumeRolloffPoints Distance="100.127090" Volume="-20.639999"/>
+    </CSound>
     <CSound id="InspireApply" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch1.wav" FacialGroup=""/>

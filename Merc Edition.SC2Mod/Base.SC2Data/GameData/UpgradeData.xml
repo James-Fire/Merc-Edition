@@ -77,6 +77,8 @@
     <CUpgrade id="BearclawGauntlets">
         <EffectArray Operation="Set" Reference="Effect,DevilDogSearchArea,AreaArray[0].Radius" Value="0.96"/>
         <EffectArray Operation="Set" Reference="Actor,DevilDogAttackModel,Scale" Value="2.000000"/>
+        <EffectArray Reference="Effect,HankWeaponSA,AreaArray[0].Radius" Value="0.96"/>
+        <EffectArray Operation="Set" Reference="Actor,HankWeaponAttackModel,Scale" Value="2.000000"/>
         <AffectedUnitArray value="DevilDog"/>
     </CUpgrade>
     <CUpgrade id="BoxofScraps">

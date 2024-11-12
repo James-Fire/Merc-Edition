@@ -109,6 +109,23 @@
         <DisableValidatorArray value="CasterNotRecentlyDealtDamage"/>
         <Modification MoveSpeedBonus="1.25"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="Combustion">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_combustion.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.44"/>
+        <Period value="0.33"/>
+        <PeriodicEffect value="HankCombustionDamage"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="-0.6"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombustionAura">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.33"/>
+        <PeriodicEffect value="HankCombustionSA"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="FerrierofSouls">
         <Tooltip value="Button/Tooltip/FerrierofSouls"/>
         <Alignment value="Positive"/>

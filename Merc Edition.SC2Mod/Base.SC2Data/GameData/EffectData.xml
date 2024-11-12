@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSet id="RattlesnakeWeaponSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="RattlesnakeWeaponDamage"/>
+        <EffectArray value="ConcussiveShrapnelApplyBehavior"/>
+        <EffectArray value="ConcussiveShrapnelSA"/>
+        <EffectArray value="ConcussiveShrapnelConeSA"/>
+        <EffectArray value="ConcussiveShrapnelCP"/>
+    </CEffectSet>
+    <CEffectDamage id="RattlesnakeWeaponDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="40"/>
+        <Kind value="Ranged"/>
+        <Amount value="40"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RattlesnakeWeaponLM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="RattlesnakeWeaponSet"/>
+        <AmmoUnit value="RattlesnakeWeapon"/>
+        <Movers Link="PunisherGrenadesWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="HankWeaponCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourcePoint"/>
+        <OffsetVectorStartLocation Value="SourcePoint"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="HankWeaponSA"/>
+        <PeriodicOffsetArray value="0,-0.5,0"/>
+        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="0,-1.5,0"/>
+        <PeriodicOffsetArray value="0,-2,0"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="HankWeaponDamage" parent="DU_WEAP_SPLASH">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="12"/>
+        <Amount value="24"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="HankWeaponSA" parent="EA_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="0.6" Effect="HankWeaponDamage"/>
+    </CEffectEnumArea>
+    <CEffectSet id="HankWeaponSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="HankWeaponCP"/>
+        <EffectArray value="HankWeaponDamage"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="HankCombustionAB">
+        <Behavior value="Combustion"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="HankCombustionDamage">
+        <EditorCategories value=""/>
+        <Amount value="10"/>
+        <Death value="Fire"/>
+        <LeechFraction index="Life" value="0.2"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="HankCombustionSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="4.5" Effect="HankCombustionAB"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="HankFlashFlameCP">
         <EditorCategories value=""/>
         <OffsetVectorStartLocation Value="CasterPoint"/>
@@ -24,7 +92,6 @@
     </CEffectDamage>
     <CEffectEnumArea id="HankFlashFlameSA">
         <EditorCategories value=""/>
-        <DebugTrace value="1"/>
         <LaunchLocation Value="CasterUnit"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray RectangleWidth="1" RectangleHeight="5" Effect="HankFlashFlameDamage"/>

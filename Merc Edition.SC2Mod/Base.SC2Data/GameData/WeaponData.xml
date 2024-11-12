@@ -70,6 +70,33 @@
         <Period value="0.7607"/>
         <Effect value="DevastatorMissilesMercLaunchMissile"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="HammerSecurity">
+        <DisplayAttackCount value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TheConcillator">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="RattlesnakeWeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="RattlesnakeWeaponLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HankWeapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="HankWeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="1.4"/>
+        <DamagePoint value="0.005"/>
+        <Effect value="HankWeaponSet"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="DuskWingBanshee">
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
@@ -261,9 +288,6 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="DevilDogFlameThrower">
-        <Backswing value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="AGRShadeHunter">
         <EditorCategories value="Race:Terran"/>

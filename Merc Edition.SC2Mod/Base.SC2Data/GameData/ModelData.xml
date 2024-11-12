@@ -78,11 +78,40 @@
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModelFoliage>
+    <CModel id="RattlesnakeWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Rattlesnake" parent="Unit">
+        <Model value="Assets\Models\Marauder_RattleSnake.m3"/>
+        <AttachProps Id="Ref_Weapon Left">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon Right">
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <TextureDeclares Prefix="marauder_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="merc_marauder_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModelFoliage id="HankCombustAura">
+        <Model value="Assets\Models\HankCombustAura.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.200000"/>
+        <ScaleMin value="0.600000,0.600000,0.200000"/>
+    </CModelFoliage>
     <CModel id="HankFlashFlameSABeam">
-        <Model value="Assets\Effects\Terran\FlameTurretLaunch\FlameTurretLaunch.m3"/>
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_Beam\Dehaka_Coop_Beam.m3"/>
     </CModel>
     <CModel id="HankHarnack" parent="Unit" Race="Terran">
-        <Model value="Assets\Units\Terran\FirebatMercenary\FirebatMercenary.m3"/>
+        <Model value="Assets\Models\Incinerator.m3"/>
         <Occlusion value="Show"/>
         <TextureDeclares Prefix="incinerator_">
             <Adaptions Slot="main"/>
@@ -91,6 +120,8 @@
             <Adaptions Slot="main"/>
         </TextureDeclares>
         <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
     </CModel>
     <CModel id="HankHarnackDeath" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Units\Terran\FirebatMercenaryDeath\FirebatMercenaryDeath.m3"/>
@@ -122,8 +153,29 @@
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
+    <CModelFoliage id="HankMeltdown">
+        <Model value="Assets\Effects\Terran\MiraHorner_NapalmBomb_Coop_Explosion\MiraHorner_NapalmBomb_Coop_Explosion.m3"/>
+        <ScaleMax value="5.000000,5.000000,1.000000"/>
+        <ScaleMin value="5.000000,5.000000,1.000000"/>
+    </CModelFoliage>
+    <CModelFoliage id="HankMeltdown2">
+        <Model value="Assets\Effects\Zerg\YagdraFireBallMissileImpact\YagdraFireBallMissileImpact.m3"/>
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    </CModelFoliage>
     <CModel id="Inspire">
         <Model value="Assets\Effects\Terran\Nova_Buff_Damage\Nova_Buff_Damage.m3"/>
+    </CModel>
+    <CModel id="RattlesnakeDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\MarauderMercenaryDeath\MarauderMercenaryDeath.m3"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="RattlesnakePortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Models\Marauder_Rattlesnake_COOP_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\MarauderPortrait.fxa"/>
+        <Image value="Assets\Textures\MarauderMercenaryPortrait_Static.dds"/>
+        <Lighting value="MarauderMercenaryPortrait"/>
     </CModel>
     <CModel id="NaniteCloudEmitter" parent="Building" Race="Terran">
         <Model value="Assets\Units\Terran\NaniteCloudTurret\NaniteCloudTurret.m3"/>
@@ -177,6 +229,10 @@
     <CModel id="RaynorAttackImpact">
         <ScaleMax value="6.000000,6.000000,6.000000"/>
         <ScaleMin value="6.000000,6.000000,6.000000"/>
+    </CModel>
+    <CModel id="RaynorLab">
+        <ScaleMax value="1.550000,1.550000,1.550000"/>
+        <ScaleMin value="1.550000,1.550000,1.550000"/>
     </CModel>
     <CModelFoliage id="SurvivorsGuilt">
         <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>

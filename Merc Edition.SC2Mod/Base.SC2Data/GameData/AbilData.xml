@@ -37,6 +37,10 @@
         <Range value="5"/>
         <CursorRangeMode value="ForceToMax"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="FlashFlames"/>
+        <PrepTime value="0.1"/>
+        <FinishTime value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="FortressBombardment">
         <EditorCategories value="AbilityorEffectType:Units"/>

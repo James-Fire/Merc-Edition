@@ -155,6 +155,14 @@
         <Icon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
     </CButton>
+    <CButton id="DeployRevitalizer">
+        <Icon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
+    </CButton>
+    <CButton id="SecretStashStimpack">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-marauder-secretstash.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-secretstash.dds"/>
+    </CButton>
     <CButton id="DivineArmor">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -171,9 +179,17 @@
         <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_acquireweakspot.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_acquireweakspot.dds"/>
     </CButton>
+    <CButton id="HankHarnack">
+        <Icon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+    </CButton>
     <CButton id="Inspire">
         <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_inspire.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_inspire.dds"/>
+    </CButton>
+    <CButton id="JimRaynor">
+        <Icon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
     </CButton>
     <CButton id="Meltdown">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -186,6 +202,14 @@
     <CButton id="PenetratorRound">
         <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
+    </CButton>
+    <CButton id="Rattlesnake">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+    </CButton>
+    <CButton id="HammerMunitions">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
     </CButton>
     <CButton id="TrainACV">
         <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>
