@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectModifyUnit id="RattlesnakeStimpackHeal">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <VitalArray index="Life">
+            <Change value="1"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectSet id="RattlesnakeWeaponSet">
         <EditorCategories value="Race:Terran"/>
         <EffectArray value="RattlesnakeWeaponDamage"/>
@@ -928,6 +935,10 @@
         <ImpactEffect value="DuskWingScreecherMissilesSet"/>
         <AmmoUnit value="DuskWingWeaponTertiary"/>
     </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="RattlesnakeStimpackAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SecretStashStimpack"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="ShredderRoundsCP">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="SourcePoint"/>

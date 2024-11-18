@@ -120,6 +120,15 @@
         <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AutoCastRange value="6.5"/>
     </CAbilMorph>
+    <CAbilEffectInstant id="SecretStashStimpack">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RattlesnakeStimpackAB"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SuperStim"/>
+    </CAbilEffectInstant>
     <CAbilBuild id="TerranBuild">
         <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">
             <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Restricted" Requirements="HaveEngineeringBay"/>

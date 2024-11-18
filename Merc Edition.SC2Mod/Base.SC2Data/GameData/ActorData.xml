@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorRange id="RattlesnakeRevitalizerRange" parent="RangeAbil" abil="RattlesnakeRevitalizer">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorModel id="BurrowBunkerFrame" parent="ModelAddition">
         <Inherits index="BaseModelScale" value="0"/>
         <Inherits index="Opacity" value="0"/>
@@ -32,10 +36,10 @@
         <Macros value="UnloadDropAnim"/>
         <On Terms="ActorCreation" Send="StatusSet WeaponNext 0"/>
         <On Terms="Behavior.MercGroundDrop.Create" Send="Create HammerSecurityDropModel"/>
-        <On Terms="Effect.HammerSecurityLM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
-        <On Terms="Effect.HammerSecurityLM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
-        <On Terms="Effect.HammerSecurityLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>
-        <On Terms="Effect.HammerSecurityLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>
+        <On Terms="Effect.RattlesnakeWeaponLM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
+        <On Terms="Effect.RattlesnakeWeaponLM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.RattlesnakeWeaponLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>
+        <On Terms="Effect.RattlesnakeWeaponLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>
         <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackLeft"/>
         <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackRight"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Marauder_Land"/>
@@ -1722,11 +1726,13 @@
         <EditorCategories value=""/>
         <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
         <On Terms="Behavior.SuperStim.On" Send="Create"/>
+        <On Terms="Behavior.SecretStashStimpack.On" Send="Create"/>
     </CActorSound>
     <CActorModel id="LowGradeStimEnd" parent="ModelAnimationStyleOneShot">
         <Inherits index="CloakEffect" value="1"/>
         <On Terms="Behavior.LowGradeStims.Off" Send="Create"/>
         <On Terms="Behavior.SuperStim.Off" Send="Create"/>
+        <On Terms="Behavior.SecretStashStimpack.Off" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
@@ -2297,6 +2303,7 @@
         <Inherits index="CloakEffect" value="1"/>
         <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
         <On Terms="Behavior.SuperStim.On" Send="Create"/>
+        <On Terms="Behavior.SecretStashStimpack.On" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>

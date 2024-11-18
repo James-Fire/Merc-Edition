@@ -378,19 +378,21 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
+        <AbilArray Link="RattlesnakeRevitalizer"/>
+        <AbilArray Link="SecretStashStimpack"/>
         <BehaviorArray Link="AblativeScales"/>
-        <WeaponArray Link="HammerSecurity"/>
+        <WeaponArray Link="TheConcillator"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MagrailMunitions" Type="AbilCmd" AbilCmd="MagrailMunitions,Execute" Row="2" Column="1"/>
-            <LayoutButtons Face="LowGradeStims" Type="AbilCmd" AbilCmd="LowGradeStim,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="StimMarauder" Type="AbilCmd" AbilCmd="StimpackMarauder,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="AblativeScalesNew" Type="Passive" Requirements="UseAblativeScalesNew" Row="1" Column="1"/>
-            <LayoutButtons Face="ConcussiveShrapnel" Type="Passive" Requirements="UseConcussiveShrapnel" Row="1" Column="0"/>
+            <LayoutButtons Face="DeployRevitalizer" Type="AbilCmd" AbilCmd="RattlesnakeRevitalizer,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="SecretStashStimpack" Type="AbilCmd" AbilCmd="SecretStashStimpack,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="ConcussiveShrapnel" Type="Passive" Requirements="UseConcussiveShrapnel" Row="1" Column="1"/>
+            <LayoutButtons Face="HammerMunitions" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="AblativeScalesNew" Type="Passive" Requirements="UseAblativeScalesNew" Row="1" Column="2"/>
         </CardLayouts>
         <InnerRadius value="0.375"/>
         <CargoSize value="2"/>

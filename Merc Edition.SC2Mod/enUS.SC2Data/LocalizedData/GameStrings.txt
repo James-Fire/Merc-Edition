@@ -34,9 +34,11 @@ Abil/Name/PlaceNomadDrone=Place Nomad Drone
 Abil/Name/PlaceNomadTurret=Place Nomad Turret
 Abil/Name/PsychoMissiles=Psycho Missiles
 Abil/Name/RagnarokToggle=Ragnarok Toggle
+Abil/Name/RattlesnakeRevitalizer=Rattlesnake Revitalizer
 Abil/Name/RedlineReactor=Redline Reactor
 Abil/Name/RepairDroneHeal=Repair Drone Heal
 Abil/Name/RevivalField=Revival Field
+Abil/Name/SecretStashStimpack=Secret Stash Stimpack
 Abil/Name/SentinelMissilesAres=Sentinel Missiles
 Abil/Name/SignalFlare=Signal Flare
 Abil/Name/SilentMode=Silent Mode
@@ -80,8 +82,10 @@ Behavior/Name/PhantomCloak=Cloak
 Behavior/Name/PointBreakDrone=Point Break Drone
 Behavior/Name/RedlineReactor=Redline Reactor
 Behavior/Name/ReflectiveArmorBonusDamage=Reflective Armor
+Behavior/Name/Revitalizing=Revitalizing
 Behavior/Name/RevivalFieldCooldown=Revival Field Cooldown
 Behavior/Name/RevivalFieldDodge=Revival Field Dodge
+Behavior/Name/SecretStashStimpack=Secret Stash Stimpack
 Behavior/Name/ShellShower=Shell Shower
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
 Behavior/Name/SquadSightAres=Squad Sight
@@ -112,8 +116,10 @@ Behavior/Tooltip/NomadMissileTint=This unit is being targeted by a Seeker Missil
 Behavior/Tooltip/PermanentCloakDuskWing=This unit is cloaked and will only be revealed by detectors or effects.
 Behavior/Tooltip/PhantomCloak=This unit is cloaked and will only be revealed by detectors or effects.
 Behavior/Tooltip/ReflectiveArmorBonusDamage=Copperheads deal more damage when taking damage.
+Behavior/Tooltip/Revitalizing=This unit is under the effects of a Revitalizer and will heal over time while in its area of effect.
 Behavior/Tooltip/RevivalFieldCooldown=This unit cannot recall on death yet.
 Behavior/Tooltip/RevivalFieldDodge=This unit will dodge the next incoming damage.
+Behavior/Tooltip/SecretStashStimpack=This unit moves and attacks more quickly, and is healing over time.
 Behavior/Tooltip/ShellShower=The longer Spartan Company attacks, the faster the attacks become.
 Behavior/Tooltip/SquadSightAres=This unit has increased range.
 Behavior/Tooltip/StunnedAnarchistLeap=This unit is stunned.
@@ -326,7 +332,7 @@ Button/Tooltip/ConfederateReactor=Copperheads gain 1 range and movement speed, a
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DeadManSwitch=Upon death, persists as a wreckage which can be rebuilt back into a Titan. If the wreckage is destroyed, it detonates a nuke.
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby enemy units.
-Button/Tooltip/DeployRevitalizer=Deploy a device that heals all friendly units nearby for 5% of their maximum life per second. Lasts for <d time="28"/>.
+Button/Tooltip/DeployRevitalizer=Deploy a device that heals all friendly units nearby for 4% of their maximum life per second. Lasts for <d time="28"/>.
 Button/Tooltip/DevastatorOverride=Replaces main attack with a stronger one, has an additional area-damage attack, and can now attack ground units.
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
@@ -396,6 +402,7 @@ Button/Tooltip/Rattlesnake=Kev "Rattlesnake" West is a terran mercenary marauder
 Button/Tooltip/RaynorSpecial=Condors can now jump up and down cliffs, and fire while moving.
 Button/Tooltip/RedlineReactor=Increases damage by 10 and doubles movement speed for <d time="8.4"/>.
 Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. When taking damage, damage dealt is briefly increased.
+Button/Tooltip/Revitalizer=Device that heals all friendly units nearby for 4% of their maximum life per second. Lasts for <d time="28"/>.
 Button/Tooltip/RevivalField=While cloaked, the Harrier avoids every other attack. When taking fatal damage, recall to the nearest Command Center, once every <d time="336"/>.
 Button/Tooltip/RorkesRedline=Gives the Starcruiser 250 shields and enables the Redline Reactor ability.
 Button/Tooltip/Salvage=Salvages the structure, removing it and returning 100% of its mineral and gas value. Salvage takes <d time="5"/> to finish. Warning: once Salvage is triggered, it cannot be canceled.
@@ -418,7 +425,7 @@ Button/Tooltip/StabilizerHeal=Heals a friendly biological or mechanical target a
 Button/Tooltip/StabilizerMedpacksMerc=Increases Skibi's Angel heal speed, energy efficiency, and causes Signal Flare to heal nearby units.
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SulfurMissiles=Hel's Angels missiles now deal area damage and apply more damage over time. On death, the Hel's Angel explodes to deal damage with more damage over time.
-Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals it for 30 life.
+Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals them for 30 life.
 Button/Tooltip/SurvivorsGuilt=When destroyed, dropped units gain a temporary boost to damage, attack speed, and movement speed.
 Button/Tooltip/SwannNanites=Nano-Repair no longer costs energy, heals 50% faster, and can heal structures. Irradiation now damages enemy mechanical units and heals allied mechanical units.
 Button/Tooltip/TacticalRealignment=After transforming, damage dealt is increased by 50% for <d time="7"/>. Cannot occur more than once every <d time="21"/>.
@@ -641,6 +648,12 @@ Effect/Name/RagnarokNRollDamage=RagnarokNRollDamage
 Effect/Name/RailcannonDamage=Railcannon Damage
 Effect/Name/RailcannonLM=Railcannon LM
 Effect/Name/RailcannonSet=Railcannon Set
+Effect/Name/RattlesnakeRevitalizerAB=Rattlesnake Revitalizer AB
+Effect/Name/RattlesnakeRevitalizerCU=Rattlesnake Revitalizer CU
+Effect/Name/RattlesnakeRevitalizerMU=Rattlesnake Revitalizer MU
+Effect/Name/RattlesnakeRevitalizerSA=Rattlesnake Revitalizer SA
+Effect/Name/RattlesnakeStimpackAB=Rattlesnake Stimpack AB
+Effect/Name/RattlesnakeStimpackHeal=Rattlesnake Stimpack Heal
 Effect/Name/RattlesnakeWeaponDamage=Rattlesnake Weapon Damage
 Effect/Name/RattlesnakeWeaponLM=Rattlesnake Weapon LM
 Effect/Name/RattlesnakeWeaponSet=Rattlesnake Weapon Set
@@ -811,6 +824,7 @@ Unit/Name/RailGunTurret=Railgun Turret
 Unit/Name/Rattlesnake=Rattlesnake
 Unit/Name/RattlesnakeWeapon=Rattlesnake Weapon
 Unit/Name/RepairDroneHealMissile=Repair Drone Heal Missile
+Unit/Name/Revitalizer=Revitalizer
 Unit/Name/Shadow=Shadow
 Unit/Name/SignalFlareMissile=Signal Flare Missile
 Unit/Name/SignalFlareTargetDummy=Signal Flare Target Dummy
