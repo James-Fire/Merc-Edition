@@ -25,6 +25,11 @@
     <CModel id="ARESMissileMissile">
         <Model value="Assets\Effects\Terran\WarHoundHaywireMissile\WarHoundHaywireMissile.m3"/>
     </CModel>
+    <CModelFoliage id="ATXOrdnance">
+        <Model value="Assets\Effects\Terran\PlanetaryFortressMissile\PlanetaryFortressMissile.m3"/>
+        <ScaleMax value="0.200000,0.800000,1.000000"/>
+        <ScaleMin value="0.200000,0.800000,1.000000"/>
+    </CModelFoliage>
     <CModelFoliage id="AgitatorMorphModel">
         <Model value="Assets\Units\Terran\Hellbatmorph_CovertOps_Collection\Hellbatmorph_CovertOps_Collection.m3"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -63,11 +68,190 @@
     <CModel id="BunkerBurrowedDeath" parent="BunkerDeathBase">
         <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
     </CModel>
+    <CModelFoliage id="BurrowBunkerFrame">
+        <Model value="Assets\Buildings\Terran\SupplyDepotEx1\SupplyDepotEx1.m3"/>
+        <ScaleMax value="0.800000,0.800000,0.500000"/>
+        <ScaleMin value="0.800000,0.800000,0.500000"/>
+    </CModelFoliage>
     <CModelFoliage id="ChemicalPlating">
         <Model value="Assets\Effects\Terran\Nanocloud_Damage_Shield\Nanocloud_Damage_Shield.m3"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModelFoliage>
+    <CModel id="RattlesnakeWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Rattlesnake" parent="Unit">
+        <Model value="Assets\Models\Marauder_RattleSnake.m3"/>
+        <AttachProps Id="Ref_Weapon Left">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon Right">
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <TextureDeclares Prefix="marauder_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="merc_marauder_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModelFoliage id="HankCombustAura">
+        <Model value="Assets\Models\HankCombustAura.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.200000"/>
+        <ScaleMin value="0.600000,0.600000,0.200000"/>
+    </CModelFoliage>
+    <CModel id="HankFlashFlameSABeam">
+        <Model value="Assets\Effects\Zerg\Dehaka_Coop_Beam\Dehaka_Coop_Beam.m3"/>
+    </CModel>
+    <CModel id="HankHarnack" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Incinerator.m3"/>
+        <Occlusion value="Show"/>
+        <TextureDeclares Prefix="incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="merc_incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
+    </CModel>
+    <CModel id="HankHarnackDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\FirebatMercenaryDeath\FirebatMercenaryDeath.m3"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <TextureDeclares Prefix="incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="merc_incinerator_">
+            <Adaptions Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="HankHarnackPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\FirebatMercenaryPortrait\FirebatMercenaryPortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\FirebatPortrait.fxa"/>
+        <Image value="Assets\Textures\FirebatMercenaryPortrait_Static.dds"/>
+        <Lighting value="FirebatMercenaryPortrait"/>
+    </CModel>
+    <CModelFoliage id="FortressBombardmentImpactModel">
+        <Model value="Assets\Effects\Terran\MiraHorner_NapalmBomb_Coop_Explosion\MiraHorner_NapalmBomb_Coop_Explosion.m3"/>
+        <ScaleMax value="1.800000,1.800000,1.500000"/>
+        <ScaleMin value="1.800000,1.800000,1.500000"/>
+    </CModelFoliage>
+    <CModelFoliage id="FortressBombardmentMarker">
+        <Model value="Assets\COOP\Mengsk\Splats\Artillery_Mengsk_COOP_Splat\Artillery_Mengsk_COOP_Splat.m3"/>
+    </CModelFoliage>
+    <CModel id="FortressBombardmentMissile">
+        <Model value="Assets\Effects\Terran\Mutator_Nuke_Missile\Mutator_Nuke_Missile.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModelFoliage id="HankMeltdown">
+        <Model value="Assets\Effects\Terran\MiraHorner_NapalmBomb_Coop_Explosion\MiraHorner_NapalmBomb_Coop_Explosion.m3"/>
+        <ScaleMax value="5.000000,5.000000,1.000000"/>
+        <ScaleMin value="5.000000,5.000000,1.000000"/>
+    </CModelFoliage>
+    <CModelFoliage id="HankMeltdown2">
+        <Model value="Assets\Effects\Zerg\YagdraFireBallMissileImpact\YagdraFireBallMissileImpact.m3"/>
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    </CModelFoliage>
+    <CModel id="Inspire">
+        <Model value="Assets\Effects\Terran\Nova_Buff_Damage\Nova_Buff_Damage.m3"/>
+    </CModel>
+    <CModel id="RattlesnakeDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\MarauderMercenaryDeath\MarauderMercenaryDeath.m3"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="RattlesnakePortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Models\Marauder_Rattlesnake_COOP_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\MarauderPortrait.fxa"/>
+        <Image value="Assets\Textures\MarauderMercenaryPortrait_Static.dds"/>
+        <Lighting value="MarauderMercenaryPortrait"/>
+    </CModel>
+    <CModel id="NaniteCloudEmitter" parent="Building" Race="Terran">
+        <Model value="Assets\Units\Terran\NaniteCloudTurret\NaniteCloudTurret.m3"/>
+        <Events>
+            <Anim value="Stand,Work,Start,00"/>
+            <Name value="Doodad_UmojanLabGasTurret_StandWorkStart"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Doodad_UmojanLabGasTurret_StandWorkStart"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,Work,End,00"/>
+            <Name value="Doodad_UmojanLabGasTurret_StandWorkEnd"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Doodad_UmojanLabGasTurret_StandWorkEnd"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.937500"/>
+        <ShadowRadius value="0.937500"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModelFoliage id="NanitePulse">
+        <Model value="Assets\Effects\Protoss\ScatterCannonMissileImpact_COOP\ScatterCannonMissileImpact_COOP.m3"/>
+        <ScaleMax value="3.800000,3.800000,0.150000"/>
+        <ScaleMin value="3.800000,3.800000,0.150000"/>
+    </CModelFoliage>
+    <CModel id="PenetratorRoundCPBeam">
+        <Model value="Assets\Effects\Terran\ArchAngel_Xanthos_Experimentation_Railgun\ArchAngel_Xanthos_Experimentation_Railgun.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="Raynor2" parent="Unit">
+        <Model value="Assets\Units\Terran\MarineRaynor\MarineRaynor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="RaynorAttackImpact">
+        <ScaleMax value="6.000000,6.000000,6.000000"/>
+        <ScaleMin value="6.000000,6.000000,6.000000"/>
+    </CModel>
+    <CModel id="RaynorLab">
+        <ScaleMax value="1.550000,1.550000,1.550000"/>
+        <ScaleMin value="1.550000,1.550000,1.550000"/>
+    </CModel>
+    <CModelFoliage id="SurvivorsGuilt">
+        <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>
+    </CModelFoliage>
+    <CModel id="ZeusLanderLanded" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\MilitarizedColonistShip\MilitarizedColonistShip.m3"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow26"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <SelectionLayer value="2"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="2.499700"/>
+        <ShadowRadius value="2.499700"/>
+        <TechPurchaseCamera value="Star2CameraLow26"/>
+        <UnitGlossaryCamera value="Star2CameraLow26"/>
+    </CModel>
     <CModel id="ZeusLanderDeath" parent="UnitDeath">
         <Model value="Assets\Units\Terran\MilitarizedColonistShipDeath\MilitarizedColonistShipDeath.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
@@ -592,8 +776,8 @@
         <Flags index="AutoUnload" value="1"/>
         <Occlusion value="Show"/>
         <Radius value="1.000000"/>
-        <ScaleMax value="0.650000,0.650000,0.650000"/>
-        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
         <SelectionOffset value="0.000000,0.000000,-0.350000"/>
         <SelectionRadius value="1.666500"/>
         <ShadowRadius value="1.666500"/>
@@ -1092,12 +1276,12 @@
         <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="ARESMercEdition" parent="Unit" Race="Terran">
-        <Model value="Assets\Units\Terran\ARES\ARES.m3"/>
+        <Model value="Assets\Models\Zeus_battle_tank.m3"/>
         <Flags index="AutoUnload" value="1"/>
         <PlanetPanelCamera value="Star2CameraHigher10"/>
         <Radius value="1.200000"/>
-        <ScaleMax value="0.500000,0.500000,0.500000"/>
-        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
         <SelectionRadius value="1.999500"/>
         <ShadowRadius value="1.999500"/>
         <TechPurchaseCamera value="Star2CameraHigher10"/>

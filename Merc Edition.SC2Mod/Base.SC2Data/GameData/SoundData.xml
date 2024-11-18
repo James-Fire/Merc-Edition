@@ -298,6 +298,56 @@
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="FortressBombardmentImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Explosion_Metal_Fire_04.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="FortressBombardmentLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_RocketBarrage_Launch_04.wav" FacialGroup=""/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="60.102039" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="HankFlashFlame" parent="Combat">
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_05.wav" FacialGroup=""/>
+        <Pitch value="4.000000,5.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="HankFlashFlame2" parent="Combat">
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_Firebreath_End_05.wav" FacialGroup=""/>
+        <Pitch value="4.000000,5.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="HankMeltdownSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Gen_Explo_08.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="HankMeltdownSound2" parent="Combat">
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Explosion_Distant_BG_04.wav" FacialGroup=""/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="57.686390" Volume="-2.420000"/>
+        <VolumeRolloffPoints Distance="100.127090" Volume="-20.639999"/>
+    </CSound>
+    <CSound id="InspireApply" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch2.wav" FacialGroup=""/>
+        <Pitch value="5.000000,5.000000"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
     <CSound id="IrradiateNanitesLoop" parent="Combat">
         <AssetArray>
             <File value="Assets\Sounds\Thor_Repair_Loop.wav"/>
@@ -315,6 +365,14 @@
     </CSound>
     <CSound id="MissileTurret_HellstormAttackLaunch">
         <Volume value="-11.000000,-9.000000"/>
+    </CSound>
+    <CSound id="NanitePulseSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact3.wav" FacialGroup=""/>
+        <Pitch value="4.000000,6.000000"/>
+        <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="NomadMineDrone" parent="Combat">
         <AssetArray File="Assets\Sounds\WidowMine_Armed1a.wav" FacialGroup=""/>
@@ -340,6 +398,10 @@
         <AssetArray File="Assets\Sounds\Terran\Raven\Raven_PointDefenseDroneReleaseImpact0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Raven\Raven_PointDefenseDroneReleaseImpact1.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Raven\Raven_PointDefenseDroneReleaseImpact2.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="PenetratorRoundLaunch" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Raynor\Raynor_PenetratorRoundLaunch0.wav" FacialGroup=""/>
+        <Volume value="3.000000,3.000000"/>
     </CSound>
     <CSound id="RailcannonImpact" parent="Combat">
         <EditorCategories value="Race:Terran"/>
@@ -763,6 +825,19 @@
         <Pitch value="12.000000,12.000000"/>
         <Volume value="-5.000000,-5.000000"/>
     </CSound>
+    <CSound id="SurvivorsGuiltScream" parent="Combat">
+        <DupeDestroyCount value="1"/>
+        <DupeMuteCount value="1"/>
+        <AssetArray File="Assets\Sounds\varian_colossus_smash01.mp3" FacialGroup=""/>
+    </CSound>
+    <CSound id="SurvivorsGuiltSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Nova\Nova_DominationLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Nova\Nova_DominationLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Nova\Nova_DominationLaunch2.wav" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <DupeMuteCount value="5"/>
+        <Pitch value="-5.000000,3.000000"/>
+    </CSound>
     <CSound id="TarBombImpact">
         <AssetArray File="Assets\Sounds\WarHound_Melee_Impact00.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\WarHound_Melee_Impact01.wav" FacialGroup=""/>
@@ -798,5 +873,18 @@
         <OverlapTimeDelta value="100"/>
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-7.960000,-6.120000"/>
+    </CSound>
+    <CSound id="ZeusBattleTankAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_05.wav" FacialGroup=""/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="3.000000,3.000000"/>
     </CSound>
 </Catalog>

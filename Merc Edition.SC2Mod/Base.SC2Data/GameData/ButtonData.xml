@@ -8,6 +8,10 @@
         <Icon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds"/>
     </CButton>
+    <CButton id="ATXOrdnance">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="AblativeScalesNew">
         <Icon value="Assets\Icons and Wireframes\ablativescales.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\ablativescales.dds"/>
@@ -20,9 +24,25 @@
         <Icon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
     </CButton>
+    <CButton id="ApolloInjectionPods">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="BombardmentFortress">
+        <Icon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
+    </CButton>
+    <CButton id="BoxofScraps">
+        <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+    </CButton>
     <CButton id="BuildAdjudicator">
         <Icon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-sciencevessel.dds"/>
+    </CButton>
+    <CButton id="BuildNaniteCloudEmitter">
+        <Icon value="Assets\Textures\wireframe-terran-labgasturret.dds"/>
+        <AlertIcon value="Assets\Textures\wireframe-terran-labgasturret.dds"/>
     </CButton>
     <CButton id="BuildNomad">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -41,6 +61,10 @@
         <Icon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
         <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="Combustion">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_combustion.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_combustion.dds"/>
     </CButton>
     <CButton id="DeadManSwitch">
         <Icon value="Assets\Textures\btn-techupgrade-terran-immortalityprotocol.dds"/>
@@ -131,6 +155,14 @@
         <Icon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-royalguard-mightoftheempire.dds"/>
     </CButton>
+    <CButton id="DeployRevitalizer">
+        <Icon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
+    </CButton>
+    <CButton id="SecretStashStimpack">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-marauder-secretstash.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-secretstash.dds"/>
+    </CButton>
     <CButton id="DivineArmor">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -139,6 +171,53 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
     </CButton>
+    <CButton id="FlashFlames">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_flame.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_flame.dds"/>
+    </CButton>
+    <CButton id="GiveEmSomePepper">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_acquireweakspot.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_acquireweakspot.dds"/>
+    </CButton>
+    <CButton id="HankHarnack">
+        <Icon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+    </CButton>
+    <CButton id="Inspire">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_inspire.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_inspire.dds"/>
+    </CButton>
+    <CButton id="JimRaynor">
+        <Icon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
+    </CButton>
+    <CButton id="Meltdown">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="NanitePulse">
+        <Icon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+    </CButton>
+    <CButton id="PenetratorRound">
+        <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
+    </CButton>
+    <CButton id="Rattlesnake">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+    </CButton>
+    <CButton id="HammerMunitions">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
+    </CButton>
+    <CButton id="TrainACV">
+        <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="UpgradeToPlanetaryFortress"/>
     <CButton id="ZeusLanderTacticalJump">
         <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
@@ -557,8 +636,8 @@
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds"/>
     </CButton>
     <CButton id="EidolonSuit">
-        <Icon value="Assets\Textures\btn-techupgrade-terran-criussuit.dds"/>
-        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-criussuit.dds"/>
+        <Icon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\adjudicator-cloakfield.dds"/>
     </CButton>
     <CButton id="U240Rounds">
         <Icon value="Assets\Textures\btn-techupgrade-terran-u238rounds.dds"/>

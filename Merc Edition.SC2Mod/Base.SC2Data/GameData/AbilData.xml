@@ -25,6 +25,189 @@
         </InfoArray>
         <CalldownEffect value="Nuke"/>
     </CAbilArmMagazine>
+    <CAbilTrain id="CommandCenterTrain">
+        <InfoArray index="Train2" Time="17">
+            <Button DefaultButtonFace="TrainACV" State="Restricted"/>
+            <Unit value="ACV"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="FlashFlame">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="HankFlashFlameInitialCP"/>
+        <Range value="5"/>
+        <CursorRangeMode value="ForceToMax"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FlashFlames"/>
+        <PrepTime value="0.1"/>
+        <FinishTime value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="FortressBombardment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FortressBombardmentSwitch"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="75"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BombardmentFortress"/>
+        <Flags index="Transient" value="1"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="NaniteCloudEmitterUnburrow">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="MoveBlockers" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="NaniteCloudEmitter" CollideRange="0">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.6"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0.6"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.6"/>
+            </SectionArray>
+        </InfoArray>
+        <ErrorAlert value=""/>
+        <AutoCastFilters value="Ground,Visible;Self,Player,Ally,Neutral,Hover,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="6.5"/>
+        <AutoCastCountMin value="1"/>
+    </CAbilMorph>
+    <CAbilMorph id="NaniteCloudEmitterBurrow">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowDown"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="NaniteCloudEmitterBurrowed">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorphPlacement id="MilitarizedColonistShipLand">
+        <InfoArray index="0" Unit="ZeusLanderLanded"/>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="MilitarizedColonistShipLiftOff">
+        <InfoArray index="0" Unit="ZeusLanderFlying"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="PenetratorRound">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="PenetratorRoundCP"/>
+        <Range value="7.5"/>
+        <FinishTime value="0.8"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CursorRangeMode value="ForceToMax"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PenetratorRound"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="PerditionTurretBurrow">
+        <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="6.5"/>
+    </CAbilMorph>
+    <CAbilBuild id="TerranBuild">
+        <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">
+            <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Restricted" Requirements="HaveEngineeringBay"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilEffectTarget id="AspisBlink">
+        <AbilSetId value="AspisBlink"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="8"/>
+            </Charge>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Enemy"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0059_01">
+            <Flags index="IgnoreUser" value="1"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilTrain id="ZeusLanderTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <Range value="5"/>
+        <InfoArray index="Train1" Time="25">
+            <Button DefaultButtonFace="Marine" State="Restricted"/>
+            <Unit value="Marine"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="40">
+            <Button DefaultButtonFace="Reaper" State="Restricted"/>
+            <Unit value="Reaper"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="40">
+            <Button DefaultButtonFace="Ghost" State="Restricted" Requirements="HaveAttachedBarrTechLabOrAttachedTechReactorAndShadowOps"/>
+            <Unit value="Ghost"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="30">
+            <Button DefaultButtonFace="Marauder" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Marauder"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="25">
+            <Button DefaultButtonFace="Medic" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Medic"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="30">
+            <Button DefaultButtonFace="FlameMech" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Firebat"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="50">
+            <Button DefaultButtonFace="Spectre" State="Restricted" Requirements="HaveAttachedBarrTechLabOrAttachedTechReactorAndShadowOps"/>
+            <Unit value="Spectre"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="25">
+            <Button DefaultButtonFace="TrainWarPig" State="Restricted"/>
+            <Unit value="WarPig"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="40">
+            <Button DefaultButtonFace="TrainBlockB" State="Restricted"/>
+            <Unit value="BlockB"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="40">
+            <Button DefaultButtonFace="TrainPhantom" State="Restricted"/>
+            <Unit value="Phantom"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="30">
+            <Button DefaultButtonFace="TrainHammerSecurity" State="Restricted"/>
+            <Unit value="HammerSecurity"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="25">
+            <Button DefaultButtonFace="TrainSkibisAngel" State="Restricted"/>
+            <Unit value="SkibisAngel"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="30">
+            <Button DefaultButtonFace="TrainDevilDog" State="Restricted"/>
+            <Unit value="DevilDog"/>
+        </InfoArray>
+        <InfoArray index="Train15" Time="50">
+            <Button DefaultButtonFace="TrainShadow" State="Restricted"/>
+            <Unit value="Shadow"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilAttack id="BunkerAttack">
         <CmdButtonArray index="Execute" Requirements="UseBattleBunker"/>
     </CAbilAttack>
@@ -688,6 +871,7 @@
         <Range value="250"/>
         <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Invulnerable"/>
         <AutoCastRange value="5.8"/>
+        <AutoCastValidatorArray value="burrowbunkerspraynpayvalidators"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SprayandPay"/>
     </CAbilEffectTarget>
     <CAbilTrain id="StarportTrain">

@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareCargo id="1CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="2CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="3CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="3"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="4CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="4"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitCompareCargo id="5CargoLoadedBombardmentFortress">
+        <WhichUnit Value="Caster"/>
+        <Type value="Load"/>
+        <Value value="5"/>
+    </CValidatorUnitCompareCargo>
+    <CValidatorUnitAbil id="CasterCanAttack">
+        <WhichUnit Value="Caster"/>
+        <Find value="1"/>
+        <AbilClass value="CAbilAttack"/>
+    </CValidatorUnitAbil>
+    <CValidatorUnitType id="CasterIsZeusLanded">
+        <WhichUnit Value="Caster"/>
+        <Value value="ZeusLanderLanded"/>
+    </CValidatorUnitType>
     <CValidatorUnitCompareBehaviorCount id="CasterNotMaxTargetLocksARES">
         <ResultFailed value="Error,Error\TooManyLockTargets"/>
         <WhichUnit Value="Caster"/>
@@ -7,6 +41,25 @@
         <Value value="2"/>
         <Behavior value="ARESTargetLockCaster"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="DontHaveSurvivorsGuilt">
+        <Behavior value="SurvivorsGuilt"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="HaveATXOrdnance">
+        <Find value="1"/>
+        <Value value="UseATXOrdnance"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveApolloInjectionPods">
+        <Find value="1"/>
+        <Value value="UseApolloInjectionPods"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBoxofScraps">
+        <Find value="1"/>
+        <Value value="UseBoxofScraps"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveBurrowBunker">
+        <Find value="1"/>
+        <Value value="UseBurrowBunker"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveExplosiveCalibrations">
         <Find value="1"/>
         <Value value="UseExplosiveCalibrations"/>
@@ -30,6 +83,10 @@
     <CValidatorPlayerRequirement id="DontHaveSwannSuppressionSystems">
         <Value value="UseSwannsSuppression"/>
     </CValidatorPlayerRequirement>
+    <CValidatorUnitType id="CasterOuterIsBunker">
+        <WhichUnit Value="CasterOuter"/>
+        <Value value="Bunker"/>
+    </CValidatorUnitType>
     <CValidatorUnitCompareBehaviorCount id="IsInSilentMode">
         <WhichUnit Value="Caster"/>
         <Value value="1"/>
@@ -43,12 +100,29 @@
         <Value value="Adjudicator"/>
         <Find value="0"/>
     </CValidatorUnitType>
+    <CValidatorUnitType id="CasterIsZeusFlying">
+        <WhichUnit Value="Caster"/>
+        <Value value="ZeusLanderFlying"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="IsSamsonOR10energy">
+        <CombineArray value="CasterHas10Energy"/>
+        <CombineArray value="CasterIsZeusFlying"/>
+        <CombineArray value="CasterIsZeusLanded"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareVital id="LifeBelow80">
         <ResultFailed value="TooMuchLife"/>
         <Compare value="LT"/>
         <Type value="Fraction"/>
         <Value value="0.8"/>
     </CValidatorUnitCompareVital>
+    <CValidatorLocationCompareRange id="MinimumRange15">
+        <ResultFailed value="Error,MinimumRange15"/>
+        <Compare value="GE"/>
+        <Range value="15"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="NoApolloSurvivorGuiltCooldown">
+        <Behavior value="SurvivorsGuiltApolloCD"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="NoFearImmunityWolverine">
         <Behavior value="WolverineFearImmunity"/>
     </CValidatorUnitCompareBehaviorCount>
@@ -61,6 +135,11 @@
         <ResultFailed value="Error,Error\TargetLock"/>
         <Behavior value="ARESTargetLock"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareCooldown id="AspisBlinkNotOnCooldown">
+        <WhichUnit Value="Caster"/>
+        <CooldownLink value="Abil/AspisBlink"/>
+        <Ability value="AspisBlink"/>
+    </CValidatorUnitCompareCooldown>
     <CValidatorCombine id="SwannANDBelow80Life">
         <Type value="And"/>
         <CombineArray value="LifeBelow80"/>
@@ -263,8 +342,8 @@
         <Behavior value="BunkerBurrowed"/>
     </CValidatorUnitCompareBehaviorCount>
     <CValidatorCombine id="burrowbunkerspraynpayvalidators">
-        <CombineArray value="bunkerunitisinsideofisnotburrowed"/>
-        <CombineArray value="casterisnotinbunker"/>
+        <CombineArray value="notburrowbunkerunitisbunker"/>
+        <CombineArray value="CasterCanAttack"/>
     </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="casterisnotinbunker">
         <WhichUnit Value="Caster"/>
@@ -272,4 +351,21 @@
         <Value value="1"/>
         <Behavior value="BunkerWeaponRangeBonus"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="casterisnotincharondropship">
+        <WhichUnit Value="Caster"/>
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="BunkerWeaponRangeBonus"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="casterisnotinsamson">
+        <WhichUnit Value="Caster"/>
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="BunkerWeaponRangeBonus"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="notburrowbunkerunitisbunker">
+        <Type value="And"/>
+        <CombineArray value="CasterOuterIsBunker"/>
+        <CombineArray value="bunkerunitisinsideofisnotburrowed"/>
+    </CValidatorCombine>
 </Catalog>

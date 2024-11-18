@@ -1,5 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSet id="RattlesnakeWeaponSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="RattlesnakeWeaponDamage"/>
+        <EffectArray value="ConcussiveShrapnelApplyBehavior"/>
+        <EffectArray value="ConcussiveShrapnelSA"/>
+        <EffectArray value="ConcussiveShrapnelConeSA"/>
+        <EffectArray value="ConcussiveShrapnelCP"/>
+    </CEffectSet>
+    <CEffectDamage id="RattlesnakeWeaponDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="40"/>
+        <Kind value="Ranged"/>
+        <Amount value="40"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RattlesnakeWeaponLM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="RattlesnakeWeaponSet"/>
+        <AmmoUnit value="RattlesnakeWeapon"/>
+        <Movers Link="PunisherGrenadesWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="HankWeaponCP">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourcePoint"/>
+        <OffsetVectorStartLocation Value="SourcePoint"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="HankWeaponSA"/>
+        <PeriodicOffsetArray value="0,-0.5,0"/>
+        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="0,-1.5,0"/>
+        <PeriodicOffsetArray value="0,-2,0"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="HankWeaponDamage" parent="DU_WEAP_SPLASH">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="12"/>
+        <Amount value="24"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="HankWeaponSA" parent="EA_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="0.6" Effect="HankWeaponDamage"/>
+    </CEffectEnumArea>
+    <CEffectSet id="HankWeaponSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="HankWeaponCP"/>
+        <EffectArray value="HankWeaponDamage"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="HankCombustionAB">
+        <Behavior value="Combustion"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="HankCombustionDamage">
+        <EditorCategories value=""/>
+        <Amount value="10"/>
+        <Death value="Fire"/>
+        <LeechFraction index="Life" value="0.2"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="HankCombustionSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="4.5" Effect="HankCombustionAB"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="HankFlashFlameCP">
+        <EditorCategories value=""/>
+        <OffsetVectorStartLocation Value="CasterPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="HankFlashFlameSA"/>
+        <PeriodicOffsetArray value="0,3,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="HankFlashFlameInitialCP">
+        <EditorCategories value=""/>
+        <OffsetVectorStartLocation Value="CasterPoint"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="HankFlashFlameCP"/>
+        <PeriodicOffsetArray value="-1,0,0"/>
+        <PeriodicOffsetArray value="1,0,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="HankFlashFlameDamage">
+        <EditorCategories value=""/>
+        <Amount value="80"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="HankFlashFlameSA">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray RectangleWidth="1" RectangleHeight="5" Effect="HankFlashFlameDamage"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="HankMeltdown">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <Amount value="500"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="4" Fraction="1"/>
+        <AreaArray Radius="6" Fraction="0.5"/>
+        <AreaArray Radius="9" Fraction="0.25"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="InspireApplyBehavior">
+        <Behavior value="Inspire"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="InspireAura">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="8" Effect="InspireApplyBehavior"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="NanitePulseDamage">
+        <EditorCategories value=""/>
+        <Amount value="10"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="NanitePulseSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="7" Effect="NanitePulseDamage"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="250mmUranusCarronadesCP">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetUnit"/>
@@ -74,6 +198,11 @@
         <AreaArray Radius="5" Effect="AdjudicatorCloakingField"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
+    <CEffectModifyUnit id="AspisBlinkCooldown">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <Cost Abil="AspisBlink,Execute" CooldownTimeUse="8"/>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="BunkerBurrowedApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="BunkerBurrowed"/>
@@ -100,6 +229,7 @@
         <WhichLocation Value="SourceUnit"/>
         <OffsetVectorStartLocation Value="CasterUnit"/>
         <OffsetVectorEndLocation Value="TargetUnit"/>
+        <ValidatorArray value="HaveConcussiveShrapnel"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ACVFusionCutter" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
@@ -198,7 +328,8 @@
         <EditorCategories value=""/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
-        <Amount value="7"/>
+        <Amount value="4"/>
+        <ArmorReduction value="1"/>
     </CEffectDamage>
     <CEffectSet id="ConcussiveShrapnelDummy">
         <EditorCategories value=""/>
@@ -322,6 +453,97 @@
     <CEffectApplyBehavior id="ForceMissilesApplyBehavior">
         <Behavior value="ForceMissiles"/>
     </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="FortressBombardmentCP4">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="4"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP5">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="5"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP6">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="6"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP7">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="7"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP8">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="8"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FortressBombardmentCP9">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <PeriodCount value="9"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="FortressBombardmentSet"/>
+        <PeriodicPeriodArray value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="FortressBombardmentDamage2">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AttributeBonus index="Structure" value="200"/>
+        <Amount value="225"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="1" Fraction="1"/>
+        <AreaArray Radius="2.5" Fraction="0.5"/>
+        <SearchFilters value="-;Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="FortressBombardmentFiringApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="FortressBombardmentFiring"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="FortressBombardmentLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="FortressBombardmentDamage2"/>
+        <AmmoUnit value="FortressBombardmentMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectRandomPointInCircle id="FortressBombardmentRP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="FortressBombardmentLaunchMissile"/>
+        <Radius value="8"/>
+        <DebugTrace value="1"/>
+    </CEffectRandomPointInCircle>
+    <CEffectSet id="FortressBombardmentSet">
+        <EditorCategories value=""/>
+        <EffectArray value="FortressBombardmentRP"/>
+        <EffectArray value="FortressBombardmentFiringApplyBehavior"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectSwitch id="FortressBombardmentSwitch">
+        <ValidatorArray value="MinimumRange15"/>
+        <EditorCategories value=""/>
+        <CaseArray Validator="1CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP5"/>
+        <CaseArray Validator="2CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP6"/>
+        <CaseArray Validator="3CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP7"/>
+        <CaseArray Validator="4CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP8"/>
+        <CaseArray Validator="5CargoLoadedBombardmentFortress" Effect="FortressBombardmentCP9"/>
+        <CaseDefault value="FortressBombardmentCP4"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSwitch>
     <CEffectCreatePersistent id="HailstormMissilePodsCreatePersistentMerc">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
@@ -490,6 +712,25 @@
         <EffectArray value="ARESTargetLockABTarget"/>
         <EffectArray value="ARESTargetLockABCaster"/>
     </CEffectSet>
+    <CEffectSet id="NaniteTurretBurrowOrder">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectDamage id="PenetratorRoundDamage">
+        <EditorCategories value=""/>
+        <Amount value="200"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="PenetratorRoundSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray RectangleWidth="1.5" RectangleHeight="7" Effect="PenetratorRoundSet"/>
+        <AreaRelativeOffset value="0,-1.5"/>
+    </CEffectEnumArea>
+    <CEffectSet id="PenetratorRoundSet">
+        <EditorCategories value=""/>
+        <EffectArray value="PenetratorRoundDamage"/>
+        <EffectArray value="StunnedPenetratorRoundApplyBehavior"/>
+    </CEffectSet>
     <CEffectLaunchMissile id="PharaohLaserBatteryLMSecondary">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="PharaohLaserBatteryDamage"/>
@@ -531,6 +772,18 @@
             <MatchFlags index="Id" value="1"/>
         </Marker>
     </CEffectSet>
+    <CEffectSet id="PointDefenseLaserSet">
+        <ValidatorArray index="1" value="IsSamsonOR10energy"/>
+    </CEffectSet>
+    <CEffectEnumArea id="PoisonGasCloudSearch">
+        <SearchFilters value="Ground,Visible;Self,Player,Ally,Mechanical,Structure,Missile,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray index="0" Radius="6"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="PoisonGasDamage">
+        <EditorCategories value=""/>
+        <Amount value="2"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
     <CEffectDamage id="RagnarokNRollDamage" parent="DU_WEAP">
         <ArmorReduction value="0"/>
         <Amount value="200"/>
@@ -542,6 +795,10 @@
         <EffectArray value="RailcannonDamage"/>
         <EffectArray value="WolverineFearSA"/>
     </CEffectSet>
+    <CEffectDamage id="RaynorWeaponU">
+        <AreaArray Radius="1.6" Fraction="0.5"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="RedlineReactorAB">
         <WhichUnit Value="Caster"/>
         <Behavior value="RedlineReactor"/>
@@ -562,6 +819,9 @@
         <ValidatorArray index="5" value="NotStasis"/>
         <ValidatorArray index="6" removed="1"/>
     </CEffectCreateHealer>
+    <CEffectSet id="RescuePodsSet">
+        <EffectArray value="SurvivorsGuiltApplyBehavior"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="RevivalFieldControllerAB">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
@@ -1012,6 +1272,14 @@
         <PeriodicPeriodArray value="0"/>
         <ValidatorArray value="burrowbunkerspraynpayvalidators"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="PenetratorRoundCP">
+        <WhichLocation Value="CasterPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="PenetratorRoundSA"/>
+        <PeriodicOffsetArray value="0,-2.5,0"/>
+        <PeriodicPeriodArray value="0"/>
+        <InitialDelay value="0.15"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="SprayandPayDamage">
         <EditorCategories value=""/>
         <Amount value="6"/>
@@ -1033,6 +1301,9 @@
     </CEffectEnumArea>
     <CEffectApplyBehavior id="StunnedAnarchistLeapApplyBehavior">
         <Behavior value="StunnedAnarchistLeap"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="StunnedPenetratorRoundApplyBehavior">
+        <Behavior value="StunnedPenetratorRound"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SulfurMissilesApplyBehavior">
         <Behavior value="SulfurMissiles"/>
@@ -1095,6 +1366,13 @@
         <EffectArray value="SuperStimApplyBehavior"/>
         <EffectArray value="SuperStimHeal"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="SurvivorsGuiltApolloApplyBehavior">
+        <ValidatorArray index="0" value="NoApolloSurvivorGuiltCooldown"/>
+        <Behavior value="SurvivorsGuiltApollo"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SurvivorsGuiltApplyBehavior">
+        <Behavior value="SurvivorsGuilt"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="TacticalRealignmentApplyBehavior">
         <Behavior value="TacticalRealignment"/>
     </CEffectApplyBehavior>
@@ -1148,6 +1426,15 @@
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="ThermalBurstCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="ThermalBurstLaunchMissile"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.2"/>
+        <PeriodicPeriodArray value="0.2"/>
+    </CEffectCreatePersistent>
     <CEffectLaunchMissile id="ThermalBurstLaunchMissile">
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="ThermalBurstSwitch"/>
@@ -1172,6 +1459,8 @@
         <PeriodicEffectArray value="ScorpionMissilesLMLeft"/>
         <PeriodicEffectArray value="ScorpionMissilesLMRight"/>
         <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.33"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="ScorpionMissilesLMRight">
@@ -1375,7 +1664,6 @@
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <InitialEffect value="ARESAttackRightMercEdition"/>
-        <ExpireDelay value="0.4"/>
         <FinalEffect value="ARESAttackLeftMercEdition"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ARESAttackLeftMercEdition">
@@ -1383,11 +1671,17 @@
         <ArmorReduction value="1"/>
         <Kind value="Ranged"/>
         <Amount value="15"/>
+        <AreaArray Radius="1" Fraction="0.5"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
     </CEffectDamage>
     <CEffectDamage id="ARESAttackRightMercEdition" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="15"/>
+        <AreaArray Radius="1" Fraction="0.5"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="WolverineFearAB">
         <Behavior value="WolverineFeared"/>
@@ -1416,4 +1710,22 @@
         <AreaArray index="1" Validator="HaveSulfurMissiles"/>
         <AreaArray index="2" Validator="HaveSulfurMissiles"/>
     </CEffectDamage>
+    <CEffectTeleport id="AspisBlink">
+        <ValidatorArray value="CasterNotFungalGrowthed"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Caster"/>
+        <ClearQueuedOrders value="0"/>
+        <PlacementAround Value="CasterUnit"/>
+        <PlacementRange value="8"/>
+        <Range value="8"/>
+        <TargetLocation Value="TargetPoint"/>
+        <TeleportFlags index="TestCliff" value="1"/>
+    </CEffectTeleport>
+    <CEffectCreatePersistent id="AspisBlinkCP">
+        <ValidatorArray value="AspisBlinkNotOnCooldown"/>
+        <ValidatorArray value="CasterInCombat"/>
+        <InitialEffect value="AspisBlink"/>
+        <InitialOffset value="0,12,0"/>
+        <FinalEffect value="AspisBlinkCooldown"/>
+    </CEffectCreatePersistent>
 </Catalog>

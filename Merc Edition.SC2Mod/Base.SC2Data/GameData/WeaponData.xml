@@ -70,6 +70,33 @@
         <Period value="0.7607"/>
         <Effect value="DevastatorMissilesMercLaunchMissile"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="HammerSecurity">
+        <DisplayAttackCount value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TheConcillator">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="RattlesnakeWeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="RattlesnakeWeaponLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HankWeapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="HankWeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="1.4"/>
+        <DamagePoint value="0.005"/>
+        <Effect value="HankWeaponSet"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="DuskWingBanshee">
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
@@ -193,6 +220,10 @@
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="LinkedCooldown" value="0"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MilitarizedColonistShipGround">
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="PharaohBatteryTertiary">
         <EditorCategories value="Race:Terran"/>
@@ -257,9 +288,6 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="DevilDogFlameThrower">
-        <Backswing value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="AGRShadeHunter">
         <EditorCategories value="Race:Terran"/>
@@ -380,7 +408,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.694"/>
-        <Effect value="ThermalBurstLaunchMissile"/>
+        <Effect value="ThermalBurstCP"/>
         <AllowedMovement value="Moving"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
@@ -414,7 +442,7 @@
         <Range value="7"/>
         <Period value="1.93"/>
         <DamagePoint value="0.831"/>
-        <Backswing value="0.25"/>
+        <Backswing value="0"/>
         <Effect value="FistsofKronosCP"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
     </CWeaponLegacy>
@@ -457,9 +485,10 @@
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="6.5"/>
         <Range value="6"/>
-        <Period value="0.8"/>
+        <Period value="1.5"/>
         <Effect value="ARESAttackCPMercEdition"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
+        <DisplayAttackCount value="2"/>
     </CWeaponLegacy>
 </Catalog>

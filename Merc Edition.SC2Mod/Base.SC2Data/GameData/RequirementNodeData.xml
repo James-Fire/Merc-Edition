@@ -24,6 +24,9 @@
     <CRequirementCountUpgrade id="CountUpgradeASPRocketPodsCompleteOnly">
         <Count Link="ASPRocketPods" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeATXOrdnanceCompleteOnly">
+        <Count Link="ATXOrdnance" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAblativeScalesCompleteOnlyTechTreeCheat">
         <Count Link="AblativeScales" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -31,14 +34,26 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AdvancedOrbitalCommand" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeApolloInjectionPodsCompleteOnly">
+        <Count Link="ApolloInjectionPods" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeArmoredHousingCompleteOnly">
         <Count Link="ArmoredHousing" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAspisBlinkShieldCompleteOnly">
+        <Count Link="AspisBlinkShield" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBattleBunkerCompleteOnly">
         <Count Link="BattleBunker" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBoxofScrapsCompleteOnly">
+        <Count Link="BoxofScraps" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurrowBunkerCompleteOnly">
+        <Count Link="BurrowBunker" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBurstAmplifierCompleteOnly">
         <Count Link="BurstAmplifier" State="CompleteOnly"/>
@@ -103,6 +118,9 @@
     <CRequirementCountUpgrade id="CountUpgradeMobileStockpileCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MobileStockpile" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeNanitePulseCompleteOnly">
+        <Count Link="NanitePulse" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeNeosteelCupHoldersCompleteOnly">
         <Count Link="NeosteelCupHolders" State="CompleteOnly"/>

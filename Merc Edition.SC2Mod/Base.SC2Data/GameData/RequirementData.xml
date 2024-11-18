@@ -51,13 +51,25 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeASPRocketPodsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseATXOrdnance">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeATXOrdnanceCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseAdvancedOrbitalCommand">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseApolloInjectionPods">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeApolloInjectionPodsCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseArmoredHousing">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeArmoredHousingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseAspisBlinkShield">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAspisBlinkShieldCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseBattleBunker">
         <EditorCategories value="TechType:Ability"/>
@@ -66,6 +78,14 @@
     <CRequirement id="UseBearclawGauntlets">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseBoxofScraps">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBoxofScrapsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseBurrowBunker">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBurrowBunkerCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseBurstAmplifier">
         <EditorCategories value="TechType:Ability"/>
@@ -150,6 +170,10 @@
     <CRequirement id="UseMobileStockpile">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeMobileStockpileCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseNanitePulse">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeNanitePulseCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseNeosteelCupHolders">
         <EditorCategories value="TechType:Ability"/>
