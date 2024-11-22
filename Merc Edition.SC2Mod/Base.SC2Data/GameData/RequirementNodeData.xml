@@ -9,6 +9,11 @@
         <OperandArray value="CountUpgradeFireSuppressionSystemsCompleteOnly"/>
         <OperandArray value="CountUpgradeSwannsSuppressionCompleteOnly"/>
     </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorMinikinCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Minikin" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorNomadSilentModeCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="NomadSilentMode" State="CompleteOnlyAtUnit"/>
@@ -227,6 +232,10 @@
     </CRequirementLTE>
     <CRequirementNot id="NotAndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly">
         <OperandArray index="0" value="AndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorMinikinCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountBehaviorMinikinCompleteOnlyAtUnit"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeStabilizerMedpacksMercCompleteOnly">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>

@@ -137,11 +137,32 @@
     <CBehaviorBuff id="FireSuppressionSystem">
         <DisableValidatorArray index="1" value="SwannSuppressorRegularSuppressValidator"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="DemonRockets">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="IsStructureTarget"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <AbilLinkDisableArray value="AttackRedirect"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="FortressBombardmentFiring">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1.2"/>
         <Modification>
             <AbilLinkDisableArray value="CommandCenterTransport"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Hellraiser">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="13"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="1.5"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Inspire">
@@ -186,6 +207,17 @@
         <Limit value="4"/>
         <Slop value="500"/>
     </CBehaviorSpawn>
+    <CBehaviorBuff id="Minikin">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="30"/>
+        <ExpireEffect value="Suicide"/>
+        <Modification RadiusMultiplier="0.6" WeaponRange="-1">
+            <DamageDealtFraction index="Ranged" value="-0.5"/>
+            <VitalMaxFractionArray index="Life" value="-0.5"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="NaniteEmitterInstabuilddelay">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -464,6 +496,15 @@
         <DamageResponse Handled="RevivalFieldOFFSet" ModifyFraction="0">
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RipperRounds">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <LifeArmorBonus value="-5"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SamsonTrainingBuff">
         <EditorCategories value="AbilityorEffectType:Units"/>

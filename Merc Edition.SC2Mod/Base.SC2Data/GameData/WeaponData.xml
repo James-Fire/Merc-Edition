@@ -70,8 +70,36 @@
         <Period value="0.7607"/>
         <Effect value="DevastatorMissilesMercLaunchMissile"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="VanirMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="FreyjaAttackDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="0.32"/>
+        <Effect value="FreyjaAttackLM"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="HammerSecurity">
         <DisplayAttackCount value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GatlingCannons">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="ED067AttackDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Arc value="29.9926"/>
+        <Period value="0.57"/>
+        <Effect value="ED067AttackSet"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="TheConcillator">
         <EditorCategories value="Race:Terran"/>

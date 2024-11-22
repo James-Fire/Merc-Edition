@@ -53,6 +53,37 @@
         <Flags index="Transient" value="1"/>
         <Arc value="360"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="FreyjaBombardment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FreyjaBombardmentCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="TransientPreferred" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="10"/>
+        <CursorRangeMode value="ForceToMax"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FreyjaBombardment"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="Hellraiser">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="HellraiserApplyBehavior"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Hellraiser"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="Minikin">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MinikinCU"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="33"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Minikin" Requirements="IsNotMinikin"/>
+    </CAbilEffectInstant>
     <CAbilMorph id="NaniteCloudEmitterUnburrow">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
@@ -146,7 +177,7 @@
                 <CountMax value="1"/>
                 <CountStart value="1"/>
                 <CountUse value="1"/>
-                <TimeUse value="8"/>
+                <TimeUse value="30"/>
             </Charge>
         </Cost>
         <Range value="500"/>

@@ -11,7 +11,9 @@ Abil/Name/CondorSpiderMines=Use Spider Mines
 Abil/Name/DevilDogGrapple=Grapple
 Abil/Name/FlashFlame=Flash Flame
 Abil/Name/FortressBombardment=Fortress Bombardment
+Abil/Name/FreyjaBombardment=Freyja Bombardment
 Abil/Name/GreaterHeal=Greater Heal
+Abil/Name/Hellraiser=Hellraiser
 Abil/Name/IgniteAfterburnersHelsAngel=Ignite Afterburners
 Abil/Name/JetPackOverdrive=Jet Pack Overdrive
 Abil/Name/JetPackOverdriveUndo=Jet Pack Overdrive Undo
@@ -22,6 +24,7 @@ Abil/Name/MagrailMunitions=Magrail Munitions
 Abil/Name/MakeSpiderMineQueueCondor=Make Spider Mine Queue
 Abil/Name/MakeSpiderMinesCondor=Make Spider Mines
 Abil/Name/MedivacSpeedBoost=Ignite Afterburners
+Abil/Name/Minikin=Minikin
 Abil/Name/MorphToAgitator=Morph To Agitator
 Abil/Name/MorphToAnarchist=Morph To Anarchist
 Abil/Name/NaniteCloudEmitterBurrow=Nanite Cloud Emitter Burrow
@@ -65,11 +68,13 @@ Behavior/Name/BunkerBurrowed=Bunker Burrowed
 Behavior/Name/BunkerMorphing=Bunker Morphing
 Behavior/Name/Combustion=Combustion
 Behavior/Name/ConcussiveShrapnel=Concussive Shrapnel
+Behavior/Name/DemonRockets=Demon Rockets
 Behavior/Name/FearPliableArmor=Fear
 Behavior/Name/FerrierofSouls=Ferrier of Souls
 Behavior/Name/ForceMissiles=Force Missiles
 Behavior/Name/FortressBombardmentFiring=Fortress Bombardment Firing
 Behavior/Name/GraduatingRange=Graduating Range
+Behavior/Name/Hellraiser=Hellraiser
 Behavior/Name/ImmolationFluid=Immolation Fluid
 Behavior/Name/IncomingAnarchistJump=Incoming!
 Behavior/Name/Inspire=Inspire
@@ -85,6 +90,7 @@ Behavior/Name/ReflectiveArmorBonusDamage=Reflective Armor
 Behavior/Name/Revitalizing=Revitalizing
 Behavior/Name/RevivalFieldCooldown=Revival Field Cooldown
 Behavior/Name/RevivalFieldDodge=Revival Field Dodge
+Behavior/Name/RipperRounds=Ripper Rounds
 Behavior/Name/SecretStashStimpack=Secret Stash Stimpack
 Behavior/Name/ShellShower=Shell Shower
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
@@ -105,9 +111,11 @@ Behavior/Tooltip/ARESTargetLock=This unit is taking increased damage.
 Behavior/Tooltip/AdjudicatorCloakingField=This unit is cloaked unless revealed by detectors or effects.
 Behavior/Tooltip/AfterburnersHelsAngel=This unit is moving faster.
 Behavior/Tooltip/ConcussiveShrapnel=This unit is slowed.
+Behavior/Tooltip/DemonRockets=This unit is stunned.
 Behavior/Tooltip/FearPliableArmor=This unit is running in fear.
 Behavior/Tooltip/ForceMissiles=This unit is stunned.
 Behavior/Tooltip/GraduatingRange=Siege Breakers gradually gain range in siege mode, up to an additional 4.
+Behavior/Tooltip/Hellraiser=This unit is attacking significantly faster.
 Behavior/Tooltip/ImmolationFluid=This unit is burning for damage over time.
 Behavior/Tooltip/IncomingAnarchistJump=The Anarchist has more armor.
 Behavior/Tooltip/Inspire=This unit has increased movement and attack speed.
@@ -119,6 +127,7 @@ Behavior/Tooltip/ReflectiveArmorBonusDamage=Copperheads deal more damage when ta
 Behavior/Tooltip/Revitalizing=This unit is under the effects of a Revitalizer and will heal over time while in its area of effect.
 Behavior/Tooltip/RevivalFieldCooldown=This unit cannot recall on death yet.
 Behavior/Tooltip/RevivalFieldDodge=This unit will dodge the next incoming damage.
+Behavior/Tooltip/RipperRounds=This unit has reduced armor.
 Behavior/Tooltip/SecretStashStimpack=This unit moves and attacks more quickly, and is healing over time.
 Behavior/Tooltip/ShellShower=The longer Spartan Company attacks, the faster the attacks become.
 Behavior/Tooltip/SquadSightAres=This unit has increased range.
@@ -180,11 +189,13 @@ Button/Name/ConcussiveShrapnel=Concussive Shrapnel
 Button/Name/ConfederateReactor=Confederate Reactor
 Button/Name/DeadManSwitch=Dead Man Switch
 Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
+Button/Name/DemonRockets=Demon Rockets
 Button/Name/DeployRevitalizer=Deploy Revitalizer
 Button/Name/DevastatorOverride=Devastator Override
 Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/DivineArmor=Divine Armor
+Button/Name/ED067=ED-067
 Button/Name/EidolonSuit=Eidolon Suit
 Button/Name/EnableBatteries=Enable Batteries
 Button/Name/EnableRagnarok=Enable Ragnarok
@@ -194,9 +205,12 @@ Button/Name/FerrierofSouls=Ferrier of Souls
 Button/Name/FireOnTheMoveUniversal=Fire On The Move
 Button/Name/FlashFlames=Flash Flames
 Button/Name/ForceMissiles=Force Missiles
+Button/Name/Freyja=Freyja
+Button/Name/FreyjaBombardment=Bombardment
 Button/Name/GiveEmSomePepper=Give 'Em Some Pepper
 Button/Name/HammerMunitions=Hammer Munitions
 Button/Name/HankHarnack=Hank Harnack
+Button/Name/Hellraiser=Hellraiser
 Button/Name/HyperjumpStarcruiser=Tactical Jump
 Button/Name/IFFSpiderRounds=IFF Spider Rounds
 Button/Name/IgniteAfterburnersHelsAngel=Ignite Afterburners
@@ -209,6 +223,7 @@ Button/Name/JimRaynor=Jim Raynor
 Button/Name/JoriumLinedSuit=Jorium Lined Suit
 Button/Name/JotunnSystems=Jotunn Systems
 Button/Name/JumpJetAssault=Jump Jet Assault
+Button/Name/KelMorianRipperRounds=Kel-Morian Ripper Rounds
 Button/Name/LandingGear=Landing Gear
 Button/Name/LaserTargetingSystem=Laser Targeting System
 Button/Name/LegionSystems=Legion Systems
@@ -221,6 +236,7 @@ Button/Name/MagrailMunitions=Magrail Munitions
 Button/Name/Meltdown=Meltdown
 Button/Name/MercCommander=Merc Commander
 Button/Name/MineDrone=Mine Drone
+Button/Name/Minikin=Minikin
 Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
 Button/Name/NanitePulse=Nanite Pulse
@@ -235,7 +251,7 @@ Button/Name/PsychoMissiles=Psycho Missiles
 Button/Name/R31TearGasRounds=R31 Tear Gas Rounds
 Button/Name/RagnarokWeapons=Ragnarok Weapons
 Button/Name/RapidAlgorithms=Rapid Algorithms
-Button/Name/Rattlesnake=Rattlesnake
+Button/Name/Rattlesnake22=Rattlesnake
 Button/Name/RaynorSpecial=Raynor Special
 Button/Name/RedlineReactor=Redline Reactor
 Button/Name/ReflectiveArmor=Reflective Armor
@@ -332,11 +348,13 @@ Button/Tooltip/ConfederateReactor=Copperheads gain 1 range and movement speed, a
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/DeadManSwitch=Upon death, persists as a wreckage which can be rebuilt back into a Titan. If the wreckage is destroyed, it detonates a nuke.
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby enemy units.
+Button/Tooltip/DemonRockets=Attacks stun enemy structures.
 Button/Tooltip/DeployRevitalizer=Deploy a device that heals all friendly units nearby for 4% of their maximum life per second. Lasts for <d time="28"/>.
 Button/Tooltip/DevastatorOverride=Replaces main attack with a stronger one, has an additional area-damage attack, and can now attack ground units.
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/DivineArmor=Titans have a base armor of 3.
+Button/Tooltip/ED067=Apex Security Partnership's ED-067, a peacekeeping machine designed for urban pacification, malfunctioned during its first demonstration, killing junior executive Mr. Losumn. Dr. Rorke and technicians struggled to control the faulty robot, shutting it down.  The Predator program was given green-light due to the Losumn tragedy and due to rumors of the Enforcement Droid series using salvaged Dragoon parts from the first war.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
 Button/Tooltip/EnableBatteries=Enable numerous rapid-fire laser batteries effective versus groups.
 Button/Tooltip/EnableRagnarok=Enable a slower, stronger cannon effective versus singular targets.
@@ -348,10 +366,13 @@ Button/Tooltip/FireOnTheMoveUniversal=Can attack while moving.
 Button/Tooltip/FlashFlames=Fire two streams of flame that each deal 80 damage.
 Button/Tooltip/FlyingBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ForceMissiles=Scorpion Missiles stun their target for a short time.
+Button/Tooltip/Freyja=Freyja is a commander of Valkyrie Squadron of the Midgard Warriors, a mercenary organization founded by soldiers from UED expedition fleet, who survived the destruction of the fleet and later took on mercenary jobs. Currently they are high tech merc organization who use all the modern technology and takes care of their members, trying to prevent loses as much as possible. No wonder their paychecks are very high. On the other hand they are the ones who do all the job flawlessly.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/FreyjaBombardment=Fire several bursts in a line that each deal <d ref="Effect,FreyjaBombardmentDamage,Amount"/> damage to air units.
 Button/Tooltip/GiveEmSomePepper=Raynor's weapon deals partial splash damage.
 Button/Tooltip/HammerMunitions=Rattlesnake's attacks deal 50% of their damage in an area of effect.
 Button/Tooltip/HankHarnack=Henry "Hank" Harnack, the son of a trucking company operator, became a private in the Confederate Marine Corps' famous Heaven's Devils platoon. Friends with fellow marines Jim Raynor and Ryk Kydd, he was quick to anger and had an impulsive attitude.  He was officially listed as KIA and much like Emperor Palpatine he somehow survived.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/Hellraiser=Increase attack speed by 150%. Lasts for <d time="13"/>.
 Button/Tooltip/HyperjumpStarcruiser=After <d time="6"/>, warps to the target location. The Starcruiser is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Button/Tooltip/IFFSpiderRounds=Siege Breakers deal +60 damage to the main target, deal 80% less damage to friendly units, and leave behind a spider mine from sieged attacks.
 Button/Tooltip/IgniteAfterburnersHelsAngel=Increase movement speed by 100% for <d time="14"/> seconds.
@@ -365,6 +386,7 @@ Button/Tooltip/JimRaynor=James Eugene "Jim" Raynor is a former Terran marshal tu
 Button/Tooltip/JoriumLinedSuit=Shadows can use Hallucination and Psionic Lash. Cloak cost removed.
 Button/Tooltip/JotunnSystems=Increases Hel's Angel missile and cannon range by 2, reduces transformation time, and causes the Gatling Cannon to deal damage in a line.
 Button/Tooltip/JumpJetAssault=Launches the Anarchist to a nearby area, briefly stunning enemy units and giving the Anarchist +4 armor.
+Button/Tooltip/KelMorianRipperRounds=Attacks reduce the armor of the target by 5 for a short time.
 Button/Tooltip/LandingGear=While landed, the Samson acts like a Barracks, but trains units faster and has no need for a Tech Lab.
 Button/Tooltip/LaserTargetingSystem=Increases sight radius by 2 and weapon range by 1.
 Button/Tooltip/LegionSystems=Spartan Companies gain +3 missile range, +2 cannon range, and can attack ground and air units simultaneously.
@@ -379,6 +401,7 @@ Button/Tooltip/Meltdown=When Hank is defeated, he explodes, dealing 500 damage t
 Button/Tooltip/MercCommander=The Wolverine provides nearby mercenary units 1 sight radius, 0.5 movement speed, 10% attack speed, and 0.5 range. These buffs stack twice.
 Button/Tooltip/MercMedicHeal=Heals a friendly biological target.<n/><n/><c val="f078ff">Heals <d ref="Effect,SkibisAngelHeal,RechargeVitalRate"/> life per <d ref="Effect,SkibisAngelHeal,RechargeVitalRate * Effect,SkibisAngelHeal,DrainVitalCostFactor"/> energy.
 Button/Tooltip/MineDrone=Cloaked device that automatically deploys and replenishes spider mines.
+Button/Tooltip/Minikin=Deploy a tiny version of the ED-067 with timed life.
 Button/Tooltip/MorphtoAgitator=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/NaniteCloudEmitter=Automated Gas Defense system. Destroy to open the containment door.
@@ -398,7 +421,7 @@ Button/Tooltip/R31TearGasRounds=Wolverine attacks have a 10% chance to Fear enem
 Button/Tooltip/RagnarokWeapons=Weapon can be toggled to fire slower, stronger particle cannon shots.
 Button/Tooltip/RailGunTurret=Automated defensive turret. Damages all enemy ground units in a straight line. Times out after <d ref="Behavior,RailGunTurretTimedLife,Duration"/> seconds.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RapidAlgorithms=Charon Dropships gain the Ignite Afterburners ability and 2 movement speed. Deploying units is now instant.
-Button/Tooltip/Rattlesnake=Kev "Rattlesnake" West is a terran mercenary marauder and is one of the few mercenaries to be honorably discharged from the Armed Forces. Though he refuses to take jobs that have the possibility of harming innocent people, West still works steadily. His war days might be behind him, but he did not lose his bite.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Rattlesnake22=Kev "Rattlesnake" West is a terran mercenary marauder and is one of the few mercenaries to be honorably discharged from the Armed Forces. Though he refuses to take jobs that have the possibility of harming innocent people, West still works steadily. His war days might be behind him, but he did not lose his bite.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorSpecial=Condors can now jump up and down cliffs, and fire while moving.
 Button/Tooltip/RedlineReactor=Increases damage by 10 and doubles movement speed for <d time="8.4"/>.
 Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. When taking damage, damage dealt is briefly increased.
@@ -410,7 +433,7 @@ Button/Tooltip/SecretStashStimpack=Heals Rattlesnake for 3 life per second and i
 Button/Tooltip/SensorTower2=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy. <n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/SentinelMissilesAres=Fires a missile that deals 145 (+35 vs Shields) damage to the target, and 50 (+25 vs Shields) damage to nearby enemies.
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
-Button/Tooltip/ShellShower=The longer the Spartan Company attacks, the faster the attacks become 
+Button/Tooltip/ShellShower=The more this unit attacks, the faster its attacks become.
 Button/Tooltip/ShimmerScreen=Allows the Dusk Wing to permanently cloak, as well as increasing speed by 25% and reducing damage taken by 15% while cloaked.
 Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius to 1 and suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
 Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time="14"/>.
@@ -525,6 +548,7 @@ Effect/Name/CondorDeathrattleCP=Condor Deathrattle CP
 Effect/Name/CondorDeathrattleCU=Condor Deathrattle CU
 Effect/Name/CondorSpiderMinesDamage=Spider Mines (Damage)
 Effect/Name/DeadMenTellNoTales=Dead Men Tell No Tales
+Effect/Name/DemonRocketsApplyBehavior=DemonRocketsApplyBehavior
 Effect/Name/DevastatorMissilesMercDamage=DevastatorMissilesMercDamage
 Effect/Name/DevastatorMissilesMercLaunchMissile=DevastatorMissilesMercLaunchMissile
 Effect/Name/DevilDogGrappleCU=Devil Dog Grapple CU
@@ -536,6 +560,8 @@ Effect/Name/DevilDogGrappleRemovePrecursor=Devil Dog Grapple Remove Precursor
 Effect/Name/DevilDogGrappleSwitch=Devil Dog Grapple Switch
 Effect/Name/DieselBasedNapalmAB=Diesel Based Napalm AB
 Effect/Name/DieselBasedNapalmDamage=Diesel Based Napalm Damage
+Effect/Name/ED067AttackDamage=ED-067 Attack Damage
+Effect/Name/ED067AttackSet=ED-067 Attack Set
 Effect/Name/FRANomadKingCannonsDamage=FR-A Nomad King Cannons Damage
 Effect/Name/FearPliableArmorApplyBehavior=FearPliableArmorApplyBehavior
 Effect/Name/FistsofKronosCP=Fists of Kronos CP
@@ -553,6 +579,12 @@ Effect/Name/FortressBombardmentLaunchMissile=Fortress Bombardment Launch Missile
 Effect/Name/FortressBombardmentRP=Fortress Bombardment RP
 Effect/Name/FortressBombardmentSet=Fortress Bombardment Set
 Effect/Name/FortressBombardmentSwitch=Fortress Bombardment Switch
+Effect/Name/FreyjaAttackDamage=Freyja Attack Damage
+Effect/Name/FreyjaAttackLM=Freyja Attack LM
+Effect/Name/FreyjaAttackSet=Freyja Attack Set
+Effect/Name/FreyjaBombardmentCP=Freyja Bombardment CP
+Effect/Name/FreyjaBombardmentDamage=Freyja Bombardment Damage
+Effect/Name/FreyjaBombardmentSA=Freyja Bombardment SA
 Effect/Name/GraduatingRangeApplyBehavior=GraduatingRangeApplyBehavior
 Effect/Name/GreetingGrenadeDamage=Greeting Grenade Damage
 Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
@@ -574,6 +606,7 @@ Effect/Name/HarrierRecall=Recall
 Effect/Name/HellbornFlamethrowerCP=Hellborn Flamethrower CP
 Effect/Name/HellbornFlamethrowerDamage=Hellborn Flamethrower Damage
 Effect/Name/HellbornFlamethrowerSA=Hellborn Flamethrower SA
+Effect/Name/HellraiserApplyBehavior=HellraiserApplyBehavior
 Effect/Name/HellstormMissilePodsDamageMerc=Hellstorm Missile Pods (Damage) Merc
 Effect/Name/HellstormMissilePodsLaunchMissileMerc=Hellstorm Missile Pods (Launch Missile) Merc
 Effect/Name/HelsAngelWeaponSet=Weapon Set
@@ -592,6 +625,8 @@ Effect/Name/MagrailMunitionsDamage=Magrail Munitions Damage
 Effect/Name/MagrailMunitionsLaunchMissile=Magrail Munitions Launch Missile
 Effect/Name/MercCommanderAB=Merc Commander AB
 Effect/Name/MercCommanderSA=Merc Commander SA
+Effect/Name/MinikinApplyBehavior=MinikinApplyBehavior
+Effect/Name/MinikinCU=Minikin CU
 Effect/Name/NanitePulseDamage=Nanite Pulse Damage
 Effect/Name/NanitePulseSA=Nanite Pulse SA
 Effect/Name/NaniteTurretBurrowOrder=Nanite Turret Burrow Order
@@ -672,6 +707,7 @@ Effect/Name/RevivalFieldDodgeAB=Revival Field Dodge AB
 Effect/Name/RevivalFieldDodgeRB=Revival Field Dodge RB
 Effect/Name/RevivalFieldOFFSet=Revival Field OFF Set
 Effect/Name/RevivalFieldONSet=Revival Field ON Set
+Effect/Name/RipperRoundsApplyBehavior=RipperRoundsApplyBehavior
 Effect/Name/ScorpionMissiles=Scorpion Missiles
 Effect/Name/ScorpionMissilesAmplifiedDamage=Scorpion Missiles Amplified Damage
 Effect/Name/ScorpionMissilesLMLeft=Scorpion Missiles LM Left
@@ -799,8 +835,11 @@ Unit/Name/Copperhead=Copperhead
 Unit/Name/DevastatorMissilesMercWeapon=Devastator Missiles Projectile
 Unit/Name/DuskWingWeaponSecondary=Dusk Wing Secondary
 Unit/Name/DuskWingWeaponTertiary=Dusk Wing Tertiary
+Unit/Name/ED067=ED-067
 Unit/Name/FlyingBlockB=Flying Block B
 Unit/Name/FortressBombardmentMissile=Fortress Bombardment Missile
+Unit/Name/Freyja=Freyja
+Unit/Name/FreyjaWeaponPrimary=Freyja Weapon Primary
 Unit/Name/HankHarnack=Hank Harnack
 Unit/Name/Harrier=Harrier
 Unit/Name/HarrierAirLeft=Harrier Air Left
@@ -915,6 +954,7 @@ Weapon/Name/DuskWingBanshee2=Screecher Missiles
 Weapon/Name/DuskWingBanshee3=Screecher Missiles
 Weapon/Name/FRANomadKingCannons=FR-A Nomad King Cannons
 Weapon/Name/FistsofKronos=Fists of Kronos
+Weapon/Name/GatlingCannons=Gatling Cannons
 Weapon/Name/HailstormMissilePodsMerc=Hellstorm Missile Pods
 Weapon/Name/HankWeapon=Hank Weapon
 Weapon/Name/HellbornFlamethrower=Hellborn Flamethrower
@@ -933,6 +973,7 @@ Weapon/Name/ScorpionMissiles=Scorpion Missiles
 Weapon/Name/TheConcillator=The Concillator
 Weapon/Name/TheGrill=The Grill
 Weapon/Name/ThermalBurst=Thermal Burst
+Weapon/Name/VanirMissiles=Vanir Missiles
 Weapon/Name/Warbot120mmCannon=120mm Cannon
 Weapon/Tip/NomadMissile=
 Weapon/Tip/PlasmaTorpedo=Deals <d ref="Effect,LightningBombDamage,Amount*Behavior,LightningBomb,Duration/Behavior,LightningBomb,Period"/> damage over <d ref="Behavior,LightningBomb,Duration"/> seconds. Does not stack.

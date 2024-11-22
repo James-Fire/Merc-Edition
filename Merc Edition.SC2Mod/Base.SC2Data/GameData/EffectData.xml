@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="DemonRocketsApplyBehavior">
+        <Behavior value="DemonRockets"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="FreyjaAttackSet">
+        <EditorCategories value=""/>
+        <EffectArray value="DemonRocketsApplyBehavior"/>
+        <EffectArray value="FreyjaAttackDamage"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="FreyjaBombardmentCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterPoint"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="FreyjaBombardmentSA"/>
+        <PeriodicOffsetArray value="0,-3,0"/>
+        <PeriodicOffsetArray value="0,-6,0"/>
+        <PeriodicOffsetArray value="0,-9,0"/>
+        <PeriodicOffsetArray value="0,-12,0"/>
+        <PeriodicOffsetArray value="0,-15,0"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="FreyjaBombardmentDamage">
+        <EditorCategories value=""/>
+        <Amount value="150"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="FreyjaBombardmentSA">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <SearchFilters value="-;Player,Ally,Ground,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="2" Effect="FreyjaBombardmentDamage"/>
+        <LaunchLocation Value="CasterUnit"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="HellraiserApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="Hellraiser"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="FreyjaAttackDamage">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeBonus index="Structure" value="6"/>
+        <ArmorReduction value="1"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="20"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <AreaArray Radius="0.8" Fraction="0.4"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="FreyjaAttackLM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="FreyjaAttackSet"/>
+        <AmmoUnit value="FreyjaWeaponPrimary"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="MinikinApplyBehavior">
+        <Behavior value="Minikin"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="MinikinCU">
+        <EditorCategories value=""/>
+        <SpawnEffect value="MinikinApplyBehavior"/>
+        <SpawnOffset value="0,-2"/>
+    </CEffectCreateUnit>
     <CEffectModifyUnit id="RattlesnakeStimpackHeal">
         <EditorCategories value=""/>
         <ImpactUnit Value="Caster"/>
@@ -859,6 +923,9 @@
         <EffectArray value="RevivalFieldControllerAB"/>
         <EffectArray value="RevivalFieldDodgeRB"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="RipperRoundsApplyBehavior">
+        <Behavior value="RipperRounds"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="SJCloakedMineAttack">
         <InitialDelay value="0.5"/>
     </CEffectCreatePersistent>
@@ -1252,6 +1319,13 @@
         <EffectArray value="ShellShowerApplyBehavior"/>
         <EffectArray value="SpartanCompanyA"/>
     </CEffectSet>
+    <CEffectDamage id="ED067AttackDamage" parent="DU_WEAP">
+        <ValidatorArray value="CasterIsNotHidden"/>
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Light" value="5"/>
+        <Kind value="Ranged"/>
+        <Amount value="18"/>
+    </CEffectDamage>
     <CEffectSet id="SpartanCompanyShellShowerFull">
         <EditorCategories value=""/>
     </CEffectSet>
@@ -1267,6 +1341,12 @@
         <CreateFlags index="UseFood" value="0"/>
         <SpawnUnit value="SpiderMineBurrowed"/>
     </CEffectCreateUnit>
+    <CEffectSet id="ED067AttackSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ED067AttackDamage"/>
+        <EffectArray value="ShellShowerApplyBehavior"/>
+        <EffectArray value="RipperRoundsApplyBehavior"/>
+    </CEffectSet>
     <CEffectSet id="SpawnSpiderMineSet">
         <EffectArray value="ReplenishNanoConstructor2"/>
     </CEffectSet>

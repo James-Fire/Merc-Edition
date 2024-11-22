@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="ED067_Death" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
+    <CActorSound id="FortressBombardmentImpactSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FortressBombardmentDamage2.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="FreyjaBombardmentImpactSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FreyjaBombardmentSA.Start" Send="Create"/>
+        <Sound value="FortressBombardmentImpactSound"/>
+    </CActorSound>
+    <CActorModel id="FreyjaBombardmentImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FreyjaBombardmentSA.Start" Send="Create"/>
+    </CActorModel>
+    <CActorModelMaterial id="Hellraiser" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.Hellraiser.On" Send="Create"/>
+        <On index="6" Terms="Behavior.Hellraiser.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorSound id="HellraiserSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Hellraiser.On" Send="Create"/>
+    </CActorSound>
+    <CActorAction id="FreyjaWeaponAttack" parent="GenericAttack" effectImpact="FreyjaAttackDamage" effectLaunch="FreyjaAttackLM">
+        <LaunchAttachQuery Methods="Center 0"/>
+        <LaunchAssets Sound="Banshee_AttackLaunch2"/>
+        <Missile value="FreyjaWeaponMissile"/>
+        <ImpactMap index="None" Model="DutchAttackImpact" Sound="Banshee_AttackImpact2"/>
+        <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
+    </CActorAction>
+    <CActorMissile id="DuskWingBansheeAttackMissile">
+        <On Terms="ActorCreation; ValidatePlayer HaveASPRocketPods" Send="ModelSwap ASPRocketsWeapon"/>
+    </CActorMissile>
+    <CActorSound id="FreyjaAttackLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FreyjaAttackLM.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <CActorMissile id="FreyjaWeaponMissile" parent="GenericAttackMissile" unitName="FreyjaWeaponPrimary">
+        <Model value="FreyjaWeapon"/>
+    </CActorMissile>
+    <CActorUnit id="Freyja" parent="GenericUnitStandard" unitName="Freyja">
+        <Aliases value="_UnitLarge"/>
+        <On Terms="Behavior.MercAirDropB.Create" Send="Create BansheeMercenaryReentry"/>
+        <HostSiteOps Ops="SOpBanker"/>
+        <Baselines index="Walk" BlendIn="1.500000" BlendOut="2.000000"/>
+        <DeathArray index="Normal" ModelLink="DuskWingBansheeDeath" SoundLink="Banshee_Explode"/>
+        <PortraitModel value="PortraitFreyja"/>
+        <BarOffset value="60"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-banshee-mercenary.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-BansheeMercenary.dds"/>
+        <HighlightTooltip value="Unit/Name/DuskWing"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="60"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-BansheeMercenary.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-banshee-mercenary.dds"/>
+        </Wireframe>
+        <Macros value="GimbalZMacro"/>
+    </CActorUnit>
+    <CActorSound id="InTheThunderHeat" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Hellraiser.On" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="MinikinSpawn" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Minikin.On" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="MinikinSpawnSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.MinikinCU.Start" Send="Create"/>
+    </CActorSound>
     <CActorRange id="RattlesnakeRevitalizerRange" parent="RangeAbil" abil="RattlesnakeRevitalizer">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
@@ -167,7 +243,7 @@
         <PortraitModel value="HankHarnackPortrait"/>
         <WalkAnimMoveSpeed value="1.875"/>
         <BarOffset value="77"/>
-        <BarWidth value="45"/>
+        <BarWidth value="68"/>
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Terran-firebat-mercenary.dds"/>
         </GroupIcon>
@@ -258,10 +334,6 @@
         <EditorCategories value=""/>
         <On Terms="Effect.FortressBombardmentDamage2.Start" Send="Create"/>
     </CActorModel>
-    <CActorSound id="FortressBombardmentImpactSound" parent="SoundOneShot">
-        <EditorCategories value=""/>
-        <On Terms="Effect.FortressBombardmentDamage2.Start" Send="Create"/>
-    </CActorSound>
     <!-- Ground Attack                                                                           -->
     <CActorMissile id="MilitarizedColonistShipGroundAttackMissile">
         <On Terms="ActorCreation; ValidateUnit HaveATXOrdnance" Send="ModelSwap ATXOrdnance"/>
@@ -397,6 +469,44 @@
             <Image value="Assets\Textures\Wireframe-Terran-Marine-Raynor.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="ED067" parent="GenericUnitBase" unitName="ED067">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="WeaponStart.GatlingCannons.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.GatlingCannons.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Behavior.MercGroundDrop.Create" Send="Create SpartanCompanyDropModel"/>
+        <On Terms="Behavior.Minikin.On" Send="SetScale 0.600000"/>
+        <On Terms="Behavior.Minikin.On" Send="ModelSwap ED067Minikin"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="ED067Death" SoundLink="Goliath_Explode"/>
+        <PortraitModel value="PortraitED067"/>
+        <StandAnimTurnTime value="4"/>
+        <WalkAnimMoveSpeed value="3.6093"/>
+        <BarOffset value="95"/>
+        <BarWidth value="66"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-goliath-mercenary.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-GoliathMercenary.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-GoliathMercenary.dds"/>
+        <Wireframe>
+            <Image value="Assets\Icons and Wireframes\Wireframe-unit-Terran_ED209.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="ED067Attack" parent="GenericAttack" effectAttack="ED067AttackDamage">
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA0"/>
+        <LaunchAssets Model="SpartanCompanyGroundAttackLaunch" Sound="GoliathGroundAttackLaunch"/>
+        <ImpactMap index="None" Model="SpartanCompanyGroundAttackImpact" Sound="Goliath_GroundAttackImpact"/>
+        <ImpactPhysics Name="GatlingCannonImpact" MatchKeys="Basic" Physics="VikingAssaultAttackForce"/>
+    </CActorAction>
+    <CActorModel id="RipperRounds" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.RipperRounds.On" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
     <CActorModelMaterial id="SurvivorsGuilt" parent="BehaviorGlaze">
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
@@ -1170,9 +1280,6 @@
         <ImpactMap index="None" Model="BansheeAttackImpact" Sound="Banshee_AttackImpact2"/>
         <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
     </CActorAction>
-    <CActorMissile id="DuskWingBansheeAttackMissile">
-        <On Terms="ActorCreation; ValidatePlayer HaveASPRocketPods" Send="ModelSwap ASPRocketsWeapon"/>
-    </CActorMissile>
     <CActorMissile id="FlyingBlockB" parent="GenericUnitBase" unitName="FlyingBlockB">
         <Aliases value="_MissileHybrids"/>
         <Macros value="D8ChargeAnim"/>
@@ -1471,15 +1578,20 @@
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.ForceMissiles.On" Send="Create"/>
         <On index="6" Terms="Behavior.ForceMissiles.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.DemonRockets.On" Send="Create"/>
+        <On Terms="Behavior.DemonRockets.Off" Send="AnimBracketStop BSD"/>
     </CActorModelMaterial>
     <CActorSound id="ForceMissilesLoop" parent="SoundContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.ForceMissiles.On" Send="Create"/>
         <On Terms="Behavior.ForceMissiles.Off" Send="Destroy"/>
+        <On Terms="Behavior.DemonRockets.On" Send="Create"/>
+        <On Terms="Behavior.DemonRockets.Off" Send="Destroy"/>
     </CActorSound>
     <CActorSound id="ForceMissilesSound" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.ForceMissiles.On" Send="Create"/>
+        <On Terms="Behavior.DemonRockets.On" Send="Create"/>
     </CActorSound>
     <CActorModel id="GhostNukeIndicator">
         <On Terms="ActorCreation; ValidatePlayer HaveTyradorImplants" Send="AnimSetTimeScale BSD 2.000000"/>
@@ -2030,6 +2142,8 @@
     <CActorModel id="SpartanCompanyShellShowerFull" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.SpartanCompanyShellShowerFull.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.000000 1.500000"/>
+        <Host Subject="_Unit"/>
     </CActorModel>
     <!-- Spider Mine ........................................................................... -->
     <CActorUnit id="SpiderMineVulture">
