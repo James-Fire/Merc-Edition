@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="HERCGrappleDummy" parent="GenericUnitStandard" unitName="HERCGrappleDummy">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Behavior.MercGroundDrop.Create" Send="Create DevilDogDropModel"/>
+        <On Terms="Abil.attack.ReadyStop" Target="DevilDogAttackModel" Send="SetOpacity 0.000000 0.250000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Marauder_Land"/>
+        <On Terms="ActorCreation" Send="SetTeamColor {255,0,0 2.000000} 255,0,0"/>
+        <Model value="DevilDog"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="DevilDog"/>
+        <DeathArray index="Normal" ModelLink="DevilDogDeath" SoundLink="Firebat_Explode"/>
+        <PlacementModel value="DevilDog"/>
+        <PortraitModel value="HERCDummyPortrait"/>
+        <WalkAnimMoveSpeed value="1.875"/>
+        <BarOffset value="77"/>
+        <BarWidth value="45"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-firebat-mercenary.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="FirebatGroupWhat"/>
+        <GroupSoundArray index="Yes" value="FirebatGroupYes"/>
+        <GroupSoundArray index="Attack" value="FirebatGroupAttack"/>
+        <GroupSoundArray index="Board" value="FirebatGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-herc.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Birth" value="FirebatBirth"/>
+        <SoundArray index="Ready" value="Firebat_Ready"/>
+        <SoundArray index="Help" value="Firebat_Help"/>
+        <SoundArray index="What" value="Firebat_What"/>
+        <SoundArray index="Yes" value="Firebat_Yes"/>
+        <SoundArray index="Attack" value="Firebat_Attack"/>
+        <SoundArray index="Pissed" value="Firebat_Pissed"/>
+        <SoundArray index="Movement" value="FirebatMovement"/>
+        <SoundArray index="Turning" value="FirebatTurning"/>
+        <SoundArray index="Board" value="FirebatBoard"/>
+        <SoundArray index="Click" value="FirebatClick"/>
+        <SoundArray index="ClickError" value="FirebatClickError"/>
+        <SoundArray index="Highlight" value="FirebatHighlight"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-herc.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-firebat-mercenary.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorSound id="ED067_Death" parent="SoundOneShot">
         <EditorCategories value=""/>
     </CActorSound>

@@ -321,6 +321,53 @@
     <CUnit id="DevastatorMissilesMercWeapon" parent="MISSILE">
         <Mover value="DevastatorMissilesMercMissile"/>
     </CUnit>
+    <CUnit id="HERCGrappleDummy">
+        <DeathRevealRadius value="0"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Untooltipable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="ShareControl" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <LifeStart value="160"/>
+        <LifeMax value="160"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="15"/>
+        <WeaponArray/>
+        <EffectArray index="Death" value="DeadMenTellNoTales"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="150"/>
+        <ScoreKill value="225"/>
+        <SubgroupPriority value="5"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAI value="Firebat"/>
+        <SelectAlias value="Firebat"/>
+        <GlossaryPriority value="61"/>
+        <GlossaryStrongArray value="Zealot"/>
+        <GlossaryStrongArray value="Zergling"/>
+        <GlossaryWeakArray value="Thor"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <GlossaryWeakArray value="Roach"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+    </CUnit>
     <CUnit id="FreyjaWeaponPrimary" parent="MISSILE">
         <Race value="Terr"/>
         <Mover value="BacklashRocketsLMWeapon"/>

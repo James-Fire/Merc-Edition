@@ -369,6 +369,7 @@ Button/Tooltip/ForceMissiles=Scorpion Missiles stun their target for a short tim
 Button/Tooltip/Freyja=Freyja is a commander of Valkyrie Squadron of the Midgard Warriors, a mercenary organization founded by soldiers from UED expedition fleet, who survived the destruction of the fleet and later took on mercenary jobs. Currently they are high tech merc organization who use all the modern technology and takes care of their members, trying to prevent loses as much as possible. No wonder their paychecks are very high. On the other hand they are the ones who do all the job flawlessly.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/FreyjaBombardment=Fire several bursts in a line that each deal <d ref="Effect,FreyjaBombardmentDamage,Amount"/> damage to air units.
 Button/Tooltip/GiveEmSomePepper=Raynor's weapon deals partial splash damage.
+Button/Tooltip/HERCGrappleDummy=No one will believe you.
 Button/Tooltip/HammerMunitions=Rattlesnake's attacks deal 50% of their damage in an area of effect.
 Button/Tooltip/HankHarnack=Henry "Hank" Harnack, the son of a trucking company operator, became a private in the Confederate Marine Corps' famous Heaven's Devils platoon. Friends with fellow marines Jim Raynor and Ryk Kydd, he was quick to anger and had an impulsive attitude.  He was officially listed as KIA and much like Emperor Palpatine he somehow survived.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
@@ -840,6 +841,7 @@ Unit/Name/FlyingBlockB=Flying Block B
 Unit/Name/FortressBombardmentMissile=Fortress Bombardment Missile
 Unit/Name/Freyja=Freyja
 Unit/Name/FreyjaWeaponPrimary=Freyja Weapon Primary
+Unit/Name/HERCGrappleDummy=HERC Grapple (Dummy)
 Unit/Name/HankHarnack=Hank Harnack
 Unit/Name/Harrier=Harrier
 Unit/Name/HarrierAirLeft=Harrier Air Left

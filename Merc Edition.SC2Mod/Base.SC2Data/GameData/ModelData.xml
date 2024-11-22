@@ -59,6 +59,12 @@
         <Model value="Assets\Models\ASP_Missile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="HERCDummyPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Models\FRANKPOR.m3"/>
+        <FacialController value="LocalizedData\Facial\FirebatPortrait.fxa"/>
+        <Image value="Assets\Textures\FirebatMercenaryPortrait_Static.dds"/>
+        <Lighting value="FirebatMercenaryPortrait"/>
+    </CModel>
     <CModel id="FreyjaBombardmentImpact">
         <Model value="Assets\Effects\Terran\OdinShoulderMissileImpact\OdinShoulderMissileImpact.m3"/>
         <AnimSpeed value="1.500000"/>
