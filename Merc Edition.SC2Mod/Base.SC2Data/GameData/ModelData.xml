@@ -78,6 +78,9 @@
     <CModel id="Hellraiser">
         <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_PrestigeMechBuff\Glaze_Alarak_COOP_PrestigeMechBuff.m3"/>
     </CModel>
+    <CModel id="MercRaynorGiveEmSomePepperImpact">
+        <Model value="Assets\Models\Nova_PenetratingShot_Impact.m3"/>
+    </CModel>
     <CModel id="PortraitFreyja" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Models\Valkyrie_Freya_Portrait_Final.m3"/>
         <FacialController value="LocalizedData\Facial\BansheePortrait.fxa"/>
@@ -281,10 +284,6 @@
         <ShadowRadius value="0.416500"/>
         <TechPurchaseCamera value="TechPurchaseInfantry"/>
         <UnitGlossaryCamera value="Star2CameraMid03"/>
-    </CModel>
-    <CModel id="RaynorAttackImpact">
-        <ScaleMax value="6.000000,6.000000,6.000000"/>
-        <ScaleMin value="6.000000,6.000000,6.000000"/>
     </CModel>
     <CModel id="RaynorLab">
         <ScaleMax value="1.550000,1.550000,1.550000"/>

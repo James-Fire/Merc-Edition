@@ -111,6 +111,12 @@
         <EditorCategories value=""/>
         <On Terms="Behavior.Hellraiser.On" Send="Create"/>
     </CActorSound>
+    <CActorModel id="MercRaynorGiveEmSomePepperImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.RaynorWeaponU.Start; At Target" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenterStationary"/>
+    </CActorModel>
     <CActorModel id="MinikinSpawn" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.Minikin.On" Send="Create"/>

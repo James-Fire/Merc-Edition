@@ -889,6 +889,7 @@
         <DupeDestroyCount value="3"/>
         <DupeMuteCount value="3"/>
         <Volume value="-14.000000,-14.000000"/>
+        <Mode value="3DWorld"/>
     </CSound>
     <CSound id="SprayandPayLaunchSound">
         <AssetArray File="Assets\Sounds\Hellfire_Shotgun_01.wav" FacialGroup=""/>
