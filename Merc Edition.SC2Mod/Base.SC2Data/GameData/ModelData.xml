@@ -81,6 +81,12 @@
     <CModel id="MercRaynorGiveEmSomePepperImpact">
         <Model value="Assets\Models\Nova_PenetratingShot_Impact.m3"/>
     </CModel>
+    <CModel id="NapalmLaunchModel">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponLaunch\SiegeTankWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="NeoTitaniumGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Dehaka_LevelUp\Glaze_Dehaka_LevelUp.m3"/>
+    </CModel>
     <CModel id="PortraitFreyja" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Models\Valkyrie_Freya_Portrait_Final.m3"/>
         <FacialController value="LocalizedData\Facial\BansheePortrait.fxa"/>
@@ -96,11 +102,6 @@
     <CModel id="BunkerBurrowedDeath" parent="BunkerDeathBase">
         <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
     </CModel>
-    <CModelFoliage id="BurrowBunkerFrame">
-        <Model value="Assets\Buildings\Terran\SupplyDepotEx1\SupplyDepotEx1.m3"/>
-        <ScaleMax value="0.800000,0.800000,0.500000"/>
-        <ScaleMin value="0.800000,0.800000,0.500000"/>
-    </CModelFoliage>
     <CModelFoliage id="ChemicalPlating">
         <Model value="Assets\Effects\Terran\Nanocloud_Damage_Shield\Nanocloud_Damage_Shield.m3"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
@@ -363,6 +364,53 @@
     </CModel>
     <CModel id="RipperRounds">
         <Model value="Assets\Effects\Terran\Raven_Shredder_Missile_MP_ImpactDebuff\Raven_Shredder_Missile_MP_ImpactDebuff.m3"/>
+    </CModel>
+    <CModel id="SgtHammer" parent="Unit">
+        <Model value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base_v07.m3"/>
+        <RequiredAnims value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base.m3a"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.050000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid08"/>
+    </CModel>
+    <CModel id="SgtHammerNapalmMissile">
+        <Model value="Assets\Effects\Terran\ArcadeVikingMissile\ArcadeVikingMissile.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="SgtHammerSieged" parent="Unit">
+        <Model value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base_v07.m3"/>
+        <RequiredAnims value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base.m3a"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.050000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid08"/>
+    </CModel>
+    <CModel id="SgtHammerPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\AC_SgtHammer_Portrait\AC_SgtHammer_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\SiegeTankPortrait.fxa"/>
+        <Image value="Assets\Textures\SiegeTankMercenaryPortrait_Static.dds"/>
+        <Lighting value="SiegeTankMercenaryPortrait"/>
     </CModel>
     <CModelFoliage id="SurvivorsGuilt">
         <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>

@@ -480,6 +480,26 @@
         <Pitch value="4.000000,6.000000"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
+    <CSound id="NapalmLaunch" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_launch01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_launch02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_launch03.wav" FacialGroup=""/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="NapalmLaunchSwt" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_mech01.wav" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="NapalmLoop" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_loop01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_loop02.wav" FacialGroup=""/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="NeoTitaniumPlating" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_neosteelplating_launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_neosteelplating_launch_02.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
     <CSound id="NomadMineDrone" parent="Combat">
         <AssetArray File="Assets\Sounds\WidowMine_Armed1a.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\WidowMine_Armed1b.wav" FacialGroup=""/>

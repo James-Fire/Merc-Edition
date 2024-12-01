@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="NeoTitaniumPlating" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.NeoTitaniumPlatingSieged.On" Send="Create"/>
+        <On Terms="Behavior.NeoTitaniumPlatingTank.On" Send="Create"/>
+    </CActorSound>
+    <CActorModelMaterial id="NeoTitaniumGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.NeoTitaniumPlatingSieged.On" Send="Create"/>
+        <On index="6" Terms="Behavior.NeoTitaniumPlatingSieged.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.NeoTitaniumPlatingTank.On" Send="Create"/>
+        <On Terms="Behavior.NeoTitaniumPlatingTank.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
     <CActorUnit id="HERCGrappleDummy" parent="GenericUnitStandard" unitName="HERCGrappleDummy">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
@@ -129,14 +141,6 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
-    <CActorModel id="BurrowBunkerFrame" parent="ModelAddition">
-        <Inherits index="BaseModelScale" value="0"/>
-        <Inherits index="Opacity" value="0"/>
-        <Inherits index="Scale" value="0"/>
-        <Inherits index="TintColor" value="0"/>
-        <EditorCategories value=""/>
-        <On Terms="ActorCreation" Send="AnimGroupApply Burrow Stand,Burrow Stand,Burrow Instant"/>
-    </CActorModel>
     <!-- ...Fire!............................................................................... -->
     <CActorRegionCircle id="FirebatTreeKiller">
         <On Terms="Effect.HankWeaponSA.Start; At Effect" Send="Create"/>
@@ -556,6 +560,66 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
+    <CActorUnit id="SgtHammer" parent="GenericUnitMorph" unitName="SgtHammer">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Behavior.MercGroundDrop.Create" Send="Create SiegeBreakerDropModel"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SiegeBreakerDeath" SoundLink="SiegeBreaker_Explode"/>
+        <PortraitModel value="SgtHammerPortrait"/>
+        <StandAnimTurnTime value="3.33"/>
+        <WalkAnimMoveSpeed value="1"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="SgtHammerNapalm" parent="GenericAttack" effectImpact="SgtHammerNapalmSet" effectLaunch="SgtHammerNapalmLaunchMissile">
+        <LaunchAttachQuery Methods="Weapon 0"/>
+        <LaunchAssets Model="NapalmLaunchModel" Sound="NapalmLaunch"/>
+        <ImpactMap index="None" Sound="Spell_Fireball_Impact"/>
+    </CActorAction>
+    <CActorSound id="SgtHammerNapalmLoop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SgtHammerNapalmDoTCP.Start" Send="Create"/>
+        <On Terms="Effect.SgtHammerNapalmDoTCP.Stop" Send="Destroy"/>
+        <Sound value="NapalmLoop"/>
+    </CActorSound>
+    <CActorMissile id="SgtHammerNapalmMissile" parent="GenericAttackMissile" unitName="SgtHammerNapalmMissile"/>
+    <CActorSound id="NapalmLaunchSwt" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SgtHammerNapalmLaunchMissile.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <CActorRange id="SgtHammerNapalmRange" parent="RangeAbil" abil="SgtHammerNapalm">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorUnit id="SgtHammerSieged" parent="GenericUnitMorph" unitName="SgtHammerSieged">
+        <Aliases value="_UnitLarge"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SiegeBreakerSiegedDeath" SoundLink="SiegeTank_Explode"/>
+        <PortraitModel value="SgtHammerPortrait"/>
+        <BarOffset value="65"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-siegemode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Sieged.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Sieged.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-siegemode.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModelMaterial id="SurvivorsGuilt" parent="BehaviorGlaze">
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
@@ -641,11 +705,10 @@
     <CActorUnit id="Bunker">
         <On Terms="AbilMorph.*.Finish; MorphTo BunkerBurrowed" Send="Destroy"/>
         <On Terms="AbilMorph.*.Finish; MorphTo Bunker" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetScale 1.000000,1.000000,0.350000 1.000000"/>
+        <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetScale 1.000000,1.000000,0.300000 1.000000"/>
         <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetTintColor 128,128,128 1.000000"/>
         <On Terms="AbilMorph.*.Start; MorphTo Bunker" Send="SetScale 1.000000 1.000000"/>
         <On Terms="AbilMorph.*.Start; MorphTo BunkerBurrowed" Send="SetTintColor 255,255,255 1.000000"/>
-        <On Terms="ActorCreation; ValidateUnit HaveBurrowBunker" Send="Create BurrowBunkerFrame"/>
     </CActorUnit>
     <CActorUnit id="BunkerBurrowed" parent="TerranBuildingEx" unitName="BunkerBurrowed">
         <Aliases value="_UnitHuge"/>
@@ -694,7 +757,7 @@
         <On Terms="AbilMorph.*.Finish; MorphTo Bunker" Send="Destroy"/>
         <On Terms="AbilMorph.*.Start; MorphTo Bunker" Send="SetTintColor 255,255,255 1.000000"/>
         <On Terms="AbilMorph.*.Start; MorphTo Bunker" Send="SetScale 1.000000 1.000000"/>
-        <Scale value="1.000000,1.000000,0.350000"/>
+        <Scale value="1.000000,1.000000,0.300000"/>
         <CreepHeightClass value="Small"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Bunker_Explode"/>
         <DeathCustoms ModelLink="BunkerUpgradeDeath" Name="Upgrade"/>

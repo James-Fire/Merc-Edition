@@ -235,6 +235,22 @@
         <Period value="3"/>
         <PeriodicEffect value="NanitePulseSA"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="NeoTitaniumPlatingSieged">
+        <Tooltip value="Button/Tooltip/NeoTitaniumPlating"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Modification>
+            <LifeArmorBonus value="10"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NeoTitaniumPlatingTank">
+        <Tooltip value="Button/Tooltip/NeoTitaniumPlating"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <Modification>
+            <LifeArmorBonus value="5"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="NomadSilentMode">
         <Modification SightBonus="6">
             <ModifyFlags index="DisableWeapons" value="1"/>

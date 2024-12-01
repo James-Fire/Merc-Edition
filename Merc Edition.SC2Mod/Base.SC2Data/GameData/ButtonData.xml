@@ -183,6 +183,14 @@
         <Icon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
     </CButton>
+    <CButton id="NapalmStrike">
+        <Icon value="Assets\Textures\kaeocube.dds"/>
+        <AlertIcon value="Assets\Textures\kaeocube.dds"/>
+    </CButton>
+    <CButton id="NeoTitaniumPlating">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="Rattlesnake22">
         <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
@@ -238,6 +246,10 @@
     <CButton id="HammerMunitions">
         <Icon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
+    </CButton>
+    <CButton id="SgtHammerSiegeMode">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="TrainACV">
         <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>

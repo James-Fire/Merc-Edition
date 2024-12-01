@@ -64,6 +64,19 @@
         <SpawnEffect value="MinikinApplyBehavior"/>
         <SpawnOffset value="0,-2"/>
     </CEffectCreateUnit>
+    <CEffectApplyBehavior id="NeoTitaniumSiegedAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="NeoTitaniumPlatingSieged"/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="NeoTitaniumSwitch">
+        <EditorCategories value=""/>
+        <CaseArray Validator="SgtHammerInSiegeMode" Effect="NeoTitaniumSiegedAB"/>
+        <CaseDefault value="NeoTitaniumTankAB"/>
+    </CEffectSwitch>
+    <CEffectApplyBehavior id="NeoTitaniumTankAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="NeoTitaniumPlatingTank"/>
+    </CEffectApplyBehavior>
     <CEffectModifyUnit id="RattlesnakeStimpackHeal">
         <EditorCategories value=""/>
         <ImpactUnit Value="Caster"/>
@@ -1006,6 +1019,43 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="SecretStashStimpack"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="SgtHammerNapalmDamage">
+        <Amount value="80"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="SgtHammerNapalmDoTCP">
+        <EditorCategories value=""/>
+        <PeriodCount value="30"/>
+        <PeriodicEffectArray value="SgtHammerNapalmDoTSA"/>
+        <PeriodicPeriodArray value="0.1665"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SgtHammerNapalmDoTDamage">
+        <EditorCategories value=""/>
+        <Amount value="5"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="SgtHammerNapalmDoTSA">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="2" Effect="SgtHammerNapalmDoTDamage"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="SgtHammerNapalmSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="2" Effect="SgtHammerNapalmDamage"/>
+    </CEffectEnumArea>
+    <CEffectLaunchMissile id="SgtHammerNapalmLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="SgtHammerNapalmSet"/>
+        <AmmoUnit value="SgtHammerNapalmMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="SgtHammerNapalmSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SgtHammerNapalmSA"/>
+        <EffectArray value="SgtHammerNapalmDoTCP"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
     <CEffectCreatePersistent id="ShredderRoundsCP">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="SourcePoint"/>
