@@ -140,6 +140,12 @@
         <CooldownLink value="Abil/AspisBlink"/>
         <Ability value="AspisBlink"/>
     </CValidatorUnitCompareCooldown>
+    <CValidatorUnitType id="SgtHammerInSiegeMode">
+        <Value value="SgtHammerSieged"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="SgtHammerInTankMode">
+        <Value value="SgtHammer"/>
+    </CValidatorUnitType>
     <CValidatorCombine id="SwannANDBelow80Life">
         <Type value="And"/>
         <CombineArray value="LifeBelow80"/>

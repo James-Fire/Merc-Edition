@@ -15,6 +15,9 @@
     <CRequirement id="IsInSilentMode">
         <NodeArray index="Show" Link="CountBehaviorNomadSilentModeCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="IsNotMinikin">
+        <NodeArray index="Show" Link="NotCountBehaviorMinikinCompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="MineDroneBuild">
         <NodeArray index="Use" Link="LTCountUnitSpiderMineBurrowedCompleteOnlyAtUnit4"/>
     </CRequirement>

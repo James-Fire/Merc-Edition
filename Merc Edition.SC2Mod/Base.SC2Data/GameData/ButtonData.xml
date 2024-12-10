@@ -28,6 +28,18 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="DemonRockets">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+    </CButton>
+    <CButton id="Hellraiser">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
+    </CButton>
+    <CButton id="FreyjaBombardment">
+        <Icon value="Assets\Textures\btn-ability-terran-bombardmentstrike-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-bombardmentstrike-color.dds"/>
+    </CButton>
     <CButton id="BombardmentFortress">
         <Icon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-earthsplitterordnance-earthsplitterbombardment.dds"/>
@@ -159,6 +171,30 @@
         <Icon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
     </CButton>
+    <CButton id="KelMorianRipperRounds">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
+    </CButton>
+    <CButton id="Minikin">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Freyja">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
+    </CButton>
+    <CButton id="NapalmStrike">
+        <Icon value="Assets\Textures\kaeocube.dds"/>
+        <AlertIcon value="Assets\Textures\kaeocube.dds"/>
+    </CButton>
+    <CButton id="NeoTitaniumPlating">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Rattlesnake22">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+    </CButton>
     <CButton id="SecretStashStimpack">
         <Icon value="Assets\Textures\btn-upgrade-tychus-marauder-secretstash.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-secretstash.dds"/>
@@ -203,13 +239,17 @@
         <Icon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\storm_ui_icon_raynor_penetratinground.dds"/>
     </CButton>
-    <CButton id="Rattlesnake">
-        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
-        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+    <CButton id="ED067">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-Terran_ED209.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-Terran_ED209.dds"/>
     </CButton>
     <CButton id="HammerMunitions">
         <Icon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
+    </CButton>
+    <CButton id="SgtHammerSiegeMode">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="TrainACV">
         <Icon value="Assets\Textures\btn-unit-terran-scvfusionwelder.dds"/>

@@ -91,6 +91,19 @@
             <FlightTime value="1"/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="SgtHammerNapalmMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="80"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="0.875"/>
+        </MotionPhases>
+        <MotionPhases ThrowBandYaw="-360,-360,-360,-360" ThrowBandPitch="-360,-360,-360,-360">
+            <Overlays/>
+            <Overlays/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverMissile id="StarcruiserLaserBattery">
         <MotionPhases>
             <Driver value="Guidance"/>

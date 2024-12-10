@@ -695,6 +695,27 @@ void libBA5CCDED_gt_HarrierRecall_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Harrier Force Missiles
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_HarrierForceMissiles_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    CatalogFieldValueSet(c_gameCatalogUnit, "HERCGrappleDummy", "Name", 0, "<c val=\"ff0000\">Frank</c>");
+    CatalogFieldValueSet(c_gameCatalogActor, "HERCGrappleDummy", "HighlightTooltip", 0, "<c val=\"ff0000\">Frank</c>");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_HarrierForceMissiles_Init () {
+    libBA5CCDED_gt_HarrierForceMissiles = TriggerCreate("libBA5CCDED_gt_HarrierForceMissiles_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_HarrierForceMissiles);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Nomad Silent Mode Height Up
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_NomadSilentModeHeightUp_Func (bool testConds, bool runActions) {
@@ -809,6 +830,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_SkibisAngelRepairDrone_Init();
     libBA5CCDED_gt_HelsAngelTacticalRealignment_Init();
     libBA5CCDED_gt_HarrierRecall_Init();
+    libBA5CCDED_gt_HarrierForceMissiles_Init();
     libBA5CCDED_gt_NomadSilentModeHeightUp_Init();
     libBA5CCDED_gt_NomadSilentModeHeightDown_Init();
     libBA5CCDED_gt_SamsonZeusInjectionPods_Init();

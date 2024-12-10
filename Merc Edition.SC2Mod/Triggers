@@ -4964,6 +4964,7 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="542E9C4A"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="9268A1E3"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="79A437F4"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="CDB61209"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="BDEEDBEA"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="B3349A44"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="FC9E70A1"/>
@@ -5787,6 +5788,80 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="BD2F9B9B"/>
             <Value>RevivalField</Value>
             <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="Trigger" Id="CDB61209">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="8D3A4CF4"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="132BDA18"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="D986DCC1"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8D3A4CF4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="132BDA18">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="03D7A0F2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9C290F87"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6102808A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="201E56DA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="25E64277"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3D46CFC4"/>
+        </Element>
+        <Element Type="Param" Id="9C290F87">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8C112760"/>
+            <Value>0</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="6102808A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B3F30050"/>
+            <Value>&lt;c val=&quot;ff0000&quot;&gt;Frank&lt;/c&gt;</Value>
+            <ValueType Type="string"/>
+        </Element>
+        <Element Type="Param" Id="201E56DA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="229F5A76"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000533"/>
+        </Element>
+        <Element Type="Param" Id="25E64277">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6414D178"/>
+            <Value>HERCGrappleDummy</Value>
+            <ValueType Type="catalogentry"/>
+        </Element>
+        <Element Type="Param" Id="3D46CFC4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="479AF09B"/>
+            <Value>Name</Value>
+            <ValueType Type="catalogfieldpath"/>
+            <ValueContext Value="CUnit"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D986DCC1">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="03D7A0F2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2878B5DC"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C8A36213"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9C0419A1"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2D5E17E8"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1FD808C0"/>
+        </Element>
+        <Element Type="Param" Id="2878B5DC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8C112760"/>
+            <Value>0</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="C8A36213">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B3F30050"/>
+            <Value>&lt;c val=&quot;ff0000&quot;&gt;Frank&lt;/c&gt;</Value>
+            <ValueType Type="string"/>
+        </Element>
+        <Element Type="Param" Id="9C0419A1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="229F5A76"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000511"/>
+        </Element>
+        <Element Type="Param" Id="2D5E17E8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6414D178"/>
+            <Value>HERCGrappleDummy</Value>
+            <ValueType Type="catalogentry"/>
+        </Element>
+        <Element Type="Param" Id="1FD808C0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="479AF09B"/>
+            <Value>HighlightTooltip</Value>
+            <ValueType Type="catalogfieldpath"/>
+            <ValueContext Value="CActorUnit"/>
         </Element>
         <Element Type="Trigger" Id="BDEEDBEA">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="E4517BE3"/>

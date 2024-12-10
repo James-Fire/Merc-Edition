@@ -321,6 +321,123 @@
     <CUnit id="DevastatorMissilesMercWeapon" parent="MISSILE">
         <Mover value="DevastatorMissilesMercMissile"/>
     </CUnit>
+    <CUnit id="HERCGrappleDummy">
+        <DeathRevealRadius value="0"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Untooltipable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="ShareControl" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <LifeStart value="160"/>
+        <LifeMax value="160"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="15"/>
+        <WeaponArray/>
+        <EffectArray index="Death" value="DeadMenTellNoTales"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="150"/>
+        <ScoreKill value="225"/>
+        <SubgroupPriority value="5"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAI value="Firebat"/>
+        <SelectAlias value="Firebat"/>
+        <GlossaryPriority value="61"/>
+        <GlossaryStrongArray value="Zealot"/>
+        <GlossaryStrongArray value="Zergling"/>
+        <GlossaryWeakArray value="Thor"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <GlossaryWeakArray value="Roach"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+    </CUnit>
+    <CUnit id="FreyjaWeaponPrimary" parent="MISSILE">
+        <Race value="Terr"/>
+        <Mover value="BacklashRocketsLMWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+        <TacticalAI value="DuskWingBansheeWeapon"/>
+    </CUnit>
+    <CUnit id="Freyja">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="520"/>
+        <LifeMax value="520"/>
+        <LifeArmor value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
+        <Mover value="Fly"/>
+        <Speed value="2.75"/>
+        <Acceleration value="3.25"/>
+        <StationaryTurningRate value="1499.9414"/>
+        <TurningRate value="1499.9414"/>
+        <Sight value="10"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="50"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Hellraiser"/>
+        <AbilArray Link="FreyjaBombardment"/>
+        <TurretArray value="Phoenix"/>
+        <WeaponArray Link="VanirMissiles" Turret="Phoenix"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="DemonRockets" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="FireOnTheMoveUniversal" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="FreyjaBombardment" Type="AbilCmd" AbilCmd="FreyjaBombardment,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Hellraiser" Type="AbilCmd" AbilCmd="Hellraiser,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <ScoreMake value="350"/>
+        <ScoreKill value="700"/>
+        <SubgroupPriority value="16"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAI value="Banshee"/>
+        <SelectAlias value="Banshee"/>
+        <GlossaryPriority value="221"/>
+        <GlossaryStrongArray value="Ghost"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Hydralisk"/>
+        <GlossaryWeakArray value="Phoenix"/>
+        <GlossaryWeakArray value="Marine"/>
+        <AIEvaluateAlias value="Banshee"/>
+    </CUnit>
     <!-- Setting merc compound and merc units back to liberty settings -->
     <CUnit id="MercCompound">
         <CardLayouts index="0">
@@ -330,9 +447,9 @@
             <LayoutButtons index="3" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons index="4" Face="JimRaynor" Type="Undefined" AbilCmd="" Row="0"/>
             <LayoutButtons index="5" Face="HankHarnack" Type="Undefined" AbilCmd="" Row="0"/>
-            <LayoutButtons index="6" Face="Rattlesnake" Type="Undefined" AbilCmd="" Row="0"/>
-            <LayoutButtons index="7" removed="1"/>
-            <LayoutButtons index="8" removed="1"/>
+            <LayoutButtons index="6" Face="ED067" Type="Undefined" AbilCmd="" Row="0" Column="3"/>
+            <LayoutButtons index="7" Face="Freyja" Type="Passive" AbilCmd="" Row="0" Column="2"/>
+            <LayoutButtons index="8" Face="Freyja" Type="Passive" AbilCmd="" Column="1"/>
             <LayoutButtons index="9" removed="1"/>
             <LayoutButtons index="10" removed="1"/>
             <LayoutButtons index="11" removed="1"/>
@@ -378,19 +495,21 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
+        <AbilArray Link="RattlesnakeRevitalizer"/>
+        <AbilArray Link="SecretStashStimpack"/>
         <BehaviorArray Link="AblativeScales"/>
-        <WeaponArray Link="HammerSecurity"/>
+        <WeaponArray Link="TheConcillator"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MagrailMunitions" Type="AbilCmd" AbilCmd="MagrailMunitions,Execute" Row="2" Column="1"/>
-            <LayoutButtons Face="LowGradeStims" Type="AbilCmd" AbilCmd="LowGradeStim,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="StimMarauder" Type="AbilCmd" AbilCmd="StimpackMarauder,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="AblativeScalesNew" Type="Passive" Requirements="UseAblativeScalesNew" Row="1" Column="1"/>
-            <LayoutButtons Face="ConcussiveShrapnel" Type="Passive" Requirements="UseConcussiveShrapnel" Row="1" Column="0"/>
+            <LayoutButtons Face="DeployRevitalizer" Type="AbilCmd" AbilCmd="RattlesnakeRevitalizer,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="SecretStashStimpack" Type="AbilCmd" AbilCmd="SecretStashStimpack,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="ConcussiveShrapnel" Type="Passive" Requirements="UseConcussiveShrapnel" Row="1" Column="1"/>
+            <LayoutButtons Face="HammerMunitions" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="AblativeScalesNew" Type="Passive" Requirements="UseAblativeScalesNew" Row="1" Column="2"/>
         </CardLayouts>
         <InnerRadius value="0.375"/>
         <CargoSize value="2"/>
@@ -701,6 +820,233 @@
             <LayoutButtons index="4" AbilCmd="255,255"/>
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
         </CardLayouts>
+    </CUnit>
+    <CUnit id="ED067">
+        <DeathRevealRadius value="3"/>
+        <ReviveType value=""/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="465"/>
+        <LifeMax value="465"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <ShieldRegenDelay value="10"/>
+        <ShieldRegenRate value="2"/>
+        <ShieldArmorName value="AspisShield"/>
+        <Speed value="2.6875"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="115.1875"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="9"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="33.3332"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="AspisBlink"/>
+        <AbilArray Link="Minikin"/>
+        <BehaviorArray Link="MultilockTargetingSystems"/>
+        <BehaviorArray Link="AspisBlink"/>
+        <WeaponArray Link="GatlingCannons" Turret="SpartanCompany"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="ShellShower" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="KelMorianRipperRounds" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="LegionSystems" Type="Passive" Requirements="UseLegionSystems" Row="1" Column="2"/>
+            <LayoutButtons Face="Minikin" Type="AbilCmd" AbilCmd="Minikin,Execute" Row="2" Column="0"/>
+            <LayoutButtons>
+                <Face value="AspisBlinkShield"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="AspisBlink,Execute"/>
+                <Requirements value="UseAspisBlinkShield"/>
+                <Row value="1"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <Radius value="0.6875"/>
+        <SeparationRadius value="0.65"/>
+        <CargoSize value="2"/>
+        <SubgroupPriority value="1"/>
+        <MinimapRadius value="0.65"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <SelectAlias value="Goliath"/>
+        <GlossaryPriority value="181"/>
+        <GlossaryStrongArray value="Battlecruiser"/>
+        <GlossaryStrongArray value="Carrier"/>
+        <GlossaryStrongArray value="BroodLord"/>
+        <GlossaryWeakArray value="Marauder"/>
+        <GlossaryWeakArray value="Zealot"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+    </CUnit>
+    <CUnit id="SgtHammerNapalmMissile" parent="MISSILE"/>
+    <CUnit id="SgtHammerSieged">
+        <DeathRevealRadius value="3"/>
+        <Facing value="45"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="AISplash" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <Sight value="13"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="50"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="50"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="SgtHammerUnsiege"/>
+        <AbilArray Link="NeoTitanium"/>
+        <AbilArray Link="SgtHammerNapalm"/>
+        <BehaviorArray Link="GraduatingRangeController"/>
+        <WeaponArray Link="ArcliteShockCannon" Turret="SiegeTankSieged"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="AttackBuilding" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="NeoTitaniumPlating" Type="AbilCmd" AbilCmd="NeoTitanium,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="NapalmStrike" Type="AbilCmd" AbilCmd="SgtHammerNapalm,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="IFFSpiderRounds" Type="Passive" Requirements="UseIFFSpiderRounds" Row="1" Column="0"/>
+            <LayoutButtons Face="SmartServosMKIV" Type="Passive" Requirements="UseSmartServosMKIV" Row="1" Column="1"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="1"/>
+        <InnerRadius value="0.875"/>
+        <Footprint value="FootprintSieged"/>
+        <ScoreKill value="700"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.875"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAI value="SiegeTankSieged"/>
+        <SelectAlias value="SiegeTank"/>
+        <SubgroupAlias value="SiegeBreaker"/>
+        <TechAliasArray value="Alias_SiegeTank"/>
+        <GlossaryPriority value="143"/>
+        <GlossaryStrongArray value="Marine"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryStrongArray value="Hydralisk"/>
+        <GlossaryWeakArray value="Thor"/>
+        <GlossaryWeakArray value="Immortal"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <AIEvaluateAlias value="SiegeTankSieged"/>
+    </CUnit>
+    <CUnit id="SgtHammer">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <Sight value="13"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="50"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="50"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="SgtHammerSiege"/>
+        <AbilArray Link="NeoTitanium"/>
+        <AbilArray Link="SgtHammerNapalm"/>
+        <BehaviorArray Link="GraduatingRangeController"/>
+        <WeaponArray Link="SiegeBreaker" Turret="SiegeTank"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="SgtHammerSiegeMode" Type="AbilCmd" AbilCmd="SgtHammerSiege,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="NapalmStrike" Type="AbilCmd" AbilCmd="SgtHammerNapalm,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="IFFSpiderRounds" Type="Passive" Requirements="UseIFFSpiderRounds" Row="1" Column="0"/>
+            <LayoutButtons Face="SmartServosMKIV" Type="Passive" Requirements="UseSmartServosMKIV" Row="1" Column="1"/>
+            <LayoutButtons Face="NeoTitaniumPlating" Type="AbilCmd" AbilCmd="NeoTitanium,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="1"/>
+        <InnerRadius value="0.875"/>
+        <CargoSize value="4"/>
+        <ScoreMake value="350"/>
+        <ScoreKill value="700"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="0.875"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAI value="SiegeTank"/>
+        <LeaderAlias value="SiegeTank"/>
+        <SelectAlias value="SiegeTank"/>
+        <TechAliasArray value="Alias_SiegeTank"/>
+        <GlossaryPriority value="142"/>
+        <GlossaryStrongArray value="Marine"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryStrongArray value="Hydralisk"/>
+        <GlossaryWeakArray value="Thor"/>
+        <GlossaryWeakArray value="Immortal"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <AIEvaluateAlias value="SiegeTank"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
     </CUnit>
     <CUnit id="SupplyDepot">
         <AbilArray Link="SalvageShared"/>

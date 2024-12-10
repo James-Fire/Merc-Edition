@@ -53,6 +53,37 @@
         <Flags index="Transient" value="1"/>
         <Arc value="360"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="FreyjaBombardment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FreyjaBombardmentCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="TransientPreferred" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="10"/>
+        <CursorRangeMode value="ForceToMax"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FreyjaBombardment"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="Hellraiser">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="HellraiserApplyBehavior"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Hellraiser"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="Minikin">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MinikinCU"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="33"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Minikin" Requirements="IsNotMinikin"/>
+    </CAbilEffectInstant>
     <CAbilMorph id="NaniteCloudEmitterUnburrow">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
@@ -107,6 +138,15 @@
     <CAbilMorph id="MilitarizedColonistShipLiftOff">
         <InfoArray index="0" Unit="ZeusLanderFlying"/>
     </CAbilMorph>
+    <CAbilEffectInstant id="NeoTitanium">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="NeoTitaniumSwitch"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="32"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NeoTitaniumPlating"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="PenetratorRound">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="PenetratorRoundCP"/>
@@ -119,6 +159,72 @@
     <CAbilMorph id="PerditionTurretBurrow">
         <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AutoCastRange value="6.5"/>
+    </CAbilMorph>
+    <CAbilEffectInstant id="SecretStashStimpack">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RattlesnakeStimpackAB"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SuperStim"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="SgtHammerNapalm">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SgtHammerNapalmLaunchMissile"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="11"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NapalmStrike"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="SgtHammerUnsiege">
+        <AbilSetId value="Unsieged"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Unsiege">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="SgtHammer" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="SgtHammerSiege">
+        <AbilSetId value="SiegeMode"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SiegeMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="SgtHammerSieged" RandomDelayMax="0.25">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.25"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+            <SectionArray index="Facing">
+                <DurationArray index="Duration" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.25"/>
+                <DurationArray index="Duration" value="1.77"/>
+            </SectionArray>
+        </InfoArray>
     </CAbilMorph>
     <CAbilBuild id="TerranBuild">
         <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">
@@ -137,7 +243,7 @@
                 <CountMax value="1"/>
                 <CountStart value="1"/>
                 <CountUse value="1"/>
-                <TimeUse value="8"/>
+                <TimeUse value="30"/>
             </Charge>
         </Cost>
         <Range value="500"/>
@@ -267,7 +373,7 @@
     </CAbilEffectTarget>
     <CAbilMorph id="BunkerLower">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="Lower"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Lower" Requirements="UseBurrowBunker"/>
         <InfoArray Unit="BunkerBurrowed" CollideRange="0">
             <SectionArray index="Abils">
                 <EffectArray index="Start" value="BunkerBurrowedApplyBehavior"/>

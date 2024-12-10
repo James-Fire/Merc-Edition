@@ -64,6 +64,8 @@
     <CUpgrade id="AspisBlinkShield">
         <EffectArray Reference="Unit,SpartanCompany,ShieldsMax" Value="50"/>
         <EffectArray Reference="Unit,SpartanCompany,ShieldsStart" Value="50"/>
+        <EffectArray Reference="Unit,ED067,ShieldsMax" Value="50"/>
+        <EffectArray Reference="Unit,ED067,ShieldsStart" Value="50"/>
         <AffectedUnitArray value="SpartanCompany"/>
     </CUpgrade>
     <CUpgrade id="BattleBunker">
@@ -195,6 +197,7 @@
         <EffectArray Operation="Set" Reference="Weapon,SpartanCompanyGUpgraded,Options[Hidden]" Value="0"/>
         <EffectArray Reference="Weapon,SpartanCompanyGUpgraded,Range" Value="2"/>
         <EffectArray Reference="Weapon,SpartanCompanyAUpgraded,Range" Value="3"/>
+        <EffectArray Reference="Weapon,GatlingCannons,Range" Value="2"/>
         <AffectedUnitArray value="SpartanCompany"/>
     </CUpgrade>
     <CUpgrade id="RapidAlgorithms">

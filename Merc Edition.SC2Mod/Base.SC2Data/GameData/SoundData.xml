@@ -275,6 +275,53 @@
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_017.fxe"/>
         </AssetArray>
     </CSound>
+    <CSound id="Freyja_Yes" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Freyja\Move Order\ValkyrieSCBW@Yes00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Move Order\ValkyrieSCBW@Yes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Move Order\ValkyrieSCBW@Yes04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Attack Order\ValkyrieSCBW@Yes03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Attack Order\ValkyrieSCBW@Yes02.ogg" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="Freyja_Ready" parent="Ready">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Trained\ValkyrieSCBW@Ready00.ogg" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="Freyja_Pissed" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Freyja\When Selected Repeatedly\ValkyrieSCBW@Pissed00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\When Selected Repeatedly\ValkyrieSCBW@Pissed01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\When Selected Repeatedly\ValkyrieSCBW@Pissed02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\When Selected Repeatedly\ValkyrieSCBW@Pissed03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\When Selected Repeatedly\ValkyrieSCBW@Pissed04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\When Selected Repeatedly\ValkyrieSCBW@Pissed05.ogg" FacialGroup=""/>
+        <Flags index="Download" value="0"/>
+        <Select value="Sequential"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="Freyja_What" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Freyja\Selected\ValkyrieSCBW@What00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Selected\ValkyrieSCBW@What01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Selected\ValkyrieSCBW@What02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Freyja\Selected\ValkyrieSCBW@What03.ogg" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="Freyja_Help" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO Freyja\When Attacked\ValkyrieSCBW@Help00.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="FreyjaAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_01.wav" FacialGroup=""/>
+        <DupeDestroyCount value="10"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-3.000000,3.000000"/>
+        <Volume value="-2.000000,0.000000"/>
+    </CSound>
     <CSound id="DevastatorMissilesMercImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Liberator_AG_Impacts_02.wav" FacialGroup=""/>
@@ -309,6 +356,48 @@
         <VolumeRolloffPoints Distance="10.000000"/>
         <VolumeRolloffPoints Distance="60.102039" Volume="-96.000000"/>
     </CSound>
+    <CSound id="ED067_Attack" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO ED067\Attack Order\ED067_Attack1.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\Attack Order\ED067_Attack2.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\Attack Order\ED067_Attack3.WAV" FacialGroup=""/>
+    </CSound>
+    <CSound id="ED067_Help" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO ED067\When Attacked\ED067_Help.ogg" FacialGroup=""/>
+        <Category value="Alert"/>
+    </CSound>
+    <CSound id="ED067_Pissed" parent="Pissed">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO ED067\When Selected Repeatedly\ED067_Pissed1.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\When Selected Repeatedly\ED067_Pissed2.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\When Selected Repeatedly\ED067_Pissed3.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\When Selected Repeatedly\ED067_Pissed4.WAV" FacialGroup=""/>
+    </CSound>
+    <CSound id="ED067_Ready" parent="Ready">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO ED067\Trained\ED067_Ready.WAV" FacialGroup=""/>
+    </CSound>
+    <CSound id="ED067_What" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO ED067\Selected\ED067_What1.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\Selected\ED067_What2.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\Selected\ED067_What3.WAV" FacialGroup=""/>
+    </CSound>
+    <CSound id="ED067_Yes" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO ED067\Move Order\ED067_Move1.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\Move Order\ED067_Move2.WAV" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO ED067\Move Order\ED067_Move3.WAV" FacialGroup=""/>
+    </CSound>
+    <CSound id="ED067_Death" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO ED067\When Killed\ED067_Death.wav" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="5"/>
+        <Pitch value="-2.000000,3.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="GoliathGroundAttackLaunch">
+        <DupeMaximumMethod value="Replace"/>
+    </CSound>
     <CSound id="HankFlashFlame" parent="Combat">
         <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_00.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Spell_Fireball_Impact_01.wav" FacialGroup=""/>
@@ -341,6 +430,18 @@
         <VolumeRolloffPoints Distance="57.686390" Volume="-2.420000"/>
         <VolumeRolloffPoints Distance="100.127090" Volume="-20.639999"/>
     </CSound>
+    <CSound id="HellraiserSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Yagdra_Vx_FireBreath_Str_.wav" FacialGroup=""/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="InTheThunderHeat" parent="Combat">
+        <AssetArray File="Assets\Sounds\we makin it outta the koprulu sector with this one boys.mp3" Weight="6" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXSilentKill0.wav" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="28.783070" Volume="-0.640000"/>
+        <VolumeRolloffPoints Distance="34.391537" Volume="-96.000000"/>
+    </CSound>
     <CSound id="InspireApply" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch1.wav" FacialGroup=""/>
@@ -360,6 +461,11 @@
         <DupeMuteCount value="2"/>
         <Volume value="-18.000000,-18.000000"/>
     </CSound>
+    <CSound id="MinikinSpawnSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_BuildingPlacement0.wav" FacialGroup=""/>
+        <Pitch value="4.000000,4.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
     <CSound id="MissileTurret_HellstormAttackImpact">
         <Volume value="-9.000000,-9.000000"/>
     </CSound>
@@ -373,6 +479,26 @@
         <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_AirAttackImpact3.wav" FacialGroup=""/>
         <Pitch value="4.000000,6.000000"/>
         <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="NapalmLaunch" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_launch01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_launch02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_launch03.wav" FacialGroup=""/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="NapalmLaunchSwt" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_mech01.wav" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="NapalmLoop" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_loop01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_napalm_loop02.wav" FacialGroup=""/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="NeoTitaniumPlating" parent="Combat">
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_neosteelplating_launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Sgt Hammer\tank_neosteelplating_launch_02.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
     </CSound>
     <CSound id="NomadMineDrone" parent="Combat">
         <AssetArray File="Assets\Sounds\WidowMine_Armed1a.wav" FacialGroup=""/>
@@ -783,6 +909,7 @@
         <DupeDestroyCount value="3"/>
         <DupeMuteCount value="3"/>
         <Volume value="-14.000000,-14.000000"/>
+        <Mode value="3DWorld"/>
     </CSound>
     <CSound id="SprayandPayLaunchSound">
         <AssetArray File="Assets\Sounds\Hellfire_Shotgun_01.wav" FacialGroup=""/>
