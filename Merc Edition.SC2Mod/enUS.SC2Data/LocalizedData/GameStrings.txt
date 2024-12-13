@@ -320,6 +320,7 @@ Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small fronta
 Button/Tooltip/ApolloInjectionPods=Survivor's Guilt applies when unloading units, with a cooldown. Suvivor's Guilt duration when the Samson is destroyed is doubled.
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
 Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
+Button/Tooltip/AutomatedRefineryTextKicker8=<s val="Kicker_Refinery">+8</s><IMG path="Assets\Textures\icon-gas-terran.dds" height="32" width="32"/>
 Button/Tooltip/BearclawGauntlets=Increases Devil Dog attack radius by 60% and grants the Grapple ability.
 Button/Tooltip/BombardmentFortress=Randomly bombard a location with 4 missiles, each dealing up to 225 (+200 vs Structure) damage in an area. Fires an additional missile per SCV loaded.
 Button/Tooltip/BoxofScraps=Nanite Cloud Emitters gain 2 armor and are built nearly instantly.
@@ -943,11 +944,13 @@ Upgrade/Name/LaserTargetingSystem=Laser Targeting System
 Upgrade/Name/LegionSystems=Legion Systems
 Upgrade/Name/LooseEngineSeals=Loose Engine Seals
 Upgrade/Name/MASH=M.A.S.H
+Upgrade/Name/MacroFilters=Macro Filters
 Upgrade/Name/MercEdition=Merc Edition
 Upgrade/Name/MicroFusionReactor=Micro Fusion Reactor
 Upgrade/Name/MobileStockpile=Mobile Stockpile
 Upgrade/Name/NanitePulse=Nanite Pulse
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
+Upgrade/Name/OrbitalBaseDepots=Orbital Base Depots
 Upgrade/Name/PiercingStrike=Piercing Strike
 Upgrade/Name/PliableArmor=Pliable Armor
 Upgrade/Name/RagnarokWeapons=Ragnarok Weapons

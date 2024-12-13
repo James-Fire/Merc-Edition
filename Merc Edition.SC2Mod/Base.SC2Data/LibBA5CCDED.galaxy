@@ -79,6 +79,7 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
     TriggerExecute(libBA5CCDED_gt_InitMercEditionUpgrade, true, false);
     TriggerExecute(libBA5CCDED_gt_InitPassiveUpgrades, true, false);
     TriggerExecute(libBA5CCDED_gt_InitAllowingUnits, true, false);
+    TriggerExecute(libBA5CCDED_gt_InitTech, true, false);
     return true;
 }
 
@@ -371,6 +372,29 @@ bool libBA5CCDED_gt_InitUnitReplace_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void libBA5CCDED_gt_InitUnitReplace_Init () {
     libBA5CCDED_gt_InitUnitReplace = TriggerCreate("libBA5CCDED_gt_InitUnitReplace_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init...Tech
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_InitTech_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((TechTreeUpgradeCount(1, "OrbitalBaseDepots", c_techCountCompleteOnly) == 1)) {
+        TechTreeUpgradeAddLevel(1, "SupplyDepotDrop", 1);
+        PlayerModifyPropertyInt(1, c_playerPropSuppliesMade, c_playerPropOperAdd, 100);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_InitTech_Init () {
+    libBA5CCDED_gt_InitTech = TriggerCreate("libBA5CCDED_gt_InitTech_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -821,6 +845,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_InitMercEditionUpgrade_Init();
     libBA5CCDED_gt_InitPassiveUpgrades_Init();
     libBA5CCDED_gt_InitUnitReplace_Init();
+    libBA5CCDED_gt_InitTech_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();

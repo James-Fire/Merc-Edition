@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CUpgrade default="1" id="TerranInfantryWeaponsUltraCapacitors">
-        <EffectArray index="37" Value="0.1"/>
-        <EffectArray index="38" Value="0.1"/>
-        <EffectArray index="39" Value="0.1"/>
-        <EffectArray index="40" Value="0.1"/>
-        <EffectArray index="41" Value="0.1"/>
-        <EffectArray index="42" Value="0.1"/>
-        <EffectArray index="43" Value="0.1"/>
-        <EffectArray index="44" Value="0.1"/>
-        <EffectArray index="45" Value="0.1"/>
-        <EffectArray index="46" Value="0.1"/>
-        <EffectArray index="47" Value="0.1"/>
-        <EffectArray index="48" Value="0.1"/>
-        <EffectArray index="49" Value="0.1"/>
-        <EffectArray index="50" Value="0.1"/>
-        <EffectArray index="51" Value="0.1"/>
-        <EffectArray index="52" Value="0.1"/>
-        <EffectArray index="53" Value="0.1"/>
-        <EffectArray index="54" Value="0.1"/>
-        <EffectArray Reference="Weapon,BarBreakers,RateMultiplier" Value="0.1"/>
-        <EffectArray Reference="Weapon,BarBreakers,Level" Value="1"/>
-        <EffectArray Reference="Weapon,NomadMissile,RateMultiplier" Value="0.1"/>
-        <EffectArray Reference="Weapon,NomadMissile,Level" Value="1"/>
-        <EffectArray Reference="Weapon,C11EthereanRifle,Level" Value="1"/>
-        <EffectArray Reference="Weapon,C11EthereanRifle,RateMultiplier" Value="0.05"/>
-        <EffectArray Reference="Weapon,AGRShadeHunter,RateMultiplier" Value="0.1"/>
-        <EffectArray Reference="Weapon,AGRShadeHunter,Level" Value="1"/>
-    </CUpgrade>
     <CUpgrade id="AIEnhancement">
         <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Vespene]" Value="25"/>
         <EffectArray Operation="Subtract" Reference="Unit,SkibisAngel,CostResource[Minerals]" Value="35"/>
@@ -131,6 +103,12 @@
         <EffectArray Operation="Multiply" Reference="Effect,Repair,RechargeVitalRate" Value="2.000000"/>
         <AffectedUnitArray value="ACV"/>
     </CUpgrade>
+    <CUpgrade id="MacroFilters">
+        <AffectedUnitArray value="AutomatedRefinery"/>
+        <AffectedUnitArray value="Refinery"/>
+        <EffectArray Operation="Set" Reference="Abil,SCVHarvest,ResourceAmountBonus[Vespene]" Value="4"/>
+        <EffectArray Operation="Set" Reference="Effect,AutoHarvestVespene,Resources" Value="-8"/>
+    </CUpgrade>
     <CUpgrade id="MicroFusionReactor">
         <EffectArray Reference="Unit,ACV,Speed" Value="1.500000"/>
         <EffectArray Operation="Set" Reference="Abil,BuildInProgress,MaxBuilders" Value="10"/>
@@ -142,6 +120,12 @@
         <AffectedUnitArray value="Adjudicator"/>
     </CUpgrade>
     <CUpgrade id="NanitePulse"/>
+    <CUpgrade id="OrbitalBaseDepots">
+        <EffectArray Operation="Subtract" Reference="Unit,SupplyDepot,CostResource[Minerals]" Value="25"/>
+        <EffectArray Operation="Subtract" Reference="Unit,SupplyDepotLowered,CostResource[Minerals]" Value="25"/>
+        <AffectedUnitArray value="SupplyDepot"/>
+        <AffectedUnitArray value="SupplyDepotLowered"/>
+    </CUpgrade>
     <CUpgrade id="PiercingStrike">
         <AffectedUnitArray value="Wolverine"/>
     </CUpgrade>
@@ -336,6 +320,160 @@
         <EffectArray Operation="Set" Reference="Effect,NanoRepair,DrainVitalCostFactor" Value="0"/>
     </CUpgrade>
     <CUpgrade id="SwannsSuppression"/>
+    <CUpgrade id="TerranInfantryWeaponsUltraCapacitorsLevel1">
+        <EffectArray index="37" Value="0.1"/>
+        <EffectArray index="38" Value="0.1"/>
+        <EffectArray index="39" Value="0.1"/>
+        <EffectArray index="40" Value="0.1"/>
+        <EffectArray index="41" Value="0.1"/>
+        <EffectArray index="42" Value="0.1"/>
+        <EffectArray index="43" Value="0.1"/>
+        <EffectArray index="44" Value="0.1"/>
+        <EffectArray index="45" Value="0.1"/>
+        <EffectArray index="46" Value="0.1"/>
+        <EffectArray index="47" Value="0.1"/>
+        <EffectArray index="48" Value="0.1"/>
+        <EffectArray index="49" Value="0.1"/>
+        <EffectArray index="50" Value="0.1"/>
+        <EffectArray index="51" Value="0.1"/>
+        <EffectArray index="52" Value="0.1"/>
+        <EffectArray index="53" Value="0.1"/>
+        <EffectArray index="54" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryWeaponsUltraCapacitorsLevel2">
+        <EffectArray index="37" Value="0.1"/>
+        <EffectArray index="38" Value="0.1"/>
+        <EffectArray index="39" Value="0.1"/>
+        <EffectArray index="40" Value="0.1"/>
+        <EffectArray index="41" Value="0.1"/>
+        <EffectArray index="42" Value="0.1"/>
+        <EffectArray index="43" Value="0.1"/>
+        <EffectArray index="44" Value="0.1"/>
+        <EffectArray index="45" Value="0.1"/>
+        <EffectArray index="46" Value="0.1"/>
+        <EffectArray index="47" Value="0.1"/>
+        <EffectArray index="48" Value="0.1"/>
+        <EffectArray index="49" Value="0.1"/>
+        <EffectArray index="50" Value="0.1"/>
+        <EffectArray index="51" Value="0.1"/>
+        <EffectArray index="52" Value="0.1"/>
+        <EffectArray index="53" Value="0.1"/>
+        <EffectArray index="54" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryWeaponsUltraCapacitorsLevel3">
+        <EffectArray index="37" Value="0.1"/>
+        <EffectArray index="38" Value="0.1"/>
+        <EffectArray index="39" Value="0.1"/>
+        <EffectArray index="40" Value="0.1"/>
+        <EffectArray index="41" Value="0.1"/>
+        <EffectArray index="42" Value="0.1"/>
+        <EffectArray index="43" Value="0.1"/>
+        <EffectArray index="44" Value="0.1"/>
+        <EffectArray index="45" Value="0.1"/>
+        <EffectArray index="46" Value="0.1"/>
+        <EffectArray index="47" Value="0.1"/>
+        <EffectArray index="48" Value="0.1"/>
+        <EffectArray index="49" Value="0.1"/>
+        <EffectArray index="50" Value="0.1"/>
+        <EffectArray index="51" Value="0.1"/>
+        <EffectArray index="52" Value="0.1"/>
+        <EffectArray index="53" Value="0.1"/>
+        <EffectArray index="54" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsUltraCapacitorsLevel1">
+        <EffectArray index="32" Value="0.1"/>
+        <EffectArray index="33" Value="0.1"/>
+        <EffectArray index="34" Value="0.1"/>
+        <EffectArray index="35" Value="0.1"/>
+        <EffectArray index="36" Value="0.1"/>
+        <EffectArray index="37" Value="0.1"/>
+        <EffectArray index="38" Value="0.1"/>
+        <EffectArray index="39" Value="0.1"/>
+        <EffectArray index="40" Value="0.1"/>
+        <EffectArray index="41" Value="0.1"/>
+        <EffectArray index="42" Value="0.1"/>
+        <EffectArray index="43" Value="0.1"/>
+        <EffectArray index="44" Value="0.1"/>
+        <EffectArray index="45" Value="0.1"/>
+        <EffectArray index="46" Value="0.1"/>
+        <EffectArray index="47" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsUltraCapacitorsLevel2">
+        <EffectArray index="32" Value="0.1"/>
+        <EffectArray index="33" Value="0.1"/>
+        <EffectArray index="34" Value="0.1"/>
+        <EffectArray index="35" Value="0.1"/>
+        <EffectArray index="36" Value="0.1"/>
+        <EffectArray index="37" Value="0.1"/>
+        <EffectArray index="38" Value="0.1"/>
+        <EffectArray index="39" Value="0.1"/>
+        <EffectArray index="40" Value="0.1"/>
+        <EffectArray index="41" Value="0.1"/>
+        <EffectArray index="42" Value="0.1"/>
+        <EffectArray index="43" Value="0.1"/>
+        <EffectArray index="44" Value="0.1"/>
+        <EffectArray index="45" Value="0.1"/>
+        <EffectArray index="46" Value="0.1"/>
+        <EffectArray index="47" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsUltraCapacitorsLevel3">
+        <EffectArray index="32" Value="0.1"/>
+        <EffectArray index="33" Value="0.1"/>
+        <EffectArray index="34" Value="0.1"/>
+        <EffectArray index="35" Value="0.1"/>
+        <EffectArray index="36" Value="0.1"/>
+        <EffectArray index="37" Value="0.1"/>
+        <EffectArray index="38" Value="0.1"/>
+        <EffectArray index="39" Value="0.1"/>
+        <EffectArray index="40" Value="0.1"/>
+        <EffectArray index="41" Value="0.1"/>
+        <EffectArray index="42" Value="0.1"/>
+        <EffectArray index="43" Value="0.1"/>
+        <EffectArray index="44" Value="0.1"/>
+        <EffectArray index="45" Value="0.1"/>
+        <EffectArray index="46" Value="0.1"/>
+        <EffectArray index="47" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsUltraCapacitorsLevel1">
+        <EffectArray index="50" Value="0.1"/>
+        <EffectArray index="51" Value="0.1"/>
+        <EffectArray index="52" Value="0.1"/>
+        <EffectArray index="53" Value="0.1"/>
+        <EffectArray index="54" Value="0.1"/>
+        <EffectArray index="55" Value="0.1"/>
+        <EffectArray index="56" Value="0.1"/>
+        <EffectArray index="57" Value="0.1"/>
+        <EffectArray index="58" Value="0.1"/>
+        <EffectArray index="59" Value="0.1"/>
+        <EffectArray index="60" Value="0.1"/>
+        <EffectArray index="61" Value="0.1"/>
+        <EffectArray index="62" Value="0.1"/>
+        <EffectArray index="63" Value="0.1"/>
+        <EffectArray index="64" Value="0.1"/>
+        <EffectArray index="65" Value="0.1"/>
+        <EffectArray index="66" Value="0.1"/>
+        <EffectArray index="67" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsUltraCapacitorsLevel2">
+        <EffectArray index="50" Value="0.1"/>
+        <EffectArray index="51" Value="0.1"/>
+        <EffectArray index="52" Value="0.1"/>
+        <EffectArray index="53" Value="0.1"/>
+        <EffectArray index="54" Value="0.1"/>
+        <EffectArray index="55" Value="0.1"/>
+        <EffectArray index="56" Value="0.1"/>
+        <EffectArray index="57" Value="0.1"/>
+        <EffectArray index="58" Value="0.1"/>
+        <EffectArray index="59" Value="0.1"/>
+        <EffectArray index="60" Value="0.1"/>
+        <EffectArray index="61" Value="0.1"/>
+        <EffectArray index="62" Value="0.1"/>
+        <EffectArray index="63" Value="0.1"/>
+        <EffectArray index="64" Value="0.1"/>
+        <EffectArray index="65" Value="0.1"/>
+        <EffectArray index="66" Value="0.1"/>
+        <EffectArray index="67" Value="0.1"/>
+    </CUpgrade>
     <CUpgrade id="TerrazineShots">
         <EffectArray Operation="Set" Reference="Abil,DarkTemplarShadowFury,Cost[0].Cooldown.TimeUse" Value="6.000000"/>
         <EffectArray Reference="Weapon,AGRShadeHunter,RateMultiplier" Value="0.25"/>

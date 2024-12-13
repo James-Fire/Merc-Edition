@@ -15,6 +15,7 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="682B4DB0"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="3E2B2051"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="28D36327"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="8F9E8555"/>
         </Element>
         <Element Type="Trigger" Id="BAAF1922">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="FAD5B72E"/>
@@ -25,6 +26,7 @@
             <Action Type="FunctionCall" Library="BA5CCDED" Id="A1AFF159"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="966990D5"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="9295EF23"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="963666A1"/>
         </Element>
         <Element Type="FunctionCall" Id="FAD5B72E">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
@@ -151,6 +153,25 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000182"/>
             <ValueType Type="trigger"/>
             <ValueElement Type="Trigger" Library="BA5CCDED" Id="FB26A66C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="963666A1">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000116"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0A4981D9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B9B04CF9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5510A438"/>
+        </Element>
+        <Element Type="Param" Id="0A4981D9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000183"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000065"/>
+        </Element>
+        <Element Type="Param" Id="B9B04CF9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000184"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000068"/>
+        </Element>
+        <Element Type="Param" Id="5510A438">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000182"/>
+            <ValueType Type="trigger"/>
+            <ValueElement Type="Trigger" Library="BA5CCDED" Id="8F9E8555"/>
         </Element>
         <Element Type="Trigger" Id="FBF6D743">
             <Action Type="Comment" Library="BA5CCDED" Id="4EF3661F"/>
@@ -3153,6 +3174,111 @@
             <Value>CharonDropship</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Unit"/>
+        </Element>
+        <Element Type="Trigger" Id="8F9E8555">
+            <Action Type="Comment" Library="BA5CCDED" Id="B9AAF9C4"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="23DD5D50"/>
+        </Element>
+        <Element Type="Comment" Id="B9AAF9C4">
+            <Comment>
+                Some upgrades are extremely similar to their base counterparts to where simply adding that upgrade and then our custom one for the modifications is better than remaking it entirely
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="23DD5D50">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9AA17BEB"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="BD4F2011"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="178C38CE"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9AA17BEB">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3284E4A2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D0EAB5E0"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D880DBE1"/>
+        </Element>
+        <Element Type="Param" Id="3284E4A2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="D0EAB5E0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="D880DBE1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>SupplyDepotDrop</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="BD4F2011">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="943DF2F7"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="441525B9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="84AB048B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9FC74451"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F5ED6D6C"/>
+        </Element>
+        <Element Type="Param" Id="441525B9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="75FC31CB"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="84AB048B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4AA9487D"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1EF3C4D1"/>
+        </Element>
+        <Element Type="Param" Id="9FC74451">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C93A9DCB"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="A9A13ADB"/>
+        </Element>
+        <Element Type="Param" Id="F5ED6D6C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EEF303AC"/>
+            <Value>100</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="178C38CE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9617F044"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="618822ED"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="02146CC0"/>
+        </Element>
+        <Element Type="Param" Id="9617F044">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="BC4A5444"/>
+        </Element>
+        <Element Type="FunctionCall" Id="BC4A5444">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="765C9E91"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="901D1F4E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0C66956B"/>
+        </Element>
+        <Element Type="Param" Id="765C9E91">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="448F39DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D78D6018"/>
+        </Element>
+        <Element Type="Param" Id="901D1F4E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
+            <Value>OrbitalBaseDepots</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Param" Id="0C66956B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000446"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="618822ED">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="02146CC0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
         </Element>
         <Element Type="Category" Id="2851B9D7">
             <Item Type="Comment" Library="BA5CCDED" Id="079EA309"/>

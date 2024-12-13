@@ -13,6 +13,7 @@ trigger libBA5CCDED_gt_InitAllowingUnits;
 trigger libBA5CCDED_gt_InitMercEditionUpgrade;
 trigger libBA5CCDED_gt_InitPassiveUpgrades;
 trigger libBA5CCDED_gt_InitUnitReplace;
+trigger libBA5CCDED_gt_InitTech;
 trigger libBA5CCDED_gt_MissionDirectives;
 trigger libBA5CCDED_gt_DepositMoney;
 trigger libBA5CCDED_gt_BlockBFlyHeighter;
