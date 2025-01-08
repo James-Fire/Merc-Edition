@@ -60,6 +60,10 @@
         <Find value="1"/>
         <Value value="UseBurrowBunker"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveOrbitalDeployment">
+        <Find value="1"/>
+        <Value value="UseOrbitalDeployment"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveExplosiveCalibrations">
         <Find value="1"/>
         <Value value="UseExplosiveCalibrations"/>

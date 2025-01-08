@@ -25,6 +25,9 @@
         </InfoArray>
         <CalldownEffect value="Nuke"/>
     </CAbilArmMagazine>
+    <CAbilBuild id="BarracksAddOns">
+        <InfoArray index="Build4" Time="28"/>
+    </CAbilBuild>
     <CAbilTrain id="CommandCenterTrain">
         <InfoArray index="Train2" Time="17">
             <Button DefaultButtonFace="TrainACV" State="Restricted"/>
@@ -594,12 +597,13 @@
         </InfoArray>
         <InfoArray index="Train18" Time="25">
             <Button DefaultButtonFace="BuildCondor" State="Restricted"/>
-            <Unit value="Vulture"/>
+            <Unit value="Condor"/>
         </InfoArray>
         <InfoArray index="Train19" Time="55">
             <Button DefaultButtonFace="BuildWolverine" Requirements="HaveAttachedTechLab"/>
             <Unit value="Wolverine"/>
         </InfoArray>
+        <Range value="5"/>
     </CAbilTrain>
     <CAbilEffectTarget id="MagMine">
         <EditorCategories value="AbilityorEffectType:Units"/>

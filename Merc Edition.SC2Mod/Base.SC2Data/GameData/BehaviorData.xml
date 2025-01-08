@@ -218,6 +218,16 @@
             <VitalMaxFractionArray index="Life" value="-0.5"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="AdrenalineRush">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-research-terran-orbitalstrikerally.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="11.2"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.35"/>
+            <AdditiveAttackSpeedFactor value="0.35"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="NaniteEmitterInstabuilddelay">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>

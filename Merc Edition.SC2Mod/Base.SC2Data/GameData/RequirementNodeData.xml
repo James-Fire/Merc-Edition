@@ -11,7 +11,6 @@
     </CRequirementAnd>
     <CRequirementCountBehavior id="CountBehaviorMinikinCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="Minikin" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorNomadSilentModeCompleteOnlyAtUnit">
@@ -130,6 +129,9 @@
     <CRequirementCountUpgrade id="CountUpgradeNeosteelCupHoldersCompleteOnly">
         <Count Link="NeosteelCupHolders" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeOrbitalDeploymentCompleteOnly">
+        <Count Link="OrbitalDeployment" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradePiercingStrikeCompleteOnly">
         <Count Link="PiercingStrike" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -144,6 +146,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorSpecialCompleteOnly">
         <Count Link="RaynorSpecial" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRefittedReactorCompleteOnly">
+        <Count Link="RefittedReactor" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeReflectiveArmorCompleteOnly">
         <Count Link="ReflectiveArmor" State="CompleteOnly"/>
@@ -234,7 +239,6 @@
         <OperandArray index="0" value="AndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountBehaviorMinikinCompleteOnlyAtUnit">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountBehaviorMinikinCompleteOnlyAtUnit"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeStabilizerMedpacksMercCompleteOnly">

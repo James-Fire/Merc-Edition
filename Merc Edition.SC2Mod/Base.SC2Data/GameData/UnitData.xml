@@ -121,6 +121,13 @@
             <LayoutButtons index="2" AbilCmd="255,255"/>
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
         </CardLayouts>
+        <ResourceState value="Harvestable"/>
+        <BehaviorArray index="0" Link="HarvestableVespeneGeyserGas"/>
+        <BehaviorArray index="1" Link="AutomaticHarvestableVespene"/>
+        <BehaviorArray index="2" Link="AutoHarvestVespene"/>
+        <BehaviorArray index="3" Link="FireSuppressionSystem"/>
+        <BehaviorArray index="4" Link="TerranBuildingBurnDown"/>
+        <BehaviorArray Link="FireSuppressionSystem"/>
     </CUnit>
     <CUnit id="Barracks">
         <CardLayouts index="0">
@@ -311,11 +318,13 @@
             <LayoutButtons index="10" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel"/>
             <LayoutButtons index="11" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="CommandCenterTrain,Train1" Row="1" Column="3"/>
             <LayoutButtons index="12" Face="Scan" Type="AbilCmd" AbilCmd="ScannerSweep,Execute" Column="1"/>
-            <LayoutButtons index="13" Face="TrainACV" AbilCmd="CommandCenterTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons index="13" Face="TrainACV" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="SCV" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="OrbitalCommand" Type="AbilCmd" AbilCmd="UpgradeToOrbital,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="PlanetaryFortress" Type="AbilCmd" AbilCmd="UpgradeToPlanetaryFortress,Execute" Row="0" Column="4"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="DevastatorMissilesMercWeapon" parent="MISSILE">

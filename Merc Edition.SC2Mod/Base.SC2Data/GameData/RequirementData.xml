@@ -182,6 +182,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeNeosteelCupHoldersCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseOrbitalDeployment">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeOrbitalDeploymentCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UsePiercingStrike">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePiercingStrikeCompleteOnly"/>
@@ -201,6 +205,10 @@
     <CRequirement id="UseRaynorSpecial">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeRaynorSpecialCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseRefittedReactor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRefittedReactorCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseReflectiveArmor">
         <EditorCategories value="TechType:Ability"/>

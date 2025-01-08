@@ -384,8 +384,35 @@ bool libBA5CCDED_gt_InitTech_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    if ((TechTreeUpgradeCount(1, "OrbitalBaseDepots", c_techCountCompleteOnly) == 1)) {
+    TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_810267DE"), true);
+    if (((TechTreeUpgradeCount(1, "OrbitalDeployment", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "OrbitalStrike", c_techCountCompleteOnly) == 1))) {
+        TechTreeUpgradeAddLevel(1, "OrbitalStrike", 1);
+        TechTreeUpgradeAddLevel(1, "OrbitalDeployment", 1);
+    }
+
+    if (((TechTreeUpgradeCount(1, "SupremeReactor", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "TechReactor", c_techCountCompleteOnly) == 1))) {
+        TechTreeUpgradeAddLevel(1, "TechReactor", 1);
+        TechTreeUpgradeAddLevel(1, "SupremeReactor", 1);
+    }
+
+    if (((TechTreeUpgradeCount(1, "RefittedReactor", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "CommandCenterReactor", c_techCountCompleteOnly) == 1))) {
+        TechTreeUpgradeAddLevel(1, "CommandCenterReactor", 1);
+        TechTreeUpgradeAddLevel(1, "RefittedReactor", 1);
+    }
+
+    if (((TechTreeUpgradeCount(1, "VanadiumPlating", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "Gen1Plating", c_techCountCompleteOnly) == 1))) {
+        TechTreeUpgradeAddLevel(1, "Gen1Plating", 1);
+        TechTreeUpgradeAddLevel(1, "VanadiumPlating", 1);
+    }
+
+    if (((TechTreeUpgradeCount(1, "PlusUltraCapacitors", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "UltraCapacitors", c_techCountCompleteOnly) == 1))) {
+        TechTreeUpgradeAddLevel(1, "PlusUltraCapacitors", 1);
+        TechTreeUpgradeAddLevel(1, "UltraCapacitors", 1);
+    }
+
+    if (((TechTreeUpgradeCount(1, "OrbitalBaseDepots", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "SupplyDepotDrop", c_techCountCompleteOnly) == 1))) {
         TechTreeUpgradeAddLevel(1, "SupplyDepotDrop", 1);
+        TechTreeUpgradeAddLevel(1, "OrbitalBaseDepots", 1);
         PlayerModifyPropertyInt(1, c_playerPropSuppliesMade, c_playerPropOperAdd, 100);
     }
 

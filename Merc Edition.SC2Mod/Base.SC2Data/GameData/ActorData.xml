@@ -638,6 +638,8 @@
         <On index="6" Terms="Behavior.SurvivorsGuilt.Off" Send="AnimBracketStop BSD"/>
         <On Terms="Behavior.SurvivorsGuiltApollo.On" Send="Create"/>
         <On Terms="Behavior.SurvivorsGuiltApollo.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.AdrenalineRush.On" Send="Create"/>
+        <On Terms="Behavior.AdrenalineRush.Off" Send="AnimBracketStop BSD"/>
     </CActorModelMaterial>
     <CActorSound id="SurvivorsGuiltScream" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -647,6 +649,7 @@
         <EditorCategories value=""/>
         <On Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
         <On Terms="Behavior.SurvivorsGuiltApollo.On" Send="Create"/>
+        <On Terms="Behavior.AdrenalineRush.On" Send="Create"/>
     </CActorSound>
     <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
         <Aliases value="_CreepEngulfable"/>

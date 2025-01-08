@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="AdrenalineRushAB">
+        <ValidatorArray index="0" value="PlayerIsMercEdition"/>
+        <ValidatorArray value="HaveOrbitalDeployment"/>
+        <Behavior value="AdrenalineRush"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="DemonRocketsApplyBehavior">
         <Behavior value="DemonRockets"/>
     </CEffectApplyBehavior>
+    <CEffectSet id="DropTrainSetMerc">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="MakePrecursor"/>
+        <EffectArray value="DropTrainStarport"/>
+        <EffectArray value="AdrenalineRushAB"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="DropTrainStarport">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <ExpireDelay value="2.3"/>
+        <FinalEffect value="RemovePrecursor"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="DropTrainSet">
+        <EffectArray value="AdrenalineRushAB"/>
+    </CEffectSet>
     <CEffectSet id="FreyjaAttackSet">
         <EditorCategories value=""/>
         <EffectArray value="DemonRocketsApplyBehavior"/>

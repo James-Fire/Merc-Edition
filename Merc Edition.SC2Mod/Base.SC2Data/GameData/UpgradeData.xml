@@ -93,6 +93,58 @@
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[2].Radius" Value="0.72"/>
         <AffectedUnitArray value="Nomad"/>
     </CUpgrade>
+    <CUpgrade id="Gen1Plating">
+        <EffectArray Operation="Multiply" Reference="Unit,WarPig,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SkibisAngel,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,DevilDog,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,HammerSecurity,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,BlockB,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,FlyingBlockB,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Phantom,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Shadow,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Agitator,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Anarchist,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SiegeBreakerSieged,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SiegeBreaker,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SpartanCompany,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Wolverine,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Titan,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Condor,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Copperhead,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,HelsAngelAssault,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,HelsAngelFighter,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Harrier,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CharonDropship,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,DuskWing,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Adjudicator,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Nomad,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Starcruiser,LifeMax" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,WarPig,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SkibisAngel,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,DevilDog,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,HammerSecurity,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,BlockB,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,FlyingBlockB,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Phantom,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Shadow,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Agitator,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Anarchist,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SiegeBreakerSieged,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SiegeBreaker,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SpartanCompany,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Wolverine,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Titan,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Condor,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Copperhead,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,HelsAngelAssault,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,HelsAngelFighter,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Harrier,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CharonDropship,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,DuskWing,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Adjudicator,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Nomad,LifeStart" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Starcruiser,LifeStart" Value="1.100000"/>
+    </CUpgrade>
     <CUpgrade id="KelmorianCutters">
         <EffectArray Operation="Set" Reference="Abil,SCVHarvest,ResourceAmountBonus[Minerals]" Value="15"/>
         <EffectArray Operation="Set" Reference="Effect,Repair,DrainResourceCostFactor[Custom]" Value="0.1875"/>
@@ -126,12 +178,150 @@
         <AffectedUnitArray value="SupplyDepot"/>
         <AffectedUnitArray value="SupplyDepotLowered"/>
     </CUpgrade>
+    <CUpgrade id="OrbitalDeployment">
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train9].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train9].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train9].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train10].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train10].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train10].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train11].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train11].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train11].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train12].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train12].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train12].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train13].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train13].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train13].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train14].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train14].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train14].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train15].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train15].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train15].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train16].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train16].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train16].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train9].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train9].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train9].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train10].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train10].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train10].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train11].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train11].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train11].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train12].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train12].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train12].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train13].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train13].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train13].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train14].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train14].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train14].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train15].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train15].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train15].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train12].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train12].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train12].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train13].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train13].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train13].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train14].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train14].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train14].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train15].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train15].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train1]5.Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train16].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train16].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train16].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train17].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train17].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train17].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train18].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train18].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train18].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train19].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train19].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FactoryTrain,InfoArray[Train19].Time" Value="2.300000"/>
+    </CUpgrade>
+    <CUpgrade id="OrbitalStrike">
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train1].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train1].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train1].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train2].Effect" Value="DropTrainSetReaper"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train2].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train2].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train2].Unit[0]" Value="ReaperPlacement"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train3].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train3].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train3].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train4].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train4].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train4].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train5].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train5].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train5].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train6].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train6].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train6].Time" Value="2.300000"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train7].Effect" Value="DropTrainSet"/>
+        <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train7].Location" Value="Rally"/>
+        <EffectArray Operation="Subtract" Reference="Abil,BarracksTrain,InfoArray[Train7].Time" Value="2.300000"/>
+    </CUpgrade>
     <CUpgrade id="PiercingStrike">
         <AffectedUnitArray value="Wolverine"/>
+    </CUpgrade>
+    <CUpgrade id="PlusUltraCapacitors">
+        <EffectArray Operation="Multiply" Reference="Effect,KelmorianMinerDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,HammerSecurityDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,BarBreakersDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,C11EthereanRifle,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,AGRShadeHunter,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,DevilDogDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,HellbornFlamethrowerDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,AnarchistWeaponDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,GreetingGrenadeDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ChargedJupiterRailDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,SiegeBreakerDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ArcliteShockCannonEnemyDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ArcliteShockCannonFriendlyDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ArcliteShockCannonBlast,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ArcliteShockCannonDirected,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ArcliteShockCannonDummy,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,SpartanCompanyAU,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,SpartanCompanyG,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,CoeusMissileDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,FistsofKronosDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,250mmUranusCarronadesDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,RailcannonDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,SulfurMissilesDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,WreckingCrewAssault,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,DuskWingBansheeDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,DuskWingScreecherMissilesCarpetBombDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,NomadMissileDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,NomadMissileClusterDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ScorpionMissiles,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ScorpionMissilesAmplifiedDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ThermalBurst,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,ThermalBurstAmplifiedDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,AdjudicatorWeaponDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,PharaohLaserBatteryDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,LogiLaserBatteryDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,FRANomadKingCannonsDamage,Amount" Value="1.100000"/>
+        <EffectArray Operation="Multiply" Reference="Effect,D8ChargeDamage,Amount" Value="1.100000"/>
     </CUpgrade>
     <CUpgrade id="RagnarokWeapons">
         <EffectArray Operation="Set" Reference="Weapon,RagnarokNRoll,Options[Hidden]" Value="0"/>
         <AffectedUnitArray value="Starcruiser"/>
+    </CUpgrade>
+    <CUpgrade id="RefittedReactor">
+        <EffectArray Operation="Multiply" Reference="Abil,CommandCenterTrain,InfoArray[Train2].Time" Value="0.750000"/>
+        <EffectArray Operation="Set" Reference="Unit,ACV,CostResource[Minerals]" Value="58"/>
     </CUpgrade>
     <CUpgrade id="RevivalField">
         <AffectedUnitArray value="Harrier"/>
@@ -314,6 +504,7 @@
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>
     </CUpgrade>
+    <CUpgrade id="SupremeReactor"/>
     <CUpgrade id="SwannNanites">
         <AffectedUnitArray value="Adjudicator"/>
         <EffectArray Operation="Multiply" Reference="Effect,NanoRepair,RechargeVitalRate" Value="1.398400"/>
@@ -455,6 +646,26 @@
         <EffectArray index="67" Value="0.1"/>
     </CUpgrade>
     <CUpgrade id="TerranVehicleWeaponsUltraCapacitorsLevel2">
+        <EffectArray index="50" Value="0.1"/>
+        <EffectArray index="51" Value="0.1"/>
+        <EffectArray index="52" Value="0.1"/>
+        <EffectArray index="53" Value="0.1"/>
+        <EffectArray index="54" Value="0.1"/>
+        <EffectArray index="55" Value="0.1"/>
+        <EffectArray index="56" Value="0.1"/>
+        <EffectArray index="57" Value="0.1"/>
+        <EffectArray index="58" Value="0.1"/>
+        <EffectArray index="59" Value="0.1"/>
+        <EffectArray index="60" Value="0.1"/>
+        <EffectArray index="61" Value="0.1"/>
+        <EffectArray index="62" Value="0.1"/>
+        <EffectArray index="63" Value="0.1"/>
+        <EffectArray index="64" Value="0.1"/>
+        <EffectArray index="65" Value="0.1"/>
+        <EffectArray index="66" Value="0.1"/>
+        <EffectArray index="67" Value="0.1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsUltraCapacitorsLevel3">
         <EffectArray index="50" Value="0.1"/>
         <EffectArray index="51" Value="0.1"/>
         <EffectArray index="52" Value="0.1"/>
