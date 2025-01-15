@@ -69,6 +69,37 @@
         <EffectArray Reference="Effect,ScorpionMissilesPersistent,PeriodCount" Value="2"/>
         <AffectedUnitArray value="Harrier"/>
     </CUpgrade>
+    <CUpgrade id="UmojanCellularReactors">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EffectArray Reference="Unit,DuskWing,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,CharonDropship,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,Adjudicator,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,Nomad,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,Phantom,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,Shadow,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,Starcruiser,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,Harrier,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,SkibisAngel,EnergyStart" Value="100"/>
+        <EffectArray Reference="Unit,DuskWing,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,Adjudicator,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,Nomad,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,Phantom,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,Shadow,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,Starcruiser,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,Harrier,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,SkibisAngel,EnergyMax" Value="100"/>
+        <EffectArray Reference="Unit,CharonDropship,EnergyMax" Value="100"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Starcruiser,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,DuskWing,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Adjudicator,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Nomad,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Phantom,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Shadow,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Harrier,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,SkibisAngel,EnergyRegenRate" Value="1.449200"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CharonDropship,EnergyRegenRate" Value="1.449200"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+    </CUpgrade>
     <CUpgrade id="ChaoticPower">
         <EffectArray Operation="Multiply" Reference="Abil,MagMine,Cost[0].Cooldown.TimeUse" Value="0.500000"/>
         <EffectArray Reference="Effect,MagMineCU,SpawnCount" Value="1"/>
@@ -91,6 +122,7 @@
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[0].Radius" Value="0.18"/>
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[1].Radius" Value="0.36"/>
         <EffectArray Reference="Effect,NomadMissileDamage,AreaArray[2].Radius" Value="0.72"/>
+        <EffectArray Operation="Set" Reference="Unit,RailGunTurret,EffectArray[Death]" Value="NomadRailgunTurretDeathClusterRP"/>
         <AffectedUnitArray value="Nomad"/>
     </CUpgrade>
     <CUpgrade id="Gen1Plating">
@@ -179,28 +211,28 @@
         <AffectedUnitArray value="SupplyDepotLowered"/>
     </CUpgrade>
     <CUpgrade id="OrbitalDeployment">
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train9].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train9].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train9].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train9].Time" Value="2.300000"/>
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train10].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train10].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train10].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train10].Time" Value="2.300000"/>
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train11].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train11].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train11].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train11].Time" Value="2.300000"/>
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train12].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train12].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train12].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train12].Time" Value="2.300000"/>
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train13].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train13].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train13].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train13].Time" Value="2.300000"/>
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train14].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train14].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train14].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train14].Time" Value="2.300000"/>
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train15].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train15].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train15].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train15].Time" Value="2.300000"/>
-        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train16].Effect" Value="DropTrainSetMerc"/>
+        <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train16].Effect" Value="StarportMercAirDrop"/>
         <EffectArray Operation="Set" Reference="Abil,StarportTrain,InfoArray[Train16].Location" Value="Rally"/>
         <EffectArray Operation="Subtract" Reference="Abil,StarportTrain,InfoArray[Train16].Time" Value="2.300000"/>
         <EffectArray Operation="Set" Reference="Abil,BarracksTrain,InfoArray[Train9].Effect" Value="DropTrainSet"/>
@@ -314,6 +346,13 @@
         <EffectArray Operation="Multiply" Reference="Effect,LogiLaserBatteryDamage,Amount" Value="1.100000"/>
         <EffectArray Operation="Multiply" Reference="Effect,FRANomadKingCannonsDamage,Amount" Value="1.100000"/>
         <EffectArray Operation="Multiply" Reference="Effect,D8ChargeDamage,Amount" Value="1.100000"/>
+    </CUpgrade>
+    <CUpgrade id="PsiDispersionDevice">
+        <EffectArray Operation="Set" Reference="Unit,PsiDisruptor,Name" Value="Unit/Name/PsiDispersionDevice"/>
+        <EffectArray Operation="Set" Reference="Button,PsiDisruptor,AlertTooltip" Value="Button/Tooltip/PsiDisruptionDevice"/>
+        <EffectArray Operation="Set" Reference="Button,PsiDisruptor,Tooltip" Value="Button/Tooltip/PsiDisruptionDevice"/>
+        <EffectArray Operation="Set" Reference="Button,PsiDisruptor,Name" Value="Button/Name/PsiDisruptionDevice"/>
+        <EffectArray Operation="Set" Reference="Effect,PsiDisruptionSearchArea,AreaArray[0].Radius" Value="12"/>
     </CUpgrade>
     <CUpgrade id="RagnarokWeapons">
         <EffectArray Operation="Set" Reference="Weapon,RagnarokNRoll,Options[Hidden]" Value="0"/>
@@ -504,7 +543,16 @@
     <CUpgrade id="SuperStim">
         <AffectedUnitArray value="WarPig"/>
     </CUpgrade>
-    <CUpgrade id="SupremeReactor"/>
+    <CUpgrade id="SupremeReactor">
+        <EffectArray Operation="Set" Reference="Unit,TechReactor,CostResource[Minerals]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,TechReactor,CostResource[Vespene]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,BarracksTechReactor,CostResource[Vespene]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,BarracksTechReactor,CostResource[Minerals]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,FactoryTechReactor,CostResource[Vespene]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,FactoryTechReactor,CostResource[Minerals]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,StarportTechReactor,CostResource[Vespene]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,StarportTechReactor,CostResource[Minerals]" Value="0"/>
+    </CUpgrade>
     <CUpgrade id="SwannNanites">
         <AffectedUnitArray value="Adjudicator"/>
         <EffectArray Operation="Multiply" Reference="Effect,NanoRepair,RechargeVitalRate" Value="1.398400"/>

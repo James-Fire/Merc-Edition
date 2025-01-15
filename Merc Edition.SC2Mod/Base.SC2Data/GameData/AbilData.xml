@@ -34,6 +34,21 @@
             <Unit value="ACV"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectInstant id="FerrierofSouls">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FerrierofSoulsApplyBehavior"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="84"/>
+        </Cost>
+        <AutoCastRange value="15"/>
+        <AutoCastValidatorArray value="CopperheadRecentlyTookDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FerrierofSouls">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="FlashFlame">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="HankFlashFlameInitialCP"/>
@@ -232,6 +247,9 @@
     <CAbilBuild id="TerranBuild">
         <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">
             <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Restricted" Requirements="HaveEngineeringBay"/>
+        </InfoArray>
+        <InfoArray index="Build26" Unit="PsiDispersionDevice" Time="82">
+            <Button DefaultButtonFace="PsiDisruptor" Requirements="UsePsiDispersionDevice"/>
         </InfoArray>
     </CAbilBuild>
     <CAbilEffectTarget id="AspisBlink">
@@ -461,7 +479,6 @@
     </CAbilTrain>
     <CAbilTrain id="CharonDropshipTrain">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Flags index="Transient" value="1"/>
         <InfoArray index="Train1" Time="19">
             <Resource index="Minerals" value="-50"/>
             <Resource index="Vespene" value="-25"/>
@@ -537,6 +554,9 @@
                 <DurationArray index="Duration" value="1"/>
             </SectionArray>
         </InfoArray>
+        <Cost>
+            <Cooldown TimeUse="35"/>
+        </Cost>
     </CAbilMorph>
     <CAbilMorph id="JetPackOverdriveUndo">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -968,6 +988,11 @@
             <MatchFlags index="CasterUnit" value="1"/>
         </Marker>
         <CmdButtonArray index="Execute" DefaultButtonFace="SniperBotSnipe"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AutoCastFilters value="Biological,Visible;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="8"/>
+        <AutoCastValidatorArray value="TargetLifeGE60"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SprayandPay">
         <EditorCategories value="AbilityorEffectType:Units"/>

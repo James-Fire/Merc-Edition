@@ -44,6 +44,10 @@
     <CValidatorUnitCompareBehaviorCount id="DontHaveSurvivorsGuilt">
         <Behavior value="SurvivorsGuilt"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="HaveMacroFiltering">
+        <Find value="1"/>
+        <Value value="UseMacroFilters"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveATXOrdnance">
         <Find value="1"/>
         <Value value="UseATXOrdnance"/>
@@ -59,6 +63,9 @@
     <CValidatorPlayerRequirement id="HaveBurrowBunker">
         <Find value="1"/>
         <Value value="UseBurrowBunker"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DontHaveMacroFiltering">
+        <Value value="UseMacroFilters"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveOrbitalDeployment">
         <Find value="1"/>
@@ -119,6 +126,11 @@
         <Type value="Fraction"/>
         <Value value="0.8"/>
     </CValidatorUnitCompareVital>
+    <CValidatorCombine id="MicrobutnoMacrofilters">
+        <Type value="And"/>
+        <CombineArray value="HasMicroFiltering"/>
+        <CombineArray value="DontHaveMacroFiltering"/>
+    </CValidatorCombine>
     <CValidatorLocationCompareRange id="MinimumRange15">
         <ResultFailed value="Error,MinimumRange15"/>
         <Compare value="GE"/>
@@ -130,6 +142,12 @@
     <CValidatorUnitCompareBehaviorCount id="NoFearImmunityWolverine">
         <Behavior value="WolverineFearImmunity"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="NoMicroorMacroFilters">
+        <Type value="And"/>
+        <CombineArray value="HasMicroFiltering"/>
+        <CombineArray value="HaveMacroFiltering"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
     <CValidatorCombine id="NoSwannANDBelow50Life">
         <Type value="And"/>
         <CombineArray value="LifeLTHalf"/>

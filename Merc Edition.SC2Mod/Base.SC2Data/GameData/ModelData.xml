@@ -59,6 +59,11 @@
         <Model value="Assets\Models\ASP_Missile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="BunkerBurrowStasis">
+        <Model value="Assets\Effects\Protoss\StasisWardImpact\StasisWardImpact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
     <CModel id="HERCDummyPortrait" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Models\FRANKPOR.m3"/>
         <FacialController value="LocalizedData\Facial\FirebatPortrait.fxa"/>
@@ -137,6 +142,33 @@
         <FacialController value="LocalizedData\Facial\GoliathPortrait.fxa"/>
         <Image value="Assets\Textures\GoliathMercenaryPortrait_Static.dds"/>
         <Lighting value="GoliathMercenaryPortrait"/>
+    </CModel>
+    <CModel id="PsiDispersionDevice" parent="Building">
+        <Model value="Assets\Buildings\Terran\SigmaProjector\SigmaProjector.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value=""/>
+        <PlanetPanelCamera value="Star2CameraHigh06"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="0.800000"/>
+        <ShadowRadius value="0.800000"/>
+        <TechPurchaseCamera value="Star2CameraHigh06"/>
+        <UnitGlossaryCamera value="Star2CameraHigh06"/>
+    </CModel>
+    <CModel id="PsiDispersionDeviceDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Terran\SigmaProjectorDeath\SigmaProjectorDeath.m3"/>
+        <LowQualityModel value="PsiDisruptorDeathLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="PsiDispersionDevicePlacement" parent="Placement">
+        <Model value="Assets\Buildings\Terran\SigmaProjectorPlacement\SigmaProjectorPlacement.m3"/>
+        <LowQualityModel value="PsiDisruptor"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
     <CModel id="RattlesnakeWeapon" parent="MissileFX">
         <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>

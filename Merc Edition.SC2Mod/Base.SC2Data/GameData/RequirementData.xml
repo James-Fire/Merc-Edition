@@ -162,6 +162,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeMASHCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseMacroFilters">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMacroFiltersCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseMercEdition">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
@@ -193,6 +197,10 @@
     <CRequirement id="UsePliableArmor">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePliableArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UsePsiDispersionDevice">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradePsiDispersionDeviceCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseRagnarokWeapons">
         <EditorCategories value="TechType:Ability"/>

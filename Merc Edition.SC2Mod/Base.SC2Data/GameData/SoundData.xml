@@ -275,6 +275,14 @@
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_017.fxe"/>
         </AssetArray>
     </CSound>
+    <CSound id="FerrierofSouls" parent="Combat">
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOff01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOff02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOff03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOff04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOff05_1ch.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
     <CSound id="Freyja_Yes" parent="TerranAck">
         <AssetArray File="Assets\Sounds\VO Freyja\Move Order\ValkyrieSCBW@Yes00.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\VO Freyja\Move Order\ValkyrieSCBW@Yes01.ogg" FacialGroup=""/>

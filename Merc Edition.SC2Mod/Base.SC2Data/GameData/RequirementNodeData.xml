@@ -113,6 +113,9 @@
     <CRequirementCountUpgrade id="CountUpgradeMASHCompleteOnly">
         <Count Link="MASH" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMacroFiltersCompleteOnly">
+        <Count Link="MacroFilters" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMercEditionCompleteOnly">
         <Count Link="MercEdition" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -137,6 +140,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradePliableArmorCompleteOnly">
         <Count Link="PliableArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePsiDispersionDeviceCompleteOnly">
+        <Count Link="PsiDispersionDevice" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRagnarokWeaponsCompleteOnly">
         <Count Link="RagnarokWeapons" State="CompleteOnly"/>

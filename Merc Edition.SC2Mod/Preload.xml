@@ -3,6 +3,7 @@
 <Abil id="SkibisAngelRepairDrone"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Behavior id="RevivalFieldCooldown"/>
+<Behavior id="BlockBFlightDuration"/>
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
 <Effect id="SpartanCompanyShellShowerFull"/>

@@ -23,6 +23,10 @@
     <CEffectSet id="DropTrainSet">
         <EffectArray value="AdrenalineRushAB"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="FerrierofSoulsApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="FerrierofSouls"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="FreyjaAttackSet">
         <EditorCategories value=""/>
         <EffectArray value="DemonRocketsApplyBehavior"/>
@@ -76,6 +80,38 @@
         <ImpactEffect value="FreyjaAttackSet"/>
         <AmmoUnit value="FreyjaWeaponPrimary"/>
     </CEffectLaunchMissile>
+    <CEffectRandomPointInCircle id="NomadRailgunTurretDeathClusterRP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="NomadRailgunTurretDeathClusterLM"/>
+        <Radius value="3.5"/>
+    </CEffectRandomPointInCircle>
+    <CEffectLaunchMissile id="NomadRailgunTurretDeathClusterLM">
+        <LaunchLocation Effect="NomadRailgunTurretDeathClusterRP" Value="TargetPoint"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="NomadMissileClusterDamage"/>
+        <AmmoUnit value="NomadMissileClusterMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="PsiDisruptorDamage">
+        <ValidatorArray value="IsZerg"/>
+        <EditorCategories value=""/>
+        <Amount value="1"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="PsiDisruptorDamageAB">
+        <EditorCategories value=""/>
+        <Behavior value="PsiDisruptorDamage"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="PsiDisruptorDamageSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="12" Effect="PsiDisruptorDamageAB"/>
+    </CEffectEnumArea>
+    <CEffectSet id="StarportMercAirDrop">
+        <ValidatorArray value="HaveOrbitalDeployment"/>
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="MakePrecursorMerc"/>
+        <EffectArray value="MercAirDropApplyBehaviorDelay"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="MinikinApplyBehavior">
         <Behavior value="Minikin"/>
     </CEffectApplyBehavior>

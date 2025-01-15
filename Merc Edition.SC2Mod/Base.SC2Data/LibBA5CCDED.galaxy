@@ -614,6 +614,51 @@ void libBA5CCDED_gt_BlockBFlyHeighter2_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Block B Fly Duration Adder
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BlockBFlyDurationAdder_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.1, c_timeReal);
+    UnitBehaviorAdd(EventUnit(), "BlockBFlightDuration", EventUnit(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BlockBFlyDurationAdder_Init () {
+    libBA5CCDED_gt_BlockBFlyDurationAdder = TriggerCreate("libBA5CCDED_gt_BlockBFlyDurationAdder_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_BlockBFlyDurationAdder, null, AbilityCommand("JetPackOverdrive", 0), c_abilMorphStageWait, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Block B Fly Duration
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BlockBFlyDuration_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.1, c_timeReal);
+    libNtve_gf_MakeUnitUncommandable(EventUnit(), true);
+    UnitIssueOrder(EventUnit(), Order(AbilityCommand("JetPackOverdriveUndo", 0)), c_orderQueueReplace);
+    Wait(0.1, c_timeReal);
+    libNtve_gf_MakeUnitUncommandable(EventUnit(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BlockBFlyDuration_Init () {
+    libBA5CCDED_gt_BlockBFlyDuration = TriggerCreate("libBA5CCDED_gt_BlockBFlyDuration_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_BlockBFlyDuration, null, "BlockBFlightDuration", c_unitBehaviorChangeDestroy);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Spartan Company Shell Shower Full
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_SpartanCompanyShellShowerFull_Func (bool testConds, bool runActions) {
@@ -877,6 +922,8 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
+    libBA5CCDED_gt_BlockBFlyDurationAdder_Init();
+    libBA5CCDED_gt_BlockBFlyDuration_Init();
     libBA5CCDED_gt_SpartanCompanyShellShowerFull_Init();
     libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
     libBA5CCDED_gt_SkibisAngelRepairDrone_Init();
