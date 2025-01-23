@@ -55,6 +55,7 @@ Abil/Name/SnipePhantom=Snipe
 Abil/Name/SpiderMineUnburrowRangeDummyCondor=Spider Mine Unburrow Range Dummy
 Abil/Name/SprayandPay=Spray and Pay
 Abil/Name/StabilizerMedpackHeal=Stabilizer Medpack Heal
+Abil/Name/StarcruiserYamatoGun=Yamato Gun
 Abil/Name/SuperStim=Super Stim
 Abil/Name/TacticalRealignment=Tactical Realignment
 Abil/Name/TarBomb=Tar Bomb
@@ -81,6 +82,7 @@ Behavior/Name/ForceMissiles=Force Missiles
 Behavior/Name/FortressBombardmentFiring=Fortress Bombardment Firing
 Behavior/Name/GraduatingRange=Graduating Range
 Behavior/Name/Hellraiser=Hellraiser
+Behavior/Name/HellraiserEasterEgg=Hellraiser
 Behavior/Name/ImmolationFluid=Immolation Fluid
 Behavior/Name/IncomingAnarchistJump=Incoming!
 Behavior/Name/Inspire=Inspire
@@ -94,6 +96,7 @@ Behavior/Name/PermanentCloakDuskWing=Permanent Cloak
 Behavior/Name/PhantomCloak=Cloak
 Behavior/Name/PointBreakDrone=Point Break Drone
 Behavior/Name/RedlineReactor=Redline Reactor
+Behavior/Name/RedlineReactorEasterEgg=Redline Reactor (Easter Egg)
 Behavior/Name/ReflectiveArmorBonusDamage=Reflective Armor
 Behavior/Name/Revitalizing=Revitalizing
 Behavior/Name/RevivalFieldCooldown=Revival Field Cooldown
@@ -125,6 +128,7 @@ Behavior/Tooltip/FearPliableArmor=This unit is running in fear.
 Behavior/Tooltip/ForceMissiles=This unit is stunned.
 Behavior/Tooltip/GraduatingRange=Siege Breakers gradually gain range in siege mode, up to an additional 4.
 Behavior/Tooltip/Hellraiser=This unit is attacking significantly faster.
+Behavior/Tooltip/HellraiserEasterEgg=This unit is attacking significantly faster.
 Behavior/Tooltip/ImmolationFluid=This unit is burning for damage over time.
 Behavior/Tooltip/IncomingAnarchistJump=The Anarchist has more armor.
 Behavior/Tooltip/Inspire=This unit has increased movement and attack speed.
@@ -305,6 +309,7 @@ Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
 Button/Name/UpgradeToPlanetaryFortress=Upgrade to Bombardment Fortress
 Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
+Button/Name/YamatoCulverin=Yamato Culverin
 Button/Name/ZeusLanderTacticalJump=Tactical Jump
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Skibi's Angels cost 35% less, no longer need a Tech Lab and are equipped with an automatic healing drone.
@@ -388,7 +393,7 @@ Button/Tooltip/HERCGrappleDummy=No one will believe you.
 Button/Tooltip/HammerMunitions=Rattlesnake's attacks deal 50% of their damage in an area of effect.
 Button/Tooltip/HankHarnack=Henry "Hank" Harnack, the son of a trucking company operator, became a private in the Confederate Marine Corps' famous Heaven's Devils platoon. Friends with fellow marines Jim Raynor and Ryk Kydd, he was quick to anger and had an impulsive attitude.  He was officially listed as KIA and much like Emperor Palpatine he somehow survived.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
-Button/Tooltip/Hellraiser=Increase attack speed by 150%. Lasts for <d time="13"/>.
+Button/Tooltip/Hellraiser=Increase attack speed by 150%. Lasts for <d time="10"/>.
 Button/Tooltip/HyperjumpStarcruiser=After <d time="6"/>, warps to the target location. The Starcruiser is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Button/Tooltip/IFFSpiderRounds=Siege Breakers deal +60 damage to the main target, deal 80% less damage to friendly units, and leave behind a spider mine from sieged attacks.
 Button/Tooltip/IgniteAfterburnersHelsAngel=Increase movement speed by 100% for <d time="14"/> seconds.
@@ -496,6 +501,7 @@ Button/Tooltip/U240Rounds=Increases the Block B's range by 1 and damage vs Light
 Button/Tooltip/UpgradeToPlanetaryFortress=Adds a powerful turret, and increases armor. Removes Lift Off, Scanner Sweep, and MULE abilities, but allows it to fire powerful missiles at long range.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Light and Biological by 15, and doubles the width of attacks.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/YamatoCulverin=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby.
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Effect/Name/250mmUranusCarronadesCP=250mmUranusCarronadesCP
@@ -728,6 +734,7 @@ Effect/Name/RattlesnakeWeaponDamage=Rattlesnake Weapon Damage
 Effect/Name/RattlesnakeWeaponLM=Rattlesnake Weapon LM
 Effect/Name/RattlesnakeWeaponSet=Rattlesnake Weapon Set
 Effect/Name/RedlineReactorAB=Redline Reactor AB
+Effect/Name/RedlineReactorMusicEasterEgg=Needle's In The Red!
 Effect/Name/ReflectiveArmorActiveforBeamVisualApplyBehavior=ReflectiveArmorActiveforBeamVisualApplyBehavior
 Effect/Name/RemoveSpiderMineBurrowBehavior=Remove Spider Mine Burrow Behavior
 Effect/Name/RepairDroneHeal=Repair Drone Heal
@@ -789,6 +796,16 @@ Effect/Name/SprayandPayDamage=Spray and Pay Damage
 Effect/Name/SprayandPaySA=Spray and Pay SA
 Effect/Name/SquadSightAresApplyBehavior=SquadSightAresApplyBehavior
 Effect/Name/SquadSightSA=Squad Sight SA
+Effect/Name/StarcruiserYamatoDamage=Starcruiser Yamato Damage
+Effect/Name/StarcruiserYamatoKB=Starcruiser Yamato KB
+Effect/Name/StarcruiserYamatoKBAB=Starcruiser Yamato KB AB
+Effect/Name/StarcruiserYamatoKBCreatePHSet=Starcruiser Yamato KB Create PH Set
+Effect/Name/StarcruiserYamatoKBImpact=Starcruiser Yamato KB Impact
+Effect/Name/StarcruiserYamatoKBPHLM=Starcruiser Yamato KB PH LM
+Effect/Name/StarcruiserYamatoKBRB=Starcruiser Yamato KB RB
+Effect/Name/StarcruiserYamatoLM=Starcruiser Yamato LM
+Effect/Name/StarcruiserYamatoSA=Starcruiser Yamato SA
+Effect/Name/StarcruiserYamatoSet=Starcruiser Yamato Set
 Effect/Name/StarportMercAirDrop=Starport Merc Air Drop
 Effect/Name/StunnedAnarchistLeapApplyBehavior=StunnedAnarchistLeapApplyBehavior
 Effect/Name/StunnedPenetratorRoundApplyBehavior=StunnedPenetratorRoundApplyBehavior
@@ -920,6 +937,7 @@ Unit/Name/SignalFlareUnit=Signal Flare Unit
 Unit/Name/SkibisAngel=Skibi's Angel
 Unit/Name/Starcruiser=Starcruiser
 Unit/Name/StarcruiserLaserBattery=Starcruiser Laser Battery
+Unit/Name/StarcruiserYamato=Starcruiser Yamato
 Unit/Name/TarBombMissile=Tar Bomb Missile
 Unit/Name/TempestWeaponGround2=Tempest Weapon (Ground)
 Unit/Name/Titan=Titan

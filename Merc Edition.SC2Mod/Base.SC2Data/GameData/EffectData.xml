@@ -106,6 +106,19 @@
         <SearchFilters value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="12" Effect="PsiDisruptorDamageAB"/>
     </CEffectEnumArea>
+    <CEffectSet id="RedlineReactorMusicEasterEgg">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectEnumArea id="StarcruiserYamatoSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="1" Effect="StarcruiserYamatoKB"/>
+    </CEffectEnumArea>
+    <CEffectSet id="StarcruiserYamatoSet">
+        <EditorCategories value=""/>
+        <EffectArray value="StarcruiserYamatoSA"/>
+        <EffectArray value="StarcruiserYamatoDamage"/>
+    </CEffectSet>
     <CEffectSet id="StarportMercAirDrop">
         <ValidatorArray value="HaveOrbitalDeployment"/>
         <EditorCategories value="Race:Zerg"/>
@@ -1815,6 +1828,52 @@
         <WhichLocation Value="SourceUnitOrPoint"/>
         <SpawnUnit value="D8Charge"/>
     </CEffectCreateUnit>
+    <CEffectCreateUnit id="StarcruiserYamatoKB">
+        <ValidatorArray value="NotStructureTarget"/>
+        <ValidatorArray value="NotInvulnerable"/>
+        <ValidatorArray value="NotHidden"/>
+        <EditorCategories value="Race:Zerg"/>
+        <CreateFlags index="Birth" value="0"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="Precursor" value="1"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <CreateFlags index="NormalizeSpawnOffset" value="0"/>
+        <SpawnOwner Value="Neutral"/>
+        <SpawnEffect value="StarcruiserYamatoKBCreatePHSet"/>
+        <SpawnRange value="4"/>
+        <SpawnOffset value="0,3"/>
+        <TypeFallbackUnit Value="Target"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="StarcruiserYamatoKBAB">
+        <WhichUnit Effect="StarcruiserYamatoKB"/>
+        <Behavior value="UnitKnockback"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="StarcruiserYamatoKBCreatePHSet">
+        <EffectArray value="PrecursorUnitKnockbackAB"/>
+        <EffectArray value="StarcruiserYamatoKBAB"/>
+        <EffectArray value="StarcruiserYamatoKBPHLM"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="StarcruiserYamatoKBImpact">
+        <WhichLocation Value="CasterUnit"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="StarcruiserYamatoKBRB"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="StarcruiserYamatoKBPHLM">
+        <LaunchLocation Effect="StarcruiserYamatoKB" Value="TargetUnit"/>
+        <ImpactEffect value="StarcruiserYamatoKBImpact"/>
+        <Flags index="2D" value="1"/>
+        <Movers Link="UnitKnockbackMover3"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectRemoveBehavior id="StarcruiserYamatoKBRB">
+        <WhichUnit Effect="StarcruiserYamatoKB"/>
+        <BehaviorLink value="UnitKnockback"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
     <CEffectSet id="VolatileBurst">
         <EffectArray index="4" value="ChemicalPlatingDummy"/>
     </CEffectSet>
@@ -1925,4 +1984,26 @@
         <InitialOffset value="0,12,0"/>
         <FinalEffect value="AspisBlinkCooldown"/>
     </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="StarcruiserYamatoLM">
+        <ValidatorArray index="0" value="YamatoTargetFilters"/>
+        <ValidatorArray value="IsNotWarpBubble"/>
+        <ValidatorArray value="YamatoTargetFilters"/>
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="StarcruiserYamatoSet"/>
+        <AmmoUnit value="StarcruiserYamato"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="StarcruiserYamatoDamage">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="450"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="0.2" Fraction="1"/>
+        <AreaArray Radius="1" Fraction="0.2"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
 </Catalog>

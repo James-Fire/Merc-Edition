@@ -12,6 +12,18 @@ void libBA5CCDED_InitLibraries () {
     libCamp_InitVariables();
 }
 
+// Variable Initialization
+bool libBA5CCDED_InitVariables_completed = false;
+
+void libBA5CCDED_InitVariables () {
+    if (libBA5CCDED_InitVariables_completed) {
+        return;
+    }
+
+    libBA5CCDED_InitVariables_completed = true;
+
+}
+
 // Functions
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
     // Variable Declarations
@@ -572,6 +584,103 @@ void libBA5CCDED_gt_DepositMoney_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Redline Reactor
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_RedlineReactor_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_rng;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((libBA5CCDED_gv_easterEggActive == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_rng = RandomInt(1, 100);
+    if ((lv_rng <= 3)) {
+        libBA5CCDED_gv_easterEggActive = true;
+        UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RedlineReactor", 1);
+        UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RedlineReactorEasterEgg", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
+        SoundPlayForPlayer(SoundLink("RedlineReactorMusicEasterEgg", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+        Wait(12.0, c_timeReal);
+        libBA5CCDED_gv_easterEggActive = false;
+        UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RedlineReactorEasterEgg", 1);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_RedlineReactor_Init () {
+    libBA5CCDED_gt_RedlineReactor = TriggerCreate("libBA5CCDED_gt_RedlineReactor_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_RedlineReactor, c_playerAny, "RedlineReactorAB");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Freyja
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_Freyja_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_rng;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((libBA5CCDED_gv_easterEggActive == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_rng = RandomInt(1, 100);
+    if ((lv_rng <= 3)) {
+        libBA5CCDED_gv_easterEggActive = true;
+        UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "Hellraiser", 1);
+        UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "HellraiserEasterEgg", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
+        SoundPlayForPlayer(SoundLink("FreyjaHellraiserMusicEasterEgg", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+        Wait(10.0, c_timeReal);
+        libBA5CCDED_gv_easterEggActive = false;
+        UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "HellraiserEasterEgg", 1);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_Freyja_Init () {
+    libBA5CCDED_gt_Freyja = TriggerCreate("libBA5CCDED_gt_Freyja_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_Freyja, c_playerAny, "HellraiserApplyBehavior");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nomad Mine Drone Spawner
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NomadMineDroneSpawner_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NomadMineDroneSpawner_Init () {
+    libBA5CCDED_gt_NomadMineDroneSpawner = TriggerCreate("libBA5CCDED_gt_NomadMineDroneSpawner_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Block B Fly Heighter
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_BlockBFlyHeighter_Func (bool testConds, bool runActions) {
@@ -890,7 +999,7 @@ bool libBA5CCDED_gt_NaniteEmitterBurrow_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((UnitGroupCount(UnitGroupAlliance(EventPlayer(), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster)), 6.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) == 0))) {
+        if (!((UnitGroupCount(UnitGroupAlliance(EventPlayer(), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster)), 7.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) == 0))) {
             return false;
         }
     }
@@ -920,6 +1029,9 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_InitTech_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
+    libBA5CCDED_gt_RedlineReactor_Init();
+    libBA5CCDED_gt_Freyja_Init();
+    libBA5CCDED_gt_NomadMineDroneSpawner_Init();
     libBA5CCDED_gt_BlockBFlyHeighter_Init();
     libBA5CCDED_gt_BlockBFlyHeighter2_Init();
     libBA5CCDED_gt_BlockBFlyDurationAdder_Init();
@@ -949,6 +1061,7 @@ void libBA5CCDED_InitLib () {
     libBA5CCDED_InitLib_completed = true;
 
     libBA5CCDED_InitLibraries();
+    libBA5CCDED_InitVariables();
     libBA5CCDED_InitTriggers();
 }
 

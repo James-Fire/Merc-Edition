@@ -275,6 +275,41 @@
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_017.fxe"/>
         </AssetArray>
     </CSound>
+    <CSound id="StarcruiserYamatoChargeUp" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\PirateCapitalShip_YamatoAttackChargeUp_00.wav" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="StarcruiserYamatoImpact" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\PhotonCannon_Forged_Death_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PhotonCannon_Forged_Death_01.wav" FacialGroup=""/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="8"/>
+    </CSound>
+    <CSound id="StarcruiserYamatoImpactAdd" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact05_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact06_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vanguard_ScatterCannon_Impact07_1ch.wav" FacialGroup=""/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="8"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="StarcruiserYamatoLaunch" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_YamatoAttackLaunch0.wav"/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="8"/>
+        <Volume value="-0.920000,-0.500000"/>
+    </CSound>
     <CSound id="FerrierofSouls" parent="Combat">
         <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOff01_1ch.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Mirage_PhoenixPurifier_CloakOff02_1ch.wav" FacialGroup=""/>
@@ -442,9 +477,9 @@
         <AssetArray File="Assets\Sounds\Yagdra_Vx_FireBreath_Str_.wav" FacialGroup=""/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
-    <CSound id="InTheThunderHeat" parent="Combat">
+    <CSound id="FreyjaHellraiserMusicEasterEgg" parent="Combat">
         <AssetArray File="Assets\Sounds\we makin it outta the koprulu sector with this one boys.mp3" Weight="6" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXSilentKill0.wav" FacialGroup=""/>
+        <Mode value="2D"/>
         <Volume value="-4.000000,-4.000000"/>
         <VolumeRolloffPoints Distance="10.000000"/>
         <VolumeRolloffPoints Distance="28.783070" Volume="-0.640000"/>
@@ -567,6 +602,11 @@
         <Volume value="-1.000000,-1.000000"/>
         <VolumeRolloffPoints Distance="15.472779"/>
         <VolumeRolloffPoints Distance="30.802292" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="RedlineReactorMusicEasterEgg">
+        <AssetArray File="Assets\Sounds\NeedlesInTheRed.mp3" FacialGroup=""/>
+        <DupeDestroyCount value="1"/>
+        <DupeMuteCount value="1"/>
     </CSound>
     <CSound id="RevivalFieldDodgeSound" parent="Combat">
         <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact01_1ch.wav" FacialGroup=""/>
@@ -937,6 +977,21 @@
         <AssetArray File="Assets\Sounds\SOA_ShieldOverCharge_End02_1ch.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\SOA_ShieldOverCharge_End03_1ch.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\SOA_ShieldOverCharge_End04_1ch.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="StarcruiserYamatoLaunchAdd" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Launch_01b.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Launch_03a.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Launch_03b.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Launch_04a.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Launch_04b.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Launch_04c.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Liberator_AG_Launch_04d.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Unused\Liberator_AG_Launch_01c.wav" FacialGroup=""/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="8"/>
+        <Volume value="-0.920000,-0.500000"/>
     </CSound>
     <CSound id="SulfurSuicideSound" parent="Combat">
         <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_01.wav" FacialGroup=""/>

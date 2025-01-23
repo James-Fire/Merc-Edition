@@ -34,6 +34,9 @@
             <StateFlags index="Cloak" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorResource id="AutomaticHarvestableVespene">
+        <IdealHarvesterCount value="3"/>
+    </CBehaviorResource>
     <CBehaviorBuff id="BunkerBurrowed">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
@@ -162,7 +165,15 @@
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Duration value="13"/>
+        <Duration value="10"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="1.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HellraiserEasterEgg">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <AdditiveAttackSpeedFactor value="1.5"/>
         </Modification>
@@ -343,6 +354,13 @@
         <DisableValidatorArray value="NotDeadOrConstruction"/>
         <Period value="0.2"/>
         <PeriodicEffect value="PsiDisruptorDamageSearch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RedlineReactorEasterEgg">
+        <Alignment value="Positive"/>
+        <Modification AccelerationBonus="3">
+            <AdditiveMoveSpeedFactor value="1"/>
+            <DamageDealtUnscaled index="Ranged" value="10"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RevivalFieldCooldown">
         <Alignment value="Negative"/>

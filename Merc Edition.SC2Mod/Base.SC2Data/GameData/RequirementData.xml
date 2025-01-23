@@ -19,7 +19,7 @@
         <NodeArray index="Show" Link="NotCountBehaviorMinikinCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="MineDroneBuild">
-        <NodeArray index="Use" Link="LTCountUnitSpiderMineBurrowedCompleteOnlyAtUnit4"/>
+        <NodeArray index="Use" Link="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit2"/>
     </CRequirement>
     <CRequirement id="TechLaborMedicUpgrade">
         <EditorCategories value="Race:Terran,TechType:Unit"/>

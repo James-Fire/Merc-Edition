@@ -258,6 +258,12 @@
         <Universal value="1"/>
     </CButton>
     <CButton id="UpgradeToPlanetaryFortress"/>
+    <CButton id="YamatoCulverin">
+        <Icon value="Assets\Icons and Wireframes\yamatogunmerc.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\yamatogunmerc.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <Universal value="1"/>
+    </CButton>
     <CButton id="ZeusLanderTacticalJump">
         <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>

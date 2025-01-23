@@ -275,6 +275,31 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="StarcruiserYamatoGun">
+        <Alignment value="Negative"/>
+        <AbilSetId value="yamato"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="StarcruiserYamatoLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="125"/>
+            <Cooldown Link="YamatoYamato2YamatoStarcruiserYamatoGun" TimeUse="0.8332"/>
+        </Cost>
+        <Range value="16"/>
+        <RangeSlop value="10"/>
+        <PrepTime value="4"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <AINotifyEffect value="Yamato"/>
+        <ProgressButtonArray index="Prep" value="YamatoCulverin"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="YamatoCulverin">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
     <CAbilTrain id="ZeusLanderTrain">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <Range value="5"/>

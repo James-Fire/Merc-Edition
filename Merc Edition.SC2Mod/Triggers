@@ -5970,6 +5970,8 @@
             <Preset Type="PresetValue" Library="Ntve" Id="E5424C71"/>
         </Element>
         <Element Type="Category" Id="0B90820E">
+            <Item Type="Category" Library="BA5CCDED" Id="8A555FC0"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="B8DBDB59"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="390A3B5A"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="6CD89C64"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="B8D35B63"/>
@@ -5984,6 +5986,621 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="B3349A44"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="FC9E70A1"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="9081B1CC"/>
+        </Element>
+        <Element Type="Category" Id="8A555FC0">
+            <Item Type="Trigger" Library="BA5CCDED" Id="3325CAC4"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="3B18C30D"/>
+            <Item Type="Variable" Library="BA5CCDED" Id="474F7F82"/>
+        </Element>
+        <Element Type="Trigger" Id="3325CAC4">
+            <Variable Type="Variable" Library="BA5CCDED" Id="415F61E0"/>
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="CA796890"/>
+            <Condition Type="Comment" Library="BA5CCDED" Id="301563AE"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="7BC72A3A"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="A1CDA7BD"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="8C2B9FD7"/>
+        </Element>
+        <Element Type="Variable" Id="415F61E0">
+            <VariableType>
+                <Type Value="int"/>
+            </VariableType>
+            <Value Type="Param" Library="BA5CCDED" Id="20B839A7"/>
+        </Element>
+        <Element Type="Param" Id="20B839A7">
+            <Value>0</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CA796890">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="93A75197"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="364E189A"/>
+        </Element>
+        <Element Type="Param" Id="93A75197">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="364E189A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>RedlineReactorAB</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="Comment" Id="301563AE">
+            <Comment>
+                dont want the music overlapping
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="7BC72A3A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="535F62A7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="18117F3D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A52CAF2A"/>
+        </Element>
+        <Element Type="Param" Id="535F62A7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="474F7F82"/>
+        </Element>
+        <Element Type="Param" Id="18117F3D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="A52CAF2A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>false</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A1CDA7BD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1E5A3FF1"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9B410386"/>
+        </Element>
+        <Element Type="Param" Id="1E5A3FF1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="415F61E0"/>
+        </Element>
+        <Element Type="Param" Id="9B410386">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D29EE99A"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D29EE99A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000195"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6FFDC8F0"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6608C3A5"/>
+        </Element>
+        <Element Type="Param" Id="6FFDC8F0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000329"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="6608C3A5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000330"/>
+            <Value>100</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8C2B9FD7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D7C7AFD8"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B5FE6833"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="889414B8"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EC665856"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="80B6F049"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="55FD98C3"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="5EA88687"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="865AE98D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D7C7AFD8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="04901256"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4247D0BB"/>
+        </Element>
+        <Element Type="Param" Id="04901256">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="474F7F82"/>
+        </Element>
+        <Element Type="Param" Id="4247D0BB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
+            <Value>true</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B5FE6833">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="09840835"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A45F6F27"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6BE3A7ED"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E979EFCD"/>
+        </Element>
+        <Element Type="Param" Id="A45F6F27">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A45406E1"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="6BE3A7ED">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EB47C731"/>
+            <Value>RedlineReactor</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="E979EFCD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A6600060"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="365C757E"/>
+        </Element>
+        <Element Type="FunctionCall" Id="365C757E">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="EF51B2F6"/>
+        </Element>
+        <Element Type="Param" Id="EF51B2F6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="FunctionCall" Id="889414B8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C47C0524"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3C29348A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C689E135"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="589B2326"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A92C00BF"/>
+        </Element>
+        <Element Type="Param" Id="3C29348A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6F19F7ED"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="C689E135">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A6B09E3"/>
+            <Value>RedlineReactorEasterEgg</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="589B2326">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2E722704"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1DBC7652"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1DBC7652">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2AEE685A"/>
+        </Element>
+        <Element Type="Param" Id="2AEE685A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="Param" Id="A92C00BF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="02BBDCC1"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="853762E3"/>
+        </Element>
+        <Element Type="FunctionCall" Id="853762E3">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7938BDB3"/>
+        </Element>
+        <Element Type="Param" Id="7938BDB3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EC665856">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="651D9322"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="06FDE316"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="89AF81F5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E177A726"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E8A63396"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5329F13E"/>
+        </Element>
+        <Element Type="Param" Id="06FDE316">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4FD0F5E6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="8229CCB3"/>
+        </Element>
+        <Element Type="Param" Id="89AF81F5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="420B8251"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1BDA9ABD"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1BDA9ABD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="E177A726">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="83444B10"/>
+            <Value>100.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="E8A63396">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1D1E66BC"/>
+            <Value>0.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="5329F13E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B7793BD2"/>
+            <Value>RedlineReactorMusicEasterEgg</Value>
+            <ValueType Type="soundlink"/>
+        </Element>
+        <Element Type="FunctionCall" Id="80B6F049">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000242"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="48BAD536"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6F92F269"/>
+        </Element>
+        <Element Type="Param" Id="48BAD536">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000419"/>
+            <Value>12.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="6F92F269">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000420"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000012"/>
+        </Element>
+        <Element Type="FunctionCall" Id="55FD98C3">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A5AB9192"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6CFF60E7"/>
+        </Element>
+        <Element Type="Param" Id="A5AB9192">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="474F7F82"/>
+        </Element>
+        <Element Type="Param" Id="6CFF60E7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
+            <Value>false</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="FunctionCall" Id="5EA88687">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="09840835"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0516FAE6"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B79E89DB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FF95C098"/>
+        </Element>
+        <Element Type="Param" Id="0516FAE6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A45406E1"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="B79E89DB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EB47C731"/>
+            <Value>RedlineReactorEasterEgg</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="FF95C098">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A6600060"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="82EBE93D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="82EBE93D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3A6E4973"/>
+        </Element>
+        <Element Type="Param" Id="3A6E4973">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="FunctionCall" Id="865AE98D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5D6E9339"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="962025A6"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9AEAA01F"/>
+        </Element>
+        <Element Type="Param" Id="5D6E9339">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="415F61E0"/>
+        </Element>
+        <Element Type="Param" Id="962025A6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="E123C832"/>
+        </Element>
+        <Element Type="Param" Id="9AEAA01F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>3</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Trigger" Id="3B18C30D">
+            <Variable Type="Variable" Library="BA5CCDED" Id="067A7151"/>
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="1EA750F6"/>
+            <Condition Type="Comment" Library="BA5CCDED" Id="94929E4E"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="7DEEFE1C"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="7A0CF5B4"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="298A679A"/>
+        </Element>
+        <Element Type="Variable" Id="067A7151">
+            <VariableType>
+                <Type Value="int"/>
+            </VariableType>
+            <Value Type="Param" Library="BA5CCDED" Id="19C81F64"/>
+        </Element>
+        <Element Type="Param" Id="19C81F64">
+            <Value>0</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1EA750F6">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E15A6F6E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C06D29C1"/>
+        </Element>
+        <Element Type="Param" Id="E15A6F6E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="C06D29C1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>HellraiserApplyBehavior</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="Comment" Id="94929E4E">
+            <Comment>
+                dont want the music overlapping
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="7DEEFE1C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="45BCFC99"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="58EFE17D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C1F6D80C"/>
+        </Element>
+        <Element Type="Param" Id="45BCFC99">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="474F7F82"/>
+        </Element>
+        <Element Type="Param" Id="58EFE17D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="C1F6D80C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>false</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="FunctionCall" Id="7A0CF5B4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="20929C9B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6B79F0F4"/>
+        </Element>
+        <Element Type="Param" Id="20929C9B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="067A7151"/>
+        </Element>
+        <Element Type="Param" Id="6B79F0F4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="20486E87"/>
+        </Element>
+        <Element Type="FunctionCall" Id="20486E87">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000195"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8C987DB7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2AC4C662"/>
+        </Element>
+        <Element Type="Param" Id="8C987DB7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000329"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="2AC4C662">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000330"/>
+            <Value>100</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="298A679A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="28DD35F5"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CF89FC44"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="20D6248D"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4913E920"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B79703BC"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E01C6C33"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CA00AF0B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E243F511"/>
+        </Element>
+        <Element Type="FunctionCall" Id="28DD35F5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2B5BDDD0"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D6C153F8"/>
+        </Element>
+        <Element Type="Param" Id="2B5BDDD0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="474F7F82"/>
+        </Element>
+        <Element Type="Param" Id="D6C153F8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
+            <Value>true</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CF89FC44">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="09840835"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7DFE3D7E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="01339675"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="822CBD2D"/>
+        </Element>
+        <Element Type="Param" Id="7DFE3D7E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A45406E1"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="01339675">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EB47C731"/>
+            <Value>Hellraiser</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="822CBD2D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A6600060"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D96AE35C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D96AE35C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="12015E36"/>
+        </Element>
+        <Element Type="Param" Id="12015E36">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="FunctionCall" Id="20D6248D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C47C0524"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="32C0302F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="24EBAB6C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CFE0A226"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C53C7008"/>
+        </Element>
+        <Element Type="Param" Id="32C0302F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6F19F7ED"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="24EBAB6C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A6B09E3"/>
+            <Value>HellraiserEasterEgg</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="CFE0A226">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="2E722704"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D0FF1458"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D0FF1458">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="AF280028"/>
+        </Element>
+        <Element Type="Param" Id="AF280028">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="Param" Id="C53C7008">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="02BBDCC1"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="3D376AD2"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3D376AD2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7F3D96FC"/>
+        </Element>
+        <Element Type="Param" Id="7F3D96FC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4913E920">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="651D9322"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9DC2CD7B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E6052375"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3838A307"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2710603F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B49AEC7F"/>
+        </Element>
+        <Element Type="Param" Id="9DC2CD7B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4FD0F5E6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="8229CCB3"/>
+        </Element>
+        <Element Type="Param" Id="E6052375">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="420B8251"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F6B00ECF"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F6B00ECF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="3838A307">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="83444B10"/>
+            <Value>100.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="2710603F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1D1E66BC"/>
+            <Value>0.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="B49AEC7F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B7793BD2"/>
+            <Value>FreyjaHellraiserMusicEasterEgg</Value>
+            <ValueType Type="soundlink"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B79703BC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000242"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9A57B03D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D05AFA8C"/>
+        </Element>
+        <Element Type="Param" Id="9A57B03D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000419"/>
+            <Value>10.0</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="D05AFA8C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000420"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000012"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E01C6C33">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="929DE485"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9FD41706"/>
+        </Element>
+        <Element Type="Param" Id="929DE485">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="474F7F82"/>
+        </Element>
+        <Element Type="Param" Id="9FD41706">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
+            <Value>false</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CA00AF0B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="09840835"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="33FD623C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2B54DAD4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A0DC3C42"/>
+        </Element>
+        <Element Type="Param" Id="33FD623C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A45406E1"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="2B54DAD4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EB47C731"/>
+            <Value>HellraiserEasterEgg</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="A0DC3C42">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A6600060"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FF3FB80C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FF3FB80C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="ACB27BCA"/>
+        </Element>
+        <Element Type="Param" Id="ACB27BCA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F6C0132E"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="090AE922"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E243F511">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="80B35C18"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="73D7D46B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3026494A"/>
+        </Element>
+        <Element Type="Param" Id="80B35C18">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="067A7151"/>
+        </Element>
+        <Element Type="Param" Id="73D7D46B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="E123C832"/>
+        </Element>
+        <Element Type="Param" Id="3026494A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>3</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Variable" Id="474F7F82">
+            <VariableType>
+                <Type Value="bool"/>
+            </VariableType>
+            <Value Type="Param" Library="BA5CCDED" Id="4ADC9DFF"/>
+        </Element>
+        <Element Type="Param" Id="4ADC9DFF">
+            <Value>false</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="Trigger" Id="B8DBDB59">
         </Element>
         <Element Type="Trigger" Id="390A3B5A">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="BF5D9CA2"/>
@@ -7506,7 +8123,7 @@
         </Element>
         <Element Type="Param" Id="B08E222E">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000050"/>
-            <Value>6.0</Value>
+            <Value>7.0</Value>
             <ValueType Type="fixed"/>
         </Element>
         <Element Type="Param" Id="F4ADF138">

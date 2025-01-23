@@ -17,9 +17,10 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="NomadSilentMode" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
-    <CRequirementCountUnit id="CountUnitSpiderMineBurrowedCompleteOnlyAtUnit">
+    <CRequirementCountUnit id="CountUnitAlias_SpiderMineCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="SpiderMineBurrowed" State="CompleteOnlyAtUnit"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Alias_SpiderMine" State="CompleteOnlyAtUnit"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeAIEnhancementCompleteOnly">
         <Count Link="AIEnhancement" State="CompleteOnly"/>
@@ -221,10 +222,6 @@
     <CRequirementCountUpgrade id="CountUpgradeViralFlammenwerferCompleteOnly">
         <Count Link="ViralFlammenwerfer" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
-    <CRequirementLT id="LTCountUnitSpiderMineBurrowedCompleteOnlyAtUnit4">
-        <OperandArray index="0" value="CountUnitSpiderMineBurrowedCompleteOnlyAtUnit"/>
-        <OperandArray index="1" value="4"/>
-    </CRequirementLT>
     <CRequirementLTE id="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
@@ -241,6 +238,11 @@
         <OperandArray index="0" value="CountUpgradeThornShieldQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
+    <CRequirementLT id="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit2">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="SumCountUnitAlias_SpiderMineCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementLT>
     <CRequirementNot id="NotAndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly">
         <OperandArray index="0" value="AndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly"/>
     </CRequirementNot>
@@ -262,4 +264,8 @@
         <OperandArray value="CountUpgradeOrbitalRelayCompleteOnly"/>
         <OperandArray value="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
     </CRequirementOr>
+    <CRequirementSum id="SumCountUnitAlias_SpiderMineCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitAlias_SpiderMineCompleteOnlyAtUnit"/>
+    </CRequirementSum>
 </Catalog>

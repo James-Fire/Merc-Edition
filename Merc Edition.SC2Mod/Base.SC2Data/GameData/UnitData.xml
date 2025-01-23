@@ -729,7 +729,7 @@
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="BoxofScraps" Type="Passive" Requirements="UseBoxofScraps" Row="1" Column="0"/>
-            <LayoutButtons Face="NanitePulse" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="NanitePulse" Type="Passive" Requirements="UseNanitePulse" Row="1" Column="1"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
@@ -784,7 +784,7 @@
             <LayoutButtons Face="Detector" Type="Passive" Behavior="DistortionSensors" Row="2" Column="3"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="NanitePulse" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="NanitePulse" Type="Passive" Requirements="UseNanitePulse" Row="1" Column="1"/>
             <LayoutButtons Face="BoxofScraps" Type="Passive" Requirements="UseBoxofScraps" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="0.75"/>
@@ -1119,6 +1119,9 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
     </CUnit>
+    <CUnit id="SpiderMine">
+        <TechAliasArray value="Alias_SpiderMine"/>
+    </CUnit>
     <CUnit id="SupplyDepot">
         <AbilArray Link="SalvageShared"/>
         <CardLayouts index="0">
@@ -1130,6 +1133,10 @@
         <CardLayouts index="0">
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
         </CardLayouts>
+    </CUnit>
+    <CUnit id="StarcruiserYamato" parent="MISSILE_INVULNERABLE">
+        <Race value="Terr"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="ZeusLanderLanded">
         <DeathRevealRadius value="3"/>
@@ -1413,6 +1420,7 @@
     </CUnit>
     <CUnit id="SpiderMineBurrowed">
         <AbilArray Link="CondorSpiderMineUnburrow"/>
+        <TechAliasArray value="Alias_SpiderMine"/>
     </CUnit>
     <CUnit id="StarcruiserLaserBattery" parent="MISSILE">
         <Race value="Terr"/>
@@ -2282,7 +2290,7 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
-        <AbilArray Link="Yamato"/>
+        <AbilArray Link="StarcruiserYamatoGun"/>
         <AbilArray Link="Hyperjump"/>
         <AbilArray Link="RagnarokToggle"/>
         <AbilArray Link="RedlineReactor"/>
@@ -2298,7 +2306,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="FireOnTheMoveUniversal" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="YamatoGun" Type="AbilCmd" AbilCmd="Yamato,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="YamatoCulverin" Type="AbilCmd" AbilCmd="StarcruiserYamatoGun,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="HyperjumpStarcruiser" Type="AbilCmd" AbilCmd="Hyperjump,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="RagnarokWeapons" Type="Passive" Requirements="UseRagnarokWeapons" Row="1" Column="1"/>
             <LayoutButtons Face="RedlineReactor" Type="AbilCmd" AbilCmd="RedlineReactor,Execute" Row="2" Column="2"/>

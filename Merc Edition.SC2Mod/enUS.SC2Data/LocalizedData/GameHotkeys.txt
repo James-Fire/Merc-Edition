@@ -75,6 +75,7 @@ Button/Hotkey/TrainShadow=G
 Button/Hotkey/TrainSkibisAngel=E
 Button/Hotkey/TrainWarPig=A
 Button/Hotkey/UpgradeToPlanetaryFortress=B
+Button/Hotkey/YamatoCulverin=Y
 Button/Hotkey/ZeusLanderTacticalJump=T
 Button/Hotkey/ZeusLoad=L
 Button/Hotkey/ZeusUnloadAll=D

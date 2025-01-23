@@ -3,6 +3,9 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: Merc Edition Data
 //--------------------------------------------------------------------------------------------------
+// Variable Declarations
+bool libBA5CCDED_gv_easterEggActive;
+
 // Function Declarations
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 
@@ -16,6 +19,9 @@ trigger libBA5CCDED_gt_InitUnitReplace;
 trigger libBA5CCDED_gt_InitTech;
 trigger libBA5CCDED_gt_MissionDirectives;
 trigger libBA5CCDED_gt_DepositMoney;
+trigger libBA5CCDED_gt_RedlineReactor;
+trigger libBA5CCDED_gt_Freyja;
+trigger libBA5CCDED_gt_NomadMineDroneSpawner;
 trigger libBA5CCDED_gt_BlockBFlyHeighter;
 trigger libBA5CCDED_gt_BlockBFlyHeighter2;
 trigger libBA5CCDED_gt_BlockBFlyDurationAdder;
@@ -30,4 +36,7 @@ trigger libBA5CCDED_gt_NomadSilentModeHeightUp;
 trigger libBA5CCDED_gt_NomadSilentModeHeightDown;
 trigger libBA5CCDED_gt_SamsonZeusInjectionPods;
 trigger libBA5CCDED_gt_NaniteEmitterBurrow;
+
+// Library Initialization
+void libBA5CCDED_InitVariables ();
 

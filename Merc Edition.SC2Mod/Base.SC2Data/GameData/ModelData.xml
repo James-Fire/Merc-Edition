@@ -59,10 +59,20 @@
         <Model value="Assets\Models\ASP_Missile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="StarcruiserYamatoImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\CerberusYamatoMissileImpact\CerberusYamatoMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
     <CModel id="BunkerBurrowStasis">
         <Model value="Assets\Effects\Protoss\StasisWardImpact\StasisWardImpact.m3"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="EasterEggAura">
+        <Model value="Assets\Effects\Protoss\PurifyLaunch\PurifyLaunch.m3"/>
+        <AnimSpeed value="3.000000"/>
     </CModel>
     <CModel id="HERCDummyPortrait" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Models\FRANKPOR.m3"/>
@@ -444,9 +454,18 @@
         <Image value="Assets\Textures\SiegeTankMercenaryPortrait_Static.dds"/>
         <Lighting value="SiegeTankMercenaryPortrait"/>
     </CModel>
+    <CModel id="StarcruiserYamatoImpactAdd">
+        <Model value="Assets\Effects\Protoss\DetonateImpact\DetonateImpact.m3"/>
+    </CModel>
     <CModelFoliage id="SurvivorsGuilt">
         <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Sacrifice\Glaze_Alarak_COOP_Sacrifice.m3"/>
     </CModelFoliage>
+    <CModel id="StarcruiserYamatoMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\CerberusYamatoMissile\CerberusYamatoMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.750000,1.750000,1.750000"/>
+        <ScaleMin value="1.750000,1.750000,1.750000"/>
+    </CModel>
     <CModel id="ZeusLanderLanded" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\MilitarizedColonistShip\MilitarizedColonistShip.m3"/>
         <Flags index="AutoUnload" value="1"/>

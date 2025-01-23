@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="StarcruiserYamatoChargeUp" parent="SoundContinuous">
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="Create"/>
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+    </CActorSound>
+    <CActorAction id="StarcruiserYamatoAttack" parent="GenericAttack" effectImpact="StarcruiserYamatoDamage" effectLaunch="StarcruiserYamatoLM">
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA2"/>
+        <LaunchAssets Sound="StarcruiserYamatoLaunch"/>
+        <Missile value="StarcruiserYamatoMissile"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpForwardLaunchGuide SOp2DRotation"/>
+        <ImpactAttachQuery Methods="Origin"/>
+        <ImpactMap index="None" Model="StarcruiserYamatoImpact" Sound="StarcruiserYamatoImpact"/>
+        <ImpactMap index="Miss" Model="None"/>
+        <ImpactModel value="StarcruiserYamatoImpactModel"/>
+        <ImpactPhysics Name="YamatoImpact" MatchKeys="Basic" Physics="BattlecruiserYamatoAttackForce"/>
+        <ImpactPhysics Name="YamatoImpactAir" MatchKeys="BasicAir" Physics="BattlecruiserYamatoAttackForce"/>
+        <ShieldFlashType value="Full"/>
+        <ActionFlags index="LaunchForceSite" value="1"/>
+    </CActorAction>
+    <CActorRange id="StarcruiserYamatoGunRange" parent="RangeAbil" abil="StarcruiserYamatoGun">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorModel id="StarcruiserYamatoImpactAdd" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StarcruiserYamatoDamage.Start; At Target" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="StarcruiserYamatoImpactModel" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpForwardLaunchGuide SOp2DRotation" HoldPosition="1" HoldRotation="1"/>
+        <Model value="GenericAttackModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorSound id="StarcruiserYamatoImpactSoundAdd" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StarcruiserYamatoDamage.Start; At Target" Send="Create"/>
+        <Sound value="StarcruiserYamatoImpactAdd"/>
+    </CActorSound>
+    <CActorSound id="StarcruiserYamatoLaunchAdd" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StarcruiserYamatoLM.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <CActorMissile id="StarcruiserYamatoMissile" parent="GenericAttackMissile" unitName="StarcruiserYamato">
+        <Model value="StarcruiserYamatoMissile"/>
+        <TerrainSquibs MovementDistance="0.500000" RangeDown="5.000000" RangeDownFade="1.000000">
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="YamatoTerrainSquibHarnessOneShot" ModelLink="WaterSplashMassive">
+                <Flags index="OneShot" value="1"/>
+            </Visuals>
+        </TerrainSquibs>
+    </CActorMissile>
+    <CActorModel id="EasterEggAuraStarcruiser" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.On" Send="Create"/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,15,15 1.500000}"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpShadow SOpAttachCenter SOpMoveUpBy2"/>
+        <Model value="EasterEggAura"/>
+        <Scale value="3.000000"/>
+    </CActorModel>
+    <CActorModel id="EasterEggAuraFreyja" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.HellraiserEasterEgg.On" Send="Create"/>
+        <On Terms="Behavior.HellraiserEasterEgg.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,15,15 1.500000}"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpShadow SOpAttachCenter SOpMoveUpBy2"/>
+        <Model value="EasterEggAura"/>
+        <Scale value="2.000000"/>
+    </CActorModel>
     <CActorUnit id="AutomatedRefinery">
         <On index="97" Terms="UnitBirth.AutomatedRefinery" Send="TimerSet 0.100000 HideGeyser"/>
         <On index="98" Terms="TimerExpired; TimerName HideGeyser" Send="Create GeyserBuildFinishCovered"/>
@@ -103,12 +174,15 @@
     </CActorModel>
     <CActorModelMaterial id="Hellraiser" parent="BehaviorGlaze">
         <EditorCategories value=""/>
-        <On index="5" Terms="Behavior.Hellraiser.On" Send="Create"/>
-        <On index="6" Terms="Behavior.Hellraiser.Off" Send="AnimBracketStop BSD"/>
+        <On index="5" Terms="Behavior.HellraiserEasterEgg.On" Send="Create"/>
+        <On index="6" Terms="Behavior.HellraiserEasterEgg.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.Hellraiser.On" Send="Create"/>
+        <On Terms="Behavior.Hellraiser.Off" Send="AnimBracketStop BSD"/>
     </CActorModelMaterial>
     <CActorSound id="HellraiserSound" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.Hellraiser.On" Send="Create"/>
+        <On Terms="Behavior.HellraiserEasterEgg.On" Send="Create"/>
     </CActorSound>
     <CActorAction id="FreyjaWeaponAttack" parent="GenericAttack" effectImpact="FreyjaAttackDamage" effectLaunch="FreyjaAttackLM">
         <LaunchAttachQuery Methods="Center 0"/>
@@ -149,10 +223,6 @@
         </Wireframe>
         <Macros value="GimbalZMacro"/>
     </CActorUnit>
-    <CActorSound id="InTheThunderHeat" parent="SoundOneShot">
-        <EditorCategories value=""/>
-        <On Terms="Behavior.Hellraiser.On" Send="Create"/>
-    </CActorSound>
     <CActorModel id="MercRaynorGiveEmSomePepperImpact" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.RaynorWeaponU.Start; At Target" Send="Create"/>
@@ -1289,10 +1359,14 @@
         <EditorCategories value=""/>
         <On Terms="Behavior.RedlineReactor.On" Send="Create"/>
         <On Terms="Behavior.RedlineReactor.Off" Send="Destroy"/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.On" Send="Create"/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.Off" Send="Destroy"/>
     </CActorSound>
     <CActorModel id="RedlineReactorModel" parent="ModelAnimationStyleContinuous">
         <On Terms="Behavior.RedlineReactor.On" Send="Create"/>
         <On Terms="Behavior.RedlineReactor.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.On" Send="Create"/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.Off" Send="AnimBracketStop BSD"/>
         <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.500000}"/>
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachCenter SOpRollClockwise90"/>
@@ -1301,6 +1375,8 @@
     <CActorModel id="RedlineReactorModel2" parent="ModelAnimationStyleContinuous">
         <On Terms="Behavior.RedlineReactor.On" Send="Create"/>
         <On Terms="Behavior.RedlineReactor.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.On" Send="Create"/>
+        <On Terms="Behavior.RedlineReactorEasterEgg.Off" Send="AnimBracketStop BSD"/>
         <On Terms="ActorCreation" Send="SetTintColor {255,0,0 1.500000}"/>
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachCenter SOpRollCounterClockwise90"/>
@@ -2360,10 +2436,12 @@
     </CActorAction>
     <CActorUnit id="Starcruiser" parent="GenericUnitStandard" unitName="Starcruiser">
         <Aliases value="_UnitHuge"/>
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="$Spell 0 -1.000000 -1.000000 4.500000 AsDuration"/>
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="AnimClear Spell"/>
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="AnimPlay SpellA Spell,A,End"/>
         <On Terms="Behavior.MercAirDropB.Create" Send="Create BattlecruiserLokiReentry"/>
         <On Terms="Behavior.HyperjumpTeleportOut.On" Send="SetOpacity"/>
         <On Terms="Behavior.HyperjumpTeleportIn.Off" Send="SetOpacity 1.000000"/>
-        <On Terms="Behavior.HyperjumpTeleport.On" Send="Create BattleCruiserTacticalJump_Placement"/>
         <On Terms="Behavior.HyperjumpTeleport.On" Send="Create BattleCruiserTacticalJump_Placement"/>
         <On Terms="Behavior.HyperjumpTeleportIn.Off" Send="AnimBracketStop BSD"/>
         <On Terms="Behavior.HyperjumpTeleportOut.On" Send="Create HyperjumpLaunch"/>
@@ -2373,6 +2451,7 @@
         <On Terms="Behavior.RagnarokOn.On" Send="AnimGroupApply A"/>
         <On Terms="Behavior.RagnarokOn.On" Send="AnimBlendTimeApply"/>
         <On Terms="Behavior.RagnarokOn.Off" Send="AnimGroupRemove A"/>
+        <On Terms="Behavior.HyperjumpTeleport.Off" Target="BattleCruiserTacticalJump_Placement" Send="Destroy"/>
         <HostSiteOps Ops="SOpBankerBattlecruiser"/>
         <DeathArray index="Normal" ModelLink="StarcruiserDeath" SoundLink=""/>
         <DeathArray index="Squish" ModelLink="BattlecruiserDeathSquish"/>
