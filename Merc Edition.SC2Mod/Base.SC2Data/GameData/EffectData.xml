@@ -92,6 +92,9 @@
         <ImpactEffect value="NomadMissileClusterDamage"/>
         <AmmoUnit value="NomadMissileClusterMissile"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="Obliterate">
+        <Amount value="200"/>
+    </CEffectDamage>
     <CEffectDamage id="PsiDisruptorDamage">
         <ValidatorArray value="IsZerg"/>
         <EditorCategories value=""/>

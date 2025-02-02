@@ -264,6 +264,7 @@
                 <CountMax value="1"/>
                 <CountStart value="1"/>
                 <CountUse value="1"/>
+                <HideCount value="1"/>
                 <TimeUse value="30"/>
             </Charge>
         </Cost>
@@ -754,6 +755,7 @@
     </CAbilSpecialize>
     <CAbilEffectTarget id="Obliterate">
         <CmdButtonArray index="Execute" Requirements="UseJoriumLinedSuit"/>
+        <PrepTime index="0" value="1.5"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="RepairDroneHeal">
         <EditorCategories value="AbilityorEffectType:Units"/>

@@ -1240,6 +1240,8 @@
     </CModel>
     <CModelFoliage id="TerrazineShots">
         <Model value="Assets\Effects\Protoss\AmonShard_Blue_Aoe_Missile_Impact\AmonShard_Blue_Aoe_Missile_Impact.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
     </CModelFoliage>
     <CModel id="TitanWreckage" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\ThorWrecked\ThorWrecked.m3"/>

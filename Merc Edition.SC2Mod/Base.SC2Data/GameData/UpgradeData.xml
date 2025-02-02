@@ -758,9 +758,9 @@
     <CUpgrade id="TyradorImplants">
         <EffectArray Reference="Weapon,C11EthereanRifle,Range" Value="6"/>
         <EffectArray Reference="Unit,Phantom,Sight" Value="3"/>
-        <EffectArray Operation="Multiply" Reference="Effect,NukePersistent,InitialDelay" Value="0.500000"/>
+        <EffectArray Operation="Set" Reference="Effect,NukePersistent,InitialDelay" Value="5.830000"/>
         <EffectArray Operation="Set" Reference="Abil,SnipePhantom,Cost[0].Vital[Energy]" Value="22"/>
-        <EffectArray Operation="Set" Reference="Effect,NukePersistent,PeriodCount" Value="25"/>
+        <EffectArray Operation="Set" Reference="Effect,NukePersistent,PeriodCount" Value="33"/>
         <AffectedUnitArray value="Phantom"/>
     </CUpgrade>
     <CUpgrade id="U240Rounds">
