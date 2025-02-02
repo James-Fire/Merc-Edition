@@ -28,6 +28,9 @@
     <CAbilBuild id="BarracksAddOns">
         <InfoArray index="Build4" Time="28"/>
     </CAbilBuild>
+    <CAbilEffectTarget id="CalldownMULE">
+        <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>
+    </CAbilEffectTarget>
     <CAbilTrain id="CommandCenterTrain">
         <InfoArray index="Train2" Time="17">
             <Button DefaultButtonFace="TrainACV" State="Restricted"/>
@@ -178,6 +181,9 @@
         <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AutoCastRange value="6.5"/>
     </CAbilMorph>
+    <CAbilEffectTarget id="ScannerSweep">
+        <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="SecretStashStimpack">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="RattlesnakeStimpackAB"/>
@@ -244,6 +250,9 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="SupplyDrop">
+        <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>
+    </CAbilEffectTarget>
     <CAbilBuild id="TerranBuild">
         <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">
             <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Restricted" Requirements="HaveEngineeringBay"/>
@@ -562,44 +571,6 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="IgniteAfterburnersHelsAngel"/>
     </CAbilEffectInstant>
-    <CAbilMorph id="JetPackOverdrive">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="JetPackOverdrive"/>
-        <Flags index="IgnoreFacing" value="1"/>
-        <InfoArray Unit="FlyingBlockB">
-            <SectionArray index="Abils">
-                <DurationArray index="Duration" value="1"/>
-            </SectionArray>
-            <SectionArray index="Actor">
-                <DurationArray index="Duration" value="1"/>
-            </SectionArray>
-            <SectionArray index="Mover">
-                <DurationArray index="Duration" value="1"/>
-            </SectionArray>
-            <SectionArray index="Stats">
-                <DurationArray index="Duration" value="1"/>
-            </SectionArray>
-        </InfoArray>
-        <Cost>
-            <Cooldown TimeUse="35"/>
-        </Cost>
-    </CAbilMorph>
-    <CAbilMorph id="JetPackOverdriveUndo">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="JetPackOverdrive"/>
-        <Flags index="IgnoreFacing" value="1"/>
-        <InfoArray Unit="BlockB">
-            <SectionArray index="Abils">
-                <DurationArray index="Duration" value="1"/>
-            </SectionArray>
-            <SectionArray index="Actor">
-                <DurationArray index="Duration" value="1"/>
-            </SectionArray>
-            <SectionArray index="Stats">
-                <DurationArray index="Duration" value="1"/>
-            </SectionArray>
-        </InfoArray>
-    </CAbilMorph>
     <CAbilEffectTarget id="JumpJetAssault">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="AnarchistJumpInitialCP"/>

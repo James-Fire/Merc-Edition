@@ -1545,14 +1545,16 @@
         <On Terms="Behavior.ReaperJump.LandUp" Send="AnimBracketStop Jump"/>
         <On Terms="Behavior.ReaperJump.LandUp" Send="AnimBlendTimeApply"/>
         <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On Terms="WeaponStart.BarBreakers.AttackStart" Send="AnimBracketStart Attack Attack"/>
-        <On Terms="WeaponStop.BarBreakers.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="WeaponStart.BarBreakersFlying.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.BarBreakersFlying.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="WeaponStart.D8Charge.AttackStart" Send="AnimBracketStart Attack Spell"/>
         <On Terms="WeaponStop.D8Charge.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
         <On Terms="UnitBirth.ReaperPlacement" Send="Create"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom BlockB" Send="Create"/>
         <On Terms="AbilMorph.*.Finish; MorphTo BlockB" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom BlockB" Send="Create BlockBFlyLoop"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BlockB" Target="BlockBFlyLoop" Send="Destroy"/>
         <Model value="BlockB"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <BuildModel value="BlockB"/>

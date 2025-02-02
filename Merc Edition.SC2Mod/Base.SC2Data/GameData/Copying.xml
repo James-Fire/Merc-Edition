@@ -94,7 +94,7 @@
         <AbilSetId value="ReaperLand"/>
         <Flags index="IgnoreFacing" value="1"/>
         <Flags index="WaitUntilStopped" value="0"/>
-        <InfoArray Unit="HHReaper"/>
+        <InfoArray Unit="BlockB"/>
     </CAbilMorph>
     <CAbilEffectInstant id="BlockBFly">
         <Effect index="0" value="BlockBFlyCreatePrecursor"/>
@@ -102,7 +102,7 @@
         <Cost>
             <Cooldown TimeUse="20"/>
         </Cost>
-        <CmdButtonArray index="Execute" DefaultButtonFace="HHReaperFly"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HHReaperFly" Requirements="UseJetPackOverdrive"/>
     </CAbilEffectInstant>
     <CAbilMorph id="BlockBFlyMorph">
         <AbilSetId value="ReaperFly"/>
@@ -111,7 +111,7 @@
         </CmdButtonArray>
         <Flags index="IgnoreFacing" value="1"/>
         <Flags index="WaitUntilStopped" value="0"/>
-        <InfoArray Unit="HHReaperFlying"/>
+        <InfoArray Unit="FlyingBlockB"/>
     </CAbilMorph>
     <CValidatorUnitMover id="NotMoverBlockBLand">
         <WhichUnit Effect="Source"/>
@@ -119,11 +119,11 @@
     </CValidatorUnitMover>
     <CValidatorUnitType id="SourceIsBlockBFlying">
         <WhichUnit Value="Source"/>
-        <Value value="HHReaperFlying"/>
+        <Value value="FlyingBlockB"/>
     </CValidatorUnitType>
     <CValidatorUnitType id="SourceIsBlockB">
         <WhichUnit Value="Source"/>
-        <Value value="HHReaper"/>
+        <Value value="BlockB"/>
     </CValidatorUnitType>
     <CActorUnit id="BlockBPrecursor" parent="GenericUnitBase" unitName="BlockBPrecursor"/>
     <CActorUnit id="BlockBFlyPrecursor" parent="GenericUnitBase" unitName="BlockBFlyPrecursor"/>

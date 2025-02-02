@@ -804,10 +804,18 @@
     </CUnit>
     <CUnit id="PlanetaryFortress">
         <AbilArray Link="FortressBombardment"/>
+        <AbilArray Link="CalldownMULE"/>
+        <AbilArray Link="ScannerSweep"/>
+        <AbilArray Link="SupplyDrop"/>
         <CardLayouts index="0">
-            <LayoutButtons index="0" Column="1"/>
-            <LayoutButtons index="1" Column="2"/>
-            <LayoutButtons Face="BombardmentFortress" Type="AbilCmd" AbilCmd="FortressBombardment,Execute" Row="2" Column="0"/>
+            <LayoutButtons index="0" Row="0" Column="1"/>
+            <LayoutButtons index="1" Row="0" Column="2"/>
+            <LayoutButtons Face="CalldownMULE" Type="AbilCmd" AbilCmd="CalldownMULE,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="BombardmentFortress" Type="AbilCmd" AbilCmd="FortressBombardment,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Detector" Type="Passive" Requirements="UseAdvancedOrbitalCommand" Row="1" Column="3"/>
+            <LayoutButtons Face="Lift" Type="Passive" Row="2" Column="3"/>
+            <LayoutButtons Face="SupplyDrop" Type="AbilCmd" AbilCmd="SupplyDrop,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Scan" Type="AbilCmd" AbilCmd="ScannerSweep,Execute" Row="2" Column="2"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="JimRaynor">
@@ -1268,6 +1276,7 @@
     <CUnit id="OrbitalCommand">
         <CostResource index="Minerals" value="400"/>
         <CardLayouts index="0">
+            <LayoutButtons index="3" AbilCmd="UpgradeToPlanetaryFortress,Cancel"/>
             <LayoutButtons index="6" Face="SupplyDrop" AbilCmd="SupplyDrop,Execute" Column="1"/>
             <LayoutButtons index="7">
                 <Face value="Detector"/>
@@ -1275,10 +1284,15 @@
                 <AbilCmd value=""/>
                 <Behavior value="Detector20"/>
                 <Requirements value="UseAdvancedOrbitalCommand"/>
-                <Column value="0"/>
+                <Row value="1"/>
+                <Column value="3"/>
             </LayoutButtons>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5CancelToSelection,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CalldownMULE" Type="AbilCmd" AbilCmd="CalldownMULE,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="UpgradeToPlanetaryFortress" Type="AbilCmd" AbilCmd="UpgradeToPlanetaryFortress,Execute" Row="0" Column="4"/>
         </CardLayouts>
+        <AbilArray Link="UpgradeToPlanetaryFortress"/>
+        <BehaviorArray Link="Detector12"/>
     </CUnit>
     <CUnit id="PointBreakDrone">
         <Race value="Terr"/>
@@ -1475,6 +1489,10 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
+        <AbilArray Link="BlockBFly"/>
+        <AbilArray Link="BlockBFlyMorph"/>
+        <AbilArray Link="BlockBLand"/>
+        <AbilArray Link="BlockBLandMorph"/>
         <WeaponArray Link="BarBreakersFlying"/>
         <WeaponArray Link="D8Charge"/>
         <CardLayouts>
@@ -2189,7 +2207,8 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
-        <AbilArray Link="JetPackOverdrive"/>
+        <AbilArray Link="BlockBFly"/>
+        <AbilArray Link="BlockBFlyMorph"/>
         <BehaviorArray Link="ReaperJump"/>
         <WeaponArray Link="BarBreakers"/>
         <WeaponArray Link="D8Charge"/>
@@ -2201,7 +2220,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="JetPack" Type="Passive" AbilCmd="255,255" Row="2" Column="1"/>
             <LayoutButtons Face="U240Rounds" Type="Passive" Requirements="UseU240Rounds" Row="2" Column="2"/>
-            <LayoutButtons Face="JetPackOverdrive" Type="AbilCmd" AbilCmd="JetPackOverdrive,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="JetPackOverdrive" Type="AbilCmd" AbilCmd="BlockBFly,Execute" Row="2" Column="0"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>

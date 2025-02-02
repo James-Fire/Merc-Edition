@@ -1513,10 +1513,11 @@
         <Radius value="1.200000"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
-        <SelectionRadius value="1.999500"/>
+        <SelectionRadius value="1.200000"/>
         <ShadowRadius value="1.999500"/>
         <TechPurchaseCamera value="Star2CameraHigher10"/>
         <UnitGlossaryCamera value="Star2CameraHigher10"/>
+        <Tipability value="1.000000"/>
     </CModel>
     <CModel id="Wolverine" parent="Unit">
         <Model value="Assets\Models\Warhound_Mercenary.m3"/>

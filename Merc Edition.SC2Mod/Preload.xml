@@ -5,7 +5,6 @@
 <Behavior id="HellraiserEasterEgg"/>
 <Behavior id="RedlineReactorEasterEgg"/>
 <Behavior id="RevivalFieldCooldown"/>
-<Behavior id="BlockBFlightDuration"/>
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
 <Effect id="SpartanCompanyShellShowerFull"/>

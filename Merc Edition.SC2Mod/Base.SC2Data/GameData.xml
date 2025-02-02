@@ -4,4 +4,5 @@
     <Catalog path="GameData/NomadTurret.xml"/>
     <Catalog path="GameData/NomadWeapon.xml"/>
     <Catalog path="GameData/RattlesnakeRevitalizer.xml"/>
+    <Catalog path="GameData/Copying.xml"/>
 </Includes>
