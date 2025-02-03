@@ -206,6 +206,7 @@ Actor/Name/BioMechanicalRepairDrone=Bio-Mechanical Repair Drone
 Actor/Name/BlockB=Block B
 Actor/Name/BlockBAttack=Block B Attack
 Actor/Name/BlockBJetpack=Block B Jetpack
+Actor/Name/BlockBLand=Block B Land
 Actor/Name/BunkerBurrowStasis=Bunker Burrow Stasis
 Actor/Name/BunkerBurrowed=Bunker Burrowed
 Actor/Name/CharonDropship=Charon Dropship

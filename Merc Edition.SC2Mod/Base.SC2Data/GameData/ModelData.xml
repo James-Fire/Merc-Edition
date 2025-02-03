@@ -1534,4 +1534,48 @@
         <Image value="Assets\Textures\WarhoundPortrait_Static.dds"/>
         <Lighting value="WarhoundPortrait"/>
     </CModel>
+    <CModel id="BlockBPrecursor" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\Reaper_Junker_Collection\Reaper_Junker_Collection.m3"/>
+        <RequiredAnims value="Assets\Units\Terran\Reaper_SwarmAnims\Reaper_SwarmAnims.m3a"/>
+        <Events>
+            <Anim value="Unload,00"/>
+            <Name value="HH_Reaper_Drop_Land"/>
+            <Type value="Sound"/>
+            <Time value="0.030000"/>
+            <Payload value="HH_Reaper_Drop_Land"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.375000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseReaper"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
+    <CModel id="BlockBFlyPrecursor" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\Reaper_Junker_Collection\Reaper_Junker_Collection.m3"/>
+        <RequiredAnims value="Assets\Units\Terran\Reaper_SwarmAnims\Reaper_SwarmAnims.m3a"/>
+        <Events>
+            <Anim value="Unload,00"/>
+            <Name value="HH_Reaper_Drop_Land"/>
+            <Type value="Sound"/>
+            <Time value="0.030000"/>
+            <Payload value="HH_Reaper_Drop_Land"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.375000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseReaper"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
 </Catalog>

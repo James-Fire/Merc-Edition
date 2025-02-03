@@ -900,4 +900,50 @@
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BlockBLandIssueMorph">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="SourceIsBlockBFlying"/>
+        <Period value="0.0625"/>
+        <InitialEffect value="BlockBLandIssueMorph"/>
+        <PeriodicEffect value="BlockBLandIssueMorph"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlockBLandPrecursor">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.5"/>
+        <FinalEffect value="SuicideRemove"/>
+        <Modification SightMaximum="0">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="SuppressFoodUsed" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlockBLandIssueLandRetry">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="NotMoverBlockBLand"/>
+        <Period value="0.5"/>
+        <InitialEffect value="BlockBLandCreatePrecursor"/>
+        <PeriodicEffect value="BlockBLandCreatePrecursor"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlockBFlyIssueMorph">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="SourceIsBlockB"/>
+        <Period value="0.0625"/>
+        <InitialEffect value="BlockBFlyIssueMorph"/>
+        <PeriodicEffect value="BlockBFlyIssueMorph"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlockBFlyDuration">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <Duration value="10"/>
+        <FinalEffect value="BlockBLandIssueLandRetryAB"/>
+        <ExpireEffect value="BlockBLandIssueLandRetryAB"/>
+    </CBehaviorBuff>
 </Catalog>

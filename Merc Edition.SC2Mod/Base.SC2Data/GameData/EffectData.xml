@@ -2009,4 +2009,86 @@
         <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectDamage>
+    <CEffectCreateUnit id="BlockBLandCreatePrecursor">
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="Birth" value="0"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="PlacementIgnoreCliffTest" value="1"/>
+        <CreateFlags index="Precursor" value="1"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <CreateFlags index="NormalizeSpawnOffset" value="0"/>
+        <SpawnEffect value="BlockBLandPrecursorSet"/>
+        <SpawnUnit value="BlockBPrecursor"/>
+        <SpawnRange value="100"/>
+    </CEffectCreateUnit>
+    <CEffectIssueOrder id="BlockBLandIssueMorph">
+        <WhichUnit Value="Source"/>
+        <Abil value="BlockBLandMorph"/>
+        <CmdFlags index="Preempt" value="1"/>
+        <Player Value="Source"/>
+    </CEffectIssueOrder>
+    <CEffectApplyBehavior id="BlockBLandIssueMorphAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BlockBLandIssueMorph"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="BlockBLandLM">
+        <ValidatorArray index="0" value="CasterNotDead"/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <ImpactEffect value="BlockBLandIssueMorphAB"/>
+        <Movers Link="BlockBLand"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="BlockBLandPrecursorAB">
+        <Behavior value="BlockBLandPrecursor"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="BlockBLandPrecursorSet">
+        <EffectArray value="BlockBLandPrecursorAB"/>
+        <EffectArray value="BlockBLandLM"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="BlockBLandIssueLandRetryAB">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BlockBLandIssueLandRetry"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="BlockBFlyCreatePrecursor">
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="Birth" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="Precursor" value="1"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="BlockBFlyPrecursorSet"/>
+        <SpawnUnit value="BlockBFlyPrecursor"/>
+    </CEffectCreateUnit>
+    <CEffectIssueOrder id="BlockBFlyIssueMorph">
+        <WhichUnit Value="Source"/>
+        <Abil value="BlockBFlyMorph"/>
+        <CmdFlags index="Preempt" value="1"/>
+        <Player Value="Source"/>
+    </CEffectIssueOrder>
+    <CEffectApplyBehavior id="BlockBFlyIssueMorphAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BlockBFlyIssueMorph"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="BlockBFlyLM">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="BlockBFlyIssueMorphAB"/>
+        <Movers Link="BlockBFly"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="BlockBFlyPrecursorSet">
+        <EffectArray value="BlockBLandPrecursorAB"/>
+        <EffectArray value="BlockBFlyLM"/>
+        <EffectArray value="BlockBFlyDurationAB"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="BlockBFlyDurationAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BlockBFlyDuration"/>
+    </CEffectApplyBehavior>
 </Catalog>

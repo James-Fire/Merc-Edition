@@ -1503,6 +1503,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="JetPack" Type="Passive" AbilCmd="255,255" Row="2" Column="1"/>
             <LayoutButtons Face="U240Rounds" Type="Passive" Requirements="UseU240Rounds" Row="2" Column="2"/>
+            <LayoutButtons Face="CombatDrugs" Type="Passive" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -2221,6 +2222,7 @@
             <LayoutButtons Face="JetPack" Type="Passive" AbilCmd="255,255" Row="2" Column="1"/>
             <LayoutButtons Face="U240Rounds" Type="Passive" Requirements="UseU240Rounds" Row="2" Column="2"/>
             <LayoutButtons Face="JetPackOverdrive" Type="AbilCmd" AbilCmd="BlockBFly,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="CombatDrugs" Type="Passive" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -3075,5 +3077,44 @@
         <Race value="Terr"/>
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="BlockBFlyPrecursor">
+        <Race value="Terr"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="NoScore" value="1"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <EditorFlags index="BlockStructures" value="0"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <LifeStart value="65"/>
+        <LifeMax value="65"/>
+        <Mover value="Fly"/>
+        <Height value="4"/>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Other,ObjectFamily:FactionMarauder"/>
+    </CUnit>
+    <CUnit id="BlockBPrecursor">
+        <Race value="Terr"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="NoScore" value="1"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <EditorFlags index="BlockStructures" value="0"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <LifeStart value="65"/>
+        <LifeMax value="65"/>
+        <Height value="0.5"/>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Other,ObjectFamily:FactionMarauder"/>
     </CUnit>
 </Catalog>

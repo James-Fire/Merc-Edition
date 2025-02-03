@@ -396,4 +396,16 @@
         <CombineArray value="CasterOuterIsBunker"/>
         <CombineArray value="bunkerunitisinsideofisnotburrowed"/>
     </CValidatorCombine>
+    <CValidatorUnitMover id="NotMoverBlockBLand">
+        <WhichUnit Effect="Source"/>
+        <Value value="BlockBLand"/>
+    </CValidatorUnitMover>
+    <CValidatorUnitType id="SourceIsBlockBFlying">
+        <WhichUnit Value="Source"/>
+        <Value value="FlyingBlockB"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="SourceIsBlockB">
+        <WhichUnit Value="Source"/>
+        <Value value="BlockB"/>
+    </CValidatorUnitType>
 </Catalog>

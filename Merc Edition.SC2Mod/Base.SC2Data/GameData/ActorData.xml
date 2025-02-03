@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="BlockBLand" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BlockB" Send="Create"/>
+        <Sound value="Reaper_Land"/>
+    </CActorSound>
     <CActorSound id="StarcruiserYamatoChargeUp" parent="SoundContinuous">
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="Create"/>
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="Destroy"/>
@@ -1210,8 +1215,7 @@
     </CActorModel>
     <CActorSound id="BlockBJetpack" parent="SoundOneShot">
         <EditorCategories value=""/>
-        <On Terms="AbilMorph.*.Start; MorphTo BlockB" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphTo FlyingBlockB" Send="Create"/>
+        <On Terms="Effect.BlockBFlyLM.Start" Send="Create"/>
     </CActorSound>
     <CActorSound id="CloakOff">
         <On Terms="Behavior.PermanentCloakDuskWing.Off" Send="Create"/>
@@ -1555,6 +1559,8 @@
         <On Terms="AbilMorph.*.Finish; MorphTo BlockB" Send="Destroy"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom BlockB" Send="Create BlockBFlyLoop"/>
         <On Terms="AbilMorph.*.Finish; MorphTo BlockB" Target="BlockBFlyLoop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="AnimPlay JumpEnd Jump,End"/>
+        <On Terms="Abil.BlockBLand.SourceCastStart" Send="AnimPlay JumpEnd Jump,End"/>
         <Model value="BlockB"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <BuildModel value="BlockB"/>
@@ -2349,6 +2355,7 @@
         <On Terms="UnitBirth.ReaperPlacement" Send="Create"/>
         <On Terms="AbilMorph.*.Finish; MorphTo FlyingBlockB" Send="Destroy"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom FlyingBlockB" Send="Create"/>
+        <On Terms="Abil.BlockBFly.SourceCastStart" Send="AnimPlay JumpStart Jump,Start"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="BlockBDeath" SoundLink="Reaper_Explode"/>
         <PortraitModel value="BlockBPortrait"/>
@@ -3282,4 +3289,11 @@
     <CActorMissile id="WreckingCrewFighterAttackMissile">
         <On Terms="ActorCreation; ValidatePlayer HaveJotunnSystems" Send="SetTintColor {255,128,0 3.000000}"/>
     </CActorMissile>
+    <CActorUnit id="BlockBPrecursor" parent="GenericUnitBase" unitName="BlockBPrecursor"/>
+    <CActorUnit id="BlockBFlyPrecursor" parent="GenericUnitBase" unitName="BlockBFlyPrecursor"/>
+    <CActorSound id="BlockBFlyStart" parent="SoundOneShot">
+        <On Terms="Behavior.BlockBFlyDuration.On" Send="Create"/>
+        <Host Subject="_Unit"/>
+    </CActorSound>
+    <CActorSound id="BlockBFlyLoop" parent="SoundContinuous"/>
 </Catalog>

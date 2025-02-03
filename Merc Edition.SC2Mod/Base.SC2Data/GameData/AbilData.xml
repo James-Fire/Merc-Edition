@@ -1206,4 +1206,35 @@
         <Effect value="PsychoMissilesCP"/>
         <AutoCastFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilAugment>
+    <CAbilEffectTarget id="BlockBLand">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="BlockBLandCreatePrecursor"/>
+        <Flags index="BestUnit" value="0"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="4"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HHReaperFly"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="BlockBLandMorph">
+        <AbilSetId value="ReaperLand"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="BlockB"/>
+    </CAbilMorph>
+    <CAbilEffectInstant id="BlockBFly">
+        <Effect index="0" value="BlockBFlyCreatePrecursor"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HHReaperFly" Requirements="UseJetPackOverdrive"/>
+    </CAbilEffectInstant>
+    <CAbilMorph id="BlockBFlyMorph">
+        <AbilSetId value="ReaperFly"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Lift">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="FlyingBlockB"/>
+    </CAbilMorph>
 </Catalog>
