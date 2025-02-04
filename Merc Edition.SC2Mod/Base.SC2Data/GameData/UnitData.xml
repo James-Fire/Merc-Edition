@@ -1663,6 +1663,7 @@
         <GlossaryWeakArray value="Stalker"/>
         <GlossaryWeakArray value="Marauder"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <EffectArray index="Death" value="AnarchistFearSA"/>
     </CUnit>
     <CUnit id="DevilDog">
         <CostResource index="Minerals" value="125"/>

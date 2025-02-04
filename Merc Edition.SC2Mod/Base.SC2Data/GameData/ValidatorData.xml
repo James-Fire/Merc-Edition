@@ -83,6 +83,10 @@
         <Find value="1"/>
         <Value value="UseKelmorianCutters"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HavePiercingStrike">
+        <Find value="1"/>
+        <Value value="UsePiercingStrike"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HaveSwannNanites">
         <Find value="1"/>
         <Value value="UseSwannNanites"/>

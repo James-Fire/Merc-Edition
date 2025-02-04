@@ -3185,6 +3185,7 @@
         <On Terms="Effect.RailcannonLM.Start; At Caster" Send="Create"/>
         <On Terms="Effect.RailcannonDamage.Start" Send="Create WarHoundImpactHoldingSite"/>
         <On Terms="Effect.RailcannonDamage.Start" Send="RefSet ::HostImpact WarHoundImpactHoldingSite"/>
+        <On Terms="ActorCreation; ValidateUnit HavePiercingStrike" Send="SetTintColor {249,255,0 1.500000}"/>
         <Host Subject="_Selectable"/>
         <Model value="RailcannonBeam"/>
         <HostLaunch Subject="_Selectable" Actor="Find"/>

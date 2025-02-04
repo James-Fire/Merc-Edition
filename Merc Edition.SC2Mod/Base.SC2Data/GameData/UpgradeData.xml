@@ -307,6 +307,7 @@
     </CUpgrade>
     <CUpgrade id="PiercingStrike">
         <AffectedUnitArray value="Wolverine"/>
+        <EffectArray Operation="Set" Reference="Weapon,Railcannon,Effect" Value="WolverineRailcannonCP"/>
     </CUpgrade>
     <CUpgrade id="PlusUltraCapacitors">
         <EffectArray Operation="Multiply" Reference="Effect,KelmorianMinerDamage,Amount" Value="1.100000"/>

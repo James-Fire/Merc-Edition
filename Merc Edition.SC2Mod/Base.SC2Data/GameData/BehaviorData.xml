@@ -161,6 +161,14 @@
             <AbilLinkDisableArray value="CommandCenterTransport"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="HarrierTemporaryInvulnerability">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="Hellraiser">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
@@ -543,6 +551,7 @@
         <DamageResponse Handled="RevivalFieldONSet">
             <Chance value="1"/>
         </DamageResponse>
+        <DisableValidatorArray value="IsCloaked"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RevivalFieldDodge">
         <Alignment value="Positive"/>
@@ -552,6 +561,7 @@
         <DamageResponse Handled="RevivalFieldOFFSet" ModifyFraction="0">
             <Chance value="1"/>
         </DamageResponse>
+        <DisableValidatorArray value="IsCloaked"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RipperRounds">
         <Alignment value="Negative"/>

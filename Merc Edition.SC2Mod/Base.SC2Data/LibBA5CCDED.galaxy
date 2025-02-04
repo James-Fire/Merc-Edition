@@ -141,7 +141,10 @@ bool libBA5CCDED_gt_InitAllowingUnits_Func (bool testConds, bool runActions) {
         TechTreeUnitAllow(1, "NaniteCloudEmitter", true);
         TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", true);
     }
-
+    else {
+        TechTreeUnitAllow(1, "NaniteCloudEmitter", true);
+        TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", true);
+    }
     if ((TechTreeUnitIsAllowed(1, "Bunker") == true)) {
         TechTreeUnitAllow(1, "BunkerBurrowed", true);
     }
@@ -152,77 +155,103 @@ bool libBA5CCDED_gt_InitAllowingUnits_Func (bool testConds, bool runActions) {
 
     if ((TechTreeUnitIsAllowed(1, "Marine") == true)) {
         TechTreeUnitAllow(1, "WarPig", true);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 8), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Marauder") == true)) {
         TechTreeUnitAllow(1, "HammerSecurity", true);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 11), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Medic") == true)) {
         TechTreeUnitAllow(1, "MercMedic", true);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 12), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Firebat") == true)) {
         TechTreeUnitAllow(1, "DevilDog", true);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 13), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Reaper") == true)) {
         TechTreeUnitAllow(1, "BlockB", true);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 9), true);
     }
 
-    if ((TechTreeUnitIsAllowed(1, "Ghost") == true)) {
+    if ((TechTreeUnitIsAllowed(1, "Ghost") == true) && (TechTreeUnitIsAllowed(1, "GhostAcademy") == true)) {
         TechTreeUnitAllow(1, "Phantom", true);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 10), true);
     }
-
-    if ((TechTreeUnitIsAllowed(1, "Spectre") == true)) {
+    else {
+        TechTreeUnitAllow(1, "Phantom", false);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 10), false);
+    }
+    if ((TechTreeUnitIsAllowed(1, "Spectre") == true) && (TechTreeUnitIsAllowed(1, "GhostAcademy") == true)) {
         TechTreeUnitAllow(1, "Shadow", true);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 14), true);
+    }
+    else {
+        TechTreeUnitAllow(1, "Shadow", false);
+        TechTreeAbilityAllow(1, AbilityCommand("BarracksTrain", 14), false);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Hellion") == true)) {
         TechTreeUnitAllow(1, "Agitator", true);
         TechTreeUnitAllow(1, "Anarchist", true);
+        TechTreeAbilityAllow(1, AbilityCommand("FactoryTrain", 13), true);
+        TechTreeAbilityAllow(1, AbilityCommand("FactoryTrain", 14), true);
     }
 
     if (((TechTreeUnitIsAllowed(1, "SiegeTank") == true) || (TechTreeUnitIsAllowed(1, "SiegeTankSieged") == true))) {
         TechTreeUnitAllow(1, "SiegeBreakerSieged", true);
         TechTreeUnitAllow(1, "SiegeBreaker", true);
+        TechTreeAbilityAllow(1, AbilityCommand("FactoryTrain", 11), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Goliath") == true)) {
         TechTreeUnitAllow(1, "SpartanCompany", true);
+        TechTreeAbilityAllow(1, AbilityCommand("FactoryTrain", 15), true);
     }
 
     if (((TechTreeUnitIsAllowed(1, "Thor") == true) || (TechTreeUnitIsAllowed(1, "ThorAP") == true))) {
         TechTreeUnitAllow(1, "Titan", true);
+        TechTreeAbilityAllow(1, AbilityCommand("FactoryTrain", 12), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Vulture") == true)) {
         TechTreeUnitAllow(1, "Condor", true);
+        TechTreeAbilityAllow(1, AbilityCommand("FactoryTrain", 17), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Diamondback") == true)) {
         TechTreeUnitAllow(1, "Copperhead", true);
+        TechTreeAbilityAllow(1, AbilityCommand("FactoryTrain", 16), true);
     }
 
     if (((TechTreeUnitIsAllowed(1, "VikingAssault") == true) || (TechTreeUnitIsAllowed(1, "VikingFighter") == true))) {
         TechTreeUnitAllow(1, "HelsAngelAssault", true);
         TechTreeUnitAllow(1, "HelsAngelFighter", true);
+        TechTreeAbilityAllow(1, AbilityCommand("StarportTrain", 12), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Banshee") == true)) {
         TechTreeUnitAllow(1, "DuskWing", true);
+        TechTreeAbilityAllow(1, AbilityCommand("StarportTrain", 10), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Medivac") == true)) {
         TechTreeUnitAllow(1, "CharonDropship", true);
+        TechTreeAbilityAllow(1, AbilityCommand("StarportTrain", 9), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Harrier") == true)) {
         TechTreeUnitAllow(1, "Harrier", true);
+        TechTreeAbilityAllow(1, AbilityCommand("StarportTrain", 13), true);
     }
 
     if ((TechTreeUnitIsAllowed(1, "Battlecruiser") == true)) {
         TechTreeUnitAllow(1, "Starcruiser", true);
+        TechTreeAbilityAllow(1, AbilityCommand("StarportTrain", 11), true);
     }
 
     return true;
@@ -803,6 +832,8 @@ bool libBA5CCDED_gt_HarrierRecall_Func (bool testConds, bool runActions) {
     UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RevivalFieldCooldown", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
     UnitSetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster), UnitGetPosition(UnitGroupClosestToPoint(UnitGroup("Starport", EventPlayer(), RegionEntireMap(), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), UnitGetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster)))), false);
     UnitAbilitySpendExplicit(EventPlayerEffectUsedUnit(c_effectUnitCaster), AbilityCommand("RevivalField", 0), c_spendLocationAll, 1.0, 1.0, 1.0, 1.0);
+    Wait(0.1, c_timeReal);
+    UnitIssueOrder(EventPlayerEffectUsedUnit(c_effectUnitCaster), Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
     return true;
 }
 

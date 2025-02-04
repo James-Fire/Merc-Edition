@@ -56,6 +56,10 @@
         <AreaArray Radius="2" Effect="FreyjaBombardmentDamage"/>
         <LaunchLocation Value="CasterUnit"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="HarrierTemporaryInvulnerabilityApplyBehavior">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="HarrierTemporaryInvulnerability"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="HellraiserApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="Hellraiser"/>
@@ -724,6 +728,7 @@
     </CEffectLaunchMissile>
     <CEffectSet id="HarrierRecall">
         <EditorCategories value=""/>
+        <EffectArray value="HarrierTemporaryInvulnerabilityApplyBehavior"/>
     </CEffectSet>
     <CEffectDamage id="IrradiatePeriodicDamage">
         <ValidatorArray value="TargetIsEnemyOrNeutral"/>
@@ -1912,7 +1917,7 @@
         <ResponseFlags index="Flee" value="1"/>
         <ArmorReduction value="1"/>
         <Kind value="Ranged"/>
-        <Amount value="30"/>
+        <Amount value="25"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="RailcannonLM">
         <EditorCategories value="Race:Terran"/>
@@ -1961,6 +1966,17 @@
         <EffectArray value="WolverineFearAB"/>
         <EffectArray value="WolverineFearImmunityAB"/>
     </CEffectSet>
+    <CEffectCreatePersistent id="WolverineRailcannonCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="4"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="RailcannonLM"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.15"/>
+        <PeriodicPeriodArray value="0.15"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
     <CEffectLaunchMissile id="WreckingCrewFighterLM">
         <ImpactEffect value="HaloRocketsSet"/>
     </CEffectLaunchMissile>

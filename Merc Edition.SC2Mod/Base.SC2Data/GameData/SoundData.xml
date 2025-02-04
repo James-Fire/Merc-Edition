@@ -480,7 +480,7 @@
     <CSound id="FreyjaHellraiserMusicEasterEgg" parent="Combat">
         <AssetArray File="Assets\Sounds\we makin it outta the koprulu sector with this one boys.mp3" Weight="6" FacialGroup=""/>
         <Mode value="2D"/>
-        <Volume value="-4.000000,-4.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
         <VolumeRolloffPoints Distance="10.000000"/>
         <VolumeRolloffPoints Distance="28.783070" Volume="-0.640000"/>
         <VolumeRolloffPoints Distance="34.391537" Volume="-96.000000"/>
@@ -607,6 +607,7 @@
         <AssetArray File="Assets\Sounds\NeedlesInTheRed.mp3" FacialGroup=""/>
         <DupeDestroyCount value="1"/>
         <DupeMuteCount value="1"/>
+        <Volume value="-8.000000,-8.000000"/>
     </CSound>
     <CSound id="RevivalFieldDodgeSound" parent="Combat">
         <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact01_1ch.wav" FacialGroup=""/>
@@ -1048,16 +1049,10 @@
     </CSound>
     <CSound id="SpartanCompanyAirAttackLaunch" parent="Combat">
         <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_05.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_06.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_07.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_08.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Valkyrie_AttackLaunch_09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\RailGun_Launch_ReCoil_04.wav" FacialGroup=""/>
         <DupeDestroyCount value="8"/>
         <DupeMaximumMethod value="Replace"/>
         <OverlapTimeDelta value="100"/>

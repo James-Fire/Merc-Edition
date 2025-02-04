@@ -187,6 +187,7 @@ Button/Name/BuildTitan=Build Titan
 Button/Name/BuildWolverine=Build Wolverine
 Button/Name/BuildZeusLander=Build Samson
 Button/Name/BurstAmplifier=Burst Amplifier
+Button/Name/BurstCannon=Burst Cannon
 Button/Name/CerberusHoundMines=Cerberus Hound Mines
 Button/Name/ChairsandAC=Chairs and AC
 Button/Name/ChaoticPower=Chaotic Power
@@ -256,7 +257,6 @@ Button/Name/NeosteelCupHolders=Neosteel Cup Holders
 Button/Name/NormalModeNomad=Normal Mode
 Button/Name/OptimizedUEDLogistics=Optimized UED Logistics
 Button/Name/PenetratorRound=Penetrator Round
-Button/Name/PiercingStrike=Piercing Strike
 Button/Name/PliableArmor=Pliable Armor
 Button/Name/PointBreakDrone=Point Break Drone
 Button/Name/PsiDisruptionDevice=Psi Disruption Device
@@ -351,8 +351,9 @@ Button/Tooltip/BuildTitan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">C
 Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops almost instantly. Can train Barracks units while landed.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/BunkerBurrowed=Defensive structure. Able to protect up to <d ref="Abil,BunkerTransport,TotalCargoSpace"/> infantry unit slots. Units inside the Bunker have +1 range to their attacks. Bunkers can be salvaged.
 Button/Tooltip/BurstAmplifier=Harrier movement speed is increased while not attacking. While moving, damage is increased significantly.
+Button/Tooltip/BurstCannon=Each attack fires 4 times in rapid succession.
 Button/Tooltip/CerberusHoundMines=Increases the detonation and trigger radius of Spider Mines by 40%.
-Button/Tooltip/ChaoticPower=Upon death, spawn 5 mag mines. Halves cooldown of Mag Mine ability and causes it to deploy an additional Mag Mine.
+Button/Tooltip/ChaoticPower=Upon death, spawn 10 mag mines. Halves cooldown of Mag Mine ability and causes it to deploy an additional Mag Mine.
 Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
 Button/Tooltip/CharonDropshipTrainSkibisAngel=Support troopers. Heals nearby biological units. Trained cheaper and faster at Charon Dropships, and in pairs.
 Button/Tooltip/ChemicalPlating=Increases Devil Dog armor by 3 and grants immunity to acid explosions.
@@ -433,7 +434,6 @@ Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to 
 Button/Tooltip/PenetratorRound=Deal 200 damage to ground enemies in a line and stun them for 4 seconds.
 Button/Tooltip/PermanentCloakDuskWing=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
-Button/Tooltip/PiercingStrike=Weapon now damages enemies in a line.
 Button/Tooltip/PliableArmor=Increases Agitator and Anarchist armor by 1 and movement speed by 2. When killed, the area is ignited, causing enemies to run in fear. Transformation time halved.
 Button/Tooltip/PointBreakDrone=Uses a laser to shoot down enemy missiles.  <n/>Cannot target special attacks. <n/>Times out after <d ref="Behavior,PointDefenseDroneTimedLife,Duration"/> seconds.<n/><n/><c val="f078ff">Each shot consumes 10 energy.</c>
 Button/Tooltip/PsiDispersionDevice=Defensive structure. Slows the attack and movement speeds of all nearby Zerg units.<n/><n/><c val="#ColorAttackInfo">Heroic units are immune.</c>
@@ -448,7 +448,7 @@ Button/Tooltip/RaynorSpecial=Condors can now jump up and down cliffs, and fire w
 Button/Tooltip/RedlineReactor=Increases damage by 10 and doubles movement speed for <d time="8.4"/>.
 Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. When taking damage, damage dealt is briefly increased.
 Button/Tooltip/Revitalizer=Device that heals all friendly units nearby for 4% of their maximum life per second. Lasts for <d time="28"/>.
-Button/Tooltip/RevivalField=While cloaked, the Harrier avoids every other attack. When taking fatal damage, recall to the nearest Command Center, once every <d time="336"/>.
+Button/Tooltip/RevivalField=While cloaked, the Harrier avoids every other attack. When taking fatal damage, recall to the nearest Starport, once every <d time="336"/>.
 Button/Tooltip/RorkesRedline=Gives the Starcruiser 250 shields and enables the Redline Reactor ability.
 Button/Tooltip/Salvage=Salvages the structure, removing it and returning 100% of its mineral and gas value. Salvage takes <d time="5"/> to finish. Warning: once Salvage is triggered, it cannot be canceled.
 Button/Tooltip/SecretStashStimpack=Heals Rattlesnake for 3 life per second and increases his attack and movement speeds for <d time="12"/>.
@@ -633,6 +633,7 @@ Effect/Name/HankWeaponDamage=Hank Weapon Damage
 Effect/Name/HankWeaponSA=Hank Weapon SA
 Effect/Name/HankWeaponSet=Hank Weapon Set
 Effect/Name/HarrierRecall=Recall
+Effect/Name/HarrierTemporaryInvulnerabilityApplyBehavior=HarrierTemporaryInvulnerabilityApplyBehavior
 Effect/Name/HellbornFlamethrowerCP=Hellborn Flamethrower CP
 Effect/Name/HellbornFlamethrowerDamage=Hellborn Flamethrower Damage
 Effect/Name/HellbornFlamethrowerSA=Hellborn Flamethrower SA
@@ -840,6 +841,7 @@ Effect/Name/WolverineFearAB=Fear AB
 Effect/Name/WolverineFearImmunityAB=Fear Immunity AB
 Effect/Name/WolverineFearSA=Fear SA
 Effect/Name/WolverineFearSet=Fear Set
+Effect/Name/WolverineRailcannonCP=Wolverine Railcannon CP
 MinimumRange15=Too close
 Param/Value/lib_BA5CCDED_07E491EB=Not much to be made here sadly...although with the Zerg infesting the civilian settlements we could technically let them become infested and then purge them so we can sell the scraps to make a profit. If we do this the infested attacks will ramp up on our base significantly so be prepared.  Just don't take too long to take action sir, the Protoss are still hanging around and I have no idea just how charitable they are willing to be.
 Param/Value/lib_BA5CCDED_127D95BD=Dominion contractors have decided to retake the planet and require us to sanitize the two Command Centers in this area.  Position four of our Skibis Angels near each Command Center to begin the sanitization. Once sanitized you may use them as forward bases until the mission is complete.  Also, surviving Colonists report flying queens in the A.O so be careful at night if you plan to go out past the defenses.
