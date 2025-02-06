@@ -8,6 +8,7 @@ bool libBA5CCDED_gv_easterEggActive;
 
 // Function Declarations
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
+void libBA5CCDED_gf_Ihanriiify (playergroup lp_players);
 
 // Trigger Declarations
 trigger libBA5CCDED_gt_Init;

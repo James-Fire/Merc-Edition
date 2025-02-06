@@ -73,6 +73,58 @@ void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
     }
 }
 
+void libBA5CCDED_gf_Ihanriiify (playergroup lp_players) {
+    // Variable Declarations
+    int lv_player;
+
+    // Automatic Variable Declarations
+    playergroup autoD294CB1D_g;
+
+    // Variable Initialization
+
+    // Implementation
+    autoD294CB1D_g = lp_players;
+    lv_player = -1;
+    while (true) {
+        lv_player = PlayerGroupNextPlayer(autoD294CB1D_g, lv_player);
+        if (lv_player < 0) { break; }
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "StalkerIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "VoidRayIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "SentryIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "WarpPrismIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ZealotIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "NexusIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "AssimilatorIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "PylonIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "TwilightCouncilIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ProbeIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "PhoenixIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "OracleIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "FleetBeaconIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ImmortalIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "MothershipIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "TemplarArchiveIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ObserverIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "DarkShrineIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "StargateIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "GatewayIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "TempestIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "PhotonCannonIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "AdeptIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "CarrierIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ColossusIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "DarkTemplarIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ShieldBatteryIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "CyberneticsCoreIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "RoboticsFacilityIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "RoboticsFacilityIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "DisruptorIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ForgeIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "RoboticsBayIhanrii", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "HighTemplarIhanrii", true);
+    }
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
 // Trigger: Init
