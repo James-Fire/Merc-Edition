@@ -41,5 +41,17 @@
             <InfoValue Id="Credits Per Item" Value="125"/>
             <InfoValue Id="Item Count" Value="1"/>
         </Indices>
+        <Indices index="57">
+            <InfoValue Id="Credits Per Item" Value="400"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="60">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="11"/>
+        </Indices>
+        <Indices index="66">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="7"/>
+        </Indices>
     </CConversationState>
 </Catalog>
