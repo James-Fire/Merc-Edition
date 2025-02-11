@@ -37,6 +37,34 @@
             <InfoValue Id="Item Count" Value="5"/>
             <InfoValue Id="Credits Per Item" Value="25"/>
         </Indices>
+        <Indices index="10">
+            <InfoValue Id="Credits Per Item" Value="25"/>
+            <InfoValue Id="Item Count" Value="2"/>
+        </Indices>
+        <Indices index="31">
+            <InfoValue Id="Credits Per Item" Value="450"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="32">
+            <InfoValue Id="Credits Per Item" Value="25"/>
+            <InfoValue Id="Item Count" Value="6"/>
+        </Indices>
+        <Indices index="35">
+            <InfoValue Id="Credits Per Item" Value="400"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="38">
+            <InfoValue Id="Credits Per Item" Value="200"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="44">
+            <InfoValue Id="Credits Per Item" Value="200"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="50">
+            <InfoValue Id="Credits Per Item" Value="1000"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
         <Indices index="53">
             <InfoValue Id="Credits Per Item" Value="125"/>
             <InfoValue Id="Item Count" Value="1"/>
