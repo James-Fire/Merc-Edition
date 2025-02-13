@@ -1,10 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="BarrageModel">
+        <On Terms="ActorCreation" Send="Create OdinBarrageAdd"/>
+    </CActorModel>
+    <CActorModel id="OdinBarrageAdd" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <HostSiteOps Ops="SOpTargetPoint OdinBarrageVariance"/>
+    </CActorModel>
+    <CActorSound id="BarrageSound">
+        <On Terms="Effect.BarrageSearchArea.Start; At Caster" Send="Create"/>
+    </CActorSound>
     <CActorSound id="BlockBLand" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="AbilMorph.*.Finish; MorphTo BlockB" Send="Create"/>
         <Sound value="Reaper_Land"/>
     </CActorSound>
+    <CActorAction id="FreyjaBombardment" parent="GenericAttack" effectImpact="FreyjaBombardmentSA" effectLaunch="FreyjaBombardmentLM">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="Center 0" Fallback="Origin"/>
+        <LaunchAssets Sound="FortressBombardmentLaunchSound"/>
+        <ImpactMap index="None" Model=""/>
+    </CActorAction>
+    <CActorMissile id="FreyjaBombardmentMissile" parent="GenericAttackMissile" unitName="FreyjaBombardmentMissile">
+        <Model value="FreyjaWeapon"/>
+        <Scale value="1.000000,1.500000,1.000000"/>
+    </CActorMissile>
+    <CActorUnit id="DukesRevengeHero" parent="GenericUnitStandard" unitName="DukesRevengeHero">
+        <Aliases value="_UnitHuge"/>
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="$Spell 0 -1.000000 -1.000000 4.500000 AsDuration"/>
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="AnimClear Spell"/>
+        <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="AnimPlay SpellA Spell,A,End"/>
+        <On Terms="Behavior.MercAirDropB.Create" Send="Create BattlecruiserLokiReentry"/>
+        <On Terms="Behavior.HyperjumpTeleportOut.On" Send="SetOpacity"/>
+        <On Terms="Behavior.HyperjumpTeleportIn.Off" Send="SetOpacity 1.000000"/>
+        <On Terms="Behavior.HyperjumpTeleport.On" Send="Create BattleCruiserTacticalJump_Placement"/>
+        <On Terms="Behavior.HyperjumpTeleportIn.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.HyperjumpTeleportOut.On" Send="Create HyperjumpLaunch"/>
+        <On Terms="Behavior.HyperjumpTeleportIn.On" Send="Create HyperjumpImpact"/>
+        <On Terms="Behavior.RagnarokOn.On" Send="AnimPlay GLBirth,A"/>
+        <On Terms="Behavior.RagnarokOn.On" Send="AnimBlendTimeApply 5.000000"/>
+        <On Terms="Behavior.RagnarokOn.On" Send="AnimGroupApply A"/>
+        <On Terms="Behavior.RagnarokOn.On" Send="AnimBlendTimeApply"/>
+        <On Terms="Behavior.RagnarokOn.Off" Send="AnimGroupRemove A"/>
+        <On Terms="Behavior.HyperjumpTeleport.Off" Target="BattleCruiserTacticalJump_Placement" Send="Destroy"/>
+        <HostSiteOps Ops="SOpBankerBattlecruiser"/>
+        <DeathArray index="Normal" ModelLink="DukesRevengeDeathHero" SoundLink=""/>
+        <DeathArray index="Squish" ModelLink="BattlecruiserDeathSquish"/>
+        <PortraitModel value="DukesRevengePortrait"/>
+        <BarOffset value="75"/>
+        <BarWidth value="144"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-battlecruiserc.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="BattlecruiserGroupWhat"/>
+        <GroupSoundArray index="Yes" value="BattlecruiserGroupYes"/>
+        <GroupSoundArray index="Attack" value="BattlecruiserGroupAttack"/>
+        <GroupSoundArray index="Board" value="BattlecruiserGroupBoard"/>
+        <HeroIcon value="Assets\Textures\wireframe-terran-battlecruiserc.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="110"/>
+        <SoundArray index="Birth" value="BattlecruiserBirth"/>
+        <SoundArray index="Ready" value="Battlecruiser_Ready"/>
+        <SoundArray index="Help" value="Battlecruiser_Help"/>
+        <SoundArray index="What" value="Battlecruiser_What"/>
+        <SoundArray index="Yes" value="Battlecruiser_Yes"/>
+        <SoundArray index="Attack" value="Battlecruiser_Attack"/>
+        <SoundArray index="Pissed" value="Battlecruiser_Pissed"/>
+        <SoundArray index="Movement" value="Battlecruiser_Movement"/>
+        <SoundArray index="Turning" value="BattlecruiserTurning"/>
+        <SoundArray index="Board" value="BattlecruiserBoard"/>
+        <SoundArray index="Click" value="BattlecruiserClick"/>
+        <SoundArray index="ClickError" value="BattlecruiserClickError"/>
+        <SoundArray index="Highlight" value="BattlecruiserHighlight"/>
+        <UnitIcon value="Assets\Textures\wireframe-terran-battlecruiserc.dds"/>
+        <VitalNames index="Shields" value="StarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevenge2ShieldsStarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevengeHeroShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-battlecruiserc.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="GraveyardSystemAttack" parent="GenericAttack" effectImpact="GraveyardSystemDamage" effectLaunch="GraveyardSystemLM">
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA0 AMRandomUniform"/>
+        <LaunchAssets Sound="StarcruiserAttackLaunch"/>
+        <Missile value="GraveyardSystemMissile"/>
+        <ImpactMap index="None" Model="DRBattlecruiserGroundAttackImpact" Sound="Battlecruiser_GroundAttackImpact"/>
+    </CActorAction>
+    <CActorMissile id="GraveyardSystemMissile" parent="GenericAttackMissile" unitName="DukesRevengeBatteryMissile">
+        <Model value="StarcruiserLaserBattery"/>
+        <BarHeight value="1"/>
+        <BarWidth value="1"/>
+    </CActorMissile>
     <CActorSound id="StarcruiserYamatoChargeUp" parent="SoundContinuous">
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="Create"/>
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="Destroy"/>

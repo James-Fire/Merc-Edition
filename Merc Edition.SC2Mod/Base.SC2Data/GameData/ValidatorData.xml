@@ -41,6 +41,9 @@
         <Value value="2"/>
         <Behavior value="ARESTargetLockCaster"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="CommandCenterTransportCombine">
+        <CombineArray value="IsACV"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="DontHaveSurvivorsGuilt">
         <Behavior value="SurvivorsGuilt"/>
     </CValidatorUnitCompareBehaviorCount>
@@ -101,6 +104,9 @@
     <CValidatorUnitType id="CasterOuterIsBunker">
         <WhichUnit Value="CasterOuter"/>
         <Value value="Bunker"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsACV">
+        <Value value="ACV"/>
     </CValidatorUnitType>
     <CValidatorUnitCompareBehaviorCount id="IsInSilentMode">
         <WhichUnit Value="Caster"/>
