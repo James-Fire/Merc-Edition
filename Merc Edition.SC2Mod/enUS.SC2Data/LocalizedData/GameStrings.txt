@@ -89,6 +89,7 @@ Behavior/Name/NeoTitaniumPlatingSieged=Neo-Titanium Plating
 Behavior/Name/NeoTitaniumPlatingTank=Neo-Titanium Plating
 Behavior/Name/NomadMissileTint=Fuck-You Inbound
 Behavior/Name/NomadSilentMode=Nomad Silent Mode
+Behavior/Name/OdinBarrageStun=Odin Barrage Stun
 Behavior/Name/PermanentCloakDuskWing=Permanent Cloak
 Behavior/Name/PhantomCloak=Cloak
 Behavior/Name/PointBreakDrone=Point Break Drone
@@ -307,6 +308,7 @@ Button/Name/U240Rounds=U-240 Rounds
 Button/Name/UpgradeToPlanetaryFortress=Upgrade to Bombardment Fortress
 Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Button/Name/YamatoCulverin=Yamato Culverin
+Button/Name/YamatoDomination=Yamato Domination
 Button/Name/ZeusLanderTacticalJump=Tactical Jump
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Skibi's Angels cost 35% less, no longer need a Tech Lab and are equipped with an automatic healing drone.
@@ -372,6 +374,7 @@ Button/Tooltip/DevastatorOverride=Replaces main attack with a stronger one, has 
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/DivineArmor=Titans have a base armor of 3.
+Button/Tooltip/DukesRevengeHero=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ED067=Apex Security Partnership's ED-067, a peacekeeping machine designed for urban pacification, malfunctioned during its first demonstration, killing junior executive Mr. Losumn. Dr. Rorke and technicians struggled to control the faulty robot, shutting it down.  The Predator program was given green-light due to the Losumn tragedy and due to rumors of the Enforcement Droid series using salvaged Dragoon parts from the first war.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
 Button/Tooltip/EnableBatteries=Enable numerous rapid-fire laser batteries effective versus groups.
@@ -499,6 +502,7 @@ Button/Tooltip/UpgradeToPlanetaryFortress=Adds a powerful turret, and increases 
 Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Light and Biological by 15, and doubles the width of attacks.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/YamatoCulverin=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby.
+Button/Tooltip/YamatoDomination=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby. Stores 3 charges.
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Effect/Name/250mmUranusCarronadesCP=250mmUranusCarronadesCP
@@ -614,8 +618,11 @@ Effect/Name/FreyjaAttackLM=Freyja Attack LM
 Effect/Name/FreyjaAttackSet=Freyja Attack Set
 Effect/Name/FreyjaBombardmentCP=Freyja Bombardment CP
 Effect/Name/FreyjaBombardmentDamage=Freyja Bombardment Damage
+Effect/Name/FreyjaBombardmentLM=Freyja Bombardment LM
 Effect/Name/FreyjaBombardmentSA=Freyja Bombardment SA
 Effect/Name/GraduatingRangeApplyBehavior=GraduatingRangeApplyBehavior
+Effect/Name/GraveyardSystemDamage=Graveyard System Damage
+Effect/Name/GraveyardSystemLM=Graveyard System LM
 Effect/Name/GreetingGrenadeDamage=Greeting Grenade Damage
 Effect/Name/GreetingGrenadeLM=Greeting Grenade LM
 Effect/Name/HailstormMissilePodsCreatePersistentMerc=Hellstorm Missile Pods (Create Persistent) Merc
@@ -688,6 +695,8 @@ Effect/Name/NomadTurretWeaponCP=Nomad Turret Weapon CP
 Effect/Name/NomadTurretWeaponDamage=Nomad Turret Weapon Damage
 Effect/Name/NomadTurretWeaponLaunchDummy=Nomad Turret Weapon Launch Dummy
 Effect/Name/NomadTurretWeaponSA=Nomad Turret Weapon SA
+Effect/Name/OdinBarrageSet=Odin Barrage Set
+Effect/Name/OdinBarrageStunAB=Odin Barrage Stun AB
 Effect/Name/PenetratorRoundCP=Penetrator Round CP
 Effect/Name/PenetratorRoundDamage=Penetrator Round Damage
 Effect/Name/PenetratorRoundSA=Penetrator Round SA
@@ -879,6 +888,7 @@ Param/Value/lib_BA5CCDED_ECC6F2CE=Working for the Dominion is not the best of id
 Param/Value/lib_BA5CCDED_FA6B9BAB=Sir I was looking over the scans for the temple and noticed that it is made of an extremely rare alloy that can't be found anywhere else in Terran space.  This got me thinking, if we were to not use the laser to demolish the temple doors and instead use good old fashioned precision cutters we could salvage those doors and sell them to make a large pay day.  Also just a friendly reminder to try not to use too much fuel on the laser, we can sell the fuel on the market as well for a nice chunk of change.  I managed to install a switch to turn the laser on or off at your leisure to help if you decide to clear the area, also one last thing.  Those smaller temples look to be more brittle than the main one so a few well placed explosives should open them up nice and easy for you.
 SkibidiSkibidiHeHeHaHa=x2
 StarcruiserShields=Shield Generator
+StarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevenge2ShieldsStarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevengeHeroShields=Shield Generator
 Unit/Name/250mmUranusCarronadesWeapon=250mm Uranus Carronades Projectile
 Unit/Name/ACV=ACV
 Unit/Name/ARESMissileMissile=ARES Missile Missile
@@ -893,12 +903,15 @@ Unit/Name/CharonDropship=Charon Dropship
 Unit/Name/Condor=Condor
 Unit/Name/Copperhead=Copperhead
 Unit/Name/DevastatorMissilesMercWeapon=Devastator Missiles Projectile
+Unit/Name/DukesRevengeBatteryMissile=Duke's Revenge Battery Missile
+Unit/Name/DukesRevengeHero=Duke's Revenge
 Unit/Name/DuskWingWeaponSecondary=Dusk Wing Secondary
 Unit/Name/DuskWingWeaponTertiary=Dusk Wing Tertiary
 Unit/Name/ED067=ED-067
 Unit/Name/FlyingBlockB=Flying Block B
 Unit/Name/FortressBombardmentMissile=Fortress Bombardment Missile
 Unit/Name/Freyja=Freyja
+Unit/Name/FreyjaBombardmentMissile=Freyja Bombardment Missile
 Unit/Name/FreyjaWeaponPrimary=Freyja Weapon Primary
 Unit/Name/HERCGrappleDummy=HERC Grapple (Dummy)
 Unit/Name/HankHarnack=Hank Harnack
@@ -1030,6 +1043,7 @@ Weapon/Name/DuskWingBanshee3=Screecher Missiles
 Weapon/Name/FRANomadKingCannons=FR-A Nomad King Cannons
 Weapon/Name/FistsofKronos=Fists of Kronos
 Weapon/Name/GatlingCannons=Gatling Cannons
+Weapon/Name/GraveyardSystem=Graveyard System
 Weapon/Name/HailstormMissilePodsMerc=Hellstorm Missile Pods
 Weapon/Name/HankWeapon=Hank Weapon
 Weapon/Name/HellbornFlamethrower=Hellborn Flamethrower

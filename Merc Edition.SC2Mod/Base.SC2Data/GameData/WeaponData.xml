@@ -70,6 +70,22 @@
         <Period value="0.7607"/>
         <Effect value="DevastatorMissilesMercLaunchMissile"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="GraveyardSystem">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="GraveyardSystemDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Link="Weapon/PharaohLaserBattery"/>
+        <Period value="0.225"/>
+        <Effect value="GraveyardSystemLM"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMax value="0.1875"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="VanirMissiles">
         <EditorCategories value="Race:Terran"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>

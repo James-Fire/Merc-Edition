@@ -59,6 +59,104 @@
         <Model value="Assets\Models\ASP_Missile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="DukesRevengePortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Battlecruiser_HornerHan_Portrait\Battlecruiser_HornerHan_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\BattlecruiserPortrait.fxa"/>
+        <Image value="Assets\Textures\BattlecruiserMercenaryPortrait_Static.dds"/>
+        <Lighting value="BattlecruiserMercenaryPortrait"/>
+    </CModel>
+    <CModel id="DukesRevengeHero" parent="Unit">
+        <Model value="Assets\Units\Terran\BattlecruiserHurricane\BattlecruiserHurricane.m3"/>
+        <AttachProps Id="Ref_Weapon 20">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 21">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 22">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 23">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 24">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 25">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 10">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 11">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 20">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 21">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 22">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 23">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 24">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 25">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.300000"/>
+        <ScaleMax value="1.300000,1.400000,1.300000"/>
+        <ScaleMin value="1.300000,1.400000,1.300000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.700000"/>
+        <SelectionRadius value="1.562500"/>
+        <ShadowRadius value="1.562500"/>
+        <Tipability value="0.150000"/>
+        <UnitGlossaryCamera value="Star2CameraLow12"/>
+    </CModel>
+    <CModel id="DukesRevengeDeathHero" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\BattleCruiser_Merc_Collection_Death\BattleCruiser_Merc_Collection_Death_00.m3"/>
+        <LowQualityModel value="DukesRevengeDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.333000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.666000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.600000"/>
+        </Events>
+    </CModel>
+    <CModel id="OdinBarrageAdd" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Raven_Shredder_Missile_MP_Impact\Raven_Shredder_Missile_MP_Impact.m3"/>
+    </CModel>
     <CModel id="StarcruiserYamatoImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\CerberusYamatoMissileImpact\CerberusYamatoMissileImpact.m3"/>
         <EditorCategories value="Race:Terran"/>

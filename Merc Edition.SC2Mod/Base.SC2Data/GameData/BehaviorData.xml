@@ -313,6 +313,17 @@
         <InfoFlags index="Hidden" value="1"/>
         <MaxStackCount value="3"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="OdinBarrageStun">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.5"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="PointBreakDrone">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.1"/>

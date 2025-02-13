@@ -871,7 +871,7 @@
             <Cooldown TimeUse="42"/>
         </Cost>
         <Range value="7"/>
-        <AutoCastFilters value="Ground,Visible;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AutoCastRange value="7"/>
         <FinishTime value="0.5"/>
         <UninterruptibleArray index="Finish" value="1"/>
