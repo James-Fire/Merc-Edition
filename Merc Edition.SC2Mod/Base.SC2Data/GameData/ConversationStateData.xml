@@ -41,6 +41,42 @@
             <InfoValue Id="Credits Per Item" Value="25"/>
             <InfoValue Id="Item Count" Value="2"/>
         </Indices>
+        <Indices index="12">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="13">
+            <InfoValue Id="Credits Per Item" Value="250"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="14">
+            <InfoValue Id="Credits Per Item" Value="10"/>
+            <InfoValue Id="Item Count" Value="3"/>
+        </Indices>
+        <Indices index="15">
+            <InfoValue Id="Credits Per Item" Value="35"/>
+            <InfoValue Id="Item Count" Value="6"/>
+        </Indices>
+        <Indices index="16">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="19">
+            <InfoValue Id="Credits Per Item" Value="15"/>
+            <InfoValue Id="Item Count" Value="2"/>
+        </Indices>
+        <Indices index="20">
+            <InfoValue Id="Credits Per Item" Value="10"/>
+            <InfoValue Id="Item Count" Value="6"/>
+        </Indices>
+        <Indices index="22">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="5"/>
+        </Indices>
+        <Indices index="30">
+            <InfoValue Id="Credits Per Item" Value="100"/>
+            <InfoValue Id="Item Count" Value="2"/>
+        </Indices>
         <Indices index="31">
             <InfoValue Id="Credits Per Item" Value="450"/>
             <InfoValue Id="Item Count" Value="1"/>
@@ -80,6 +116,30 @@
         <Indices index="66">
             <InfoValue Id="Credits Per Item" Value="50"/>
             <InfoValue Id="Item Count" Value="7"/>
+        </Indices>
+        <Indices index="70">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="3"/>
+        </Indices>
+        <Indices index="71">
+            <InfoValue Id="Credits Per Item" Value="750"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="74">
+            <InfoValue Id="Credits Per Item" Value="50"/>
+            <InfoValue Id="Item Count" Value="3"/>
+        </Indices>
+        <Indices index="77">
+            <InfoValue Id="Credits Per Item" Value="150"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="78">
+            <InfoValue Id="Credits Per Item" Value="25"/>
+            <InfoValue Id="Item Count" Value="2"/>
+        </Indices>
+        <Indices index="81">
+            <InfoValue Id="Credits Per Item" Value="450"/>
+            <InfoValue Id="Item Count" Value="1"/>
         </Indices>
     </CConversationState>
 </Catalog>
