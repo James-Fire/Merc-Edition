@@ -186,6 +186,7 @@ Button/Name/BuildSpartanCompany=Build Spartan Company
 Button/Name/BuildStarcruiser=Build Starcruiser
 Button/Name/BuildTitan=Build Titan
 Button/Name/BuildWolverine=Build Wolverine
+Button/Name/BuildZeusBattleTank=Build Zeus Battle Tank
 Button/Name/BuildZeusLander=Build Samson
 Button/Name/BurstAmplifier=Burst Amplifier
 Button/Name/BurstCannon=Burst Cannon
@@ -313,7 +314,6 @@ Button/Name/ZeusLanderTacticalJump=Tactical Jump
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Skibi's Angels cost 35% less, no longer need a Tech Lab and are equipped with an automatic healing drone.
 Button/Tooltip/ARESTargetLock=Increases damage dealt to the target enemy unit by 30%. Effect lasts as long as the ARES remains locked onto the target.
-Button/Tooltip/ARESWarbotMercMod=Armored weapons platform. Can use Target Lock and Sentinel Missiles.<n/><n/><c val="FFFF00">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/ASPRocketPods=Causes Dusk Wing missiles to deal damage in a line, increases damage while cloaked by 25%, and adds another two Screecher Missile weapons.
 Button/Tooltip/ATXOrdnance=Replaces weaponry with ATX Laser Batteries and ATX Point Defense.
 Button/Tooltip/AblativeScalesNew=Increases Hammer Security life by 75 and grants immunity to splash damage.
@@ -503,6 +503,7 @@ Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Lig
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/YamatoCulverin=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby.
 Button/Tooltip/YamatoDomination=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby. Stores 3 charges.
+Button/Tooltip/ZeusBattleTank=Armored weapons platform. Can use Target Lock and Sentinel Missiles.<n/><n/><c val="FFFF00">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Effect/Name/250mmUranusCarronadesCP=250mmUranusCarronadesCP

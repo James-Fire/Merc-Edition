@@ -1,5 +1,5 @@
 title=Wings Of Mercs
 desc=Play through Wings of Liberty as the mercenary band you always wanted to be
-author=James Fire, ghost67hunter, and x_plazma
+author=ghost67hunter, x_plazma, James Fire
 campaign=WOL
 version=0.1

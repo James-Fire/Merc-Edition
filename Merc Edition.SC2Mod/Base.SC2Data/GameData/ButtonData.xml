@@ -28,6 +28,11 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="BuildZeusBattleTank">
+        <Icon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+        <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+    </CButton>
     <CButton id="DemonRockets">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>

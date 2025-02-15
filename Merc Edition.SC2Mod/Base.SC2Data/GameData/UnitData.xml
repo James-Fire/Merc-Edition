@@ -3084,6 +3084,9 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <Description value="Button/Tooltip/ZeusBattleTank"/>
+        <CostResource index="Minerals" value="250"/>
+        <CostResource index="Vespene" value="125"/>
     </CUnit>
     <CUnit id="WolverineWeapon" parent="MISSILE">
         <Race value="Terr"/>
