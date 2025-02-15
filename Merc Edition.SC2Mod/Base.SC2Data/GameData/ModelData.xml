@@ -59,6 +59,11 @@
         <Model value="Assets\Models\ASP_Missile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="AresWarbotMercImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\ImmortalMissileImpact\ImmortalMissileImpact.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
     <CModel id="DukesRevengePortrait" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Portraits\Terran\Battlecruiser_HornerHan_Portrait\Battlecruiser_HornerHan_Portrait.m3"/>
         <FacialController value="LocalizedData\Facial\BattlecruiserPortrait.fxa"/>

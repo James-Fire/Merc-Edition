@@ -21,6 +21,7 @@ Button/Hotkey/BuildSpartanCompany=G
 Button/Hotkey/BuildStarcruiser=B
 Button/Hotkey/BuildTitan=T
 Button/Hotkey/BuildWolverine=W
+Button/Hotkey/BuildZeusBattleTank=T
 Button/Hotkey/BuildZeusLander=H
 Button/Hotkey/CharonDropshipTrainSkibisAngel=E
 Button/Hotkey/CloakPhantom=C

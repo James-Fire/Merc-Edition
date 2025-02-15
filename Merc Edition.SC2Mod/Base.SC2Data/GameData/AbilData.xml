@@ -422,10 +422,12 @@
             </Charge>
             <Cooldown TimeUse="3"/>
         </Cost>
-        <TargetFilters value="-;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <TargetFilters value="Visible;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <Range value="6"/>
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SentinelMissilesAres"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="6"/>
     </CAbilEffectTarget>
     <CAbilMorph id="BunkerLower">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>

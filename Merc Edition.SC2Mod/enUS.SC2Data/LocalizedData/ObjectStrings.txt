@@ -1067,6 +1067,7 @@ Model/Name/AnarchistFearMarker=Anarchist Fear Marker
 Model/Name/AnarchistJumpJets=Anarchist Jump Jets
 Model/Name/AnarchistJumpStunModel=Anarchist Jump Stun Model
 Model/Name/AnarchistPortrait=Anarchist
+Model/Name/AresWarbotMercImpact=Zeus Battle Tank Impact
 Model/Name/BioMechanicalRepairDrone=Bio-Mechanical Repair Drone
 Model/Name/BlockBDeath=Block B Death
 Model/Name/BlockBPortrait=Block B
