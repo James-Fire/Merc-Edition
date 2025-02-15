@@ -4,13 +4,22 @@ include "TriggerLibs/natives"
 // Library: Merc Edition Data
 //--------------------------------------------------------------------------------------------------
 // Variable Declarations
+bank libBA5CCDED_gv_eventBank;
+string libBA5CCDED_gv_eventString;
+int libBA5CCDED_gv_eventIncrement;
+int libBA5CCDED_gv_eventAppliedIncrement;
+int libBA5CCDED_gv_zeusCount;
 bool libBA5CCDED_gv_easterEggActive;
 
 // Function Declarations
+void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition);
+void libBA5CCDED_gf_RescueZeus (unit lp_zeus);
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 void libBA5CCDED_gf_Ihanriiify (playergroup lp_players);
 
 // Trigger Declarations
+trigger libBA5CCDED_gt_OpenBanks;
+trigger libBA5CCDED_gt_SaveBanks;
 trigger libBA5CCDED_gt_Init;
 trigger libBA5CCDED_gt_InitACVMultibuild;
 trigger libBA5CCDED_gt_InitAllowingUnits;
