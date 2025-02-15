@@ -22,9 +22,60 @@ void libBA5CCDED_InitVariables () {
 
     libBA5CCDED_InitVariables_completed = true;
 
+    libBA5CCDED_gv_eventString = "";
 }
 
 // Functions
+trigger auto_libBA5CCDED_gf_SpawnZeusonGameStart_Trigger = null;
+point auto_libBA5CCDED_gf_SpawnZeusonGameStart_lp_spawnPosition;
+
+void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition) {
+    auto_libBA5CCDED_gf_SpawnZeusonGameStart_lp_spawnPosition = lp_spawnPosition;
+
+    if (auto_libBA5CCDED_gf_SpawnZeusonGameStart_Trigger == null) {
+        auto_libBA5CCDED_gf_SpawnZeusonGameStart_Trigger = TriggerCreate("auto_libBA5CCDED_gf_SpawnZeusonGameStart_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libBA5CCDED_gf_SpawnZeusonGameStart_Trigger, false, false);
+}
+
+bool auto_libBA5CCDED_gf_SpawnZeusonGameStart_TriggerFunc (bool testConds, bool runActions) {
+    point lp_spawnPosition = auto_libBA5CCDED_gf_SpawnZeusonGameStart_lp_spawnPosition;
+
+    // Automatic Variable Declarations
+    // Implementation
+    if ((lp_spawnPosition == null)) {
+        libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, PlayerStartLocation(1));
+    }
+    else {
+        libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, lp_spawnPosition);
+    }
+    return true;
+}
+
+trigger auto_libBA5CCDED_gf_RescueZeus_Trigger = null;
+unit auto_libBA5CCDED_gf_RescueZeus_lp_zeus;
+
+void libBA5CCDED_gf_RescueZeus (unit lp_zeus) {
+    auto_libBA5CCDED_gf_RescueZeus_lp_zeus = lp_zeus;
+
+    if (auto_libBA5CCDED_gf_RescueZeus_Trigger == null) {
+        auto_libBA5CCDED_gf_RescueZeus_Trigger = TriggerCreate("auto_libBA5CCDED_gf_RescueZeus_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libBA5CCDED_gf_RescueZeus_Trigger, false, false);
+}
+
+bool auto_libBA5CCDED_gf_RescueZeus_TriggerFunc (bool testConds, bool runActions) {
+    unit lp_zeus = auto_libBA5CCDED_gf_RescueZeus_lp_zeus;
+
+    // Automatic Variable Declarations
+    // Implementation
+    libNtve_gf_RescueUnit(lp_zeus, 1, true);
+    libBA5CCDED_gv_zeusCount += 1;
+    return true;
+}
+
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
     // Variable Declarations
     int lv_player;
@@ -126,6 +177,48 @@ void libBA5CCDED_gf_Ihanriiify (playergroup lp_players) {
 }
 
 // Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Open Banks
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    BankLoad("VanillaPlusWOL", 1);
+    libBA5CCDED_gv_zeusCount = BankValueGetAsInt(BankLastCreated(), "Persistent Units", "ZeusCount");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_OpenBanks_Init () {
+    libBA5CCDED_gt_OpenBanks = TriggerCreate("libBA5CCDED_gt_OpenBanks_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_OpenBanks);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Save Banks
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SaveBanks_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    BankValueSetFromInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount", libBA5CCDED_gv_zeusCount);
+    BankSave(libBA5CCDED_gv_eventBank);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SaveBanks_Init () {
+    libBA5CCDED_gt_SaveBanks = TriggerCreate("libBA5CCDED_gt_SaveBanks_Func");
+    TriggerAddEventPlayerLeft(libBA5CCDED_gt_SaveBanks, c_playerAny, c_gameResultVictory);
+}
+
 //--------------------------------------------------------------------------------------------------
 // Trigger: Init
 //--------------------------------------------------------------------------------------------------
@@ -535,27 +628,34 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor02) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_D6B76FD5"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor03) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_17EC5578"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson01) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_7141E8B8"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson02) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_127D95BD"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03A) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_EA0B8EF6"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03B) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_07E491EB"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh01) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E21786FD"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh02) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_25C3C5EB"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh03A) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E10E7623"));
@@ -568,42 +668,51 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul02) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_6FD51BF1"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul03) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_28C51485"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul04) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_C74680EB"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian01) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_D2BA4636"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02A) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_21BADA4C"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02B) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_8B3D9D37"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus01) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_5DAFE497"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus02) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_FA6B9BAB"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus03) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E07FBC4A"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus04) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_B43DDBEC"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus05) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_D8119886"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner01) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_E8245A9A"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner02) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_A54710E3"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner03) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaDirective, StringExternal("Param/Value/lib_BA5CCDED_31446809"));
@@ -1016,6 +1125,8 @@ void libBA5CCDED_gt_NaniteEmitterBurrow_Init () {
 }
 
 void libBA5CCDED_InitTriggers () {
+    libBA5CCDED_gt_OpenBanks_Init();
+    libBA5CCDED_gt_SaveBanks_Init();
     libBA5CCDED_gt_Init_Init();
     libBA5CCDED_gt_InitACVMultibuild_Init();
     libBA5CCDED_gt_InitAllowingUnits_Init();
