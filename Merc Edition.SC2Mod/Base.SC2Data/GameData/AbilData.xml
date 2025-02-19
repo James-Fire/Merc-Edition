@@ -180,6 +180,9 @@
         <UninterruptibleArray index="Finish" value="1"/>
         <CursorRangeMode value="ForceToMax"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="PenetratorRound"/>
+        <Cost>
+            <Cooldown TimeUse="28"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilMorph id="PerditionTurretBurrow">
         <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
