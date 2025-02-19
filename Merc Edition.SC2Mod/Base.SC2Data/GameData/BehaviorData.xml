@@ -630,7 +630,7 @@
     <CBehaviorBuff id="SignalFlareBlind">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification SightMaximum="1">
+        <Modification SightMaximum="1" WeaponRange="-100">
             <StateFlags index="SuppressDetection" value="1"/>
         </Modification>
     </CBehaviorBuff>
@@ -809,6 +809,22 @@
             <Kind index="NoProc" value="0"/>
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TimedLifeAlphaSquadron">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="42"/>
+        <DurationRandomMax value="0.3"/>
+        <ExpireEffect value="TimedLifeFate"/>
+        <Modification>
+            <StateFlags index="Summoned" value="1"/>
+        </Modification>
+        <KillCredit Value="Caster"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TitanDontDie">
         <Alignment value="Positive"/>

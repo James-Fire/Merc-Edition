@@ -36,6 +36,10 @@
             <Button DefaultButtonFace="TrainACV" State="Restricted"/>
             <Unit value="ACV"/>
         </InfoArray>
+        <InfoArray index="Train3" Time="63">
+            <Button DefaultButtonFace="BuildZeusBattleTank"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
     </CAbilTrain>
     <CAbilEffectInstant id="FerrierofSouls">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -250,12 +254,38 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="TotalAnnihilation">
+        <Alignment value="Negative"/>
+        <AbilSetId value="yamato"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DataCollection value="StarcruiserYamatoGun"/>
+        <Effect index="0" value="StarcruiserYamatoLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="125"/>
+            <Cooldown Link="YamatoYamato2YamatoStarcruiserYamatoGunYamatoYamato2YamatoStarcruiserYamatoGun2YamatoYamato2YamatoStarcruiserYamatoGunYamatoYamato2YamatoTotalAnnihilation" TimeUse="0.8332"/>
+        </Cost>
+        <Range value="16"/>
+        <RangeSlop value="10"/>
+        <PrepTime value="4"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <AINotifyEffect value="Yamato"/>
+        <ProgressButtonArray index="Prep" value="YamatoCulverin"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="YamatoCulverin">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="SupplyDrop">
         <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>
     </CAbilEffectTarget>
     <CAbilBuild id="TerranBuild">
         <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">
-            <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Restricted" Requirements="HaveEngineeringBay"/>
+            <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Suppressed" Requirements="HaveEngineeringBay"/>
         </InfoArray>
         <InfoArray index="Build26" Unit="PsiDispersionDevice" Time="82">
             <Button DefaultButtonFace="PsiDisruptor" Requirements="UsePsiDispersionDevice"/>

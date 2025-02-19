@@ -321,6 +321,7 @@
             <LayoutButtons index="12" Face="Scan" Type="AbilCmd" AbilCmd="ScannerSweep,Execute" Column="1"/>
             <LayoutButtons index="13" Face="TrainACV" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+            <LayoutButtons Face="BuildZeusBattleTank" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train3" Row="0" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="SCV" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
@@ -1176,7 +1177,7 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
-        <AbilArray Link="StarcruiserYamatoGun"/>
+        <AbilArray Link="TotalAnnihilation"/>
         <AbilArray Link="Hyperjump"/>
         <AbilArray Link="RagnarokToggle"/>
         <AbilArray Link="RedlineReactor"/>
@@ -1192,14 +1193,14 @@
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="FireOnTheMoveUniversal" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="YamatoCulverin" Type="AbilCmd" AbilCmd="StarcruiserYamatoGun,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="AlphaSquadronDrop" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="TotalDomination" Type="AbilCmd" AbilCmd="TotalAnnihilation,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="HyperjumpStarcruiser" Type="AbilCmd" AbilCmd="Hyperjump,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="RagnarokWeapons" Type="Passive" Requirements="UseRagnarokWeapons" Row="1" Column="1"/>
             <LayoutButtons Face="RedlineReactor" Type="AbilCmd" AbilCmd="RedlineReactor,Execute" Row="2" Column="2"/>
-            <LayoutButtons Face="EnableRagnarok" Type="AbilCmd" AbilCmd="RagnarokToggle,On" Row="2" Column="3"/>
             <LayoutButtons Face="RorkesRedline" Type="Passive" Requirements="UseRorkesRedline" Row="1" Column="2"/>
-            <LayoutButtons Face="EnableBatteries" Type="AbilCmd" AbilCmd="RagnarokToggle,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="EnableRagnarok" Type="AbilCmd" AbilCmd="RagnarokToggle,On" Row="1" Column="3"/>
+            <LayoutButtons Face="EnableBatteries" Type="AbilCmd" AbilCmd="RagnarokToggle,Off" Row="1" Column="4"/>
         </CardLayouts>
         <Radius value="1.4"/>
         <SeparationRadius value="1.4"/>
@@ -2422,14 +2423,13 @@
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="FireOnTheMoveUniversal" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="YamatoCulverin" Type="AbilCmd" AbilCmd="StarcruiserYamatoGun,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="HyperjumpStarcruiser" Type="AbilCmd" AbilCmd="Hyperjump,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="RagnarokWeapons" Type="Passive" Requirements="UseRagnarokWeapons" Row="1" Column="1"/>
             <LayoutButtons Face="RedlineReactor" Type="AbilCmd" AbilCmd="RedlineReactor,Execute" Row="2" Column="2"/>
-            <LayoutButtons Face="EnableRagnarok" Type="AbilCmd" AbilCmd="RagnarokToggle,On" Row="2" Column="3"/>
             <LayoutButtons Face="RorkesRedline" Type="Passive" Requirements="UseRorkesRedline" Row="1" Column="2"/>
-            <LayoutButtons Face="EnableBatteries" Type="AbilCmd" AbilCmd="RagnarokToggle,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="EnableRagnarok" Type="AbilCmd" AbilCmd="RagnarokToggle,On" Row="1" Column="3"/>
+            <LayoutButtons Face="EnableBatteries" Type="AbilCmd" AbilCmd="RagnarokToggle,Off" Row="1" Column="4"/>
         </CardLayouts>
         <Radius value="1.4"/>
         <SeparationRadius value="1.4"/>
@@ -3032,6 +3032,7 @@
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
         <PlaneArray index="Ground" value="1"/>
         <Collide index="Ground" value="1"/>
         <Collide index="Locust" value="1"/>

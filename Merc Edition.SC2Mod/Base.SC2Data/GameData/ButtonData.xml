@@ -24,6 +24,10 @@
         <Icon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
     </CButton>
+    <CButton id="AlphaSquadronDrop">
+        <Icon value="Assets\Textures\talent-raynor-level08-orbitaldroppods.dds"/>
+        <AlertIcon value="Assets\Textures\talent-raynor-level08-orbitaldroppods.dds"/>
+    </CButton>
     <CButton id="ApolloInjectionPods">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -264,12 +268,12 @@
     </CButton>
     <CButton id="UpgradeToPlanetaryFortress"/>
     <CButton id="YamatoCulverin">
-        <Icon value="Assets\Icons and Wireframes\yamatogunmerc.dds"/>
-        <AlertIcon value="Assets\Icons and Wireframes\yamatogunmerc.dds"/>
+        <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
         <EditorCategories value="Race:Terran"/>
         <Universal value="1"/>
     </CButton>
-    <CButton id="YamatoDomination">
+    <CButton id="TotalDomination">
         <Icon value="Assets\Icons and Wireframes\yamatogunmerc.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\yamatogunmerc.dds"/>
         <EditorCategories value="Race:Terran"/>
@@ -421,8 +425,8 @@
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="RedlineReactor">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
     </CButton>
     <CButton id="ReflectiveArmor">
         <Icon value="Assets\Textures\btn-techupgrade-terran-shapedhull.dds"/>
@@ -488,8 +492,8 @@
         <AlertIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
     </CButton>
     <CButton id="RorkesRedline">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
     </CButton>
     <CButton id="SentinelMissilesAres">
         <Icon value="Assets\Textures\btn-ability-terran-unstablepayload.dds"/>

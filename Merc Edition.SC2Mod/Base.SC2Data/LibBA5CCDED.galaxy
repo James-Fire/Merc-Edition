@@ -282,7 +282,7 @@ bool libBA5CCDED_gt_InitAllowingUnits_Func (bool testConds, bool runActions) {
     }
 
     TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_49305883"), true);
-    if ((TechTreeUnitIsAllowed(1, "Bunker") == true)) {
+    if ((TechTreeUpgradeCount(1, "NaniteEmitter", c_techCountCompleteOnly) == 1)) {
         TechTreeUnitAllow(1, "NaniteCloudEmitter", true);
         TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", true);
     }
