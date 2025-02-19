@@ -35,6 +35,9 @@
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModelFoliage>
+    <CModel id="AlphaSquadronDroppod">
+        <Model value="Assets\Units\Terran\MiraHorner_MagMine_Coop_Placement\MiraHorner_MagMine_Coop_Placement.m3"/>
+    </CModel>
     <CModelFoliage id="AmplifiedThermalBurstImpact">
         <Model value="Assets\Effects\Protoss\Scout_Purifier_AOE_AirMissile_Impact\Scout_Purifier_AOE_AirMissile_Impact.m3"/>
     </CModelFoliage>

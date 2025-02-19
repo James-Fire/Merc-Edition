@@ -5,6 +5,34 @@
         <ValidatorArray value="HaveOrbitalDeployment"/>
         <Behavior value="AdrenalineRush"/>
     </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="AlphaSquadronCP">
+        <EditorCategories value=""/>
+        <InitialDelay value="3"/>
+        <FinalEffect value="AlphaSquadronSet"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="AlphaSquadronCUSpartans">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <SpawnEffect value="AlphaSquadronLifeAB"/>
+        <SpawnUnit value="SpartanCompany"/>
+        <SpawnCount value="3"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="AlphaSquadronCUTank">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <SpawnEffect value="AlphaSquadronLifeAB"/>
+        <SpawnUnit value="SiegeBreaker"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="AlphaSquadronLifeAB">
+        <Behavior value="TimedLifeAlphaSquadron"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="AlphaSquadronSet">
+        <EditorCategories value=""/>
+        <EffectArray value="AlphaSquadronCUWarPigs"/>
+        <EffectArray value="AlphaSquadronCUSpartans"/>
+        <EffectArray value="AlphaSquadronCUTank"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
     <CEffectDamage id="BarrageDamage">
         <Death value="Blast"/>
     </CEffectDamage>
@@ -30,6 +58,13 @@
     <CEffectSet id="DropTrainSet">
         <EffectArray value="AdrenalineRushAB"/>
     </CEffectSet>
+    <CEffectCreateUnit id="AlphaSquadronCUWarPigs">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <SpawnEffect value="AlphaSquadronLifeAB"/>
+        <SpawnUnit value="WarPig"/>
+        <SpawnCount value="10"/>
+    </CEffectCreateUnit>
     <CEffectApplyBehavior id="FerrierofSoulsApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="FerrierofSouls"/>
@@ -1855,6 +1890,16 @@
         <PeriodCount value="3"/>
         <PeriodicEffectArray value="PsychoMissilesLMSet"/>
         <PeriodicPeriodArray value="0.125"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="TotalDominationCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="3"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="StarcruiserYamatoLM"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.3"/>
+        <PeriodicPeriodArray value="0.3"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="TriggerOverdriveApplyBehavior">
         <WhichUnit Value="Caster"/>

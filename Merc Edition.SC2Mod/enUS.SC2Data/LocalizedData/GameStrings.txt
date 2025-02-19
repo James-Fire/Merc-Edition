@@ -61,6 +61,7 @@ Abil/Name/TitanDroneMagazine=Drone Magazine
 Abil/Name/TitanDroneMagazineDummy=Drone Magazine Dummy
 Abil/Name/TitanReborn=Titan Reborn
 Abil/Name/TitanWreckage=Titan Wreckage
+Abil/Name/TotalAnnihilation=Total Annihilation
 Abil/Name/Transwarp=Transwarp
 Abil/Name/ZeusLanderTrain=Train
 AspisShield=Aspis Shield
@@ -161,6 +162,7 @@ Button/Name/AdjudicatorCloakingField=Cloaking Field
 Button/Name/AdvancedSiegeOptics=Advanced Siege Optics
 Button/Name/AdvancedSiegeTech=Advanced Siege Tech
 Button/Name/AftermarketRailgunTurret=Aftermarket Railgun Turret
+Button/Name/AlphaSquadronDrop=Alpha Squadron Drop
 Button/Name/ApolloInjectionPods=Apollo Injection Pods
 Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
@@ -295,6 +297,7 @@ Button/Name/TarBomb=Tar Bomb
 Button/Name/TerrazineShots=Terrazine Shots
 Button/Name/ThornShieldSkibidi=Thorn Shield
 Button/Name/ThornShieldWarPig=Thorn Shield
+Button/Name/TotalDomination=Total Domination
 Button/Name/TrainACV=Train ACV
 Button/Name/TrainBlockB=Train Block B
 Button/Name/TrainDevilDog=Train Devil Dog
@@ -309,7 +312,6 @@ Button/Name/U240Rounds=U-240 Rounds
 Button/Name/UpgradeToPlanetaryFortress=Upgrade to Bombardment Fortress
 Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Button/Name/YamatoCulverin=Yamato Culverin
-Button/Name/YamatoDomination=Yamato Domination
 Button/Name/ZeusLanderTacticalJump=Tactical Jump
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Skibi's Angels cost 35% less, no longer need a Tech Lab and are equipped with an automatic healing drone.
@@ -324,6 +326,7 @@ Button/Tooltip/AdvancedSiegeOptics=Siege Breaker sight radius is equal to that o
 Button/Tooltip/AdvancedSiegeTech=Siege Breakers enter and exit siege mode twice as fast, and gain +3 armor in siege mode.
 Button/Tooltip/AftermarketRailgunTurret=Timed turret. Deals damage in a line.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/AlphaSquadronDrop=Deploy 10 War Pigs, 3 Spartan Companies, and 1 Siege Breaker with timed life.
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ApolloInjectionPods=Survivor's Guilt applies when unloading units, with a cooldown. Suvivor's Guilt duration when the Samson is destroyed is doubled.
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
@@ -463,7 +466,7 @@ Button/Tooltip/SgtHammerSieged=Heavy tank. Long-range artillery in Siege Mode.<n
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ShellShower=The more this unit attacks, the faster its attacks become.
 Button/Tooltip/ShimmerScreen=Allows the Dusk Wing to permanently cloak, as well as increasing speed by 25% and reducing damage taken by 15% while cloaked.
-Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius to 1 and suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
+Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius and weapon range, as well as suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
 Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time="14"/>.
 Button/Tooltip/SilentMode=Enter Silent Mode, increasing sight radius, providing cloaking, and gaining the Target Lock ability, but preventing movement or usage of other abilities.
 Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
@@ -486,6 +489,7 @@ Button/Tooltip/ThornShieldSkibidi=Skibi's Angels gain 15 life and deal 5 (+5 vs 
 Button/Tooltip/ThornShieldWarPig=War Pigs and Skibi's Angels gain 15 life and will reflect 5 (+5 vs Shields) melee damage back to the attacker.
 Button/Tooltip/Titan=Heavy assault mech.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TitanWreckage=Heavy assault mech. Can use 250mm Strike Cannons.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TotalDomination=Blasts a target with three consecutive plasma cannon shots, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby with each impact.
 Button/Tooltip/TrainACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/TrainBlockB=Raider. Capable of jumping up and down cliffs. Throws explosive mines.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/TrainDevilDog=Specialized anti-infantry attacker.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -502,7 +506,6 @@ Button/Tooltip/UpgradeToPlanetaryFortress=Adds a powerful turret, and increases 
 Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Light and Biological by 15, and doubles the width of attacks.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/YamatoCulverin=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby.
-Button/Tooltip/YamatoDomination=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby. Stores 3 charges.
 Button/Tooltip/ZeusBattleTank=Armored weapons platform. Can use Target Lock and Sentinel Missiles.<n/><n/><c val="FFFF00">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
@@ -535,6 +538,12 @@ Effect/Name/AdjudicatorWeaponLM=Adjudicator Weapon LM
 Effect/Name/AdjudicatorWeaponSet=Adjudicator Weapon Set
 Effect/Name/AdrenalineRushAB=Adrenaline Rush AB
 Effect/Name/AfterburnersHelsAngelApplyBehavior=AfterburnersHelsAngelApplyBehavior
+Effect/Name/AlphaSquadronCP=Alpha Squadron CP
+Effect/Name/AlphaSquadronCUSpartans=Alpha Squadron CU (Spartans)
+Effect/Name/AlphaSquadronCUTank=Alpha Squadron CU (Tank)
+Effect/Name/AlphaSquadronCUWarPigs=Alpha Squadron CU (War Pigs)
+Effect/Name/AlphaSquadronLifeAB=Alpha Squadron Life AB
+Effect/Name/AlphaSquadronSet=Alpha Squadron Set
 Effect/Name/AnarchistFearIO=Anarchist Fear IO
 Effect/Name/AnarchistFearRP=Anarchist Fear RP
 Effect/Name/AnarchistFearSA=Anarchist Fear SA
@@ -844,6 +853,7 @@ Effect/Name/ThermalBurstLaunchMissile=Thermal Burst Launch Missile
 Effect/Name/ThermalBurstSwitch=Thermal Burst Switch
 Effect/Name/ThornShieldDamage=Thorn Shield Damage
 Effect/Name/TitanWreckageAbil=Titan Wreckage Abil
+Effect/Name/TotalDominationCP=Total Domination CP
 Effect/Name/TriggerOverdriveApplyBehavior=TriggerOverdriveApplyBehavior
 Effect/Name/U-240RoundsBombApplyBehavior=U-240RoundsBombApplyBehavior
 Effect/Name/U-240RoundsBombCreateUnit=U-240 Rounds Bomb Create Unit
@@ -999,6 +1009,7 @@ Upgrade/Name/MacroFilters=Macro Filters
 Upgrade/Name/MercEdition=Merc Edition
 Upgrade/Name/MicroFusionReactor=Micro Fusion Reactor
 Upgrade/Name/MobileStockpile=Mobile Stockpile
+Upgrade/Name/NaniteEmitter=Nanite Emitter
 Upgrade/Name/NanitePulse=Nanite Pulse
 Upgrade/Name/NeosteelCupHolders=Neosteel Cup Holders
 Upgrade/Name/OrbitalBaseDepots=Orbital Base Depots

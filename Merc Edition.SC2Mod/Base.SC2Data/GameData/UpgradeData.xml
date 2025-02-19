@@ -69,6 +69,7 @@
         <EffectArray Reference="Effect,ScorpionMissilesPersistent,PeriodCount" Value="2"/>
         <AffectedUnitArray value="Harrier"/>
     </CUpgrade>
+    <CUpgrade id="NaniteEmitter"/>
     <CUpgrade id="UmojanCellularReactors">
         <Flags index="UpgradeCheat" value="0"/>
         <EffectArray Reference="Unit,DuskWing,EnergyStart" Value="100"/>
