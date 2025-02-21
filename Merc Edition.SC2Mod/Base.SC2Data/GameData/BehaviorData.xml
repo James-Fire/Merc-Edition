@@ -186,6 +186,12 @@
             <AdditiveAttackSpeedFactor value="1.5"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals">
+        <Capacity value="5000"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals750">
+        <Capacity value="5000"/>
+    </CBehaviorResource>
     <CBehaviorBuff id="Inspire">
         <Alignment value="Positive"/>
         <Duration value="1"/>
@@ -228,6 +234,21 @@
         <Limit value="4"/>
         <Slop value="500"/>
     </CBehaviorSpawn>
+    <CBehaviorResource id="MineralFieldMinerals">
+        <Capacity value="5000"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals450">
+        <Capacity value="5000"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals750">
+        <Capacity value="5000"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque">
+        <Capacity value="5000"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque900">
+        <Capacity value="5000"/>
+    </CBehaviorResource>
     <CBehaviorBuff id="Minikin">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
