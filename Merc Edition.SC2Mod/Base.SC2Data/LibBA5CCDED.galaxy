@@ -327,8 +327,8 @@ bool libBA5CCDED_gt_InitAllowingUnits_Func (bool testConds, bool runActions) {
         TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", true);
     }
     else {
-        TechTreeUnitAllow(1, "NaniteCloudEmitter", true);
-        TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", true);
+        TechTreeUnitAllow(1, "NaniteCloudEmitter", false);
+        TechTreeUnitAllow(1, "NaniteCloudEmitterBurrowed", false);
     }
     if ((TechTreeUnitIsAllowed(1, "Bunker") == true)) {
         TechTreeUnitAllow(1, "BunkerBurrowed", true);
