@@ -1,5 +1,5 @@
 ﻿Category/Name/lib_BA5CCDED_0B90820E=Data Shit
-Category/Name/lib_BA5CCDED_2851B9D7=Mission Changes
+Category/Name/lib_BA5CCDED_2851B9D7=Mission Stuff
 Category/Name/lib_BA5CCDED_296AEF25=Banks
 Category/Name/lib_BA5CCDED_320AB634=deprecated
 Category/Name/lib_BA5CCDED_8A555FC0=Easter Eggs
@@ -8,6 +8,7 @@ Category/Name/lib_BA5CCDED_B5DA121D=Init
 Category/Name/lib_BA5CCDED_FFB39B08=Skin Stuff
 FunctionDef/Name/lib_BA5CCDED_0CA79C86=Will Email
 FunctionDef/Name/lib_BA5CCDED_6C39469B=Rescue Zeus
+FunctionDef/Name/lib_BA5CCDED_804C176D=Give Research
 FunctionDef/Name/lib_BA5CCDED_806E5FD1=Ihan-rii-ify
 FunctionDef/Name/lib_BA5CCDED_B3C97889=Spawn Zeus on Game Start
 FunctionDef/Name/lib_BA5CCDED_F9E916E2=Taldarimify
