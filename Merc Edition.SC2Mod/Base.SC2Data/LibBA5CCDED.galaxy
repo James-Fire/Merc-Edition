@@ -96,7 +96,7 @@ bool auto_libBA5CCDED_gf_WillEmail_TriggerFunc (bool testConds, bool runActions)
 
     // Automatic Variable Declarations
     // Implementation
-    libDAB75013_gf_ServicesEmailShow(StringToText("Will"), (lp_emailText + StringExternal("Param/Value/lib_BA5CCDED_3E1626F0")), 17);
+    libDAB75013_gf_ServicesEmailShow(StringToText("Will"), (lp_emailText + StringExternal("Param/Value/lib_BA5CCDED_3E1626F0")), 20);
     return true;
 }
 
@@ -687,7 +687,6 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     auto8C0CF512_val = libCamp_gf_CurrentMap();
     if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor01) {
         libDAB75013_gf_ServicesEmailShow(StringToText("The Mod"), StringExternal("Param/Value/lib_BA5CCDED_DCEB3273"), 17);
-        libDAB75013_gf_ServicesEmailShow(StringToText("Backwater Station Marshal"), StringExternal("Param/Value/lib_BA5CCDED_1CF99CDA"), 17);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor02) {
         libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_BB200BEC"), 17);
