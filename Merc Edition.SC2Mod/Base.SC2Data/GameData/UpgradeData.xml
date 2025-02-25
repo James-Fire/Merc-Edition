@@ -495,8 +495,11 @@
     </CUpgrade>
     <CUpgrade id="RorkesRedline">
         <AffectedUnitArray value="Starcruiser"/>
+        <AffectedUnitArray value="DukesRevengeHero"/>
         <EffectArray Reference="Unit,Starcruiser,ShieldsMax" Value="250"/>
         <EffectArray Reference="Unit,Starcruiser,ShieldsStart" Value="250"/>
+        <EffectArray Reference="Unit,DukesRevengeHero,ShieldsMax" Value="250"/>
+        <EffectArray Reference="Unit,DukesRevengeHero,ShieldsStart" Value="250"/>
     </CUpgrade>
     <CUpgrade id="ShimmerScreen">
         <AffectedUnitArray value="DuskWing"/>

@@ -1,8 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="AlphaSquadron" parent="GenericAttack" effectLaunch="AlphaSquadronLaunchMissile1">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="Center 0" Fallback="Origin"/>
+        <LaunchAssets Model="" Sound=""/>
+        <ImpactMap index="None" Model="" Sound=""/>
+    </CActorAction>
+    <CActorAction id="AlphaSquadron2" parent="GenericAttack" effectLaunch="AlphaSquadronLaunchMissile2">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="Center 0" Fallback="Origin"/>
+        <LaunchAssets Model="" Sound=""/>
+        <Missile value="AlphaSquadronMissile2"/>
+        <ImpactMap index="None" Model="" Sound=""/>
+    </CActorAction>
+    <CActorModel id="AlphaSquadronImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AlphaSquadronCUWarPigs.Start" Send="Create"/>
+        <On Terms="Effect.AlphaSquadronCUTank.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.000000 1.000000"/>
+    </CActorModel>
+    <CActorSound id="AlphaSquadronImpactS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AlphaSquadronCUWarPigs.Start" Send="Create"/>
+        <On Terms="Effect.AlphaSquadronCUTank.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="AlphaSquadronLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AlphaSquadronLaunchMissile1.Start" Send="Create"/>
+        <On Terms="Effect.AlphaSquadronLaunchMissile2.Start" Send="Create"/>
+    </CActorSound>
+    <CActorMissile id="AlphaSquadronMissile" parent="GenericAttackMissile" unitName="AlphaSquadronMissile"/>
+    <CActorMissile id="AlphaSquadronMissile2" parent="GenericAttackMissile" unitName="AlphaSquadronMissile2">
+        <Model value="AlphaSquadronMissile"/>
+    </CActorMissile>
+    <CActorModel id="AlphaSquadronMissileTrail" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.AlphaSquadronMissile" Send="Create"/>
+        <On Terms="UnitCreation.AlphaSquadronMissile2" Send="Create"/>
+        <Host Subject="_Unit"/>
+    </CActorModel>
+    <CActorSimple id="AlphaSquadronOpacity">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.TimedLifeAlphaSquadron.On" Send="Create"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="SetOpacity"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="SetOpacity 1.000000 0.500000"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+    </CActorSimple>
+    <CActorRange id="AlphaSquadronRange" parent="RangeAbil" abil="AlphaSquadron">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorModel id="BarrageModel">
         <On Terms="ActorCreation" Send="Create OdinBarrageAdd"/>
     </CActorModel>
+    <CActorUnit id="SgtHammerTankModeMorphModel" parent="GenericUnitBaseMorphTransition" unitName="MengskSiegeTankTankModeMorphModel">
+        <Aliases value="_UnitLarge"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammer" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammer" Send="AnimPlay End Morph,End"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SgtHammer" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SgtHammerSieged" Send="Destroy"/>
+        <Model value="SgtHammerMorph"/>
+        <DeathArray index="Normal" ModelLink="TerranLargeUnitDeath" SoundLink="SiegeTank_Explode"/>
+        <PortraitModel value="SiegeTankMercenaryPortrait"/>
+        <AbilSoundArray AbilCmd="SiegeMode,Execute" Sound="SiegeTank_SiegeModeVO"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <HighlightTooltip value="Unit/Name/SgtHammerTankModeMorphModel"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <SoundArray index="Ready" value="SiegeTank_Ready"/>
+        <SoundArray index="Help" value="SiegeTank_Help"/>
+        <SoundArray index="What" value="SiegeTank_What"/>
+        <SoundArray index="Yes" value="SiegeTank_Yes"/>
+        <SoundArray index="Attack" value="SiegeTank_Attack"/>
+        <SoundArray index="Pissed" value="SiegeTank_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="SgtHammerSiegeModeMorphModel" parent="GenericUnitBaseMorphTransition" unitName="MengskSiegeTankSiegeModeMorphModel">
+        <Aliases value="_UnitLarge"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammerSieged" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammerSieged" Send="AnimPlay Start Morph,Start"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SgtHammerSieged" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SgtHammer" Send="Destroy"/>
+        <Model value="SgtHammerMorph"/>
+        <DeathArray index="Normal" ModelLink="TerranLargeUnitDeath" SoundLink="SiegeTank_Explode"/>
+        <PortraitModel value="SiegeTankMercenaryPortrait"/>
+        <BarOffset value="65"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-siegemode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-siegetanksiegemode.dds"/>
+        <HighlightTooltip value="Unit/Name/SgtHammerSiegeModeMorphModel"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <SoundArray index="Ready" value="SiegeTank_Ready"/>
+        <SoundArray index="Help" value="SiegeTank_Help"/>
+        <SoundArray index="What" value="SiegeTank_What"/>
+        <SoundArray index="Yes" value="SiegeTank_Yes"/>
+        <SoundArray index="Attack" value="SiegeTank_Attack"/>
+        <SoundArray index="Pissed" value="SiegeTank_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-siegetanksiegemode.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-siegemode.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="OdinBarrageAdd" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <HostSiteOps Ops="SOpTargetPoint OdinBarrageVariance"/>
@@ -89,9 +200,55 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
+    <CActorRange id="PenetratorRoundRange" parent="RangeAbil" abil="PenetratorRound">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorUnit id="SgtHammer" parent="GenericUnitMorph" unitName="SgtHammer">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Behavior.MercGroundDrop.Create" Send="Create SiegeBreakerDropModel"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SiegeBreakerDeath" SoundLink="SiegeBreaker_Explode"/>
+        <PortraitModel value="SiegeTankMercenaryPortrait"/>
+        <StandAnimTurnTime value="3.33"/>
+        <WalkAnimMoveSpeed value="1"/>
+        <AbilSoundArray AbilCmd="SiegeBreakerSiege,Execute" Sound="SiegeTank_SiegeModeVO"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="SiegeTankGroupWhat"/>
+        <GroupSoundArray index="Yes" value="SiegeTankGroupYes"/>
+        <GroupSoundArray index="Attack" value="SiegeTankGroupAttack"/>
+        <GroupSoundArray index="Board" value="SiegeTankGroupBoard"/>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <SoundArray index="Birth" value="SiegeTankBirth"/>
+        <SoundArray index="Ready" value="SiegeBreaker_Ready"/>
+        <SoundArray index="Help" value="SiegeBreaker_Help"/>
+        <SoundArray index="What" value="SiegeBreaker_What"/>
+        <SoundArray index="Yes" value="SiegeBreaker_Yes"/>
+        <SoundArray index="Attack" value="SiegeBreaker_Attack"/>
+        <SoundArray index="Pissed" value="SiegeBreaker_Pissed"/>
+        <SoundArray index="Movement" value="SiegeTankMovement"/>
+        <SoundArray index="Turning" value="SiegeTankTurning"/>
+        <SoundArray index="Board" value="SiegeTankBoard"/>
+        <SoundArray index="Click" value="SiegeTankClick"/>
+        <SoundArray index="ClickError" value="SiegeTankClickError"/>
+        <SoundArray index="Highlight" value="SiegeTankHighlight"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorSound id="StarcruiserYamatoChargeUp" parent="SoundContinuous">
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="Create"/>
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="Destroy"/>
+        <On Terms="Abil.TotalAnnihilation.SourcePrepStart" Send="Create"/>
+        <On Terms="Abil.TotalAnnihilation.SourcePrepStop" Send="Destroy"/>
         <Host Subject="_Selectable"/>
     </CActorSound>
     <CActorAction id="StarcruiserYamatoAttack" parent="GenericAttack" effectImpact="StarcruiserYamatoDamage" effectLaunch="StarcruiserYamatoLM">
@@ -781,32 +938,10 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
-    <CActorUnit id="SgtHammer" parent="GenericUnitMorph" unitName="SgtHammer">
-        <Aliases value="_UnitLarge"/>
-        <Macros value="UnloadDropAnim"/>
-        <On Terms="Behavior.MercGroundDrop.Create" Send="Create SiegeBreakerDropModel"/>
-        <ModelFlags index="OutlineEmitter" value="1"/>
-        <DeathArray index="Normal" ModelLink="SiegeBreakerDeath" SoundLink="SiegeBreaker_Explode"/>
-        <PortraitModel value="SgtHammerPortrait"/>
-        <StandAnimTurnTime value="3.33"/>
-        <WalkAnimMoveSpeed value="1"/>
-        <BarOffset value="80"/>
-        <BarWidth value="102"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
-        <NameOffset value="50"/>
-        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
-        </Wireframe>
-    </CActorUnit>
     <CActorAction id="SgtHammerNapalm" parent="GenericAttack" effectImpact="SgtHammerNapalmSet" effectLaunch="SgtHammerNapalmLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
         <LaunchAssets Model="NapalmLaunchModel" Sound="NapalmLaunch"/>
-        <ImpactMap index="None" Sound="Spell_Fireball_Impact"/>
+        <ImpactMap index="None" Model="NapalmImpactModel" Sound="Spell_Fireball_Impact"/>
     </CActorAction>
     <CActorSound id="SgtHammerNapalmLoop" parent="SoundContinuous">
         <EditorCategories value=""/>
@@ -860,6 +995,10 @@
         <On Terms="Behavior.SurvivorsGuiltApollo.On" Send="Create"/>
         <On Terms="Behavior.AdrenalineRush.On" Send="Create"/>
     </CActorSound>
+    <CActorRange id="TotalAnnihilationRange" parent="RangeAbil" abil="TotalAnnihilation">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>

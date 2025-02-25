@@ -24,7 +24,7 @@
         <Icon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-autoturretblackops.dds"/>
     </CButton>
-    <CButton id="AlphaSquadronDrop">
+    <CButton id="AlphaSquadron">
         <Icon value="Assets\Textures\talent-raynor-level08-orbitaldroppods.dds"/>
         <AlertIcon value="Assets\Textures\talent-raynor-level08-orbitaldroppods.dds"/>
     </CButton>
@@ -40,6 +40,10 @@
     <CButton id="DemonRockets">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+    </CButton>
+    <CButton id="DukesRevenge">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
     </CButton>
     <CButton id="Hellraiser">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
@@ -193,8 +197,8 @@
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
     </CButton>
     <CButton id="NapalmStrike">
-        <Icon value="Assets\Textures\kaeocube.dds"/>
-        <AlertIcon value="Assets\Textures\kaeocube.dds"/>
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="NeoTitaniumPlating">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -257,6 +261,10 @@
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-marauder-hammermunitions.dds"/>
     </CButton>
     <CButton id="SgtHammerSiegeMode">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="SgtHammerTankMode">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>

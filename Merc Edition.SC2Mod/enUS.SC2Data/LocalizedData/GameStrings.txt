@@ -2,6 +2,7 @@
 Abil/Name/ARESTargetLock=Target Lock
 Abil/Name/ActivateUranus=Activate Uranus
 Abil/Name/AdjudicatorArmMagazineNuke=Arm Magazine (Nuke)
+Abil/Name/AlphaSquadron=Alpha Squadron
 Abil/Name/AspisBlink=Aspis Blink
 Abil/Name/BunkerLower=Lower
 Abil/Name/BunkerRaise=Raise
@@ -102,6 +103,7 @@ Behavior/Name/RevivalFieldCooldown=Revival Field Cooldown
 Behavior/Name/RevivalFieldDodge=Revival Field Dodge
 Behavior/Name/RipperRounds=Ripper Rounds
 Behavior/Name/SecretStashStimpack=Secret Stash Stimpack
+Behavior/Name/SgtHammerSieged=Sgt Hammer Sieged
 Behavior/Name/ShellShower=Shell Shower
 Behavior/Name/SignalFlareTimedLife=Signal Flare Timed Life
 Behavior/Name/SquadSightAres=Squad Sight
@@ -162,7 +164,7 @@ Button/Name/AdjudicatorCloakingField=Cloaking Field
 Button/Name/AdvancedSiegeOptics=Advanced Siege Optics
 Button/Name/AdvancedSiegeTech=Advanced Siege Tech
 Button/Name/AftermarketRailgunTurret=Aftermarket Railgun Turret
-Button/Name/AlphaSquadronDrop=Alpha Squadron Drop
+Button/Name/AlphaSquadron=Alpha Squadron
 Button/Name/ApolloInjectionPods=Apollo Injection Pods
 Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
@@ -210,6 +212,7 @@ Button/Name/DevastatorOverride=Devastator Override
 Button/Name/DevilDogGrapple=Jump Jets
 Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/DivineArmor=Divine Armor
+Button/Name/DukesRevenge=Duke's Revenge
 Button/Name/ED067=ED-067
 Button/Name/EidolonSuit=Eidolon Suit
 Button/Name/EnableBatteries=Enable Batteries
@@ -277,6 +280,7 @@ Button/Name/RorkesRedline=Rorke's Redline
 Button/Name/SecretStashStimpack=Secret Stash Stimpack
 Button/Name/SentinelMissilesAres=Sentinel Missiles
 Button/Name/SgtHammerSiegeMode=Siege Mode
+Button/Name/SgtHammerTankMode=Tank Mode
 Button/Name/ShellShower=Shell Shower
 Button/Name/ShimmerScreen=Shimmer Screen
 Button/Name/SignalFlare=Signal Flare
@@ -326,7 +330,7 @@ Button/Tooltip/AdvancedSiegeOptics=Siege Breaker sight radius is equal to that o
 Button/Tooltip/AdvancedSiegeTech=Siege Breakers enter and exit siege mode twice as fast, and gain +3 armor in siege mode.
 Button/Tooltip/AftermarketRailgunTurret=Timed turret. Deals damage in a line.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
-Button/Tooltip/AlphaSquadronDrop=Deploy 10 War Pigs, 3 Spartan Companies, and 1 Siege Breaker with timed life.
+Button/Tooltip/AlphaSquadron=Deploy 15 War Pigs, 5 Spartan Companies, and 1 Siege Breaker with timed life.
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ApolloInjectionPods=Survivor's Guilt applies when unloading units, with a cooldown. Suvivor's Guilt duration when the Samson is destroyed is doubled.
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
@@ -377,6 +381,7 @@ Button/Tooltip/DevastatorOverride=Replaces main attack with a stronger one, has 
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/DivineArmor=Titans have a base armor of 3.
+Button/Tooltip/DukesRevenge=This capital ship dates back to the early days of the Terran Dominion just after the loss of General Duke to the Queen of Blades.  It has had multiple captains over the years and is said to be haunted by the Generals ghost. <n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/DukesRevengeHero=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ED067=Apex Security Partnership's ED-067, a peacekeeping machine designed for urban pacification, malfunctioned during its first demonstration, killing junior executive Mr. Losumn. Dr. Rorke and technicians struggled to control the faulty robot, shutting it down.  The Predator program was given green-light due to the Losumn tragedy and due to rumors of the Enforcement Droid series using salvaged Dragoon parts from the first war.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
@@ -463,6 +468,7 @@ Button/Tooltip/SentinelMissilesAres=Fires a missile that deals 145 (+35 vs Shiel
 Button/Tooltip/SgtHammer=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/SgtHammerSiegeMode=Deploys into Siege Mode. In this mode, Sgt. Hammer has very long range and inflicts area damage. Sgt. Hammer in this mode cannot move or attack targets at close range.
 Button/Tooltip/SgtHammerSieged=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/SgtHammerTankMode=Return to tank mode.
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ShellShower=The more this unit attacks, the faster its attacks become.
 Button/Tooltip/ShimmerScreen=Allows the Dusk Wing to permanently cloak, as well as increasing speed by 25% and reducing damage taken by 15% while cloaked.
@@ -542,7 +548,10 @@ Effect/Name/AlphaSquadronCP=Alpha Squadron CP
 Effect/Name/AlphaSquadronCUSpartans=Alpha Squadron CU (Spartans)
 Effect/Name/AlphaSquadronCUTank=Alpha Squadron CU (Tank)
 Effect/Name/AlphaSquadronCUWarPigs=Alpha Squadron CU (War Pigs)
+Effect/Name/AlphaSquadronLaunchMissile1=Alpha Squadron Launch Missile 1
+Effect/Name/AlphaSquadronLaunchMissile2=Alpha Squadron Launch Missile 2
 Effect/Name/AlphaSquadronLifeAB=Alpha Squadron Life AB
+Effect/Name/AlphaSquadronPrecursor=Alpha Squadron Precursor
 Effect/Name/AlphaSquadronSet=Alpha Squadron Set
 Effect/Name/AnarchistFearIO=Anarchist Fear IO
 Effect/Name/AnarchistFearRP=Anarchist Fear RP
@@ -901,6 +910,7 @@ Param/Value/lib_BA5CCDED_EB59D18A=Now this brings back memories from childhood, 
 Param/Value/lib_BA5CCDED_F6524727=Not much to be made here sadly... although with the Zerg infesting the civilian settlements we could technically let them become infested and then purge them so we can sell the scraps to make a profit. If we do this the infested attacks will be much stronger from the full infestations, so be prepared.  Just don't take too long to take action, the Protoss are still hanging around and I have no idea just how charitable they are willing to be.
 Param/Value/lib_BA5CCDED_F7435DD6=Generic Diffculty On
 Param/Value/lib_BA5CCDED_FFD64A4A=Russian roulette with a sun about to go supernova should be above our paygrade. But on the bright side, pun intended, that fire wave won't reach us for a while and we will only have to deal with severe weather anomalies for the time being, so lets make this quick before we all get blown to hell.  
+RequirementNode/Tooltip/CountBehaviorSgtHammerSiegedCompleteOnlyAtUnit2462428351=Must be sieged
 SkibidiSkibidiHeHeHaHa=x2
 StarcruiserShields=Shield Generator
 StarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevenge2ShieldsStarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevengeHeroShields=Shield Generator
@@ -910,6 +920,8 @@ Unit/Name/ARESMissileMissile=ARES Missile Missile
 Unit/Name/ARESWarbotMercMod=Zeus Battle Tank
 Unit/Name/Adjudicator=Adjudicator
 Unit/Name/Agitator=Agitator
+Unit/Name/AlphaSquadronMissile=Alpha Squadron Missile
+Unit/Name/AlphaSquadronMissile2=Alpha Squadron Missile 2
 Unit/Name/Anarchist=Anarchist
 Unit/Name/BioMechanicalRepairDrone=Bio-Mechanical Repair Drone
 Unit/Name/BombardmentFortress=Bombardment Fortress

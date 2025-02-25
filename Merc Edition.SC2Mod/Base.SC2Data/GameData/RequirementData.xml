@@ -21,6 +21,9 @@
     <CRequirement id="MineDroneBuild">
         <NodeArray index="Use" Link="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit2"/>
     </CRequirement>
+    <CRequirement id="SgtHammerIsSieged">
+        <NodeArray index="Use" Link="CountBehaviorSgtHammerSiegedCompleteOnlyAtUnit2462428351"/>
+    </CRequirement>
     <CRequirement id="TechLaborMedicUpgrade">
         <EditorCategories value="Race:Terran,TechType:Unit"/>
         <NodeArray index="Use" Link="OrCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUpgradeAIEnhancementCompleteOnly"/>

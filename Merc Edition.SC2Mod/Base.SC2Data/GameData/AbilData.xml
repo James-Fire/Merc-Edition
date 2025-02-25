@@ -25,6 +25,18 @@
         </InfoArray>
         <CalldownEffect value="Nuke"/>
     </CAbilArmMagazine>
+    <CAbilEffectTarget id="AlphaSquadron">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AlphaSquadronCP"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="42"/>
+        </Cost>
+        <Range value="5"/>
+        <Arc value="360"/>
+        <CursorRangeMode value="ForceToMax"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlphaSquadron"/>
+    </CAbilEffectTarget>
     <CAbilBuild id="BarracksAddOns">
         <InfoArray index="Build4" Time="28"/>
     </CAbilBuild>
@@ -203,13 +215,12 @@
     <CAbilEffectTarget id="SgtHammerNapalm">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SgtHammerNapalmLaunchMissile"/>
-        <Flags index="Transient" value="1"/>
         <Cost>
             <Cooldown TimeUse="42"/>
         </Cost>
         <Range value="11"/>
         <Arc value="360"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="NapalmStrike"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NapalmStrike" Requirements="SgtHammerIsSieged"/>
     </CAbilEffectTarget>
     <CAbilMorph id="SgtHammerUnsiege">
         <AbilSetId value="Unsieged"/>
@@ -262,7 +273,7 @@
         <AbilSetId value="yamato"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <DataCollection value="StarcruiserYamatoGun"/>
-        <Effect index="0" value="StarcruiserYamatoLM"/>
+        <Effect index="0" value="TotalDominationCP"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="NoDeceleration" value="1"/>
         <Cost>
@@ -445,7 +456,7 @@
         <Effect index="0" value="ARESMissileLaunchMissile"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
-        <Flags index="Transient" value="1"/>
+        <Flags index="TransientPreferred" value="1"/>
         <Cost>
             <Charge>
                 <CountMax value="2"/>

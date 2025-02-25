@@ -58,6 +58,17 @@
             <YawPitchRoll value="5568.75"/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="AlphaSquadronMissile">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="25"/>
+            <Outro value="-1"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverMissile id="DevastatorMissilesMercMissile" parent="LiberatorAGMissile">
         <MotionPhases index="0">
             <Driver value="Ballistic"/>

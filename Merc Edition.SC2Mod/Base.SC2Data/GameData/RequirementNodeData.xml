@@ -17,9 +17,12 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="NomadSilentMode" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorSgtHammerSiegedCompleteOnlyAtUnit2462428351">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SgtHammerSieged" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
     <CRequirementCountUnit id="CountUnitAlias_SpiderMineCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="Alias_SpiderMine" State="CompleteOnlyAtUnit"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeAIEnhancementCompleteOnly">
@@ -239,7 +242,6 @@
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
     <CRequirementLT id="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit2">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="SumCountUnitAlias_SpiderMineCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="2"/>
     </CRequirementLT>
@@ -265,7 +267,6 @@
         <OperandArray value="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
     </CRequirementOr>
     <CRequirementSum id="SumCountUnitAlias_SpiderMineCompleteOnlyAtUnit">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="CountUnitAlias_SpiderMineCompleteOnlyAtUnit"/>
     </CRequirementSum>
 </Catalog>

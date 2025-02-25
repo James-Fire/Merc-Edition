@@ -35,8 +35,14 @@
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModelFoliage>
-    <CModel id="AlphaSquadronDroppod">
-        <Model value="Assets\Units\Terran\MiraHorner_MagMine_Coop_Placement\MiraHorner_MagMine_Coop_Placement.m3"/>
+    <CModel id="AlphaSquadronImpact">
+        <Model value="Assets\Effects\Zerg\BurrowChargeImpact\BurrowChargeImpact.m3"/>
+    </CModel>
+    <CModel id="AlphaSquadronMissile">
+        <Model value="Assets\Models\DropPodFalling_Missile.m3"/>
+        <AnimSpeed value="1.500000"/>
+        <ScaleMax value="0.800000,0.900000,0.800000"/>
+        <ScaleMin value="0.800000,0.900000,0.800000"/>
     </CModel>
     <CModelFoliage id="AmplifiedThermalBurstImpact">
         <Model value="Assets\Effects\Protoss\Scout_Purifier_AOE_AirMissile_Impact\Scout_Purifier_AOE_AirMissile_Impact.m3"/>
@@ -162,8 +168,41 @@
             <Time value="1.600000"/>
         </Events>
     </CModel>
+    <CModel id="NapalmImpactModel">
+        <Model value="Assets\Effects\Zerg\YagdraFireBallMissileImpact\YagdraFireBallMissileImpact.m3"/>
+    </CModel>
     <CModel id="OdinBarrageAdd" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\Raven_Shredder_Missile_MP_Impact\Raven_Shredder_Missile_MP_Impact.m3"/>
+    </CModel>
+    <CModel id="SgtHammer" parent="Unit">
+        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Tank\SiegeTank_CovertOps_Collection_Tank.m3"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.050000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid08"/>
+    </CModel>
+    <CModel id="SgtHammerMorph" Prefix="Units\" Race="Neutral">
+        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Morph\SiegeTank_CovertOps_Collection_Morph.m3"/>
+        <Lighting value="MengskSiegeTankSiegedMorph"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.050000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
     </CModel>
     <CModel id="StarcruiserYamatoImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\CerberusYamatoMissileImpact\CerberusYamatoMissileImpact.m3"/>
@@ -204,9 +243,11 @@
     </CModel>
     <CModel id="NapalmLaunchModel">
         <Model value="Assets\Effects\Terran\SiegeTankWeaponLaunch\SiegeTankWeaponLaunch.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
     <CModel id="NeoTitaniumGlaze">
-        <Model value="Assets\Effects\Glaze\Glaze_Dehaka_LevelUp\Glaze_Dehaka_LevelUp.m3"/>
+        <Model value="Assets\Effects\Glaze\Glaze_Fenix_AI_Champion\Glaze_Fenix_AI_Champion.m3"/>
     </CModel>
     <CModel id="PortraitFreyja" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Models\Valkyrie_Freya_Portrait_Final.m3"/>
@@ -513,40 +554,21 @@
     <CModel id="RipperRounds">
         <Model value="Assets\Effects\Terran\Raven_Shredder_Missile_MP_ImpactDebuff\Raven_Shredder_Missile_MP_ImpactDebuff.m3"/>
     </CModel>
-    <CModel id="SgtHammer" parent="Unit">
-        <Model value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base_v07.m3"/>
-        <RequiredAnims value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base.m3a"/>
-        <AttachProps Id="Ref_Hardpoint">
-            <Keys index="Turret" value="0"/>
-        </AttachProps>
-        <EditorCategories value="Race:Terran"/>
-        <Occlusion value="Show"/>
-        <Radius value="1.050000"/>
-        <ScaleMax value="0.900000,0.900000,0.900000"/>
-        <ScaleMin value="0.900000,0.900000,0.900000"/>
-        <SelectionRadius value="1.250000"/>
-        <ShadowRadius value="1.250000"/>
-        <Tipability value="0.750000"/>
-        <TipabilityLength value="0.800000"/>
-        <TipabilityWidth value="0.400000"/>
-        <UnitGlossaryCamera value="Star2CameraMid08"/>
-    </CModel>
     <CModel id="SgtHammerNapalmMissile">
         <Model value="Assets\Effects\Terran\ArcadeVikingMissile\ArcadeVikingMissile.m3"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
     <CModel id="SgtHammerSieged" parent="Unit">
-        <Model value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base_v07.m3"/>
-        <RequiredAnims value="Assets\Models\Sgt Hammer\storm_hero_sgthammer_base.m3a"/>
+        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection\SiegeTank_CovertOps_Collection.m3"/>
         <AttachProps Id="Ref_Hardpoint">
             <Keys index="Turret" value="0"/>
         </AttachProps>
         <EditorCategories value="Race:Terran"/>
         <Occlusion value="Show"/>
         <Radius value="1.050000"/>
-        <ScaleMax value="0.900000,0.900000,0.900000"/>
-        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
         <SelectionRadius value="1.250000"/>
         <ShadowRadius value="1.250000"/>
         <Tipability value="0.750000"/>

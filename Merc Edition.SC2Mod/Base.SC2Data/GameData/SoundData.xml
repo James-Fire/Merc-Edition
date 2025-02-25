@@ -26,6 +26,20 @@
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="AlphaSquadronImpactS" parent="Combat">
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy02.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="AlphaSquadronLaunch" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\DropPod\DropPod_Impact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\DropPod\DropPod_Impact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\DropPod\DropPod_Impact2.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
     <CSound id="AmplifiedThermalBurstImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Thrasher_Missile_Impact_02.wav" FacialGroup=""/>
@@ -480,10 +494,7 @@
     <CSound id="FreyjaHellraiserMusicEasterEgg" parent="Combat">
         <AssetArray File="Assets\Sounds\we makin it outta the koprulu sector with this one boys.mp3" Weight="6" FacialGroup=""/>
         <Mode value="2D"/>
-        <Volume value="-6.000000,-6.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="28.783070" Volume="-0.640000"/>
-        <VolumeRolloffPoints Distance="34.391537" Volume="-96.000000"/>
+        <Volume value="-15.000000,-15.000000"/>
     </CSound>
     <CSound id="InspireApply" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch0.wav" FacialGroup=""/>
@@ -607,7 +618,7 @@
         <AssetArray File="Assets\Sounds\NeedlesInTheRed.mp3" FacialGroup=""/>
         <DupeDestroyCount value="1"/>
         <DupeMuteCount value="1"/>
-        <Volume value="-8.000000,-8.000000"/>
+        <Volume value="-15.000000,-15.000000"/>
     </CSound>
     <CSound id="RevivalFieldDodgeSound" parent="Combat">
         <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact01_1ch.wav" FacialGroup=""/>

@@ -7,31 +7,55 @@
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="AlphaSquadronCP">
         <EditorCategories value=""/>
-        <InitialDelay value="3"/>
         <FinalEffect value="AlphaSquadronSet"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="AlphaSquadronLaunchMissile1"/>
+        <PeriodicEffectArray value="AlphaSquadronLaunchMissile1"/>
+        <PeriodicEffectArray value="AlphaSquadronLaunchMissile1"/>
+        <PeriodicEffectArray value="AlphaSquadronLaunchMissile1"/>
+        <PeriodicEffectArray value="AlphaSquadronLaunchMissile2"/>
+        <PeriodicOffsetArray value="2,2,0"/>
+        <PeriodicOffsetArray value="2,-2,0"/>
+        <PeriodicOffsetArray value="-2,2,0"/>
+        <PeriodicOffsetArray value="-2,-2,0"/>
+        <PeriodicOffsetArray value="0,0,0"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.1"/>
+        <PeriodicPeriodArray value="0.1"/>
+        <PeriodicPeriodArray value="0.1"/>
+        <PeriodicPeriodArray value="0.1"/>
     </CEffectCreatePersistent>
     <CEffectCreateUnit id="AlphaSquadronCUSpartans">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetUnitOrPoint"/>
-        <SpawnEffect value="AlphaSquadronLifeAB"/>
+        <SpawnEffect value="AlphaSquadronPrecursor"/>
         <SpawnUnit value="SpartanCompany"/>
-        <SpawnCount value="3"/>
     </CEffectCreateUnit>
     <CEffectCreateUnit id="AlphaSquadronCUTank">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetUnitOrPoint"/>
-        <SpawnEffect value="AlphaSquadronLifeAB"/>
+        <SpawnEffect value="AlphaSquadronPrecursor"/>
         <SpawnUnit value="SiegeBreaker"/>
     </CEffectCreateUnit>
+    <CEffectLaunchMissile id="AlphaSquadronLaunchMissile1">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="AlphaSquadronSet"/>
+        <AmmoUnit value="AlphaSquadronMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="AlphaSquadronLaunchMissile2">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="AlphaSquadronCUTank"/>
+        <AmmoUnit value="AlphaSquadronMissile2"/>
+    </CEffectLaunchMissile>
     <CEffectApplyBehavior id="AlphaSquadronLifeAB">
         <Behavior value="TimedLifeAlphaSquadron"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="AlphaSquadronPrecursor"/>
     <CEffectSet id="AlphaSquadronSet">
         <EditorCategories value=""/>
         <EffectArray value="AlphaSquadronCUWarPigs"/>
         <EffectArray value="AlphaSquadronCUSpartans"/>
-        <EffectArray value="AlphaSquadronCUTank"/>
-        <TargetLocationType value="UnitOrPoint"/>
+        <TargetLocationType value="Point"/>
     </CEffectSet>
     <CEffectDamage id="BarrageDamage">
         <Death value="Blast"/>
@@ -61,9 +85,9 @@
     <CEffectCreateUnit id="AlphaSquadronCUWarPigs">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetUnitOrPoint"/>
-        <SpawnEffect value="AlphaSquadronLifeAB"/>
+        <SpawnEffect value="AlphaSquadronPrecursor"/>
         <SpawnUnit value="WarPig"/>
-        <SpawnCount value="10"/>
+        <SpawnCount value="3"/>
     </CEffectCreateUnit>
     <CEffectApplyBehavior id="FerrierofSoulsApplyBehavior">
         <WhichUnit Value="Caster"/>
@@ -167,14 +191,17 @@
     <CEffectApplyBehavior id="OdinBarrageStunAB">
         <Behavior value="OdinBarrageStun"/>
     </CEffectApplyBehavior>
+    <CEffectEnumArea id="PsiDisruptionSearchArea">
+        <AreaArray index="0" Radius="12"/>
+    </CEffectEnumArea>
     <CEffectDamage id="PsiDisruptorDamage">
-        <ValidatorArray value="IsZerg"/>
         <EditorCategories value=""/>
         <Amount value="1"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="PsiDisruptorDamageAB">
         <EditorCategories value=""/>
         <Behavior value="PsiDisruptorDamage"/>
+        <ValidatorArray index="0" value="IsZerg"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="PsiDisruptorDamageSearch">
         <EditorCategories value=""/>
