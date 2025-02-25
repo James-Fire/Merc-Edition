@@ -767,6 +767,24 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner05S) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_43C4D1C9"));
     }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus01) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_F8323256"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus02) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_78065552"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus03) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_282AB58B"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus04) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_ECD48030"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus05) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_5A4E5173"));
+    }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson01) {
         libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_56622040"), 17);
     }
@@ -820,24 +838,6 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02B) {
         libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_7739C6CF"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Terrran Oceanic Research Group"), StringExternal("Param/Value/lib_BA5CCDED_DDE1D7AD"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_A7360F0B"), 17);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus03) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_3A3BE184"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus04) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_FFD64A4A"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus05) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_242B25A5"), 17);
     }
     else {
     }
