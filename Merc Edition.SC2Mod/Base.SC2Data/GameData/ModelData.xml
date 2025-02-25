@@ -174,6 +174,397 @@
     <CModel id="OdinBarrageAdd" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\Raven_Shredder_Missile_MP_Impact\Raven_Shredder_Missile_MP_Impact.m3"/>
     </CModel>
+    <CModel id="Separatist" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\DOM_Grunt\DOM_Grunt.m3"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.219000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="SeparatistAttackImpact" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SeparatistBunkerAttackLaunch" parent="SeparatistAttackLaunch"/>
+    <CModel id="SeparatistDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\DOM_Grunt_Death\DOM_Grunt_Death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Blood_Spary"/>
+            <Type value="Sound"/>
+            <Time value="0.031000"/>
+            <Payload value="Blood_Spary"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Silentkill,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="1.010000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.921000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.361000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.582000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="2.068000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="SeparatistDeath_Eviscerate" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\DOM_Grunt_Death_Eviscerate\DOM_Grunt_Death_Eviscerate.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BodySplit"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Separatist_Death_Evis_BodySplit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="0.156000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BodyParts_01"/>
+            <Type value="Sound"/>
+            <Time value="1.334000"/>
+            <Payload value="Separatist_Death_Evis_BodyParts_01"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BodyFall"/>
+            <Type value="Sound"/>
+            <Time value="0.675000"/>
+            <Payload value="Separatist_Death_Evis_BodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="1.828000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BloodRuns"/>
+            <Type value="Sound"/>
+            <Time value="0.286000"/>
+            <Payload value="Separatist_Death_Evis_BloodRuns"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_BodySplit"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Separatist_Death_Evis_BodySplit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="0.059000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_BodyFall"/>
+            <Type value="Sound"/>
+            <Time value="0.750000"/>
+            <Payload value="Separatist_Death_Evis_BodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="1.077000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_BodyParts_01"/>
+            <Type value="Sound"/>
+            <Time value="1.573000"/>
+            <Payload value="Separatist_Death_Evis_BodyParts_01"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_LegsRunWild"/>
+            <Type value="Sound"/>
+            <Time value="0.059000"/>
+            <Payload value="Separatist_Death_Evis_LegsRunWild"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Separatist_Death_Evis_BodySplit"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Separatist_Death_Evis_BodySplit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="0.059000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Separatist_Death_Evis_BodyFall"/>
+            <Type value="Sound"/>
+            <Time value="0.642000"/>
+            <Payload value="Separatist_Death_Evis_BodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="1.077000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Separatist_Death_Evis_LegsRunWild"/>
+            <Type value="Sound"/>
+            <Time value="0.576000"/>
+            <Payload value="Separatist_Death_Evis_LegsRunWild"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="SoundFollowContinuous"/>
+            <Type value="Sound"/>
+            <Time value="0.576000"/>
+            <Payload value="Separatist_Death_Evis_FeetRunWild"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Separatist_Death_Evis_LegsFallDown"/>
+            <Type value="Sound"/>
+            <Time value="4.503000"/>
+            <Payload value="Separatist_Death_Evis_LegsFallDown"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="Separatist_Death_Evis_BodyParts_01"/>
+            <Type value="Sound"/>
+            <Time value="5.235000"/>
+            <Payload value="Separatist_Death_Evis_BodyParts_01"/>
+        </Events>
+        <Events>
+            <Anim value="Death,03"/>
+            <Name value="Separatist_Death_Evis_BodySplit"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Separatist_Death_Evis_BodySplit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,03"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="0.037000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Events>
+            <Anim value="Death,03"/>
+            <Name value="Separatist_Death_Evis_BodyFall"/>
+            <Type value="Sound"/>
+            <Time value="0.807000"/>
+            <Payload value="Separatist_Death_Evis_BodyFall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,03"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="1.506000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Anim value="Death,03"/>
+            <Name value="Separatist_Death_Evis_BodyParts_02"/>
+            <Type value="Sound"/>
+            <Time value="1.511000"/>
+            <Payload value="Separatist_Death_Evis_BodyParts_02"/>
+        </Events>
+        <Events>
+            <Anim value="Death,03"/>
+            <Name value="Separatist_Death_Evis_BloodRuns"/>
+            <Type value="Sound"/>
+            <Time value="2.019000"/>
+            <Payload value="Separatist_Death_Evis_BloodRuns"/>
+        </Events>
+        <Events>
+            <Anim value="Death,03"/>
+            <Name value="Separatist_Death_Evis_LegsRunWild"/>
+            <Type value="Sound"/>
+            <Time value="0.038000"/>
+            <Payload value="Separatist_Death_Evis_LegsRunWild"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BloodRuns"/>
+            <Type value="Sound"/>
+            <Time value="1.252000"/>
+            <Payload value="Separatist_Death_Evis_BloodRuns"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="0.031000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="3.263000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="1.252000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="3.332000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="1.924000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_BloodRuns"/>
+            <Type value="Sound"/>
+            <Time value="1.194000"/>
+            <Payload value="Separatist_Death_Evis_BloodRuns"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="0.031000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,01"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="3.263000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="1.194000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_WeaponHit"/>
+            <Type value="Sound"/>
+            <Time value="3.332000"/>
+            <Payload value="Separatist_Death_Evis_WeaponHit"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,01"/>
+            <Name value="Separatist_Death_Evis_BloodSpray"/>
+            <Type value="Sound"/>
+            <Time value="1.924000"/>
+            <Payload value="Separatist_Death_Evis_BloodSpray"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <VariationCount value="2"/>
+    </CModel>
+    <CModel id="SeparatistDeath_Fire" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\DOM_Grunt_DeathFire\DOM_Grunt_DeathFire.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Events>
+            <Anim value="Death,Fire,01"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="2.789000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="SeparatistDeath_Ragdoll" parent="UnitDeathRagdoll" Race="Terran">
+        <Model value="Assets\Units\Terran\DOM_Grunt_DeathRagdoll\DOM_Grunt_DeathRagdoll.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Body_Fall_Weapon"/>
+            <Type value="Sound"/>
+            <Time value="0.068000"/>
+            <Payload value="Body_Fall_Weapon"/>
+        </Events>
+    </CModel>
+    <CModel id="SeparatistPortrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\DoMGrunt_Portrait\DoMGrunt_Portrait.m3"/>
+        <Image value="Assets\Textures\domgruntportrait_static.dds"/>
+    </CModel>
     <CModel id="SgtHammer" parent="Unit">
         <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Tank\SiegeTank_CovertOps_Collection_Tank.m3"/>
         <AttachProps Id="Ref_Hardpoint">

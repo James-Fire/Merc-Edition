@@ -16,6 +16,8 @@ bool libBA5CCDED_gv_easterEggActive;
 // Function Declarations
 void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition);
 void libBA5CCDED_gf_RescueZeus (unit lp_zeus);
+void libBA5CCDED_gf_WillEmail (text lp_emailText);
+void libBA5CCDED_gf_GiveResearch (unit lp_unitPoint, int lp_researchCount, int lp_researchType);
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 void libBA5CCDED_gf_Ihanriiify (playergroup lp_players);
 
@@ -47,6 +49,7 @@ trigger libBA5CCDED_gt_NomadSilentModeHeightUp;
 trigger libBA5CCDED_gt_NomadSilentModeHeightDown;
 trigger libBA5CCDED_gt_SamsonZeusInjectionPods;
 trigger libBA5CCDED_gt_NaniteEmitterBurrow;
+trigger libBA5CCDED_gt_SkibisAngelsCleansing;
 
 // Library Initialization
 void libBA5CCDED_InitVariables ();

@@ -78,6 +78,81 @@ bool auto_libBA5CCDED_gf_RescueZeus_TriggerFunc (bool testConds, bool runActions
     return true;
 }
 
+trigger auto_libBA5CCDED_gf_WillEmail_Trigger = null;
+text auto_libBA5CCDED_gf_WillEmail_lp_emailText;
+
+void libBA5CCDED_gf_WillEmail (text lp_emailText) {
+    auto_libBA5CCDED_gf_WillEmail_lp_emailText = lp_emailText;
+
+    if (auto_libBA5CCDED_gf_WillEmail_Trigger == null) {
+        auto_libBA5CCDED_gf_WillEmail_Trigger = TriggerCreate("auto_libBA5CCDED_gf_WillEmail_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libBA5CCDED_gf_WillEmail_Trigger, false, false);
+}
+
+bool auto_libBA5CCDED_gf_WillEmail_TriggerFunc (bool testConds, bool runActions) {
+    text lp_emailText = auto_libBA5CCDED_gf_WillEmail_lp_emailText;
+
+    // Automatic Variable Declarations
+    // Implementation
+    libDAB75013_gf_ServicesEmailShow(StringToText("Will"), (lp_emailText + StringExternal("Param/Value/lib_BA5CCDED_3E1626F0")), 20);
+    return true;
+}
+
+trigger auto_libBA5CCDED_gf_GiveResearch_Trigger = null;
+unit auto_libBA5CCDED_gf_GiveResearch_lp_unitPoint;
+int auto_libBA5CCDED_gf_GiveResearch_lp_researchCount;
+int auto_libBA5CCDED_gf_GiveResearch_lp_researchType;
+
+void libBA5CCDED_gf_GiveResearch (unit lp_unitPoint, int lp_researchCount, int lp_researchType) {
+    auto_libBA5CCDED_gf_GiveResearch_lp_unitPoint = lp_unitPoint;
+    auto_libBA5CCDED_gf_GiveResearch_lp_researchCount = lp_researchCount;
+    auto_libBA5CCDED_gf_GiveResearch_lp_researchType = lp_researchType;
+
+    if (auto_libBA5CCDED_gf_GiveResearch_Trigger == null) {
+        auto_libBA5CCDED_gf_GiveResearch_Trigger = TriggerCreate("auto_libBA5CCDED_gf_GiveResearch_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libBA5CCDED_gf_GiveResearch_Trigger, false, false);
+}
+
+bool auto_libBA5CCDED_gf_GiveResearch_TriggerFunc (bool testConds, bool runActions) {
+    unit lp_unitPoint = auto_libBA5CCDED_gf_GiveResearch_lp_unitPoint;
+    int lp_researchCount = auto_libBA5CCDED_gf_GiveResearch_lp_researchCount;
+    int lp_researchType = auto_libBA5CCDED_gf_GiveResearch_lp_researchType;
+
+    // Automatic Variable Declarations
+    int autoB1575EF4_val;
+
+    // Implementation
+    autoB1575EF4_val = lp_researchType;
+    if (autoB1575EF4_val == 1) {
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_5C8D9B78") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_1EA0AFDB")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectDestroytheSporeCannons, lp_researchCount);
+    }
+    else if (autoB1575EF4_val == 2) {
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_DDC9DDD4") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_31E824AD")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectFindtheProtossPsiElements, lp_researchCount);
+    }
+    else if (autoB1575EF4_val == 3) {
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_1180CEBB") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_EAC95982")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        TextTagSetColor(TextTagLastCreated(), c_textTagColorText, Color(0.00, 100.00, 0.00));
+        TextTagSetTime(TextTagLastCreated(), c_textTagTimeDuration, 3.0);
+        TextTagSetVelocity(TextTagLastCreated(), 2.0, 90.0);
+        Wait(0.5, c_timeGame);
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_A1E81C99") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_315E95F2")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectDestroytheSporeCannons, lp_researchCount);
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectFindtheProtossPsiElements, lp_researchCount);
+    }
+    else {
+    }
+    TextTagSetColor(TextTagLastCreated(), c_textTagColorText, Color(0.00, 100.00, 0.00));
+    TextTagSetTime(TextTagLastCreated(), c_textTagTimeDuration, 3.0);
+    TextTagSetVelocity(TextTagLastCreated(), 2.0, 90.0);
+    return true;
+}
+
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
     // Variable Declarations
     int lv_player;
@@ -193,6 +268,7 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
     libBA5CCDED_gv_eventBank = BankLastCreated();
     libBA5CCDED_gv_zeusCount = BankValueGetAsInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount");
     libBA5CCDED_gv_genericDifficulty = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty");
+    TechTreeUpgradeAddLevel(1, (BankValueGetAsString(libBA5CCDED_gv_eventBank, "Persistent Units", "Warbot Upgrade")), 1);
     if ((libBA5CCDED_gv_genericDifficulty == true)) {
         TriggerExecute(libBA5CCDED_gt_ProtossGenericDifficulty, true, false);
         TriggerEnable(libBA5CCDED_gt_ZergTerranGenericDifficulty, true);
@@ -665,15 +741,49 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     auto8C0CF512_val = libCamp_gf_CurrentMap();
     if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor01) {
         libDAB75013_gf_ServicesEmailShow(StringToText("The Mod"), StringExternal("Param/Value/lib_BA5CCDED_DCEB3273"), 17);
-        libDAB75013_gf_ServicesEmailShow(StringToText("Backwater Station Marshal"), StringExternal("Param/Value/lib_BA5CCDED_1CF99CDA"), 17);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_BB200BEC"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_BB341F98"));
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTRaynor03) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_38022B1E"));
         libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_7E66DF80"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner01) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_3AF424A3"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner02) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_AFDC2748"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner03) {
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner04) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_55CC250B"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner05S) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_43C4D1C9"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus01) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_F8323256"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus02) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_78065552"));
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus03) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_282AB58B"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus04) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_ECD48030"));
+        libBA5CCDED_gf_SpawnZeusonGameStart(null);
+    }
+    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus05) {
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_5A4E5173"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson01) {
         libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_56622040"), 17);
@@ -729,41 +839,6 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
         libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_7739C6CF"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Terrran Oceanic Research Group"), StringExternal("Param/Value/lib_BA5CCDED_DDE1D7AD"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_A7360F0B"), 17);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus03) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_3A3BE184"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus04) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_FFD64A4A"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTychus05) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_242B25A5"), 17);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_EB59D18A"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Matt"), StringExternal("Param/Value/lib_BA5CCDED_1C426745"), 17);
-        libBA5CCDED_gf_SpawnZeusonGameStart(null);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner03) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Matt"), StringExternal("Param/Value/lib_BA5CCDED_0EE12A7B"), 17);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner04) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Matt"), StringExternal("Param/Value/lib_BA5CCDED_B26B743D"), 17);
-    }
-    else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner05S) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Matt"), StringExternal("Param/Value/lib_BA5CCDED_B5698139"), 17);
-    }
     else {
     }
     return true;
@@ -772,7 +847,7 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void libBA5CCDED_gt_MissionDirectives_Init () {
     libBA5CCDED_gt_MissionDirectives = TriggerCreate("libBA5CCDED_gt_MissionDirectives_Func");
-    TriggerAddEventTimeElapsed(libBA5CCDED_gt_MissionDirectives, 2.0, c_timeGame);
+    TriggerAddEventTimeElapsed(libBA5CCDED_gt_MissionDirectives, 2.0, c_timeAI);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1379,6 +1454,108 @@ void libBA5CCDED_gt_NaniteEmitterBurrow_Init () {
     TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_NaniteEmitterBurrow, c_playerAny, "NaniteTurretBurrowOrder");
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Skibis Angels Cleansing
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SkibisAngelsCleansing_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unitgroup lv_units;
+    unitgroup lv_medics;
+
+    // Automatic Variable Declarations
+    unitgroup autoCF5BA87A_g;
+    int autoCF5BA87A_u;
+    unit autoCF5BA87A_var;
+    int autoC68F45B2_val;
+    unitgroup auto5FC5A150_g;
+    int auto5FC5A150_u;
+    unit auto5FC5A150_var;
+    unitgroup auto55F7CF94_g;
+    int auto55F7CF94_u;
+    unit auto55F7CF94_var;
+    unitgroup auto5BCEBEB2_g;
+    int auto5BCEBEB2_u;
+    unit auto5BCEBEB2_var;
+    unitgroup auto999EC3A8_g;
+    int auto999EC3A8_u;
+    unit auto999EC3A8_var;
+
+    // Variable Initialization
+    lv_units = UnitGroupSelected(EventPlayer());
+    lv_medics = UnitGroupEmpty();
+
+    // Conditions
+    if (testConds) {
+        if (!((EventPlayer() == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoCF5BA87A_g = lv_units;
+    autoCF5BA87A_u = UnitGroupCount(autoCF5BA87A_g, c_unitCountAll);
+    for (;; autoCF5BA87A_u -= 1) {
+        autoCF5BA87A_var = UnitGroupUnitFromEnd(autoCF5BA87A_g, autoCF5BA87A_u);
+        if (autoCF5BA87A_var == null) { break; }
+        if ((UnitGetType(autoCF5BA87A_var) == "SkibisAngel")) {
+            UnitGroupAdd(lv_medics, autoCF5BA87A_var);
+        }
+
+    }
+    if ((UnitGroupCount(lv_medics, c_unitCountAlive) < 4)) {
+        return true;
+    }
+
+    autoC68F45B2_val = libCamp_gf_CurrentMap();
+    if (autoC68F45B2_val == libCamp_ge_MapID_MapTHanson02) {
+        auto5FC5A150_g = UnitGroup("CommandCenter", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto5FC5A150_u = UnitGroupCount(auto5FC5A150_g, c_unitCountAll);
+        for (;; auto5FC5A150_u -= 1) {
+            auto5FC5A150_var = UnitGroupUnitFromEnd(auto5FC5A150_g, auto5FC5A150_u);
+            if (auto5FC5A150_var == null) { break; }
+            auto55F7CF94_g = UnitGroup("SkibisAngel", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 4);
+            auto55F7CF94_u = UnitGroupCount(auto55F7CF94_g, c_unitCountAll);
+            for (;; auto55F7CF94_u -= 1) {
+                auto55F7CF94_var = UnitGroupUnitFromEnd(auto55F7CF94_g, auto55F7CF94_u);
+                if (auto55F7CF94_var == null) { break; }
+                UnitBehaviorAddPlayer(auto55F7CF94_var, "SkibiCleanseStun", 1, 1);
+            }
+            Wait(90.0, c_timeGame);
+            UnitBehaviorRemove(auto5FC5A150_var, "ColonyInfestation", 1);
+        }
+    }
+    else if (autoC68F45B2_val == libCamp_ge_MapID_MapTValerian02B) {
+        auto5BCEBEB2_g = UnitGroup("CollapsibleTerranTower", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto5BCEBEB2_u = UnitGroupCount(auto5BCEBEB2_g, c_unitCountAll);
+        for (;; auto5BCEBEB2_u -= 1) {
+            auto5BCEBEB2_var = UnitGroupUnitFromEnd(auto5BCEBEB2_g, auto5BCEBEB2_u);
+            if (auto5BCEBEB2_var == null) { break; }
+            auto999EC3A8_g = UnitGroup("SkibisAngel", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 4);
+            auto999EC3A8_u = UnitGroupCount(auto999EC3A8_g, c_unitCountAll);
+            for (;; auto999EC3A8_u -= 1) {
+                auto999EC3A8_var = UnitGroupUnitFromEnd(auto999EC3A8_g, auto999EC3A8_u);
+                if (auto999EC3A8_var == null) { break; }
+                UnitBehaviorAddPlayer(auto999EC3A8_var, "SkibiCleanseStun", 1, 1);
+            }
+            Wait(90.0, c_timeGame);
+            UnitBehaviorRemove(auto5BCEBEB2_var, "ColonyInfestation", 1);
+        }
+    }
+    else {
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SkibisAngelsCleansing_Init () {
+    libBA5CCDED_gt_SkibisAngelsCleansing = TriggerCreate("libBA5CCDED_gt_SkibisAngelsCleansing_Func");
+    TriggerAddEventButtonPressed(libBA5CCDED_gt_SkibisAngelsCleansing, c_playerAny, "Cleanse");
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_OpenBanks_Init();
     libBA5CCDED_gt_SaveBanks_Init();
@@ -1407,6 +1584,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_NomadSilentModeHeightDown_Init();
     libBA5CCDED_gt_SamsonZeusInjectionPods_Init();
     libBA5CCDED_gt_NaniteEmitterBurrow_Init();
+    libBA5CCDED_gt_SkibisAngelsCleansing_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

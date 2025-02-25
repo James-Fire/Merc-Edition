@@ -7,6 +7,7 @@
 <Behavior id="RevivalFieldCooldown"/>
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
+<Behavior id="SkibiCleanseStun"/>
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>

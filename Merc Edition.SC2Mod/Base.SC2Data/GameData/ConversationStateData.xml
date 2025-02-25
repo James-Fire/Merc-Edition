@@ -5,6 +5,11 @@
             <InfoValue index="0" Value="50000"/>
         </Indices>
     </CConversationState>
+    <CConversationState id="LabResearchObject">
+        <Indices index="5">
+            <InfoValue index="1" Value="1"/>
+        </Indices>
+    </CConversationState>
     <CConversationState id="Maps">
         <Indices index="0">
             <InfoValue Id="Reward" Value="55"/>

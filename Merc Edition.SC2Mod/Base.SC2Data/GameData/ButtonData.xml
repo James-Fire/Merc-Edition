@@ -37,6 +37,10 @@
         <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
     </CButton>
+    <CButton id="Cleanse">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
+    </CButton>
     <CButton id="DemonRockets">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
