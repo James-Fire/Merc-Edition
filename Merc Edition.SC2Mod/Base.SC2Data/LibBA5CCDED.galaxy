@@ -100,8 +100,57 @@ bool auto_libBA5CCDED_gf_WillEmail_TriggerFunc (bool testConds, bool runActions)
     return true;
 }
 
-void libBA5CCDED_gf_GiveResearch () {
+trigger auto_libBA5CCDED_gf_GiveResearch_Trigger = null;
+unit auto_libBA5CCDED_gf_GiveResearch_lp_unitPoint;
+int auto_libBA5CCDED_gf_GiveResearch_lp_researchCount;
+int auto_libBA5CCDED_gf_GiveResearch_lp_researchType;
+
+void libBA5CCDED_gf_GiveResearch (unit lp_unitPoint, int lp_researchCount, int lp_researchType) {
+    auto_libBA5CCDED_gf_GiveResearch_lp_unitPoint = lp_unitPoint;
+    auto_libBA5CCDED_gf_GiveResearch_lp_researchCount = lp_researchCount;
+    auto_libBA5CCDED_gf_GiveResearch_lp_researchType = lp_researchType;
+
+    if (auto_libBA5CCDED_gf_GiveResearch_Trigger == null) {
+        auto_libBA5CCDED_gf_GiveResearch_Trigger = TriggerCreate("auto_libBA5CCDED_gf_GiveResearch_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libBA5CCDED_gf_GiveResearch_Trigger, false, false);
+}
+
+bool auto_libBA5CCDED_gf_GiveResearch_TriggerFunc (bool testConds, bool runActions) {
+    unit lp_unitPoint = auto_libBA5CCDED_gf_GiveResearch_lp_unitPoint;
+    int lp_researchCount = auto_libBA5CCDED_gf_GiveResearch_lp_researchCount;
+    int lp_researchType = auto_libBA5CCDED_gf_GiveResearch_lp_researchType;
+
     // Automatic Variable Declarations
+    int autoB1575EF4_val;
+
+    // Implementation
+    autoB1575EF4_val = lp_researchType;
+    if (autoB1575EF4_val == 1) {
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_5C8D9B78") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_1EA0AFDB")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectDestroytheSporeCannons, lp_researchCount);
+    }
+    else if (autoB1575EF4_val == 2) {
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_DDC9DDD4") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_31E824AD")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectFindtheProtossPsiElements, lp_researchCount);
+    }
+    else if (autoB1575EF4_val == 3) {
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_1180CEBB") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_EAC95982")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        TextTagSetColor(TextTagLastCreated(), c_textTagColorText, Color(0.00, 100.00, 0.00));
+        TextTagSetTime(TextTagLastCreated(), c_textTagTimeDuration, 3.0);
+        TextTagSetVelocity(TextTagLastCreated(), 2.0, 90.0);
+        Wait(0.5, c_timeGame);
+        TextTagCreate((StringExternal("Param/Value/lib_BA5CCDED_A1E81C99") + IntToText(lp_researchCount) + StringExternal("Param/Value/lib_BA5CCDED_315E95F2")), 22, UnitGetPosition(lp_unitPoint), 0.4, true, true, PlayerGroupAll());
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectDestroytheSporeCannons, lp_researchCount);
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectFindtheProtossPsiElements, lp_researchCount);
+    }
+    else {
+    }
+    TextTagSetColor(TextTagLastCreated(), c_textTagColorText, Color(0.00, 100.00, 0.00));
+    TextTagSetTime(TextTagLastCreated(), c_textTagTimeDuration, 3.0);
+    TextTagSetVelocity(TextTagLastCreated(), 2.0, 90.0);
+    return true;
 }
 
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
@@ -219,6 +268,7 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
     libBA5CCDED_gv_eventBank = BankLastCreated();
     libBA5CCDED_gv_zeusCount = BankValueGetAsInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount");
     libBA5CCDED_gv_genericDifficulty = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty");
+    TechTreeUpgradeAddLevel(1, (BankValueGetAsString(libBA5CCDED_gv_eventBank, "Persistent Units", "Warbot Upgrade")), 1);
     if ((libBA5CCDED_gv_genericDifficulty == true)) {
         TriggerExecute(libBA5CCDED_gt_ProtossGenericDifficulty, true, false);
         TriggerEnable(libBA5CCDED_gt_ZergTerranGenericDifficulty, true);
@@ -710,7 +760,6 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner03) {
-        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_7688E3F4"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHorner04) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_55CC250B"));
