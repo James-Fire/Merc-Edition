@@ -18,6 +18,10 @@
     <CRequirement id="IsNotMinikin">
         <NodeArray index="Show" Link="NotCountBehaviorMinikinCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="LearnZeusTankSecretUpgrade">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTECountUpgradeZeusTankSecretUpgradeQueuedOrBetter0"/>
+    </CRequirement>
     <CRequirement id="MineDroneBuild">
         <NodeArray index="Use" Link="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit2"/>
     </CRequirement>
@@ -292,5 +296,9 @@
     <CRequirement id="UseViralFlammenwerfer">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeViralFlammenwerferCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseZeusTankSecretUpgrade">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeZeusTankSecretUpgradeCompleteOnly"/>
     </CRequirement>
 </Catalog>

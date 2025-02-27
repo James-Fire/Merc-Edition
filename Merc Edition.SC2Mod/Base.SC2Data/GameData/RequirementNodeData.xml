@@ -225,6 +225,13 @@
     <CRequirementCountUpgrade id="CountUpgradeViralFlammenwerferCompleteOnly">
         <Count Link="ViralFlammenwerfer" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZeusTankSecretUpgradeCompleteOnly">
+        <Count Link="ZeusTankSecretUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZeusTankSecretUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZeusTankSecretUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
     <CRequirementLTE id="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
@@ -239,6 +246,10 @@
     </CRequirementLTE>
     <CRequirementLTE id="LTCountUpgradeThornShieldQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeThornShieldQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeZeusTankSecretUpgradeQueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeZeusTankSecretUpgradeQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
     <CRequirementLT id="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit2">

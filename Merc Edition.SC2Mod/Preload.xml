@@ -2,14 +2,17 @@
 <Preload>
 <Abil id="SkibisAngelRepairDrone"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="CabalRevive1"/>
 <Behavior id="HellraiserEasterEgg"/>
 <Behavior id="RedlineReactorEasterEgg"/>
 <Behavior id="RevivalFieldCooldown"/>
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
 <Behavior id="SkibiCleanseStun"/>
+<Effect id="CabalAssaultReviveDummy"/>
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
+<Effect id="CabalFighterReviveDummy"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
 <Sound id="RedlineReactorMusicEasterEgg"/>
 <Unit id="ARESWarbotMercMod"/>

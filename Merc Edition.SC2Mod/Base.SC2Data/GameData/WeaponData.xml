@@ -535,4 +535,31 @@
         <RandomDelayMax value="0"/>
         <DisplayAttackCount value="2"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="CabalGatlingCannon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="WreckingCrewAssault"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Arc value="5.625"/>
+        <Period value="0.65"/>
+        <Effect value="WreckingCrewAssault"/>
+        <PreEffect value="VulcanCannonsAB"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CabalAntiAir">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="WreckingCrewFighterU"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <Period value="1.55"/>
+        <DamagePoint value="0.08"/>
+        <Backswing value="0.08"/>
+        <Effect value="WreckingCrewFighter"/>
+        <PreEffect value="VulcanCannonsAB"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
 </Catalog>

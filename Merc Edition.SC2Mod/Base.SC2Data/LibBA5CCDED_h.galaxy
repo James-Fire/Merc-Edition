@@ -50,6 +50,8 @@ trigger libBA5CCDED_gt_NomadSilentModeHeightDown;
 trigger libBA5CCDED_gt_SamsonZeusInjectionPods;
 trigger libBA5CCDED_gt_NaniteEmitterBurrow;
 trigger libBA5CCDED_gt_SkibisAngelsCleansing;
+trigger libBA5CCDED_gt_CabalCyberneticReconstructionAssault;
+trigger libBA5CCDED_gt_CabalCyberneticReconstructionFighter;
 
 // Library Initialization
 void libBA5CCDED_InitVariables ();

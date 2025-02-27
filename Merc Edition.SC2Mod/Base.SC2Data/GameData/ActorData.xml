@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="CabalReviveS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.CabalRevive1.Create" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="HallucinationBirth">
+        <On Terms="Behavior.ShadowHallucination.On" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="HallucinationBirthSoundMedium">
+        <On Terms="Behavior.ShadowHallucination.On" Send="Create"/>
+    </CActorSound>
+    <CActorSimple id="HighTemplarHallucination">
+        <On Terms="Behavior.ShadowHallucination.On" Send="Create"/>
+        <On Terms="Behavior.ShadowHallucination.On; ViewerTreatsUnitAs Detected" Send="Signal HallucinationTintOn"/>
+    </CActorSimple>
+    <CActorModelMaterial id="CabalRevive1" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.CabalRevive1.On" Send="Create"/>
+        <On index="6" Terms="Behavior.CabalRevive1.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorModel id="CabalRevive2" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.CabalAssaultReviveDummy.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.000000 2.000000"/>
+        <On Terms="Effect.CabalFighterReviveDummy.Start" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorModel id="RadarTowerSelectSweep" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimPlay BSD Stand PlayForever,ForceLooping -1.000000 -1.000000 0.500000 AsTimeScale"/>
+        <On Terms="SelectionLocalUpdate.RadarTower.Start" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.RadarTower.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="TimerSet 3.000000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetOpacity 0.000000 1.000000"/>
+        <On Terms="TimerExpired; TimerName 1" Send="TimerSet 1.000000 2"/>
+        <On Terms="TimerExpired; TimerName 2" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetOpacity"/>
+        <On Terms="ActorCreation" Send="SetOpacity 1.000000 1.000000"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpMoveDownBy2"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
     <CActorAction id="AlphaSquadron" parent="GenericAttack" effectLaunch="AlphaSquadronLaunchMissile1">
         <EditorCategories value=""/>
         <LaunchAttachQuery Methods="Center 0" Fallback="Origin"/>
@@ -52,6 +94,146 @@
     </CActorRange>
     <CActorModel id="BarrageModel">
         <On Terms="ActorCreation" Send="Create OdinBarrageAdd"/>
+    </CActorModel>
+    <CActorUnit id="RadarTower" parent="TerranBuildingEx" unitName="RadarTower">
+        <Aliases value="_UnitMedium"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo RadarTower; MorphFrom SensorTower" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RadarTower; MorphTo SensorTower" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom RadarTower; MorphTo SensorTower" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="AnimPlay Morph Morph"/>
+        <DeathArray index="Normal" ModelLink="SensorTowerDeath" SoundLink="SensorTower_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="SensorTower_Explode"/>
+        <PlacementModel value="SensorTowerPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PlacementActorModel value="SensorTowerPlacement"/>
+        <PortraitModel value="SensorTowerPortrait"/>
+        <BarOffset value="110"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SensorTower.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
+        <SoundArray index="Ready" value="SensorTower_Ready"/>
+        <SoundArray index="What" value="SensorTower_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SensorTower.dds"/>
+        </Wireframe>
+        <BarWidth value="75"/>
+    </CActorUnit>
+    <CActorAction id="ReaperMissiles" parent="GenericAttack" effectImpact="ReaperMissilesDamage" effectLaunch="ReaperMissilesLaunchMissile">
+        <LaunchAttachQuery Methods="Weapon 0"/>
+    </CActorAction>
+    <CActorSound id="ReaperMissilesImpactAdd" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ReaperMissilesDamage.Start; At Effect" Send="Create"/>
+        <Sound value="Nova_Eradicator_MissileBarrage_Impact"/>
+    </CActorSound>
+    <CActorSound id="ReaperMissilesLaunchAdd" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.ReaperMissilesMissile" Send="Create"/>
+        <Host Subject="_Unit"/>
+    </CActorSound>
+    <CActorMissile id="ReaperMissilesMissile" parent="GenericAttackMissile" unitName="ReaperMissilesMissile"/>
+    <CActorSplat id="ScannerSweepCursorSplat2" parent="CursorSplat" abil="RadarTowerScannerSweep">
+        <Model value="ScannerSweepCursorSplat"/>
+    </CActorSplat>
+    <CActorQueryResponse id="RadarTowerSuperRadarAdd">
+        <Subject Filters="Unit" Terms="ScopeContains BlipVisual"/>
+        <OnResponse Target="BlipVisual" Send="StatusIncrement SuperRadar"/>
+    </CActorQueryResponse>
+    <CActorQueryResponse id="RadarTowerSuperRadarRemove">
+        <Subject Filters="Unit" Terms="ScopeContains BlipVisual"/>
+        <OnResponse Target="BlipVisual" Send="StatusDecrement SuperRadar"/>
+    </CActorQueryResponse>
+    <CActorRegionCircle id="RadarTowerSuperRadarMonitor">
+        <PlayerIdSource value="ContainingScope"/>
+        <On Terms="Behavior.RadarTowerRadar.On" Send="Create"/>
+        <On Terms="Behavior.RadarTowerRadar.On" Send="QueryPersistent RadarTowerSuperRadarAdd RadarTowerSuperRadarRemove AgainstRadiusGame 0.500000"/>
+        <On Terms="Behavior.RadarTowerRadar.Off" Send="Destroy"/>
+        <QueryFilters value="-;Player,Ally,Visible"/>
+        <Radius value="40.000000"/>
+    </CActorRegionCircle>
+    <CActorModel id="BlipVisual">
+        <!-- <On Terms="ActorCreation" Send="SetTintColor {0,255,255 20.000000}"/> -->
+        <On Terms="StatusOn.*.SuperRadar" Send="Create BlipVisualVisible"/>
+        <On Terms="StatusOff.*.SuperRadar" Target="BlipVisualVisible" Send="Destroy"/>
+    </CActorModel>
+    <CActorModel id="BlipVisualVisible">
+        <CopySource value="_Selectable"/>
+        <Terms value="Cap 1"/>
+        <Inherits index="CastShadows" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <AcceptedTransfers index="Animator" value="1"/>
+        <AcceptedTransfers index="AnimProps" value="1"/>
+        <AcceptedTransfers index="Model" value="1"/>
+        <AcceptedHostedPropTransfers index="BaseModelScale" value="0"/>
+        <AcceptedHostedPropTransfers index="Visibility" value="0"/>
+        <FogVisibility value="Visible"/>
+        <On Terms="ActorCreation" Send="HaloStart"/>
+        <On Terms="TimerExpired; TimerName Refresh" Send="AnimCopy ::Main"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.250000 Refresh"/>
+        <On Terms="TimerExpired; TimerName Refresh" Send="TimerSet 0.250000 Refresh"/>
+        <On Terms="ActorCreation" Send="SetTintColor"/>
+        <On Terms="ActorCreation" Send="HaloSetColorFromAllianceType Enemy"/>
+        <On Terms="ActorCreation; Option Shader Low" Send="SetTintColor 255,0,0"/>
+        <On Terms="ActorCreation; Option Shader Low" Send="SetOpacity 0.200000"/>
+        <On Terms="SupporterDestruction" Send="Destroy"/>
+        <On Terms="ActorCreation" Target="BlipVisual" Send="SetOpacity 0.000000 0.000000 SuperRadar"/>
+        <On Terms="ActorDestruction" Target="BlipVisual" Send="SetOpacity 1.000000 0.000000 SuperRadar"/>
+        <On Terms="ActorCreation" Send="SetCastShadows"/>
+        <Host Subject="_Selectable"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <Supporter Subject="BlipVisual"/>
+        <Scale value="0.900000"/>
+        <!--ModelAspectSets>
+            <Aspects RegardsAs="NotSelf" Test="Message" Name="Visible"/>
+        </ModelAspectSets-->
+    </CActorModel>
+    <!--                                                                                         -->
+    <!-- Sensor Tower .......................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="SensorTower">
+        <On Terms="AbilMorph.*.Finish; MorphTo SensorTower; MorphFrom RadarTower" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SensorTower; MorphTo RadarTower" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom SensorTower; MorphTo RadarTower" Send="Destroy"/>
+    </CActorUnit>
+    <CActorRange id="RadarTowerRadar">
+        <Inherits index="Visibility" value="0"/>
+        <FogVisibility value="Visible"/>
+        <On Terms="UnitBirth.RadarTower.EditorPlaced" Send="Create"/>
+        <On Terms="Behavior.RadarTowerRadar.On" Send="Create"/>
+        <On Terms="Behavior.RadarTowerRadar.Off" Send="Destroy"/>
+        <Range value="40.000000"/>
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+        <RangeFlags index="Minimap" value="1"/>
+    </CActorRange>
+    <CActorRange id="RadarTowerDetection">
+        <Inherits index="Visibility" value="0"/>
+        <FogVisibility value="Visible"/>
+        <On Terms="UnitBirth.RadarTower.EditorPlaced" Send="Create"/>
+        <On Terms="Behavior.Detector30.On" Send="Create"/>
+        <On Terms="Behavior.Detector30.Off" Send="Destroy"/>
+        <Range value="30.000000"/>
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+        <RangeFlags index="Minimap" value="1"/>
+    </CActorRange>
+    <CActorSound id="SensorTower_MorphToTower" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.*.Finish; MorphTo RadarTower" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="SensorTowertoRadarTowerBuild" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorOrphan" Send="Destroy"/>
+        <On index="1" Terms="ActorCreation" Send="$Birth,B,Stand PlayForever,ForceLooping"/>
+        <On index="2" Terms="AbilMorph.*.Start; MorphTo RadarTower" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo RadarTower" Send="SetOpacity 0.000000 1.000000"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo RadarTower" Send="TimerSet 1.000000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="Destroy"/>
     </CActorModel>
     <CActorUnit id="SgtHammerTankModeMorphModel" parent="GenericUnitBaseMorphTransition" unitName="MengskSiegeTankTankModeMorphModel">
         <Aliases value="_UnitLarge"/>
@@ -244,6 +426,12 @@
             <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorModel id="SpartanCompanyAirMissileUpgraded" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SpartanCompanyAWeapon; ValidateUnit UseLegionSystems@Validator" Send="Create"/>
+        <Host Subject="_Missile"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
     <CActorSound id="StarcruiserYamatoChargeUp" parent="SoundContinuous">
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="Create"/>
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="Destroy"/>
@@ -976,6 +1164,12 @@
             <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-siegemode.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorModel id="SuperRadarBuff" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SuperRadarRangeBuff.On" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
     <CActorModelMaterial id="SurvivorsGuilt" parent="BehaviorGlaze">
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.SurvivorsGuilt.On" Send="Create"/>
@@ -999,6 +1193,73 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorUnit id="CabalAssault" parent="GenericUnitMorph" unitName="CabalAssault">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo HelsAngelAssault" Target="FlyerHelperSplat" Send="Destroy"/>
+        <DeathArray index="Normal" ModelLink="CabalAssaultDeath" SoundLink="Viking_Explode"/>
+        <DeathArray index="Blast" AnimProps="Death,Blast" ModelLink="CabalAssaultDeath"/>
+        <PortraitModel value="CabalAssaultPortrait"/>
+        <WalkAnimMoveSpeed value="2.5468"/>
+        <AbilSoundArray AbilCmd="FighterMode,Execute" Sound="Viking_FighterModeVO"/>
+        <BarOffset value="70"/>
+        <BarWidth value="95"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-assault.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Assault.dds"/>
+        <HighlightTooltip value="Unit/Name/HelsAngelAssault"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="CabalReady"/>
+        <SoundArray index="Help" value="CabalHelp"/>
+        <SoundArray index="What" value="CabalWhat"/>
+        <SoundArray index="Yes" value="CabalYes"/>
+        <SoundArray index="Attack" value="CabalAttack"/>
+        <SoundArray index="Pissed" value="CabalPissed"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Assault.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-assault.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="WreckingCrewAssault">
+        <On Terms="AbilMorph.*.Finish; MorphTo CabalAssault" Send="Destroy"/>
+    </CActorUnit>
+    <CActorUnit id="CabalFighter" parent="GenericUnitMorph" unitName="CabalFighter">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="AssaultModeAnim"/>
+        <AcceptedTransfers index="Status" value="0"/>
+        <On Terms="ActorDestruction; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On Terms="Behavior.MercAirDropB.Create" Send="Create VikingMercenaryFighterReentry"/>
+        <On Terms="Behavior.AfterburnersHelsAngel.On" Send="StatusSet Turbo 1"/>
+        <On Terms="Behavior.AfterburnersHelsAngel.Off" Send="StatusSet Turbo 0"/>
+        <On Terms="UnitMovementUpdate.*.Walk; IsStatus Turbo 1" Send="Create Medivac_MovementAfterburner"/>
+        <On Terms="Behavior.AfterburnersHelsAngel.On" Send="$Spell"/>
+        <HostSiteOps Ops="SOpBankerViking"/>
+        <Baselines index="Walk" BlendIn="1.500000" BlendOut="2.000000"/>
+        <DeathArray index="Normal" ModelLink="CabalFighterDeath" SoundLink="Viking_Explode"/>
+        <PortraitModel value="CabalFighterPortrait"/>
+        <AbilSoundArray AbilCmd="AssaultMode,Execute" Sound="Viking_AssaultModeVO"/>
+        <BarOffset value="50"/>
+        <BarWidth value="95"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-fighter.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds"/>
+        <HighlightTooltip value="Unit/Name/HelsAngelFighter"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <SoundArray index="Ready" value="CabalReady"/>
+        <SoundArray index="Help" value="CabalHelp"/>
+        <SoundArray index="What" value="CabalWhat"/>
+        <SoundArray index="Yes" value="CabalYes"/>
+        <SoundArray index="Attack" value="CabalAttack"/>
+        <SoundArray index="Pissed" value="CabalPissed"/>
+        <SoundArray index="Movement" value="Viking_FighterMovement"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-fighter.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>
@@ -1870,7 +2131,7 @@
     </CActorUnit>
     <CActorAction id="CopperheadAttack" parent="GenericAttack" effectAttack="ChargedJupiterRailDamage">
         <LaunchAttachQuery Methods="AMFilterWeapon"/>
-        <LaunchAssets Sound="Diamondback_AttackImpact"/>
+        <LaunchAssets Sound="DiamondbackAttackLaunch"/>
     </CActorAction>
     <CActorBeamSimple id="CopperheadAttackBeam" parent="GenericAttackBeam">
         <On Terms="ActorCreation; ValidateEffect CopperheadReflectiveArmorActive" Send="ModelSwap CopperheadUpgradedBeam"/>
@@ -3517,6 +3778,7 @@
         <On Terms="Behavior.AfterburnersHelsAngel.Off" Send="StatusSet Turbo 0"/>
         <On Terms="UnitMovementUpdate.*.Walk; IsStatus Turbo 1" Send="Create Medivac_MovementAfterburner"/>
         <On Terms="Behavior.AfterburnersHelsAngel.On" Send="$Spell"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo CabalFighter" Send="Destroy"/>
     </CActorUnit>
     <!-- Fighter attack.                                                                         -->
     <CActorMissile id="WreckingCrewFighterAttackMissile">

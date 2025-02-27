@@ -64,6 +64,19 @@
         <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray index="0" Effect="OdinBarrageSet"/>
     </CEffectEnumArea>
+    <CEffectSet id="CabalAssaultDeathDummy">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectSet id="CabalAssaultReviveDummy">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectSet id="CabalFighterReviveDummy">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectSet id="CabalFighterDeathDummy">
+        <EditorCategories value=""/>
+        <EffectArray value="SulfurSuicideSet"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="DemonRocketsApplyBehavior">
         <Behavior value="DemonRockets"/>
     </CEffectApplyBehavior>
@@ -208,8 +221,52 @@
         <SearchFilters value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="12" Effect="PsiDisruptorDamageAB"/>
     </CEffectEnumArea>
+    <CEffectCreatePersistent id="ReaperMissilesCP">
+        <EditorCategories value=""/>
+        <PeriodCount value="3"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="ReaperMissilesRP"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.4"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="ReaperMissilesDamage">
+        <DebugTrace value="1"/>
+        <Amount value="500"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="2.4" Fraction="1"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ReaperMissilesLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="ReaperMissilesDamage"/>
+        <AmmoUnit value="ReaperMissilesMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectRandomPointInCircle id="ReaperMissilesRP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="ReaperMissilesLaunchMissile"/>
+        <Radius value="3"/>
+    </CEffectRandomPointInCircle>
     <CEffectSet id="RedlineReactorMusicEasterEgg">
         <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ShadowHallucinationAB">
+        <Behavior value="ShadowHallucination"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="ShadowHallucinationCU">
+        <EditorCategories value=""/>
+        <SpawnEffect value="ShadowHallucinationSet"/>
+        <SpawnCount value="3"/>
+        <TypeFallbackUnit Value="Target"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="ShadowHallucinationLifeAB">
+        <Behavior value="ShadowHallucinationTimedLife"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="ShadowHallucinationSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ShadowHallucinationAB"/>
+        <EffectArray value="ShadowHallucinationLifeAB"/>
     </CEffectSet>
     <CEffectEnumArea id="StarcruiserYamatoSA">
         <EditorCategories value=""/>
@@ -1665,6 +1722,14 @@
         <EffectArray value="SuperCloakApplyBehavior"/>
         <EffectArray value="SuperCloakCooldownApplyBehavior"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="SuperRadarRangeAB">
+        <Behavior value="SuperRadarRangeBuff"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="SuperRadarRangeSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="40" Effect="SuperRadarRangeAB"/>
+    </CEffectEnumArea>
     <CEffectApplyBehavior id="SuperStimApplyBehavior">
         <Behavior value="SuperStim"/>
     </CEffectApplyBehavior>
@@ -2052,6 +2117,10 @@
         <ExcludeArray Value="Target"/>
         <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="VulcanCannonsAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="VulcanCannons"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="WolverineFearAB">
         <Behavior value="WolverineFeared"/>
     </CEffectApplyBehavior>

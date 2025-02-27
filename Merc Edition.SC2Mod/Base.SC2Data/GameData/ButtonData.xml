@@ -41,6 +41,10 @@
         <Icon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
     </CButton>
+    <CButton id="CyberneticReconstruction">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="DemonRockets">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
@@ -48,6 +52,13 @@
     <CButton id="DukesRevenge">
         <Icon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
+    </CButton>
+    <CButton id="CabalFighterMode">
+        <Icon value="Assets\Textures\btn-unit-collection-terran-mecha-viking.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-terran-mecha-viking.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeySet value="VikingModes"/>
+        <Universal value="1"/>
     </CButton>
     <CButton id="Hellraiser">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
@@ -208,6 +219,19 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="ReaperMissiles">
+        <Icon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
+    </CButton>
+    <CButton id="ShadowHallucinate">
+        <Icon value="Assets\Icons and Wireframes\shadow-hallucination.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\shadow-hallucination.dds"/>
+    </CButton>
+    <CButton id="SuperRadar">
+        <Icon value="Assets\Icons and Wireframes\superradar.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\superradar.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="Rattlesnake22">
         <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
@@ -279,6 +303,19 @@
         <Universal value="1"/>
     </CButton>
     <CButton id="UpgradeToPlanetaryFortress"/>
+    <CButton id="UpgradetoRadarTower">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="VulcanCannons">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="CabalAssaultMode">
+        <Icon value="Assets\Textures\btn-unit-collectoin-terran-mecha-vikingassault.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collectoin-terran-mecha-vikingassault.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="YamatoCulverin">
         <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
@@ -719,5 +756,9 @@
     <CButton id="ViralFlammenwerfer">
         <Icon value="Assets\Textures\btn-techupgrade-terran-twin-linkedflamethrower.dds"/>
         <AlertIcon value="Assets\Textures\btn-techupgrade-terran-twin-linkedflamethrower.dds"/>
+    </CButton>
+    <CButton id="ZeusTankSecretUpgrade">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
 </Catalog>

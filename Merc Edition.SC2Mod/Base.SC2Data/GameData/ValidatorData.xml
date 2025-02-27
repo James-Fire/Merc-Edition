@@ -373,6 +373,10 @@
     <CValidatorUnitOrderTargetType id="TargetIsPoint">
         <Type value="Point"/>
     </CValidatorUnitOrderTargetType>
+    <CValidatorPlayerRequirement id="UseLegionSystems@Validator">
+        <Find value="1"/>
+        <Value value="UseLegionSystems"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="bunkerunitisinsideofisnotburrowed">
         <WhichUnit Value="CasterOuter"/>
         <Compare value="NE"/>

@@ -1556,6 +1556,94 @@ void libBA5CCDED_gt_SkibisAngelsCleansing_Init () {
     TriggerAddEventButtonPressed(libBA5CCDED_gt_SkibisAngelsCleansing, c_playerAny, "Cleanse");
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Cabal Cybernetic Reconstruction (Assault)
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_unit;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelAssault", EventPlayer(), RegionCircle(EventPlayerEffectUsedPoint(c_effectLocationCasterUnit), 20.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    if ((lv_unit == null)) {
+        lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelFighter", EventPlayer(), RegionCircle(EventPlayerEffectUsedPoint(c_effectLocationCasterUnit), 20.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    }
+
+    if ((lv_unit == null)) {
+        lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelAssault", EventPlayer(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    }
+
+    if ((lv_unit == null)) {
+        lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelFighter", EventPlayer(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    }
+
+    if ((lv_unit == null)) {
+        return true;
+    }
+
+    UnitIssueOrder(lv_unit, Order(AbilityCommand("CabalAssaultTakeoverMorph", 0)), c_orderQueueReplace);
+    UnitCreateEffectUnit(lv_unit, "CabalAssaultReviveDummy", lv_unit);
+    UnitBehaviorAdd(lv_unit, "CabalRevive1", lv_unit, 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Init () {
+    libBA5CCDED_gt_CabalCyberneticReconstructionAssault = TriggerCreate("libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_CabalCyberneticReconstructionAssault, c_playerAny, "CabalAssaultDeathDummy");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Cabal Cybernetic Reconstruction (Fighter)
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_unit;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelFighter", EventPlayer(), RegionCircle(EventPlayerEffectUsedPoint(c_effectLocationCasterUnit), 20.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    if ((lv_unit == null)) {
+        lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelAssault", EventPlayer(), RegionCircle(EventPlayerEffectUsedPoint(c_effectLocationCasterUnit), 20.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    }
+
+    if ((lv_unit == null)) {
+        lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelFighter", EventPlayer(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    }
+
+    if ((lv_unit == null)) {
+        lv_unit = UnitGroupClosestToPoint(UnitGroup("HelsAngelAssault", EventPlayer(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    }
+
+    if ((lv_unit == null)) {
+        return true;
+    }
+
+    UnitIssueOrder(lv_unit, Order(AbilityCommand("CabalFighterTakeoverMorph", 0)), c_orderQueueReplace);
+    UnitCreateEffectUnit(lv_unit, "CabalFighterReviveDummy", lv_unit);
+    UnitBehaviorAdd(lv_unit, "CabalRevive1", lv_unit, 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init () {
+    libBA5CCDED_gt_CabalCyberneticReconstructionFighter = TriggerCreate("libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_CabalCyberneticReconstructionFighter, c_playerAny, "CabalFighterDeathDummy");
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_OpenBanks_Init();
     libBA5CCDED_gt_SaveBanks_Init();
@@ -1585,6 +1673,8 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_SamsonZeusInjectionPods_Init();
     libBA5CCDED_gt_NaniteEmitterBurrow_Init();
     libBA5CCDED_gt_SkibisAngelsCleansing_Init();
+    libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Init();
+    libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

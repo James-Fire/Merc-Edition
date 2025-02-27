@@ -128,6 +128,14 @@
         <DisableValidatorArray value="CasterNotRecentlyDealtDamage"/>
         <Modification MoveSpeedBonus="1.25"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="CabalRevive1">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <DamageResponse Fatal="1" Handled="GenericDontDieDummy" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
     <CBehaviorBuff id="Combustion">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Icons and Wireframes\storm_ui_icon_blaze_combustion.dds"/>
@@ -144,6 +152,12 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.33"/>
         <PeriodicEffect value="HankCombustionSA"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Detector30" parent="Detector">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
+        <Modification Detect="30"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="FerrierofSouls">
         <Tooltip value="Button/Tooltip/FerrierofSouls"/>
@@ -176,6 +190,40 @@
         <Modification>
             <AbilLinkDisableArray value="CommandCenterTransport"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowHallucination">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Modification LifeArmorMultiplier="0" ShieldArmorMultiplier="0" SubgroupPriority="-100">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="EnableAttack" value="1"/>
+            <ModifyFlags index="EnableMove" value="1"/>
+            <ModifyFlags index="HideChangeUI" value="1"/>
+            <StateFlags index="Hallucination" value="1"/>
+            <StateFlags index="SuppressCombat" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+            <DamageDealtMaximum index="Spell" value="0"/>
+            <DamageDealtMaximum index="Melee" value="0"/>
+            <DamageDealtMaximum index="Ranged" value="0"/>
+            <DamageDealtMaximum index="Splash" value="0"/>
+            <AbilClassEnableArray index="CAbilMorph" value="1"/>
+            <AbilClassEnableArray index="CAbilMorphPlacement" value="1"/>
+            <AbilClassEnableArray index="CAbilStop" value="1"/>
+            <AbilLinkDisableArray value="MorphZerglingToBaneling"/>
+            <AbilLinkDisableArray value="DevourerAspect"/>
+            <AbilLinkDisableArray value="MorphToBroodLord"/>
+            <AbilLinkDisableArray value="LurkerAspect"/>
+            <AbilLinkDisableArray value="MorphToOverseer"/>
+            <AbilLinkDisableArray value="MorphQueen2"/>
+            <AbilLinkDisableArray value="MorphQueen3"/>
+            <AbilLinkDisableArray value="ThorCrippled"/>
+            <AbilLinkDisableArray value="ThorUncrippled"/>
+            <AbilLinkDisableArray value="PhasingMode"/>
+        </Modification>
+        <DamageResponse ModifyFraction="2">
+            <Chance value="1"/>
+        </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="HarrierTemporaryInvulnerability">
         <InfoFlags index="Hidden" value="1"/>
@@ -636,8 +684,26 @@
         <PeriodicEffect value="RattlesnakeStimpackHeal"/>
         <Modification MoveSpeedMultiplier="1.5" AttackSpeedMultiplier="1.5"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="RadarTowerRadar">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-radar.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Modification Radar="40" RadarFilters="-;Neutral,RawResource,HarvestableResource,Missile,Destructible"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SgtHammerSieged">
         <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowHallucinationTimedLife">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="60"/>
+        <ExpireEffect value="KillHallucination"/>
+        <Modification>
+            <StateFlags index="SuppressPassenger" value="1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShellShower">
         <Alignment value="Positive"/>
@@ -649,6 +715,18 @@
         </Modification>
         <BuffFlags index="RefreshStack" value="1"/>
         <MaxStackCount value="13"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VulcanCannons">
+        <Tooltip value="Button/Tooltip/VulcanCannons"/>
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="13"/>
+        <Duration value="5"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.08"/>
+            <DamageDealtFraction index="Ranged" value="0.0383"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShimmerScreen">
         <InfoFlags index="Hidden" value="1"/>
@@ -749,6 +827,19 @@
         <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="168"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuperRadarAura">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.8"/>
+        <PeriodicEffect value="SuperRadarRangeSA"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuperRadarRangeBuff">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Icons and Wireframes\superradar.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification RangedWeaponRange="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SuperStim">
         <Alignment value="Positive"/>

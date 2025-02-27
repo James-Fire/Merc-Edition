@@ -6,6 +6,8 @@ Abil/Name/AlphaSquadron=Alpha Squadron
 Abil/Name/AspisBlink=Aspis Blink
 Abil/Name/BunkerLower=Lower
 Abil/Name/BunkerRaise=Raise
+Abil/Name/CabalAssaultTakeoverMorph=Cabal Assault Takeover Morph
+Abil/Name/CabalFighterTakeoverMorph=Cabal Fighter Takeover Morph
 Abil/Name/CharonDropshipTrain=Train
 Abil/Name/CondorSpiderMineUnburrow=Spider Mine Unburrow
 Abil/Name/CondorSpiderMines=Use Spider Mines
@@ -37,16 +39,20 @@ Abil/Name/PhantomCloak=Personal Cloaking
 Abil/Name/PlaceNomadDrone=Place Nomad Drone
 Abil/Name/PlaceNomadTurret=Place Nomad Turret
 Abil/Name/PsychoMissiles=Psycho Missiles
+Abil/Name/RadarTowerScannerSweep=Radar Tower Scanner Sweep
 Abil/Name/RagnarokToggle=Ragnarok Toggle
 Abil/Name/RattlesnakeRevitalizer=Rattlesnake Revitalizer
+Abil/Name/ReaperMissiles=Reaper Missiles
 Abil/Name/RedlineReactor=Redline Reactor
 Abil/Name/RepairDroneHeal=Repair Drone Heal
 Abil/Name/RevivalField=Revival Field
 Abil/Name/SecretStashStimpack=Secret Stash Stimpack
+Abil/Name/SensorTowerMorphToRadarTower=Sensor Tower -> Radar Tower
 Abil/Name/SentinelMissilesAres=Sentinel Missiles
 Abil/Name/SgtHammerNapalm=Sgt Hammer Napalm
 Abil/Name/SgtHammerSiege=Sgt Hammer Siege
 Abil/Name/SgtHammerUnsiege=Sgt Hammer Unsiege
+Abil/Name/ShadowHallucination=Hallucination
 Abil/Name/SignalFlare=Signal Flare
 Abil/Name/SilentMode=Silent Mode
 Abil/Name/SkibisAngelRepairDrone=Skibi's Angel Repair Drone
@@ -112,6 +118,7 @@ Behavior/Name/StunnedAnarchistLeap=Stunned
 Behavior/Name/StunnedPenetratorRound=Stunned
 Behavior/Name/SuperCloak=Super Cloak
 Behavior/Name/SuperCloakCooldown=Super Cloak Cooldown
+Behavior/Name/SuperRadarRangeBuff=Super Radar
 Behavior/Name/SuperStim=Super Stim
 Behavior/Name/SurvivorsGuilt=Survivor's Guilt
 Behavior/Name/SurvivorsGuiltApollo=Survivor's Guilt
@@ -119,6 +126,7 @@ Behavior/Name/TacticalRealignment=Tactical Realignment
 Behavior/Name/TarBomb=Tar Bomb
 Behavior/Name/TriggerOverdrive=Trigger Overdrive
 Behavior/Name/UranusProtocol=Uranus Protocol
+Behavior/Name/VulcanCannons=Vulcan Cannons
 Behavior/Name/WolverinesOrders=Wolverine's Orders
 Behavior/Tooltip/ARESTargetLock=This unit is taking increased damage.
 Behavior/Tooltip/AdjudicatorCloakingField=This unit is cloaked unless revealed by detectors or effects.
@@ -151,6 +159,7 @@ Behavior/Tooltip/StunnedAnarchistLeap=This unit is stunned.
 Behavior/Tooltip/StunnedPenetratorRound=This unit is stunned.
 Behavior/Tooltip/SuperCloak=This unit is invulnerable.
 Behavior/Tooltip/SuperCloakCooldown=Super Cloak cannot activate yet.
+Behavior/Tooltip/SuperRadarRangeBuff=This unit has increased weapon range from a Radar Tower.
 Behavior/Tooltip/SurvivorsGuilt=This unit wishes to avenge their fallen comrade.
 Behavior/Tooltip/SurvivorsGuiltApollo=This unit is filled with drug-induced rage.
 Behavior/Tooltip/TacticalRealignment=This unit is dealing more damage.
@@ -196,6 +205,8 @@ Button/Name/BuildZeusBattleTank=Build Zeus Battle Tank
 Button/Name/BuildZeusLander=Build Samson
 Button/Name/BurstAmplifier=Burst Amplifier
 Button/Name/BurstCannon=Burst Cannon
+Button/Name/CabalAssaultMode=Assault Mode
+Button/Name/CabalFighterMode=Fighter Mode
 Button/Name/CerberusHoundMines=Cerberus Hound Mines
 Button/Name/ChairsandAC=Chairs and AC
 Button/Name/ChaoticPower=Chaotic Power
@@ -207,6 +218,7 @@ Button/Name/CombatDrugs=Combat Drugs
 Button/Name/Combustion=Combustion
 Button/Name/ConcussiveShrapnel=Concussive Shrapnel
 Button/Name/ConfederateReactor=Confederate Reactor
+Button/Name/CyberneticReconstruction=Cybernetic Reconstruction
 Button/Name/DeadManSwitch=Dead Man Switch
 Button/Name/DeadMenTellNoTales=Dead Men Tell No Tales
 Button/Name/DemonRockets=Demon Rockets
@@ -276,6 +288,7 @@ Button/Name/RagnarokWeapons=Ragnarok Weapons
 Button/Name/RapidAlgorithms=Rapid Algorithms
 Button/Name/Rattlesnake22=Rattlesnake
 Button/Name/RaynorSpecial=Raynor Special
+Button/Name/ReaperMissiles=Reaper Missiles
 Button/Name/RedlineReactor=Redline Reactor
 Button/Name/ReflectiveArmor=Reflective Armor
 Button/Name/RevivalField=Revival Field
@@ -284,6 +297,7 @@ Button/Name/SecretStashStimpack=Secret Stash Stimpack
 Button/Name/SentinelMissilesAres=Sentinel Missiles
 Button/Name/SgtHammerSiegeMode=Siege Mode
 Button/Name/SgtHammerTankMode=Tank Mode
+Button/Name/ShadowHallucinate=Hallucination
 Button/Name/ShellShower=Shell Shower
 Button/Name/ShimmerScreen=Shimmer Screen
 Button/Name/SignalFlare=Signal Flare
@@ -296,6 +310,7 @@ Button/Name/SquadSIghtAres=Squad Sight
 Button/Name/StabilizerHeal=Stabilizer Heal
 Button/Name/StabilizerMedpacksMerc=Advanced Stabilizers
 Button/Name/SulfurMissiles=Sulfur Missiles
+Button/Name/SuperRadar=Super Radar
 Button/Name/SuperStim=Super Stim
 Button/Name/SurvivorsGuilt=Survivor's Guilt
 Button/Name/SwannNanites=Swann Nanites
@@ -317,12 +332,16 @@ Button/Name/TriggerOverdrive=Trigger Overdrive
 Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
 Button/Name/UpgradeToPlanetaryFortress=Upgrade to Bombardment Fortress
+Button/Name/UpgradetoRadarTower=Upgrade to Radar Tower
 Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
+Button/Name/VulcanCannons=Vulcan Cannons
 Button/Name/YamatoCulverin=Yamato Culverin
 Button/Name/ZeusLanderTacticalJump=Tactical Jump
+Button/Name/ZeusTankSecretUpgrade=ZeusTankSecretUpgrade
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Skibi's Angels cost 35% less, no longer need a Tech Lab and are equipped with an automatic healing drone.
 Button/Tooltip/ARESTargetLock=Increases damage dealt to the target enemy unit by 30%. Effect lasts as long as the ARES remains locked onto the target.
+Button/Tooltip/ARESTargetLock2=Increases damage dealt to the target enemy unit by 45%. Effect lasts as long as the ARES remains locked onto the target.
 Button/Tooltip/ASPRocketPods=Causes Dusk Wing missiles to deal damage in a line, increases damage while cloaked by 25%, and adds another two Screecher Missile weapons.
 Button/Tooltip/ATXOrdnance=Replaces weaponry with ATX Laser Batteries and ATX Point Defense.
 Button/Tooltip/AblativeScalesNew=Increases Hammer Security life by 75 and grants immunity to splash damage.
@@ -364,7 +383,12 @@ Button/Tooltip/BuildZeusLander=Massive transport ship. Deploys loaded troops alm
 Button/Tooltip/BunkerBurrowed=Defensive structure. Able to protect up to <d ref="Abil,BunkerTransport,TotalCargoSpace"/> infantry unit slots. Units inside the Bunker have +1 range to their attacks. Bunkers can be salvaged.
 Button/Tooltip/BurstAmplifier=Harrier movement speed is increased while not attacking. While moving, damage is increased significantly.
 Button/Tooltip/BurstCannon=Each attack fires 4 times in rapid succession.
+Button/Tooltip/CabalAssault=Durable support unit. Can switch into Fighter Mode to attack air units.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/CabalAssaultMode=Transforms Cabal to Assault Mode. In this mode, Cabal moves on the ground and can only attack ground targets.
+Button/Tooltip/CabalFighter=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
+Button/Tooltip/CabalFighterMode=Transforms Cabal to Fighter Mode. In this mode, Cabal can fly, but he can only attack air targets.
 Button/Tooltip/CerberusHoundMines=Increases the detonation and trigger radius of Spider Mines by 40%.
+Button/Tooltip/ChairsandAC=Bunkers gain 4 slots and 3 armor.
 Button/Tooltip/ChaoticPower=Upon death, spawn 10 mag mines. Halves cooldown of Mag Mine ability and causes it to deploy an additional Mag Mine.
 Button/Tooltip/CharonDropship=Air transport. Heals nearby biological units.
 Button/Tooltip/CharonDropshipTrainSkibisAngel=Support troopers. Heals nearby biological units. Trained cheaper and faster at Charon Dropships, and in pairs.
@@ -377,6 +401,7 @@ Button/Tooltip/ConcussiveShrapnel=Hammer Security attacks deal slight damage to 
 Button/Tooltip/Condor=Fast skirmish unit. Can use the Spider Mine ability.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/ConfederateReactor=Copperheads gain 1 range and movement speed, and 35% attack speed.
 Button/Tooltip/Copperhead=Fast, high-damage hovertank. Rail Gun can fire while the Diamondback is moving.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/CyberneticReconstruction=Upon death, Cabal takes over the nearest Hel's Angel as himself.
 Button/Tooltip/DeadManSwitch=Upon death, persists as a wreckage which can be rebuilt back into a Titan. If the wreckage is destroyed, it detonates a nuke.
 Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby enemy units.
 Button/Tooltip/DemonRockets=Attacks stun enemy structures.
@@ -455,11 +480,13 @@ Button/Tooltip/PsiDispersionDevice=Defensive structure. Slows the attack and mov
 Button/Tooltip/PsiDisruptionDevice=Defensive structure. Slows the attack and movement speeds of all nearby Zerg units, and damages them for 5 life per second.<n/><n/><c val="#ColorAttackInfo">Heroic units are immune.</c>
 Button/Tooltip/PsychoMissiles=Launch a volley of missiles that deals 30 damage. Automatically cast when attacking targets.
 Button/Tooltip/R31TearGasRounds=Wolverine attacks have a 10% chance to Fear enemies in a small area, causing them to run around uncontrollably for 2 seconds.<n/><n/><c val="FFFF80">The same enemy cannot be Feared more than once every 4 seconds.</c>
+Button/Tooltip/RadarTower=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy. <n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/RagnarokWeapons=Weapon can be toggled to fire slower, stronger particle cannon shots.
 Button/Tooltip/RailGunTurret=Automated defensive turret. Damages all enemy ground units in a straight line. Times out after <d ref="Behavior,RailGunTurretTimedLife,Duration"/> seconds.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RapidAlgorithms=Charon Dropships gain the Ignite Afterburners ability and 2 movement speed. Deploying units is now instant.
 Button/Tooltip/Rattlesnake22=Kev "Rattlesnake" West is a terran mercenary marauder and is one of the few mercenaries to be honorably discharged from the Armed Forces. Though he refuses to take jobs that have the possibility of harming innocent people, West still works steadily. His war days might be behind him, but he did not lose his bite.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorSpecial=Condors can now jump up and down cliffs, and fire while moving.
+Button/Tooltip/ReaperMissiles=Fires several high explosive missiles that each deal 500 damage in an area.
 Button/Tooltip/RedlineReactor=Increases damage by 10 and doubles movement speed for <d time="8.4"/>.
 Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. When taking damage, damage dealt is briefly increased.
 Button/Tooltip/Revitalizer=Device that heals all friendly units nearby for 4% of their maximum life per second. Lasts for <d time="28"/>.
@@ -467,13 +494,13 @@ Button/Tooltip/RevivalField=While cloaked, the Harrier avoids every other attack
 Button/Tooltip/RorkesRedline=Gives the Starcruiser 250 shields and enables the Redline Reactor ability.
 Button/Tooltip/Salvage=Salvages the structure, removing it and returning 100% of its mineral and gas value. Salvage takes <d time="5"/> to finish. Warning: once Salvage is triggered, it cannot be canceled.
 Button/Tooltip/SecretStashStimpack=Heals Rattlesnake for 3 life per second and increases his attack and movement speeds for <d time="12"/>.
-Button/Tooltip/SensorTower2=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy. <n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/SentinelMissilesAres=Fires a missile that deals 145 (+35 vs Shields) damage to the target, and 50 (+25 vs Shields) damage to nearby enemies.
 Button/Tooltip/SgtHammer=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/SgtHammerSiegeMode=Deploys into Siege Mode. In this mode, Sgt. Hammer has very long range and inflicts area damage. Sgt. Hammer in this mode cannot move or attack targets at close range.
 Button/Tooltip/SgtHammerSieged=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/SgtHammerTankMode=Return to tank mode.
 Button/Tooltip/Shadow=Infiltration unit. Can use Ultrasonic Pulse, Psionic Lash, and Cloak. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/ShadowHallucinate=Create 3 hallucinations of the target unit with timed life. Hallucinations deal no damage and take double damage, and can be revealed as hallucinations by detectors or effects.
 Button/Tooltip/ShellShower=The more this unit attacks, the faster its attacks become.
 Button/Tooltip/ShimmerScreen=Allows the Dusk Wing to permanently cloak, as well as increasing speed by 25% and reducing damage taken by 15% while cloaked.
 Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius and weapon range, as well as suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
@@ -489,6 +516,7 @@ Button/Tooltip/StabilizerHeal=Heals a friendly biological or mechanical target a
 Button/Tooltip/StabilizerMedpacksMerc=Increases Skibi's Angel heal speed, energy efficiency, and causes Signal Flare to heal nearby units.
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SulfurMissiles=Hel's Angels missiles now deal area damage and apply more damage over time. On death, the Hel's Angel explodes to deal damage with more damage over time.
+Button/Tooltip/SuperRadar=Able to expose enemy movements within its radar capability. Does not reveal the area.<n/><n/><c val="FFFF80">Radar Tower</c><n/>•Larger Radius<n/>•Outlines Enemies<n/>•Senses Cloaked & Burrowed<n/>•Gives Allies Range
 Button/Tooltip/SuperStim=Increases War Pig attack and movement speed by 50% for <d time="15"/> and heals them for 30 life.
 Button/Tooltip/SurvivorsGuilt=When destroyed, dropped units gain a temporary boost to damage, attack speed, and movement speed.
 Button/Tooltip/SwannNanites=Nano-Repair no longer costs energy, heals 50% faster, and can heal structures. Irradiation now damages enemy mechanical units and heals allied mechanical units.
@@ -513,12 +541,15 @@ Button/Tooltip/TriggerOverdrive=Attacks increase attack speed by 10% for a short
 Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able to calldown nukes 50% faster, and have 10% reduced Snipe energy cost.
 Button/Tooltip/U240Rounds=Increases the Block B's range by 1 and damage vs Light by 3. Enemies killed release a G-4 Clusterbomb.
 Button/Tooltip/UpgradeToPlanetaryFortress=Adds a powerful turret, and increases armor. Removes Lift Off, Scanner Sweep, and MULE abilities, but allows it to fire powerful missiles at long range.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/UpgradetoRadarTower=Transforms the Sensor Tower into a Radar Tower.<n/>Radar Towers can use Scanner Sweep and give allies bonus weapon range.
 Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Light and Biological by 15, and doubles the width of attacks.
+Button/Tooltip/VulcanCannons=The more this unit attacks, the faster and stronger its attacks become.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/YamatoCulverin=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby.
 Button/Tooltip/ZeusBattleTank=Armored weapons platform. Can use Target Lock and Sentinel Missiles.<n/><n/><c val="FFFF00">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
+Button/Tooltip/ZeusTankSecretUpgrade=Squad Sight radius increased, Target Lock range and damage bonus increased.
 Effect/Name/250mmUranusCarronadesCP=250mmUranusCarronadesCP
 Effect/Name/250mmUranusCarronadesDamage=250mmUranusCarronadesDamage
 Effect/Name/250mmUranusCarronadesLaunchMissile=250mmUranusCarronadesLaunchMissile
@@ -584,6 +615,10 @@ Effect/Name/BunkerBurrowedApplyBehavior=BunkerBurrowedApplyBehavior
 Effect/Name/BunkerBurrowedRB=BunkerBurrowedRB
 Effect/Name/BunkerMorphingApplyBehavior=BunkerMorphingApplyBehavior
 Effect/Name/C11EthereanRifle=C-11 Etherean Rifle
+Effect/Name/CabalAssaultDeathDummy=Cabal Assault Death Dummy
+Effect/Name/CabalAssaultReviveDummy=Cabal Assault Revive Dummy
+Effect/Name/CabalFighterDeathDummy=Cabal Fighter Death Dummy
+Effect/Name/CabalFighterReviveDummy=Cabal Fighter Revive Dummy
 Effect/Name/ChargedJupiterRailDamage=Charged Jupiter Rail Damage
 Effect/Name/ChemicalPlatingDummy=Chemical Plating Dummy
 Effect/Name/CoeusMissileCP=Coeus Missile CP
@@ -763,6 +798,10 @@ Effect/Name/RattlesnakeStimpackHeal=Rattlesnake Stimpack Heal
 Effect/Name/RattlesnakeWeaponDamage=Rattlesnake Weapon Damage
 Effect/Name/RattlesnakeWeaponLM=Rattlesnake Weapon LM
 Effect/Name/RattlesnakeWeaponSet=Rattlesnake Weapon Set
+Effect/Name/ReaperMissilesCP=Reaper Missiles CP
+Effect/Name/ReaperMissilesDamage=Reaper Missiles Damage
+Effect/Name/ReaperMissilesLaunchMissile=Reaper Missiles Launch Missile
+Effect/Name/ReaperMissilesRP=Reaper Missiles RP
 Effect/Name/RedlineReactorAB=Redline Reactor AB
 Effect/Name/RedlineReactorMusicEasterEgg=Needle's In The Red!
 Effect/Name/ReflectiveArmorActiveforBeamVisualApplyBehavior=ReflectiveArmorActiveforBeamVisualApplyBehavior
@@ -798,6 +837,10 @@ Effect/Name/SgtHammerNapalmDoTSA=Sgt Hammer Napalm DoT SA
 Effect/Name/SgtHammerNapalmLaunchMissile=Sgt Hammer Napalm Launch Missile
 Effect/Name/SgtHammerNapalmSA=Sgt Hammer Napalm SA
 Effect/Name/SgtHammerNapalmSet=Sgt Hammer Napalm Set
+Effect/Name/ShadowHallucinationAB=Shadow Hallucination AB
+Effect/Name/ShadowHallucinationCU=Shadow Hallucination CU
+Effect/Name/ShadowHallucinationLifeAB=Shadow Hallucination Life AB
+Effect/Name/ShadowHallucinationSet=Shadow Hallucination Set
 Effect/Name/ShellShowerApplyBehavior=ShellShowerApplyBehavior
 Effect/Name/ShredderRoundsCP=Shredder Rounds CP
 Effect/Name/ShredderRoundsSA=Shredder Rounds SA
@@ -848,6 +891,8 @@ Effect/Name/SulfurSuicideSet=Sulfur Suicide Set
 Effect/Name/SuperCloakApplyBehavior=SuperCloakApplyBehavior
 Effect/Name/SuperCloakCooldownApplyBehavior=SuperCloakCooldownApplyBehavior
 Effect/Name/SuperCloakSet=Super Cloak Set
+Effect/Name/SuperRadarRangeAB=Super Radar Range AB
+Effect/Name/SuperRadarRangeSA=Super Radar Range SA
 Effect/Name/SuperStimApplyBehavior=SuperStimApplyBehavior
 Effect/Name/SuperStimHeal=Super Stim Heal
 Effect/Name/SuperStimSet=Super Stim Set
@@ -870,6 +915,7 @@ Effect/Name/TotalDominationCP=Total Domination CP
 Effect/Name/TriggerOverdriveApplyBehavior=TriggerOverdriveApplyBehavior
 Effect/Name/U-240RoundsBombApplyBehavior=U-240RoundsBombApplyBehavior
 Effect/Name/U-240RoundsBombCreateUnit=U-240 Rounds Bomb Create Unit
+Effect/Name/VulcanCannonsAB=Vulcan Cannons AB
 Effect/Name/WolverineFearAB=Fear AB
 Effect/Name/WolverineFearImmunityAB=Fear Immunity AB
 Effect/Name/WolverineFearSA=Fear SA
@@ -927,6 +973,7 @@ RequirementNode/Tooltip/CountBehaviorSgtHammerSiegedCompleteOnlyAtUnit2462428351
 SkibidiSkibidiHeHeHaHa=x2
 StarcruiserShields=Shield Generator
 StarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevenge2ShieldsStarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevengeHeroShields=Shield Generator
+UI/Upgrading=Upgrading
 Unit/Name/250mmUranusCarronadesWeapon=250mm Uranus Carronades Projectile
 Unit/Name/ACV=ACV
 Unit/Name/ARESMissileMissile=ARES Missile Missile
@@ -939,6 +986,8 @@ Unit/Name/Anarchist=Anarchist
 Unit/Name/BioMechanicalRepairDrone=Bio-Mechanical Repair Drone
 Unit/Name/BombardmentFortress=Bombardment Fortress
 Unit/Name/BunkerBurrowed=Bunker Burrowed
+Unit/Name/CabalAssault=Cabal
+Unit/Name/CabalFighter=Cabal
 Unit/Name/CharonDropship=Charon Dropship
 Unit/Name/Condor=Condor
 Unit/Name/Copperhead=Copperhead
@@ -974,9 +1023,11 @@ Unit/Name/PointBreakDrone=Point Break Drone
 Unit/Name/PsiDispersionDevice=Psi Dispersion Device
 Unit/Name/PsychoMissileWeapon=Psycho Missile
 Unit/Name/PsychoMissilesDummyWeapon=Psycho Missiles Dummy
+Unit/Name/RadarTower=Radar Tower
 Unit/Name/RailGunTurret=Railgun Turret
 Unit/Name/Rattlesnake=Rattlesnake
 Unit/Name/RattlesnakeWeapon=Rattlesnake Weapon
+Unit/Name/ReaperMissilesMissile=Reaper Missiles Missile
 Unit/Name/RepairDroneHealMissile=Repair Drone Heal Missile
 Unit/Name/Revitalizer=Revitalizer
 Unit/Name/SgtHammer=Sgt. Hammer
@@ -1070,12 +1121,15 @@ Upgrade/Name/U240Rounds=U-240 Rounds
 Upgrade/Name/UmojanCellularReactors=Umojan Cellular Reactors
 Upgrade/Name/UranusProtocol=Uranus Protocol
 Upgrade/Name/ViralFlammenwerfer=Viral Flammenwerfer
+Upgrade/Name/ZeusTankSecretUpgrade=ZeusTankSecretUpgrade
 Weapon/Name/250mmUranusCarronades=250mm Uranus Carronades
 Weapon/Name/ACVFusionCutter=Fusion Cutter
 Weapon/Name/AGRShadeHunter=AGR Shade Hunter
 Weapon/Name/BarBreakers=Bar Breakers
 Weapon/Name/BarBreakersFlying=Bar Breakers
 Weapon/Name/C11EthereanRifle=C-11 Etherean Rifle
+Weapon/Name/CabalAntiAir=Scythe Torpedoes
+Weapon/Name/CabalGatlingCannon=Gatling Cannon
 Weapon/Name/ChargedJupiterRail=Charged Jupiter Rail
 Weapon/Name/CoeusMissileLaunchers=Coeus Missile Launchers
 Weapon/Name/DevastatorMissilesMerc=Devastator Missiles

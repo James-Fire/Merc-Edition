@@ -40,6 +40,24 @@
     <CAbilBuild id="BarracksAddOns">
         <InfoArray index="Build4" Time="28"/>
     </CAbilBuild>
+    <CAbilMorph id="CabalAssaultTakeoverMorph">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0059_01"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <InfoArray Unit="CabalAssault"/>
+    </CAbilMorph>
+    <CAbilMorph id="CabalFighterTakeoverMorph">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0059_01"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <InfoArray Unit="CabalFighter"/>
+    </CAbilMorph>
     <CAbilEffectTarget id="CalldownMULE">
         <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>
     </CAbilEffectTarget>
@@ -200,8 +218,33 @@
         <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AutoCastRange value="6.5"/>
     </CAbilMorph>
+    <CAbilEffectTarget id="ReaperMissiles">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ReaperMissilesCP"/>
+        <Flags index="TransientPreferred" value="1"/>
+        <Cost>
+            <Charge Location="Player"/>
+            <Cooldown Location="Player" TimeUse="168"/>
+        </Cost>
+        <Range value="11"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ReaperMissiles"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="ScannerSweep">
         <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RadarTowerScannerSweep">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ScannerSweep"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CursorEffect value="ScannerSweep"/>
+        <AINotifyEffect value="ScannerSweep"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Scan"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="SecretStashStimpack">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -212,6 +255,31 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="SuperStim"/>
     </CAbilEffectInstant>
+    <CAbilMorph id="SensorTowerMorphToRadarTower">
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorRadar"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="RadarTower" RallyResetPhase="Delay" RallyResetSection="Abils">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="42"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="42"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="42"/>
+            </SectionArray>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilMorph>
     <CAbilEffectTarget id="SgtHammerNapalm">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SgtHammerNapalmLaunchMissile"/>
@@ -268,6 +336,22 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="ShadowHallucination">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ShadowHallucinationCU"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <TimeUse value="28"/>
+            </Charge>
+        </Cost>
+        <TargetFilters value="Visible;Structure,Heroic,Missile,Item,Buried,Stasis,Dead,Hidden,Hallucination,Invulnerable,Benign"/>
+        <Range value="9"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ShadowHallucinate" Requirements="UseJoriumLinedSuit"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="TotalAnnihilation">
         <Alignment value="Negative"/>
         <AbilSetId value="yamato"/>

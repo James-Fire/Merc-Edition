@@ -289,6 +289,95 @@
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_017.fxe"/>
         </AssetArray>
     </CSound>
+    <CSound id="CabalReady" parent="Ready">
+        <AssetArray File="Assets\Sounds\VO Cabal\Ready\00-i076.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Ready\00-i200.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Ready\01-n400.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Ready\99-n464.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="CabalReviveS" parent="Combat">
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse01_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse02_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse03_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse04_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse05_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse06_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse07_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse08_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse09_2ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SOA_ReconstructionBeam_Pulse10_2ch.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="CabalWhat" parent="TerranAck">
+        <EditorCategories value=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\What\00-i042.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\What\01-n008.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\What\01-n468.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\What\01-w000.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="CabalYes" parent="TerranAck">
+        <EditorCategories value=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Yes\00-i210.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Yes\01-i342.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Yes\01-n208.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Yes\01-w002.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="CabalAttack" parent="TerranAck">
+        <EditorCategories value=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Attack\01-i352.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Attack\01-i356.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Attack\01-i360.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Attack\01-i362.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Attack\01-i364.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Attack\01-i378.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Attack\01-n070.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="CabalHelp" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Help\01-n320.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Help\01-n326.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Help\01-n462.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Help\99-n454.wav" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="CabalPissed" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Cabal\Pissed\01-i350.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Pissed\01-i366.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Pissed\01-i368.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Pissed\01-n402.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Cabal\Pissed\01-w018.wav" FacialGroup=""/>
+        <Flags index="Download" value="0"/>
+        <Select value="Sequential"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="ReaperMissilesImpact" parent="Combat">
+        <AssetArray File="Assets\Sounds\GrenadePulse_Explosion01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GrenadePulse_Explosion02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GrenadePulse_Explosion03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GrenadePulse_Explosion04.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="ReaperMissilesLaunch" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Viking\Viking_FighterAttackLaunch0.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,5.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="ReaperMissilesLaunchAdd" parent="Combat">
+        <AssetArray File="Assets\Sounds\GrenadePulse_Activate01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GrenadePulse_Activate02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GrenadePulse_Activate03.wav" FacialGroup=""/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="SpartanCompanyAirAttackLaunchUpgraded" parent="Combat">
+        <AssetArray File="Assets\Sounds\CarrierAiur_ReconstructionBeam_Launch01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CarrierAiur_ReconstructionBeam_Launch02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CarrierAiur_ReconstructionBeam_Launch03_1ch.wav" FacialGroup=""/>
+        <Pitch value="4.000000,6.000000"/>
+        <Volume value="-10.000000,-10.000000"/>
+    </CSound>
     <CSound id="StarcruiserYamatoChargeUp" parent="Spell">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\PirateCapitalShip_YamatoAttackChargeUp_00.wav" Volume="6.000000,6.000000" FacialGroup=""/>
@@ -493,8 +582,9 @@
     </CSound>
     <CSound id="FreyjaHellraiserMusicEasterEgg" parent="Combat">
         <AssetArray File="Assets\Sounds\we makin it outta the koprulu sector with this one boys.mp3" Weight="6" FacialGroup=""/>
-        <Mode value="2D"/>
         <Volume value="-15.000000,-15.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="20.270269" Volume="-96.000000"/>
     </CSound>
     <CSound id="InspireApply" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch0.wav" FacialGroup=""/>
@@ -619,6 +709,9 @@
         <DupeDestroyCount value="1"/>
         <DupeMuteCount value="1"/>
         <Volume value="-15.000000,-15.000000"/>
+        <Mode value="3DWorld"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="20.270269" Volume="-96.000000"/>
     </CSound>
     <CSound id="RevivalFieldDodgeSound" parent="Combat">
         <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact01_1ch.wav" FacialGroup=""/>

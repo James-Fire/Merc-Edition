@@ -387,7 +387,10 @@
         <EffectArray Operation="Set" Reference="Weapon,WreckingCrewAssault,Effect" Value="HelsAngelWeaponSet"/>
         <EffectArray Reference="Weapon,WreckingCrewAssault,Range" Value="2"/>
         <EffectArray Reference="Weapon,WreckingCrewFighter,Range" Value="2"/>
+        <EffectArray Reference="Weapon,CabalAntiAir,Range" Value="2"/>
+        <EffectArray Reference="Weapon,CabalGatlingCannon,Range" Value="2"/>
         <EffectArray Operation="Set" Reference="Effect,WreckingCrewFighter,PeriodicPeriodArray[1]" Value="0.000000"/>
+        <EffectArray Operation="Set" Reference="Effect,CabalGatlingCannon,PeriodicPeriodArray[1]" Value="0.000000"/>
         <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
         <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
         <EffectArray Operation="Multiply" Reference="Abil,WreckingCrewAssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Duration]" Value="0.330000"/>
@@ -446,6 +449,7 @@
     </CUpgrade>
     <CUpgrade id="JoriumLinedSuit">
         <EffectArray Operation="Set" Reference="Behavior,SpectreCloaking,Modification.VitalRegenArray[Energy]" Value="0.000000"/>
+        <EffectArray Operation="Set" Reference="Abil,RogueGhostCloak,Cost[0].Vital[Energy]" Value="0"/>
         <AffectedUnitArray value="Phantom"/>
     </CUpgrade>
     <CUpgrade id="LaserTargetingSystem">
@@ -793,5 +797,21 @@
         <EffectArray Operation="Set" Reference="Actor,AnarchistAttackLaunch,Scale" Value="1.500000,1.000000,1.000000"/>
         <AffectedUnitArray value="Anarchist"/>
         <AffectedUnitArray value="Agitator"/>
+    </CUpgrade>
+    <CUpgrade id="ZeusTankSecretUpgrade">
+        <EffectArray Operation="Multiply" Reference="Unit,ARESWarbotMercMod,LifeMax" Value="1.33"/>
+        <EffectArray Operation="Multiply" Reference="Unit,ARESWarbotMercMod,LifeStart" Value="1.33"/>
+        <EffectArray Reference="Behavior,ARESTargetLock,Modification.DamageTakenFraction[Melee]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ARESTargetLock,Modification.DamageTakenFraction[NoProc]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ARESTargetLock,Modification.DamageTakenFraction[Ranged]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ARESTargetLock,Modification.DamageTakenFraction[Spell]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ARESTargetLock,Modification.DamageTakenFraction[Splash]" Value="0.15"/>
+        <EffectArray Reference="Effect,SquadSightSA,AreaArray[0].Radius" Value="2"/>
+        <EffectArray Reference="Abil,ARESTargetLock,AutoCastRange" Value="3"/>
+        <EffectArray Reference="Abil,ARESTargetLock,Range[0]" Value="3"/>
+        <EffectArray Operation="Set" Reference="Button,SquadSIghtAres,Icon" Value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-improvedartilleryrange.dds"/>
+        <EffectArray Operation="Set" Reference="Button,ARESTargetLock,Icon" Value="Assets\Textures\btn-upgrade-protoss-alarak-havoctargetlockbuffed.dds"/>
+        <EffectArray Operation="Set" Reference="Button,ARESTargetLock,Tooltip" Value="Button/Tooltip/ARESTargetLock2"/>
+        <AffectedUnitArray value="ARESWarbotMercMod"/>
     </CUpgrade>
 </Catalog>
