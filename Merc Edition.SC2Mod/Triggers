@@ -749,6 +749,7 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="682B4DB0"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="3E2B2051"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="28D36327"/>
+            <Item Type="FunctionDef" Library="BA5CCDED" Id="EB3C4B68"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="8F9E8555"/>
         </Element>
         <Element Type="Trigger" Id="BAAF1922">
@@ -3521,7 +3522,7 @@
         </Element>
         <Element Type="Trigger" Id="28D36327">
             <Action Type="FunctionCall" Library="BA5CCDED" Id="642DFE44"/>
-            <Action Type="FunctionCall" Library="BA5CCDED" Id="5694256B"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="76B8C4AC"/>
         </Element>
         <Element Type="FunctionCall" Id="642DFE44">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000118"/>
@@ -3540,6 +3541,14 @@
         <Element Type="Param" Id="C69916B1">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000186"/>
             <ValueType Type="text"/>
+        </Element>
+        <Element Type="FunctionCall" Id="76B8C4AC">
+            <FunctionDef Type="FunctionDef" Library="BA5CCDED" Id="EB3C4B68"/>
+        </Element>
+        <Element Type="FunctionDef" Id="EB3C4B68">
+            <FlagAction/>
+            <FlagCreateThread/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="5694256B"/>
         </Element>
         <Element Type="FunctionCall" Id="5694256B">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="C4DC760C"/>

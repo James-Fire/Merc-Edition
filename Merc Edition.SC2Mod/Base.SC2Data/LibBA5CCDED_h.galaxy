@@ -16,6 +16,7 @@ bool libBA5CCDED_gv_easterEggActive;
 // Function Declarations
 void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition);
 void libBA5CCDED_gf_RescueZeus (unit lp_zeus);
+void libBA5CCDED_gf_MercUnitReplace ();
 void libBA5CCDED_gf_WillEmail (text lp_emailText);
 void libBA5CCDED_gf_GiveResearch (unit lp_unitPoint, int lp_researchCount, int lp_researchType);
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);

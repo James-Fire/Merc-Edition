@@ -78,6 +78,114 @@ bool auto_libBA5CCDED_gf_RescueZeus_TriggerFunc (bool testConds, bool runActions
     return true;
 }
 
+trigger auto_libBA5CCDED_gf_MercUnitReplace_Trigger = null;
+
+void libBA5CCDED_gf_MercUnitReplace () {
+    if (auto_libBA5CCDED_gf_MercUnitReplace_Trigger == null) {
+        auto_libBA5CCDED_gf_MercUnitReplace_Trigger = TriggerCreate("auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libBA5CCDED_gf_MercUnitReplace_Trigger, false, false);
+}
+
+bool auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto5694256B_g;
+    int auto5694256B_u;
+    unit auto5694256B_var;
+    string autoF1BE7618_val;
+
+    // Implementation
+    auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterHidden - 32))), 0);
+    auto5694256B_u = UnitGroupCount(auto5694256B_g, c_unitCountAll);
+    for (;; auto5694256B_u -= 1) {
+        auto5694256B_var = UnitGroupUnitFromEnd(auto5694256B_g, auto5694256B_u);
+        if (auto5694256B_var == null) { break; }
+        autoF1BE7618_val = UnitGetType(auto5694256B_var);
+        if (autoF1BE7618_val == "SCV") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "ACV", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Marine") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "WarPig", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Marauder") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "HammerSecurity", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Medic") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "MercMedic", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Reaper") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "BlockB", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Firebat") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "DevilDog", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Ghost") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Phantom", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Spectre") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Shadow", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "HellionTank") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Anarchist", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Hellion") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Agitator", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "SiegeTankSieged") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "SiegeBreakerSieged", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "SiegeTank") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "SiegeBreaker", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Thor") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Titan", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "ThorAP") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Titan", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Vulture") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Condor", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Diamondback") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Copperhead", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Goliath") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "SpartanCompany", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "VikingAssault") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "HelsAngelAssault", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "VikingFighter") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "HelsAngelFighter", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Banshee") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "DuskWing", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Wraith") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Harrier", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Raven") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Nomad", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Hercules") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "ZeusLanderFlying", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "ScienceVessel") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Adjudicator", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Battlecruiser") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Starcruiser", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else if (autoF1BE7618_val == "Medivac") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "CharonDropship", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        else {
+        }
+    }
+    return true;
+}
+
 trigger auto_libBA5CCDED_gf_WillEmail_Trigger = null;
 text auto_libBA5CCDED_gf_WillEmail_lp_emailText;
 
@@ -570,104 +678,13 @@ void libBA5CCDED_gt_InitPassiveUpgrades_Init () {
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_InitUnitReplace_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
-    unitgroup auto5694256B_g;
-    int auto5694256B_u;
-    unit auto5694256B_var;
-    string autoF1BE7618_val;
-
     // Actions
     if (!runActions) {
         return true;
     }
 
     TriggerDebugOutput(1, StringExternal("Param/Value/lib_BA5CCDED_C69916B1"), true);
-    auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterHidden - 32))), 0);
-    auto5694256B_u = UnitGroupCount(auto5694256B_g, c_unitCountAll);
-    for (;; auto5694256B_u -= 1) {
-        auto5694256B_var = UnitGroupUnitFromEnd(auto5694256B_g, auto5694256B_u);
-        if (auto5694256B_var == null) { break; }
-        autoF1BE7618_val = UnitGetType(auto5694256B_var);
-        if (autoF1BE7618_val == "SCV") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "ACV", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Marine") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "WarPig", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Marauder") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "HammerSecurity", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Medic") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "MercMedic", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Reaper") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "BlockB", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Firebat") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "DevilDog", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Ghost") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Phantom", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Spectre") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Shadow", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "HellionTank") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Anarchist", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Hellion") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Agitator", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "SiegeTankSieged") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "SiegeBreakerSieged", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "SiegeTank") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "SiegeBreaker", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Thor") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Titan", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "ThorAP") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Titan", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Vulture") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Condor", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Diamondback") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Copperhead", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Goliath") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "SpartanCompany", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "VikingAssault") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "HelsAngelAssault", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "VikingFighter") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "HelsAngelFighter", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Banshee") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "DuskWing", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Wraith") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Harrier", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Raven") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Nomad", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Hercules") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "ZeusLanderFlying", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "ScienceVessel") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Adjudicator", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Battlecruiser") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "Starcruiser", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else if (autoF1BE7618_val == "Medivac") {
-            libNtve_gf_ReplaceUnit(auto5694256B_var, "CharonDropship", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
-        }
-        else {
-        }
-    }
+    libBA5CCDED_gf_MercUnitReplace();
     return true;
 }
 

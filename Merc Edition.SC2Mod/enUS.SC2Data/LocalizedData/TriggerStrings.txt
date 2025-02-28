@@ -12,6 +12,7 @@ FunctionDef/Name/lib_BA5CCDED_6C39469B=Rescue Zeus
 FunctionDef/Name/lib_BA5CCDED_804C176D=Give Research
 FunctionDef/Name/lib_BA5CCDED_806E5FD1=Ihan-rii-ify
 FunctionDef/Name/lib_BA5CCDED_B3C97889=Spawn Zeus on Game Start
+FunctionDef/Name/lib_BA5CCDED_EB3C4B68=Merc Unit Replace
 FunctionDef/Name/lib_BA5CCDED_F9E916E2=Taldarimify
 Library/Name/BA5CCDED=Merc Edition Data
 ParamDef/Name/lib_BA5CCDED_097A86D0=Spawn Position
