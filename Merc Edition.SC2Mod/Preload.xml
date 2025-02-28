@@ -10,9 +10,9 @@
 <Behavior id="SurvivorsGuiltApolloCD"/>
 <Behavior id="SkibiCleanseStun"/>
 <Effect id="CabalAssaultReviveDummy"/>
+<Effect id="CabalFighterReviveDummy"/>
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
-<Effect id="CabalFighterReviveDummy"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
 <Sound id="RedlineReactorMusicEasterEgg"/>
 <Unit id="ARESWarbotMercMod"/>
