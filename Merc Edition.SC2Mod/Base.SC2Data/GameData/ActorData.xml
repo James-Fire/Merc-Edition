@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="CabalMorphSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
+    <CActorUnit id="CabalFighterMorphModel" parent="GenericUnitBaseMorphTransition" unitName="MengskVikingFighterMorphModel">
+        <Aliases value="_UnitMedium"/>
+        <On Terms="AbilMorph.*.Start; MorphTo CabalFighter" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo CabalFighter" Send="AnimPlay End Morph,End PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CabalFighter" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CabalAssault" Send="Destroy"/>
+        <Model value="CabalMorph"/>
+        <DeathArray index="Normal" ModelLink="WreckingCrewFighterDeath"/>
+        <PortraitModel value="VikingMercenaryFighterPortrait"/>
+        <AbilSoundArray AbilCmd="AssaultMode,Execute" Sound="Viking_AssaultModeVO"/>
+        <BarOffset value="50"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-Fighter.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <HighlightTooltip value="Unit/Name/CabalFighterMorphModel"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Viking_Ready"/>
+        <SoundArray index="Help" value="Viking_Help"/>
+        <SoundArray index="What" value="Viking_What"/>
+        <SoundArray index="Yes" value="Viking_Yes"/>
+        <SoundArray index="Attack" value="Viking_Attack"/>
+        <SoundArray index="Pissed" value="Viking_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-Fighter.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="CabalAssaultMorphModel" parent="GenericUnitBaseMorphTransition" unitName="MengskVikingAssaultMorphModel">
+        <Aliases value="_UnitMedium"/>
+        <On Terms="AbilMorph.*.Start; MorphTo CabalAssault" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo CabalAssault" Send="AnimPlay Start Morph,Start PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CabalAssault" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CabalFighter" Send="Destroy"/>
+        <Model value="CabalMorph"/>
+        <DeathArray index="Normal" ModelLink="WreckingCrewFighterDeath"/>
+        <PortraitModel value="CabalAssaultPortrait"/>
+        <BarOffset value="70"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-assault.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <HighlightTooltip value="Unit/Name/CabalAssaultMorphModel"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-Assault.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorSound id="CabalReviveS" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.CabalRevive1.Create" Send="Create"/>
@@ -390,6 +444,7 @@
         <Aliases value="_UnitLarge"/>
         <Macros value="UnloadDropAnim"/>
         <On Terms="Behavior.MercGroundDrop.Create" Send="Create SiegeBreakerDropModel"/>
+        <On Terms="ActorCreation" Send="AnimPlay Morph Morph,In"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="SiegeBreakerDeath" SoundLink="SiegeBreaker_Explode"/>
         <PortraitModel value="SiegeTankMercenaryPortrait"/>
@@ -1196,7 +1251,7 @@
     <CActorUnit id="CabalAssault" parent="GenericUnitMorph" unitName="CabalAssault">
         <Aliases value="_UnitLarge"/>
         <Macros value="UnloadDropAnim"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo HelsAngelAssault" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo CabalFighter" Target="FlyerHelperSplat" Send="Destroy"/>
         <DeathArray index="Normal" ModelLink="CabalAssaultDeath" SoundLink="Viking_Explode"/>
         <DeathArray index="Blast" AnimProps="Death,Blast" ModelLink="CabalAssaultDeath"/>
         <PortraitModel value="CabalAssaultPortrait"/>
@@ -1260,6 +1315,13 @@
             <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-fighter.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorSound id="WreckingCrewAssaultMode">
+        <On Terms="AbilMorph.*.Start; MorphTo CabalAssault" Send="Create"/>
+    </CActorSound>
+    <!-- Transform                                                                               -->
+    <CActorSound id="WreckingCrewFighterMode">
+        <On Terms="AbilMorph.*.Start; MorphTo CabalFighter" Send="Create"/>
+    </CActorSound>
     <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>
@@ -3196,12 +3258,12 @@
     </CActorModel>
     <CActorModel id="SulfurSuicide" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
-        <On Terms="Effect.SulfurSuicideSet.Start" Send="Create"/>
+        <On Terms="Effect.SulfurSuicideSA.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="SetTintColor 255,192,130"/>
     </CActorModel>
     <CActorSound id="SulfurSuicideSound" parent="SoundOneShot">
         <EditorCategories value=""/>
-        <On Terms="Effect.SulfurSuicideSet.Start" Send="Create"/>
+        <On Terms="Effect.SulfurSuicideSA.Start" Send="Create"/>
     </CActorSound>
     <CActorSound id="SuperCloakEnd" parent="SoundOneShot">
         <EditorCategories value=""/>

@@ -75,7 +75,7 @@
     </CEffectSet>
     <CEffectSet id="CabalFighterDeathDummy">
         <EditorCategories value=""/>
-        <EffectArray value="SulfurSuicideSet"/>
+        <EffectArray value="SulfurSuicideSA"/>
     </CEffectSet>
     <CEffectApplyBehavior id="DemonRocketsApplyBehavior">
         <Behavior value="DemonRockets"/>
@@ -1693,7 +1693,7 @@
         <EditorCategories value=""/>
         <DebugTrace value="1"/>
         <SearchFilters value="Air;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
-        <AreaArray Radius="7" Effect="SulfurMissilesApplyBehavior"/>
+        <AreaArray Radius="5.5" Effect="SulfurSuicideSet"/>
     </CEffectEnumArea>
     <CEffectDamage id="SulfurSuicideDamage">
         <EditorCategories value=""/>

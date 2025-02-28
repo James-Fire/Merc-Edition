@@ -498,6 +498,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="ReaperMissiles"/>
+        <AbilArray Link="CabalFighterMode"/>
         <WeaponArray Link="CabalGatlingCannon"/>
         <EffectArray index="Death" value="CabalAssaultDeathDummy"/>
         <CardLayouts>
@@ -506,7 +507,7 @@
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="FighterMode" Type="AbilCmd" AbilCmd="WreckingCrewFighterMode,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="CabalFighterMode" Type="AbilCmd" AbilCmd="CabalFighterMode,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="CyberneticReconstruction" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="SulfurMissiles" Type="Passive" Requirements="UseSulfurMissiles" Row="1" Column="1"/>
             <LayoutButtons Face="JotunnSystems" Type="Passive" Requirements="UseJotunnSystems" Row="1" Column="2"/>
@@ -578,6 +579,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="ReaperMissiles"/>
+        <AbilArray Link="CabalAssaultMode"/>
         <WeaponArray Link="CabalAntiAir"/>
         <EffectArray index="Death" value="CabalFighterDeathDummy"/>
         <CardLayouts>
@@ -595,7 +597,7 @@
                 <Column value="1"/>
             </LayoutButtons>
             <LayoutButtons Face="CyberneticReconstruction" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="AssaultMode" Type="AbilCmd" AbilCmd="WreckingCrewAssaultMode,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="CabalAssaultMode" Type="AbilCmd" AbilCmd="CabalAssaultMode,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="SulfurMissiles" Type="Passive" Requirements="UseSulfurMissiles" Row="1" Column="1"/>
             <LayoutButtons Face="JotunnSystems" Type="Passive" Requirements="UseJotunnSystems" Row="1" Column="2"/>
             <LayoutButtons Face="VulcanCannons" Type="Passive" Row="2" Column="2"/>
@@ -2270,7 +2272,7 @@
             <LayoutButtons Face="JotunnSystems" Type="Passive" Requirements="UseJotunnSystems" Row="1" Column="2"/>
         </CardLayouts>
         <BehaviorArray Link="HelsAngelIsFighterMode"/>
-        <EffectArray index="Death" value="SulfurSuicideSet"/>
+        <EffectArray index="Death" value="SulfurSuicideSA"/>
     </CUnit>
     <CUnit id="BioMechanicalRepairDrone">
         <Facing value="135"/>

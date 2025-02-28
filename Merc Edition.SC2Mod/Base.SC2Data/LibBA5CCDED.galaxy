@@ -1589,6 +1589,7 @@ bool libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Func (bool testConds, b
     }
 
     UnitIssueOrder(lv_unit, Order(AbilityCommand("CabalAssaultTakeoverMorph", 0)), c_orderQueueReplace);
+    UnitIssueOrder(lv_unit, Order(AbilityCommand("CabalFighterTakeoverMorph", 0)), c_orderQueueReplace);
     UnitCreateEffectUnit(lv_unit, "CabalAssaultReviveDummy", lv_unit);
     UnitBehaviorAdd(lv_unit, "CabalRevive1", lv_unit, 1);
     return true;
@@ -1633,6 +1634,7 @@ bool libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Func (bool testConds, b
     }
 
     UnitIssueOrder(lv_unit, Order(AbilityCommand("CabalFighterTakeoverMorph", 0)), c_orderQueueReplace);
+    UnitIssueOrder(lv_unit, Order(AbilityCommand("CabalAssaultTakeoverMorph", 0)), c_orderQueueReplace);
     UnitCreateEffectUnit(lv_unit, "CabalFighterReviveDummy", lv_unit);
     UnitBehaviorAdd(lv_unit, "CabalRevive1", lv_unit, 1);
     return true;

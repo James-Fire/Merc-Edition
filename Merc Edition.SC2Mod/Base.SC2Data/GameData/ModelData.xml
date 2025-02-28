@@ -73,6 +73,17 @@
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
     </CModel>
+    <CModel id="CabalMorph" Prefix="Units\" Race="Terran">
+        <Model value="Assets\Units\Terran\VikingMorph_Mecha_Collection\VikingMorph_Mecha_Collection.m3"/>
+        <Lighting value="MengskVikingMorph"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="1.150000,1.150000,1.150000"/>
+        <ScaleMin value="1.150000,1.150000,1.150000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.600000"/>
+        <SelectionRadius value="0.764400"/>
+        <ShadowRadius value="0.764400"/>
+    </CModel>
     <CModel id="CabalRevive1">
         <Model value="Assets\Effects\Glaze\Glaze_Nova_Buff_Damage\Glaze_Nova_Buff_Damage.m3"/>
     </CModel>
@@ -649,24 +660,30 @@
         <Image value="Assets\Textures\domgruntportrait_static.dds"/>
     </CModel>
     <CModel id="SgtHammer" parent="Unit">
-        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Tank\SiegeTank_CovertOps_Collection_Tank.m3"/>
-        <AttachProps Id="Ref_Hardpoint">
-            <Keys index="Turret" value="0"/>
-        </AttachProps>
+        <Model value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base_v07.m3"/>
         <EditorCategories value="Race:Terran"/>
         <Occlusion value="Show"/>
         <Radius value="1.050000"/>
-        <ScaleMax value="1.100000,1.100000,1.100000"/>
-        <ScaleMin value="1.100000,1.100000,1.100000"/>
         <SelectionRadius value="1.250000"/>
         <ShadowRadius value="1.250000"/>
         <Tipability value="0.750000"/>
         <TipabilityLength value="0.800000"/>
         <TipabilityWidth value="0.400000"/>
         <UnitGlossaryCamera value="Star2CameraMid08"/>
+        <RequiredAnims value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base.m3a"/>
+    </CModel>
+    <CModel id="SgtHammerSieged" parent="Unit">
+        <Model value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base_v07.m3"/>
+        <RequiredAnims value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base.m3a"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.050000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <UnitGlossaryCamera value="Star2CameraMid08"/>
     </CModel>
     <CModel id="SgtHammerMorph" Prefix="Units\" Race="Neutral">
-        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Morph\SiegeTank_CovertOps_Collection_Morph.m3"/>
+        <Model value="Assets\Units\Terran\SiegeTankMorph_Commando_Collection\SiegeTankMorph_Commando_Collection.m3"/>
         <Lighting value="MengskSiegeTankSiegedMorph"/>
         <Occlusion value="Show"/>
         <Radius value="1.050000"/>
@@ -1036,23 +1053,6 @@
         <Model value="Assets\Effects\Terran\ArcadeVikingMissile\ArcadeVikingMissile.m3"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
-    </CModel>
-    <CModel id="SgtHammerSieged" parent="Unit">
-        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection\SiegeTank_CovertOps_Collection.m3"/>
-        <AttachProps Id="Ref_Hardpoint">
-            <Keys index="Turret" value="0"/>
-        </AttachProps>
-        <EditorCategories value="Race:Terran"/>
-        <Occlusion value="Show"/>
-        <Radius value="1.050000"/>
-        <ScaleMax value="1.100000,1.100000,1.100000"/>
-        <ScaleMin value="1.100000,1.100000,1.100000"/>
-        <SelectionRadius value="1.250000"/>
-        <ShadowRadius value="1.250000"/>
-        <Tipability value="0.750000"/>
-        <TipabilityLength value="0.800000"/>
-        <TipabilityWidth value="0.400000"/>
-        <UnitGlossaryCamera value="Star2CameraMid08"/>
     </CModel>
     <CModel id="SgtHammerPortrait" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Portraits\Terran\AC_SgtHammer_Portrait\AC_SgtHammer_Portrait.m3"/>
@@ -1840,8 +1840,8 @@
     </CModel>
     <CModelFoliage id="SulfurSuicide">
         <Model value="Assets\Effects\Terran\RipWaveMissileImpact\RipWaveMissileImpact.m3"/>
-        <ScaleMax value="3.000000,3.000000,3.000000"/>
-        <ScaleMin value="3.000000,3.000000,3.000000"/>
+        <ScaleMax value="5.000000,5.000000,5.000000"/>
+        <ScaleMin value="5.000000,5.000000,5.000000"/>
     </CModelFoliage>
     <CModelFoliage id="SuperCloakEndModel">
         <Model value="Assets\Models\SuperCloakEndShockwave.m3"/>

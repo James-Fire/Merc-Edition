@@ -13489,6 +13489,7 @@
             <Action Type="FunctionCall" Library="BA5CCDED" Id="57ACE1E9"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="88F09445"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="E5000AA5"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="2A2CA85D"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="57ADC350"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="08773F15"/>
         </Element>
@@ -13978,6 +13979,34 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000158"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00000039"/>
         </Element>
+        <Element Type="FunctionCall" Id="2A2CA85D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000089"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A5CDE413"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1FECA7C1"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="190406CD"/>
+        </Element>
+        <Element Type="Param" Id="A5CDE413">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000156"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="066BB3FE"/>
+        </Element>
+        <Element Type="Param" Id="1FECA7C1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000157"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C27D037F"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C27D037F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="59BA1DDF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B650FF5B"/>
+        </Element>
+        <Element Type="Param" Id="B650FF5B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C2F687E6"/>
+            <Value>CabalFighterTakeoverMorph</Value>
+            <ValueType Type="abilcmd"/>
+            <ValueTypeInfo Value="0"/>
+        </Element>
+        <Element Type="Param" Id="190406CD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000158"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000039"/>
+        </Element>
         <Element Type="FunctionCall" Id="57ADC350">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="73C0339B"/>
             <Parameter Type="Param" Library="BA5CCDED" Id="FBFF96AE"/>
@@ -14034,6 +14063,7 @@
             <Action Type="FunctionCall" Library="BA5CCDED" Id="BD4C201A"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="BBC1D0B4"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="D9217AA9"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="E09BE4D2"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="83511D81"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="BD1EB846"/>
         </Element>
@@ -14520,6 +14550,34 @@
             <ValueTypeInfo Value="0"/>
         </Element>
         <Element Type="Param" Id="74FBE17D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000158"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000039"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E09BE4D2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000089"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="68711B1B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="35763885"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="AEE3DDAB"/>
+        </Element>
+        <Element Type="Param" Id="68711B1B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000156"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="CADFBC56"/>
+        </Element>
+        <Element Type="Param" Id="35763885">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000157"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FC89A6BE"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FC89A6BE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="59BA1DDF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FAC05B67"/>
+        </Element>
+        <Element Type="Param" Id="FAC05B67">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C2F687E6"/>
+            <Value>CabalAssaultTakeoverMorph</Value>
+            <ValueType Type="abilcmd"/>
+            <ValueTypeInfo Value="0"/>
+        </Element>
+        <Element Type="Param" Id="AEE3DDAB">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000158"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00000039"/>
         </Element>
