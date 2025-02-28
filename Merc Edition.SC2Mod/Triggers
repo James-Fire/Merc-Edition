@@ -11560,7 +11560,8 @@
         </Element>
         <Element Type="Trigger" Id="1AF6CB32">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="9024599E"/>
-            <Condition Type="FunctionCall" Library="BA5CCDED" Id="EFAA93E0"/>
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="4F76ED73"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="1BCFCDE8"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="CF06AEDC"/>
         </Element>
         <Element Type="FunctionCall" Id="9024599E">
@@ -11583,8 +11584,34 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="3029CA3C"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00F337BD"/>
         </Element>
+        <Element Type="FunctionCall" Id="4F76ED73">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3C0566C4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="159E4F3C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0425CEFA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F51E42C3"/>
+        </Element>
+        <Element Type="Param" Id="159E4F3C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F3A8B0DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="0425CEFA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1CDCC284"/>
+            <Value>VulcanCannons</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="F51E42C3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3029CA3C"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00F337BD"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1BCFCDE8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EFAA93E0"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D70BA6FF"/>
+        </Element>
         <Element Type="FunctionCall" Id="EFAA93E0">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
             <Parameter Type="Param" Library="BA5CCDED" Id="28684625"/>
             <Parameter Type="Param" Library="BA5CCDED" Id="3C636F19"/>
             <Parameter Type="Param" Library="BA5CCDED" Id="4806A747"/>
@@ -11616,6 +11643,44 @@
             <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
         </Element>
         <Element Type="Param" Id="4806A747">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>12</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D70BA6FF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A4A1289C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="44ACD714"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="06F6F0D6"/>
+        </Element>
+        <Element Type="Param" Id="A4A1289C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="06A2B994"/>
+        </Element>
+        <Element Type="FunctionCall" Id="06A2B994">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000386"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="93149CDB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="517DD5E8"/>
+        </Element>
+        <Element Type="Param" Id="93149CDB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000765"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="54B6803B"/>
+        </Element>
+        <Element Type="FunctionCall" Id="54B6803B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
+        <Element Type="Param" Id="517DD5E8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000766"/>
+            <Value>VulcanCannons</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="44ACD714">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="06F6F0D6">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
             <Value>12</Value>
             <ValueType Type="int"/>

@@ -322,6 +322,7 @@
         <Modification RadiusMultiplier="0.6" WeaponRange="-1">
             <DamageDealtFraction index="Ranged" value="-0.5"/>
             <VitalMaxFractionArray index="Life" value="-0.5"/>
+            <AbilLinkDisableArray value="Minikin"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="AdrenalineRush">
@@ -715,6 +716,7 @@
         </Modification>
         <BuffFlags index="RefreshStack" value="1"/>
         <MaxStackCount value="13"/>
+        <Tooltip value="Button/Tooltip/ShellShower"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VulcanCannons">
         <Tooltip value="Button/Tooltip/VulcanCannons"/>

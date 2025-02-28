@@ -240,11 +240,24 @@
         <TechPurchaseCamera value="Star2CameraLow07"/>
         <UnitGlossaryCamera value="Star2CameraLow07"/>
     </CModel>
+    <CModel id="MinikinMissile">
+        <Model value="Assets\Effects\Terran\PodMissile\PodMissile.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
     <CModel id="NapalmImpactModel">
         <Model value="Assets\Effects\Zerg\YagdraFireBallMissileImpact\YagdraFireBallMissileImpact.m3"/>
     </CModel>
     <CModel id="OdinBarrageAdd" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\Raven_Shredder_Missile_MP_Impact\Raven_Shredder_Missile_MP_Impact.m3"/>
+    </CModel>
+    <CModel id="OdinFlakBarrageImpact">
+        <Model value="Assets\Doodads\Explosions_Flak_Terran\Explosions_Flak_Terran.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="OdinFlakBarrageMissile">
+        <Model value="Assets\Effects\Terran\ThorShoulderMissile\ThorShoulderMissile.m3"/>
     </CModel>
     <CModel id="RadarTowerSelectSweep" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\ComSatScanner\ComSatScanner.m3"/>

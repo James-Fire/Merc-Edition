@@ -93,6 +93,15 @@
             <FlightTime value="3"/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="MinikinMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Gravity value="55"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <FlightTime value="0.5"/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverMissile id="NomadMissileClusterMissile">
         <MotionPhases>
             <Driver value="Ballistic"/>
@@ -101,6 +110,34 @@
             <ThrowBandPitch value="-360,-360,-360,-360"/>
             <FlightTime value="1"/>
         </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="OdinFlakBarrageMissile">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="20"/>
+            <Speed value="10"/>
+            <MaxSpeed value="100"/>
+            <Outro value="2.5"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+            <Overlays Scale="0"/>
+        </MotionPhases>
+        <MotionPhases Outro="-1">
+            <Overlays Scale="0.2,0.2"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX">
+            <Overlays Scale="0"/>
+        </MotionPhases>
+        <MotionOverlays>
+            <Type value="Revolver"/>
+            <RevolverSpeed value="179.2968"/>
+            <RevolverSpeedRange value="179.2968"/>
+            <RevolverMaxSpeed value="719.2968"/>
+            <RevolverMaxSpeedRange value="0"/>
+            <RevolverAccel value="337.5"/>
+            <RevolverAccelRange value="337.5"/>
+        </MotionOverlays>
     </CMoverMissile>
     <CMoverMissile id="ReaperMissilesMissile">
         <MotionPhases>

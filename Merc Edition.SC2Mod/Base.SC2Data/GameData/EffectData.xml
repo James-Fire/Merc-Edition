@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreatePersistent id="BarragePersistent">
+        <PeriodicEffectArray index="0" value="OdinBarragePeriodicSet"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="OdinBarragePeriodicSet">
+        <EditorCategories value=""/>
+        <EffectArray value="BarrageSearchArea"/>
+        <EffectArray value="OdinFlakBarrageRP"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectDamage id="OdinFlakBarrageDamage"/>
+    <CEffectLaunchMissile id="OdinFlakBarrageLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="OdinFlakBarrageDamage"/>
+        <AmmoUnit value="OdinFlakBarrageMissile"/>
+        <ImpactOffset value="0,0,3"/>
+        <LaunchOffset value="0,0,10"/>
+    </CEffectLaunchMissile>
+    <CEffectRandomPointInCircle id="OdinFlakBarrageRP">
+        <EditorCategories value=""/>
+        <Effect value="OdinFlakBarrageLaunchMissile"/>
+        <Radius value="3"/>
+        <WhichLocation Value="TargetPoint"/>
+    </CEffectRandomPointInCircle>
     <CEffectApplyBehavior id="AdrenalineRushAB">
         <ValidatorArray index="0" value="PlayerIsMercEdition"/>
         <ValidatorArray value="HaveOrbitalDeployment"/>
@@ -176,6 +199,11 @@
         <Amount value="15"/>
         <Death value="Fire"/>
     </CEffectDamage>
+    <CEffectLaunchMissile id="MinikinLaunchMissile">
+        <ImpactEffect value="MinikinCU"/>
+        <AmmoUnit value="MinikinMissile"/>
+        <ImpactLocation Value="TargetPoint"/>
+    </CEffectLaunchMissile>
     <CEffectRandomPointInCircle id="NomadRailgunTurretDeathClusterRP">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetPoint"/>
@@ -290,7 +318,7 @@
     <CEffectCreateUnit id="MinikinCU">
         <EditorCategories value=""/>
         <SpawnEffect value="MinikinApplyBehavior"/>
-        <SpawnOffset value="0,-2"/>
+        <WhichLocation Value="TargetPoint"/>
     </CEffectCreateUnit>
     <CEffectApplyBehavior id="NeoTitaniumSiegedAB">
         <WhichUnit Value="Caster"/>

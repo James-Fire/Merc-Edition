@@ -130,15 +130,19 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="Hellraiser"/>
     </CAbilEffectInstant>
-    <CAbilEffectInstant id="Minikin">
+    <CAbilEffectTarget id="Minikin">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="MinikinCU"/>
-        <Flags index="Transient" value="1"/>
+        <Effect index="0" value="MinikinLaunchMissile"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="TransientPreferred" value="1"/>
         <Cost>
             <Cooldown TimeUse="33"/>
         </Cost>
-        <CmdButtonArray index="Execute" DefaultButtonFace="Minikin" Requirements="IsNotMinikin"/>
-    </CAbilEffectInstant>
+        <Range value="3"/>
+        <Arc value="360"/>
+        <CursorRangeMode value="ForceToMax"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Minikin"/>
+    </CAbilEffectTarget>
     <CAbilMorph id="NaniteCloudEmitterUnburrow">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">

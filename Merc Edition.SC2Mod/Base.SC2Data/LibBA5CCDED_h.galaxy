@@ -39,7 +39,7 @@ trigger libBA5CCDED_gt_ProtossGenericDifficulty;
 trigger libBA5CCDED_gt_RedlineReactor;
 trigger libBA5CCDED_gt_Freyja;
 trigger libBA5CCDED_gt_NomadMineDroneSpawner;
-trigger libBA5CCDED_gt_SpartanCompanyShellShowerFull;
+trigger libBA5CCDED_gt_SpartanCompanyCabalShellShowerFull;
 trigger libBA5CCDED_gt_SiegeBreakerGraduatingRange;
 trigger libBA5CCDED_gt_SkibisAngelRepairDrone;
 trigger libBA5CCDED_gt_HelsAngelTacticalRealignment;

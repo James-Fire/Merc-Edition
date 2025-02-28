@@ -81,6 +81,23 @@
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
+    <CActorAction id="MinikinLaunchAction" parent="GenericAttack" effectImpact="MinikinCU" effectLaunch="MinikinLaunchMissile">
+        <LaunchAttachQuery Methods="Center 0" Fallback="Overhead"/>
+        <LaunchAssets Sound="MinikinLaunch"/>
+        <Missile value="MinikinMissile"/>
+    </CActorAction>
+    <CActorMissile id="MinikinMissile" parent="GenericAttackMissile" unitName="MinikinMissile"/>
+    <CActorRange id="MinikinRange" parent="RangeAbil" abil="Minikin">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconScale value="0.024000,0.006000"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorModel id="OdinFlakBarrageImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="UnitDeath.OdinFlakBarrageMissile" Send="Create"/>
+        <Host Subject="_Unit"/>
+    </CActorModel>
+    <CActorMissile id="OdinFlakBarrageMissile" parent="GenericAttackMissile" unitName="OdinFlakBarrageMissile"/>
     <CActorModel id="RadarTowerSelectSweep" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On index="0" Terms="ActorCreation" Send="AnimPlay BSD Stand PlayForever,ForceLooping -1.000000 -1.000000 0.500000 AsTimeScale"/>
@@ -1149,8 +1166,9 @@
         <On Terms="WeaponStart.GatlingCannons.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <On Terms="WeaponStop.GatlingCannons.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="Behavior.MercGroundDrop.Create" Send="Create SpartanCompanyDropModel"/>
-        <On Terms="Behavior.Minikin.On" Send="SetScale 0.600000"/>
+        <On Terms="Behavior.Minikin.On" Send="SetScale 0.300000"/>
         <On Terms="Behavior.Minikin.On" Send="ModelSwap ED067Minikin"/>
+        <On Terms="Behavior.Minikin.On" Send="SetScale 0.600000 0.250000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="ED067Death" SoundLink="Goliath_Explode"/>
         <PortraitModel value="PortraitED067"/>

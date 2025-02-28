@@ -642,6 +642,8 @@
             <LayoutButtons index="12" removed="1"/>
         </CardLayouts>
     </CUnit>
+    <CUnit id="MinikinMissile" parent="MISSILE"/>
+    <CUnit id="OdinFlakBarrageMissile" parent="MISSILE"/>
     <CUnit id="PsiDispersionDevice">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
