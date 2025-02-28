@@ -325,7 +325,6 @@
             <LayoutButtons index="12" Face="Scan" Type="AbilCmd" AbilCmd="ScannerSweep,Execute" Column="1"/>
             <LayoutButtons index="13" Face="TrainACV" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
-            <LayoutButtons Face="BuildZeusBattleTank" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train3" Row="0" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="SCV" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
