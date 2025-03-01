@@ -47,9 +47,11 @@ bool auto_libBA5CCDED_gf_SpawnZeusonGameStart_TriggerFunc (bool testConds, bool 
     // Automatic Variable Declarations
     // Implementation
     if ((lp_spawnPosition == null)) {
+        libCamp_gf_CreateDropPod(libCamp_ge_DropPodRace_Terran, PlayerStartLocation(1), UnitGroupEmpty(), true);
         libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, PlayerStartLocation(1));
     }
     else {
+        libCamp_gf_CreateDropPod(libCamp_ge_DropPodRace_Terran, lp_spawnPosition, UnitGroupEmpty(), true);
         libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, lp_spawnPosition);
     }
     return true;

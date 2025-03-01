@@ -413,9 +413,74 @@
         </Element>
         <Element Type="FunctionCall" Id="C52D2151">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="6842DFEB"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C28B74D4"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="31D7D35C"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4CF6F5E1"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="87C1F7F4"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6842DFEB">
+            <FunctionDef Type="FunctionDef" Library="Camp" Id="DE391983"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000005"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F443C1AF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="08AC942F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FCE6BADF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E42830F0"/>
+        </Element>
+        <Element Type="Param" Id="F443C1AF">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="EBE2E384"/>
+            <Preset Type="PresetValue" Library="Camp" Id="2D12BA35"/>
+        </Element>
+        <Element Type="Param" Id="08AC942F">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="CB5F3397"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000067"/>
+        </Element>
+        <Element Type="Param" Id="FCE6BADF">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="172C5C10"/>
+            <Parameter Type="ParamDef" Library="BA5CCDED" Id="097A86D0"/>
+        </Element>
+        <Element Type="Param" Id="E42830F0">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="0E999E48"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="71F321BC"/>
+        </Element>
+        <Element Type="FunctionCall" Id="71F321BC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000104"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C28B74D4">
+            <FunctionDef Type="FunctionDef" Library="Camp" Id="DE391983"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F19AE3D2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="DF53AC48"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="ADF13FFF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3DC7C45D"/>
+        </Element>
+        <Element Type="Param" Id="F19AE3D2">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="EBE2E384"/>
+            <Preset Type="PresetValue" Library="Camp" Id="2D12BA35"/>
+        </Element>
+        <Element Type="Param" Id="DF53AC48">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="CB5F3397"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000067"/>
+        </Element>
+        <Element Type="Param" Id="ADF13FFF">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="172C5C10"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="34237944"/>
+        </Element>
+        <Element Type="FunctionCall" Id="34237944">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000151"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7EE82BAA"/>
+        </Element>
+        <Element Type="Param" Id="7EE82BAA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000240"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="3DC7C45D">
+            <ParameterDef Type="ParamDef" Library="Camp" Id="0E999E48"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E619F0F4"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E619F0F4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000104"/>
         </Element>
         <Element Type="FunctionCall" Id="31D7D35C">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="F247156C"/>
