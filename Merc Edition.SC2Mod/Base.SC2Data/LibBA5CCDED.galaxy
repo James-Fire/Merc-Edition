@@ -206,7 +206,7 @@ bool auto_libBA5CCDED_gf_WillEmail_TriggerFunc (bool testConds, bool runActions)
 
     // Automatic Variable Declarations
     // Implementation
-    libDAB75013_gf_ServicesEmailShow(StringToText("Will"), (lp_emailText + StringExternal("Param/Value/lib_BA5CCDED_3E1626F0")), 20);
+    libDAB75013_gf_ServicesEmailShow(StringToText("Will"), (lp_emailText + StringExternal("Param/Value/lib_BA5CCDED_3E1626F0")), 22);
     return true;
 }
 
@@ -805,18 +805,18 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_5A4E5173"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_56622040"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_BEDC0312"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Matt"), StringExternal("Param/Value/lib_BA5CCDED_C37996DF"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_D70B22B6"));
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03A) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_D145D045"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_0D774CD5"));
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03B) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_F6524727"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_1AE0B94B"));
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh01) {
