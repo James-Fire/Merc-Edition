@@ -21,6 +21,7 @@ void libBA5CCDED_gf_WillEmail (text lp_emailText);
 void libBA5CCDED_gf_GiveResearch (unit lp_unitPoint, int lp_researchCount, int lp_researchType);
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 void libBA5CCDED_gf_Ihanriiify (playergroup lp_players);
+void libBA5CCDED_gf_MidasTouched (playergroup lp_players);
 
 // Trigger Declarations
 trigger libBA5CCDED_gt_OpenBanks;

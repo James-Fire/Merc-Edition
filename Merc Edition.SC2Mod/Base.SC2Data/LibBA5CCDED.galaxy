@@ -46,14 +46,17 @@ bool auto_libBA5CCDED_gf_SpawnZeusonGameStart_TriggerFunc (bool testConds, bool 
 
     // Automatic Variable Declarations
     // Implementation
-    if ((lp_spawnPosition == null)) {
-        libCamp_gf_CreateDropPod(libCamp_ge_DropPodRace_Terran, PlayerStartLocation(1), UnitGroupEmpty(), true);
-        libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, PlayerStartLocation(1));
+    if ((libBA5CCDED_gv_zeusCount > 0)) {
+        if ((lp_spawnPosition == null)) {
+            libCamp_gf_CreateDropPod(libCamp_ge_DropPodRace_Terran, PlayerStartLocation(1), UnitGroupEmpty(), true);
+            libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, PlayerStartLocation(1));
+        }
+        else {
+            libCamp_gf_CreateDropPod(libCamp_ge_DropPodRace_Terran, lp_spawnPosition, UnitGroupEmpty(), true);
+            libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, lp_spawnPosition);
+        }
     }
-    else {
-        libCamp_gf_CreateDropPod(libCamp_ge_DropPodRace_Terran, lp_spawnPosition, UnitGroupEmpty(), true);
-        libNtve_gf_CreateUnitsWithDefaultFacing(libBA5CCDED_gv_zeusCount, "ARESWarbotMercMod", 0, 1, lp_spawnPosition);
-    }
+
     return true;
 }
 
@@ -206,7 +209,7 @@ bool auto_libBA5CCDED_gf_WillEmail_TriggerFunc (bool testConds, bool runActions)
 
     // Automatic Variable Declarations
     // Implementation
-    libDAB75013_gf_ServicesEmailShow(StringToText("Will"), (lp_emailText + StringExternal("Param/Value/lib_BA5CCDED_3E1626F0")), 20);
+    libDAB75013_gf_ServicesEmailShow(StringToText("Will"), (lp_emailText + StringExternal("Param/Value/lib_BA5CCDED_3E1626F0")), 22);
     return true;
 }
 
@@ -360,6 +363,42 @@ void libBA5CCDED_gf_Ihanriiify (playergroup lp_players) {
         libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ForgeIhanrii", true);
         libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "RoboticsBayIhanrii", true);
         libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "HighTemplarIhanrii", true);
+    }
+}
+
+void libBA5CCDED_gf_MidasTouched (playergroup lp_players) {
+    // Variable Declarations
+    int lv_player;
+
+    // Automatic Variable Declarations
+    playergroup autoDC486CB1_g;
+
+    // Variable Initialization
+
+    // Implementation
+    autoDC486CB1_g = lp_players;
+    lv_player = -1;
+    while (true) {
+        lv_player = PlayerGroupNextPlayer(autoDC486CB1_g, lv_player);
+        if (lv_player < 0) { break; }
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "AdeptGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "CarrierGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ColossusGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "DarkTemplarGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "DisruptorGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "HighTemplarGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ImmortalGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "MothershipGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ObserverGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "OracleGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "PhoenixGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ProbeGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "SentryGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "StalkerGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "TempestGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "VoidRayGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "WarpPrismGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ZealotGolden", true);
     }
 }
 
@@ -805,18 +844,18 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_5A4E5173"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_56622040"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_BEDC0312"));
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Matt"), StringExternal("Param/Value/lib_BA5CCDED_C37996DF"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_D70B22B6"));
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03A) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_D145D045"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_0D774CD5"));
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTHanson03B) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_F6524727"), 17);
+        libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_1AE0B94B"));
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh01) {
