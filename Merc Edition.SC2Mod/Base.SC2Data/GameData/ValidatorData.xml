@@ -125,6 +125,9 @@
         <WhichUnit Value="Caster"/>
         <Value value="ZeusLanderFlying"/>
     </CValidatorUnitType>
+    <CValidatorUnitType id="IsOdin">
+        <Value value="Odin"/>
+    </CValidatorUnitType>
     <CValidatorCombine id="IsSamsonOR10energy">
         <CombineArray value="CasterHas10Energy"/>
         <CombineArray value="CasterIsZeusFlying"/>
@@ -172,6 +175,10 @@
         <CooldownLink value="Abil/AspisBlink"/>
         <Ability value="AspisBlink"/>
     </CValidatorUnitCompareCooldown>
+    <CValidatorUnitCompareDamageTakenTime id="OdinOutofCombat">
+        <Compare value="GE"/>
+        <Value value="3.5"/>
+    </CValidatorUnitCompareDamageTakenTime>
     <CValidatorUnitType id="SgtHammerInSiegeMode">
         <Value value="SgtHammerSieged"/>
     </CValidatorUnitType>
@@ -373,6 +380,10 @@
     <CValidatorUnitOrderTargetType id="TargetIsPoint">
         <Type value="Point"/>
     </CValidatorUnitOrderTargetType>
+    <CValidatorPlayerRequirement id="UseAnduinProtoss@Validator">
+        <Find value="1"/>
+        <Value value="UseAnduinProtoss"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="UseLegionSystems@Validator">
         <Find value="1"/>
         <Value value="UseLegionSystems"/>

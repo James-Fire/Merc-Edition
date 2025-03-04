@@ -3,6 +3,7 @@ Abil/Name/ARESTargetLock=Target Lock
 Abil/Name/ActivateUranus=Activate Uranus
 Abil/Name/AdjudicatorArmMagazineNuke=Arm Magazine (Nuke)
 Abil/Name/AlphaSquadron=Alpha Squadron
+Abil/Name/AnduinOpenGate=Open Gate
 Abil/Name/AspisBlink=Aspis Blink
 Abil/Name/BunkerLower=Lower
 Abil/Name/BunkerRaise=Raise
@@ -36,10 +37,13 @@ Abil/Name/NaniteCloudEmitterUnburrow=Nanite Cloud Emitter Unburrow
 Abil/Name/NeoTitanium=Neo-Titanium
 Abil/Name/NomadClusterMissileDummy=Nomad Cluster Missile Dummy
 Abil/Name/NomadTargetLock=Target Lock
+Abil/Name/OdinRepairDroneHeal=Odin Repair Drone Heal
+Abil/Name/OdinRepairDroneMagazine=Odin Repair Drone Magazine
 Abil/Name/PenetratorRound=Penetrator Round
 Abil/Name/PhantomCloak=Personal Cloaking
 Abil/Name/PlaceNomadDrone=Place Nomad Drone
 Abil/Name/PlaceNomadTurret=Place Nomad Turret
+Abil/Name/PsiStormShakuras=Crippling Psi Storm
 Abil/Name/PsychoMissiles=Psycho Missiles
 Abil/Name/RadarTowerScannerSweep=Radar Tower Scanner Sweep
 Abil/Name/RagnarokToggle=Ragnarok Toggle
@@ -177,6 +181,9 @@ Button/Name/AdvancedSiegeOptics=Advanced Siege Optics
 Button/Name/AdvancedSiegeTech=Advanced Siege Tech
 Button/Name/AftermarketRailgunTurret=Aftermarket Railgun Turret
 Button/Name/AlphaSquadron=Alpha Squadron
+Button/Name/AnduinCripplestorm=Crippling Psi Storm
+Button/Name/AnduinOpenGate=Open Gate
+Button/Name/AnduinPlasmaSurge=Plasma Surge
 Button/Name/ApolloInjectionPods=Apollo Injection Pods
 Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
@@ -295,6 +302,7 @@ Button/Name/ReflectiveArmor=Reflective Armor
 Button/Name/RevivalField=Revival Field
 Button/Name/RorkesRedline=Rorke's Redline
 Button/Name/SecretStashStimpack=Secret Stash Stimpack
+Button/Name/SelfRepairBots=Self Repair Bots
 Button/Name/SentinelMissilesAres=Sentinel Missiles
 Button/Name/SgtHammerSiegeMode=Siege Mode
 Button/Name/SgtHammerTankMode=Tank Mode
@@ -336,9 +344,11 @@ Button/Name/UpgradeToPlanetaryFortress=Upgrade to Bombardment Fortress
 Button/Name/UpgradetoRadarTower=Upgrade to Radar Tower
 Button/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Button/Name/VulcanCannons=Vulcan Cannons
+Button/Name/WillofRaszagal=Will of Raszagal
 Button/Name/YamatoCulverin=Yamato Culverin
 Button/Name/ZeusLanderTacticalJump=Tactical Jump
 Button/Name/ZeusTankSecretUpgrade=ZeusTankSecretUpgrade
+Button/Name/ZhakulGuardianSchematics=Zhakul Guardian Schematics
 Button/Tooltip/ACV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AIEnhancement=Skibi's Angels cost 35% less, no longer need a Tech Lab and are equipped with an automatic healing drone.
 Button/Tooltip/ARESTargetLock=Increases damage dealt to the target enemy unit by 30%. Effect lasts as long as the ARES remains locked onto the target.
@@ -355,6 +365,9 @@ Button/Tooltip/AftermarketRailgunTurret=Timed turret. Deals damage in a line.<n/
 Button/Tooltip/Agitator=Fast scout. Has a flame attack that damages all enemy units in its line of fire.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AlphaSquadron=Deploy 15 War Pigs, 5 Spartan Companies, and 1 Siege Breaker with timed life.
 Button/Tooltip/Anarchist=Close range combat unit. Deals damage in a small frontal cone. Can transform into a fast scout unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/AnduinCripplestorm=Create a storm of energy that deals 80 damage over 4 seconds, as well as reducing the armor and speed of enemies hit.
+Button/Tooltip/AnduinOpenGate=Manipulate metal gates to open.
+Button/Tooltip/AnduinPlasmaSurge=Recharges <d ref="Effect,KarassPlasmaSurgeModifyUnit,VitalArray[1].Change"/> shield points for all friendly Protoss units in the target area.
 Button/Tooltip/ApolloInjectionPods=Survivor's Guilt applies when unloading units, with a cooldown. Suvivor's Guilt duration when the Samson is destroyed is doubled.
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
 Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
@@ -495,6 +508,7 @@ Button/Tooltip/RevivalField=While cloaked, the Harrier avoids every other attack
 Button/Tooltip/RorkesRedline=Gives the Starcruiser 250 shields and enables the Redline Reactor ability.
 Button/Tooltip/Salvage=Salvages the structure, removing it and returning 100% of its mineral and gas value. Salvage takes <d time="5"/> to finish. Warning: once Salvage is triggered, it cannot be canceled.
 Button/Tooltip/SecretStashStimpack=Heals Rattlesnake for 3 life per second and increases his attack and movement speeds for <d time="12"/>.
+Button/Tooltip/SelfRepairBots=Automated drones will repair the Odin while it is stationary and not taking damage.
 Button/Tooltip/SentinelMissilesAres=Fires a missile that deals 145 (+35 vs Shields) damage to the target, and 50 (+25 vs Shields) damage to nearby enemies.
 Button/Tooltip/SgtHammer=Heavy tank. Long-range artillery in Siege Mode.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/SgtHammerSiegeMode=Deploys into Siege Mode. In this mode, Sgt. Hammer has very long range and inflicts area damage. Sgt. Hammer in this mode cannot move or attack targets at close range.
@@ -506,6 +520,7 @@ Button/Tooltip/ShellShower=The more this unit attacks, the faster its attacks be
 Button/Tooltip/ShimmerScreen=Allows the Dusk Wing to permanently cloak, as well as increasing speed by 25% and reducing damage taken by 15% while cloaked.
 Button/Tooltip/SignalFlare=After a brief delay, launch a flare that reveals an area for <d time="14"/>. If a unit is targeted, it will instead blind them, permanently reducing their sight radius and weapon range, as well as suppressing detection.<n/><n/><c val="FFFF80">Does not reveal cloaked and burrowed units.</c>
 Button/Tooltip/SignalFlareUnit=Launch a flare that reveals the area for <d time="14"/>.
+Button/Tooltip/SignifierAnduin=Potent psionic master. Can use Feedback and Psionic Storm. Can merge into an Archon.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/SilentMode=Enter Silent Mode, increasing sight radius, providing cloaking, and gaining the Target Lock ability, but preventing movement or usage of other abilities.
 Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
 Button/Tooltip/SmartServosMKIV=Siege Breakers siege and unsiege 66% faster, can attack air units in siege mode, and gradually gains range in siege mode, up to +4.
@@ -545,12 +560,14 @@ Button/Tooltip/UpgradeToPlanetaryFortress=Adds a powerful turret, and increases 
 Button/Tooltip/UpgradetoRadarTower=Transforms the Sensor Tower into a Radar Tower.<n/>Radar Towers can use Scanner Sweep and give allies bonus weapon range.
 Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Light and Biological by 15, and doubles the width of attacks.
 Button/Tooltip/VulcanCannons=The more this unit attacks, the faster and stronger its attacks become.
+Button/Tooltip/WillofRaszagal=Anduin has +200% shield and energy regeneration, and regenerates 2 life per second. Upon taking fatal damage, become invulnerable for 3 seconds, then restore all vitals and release a damaging shockwave. Cooldown of 240 seconds.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/YamatoCulverin=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby.
 Button/Tooltip/ZeusBattleTank=Armored weapons platform. Can use Target Lock and Sentinel Missiles.<n/><n/><c val="FFFF00">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Button/Tooltip/ZeusTankSecretUpgrade=Squad Sight radius increased, Target Lock range and damage bonus increased.
+Button/Tooltip/ZhakulGuardianSchematics=This unit moves faster than its base counterpart.
 Effect/Name/250mmUranusCarronadesCP=250mmUranusCarronadesCP
 Effect/Name/250mmUranusCarronadesDamage=250mmUranusCarronadesDamage
 Effect/Name/250mmUranusCarronadesLaunchMissile=250mmUranusCarronadesLaunchMissile
@@ -761,6 +778,10 @@ Effect/Name/OdinBarrageStunAB=Odin Barrage Stun AB
 Effect/Name/OdinFlakBarrageDamage=Odin Flak Barrage Damage
 Effect/Name/OdinFlakBarrageLaunchMissile=Odin Flak Barrage Launch Missile
 Effect/Name/OdinFlakBarrageRP=Odin Flak Barrage RP
+Effect/Name/OdinRepairDroneHeal=Odin Repair Drone Heal
+Effect/Name/OdinRepairDroneHealCP=Odin Repair Drone Heal CP
+Effect/Name/OdinRepairDroneHealLM=Odin Repair Drone Heal LM
+Effect/Name/OpenGateDummy=Open Gate Dummy
 Effect/Name/PenetratorRoundCP=Penetrator Round CP
 Effect/Name/PenetratorRoundDamage=Penetrator Round Damage
 Effect/Name/PenetratorRoundSA=Penetrator Round SA
@@ -814,7 +835,7 @@ Effect/Name/ReflectiveArmorActiveforBeamVisualApplyBehavior=ReflectiveArmorActiv
 Effect/Name/RemoveSpiderMineBurrowBehavior=Remove Spider Mine Burrow Behavior
 Effect/Name/RepairDroneHeal=Repair Drone Heal
 Effect/Name/RepairDroneHealCP=Repair Drone Heal CP
-Effect/Name/RepairDroneHealLaunchMissile=Repair Drone Heal Launch Missile
+Effect/Name/RepairDroneHealLM=Repair Drone Heal LM
 Effect/Name/RepairDroneHealSA=Repair Drone Heal SA
 Effect/Name/ReplenishMinesCondor=Replenish Mines
 Effect/Name/ReplenishNanoConstructor2=Replenish Nano-Constructor
@@ -1024,6 +1045,8 @@ Unit/Name/Nomad=Nomad
 Unit/Name/NomadMissile=Nomad Missile
 Unit/Name/NomadMissileClusterMissile=Nomad Missile Cluster Missile
 Unit/Name/OdinFlakBarrageMissile=Odin Flak Barrage Missile
+Unit/Name/OdinRepairDrone=Odin Repair Drone
+Unit/Name/OdinRepairDroneHealMissile=Odin Repair Drone Heal Missile
 Unit/Name/Phantom=Phantom
 Unit/Name/PlaceNomadDroneRelease=Place Nomad Drone Release
 Unit/Name/PlaceNomadTurretRelease=Place Nomad Turret Release
@@ -1045,6 +1068,7 @@ Unit/Name/Shadow=Shadow
 Unit/Name/SignalFlareMissile=Signal Flare Missile
 Unit/Name/SignalFlareTargetDummy=Signal Flare Target Dummy
 Unit/Name/SignalFlareUnit=Signal Flare Unit
+Unit/Name/SignifierAnduin=Signifier Anduin
 Unit/Name/SkibisAngel=Skibi's Angel
 Unit/Name/Starcruiser=Starcruiser
 Unit/Name/StarcruiserLaserBattery=Starcruiser Laser Battery
@@ -1065,6 +1089,7 @@ Upgrade/Name/ATXOrdnance=ATX Ordnance
 Upgrade/Name/AblativeScales=Ablative Scales
 Upgrade/Name/AdvancedOrbitalCommand=Advanced Orbital Command
 Upgrade/Name/AdvancedSiegeTechArmorOnly=Advanced Siege Tech Armor Only
+Upgrade/Name/AnduinProtoss=AnduinProtoss
 Upgrade/Name/ApolloInjectionPods=Apollo Injection Pods
 Upgrade/Name/ArmoredHousing=Armored Housing
 Upgrade/Name/AspisBlinkShield=Aspis Blink Shield

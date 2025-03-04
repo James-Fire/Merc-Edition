@@ -168,6 +168,174 @@
         </CardLayouts>
         <AbilArray Link="SalvageShared"/>
     </CUnit>
+    <CUnit id="ImmortalShakuras">
+        <CardLayouts index="0">
+            <LayoutButtons Face="ZhakulGuardianSchematics" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Sentry">
+        <!--AbilArray Link="VoidSentryMiniTimeWarp"/>
+        <AbilArray Link="VoidSentryHallucination"/>
+        <AbilArray Link="SentryEnsnare"/>
+        <AbilArray Link="VoidSentryCombatChrono"/>
+        <AbilArray Link="VoidSentryCombatChronoAura"/>
+        <AbilArray Link="VoidSentryPhasingMode"/>
+        <AbilArray Link="VoidSentryForcePush"/-->
+        <CardLayouts index="0">
+            <LayoutButtons Face="ZhakulGuardianSchematics" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
+        </CardLayouts>
+        <!--LayoutButtons index="8">
+                <Face value="SentryMiniTimeWarp"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="VoidSentryMiniTimeWarp,Execute"/>
+                <Requirements value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons-->
+        <!--LayoutButtons Face="VoidSentryPhasingMode" Type="AbilCmd" AbilCmd="VoidSentryPhasingMode,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="VoidSentryHallucination" Type="AbilCmd" AbilCmd="VoidSentryHallucination,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="VoidSentryForcePush" Type="AbilCmd" AbilCmd="VoidSentryForcePush,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="VoidSentryCombatChronoAura" Type="AbilCmd" AbilCmd="VoidSentryCombatChronoAura,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="VoidSentryUpgradedDisruptionBeam" Type="Passive" Requirements="HaveVoidSentryCombatChronoAura" Row="1" Column="0"/-->
+        <!--LayoutButtons Face="SentryEnsnare" Type="AbilCmd" AbilCmd="SentryEnsnare,Execute" Row="2" Column="1"/-->
+    </CUnit>
+    <CUnit id="SignifierAnduin">
+        <DeathRevealRadius value="3"/>
+        <Race value="Prot"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="AlwaysThreatens" value="1"/>
+        <FlagArray index="AIThreatGround" value="1"/>
+        <FlagArray index="AIThreatAir" value="1"/>
+        <FlagArray index="AISplash" value="1"/>
+        <FlagArray index="AIHighPrioTarget" value="1"/>
+        <FlagArray index="AICaster" value="1"/>
+        <FlagArray index="AIPressForwardDisabled" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="125"/>
+        <LifeMax value="125"/>
+        <LifeRegenRate value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/ProtossArmor"/>
+        <EnergyStart value="200"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="1.6875"/>
+        <ShieldsStart value="125"/>
+        <ShieldsMax value="125"/>
+        <ShieldRegenDelay value="10"/>
+        <ShieldRegenRate value="6"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ProtossPlasmaShields"/>
+        <Speed value="3.0507"/>
+        <Acceleration value="1000"/>
+        <Deceleration value="1000"/>
+        <LateralAcceleration value="46"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="40"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Warpable"/>
+        <AbilArray Link="ProgressRally"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="PsiStormShakuras"/>
+        <AbilArray Link="KarassPlasmaSurge"/>
+        <AbilArray Link="AnduinOpenGate"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="ProgressRally,Rally1" Row="2" Column="4"/>
+            <LayoutButtons Face="WillofRaszagal" Type="Passive" Requirements="ArtanisResurgenceReviveOffCooldown" Row="1" Column="0"/>
+            <LayoutButtons Face="WillofRaszagal" Type="Passive" Behavior="ArtanisResurgenceReviveSupressed" Row="1" Column="0"/>
+            <LayoutButtons Face="AnduinCripplestorm" Type="AbilCmd" AbilCmd="PsiStormShakuras,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="AnduinPlasmaSurge" Type="AbilCmd" AbilCmd="KarassPlasmaSurge,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="AnduinOpenGate" Type="AbilCmd" AbilCmd="AnduinOpenGate,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="45"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="HighTemplar"/>
+        <TacticalAIThink value="AIThinkHighTemplar"/>
+        <AIEvalFactor value="1.8"/>
+        <GlossaryCategory value="Unit/Category/ProtossUnits"/>
+        <GlossaryPriority value="80"/>
+        <GlossaryStrongArray value=""/>
+        <GlossaryStrongArray value="Hydralisk"/>
+        <GlossaryStrongArray value="Sentry"/>
+        <GlossaryWeakArray value=""/>
+        <GlossaryWeakArray value="Roach"/>
+        <GlossaryWeakArray value="Colossus"/>
+        <HotkeyCategory value="Unit/Category/ProtossUnits"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <BehaviorArray Link="ArtanisResurgence"/>
+    </CUnit>
+    <CUnit id="OdinRepairDrone">
+        <Facing value="135"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="AISupport" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Mover value="Fly"/>
+        <Speed value="2.5"/>
+        <Acceleration value="2.125"/>
+        <Height value="1.75"/>
+        <CostCategory value="Army"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="OdinRepairDroneHeal"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
+            <LayoutButtons Face="SOACheatDeath" Type="AbilCmd" AbilCmd="OdinRepairDroneHeal,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="4"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+    </CUnit>
     <CUnit id="Bunker">
         <AbilArray index="13" Link="StimpackReaperRedirect"/>
         <AbilArray index="14" Link="BunkerLower"/>
@@ -643,6 +811,12 @@
         </CardLayouts>
     </CUnit>
     <CUnit id="MinikinMissile" parent="MISSILE"/>
+    <CUnit id="Odin">
+        <AbilArray Link="OdinRepairDroneMagazine"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="SelfRepairBots" Type="Passive" Row="1" Column="0"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="OdinFlakBarrageMissile" parent="MISSILE"/>
     <CUnit id="PsiDispersionDevice">
         <DeathRevealRadius value="3"/>
@@ -1228,6 +1402,9 @@
         <GlossaryPriority value="314"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
+    <CUnit id="OdinRepairDroneHealMissile" parent="MISSILE">
+        <Mover value="RepairDroneHealMissile"/>
+    </CUnit>
     <CUnit id="SgtHammerNapalmMissile" parent="MISSILE"/>
     <CUnit id="SgtHammerSieged">
         <DeathRevealRadius value="3"/>
@@ -1467,6 +1644,11 @@
         <Race value="Terr"/>
         <Mover value="StarcruiserLaserBattery"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Stalker">
+        <CardLayouts index="0">
+            <LayoutButtons Face="ZhakulGuardianSchematics" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="SupplyDepot">
         <AbilArray Link="SalvageShared"/>

@@ -1,5 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="ImmortalShakuras">
+        <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinImmortal"/>
+    </CActorUnit>
+    <CActorModel id="AnduinOpenGateM" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.OpenGateDummy.Start; At Caster" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5 SOpMoveUpByDot5 SOpMoveUpByDot15"/>
+    </CActorModel>
+    <CActorSound id="AnduinOpenGateS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.OpenGateDummy.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="AnduinPsiStormLayerM" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.PsiStormShakurasPersistent.Start" Send="Create"/>
+        <On Terms="Effect.PsiStormShakurasPersistent.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor {128,255,255 1.200000}"/>
+    </CActorModel>
+    <CActorSound id="AnduinPsiStormLayerS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.PsiStormShakurasPersistent.Start" Send="Create"/>
+        <On Terms="Effect.PsiStormShakurasPersistent.Stop" Send="Destroy"/>
+    </CActorSound>
+    <CActorRange id="OpenGateRange" parent="RangeAbil" abil="AnduinOpenGate">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorSplat id="PsiStormShakurasCursorSplat">
+        <Model value="AnduinStormCursorSplat"/>
+    </CActorSplat>
+    <CActorUnit id="Sentry">
+        <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinSentry"/>
+    </CActorUnit>
+    <CActorUnit id="SignifierAnduin" parent="GenericUnitStandard" unitName="SignifierAnduin">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="Abil.PsiStormShakuras.SourceCastStart" Send="AnimPlay A A"/>
+        <On Terms="Abil.AnduinOpenGate.SourceCastStart" Send="AnimPlay C Spell,C 0 -1.000000 -1.000000 1.200000 AsDuration"/>
+        <On Terms="Abil.KarassPlasmaSurge.SourceCastStart" Send="AnimPlay B B"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.200000 Shadow"/>
+        <On Terms="TimerExpired; TimerName Shadow; IsStatus ShadowCreate 1; !Option Model Low" Send="Create HighTemplarShadow"/>
+        <On Terms="TimerExpired; TimerName Shadow" Send="TimerSet 0.200000 Shadow"/>
+        <On Terms="UnitMovementUpdate.*.Stand" Send="StatusSet ShadowCreate 0"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="StatusSet ShadowCreate 1"/>
+        <On Terms="ActorCreation" Send="StatusSet ShadowCreate 0"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create HighTemplar_Land"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Templar_LandSweetener"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="DeathCustomsEnablePhysics 0"/>
+        <On Terms="WeaponStart.HighTemplarWeapon.AttackStart" Send="$Spell,A"/>
+        <On Terms="ActorCreation" Send="SetTeamColor 0,255,0 0,255,0"/>
+        <AnimBlendTime value="0.450000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="HighTemplarWarpIn"/>
+        <DeathArray index="Normal" ModelLink="SignifierAnduinDeath" SoundLink="HighTemplar_DeathFX"/>
+        <PlacementModel value="HighTemplarPlacement"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PortraitModel value="SignifierAnduinPortrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="70"/>
+        <BarWidth value="65"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-HighTemplar.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-hightemplar.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <SelectAbilCmd value="PsiStorm,Execute"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-hightemplar.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-HighTemplar.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-HighTemplar-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-HighTemplar-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-HighTemplar-Shield03.dds"/>
+        </WireframeShield>
+        <SoundArray index="Ready" value="ZealotNerazim_Ready"/>
+        <SoundArray index="Help" value="ZealotNerazim_Help"/>
+        <SoundArray index="What" value="ZealotNerazim_What"/>
+        <SoundArray index="Yes" value="ZealotNerazim_Yes"/>
+        <SoundArray index="Attack" value="ZealotNerazim_Attack"/>
+        <SoundArray index="Pissed" value="ZealotNerazim_Pissed"/>
+    </CActorUnit>
+    <CActorAction id="OdinFlakBarrage" parent="GenericAttack" effectImpact="OdinFlakBarrageDamage" effectLaunch="OdinFlakBarrageLaunchMissile">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="Center 0" Fallback="Overhead"/>
+    </CActorAction>
+    <CActorUnit id="OdinRepairDrone" parent="GenericUnitMorph" unitName="OdinRepairDrone">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Target="ServitorWeaponBeamA" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTeamColor 0,128,255 0,128,255"/>
+        <BarOffset value="25"/>
+        <BarWidth value="36"/>
+        <HeroIcon value=""/>
+        <HighlightTooltip value=""/>
+        <UnitIcon value="Assets\Textures\btn-unit-biomechanicaldrone.dds"/>
+    </CActorUnit>
     <CActorSound id="CabalMorphSound" parent="SoundOneShot">
         <EditorCategories value=""/>
     </CActorSound>
@@ -96,6 +194,7 @@
         <EditorCategories value=""/>
         <On Terms="UnitDeath.OdinFlakBarrageMissile" Send="Create"/>
         <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpMoveUpBy3"/>
     </CActorModel>
     <CActorMissile id="OdinFlakBarrageMissile" parent="GenericAttackMissile" unitName="OdinFlakBarrageMissile"/>
     <CActorModel id="RadarTowerSelectSweep" parent="ModelAnimationStyleContinuous">
@@ -206,6 +305,11 @@
         <Host Subject="_Unit"/>
     </CActorSound>
     <CActorMissile id="ReaperMissilesMissile" parent="GenericAttackMissile" unitName="ReaperMissilesMissile"/>
+    <CActorAction id="OdinRepairDroneHeal" parent="GenericAttack" effectImpact="OdinRepairDroneHeal" effectLaunch="OdinRepairDroneHealLM">
+        <LaunchAttachQuery Methods="Center 0" Fallback="Origin"/>
+        <LaunchAssets Sound="OdinRepairDroneHeal"/>
+    </CActorAction>
+    <CActorMissile id="OdinRepairDroneHealMissile" parent="GenericAttackMissile" unitName="OdinRepairDroneHealMissile"/>
     <CActorSplat id="ScannerSweepCursorSplat2" parent="CursorSplat" abil="RadarTowerScannerSweep">
         <Model value="ScannerSweepCursorSplat"/>
     </CActorSplat>
@@ -270,6 +374,7 @@
         <On Terms="AbilMorph.*.Finish; MorphTo SensorTower; MorphFrom RadarTower" Send="Create"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom SensorTower; MorphTo RadarTower" Send="Destroy"/>
         <On Terms="AbilMorph.*.Cancel; MorphFrom SensorTower; MorphTo RadarTower" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SensorTower; MorphFrom RadarTower" Send="AnimPlay MorphStart Build,D,Start PlayForever,NonLooping"/>
     </CActorUnit>
     <CActorRange id="RadarTowerRadar">
         <Inherits index="Visibility" value="0"/>
@@ -305,6 +410,8 @@
         <On Terms="AbilMorph.*.Finish; MorphTo RadarTower" Send="SetOpacity 0.000000 1.000000"/>
         <On Terms="AbilMorph.*.Finish; MorphTo RadarTower" Send="TimerSet 1.000000 1"/>
         <On Terms="TimerExpired; TimerName 1" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetOpacity"/>
+        <On Terms="ActorCreation" Send="SetOpacity 1.000000 2.000000"/>
     </CActorModel>
     <CActorUnit id="SgtHammerTankModeMorphModel" parent="GenericUnitBaseMorphTransition" unitName="MengskSiegeTankTankModeMorphModel">
         <Aliases value="_UnitLarge"/>
@@ -504,6 +611,9 @@
         <Host Subject="_Missile"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
+    <CActorUnit id="Stalker">
+        <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinStalker"/>
+    </CActorUnit>
     <CActorSound id="StarcruiserYamatoChargeUp" parent="SoundContinuous">
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStart" Send="Create"/>
         <On Terms="Abil.StarcruiserYamatoGun.SourcePrepStop" Send="Destroy"/>
@@ -2687,8 +2797,8 @@
         <DamageMap index="Shield" Sound="MagrailMunitionDamageShield" ModelReaction="MagrailMunitionDamageReactionShield"/>
     </CActorAction>
     <CActorMissile id="MagrailMunitionsMissile" parent="GenericAttackMissile" unitName="MagrailMunitionsMissile"/>
-    <CActorAction id="RepairDroneHeal" parent="GenericAttack" effectImpact="RepairDroneHeal" effectLaunch="RepairDroneHealLaunchMissile">
-        <LaunchAttachQuery Methods="Weapon 0"/>
+    <CActorAction id="RepairDroneHeal" parent="GenericAttack" effectImpact="RepairDroneHeal" effectLaunch="RepairDroneHealLM">
+        <LaunchAttachQuery Methods="Center 0" Fallback="Origin"/>
         <LaunchAssets Sound="RepairDroneHealLaunchMerc"/>
     </CActorAction>
     <CActorMissile id="RepairDroneHealMissile" parent="GenericAttackMissile" unitName="RepairDroneHealMissile"/>

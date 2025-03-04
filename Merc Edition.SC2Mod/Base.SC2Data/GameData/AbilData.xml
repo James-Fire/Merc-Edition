@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="KarassPlasmaSurge">
+        <Cost index="0">
+            <Vital index="Energy" value="50"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="AnduinOpenGate">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="OpenGateDummy"/>
+        <Cost>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <Range value="5"/>
+        <FinishTime value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AnduinOpenGate"/>
+    </CAbilEffectTarget>
     <CAbilHarvest id="ACVHarvest">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <ResourceAmountBonus index="Minerals" value="10"/>
@@ -197,6 +213,25 @@
     <CAbilMorph id="MilitarizedColonistShipLiftOff">
         <InfoArray index="0" Unit="ZeusLanderFlying"/>
     </CAbilMorph>
+    <CAbilArmMagazine id="OdinRepairDroneMagazine">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Flags index="AutoCreate" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="ShowStatus" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <Leash value="0.1"/>
+        <InfoArray index="Ammo1" Count="3" CountStart="3" Distance="1.4" Manage="Recall" Unit="OdinRepairDrone">
+            <Charge Link="Abil/##id##"/>
+            <Cooldown Link="Abil/##id##"/>
+            <Button DefaultButtonFace="Decal_Spray_0059_01"/>
+            <Flags index="External" value="1"/>
+        </InfoArray>
+        <ExternalAngle value="135"/>
+        <ExternalAngle value="180"/>
+        <ExternalAngle value="225"/>
+        <MaxCount value="3"/>
+    </CAbilArmMagazine>
     <CAbilEffectInstant id="NeoTitanium">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="NeoTitaniumSwitch"/>
@@ -222,6 +257,12 @@
         <AutoCastFilters value="Ground;Player,Ally,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AutoCastRange value="6.5"/>
     </CAbilMorph>
+    <CAbilEffectTarget id="PsiStormShakuras">
+        <Cost index="0">
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <Range index="0" value="11"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="ReaperMissiles">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="ReaperMissilesCP"/>
@@ -232,6 +273,26 @@
         </Cost>
         <Range value="11"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ReaperMissiles"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="OdinRepairDroneHeal">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="OdinRepairDroneHealCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="ChannelingMinimum" value="0"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Range value="10"/>
+        <Arc value="360"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Ground,Mechanical,Massive,Heroic,Visible;Ally,Neutral,Enemy,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="10"/>
+        <AutoCastValidatorArray value="OdinOutofCombat"/>
+        <AutoCastValidatorArray value="IsOdin"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HireSiegeBreakersPH"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="ScannerSweep">
         <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>

@@ -69,6 +69,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseAnduinProtoss">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeAnduinProtossCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseApolloInjectionPods">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeApolloInjectionPodsCompleteOnly"/>
