@@ -170,7 +170,13 @@
     </CUnit>
     <CUnit id="ImmortalShakuras">
         <CardLayouts index="0">
-            <LayoutButtons Face="ZhakulGuardianSchematics" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
+            <LayoutButtons Face="ZhakulGuardians" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="PrisonZealot">
+        <AbilArray index="5" Link="AnduinShadowCharge"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Face="VoidZealotShadowCharge" AbilCmd="AnduinShadowCharge,Execute"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="Sentry">
@@ -182,7 +188,7 @@
         <AbilArray Link="VoidSentryPhasingMode"/>
         <AbilArray Link="VoidSentryForcePush"/-->
         <CardLayouts index="0">
-            <LayoutButtons Face="ZhakulGuardianSchematics" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
+            <LayoutButtons Face="ZhakulGuardians" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
         </CardLayouts>
         <!--LayoutButtons index="8">
                 <Face value="SentryMiniTimeWarp"/>
@@ -1647,7 +1653,7 @@
     </CUnit>
     <CUnit id="Stalker">
         <CardLayouts index="0">
-            <LayoutButtons Face="ZhakulGuardianSchematics" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
+            <LayoutButtons Face="ZhakulGuardians" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SupplyDepot">
@@ -1947,7 +1953,6 @@
         <AbilArray Link="ScannerSweep"/>
         <AbilArray Link="SensorTowerMorphToRadarTower"/>
         <CardLayouts index="0">
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="SensorTowerMorphToRadarTower,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="UpgradetoRadarTower" Type="AbilCmd" AbilCmd="SensorTowerMorphToRadarTower,Execute" Row="2" Column="0"/>
         </CardLayouts>
     </CUnit>

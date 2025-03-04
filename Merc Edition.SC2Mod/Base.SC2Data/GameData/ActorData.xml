@@ -31,6 +31,17 @@
     <CActorSplat id="PsiStormShakurasCursorSplat">
         <Model value="AnduinStormCursorSplat"/>
     </CActorSplat>
+    <CActorSound id="RadarTowerMorphStart" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.*.Start; MorphTo RadarTower" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="SensorTowerMorph" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimPlay Morph Morph,Start PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RadarTower" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo RadarTower" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Cancel; MorphTo RadarTower" Send="Destroy"/>
+    </CActorModel>
     <CActorUnit id="Sentry">
         <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinSentry"/>
     </CActorUnit>
@@ -271,6 +282,7 @@
         <On Terms="AbilMorph.*.Finish; MorphFrom RadarTower; MorphTo SensorTower" Send="Destroy"/>
         <On Terms="AbilMorph.*.Cancel; MorphFrom RadarTower; MorphTo SensorTower" Send="Destroy"/>
         <On Terms="ActorCreation" Send="AnimPlay Morph Morph"/>
+        <On Terms="ActorCreation" Send="SetOpacity 1.000000"/>
         <DeathArray index="Normal" ModelLink="SensorTowerDeath" SoundLink="SensorTower_Explode"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="SensorTower_Explode"/>
         <PlacementModel value="SensorTowerPlacement"/>
@@ -374,7 +386,8 @@
         <On Terms="AbilMorph.*.Finish; MorphTo SensorTower; MorphFrom RadarTower" Send="Create"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom SensorTower; MorphTo RadarTower" Send="Destroy"/>
         <On Terms="AbilMorph.*.Cancel; MorphFrom SensorTower; MorphTo RadarTower" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Start; MorphTo SensorTower; MorphFrom RadarTower" Send="AnimPlay MorphStart Build,D,Start PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RadarTower" Send="SetOpacity"/>
+        <On Terms="AbilMorph.*.Cancel" Send="SetOpacity 1.000000"/>
     </CActorUnit>
     <CActorRange id="RadarTowerRadar">
         <Inherits index="Visibility" value="0"/>
@@ -412,6 +425,7 @@
         <On Terms="TimerExpired; TimerName 1" Send="Destroy"/>
         <On Terms="ActorCreation" Send="SetOpacity"/>
         <On Terms="ActorCreation" Send="SetOpacity 1.000000 2.000000"/>
+        <On Terms="AbilMorph.*.Cancel; MorphTo RadarTower" Send="Destroy"/>
     </CActorModel>
     <CActorUnit id="SgtHammerTankModeMorphModel" parent="GenericUnitBaseMorphTransition" unitName="MengskSiegeTankTankModeMorphModel">
         <Aliases value="_UnitLarge"/>

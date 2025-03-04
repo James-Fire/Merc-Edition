@@ -401,6 +401,19 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilAugment id="AnduinShadowCharge">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidZealotShadowCharge" Requirements="UseAnduinProtoss"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Cooldown Link="Charge" Location="Unit" TimeUse="10"/>
+        </Cost>
+        <Effect value="ShadowCharge"/>
+        <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
+    </CAbilAugment>
     <CAbilEffectTarget id="ShadowHallucination">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="ShadowHallucinationCU"/>

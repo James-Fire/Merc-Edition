@@ -785,8 +785,8 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
-    <CButton id="ZhakulGuardianSchematics">
-        <Icon value="Assets\Textures\btn-ability-protoss-shadowcharge.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-protoss-shadowcharge.dds"/>
+    <CButton id="ZhakulGuardians">
+        <Icon value="Assets\Textures\btn-ability-protoss-shadowdashvorazun.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-shadowdashvorazun.dds"/>
     </CButton>
 </Catalog>

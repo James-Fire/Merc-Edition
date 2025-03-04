@@ -365,6 +365,12 @@
         <AssetArray File="Assets\Sounds\Liberator_AA_Launch_04.wav" FacialGroup=""/>
         <Volume value="-11.000000,-11.000000"/>
     </CSound>
+    <CSound id="RadarTowerMorphStart" parent="Combat">
+        <AssetArray File="Assets\Sounds\Liberator_MorphToDefender_SmartServos.wav" FacialGroup=""/>
+        <Category value="Build"/>
+        <Pitch value="-6.000000,-6.000000"/>
+        <Volume value="-4.560000,-4.560000"/>
+    </CSound>
     <CSound id="ReaperMissilesImpact" parent="Combat">
         <AssetArray File="Assets\Sounds\GrenadePulse_Explosion01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\GrenadePulse_Explosion02.wav" FacialGroup=""/>

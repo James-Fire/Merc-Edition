@@ -188,6 +188,9 @@
         <SelectionRadius value="2.500000"/>
         <ShadowRadius value="2.500000"/>
     </CModel>
+    <CModel id="SensorTowerMorph">
+        <Model value="Assets\Models\SensorTowerMorph.m3"/>
+    </CModel>
     <CModel id="SignifierAnduin" parent="HighTemplarBase">
         <Model value="Assets\Units\Protoss\DarkHighTemplar\DarkHighTemplar.m3"/>
         <ScaleMax value="1.050000,1.050000,1.050000"/>

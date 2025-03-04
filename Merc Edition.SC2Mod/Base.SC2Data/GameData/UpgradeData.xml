@@ -28,7 +28,11 @@
         <EffectArray Operation="Set" Reference="Actor,ImmortalShakuras,PortraitModel" Value="AnduinImmortalPortrait"/>
         <EffectArray Operation="Set" Reference="Unit,Stalker,Speed" Value="3.050700"/>
         <EffectArray Operation="Set" Reference="Unit,Sentry,Speed" Value="3.050700"/>
+        <EffectArray Operation="Set" Reference="Unit,PrisonZealot,Speed" Value="3.050700"/>
         <EffectArray Operation="Set" Reference="Unit,ImmortalShakuras,Speed" Value="3.050700"/>
+        <EffectArray Operation="Set" Reference="Unit,Stalker,Name" Value="Unit/Name/StalkerAnduin"/>
+        <EffectArray Operation="Set" Reference="Unit,Sentry,Name" Value="Unit/Name/SentryAnduin"/>
+        <EffectArray Operation="Set" Reference="Unit,PrisonZealot,Name" Value="Unit/Name/ZealotAnduin"/>
         <AffectedUnitArray value="Stalker"/>
         <AffectedUnitArray value="Sentry"/>
         <AffectedUnitArray value="ImmortalShakuras"/>
