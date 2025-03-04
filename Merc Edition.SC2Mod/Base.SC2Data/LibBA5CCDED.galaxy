@@ -366,6 +366,42 @@ void libBA5CCDED_gf_Ihanriiify (playergroup lp_players) {
     }
 }
 
+void libBA5CCDED_gf_MidasTouched (playergroup lp_players) {
+    // Variable Declarations
+    int lv_player;
+
+    // Automatic Variable Declarations
+    playergroup autoDC486CB1_g;
+
+    // Variable Initialization
+
+    // Implementation
+    autoDC486CB1_g = lp_players;
+    lv_player = -1;
+    while (true) {
+        lv_player = PlayerGroupNextPlayer(autoDC486CB1_g, lv_player);
+        if (lv_player < 0) { break; }
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "AdeptGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "CarrierGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ColossusGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "DarkTemplarGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "DisruptorGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "HighTemplarGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ImmortalGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "MothershipGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ObserverGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "OracleGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "PhoenixGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ProbeGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "SentryGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "StalkerGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "TempestGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "VoidRayGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "WarpPrismGolden", true);
+        libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ZealotGolden", true);
+    }
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
 // Trigger: Open Banks
