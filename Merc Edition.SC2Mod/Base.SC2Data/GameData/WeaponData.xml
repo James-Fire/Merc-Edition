@@ -56,6 +56,14 @@
         <DamagePoint value="0.083"/>
         <Backswing value="1.167"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="CashRegister">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="CashRegisterDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="1"/>
+        <Effect value="CashRegisterDamage"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ChargedJupiterRail">
         <EditorCategories value="Race:Terran"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>

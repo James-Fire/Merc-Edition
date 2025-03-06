@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="CashRegisterImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="CashRegisterLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\Nova_Snipe_Launch\Nova_Snipe_Launch.m3"/>
+    </CModel>
+    <CModel id="LockdownLaunch">
+        <Model value="Assets\Effects\Protoss\ShadowCannonLaunch\ShadowCannonLaunch.m3"/>
+    </CModel>
     <CModel id="250mmUranusCarronadesImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\Griffin_BombRun_Impact_COOP\Griffin_BombRun_Impact_COOP.m3"/>
     </CModel>
@@ -189,6 +198,32 @@
         <ScaleMin value="0.325000,0.325000,0.325000"/>
         <SelectionRadius value="2.500000"/>
         <ShadowRadius value="2.500000"/>
+    </CModel>
+    <CModel id="GravenHill" parent="Unit">
+        <Model value="Assets\Models\GravenHill.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="GravenHillDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\TerranBloodDeathLow\TerranBloodDeathLow.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Lighting value=""/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="GravenHillPortrait" parent="FXAPortrait" Prefix="Portraits\" Race="Terran">
+        <Model value="Assets\Models\hillportrait.m3"/>
+        <RequiredAnims value="Assets\Models\hillportrait_requiredanims.m3a"/>
+        <FacialController value="LocalizedData\Facial\SM_Mercenary03.fxa"/>
+        <Image value="Assets\Textures\HillPortrait_Static.dds"/>
+        <Lighting value="HillPortrait"/>
+        <PausedParticleSystemBehavior value="FreezeAll"/>
     </CModel>
     <CModel id="SensorTowerMorph">
         <Model value="Assets\Models\SensorTowerMorph.m3"/>
@@ -1257,6 +1292,16 @@
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
         <Occlusion value="Show"/>
         <VariationCount value="2"/>
+    </CModel>
+    <CModel id="WildSnipeDamageBeam">
+        <Model value="Assets\Effects\Terran\Nova_Snipe_Beam\Nova_Snipe_Beam.m3"/>
+    </CModel>
+    <CModel id="WildSnipeImpact">
+        <Model value="Assets\Effects\Protoss\Colossus_Purifier_Coop_Missile_Impact\Colossus_Purifier_Coop_Missile_Impact.m3"/>
+        <AnimSpeed value="2.000000"/>
+    </CModel>
+    <CModel id="WildSnipeLaunch">
+        <Model value="Assets\Effects\Terran\SnipeLaunch\SnipeLaunch.m3"/>
     </CModel>
     <CModel id="ZeusLanderLanded" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\MilitarizedColonistShip\MilitarizedColonistShip.m3"/>

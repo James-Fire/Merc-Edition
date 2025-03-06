@@ -16,11 +16,24 @@
     <CEffectEnumArea id="ArtanisResurgenceSearch">
         <AreaArray index="0" Radius="8"/>
     </CEffectEnumArea>
+    <CEffectDamage id="CashRegisterDamage" parent="DU_WEAP">
+        <Amount value="25"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectModifyUnit id="KarassPlasmaSurgeModifyUnit">
         <VitalArray index="Shields">
             <Change value="100"/>
         </VitalArray>
     </CEffectModifyUnit>
+    <CEffectApplyBehavior id="LockdownMkIIAB">
+        <EditorCategories value=""/>
+        <Behavior value="LockdownB"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="LockdownMkIILM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="LockdownMkIIAB"/>
+        <AmmoUnit value="NovaLockdownMissile"/>
+    </CEffectLaunchMissile>
     <CEffectSet id="OpenGateDummy">
         <EditorCategories value=""/>
     </CEffectSet>
@@ -2202,6 +2215,15 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="VulcanCannons"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="WildSnipeDamage">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Amount value="250"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="1.5" Fraction="0.15"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="WolverineFearAB">
         <Behavior value="WolverineFeared"/>
     </CEffectApplyBehavior>
