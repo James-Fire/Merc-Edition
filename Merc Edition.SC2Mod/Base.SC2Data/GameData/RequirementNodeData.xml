@@ -42,6 +42,9 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AdvancedOrbitalCommand" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAnduinProtossCompleteOnly">
+        <Count Link="AnduinProtoss" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeApolloInjectionPodsCompleteOnly">
         <Count Link="ApolloInjectionPods" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

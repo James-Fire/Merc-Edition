@@ -50,6 +50,19 @@
             <StateFlags index="Untargetable" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ArtanisResurgenceDisable">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="240"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArtanisResurgenceInvulnerable">
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArtanisResurgenceReviveSupressed">
+        <Cost>
+            <Cooldown TimeStart="240"/>
+        </Cost>
+        <Duration value="240"/>
+    </CBehaviorBuff>
     <CBehaviorResource id="AutomaticHarvestableVespene">
         <IdealHarvesterCount value="3"/>
     </CBehaviorResource>
@@ -717,6 +730,14 @@
         <BuffFlags index="RefreshStack" value="1"/>
         <MaxStackCount value="13"/>
         <Tooltip value="Button/Tooltip/ShellShower"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidHighTemplarPsiStormCripple">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray index="0" removed="1"/>
+        <Duration value="5"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="-0.75"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="VulcanCannons">
         <Tooltip value="Button/Tooltip/VulcanCannons"/>

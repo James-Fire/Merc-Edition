@@ -68,10 +68,147 @@
         <Model value="Assets\Models\ASP_Missile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="AnduinImmortal" Prefix="Units\" Race="Protoss">
+        <Model value="Assets\Units\Protoss\DarkImmortal\DarkImmortal.m3"/>
+        <RequiredAnims value="Assets\Units\Protoss\Immortal_SwarmAnims\Immortal_SwarmAnims.m3a"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <Lighting value="Immortal"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh08"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraHigh08"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+    </CModel>
+    <CModel id="AnduinImmortalPortrait" Prefix="Portraits\" Race="Protoss">
+        <Model value="Assets\COOP\Zeratul\Portraits\Immortal_Zeratul_COOP_Portrait\Immortal_Zeratul_COOP_Portrait.m3"/>
+        <AnimBlendTime value="0.500000"/>
+        <Flags index="Download" value="0"/>
+        <Flags index="FOW" value="0"/>
+        <Flags index="IgnoreAspectRatioScale" value="1"/>
+        <Image value="Assets\Textures\ImmortalPortrait_Static.dds"/>
+        <Lighting value="ImmortalPortrait"/>
+        <PausedParticleSystemBehavior value="FreezeAll"/>
+        <Priority value="8"/>
+        <Quality value="0"/>
+    </CModel>
+    <CModel id="AnduinOpenGateM">
+        <Model value="Assets\Effects\Protoss\EyeOfAdunMissileImpact\EyeofAdunMissileImpact.m3"/>
+        <AnimSpeed value="2.000000"/>
+        <ScaleMax value="1.000000,1.000000,0.100000"/>
+        <ScaleMin value="1.000000,1.000000,0.100000"/>
+    </CModel>
+    <CModel id="AnduinPsiStormLayerM">
+        <Model value="Assets\Effects\Zerg\PsionicShadowImpact\PsionicShadowImpact.m3"/>
+        <AnimSpeed value="0.500000"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="AnduinSentry" Prefix="Units\" Race="Protoss">
+        <Model value="Assets\Units\Protoss\DarkSentry\DarkSentry.m3"/>
+        <Lighting value="DarkSentry"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid06"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <SelectionRadius value="0.733000"/>
+        <ShadowRadius value="0.533000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraMid06"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.500000"/>
+        <TipabilityWidth value="0.500000"/>
+        <UnitGlossaryCamera value="Star2CameraMid06"/>
+    </CModel>
+    <CModel id="AnduinSentryPortrait" Prefix="Portraits\" Race="Protoss">
+        <Model value="Assets\COOP\Zeratul\Portraits\Sentry_Zeratul_COOP_Portrait\Sentry_Zeratul_COOP_Portrait.m3"/>
+        <AnimBlendTime value="0.500000"/>
+        <Flags index="Download" value="0"/>
+        <Flags index="FOW" value="0"/>
+        <Flags index="IgnoreAspectRatioScale" value="1"/>
+        <Image value="Assets\Textures\SentryPortrait_Static.dds"/>
+        <Lighting value="SentryPortrait"/>
+        <PausedParticleSystemBehavior value="FreezeAll"/>
+        <Priority value="8"/>
+        <Quality value="0"/>
+    </CModel>
+    <CModel id="AnduinStalker" Prefix="Units\" Race="Protoss">
+        <Model value="Assets\Units\Protoss\DarkStalker\DarkStalker.m3"/>
+        <RequiredAnims value="Assets\Units\Protoss\Stalker_SwarmAnims\Stalker_SwarmAnims.m3a"/>
+        <Lighting value="Stalker"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh10"/>
+        <Radius value="0.850000"/>
+        <ScaleMax value="0.690000,0.690000,0.690000"/>
+        <ScaleMin value="0.690000,0.690000,0.690000"/>
+        <SelectionRadius value="1.087000"/>
+        <ShadowRadius value="1.087000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraHigh10"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh10"/>
+    </CModel>
+    <CModel id="AnduinStalkerPortrait" Prefix="Portraits\" Race="Protoss">
+        <Model value="Assets\COOP\Zeratul\Portraits\Stalker_Zeratul_COOP_Portrait\Stalker_Zeratul_COOP_Portrait.m3"/>
+        <AnimBlendTime value="0.500000"/>
+        <Flags index="Download" value="0"/>
+        <Flags index="FOW" value="0"/>
+        <Flags index="IgnoreAspectRatioScale" value="1"/>
+        <Image value="Assets\Textures\StalkerPortrait_Static.dds"/>
+        <Lighting value="StalkerPortrait"/>
+        <PausedParticleSystemBehavior value="FreezeAll"/>
+        <Priority value="8"/>
+        <Quality value="0"/>
+    </CModel>
     <CModel id="AresWarbotMercImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\ImmortalMissileImpact\ImmortalMissileImpact.m3"/>
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="HighTemplarPsiStormModel">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="AnduinStormCursorSplat" parent="UI">
+        <Model value="Assets\UI\Cursors\ProtossCursor1\ProtossCursor1.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.325000,0.325000,0.325000"/>
+        <ScaleMin value="0.325000,0.325000,0.325000"/>
+        <SelectionRadius value="2.500000"/>
+        <ShadowRadius value="2.500000"/>
+    </CModel>
+    <CModel id="SensorTowerMorph">
+        <Model value="Assets\Models\SensorTowerMorph.m3"/>
+    </CModel>
+    <CModel id="SignifierAnduin" parent="HighTemplarBase">
+        <Model value="Assets\Units\Protoss\DarkHighTemplar\DarkHighTemplar.m3"/>
+        <ScaleMax value="1.050000,1.050000,1.050000"/>
+        <ScaleMin value="1.050000,1.050000,1.050000"/>
+    </CModel>
+    <CModel id="SignifierAnduinDeath" parent="HighTemplarDeathBase">
+        <Model value="Assets\Units\Protoss\DarkHighTemplarDeath\DarkHighTemplarDeath.m3"/>
+    </CModel>
+    <CModel id="SignifierAnduinPortrait" parent="HighTemplarPortraitBase">
+        <Model value="Assets\Portraits\Protoss\Shakuras_Zealot_NoCord_Portrait\Shakuras_Zealot_NoCord_Portrait.m3"/>
+        <Image value="Assets\Textures\HighTemplarPortrait_Static.dds"/>
+        <Lighting value="HighTemplarPortrait"/>
+    </CModel>
+    <CModel id="OdinRepairDrone" parent="Unit">
+        <Model value="Assets\Units\Terran\Repair_Drone_MP\Repair_Drone_MP.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
     </CModel>
     <CModel id="CabalMorph" Prefix="Units\" Race="Terran">
         <Model value="Assets\Units\Terran\VikingMorph_Mecha_Collection\VikingMorph_Mecha_Collection.m3"/>
@@ -272,6 +409,14 @@
         <Model value="Assets\Effects\Terran\Mutator_Standard_Missile\Mutator_Standard_Missile.m3"/>
         <ScaleMax value="0.500000,0.700000,0.500000"/>
         <ScaleMin value="0.500000,0.700000,0.500000"/>
+    </CModel>
+    <CModelFoliage id="OdinRepairDroneHealImpact">
+        <Model value="Assets\Effects\Protoss\PhoenixMissileImpact\PhoenixMissileImpact.m3"/>
+    </CModelFoliage>
+    <CModel id="OdinRepairDroneHealMissile">
+        <Model value="Assets\Effects\Protoss\PhoenixMissile\PhoenixMissile.m3"/>
+        <ScaleMax value="0.500000,0.500000,1.000000"/>
+        <ScaleMin value="0.500000,0.500000,1.000000"/>
     </CModel>
     <CModel id="SensorTower2" parent="SensorTowerBase">
         <Model value="Assets\Buildings\Terran\SensorTower\SensorTower.m3"/>

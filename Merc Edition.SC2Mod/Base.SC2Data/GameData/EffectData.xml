@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectModifyUnit id="ArtanisResurgenceHeal">
+        <VitalArray index="Energy">
+            <ChangeFraction value="1"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectEnumArea id="ArtanisResurgenceSearch">
+        <AreaArray index="0" Radius="8"/>
+    </CEffectEnumArea>
+    <CEffectModifyUnit id="KarassPlasmaSurgeModifyUnit">
+        <VitalArray index="Shields">
+            <Change value="100"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectSet id="OpenGateDummy">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="PsiStormCrippleAB">
+        <ValidatorArray index="0" value="NotStructure"/>
+        <ValidatorArray index="1" removed="1"/>
+        <ValidatorArray index="2" removed="1"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="PsiStormShakurasSearch">
+        <AreaArray index="0" Radius="2.25"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="BarragePersistent">
         <PeriodicEffectArray index="0" value="OdinBarragePeriodicSet"/>
     </CEffectCreatePersistent>
@@ -22,6 +46,7 @@
         <Effect value="OdinFlakBarrageLaunchMissile"/>
         <Radius value="3"/>
         <WhichLocation Value="TargetPoint"/>
+        <Count value="3"/>
     </CEffectRandomPointInCircle>
     <CEffectApplyBehavior id="AdrenalineRushAB">
         <ValidatorArray index="0" value="PlayerIsMercEdition"/>
@@ -279,6 +304,26 @@
     <CEffectSet id="RedlineReactorMusicEasterEgg">
         <EditorCategories value=""/>
     </CEffectSet>
+    <CEffectCreatePersistent id="OdinRepairDroneHealCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="OdinRepairDroneHealLM"/>
+        <PeriodicPeriodArray value="0.5"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="OdinRepairDroneHealLM">
+        <ValidatorArray index="0" value="TargetLifeNotFull"/>
+        <ValidatorArray value="IsOdin"/>
+        <ValidatorArray value="OdinOutofCombat"/>
+        <ImpactEffect value="OdinRepairDroneHeal"/>
+        <AmmoUnit value="OdinRepairDroneHealMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectModifyUnit id="OdinRepairDroneHeal">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="6"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="ShadowHallucinationAB">
         <Behavior value="ShadowHallucination"/>
     </CEffectApplyBehavior>
@@ -1508,7 +1553,7 @@
         <PeriodicEffectArray value="RepairDroneHealSA"/>
         <PeriodicPeriodArray value="0.5"/>
     </CEffectCreatePersistent>
-    <CEffectLaunchMissile id="RepairDroneHealLaunchMissile">
+    <CEffectLaunchMissile id="RepairDroneHealLM">
         <ValidatorArray index="0" value="TargetLifeNotFull"/>
         <ImpactEffect value="RepairDroneHeal"/>
         <AmmoUnit value="RepairDroneHealMissile"/>
@@ -1520,7 +1565,7 @@
             <SortArray value="TSAllianceControl"/>
             <SortArray value="TSLife"/>
         </TargetSorts>
-        <AreaArray MaxCount="1" Radius="3.5" Effect="RepairDroneHealLaunchMissile"/>
+        <AreaArray MaxCount="1" Radius="3.5" Effect="RepairDroneHealLM"/>
     </CEffectEnumArea>
     <CEffectModifyUnit id="ReplenishMinesCondor">
         <ValidatorArray value="SpiderMineUsedCondor"/>

@@ -114,7 +114,7 @@
     <CMoverMissile id="OdinFlakBarrageMissile">
         <MotionPhases>
             <Driver value="Guidance"/>
-            <Acceleration value="20"/>
+            <Acceleration value="50"/>
             <Speed value="10"/>
             <MaxSpeed value="100"/>
             <Outro value="2.5"/>

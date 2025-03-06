@@ -28,6 +28,16 @@
         <Icon value="Assets\Textures\talent-raynor-level08-orbitaldroppods.dds"/>
         <AlertIcon value="Assets\Textures\talent-raynor-level08-orbitaldroppods.dds"/>
     </CButton>
+    <CButton id="AnduinCripplestorm">
+        <Icon value="Assets\Textures\btn-ability-protoss-psistorm.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-psistorm.dds"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="AnduinOpenGate">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <TintRacially value="1"/>
+    </CButton>
     <CButton id="ApolloInjectionPods">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -199,6 +209,11 @@
         <Icon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
     </CButton>
+    <CButton id="AnduinPlasmaSurge">
+        <Icon value="Assets\Textures\btn-shield-protoss-plasmashields.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+        <TintRacially value="1"/>
+    </CButton>
     <CButton id="KelMorianRipperRounds">
         <Icon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
@@ -222,6 +237,10 @@
     <CButton id="ReaperMissiles">
         <Icon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
+    </CButton>
+    <CButton id="SelfRepairBots">
+        <Icon value="Assets\Icons and Wireframes\odinrepairbots.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\odinrepairbots.dds"/>
     </CButton>
     <CButton id="ShadowHallucinate">
         <Icon value="Assets\Icons and Wireframes\shadow-hallucination.dds"/>
@@ -315,6 +334,11 @@
         <Icon value="Assets\Textures\btn-unit-collectoin-terran-mecha-vikingassault.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-collectoin-terran-mecha-vikingassault.dds"/>
         <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="WillofRaszagal">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <TintRacially value="1"/>
     </CButton>
     <CButton id="YamatoCulverin">
         <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
@@ -760,5 +784,9 @@
     <CButton id="ZeusTankSecretUpgrade">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="ZhakulGuardians">
+        <Icon value="Assets\Textures\btn-ability-protoss-shadowdashvorazun.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-shadowdashvorazun.dds"/>
     </CButton>
 </Catalog>
