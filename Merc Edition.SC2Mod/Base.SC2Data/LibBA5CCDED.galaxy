@@ -859,42 +859,31 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_96C22D7E"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Black Market Contact"), StringExternal("Param/Value/lib_BA5CCDED_AD91334D"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh03A) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_8E1FE6F6"), 17);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh03B) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_8D8AC7C4"), 17);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Internal Monologue"), StringExternal("Param/Value/lib_BA5CCDED_C854498D"), 17);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul02) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Internal Monologue"), StringExternal("Param/Value/lib_BA5CCDED_D79C03A6"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul03) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Internal Monologue"), StringExternal("Param/Value/lib_BA5CCDED_092773E4"), 17);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTZeratul04) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Internal Monologue"), StringExternal("Param/Value/lib_BA5CCDED_9944095B"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian01) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_49433A65"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02A) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_2626FAB7"), 17);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02B) {
-        libDAB75013_gf_ServicesEmailShow(StringToText("Tychus"), StringExternal("Param/Value/lib_BA5CCDED_7739C6CF"), 17);
         libBA5CCDED_gf_SpawnZeusonGameStart(null);
     }
     else {
