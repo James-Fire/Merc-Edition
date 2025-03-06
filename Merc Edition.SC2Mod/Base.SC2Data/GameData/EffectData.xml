@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="AnduinPlasmaBlastDamage" parent="DU_WEAP">
+        <Amount value="20"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="AnduinPlasmaBlastLaunchMissile">
+        <ImpactEffect value="AnduinPlasmaBlastDamage"/>
+        <AmmoUnit value="AnduinPlasmaBlastWeapon"/>
+    </CEffectLaunchMissile>
     <CEffectModifyUnit id="ArtanisResurgenceHeal">
         <VitalArray index="Energy">
             <ChangeFraction value="1"/>

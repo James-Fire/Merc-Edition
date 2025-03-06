@@ -336,8 +336,8 @@
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="WillofRaszagal">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-hardenedshields.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-hardenedshields.dds"/>
         <TintRacially value="1"/>
     </CButton>
     <CButton id="YamatoCulverin">

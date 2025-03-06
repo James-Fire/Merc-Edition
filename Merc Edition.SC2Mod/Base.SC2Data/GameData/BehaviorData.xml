@@ -310,6 +310,7 @@
         <Offset value="1,1"/>
         <Limit value="4"/>
         <Slop value="500"/>
+        <Flags index="IgnoreMorph" value="1"/>
     </CBehaviorSpawn>
     <CBehaviorResource id="MineralFieldMinerals">
         <Capacity value="5000"/>

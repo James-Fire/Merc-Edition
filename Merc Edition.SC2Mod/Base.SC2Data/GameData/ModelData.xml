@@ -107,11 +107,17 @@
         <ScaleMax value="1.000000,1.000000,0.100000"/>
         <ScaleMin value="1.000000,1.000000,0.100000"/>
     </CModel>
+    <CModel id="AnduinPlasmaBlastImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\AdeptSoulMissileImpact\AdeptSoulMissileImpact.m3"/>
+    </CModel>
+    <CModel id="AnduinPlasmaBlastMissileModel" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\AdeptSoulMissile\AdeptSoulMissile.m3"/>
+    </CModel>
     <CModel id="AnduinPsiStormLayerM">
         <Model value="Assets\Effects\Zerg\PsionicShadowImpact\PsionicShadowImpact.m3"/>
-        <AnimSpeed value="0.500000"/>
-        <ScaleMax value="2.000000,2.000000,2.000000"/>
-        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <AnimSpeed value="0.250000"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
     </CModel>
     <CModel id="AnduinSentry" Prefix="Units\" Race="Protoss">
         <Model value="Assets\Units\Protoss\DarkSentry\DarkSentry.m3"/>
@@ -175,10 +181,6 @@
         <Model value="Assets\Effects\Protoss\ImmortalMissileImpact\ImmortalMissileImpact.m3"/>
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
-    </CModel>
-    <CModel id="HighTemplarPsiStormModel">
-        <ScaleMax value="1.500000,1.500000,1.500000"/>
-        <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
     <CModel id="AnduinStormCursorSplat" parent="UI">
         <Model value="Assets\UI\Cursors\ProtossCursor1\ProtossCursor1.m3"/>

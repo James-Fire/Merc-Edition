@@ -23,7 +23,7 @@
         <NodeArray index="Show" Link="LTECountUpgradeZeusTankSecretUpgradeQueuedOrBetter0"/>
     </CRequirement>
     <CRequirement id="MineDroneBuild">
-        <NodeArray index="Use" Link="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit2"/>
+        <NodeArray index="Use" Link="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit4"/>
     </CRequirement>
     <CRequirement id="SgtHammerIsSieged">
         <NodeArray index="Use" Link="CountBehaviorSgtHammerSiegedCompleteOnlyAtUnit2462428351"/>

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="AnduinPlasmaBlastAction" parent="GenericAttack" effectImpact="AnduinPlasmaBlastDamage" effectLaunch="AnduinPlasmaBlastLaunchMissile">
+        <LaunchAssets Model="AnduinPlasmaBlastLaunchModel" Sound="AnduinPlasmaBlastLaunchSound"/>
+        <Missile value="AnduinPlasmaBlastWeaponMissile"/>
+        <ImpactMap index="None" Model="AnduinPlasmaBlastImpactModel" Sound="AnduinPlasmaBlastImpactSound"/>
+        <LaunchAttachQuery Methods="Center 0" Fallback="Head"/>
+    </CActorAction>
+    <CActorMissile id="AnduinPlasmaBlastWeaponMissile" parent="GenericAttackMissile" unitName="AnduinPlasmaBlastWeapon">
+        <Model value="AnduinPlasmaBlastMissileModel"/>
+    </CActorMissile>
     <CActorUnit id="ImmortalShakuras">
         <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinImmortal"/>
     </CActorUnit>
@@ -61,7 +70,7 @@
         <On Terms="UnitHeightUpdate.*.Land" Send="Create HighTemplar_Land"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Templar_LandSweetener"/>
         <On Terms="Upgrade.DarkProtoss.Add" Send="DeathCustomsEnablePhysics 0"/>
-        <On Terms="WeaponStart.HighTemplarWeapon.AttackStart" Send="$Spell,A"/>
+        <On Terms="WeaponStart.AnduinPlasmaBlast.AttackStart" Send="$Spell,A"/>
         <On Terms="ActorCreation" Send="SetTeamColor 0,255,0 0,255,0"/>
         <AnimBlendTime value="0.450000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
