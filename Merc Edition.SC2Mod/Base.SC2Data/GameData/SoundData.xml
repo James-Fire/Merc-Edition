@@ -405,6 +405,11 @@
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death07.wav"/>
         <VariationMinimum value="7"/>
     </CSound>
+    <CSound id="HillInvulnerabilityS" parent="Combat">
+        <AssetArray File="Assets\Sounds\NovaAC_Blink_Birth_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NovaAC_Blink_Birth_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NovaAC_Blink_Birth_03.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="HillRespawnFinish" parent="Combat">
         <AssetArray File="Assets\Sounds\Spell_Preordain_Impact_00.wav" FacialGroup=""/>
     </CSound>

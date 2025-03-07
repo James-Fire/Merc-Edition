@@ -63,6 +63,9 @@
     <CRequirementCountUpgrade id="CountUpgradeBoxofScrapsCompleteOnly">
         <Count Link="BoxofScraps" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBroodlingGestationCompleteOnly">
+        <Count Link="BroodlingGestation" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBurrowBunkerCompleteOnly">
         <Count Link="BurrowBunker" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -144,6 +147,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradePiercingStrikeCompleteOnly">
         <Count Link="PiercingStrike" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePlagueMunitionsCompleteOnly">
+        <Count Link="PlagueMunitions" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradePliableArmorCompleteOnly">
         <Count Link="PliableArmor" State="CompleteOnly"/>

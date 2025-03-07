@@ -213,6 +213,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="WildSnipe"/>
         <AbilArray Link="LockdownMkII"/>
+        <AbilArray Link="HillRevive"/>
         <BehaviorArray Link="ReaperJump"/>
         <BehaviorArray Link="GenericDontDie"/>
         <BehaviorArray Link="PermanentlyCloaked"/>
@@ -224,7 +225,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="HillJumpJets" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="DeathFromBelow" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="DeathFromBelow" Type="AbilCmd" AbilCmd="HillRevive,Execute" Row="1" Column="1"/>
             <LayoutButtons Face="WildSnipe" Type="AbilCmd" AbilCmd="WildSnipe,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="LockdownMkII" Type="AbilCmd" AbilCmd="LockdownMkII,Execute" Row="2" Column="1"/>
         </CardLayouts>
@@ -246,6 +247,12 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
         <EffectArray index="Death" value="DeathFromBelowCP"/>
+    </CUnit>
+    <CUnit id="InfestedCivilian">
+        <EffectArray index="Death" value="BroodlingGestationCU"/>
+    </CUnit>
+    <CUnit id="InfestedTerranCampaign">
+        <EffectArray index="Death" value="BroodlingGestationCU"/>
     </CUnit>
     <CUnit id="NovaLockdownMissile">
         <Mover value="LongboltMissileWeapon"/>

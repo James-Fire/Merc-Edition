@@ -97,6 +97,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBoxofScrapsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBroodlingGestation">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeBroodlingGestationCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBurrowBunker">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBurrowBunkerCompleteOnly"/>
@@ -204,6 +208,10 @@
     <CRequirement id="UsePiercingStrike">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePiercingStrikeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UsePlagueMunitions">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradePlagueMunitionsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UsePliableArmor">
         <EditorCategories value="TechType:Ability"/>
