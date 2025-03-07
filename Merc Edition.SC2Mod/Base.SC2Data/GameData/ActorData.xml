@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModelMaterial id="HillInvulnerability" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.HillInvulnerability.On" Send="Create"/>
+        <On index="6" Terms="Behavior.HillInvulnerability.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorSound id="HillInvulnerabilityS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.HillInvulnerability.On" Send="Create"/>
+        <On Terms="Behavior.HillInvulnerability.Off" Send="Destroy"/>
+        <Layers Sound="ColossusTaldarim_Missile_AttackLaunch">
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorModel id="HillInvulnerabilityWave" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.HillInvulnerability.On" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpMoveDownBy1"/>
+    </CActorModel>
     <CActorUnit id="InfestedTerranCampaign">
         <On Terms="Behavior.InfestedMarineUpgrade.On" Send="ModelSwap InfestedMarineUpgraded"/>
         <On Terms="Behavior.InfestedMarineUpgrade.On" Send="SetTintColor 190,223,181"/>

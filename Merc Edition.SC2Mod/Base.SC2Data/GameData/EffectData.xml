@@ -59,13 +59,20 @@
     <CEffectApplyBehavior id="DeathFromBelowTimedLifeAB">
         <Behavior value="DeathFromBelowTimedLife"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="HillInvulnerabilityAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="HillInvulnerability"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="HillInvulnerabilityHeal">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="7"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectIssueOrder id="HillReviveDummy">
         <EditorCategories value=""/>
         <Abil value="HillRevive"/>
     </CEffectIssueOrder>
-    <CEffectSet id="HillReviveDummy2">
-        <EditorCategories value=""/>
-    </CEffectSet>
     <CEffectSet id="InfestedMarineWeaponSet">
         <EditorCategories value=""/>
         <EffectArray value="InfestedGuassRifle"/>

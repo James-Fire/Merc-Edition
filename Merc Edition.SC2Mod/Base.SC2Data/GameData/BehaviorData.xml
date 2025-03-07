@@ -169,6 +169,9 @@
     <CBehaviorBuff id="Contaminated">
         <Modification>
             <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <BehaviorLinkDisableArray value="SensorTowerRadar"/>
+            <BehaviorLinkDisableArray value="SuperRadarAura"/>
+            <BehaviorLinkDisableArray value="RadarTowerRadar"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DeathFromBelowTimedLife">
@@ -240,6 +243,18 @@
             <BehaviorLinkDisableArray value="PermanentlyCloaked"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="HillInvulnerability">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="5"/>
+        <Period value="0.1"/>
+        <InitialEffect value="DeathFromBelowCP"/>
+        <PeriodicEffect value="HillInvulnerabilityHeal"/>
+        <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
     <CBehaviorBuff id="InfestedMarineUpgrade">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-zerg-stukov-infestedmarinerangeupgrade.dds"/>
@@ -247,6 +262,13 @@
         <Modification MoveSpeedBonus="0.1484" RangedWeaponRange="0.5">
             <DamageDealtScaled index="Ranged" value="1"/>
             <VitalMaxArray index="Life" value="15"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LockdownB">
+        <Modification>
+            <BehaviorLinkDisableArray value="Detector9"/>
+            <BehaviorLinkDisableArray value="Detector7"/>
+            <BehaviorLinkDisableArray value="Detector8"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="PlagueMunitions">

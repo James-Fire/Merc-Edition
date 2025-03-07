@@ -6,6 +6,14 @@
     <CModel id="CashRegisterLaunchModel" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Launch\Nova_Snipe_Launch.m3"/>
     </CModel>
+    <CModel id="HillInvulnerability">
+        <Model value="Assets\Effects\Glaze\Glaze_Goliath_Lockdown\Glaze_Goliath_Lockdown.m3"/>
+    </CModel>
+    <CModel id="HillInvulnerabilityWave">
+        <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
     <CModel id="HillRespawnEnd">
         <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
         <ScaleMax value="3.000000,3.000000,3.000000"/>
