@@ -76,6 +76,7 @@ Variable/Name/lib_BA5CCDED_ABDE3333=Event String
 Variable/Name/lib_BA5CCDED_B4158051=OdinRescued
 Variable/Name/lib_BA5CCDED_B510F62C=Generic Difficulty
 Variable/Name/lib_BA5CCDED_BCCEB33F=Player
+Variable/Name/lib_BA5CCDED_C0399DBE=Hill Respawn Timer
 Variable/Name/lib_BA5CCDED_C2B557A7=EventBank
 Variable/Name/lib_BA5CCDED_CADFBC56=unit
 Variable/Name/lib_BA5CCDED_E2A62B23=My Wave

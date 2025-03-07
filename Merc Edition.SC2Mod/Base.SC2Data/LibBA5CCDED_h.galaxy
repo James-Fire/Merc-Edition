@@ -14,6 +14,7 @@ bool libBA5CCDED_gv_genericDifficulty;
 bool libBA5CCDED_gv_myWave;
 bool libBA5CCDED_gv_easterEggActive;
 point libBA5CCDED_gv_hillRespawnPoint;
+timer libBA5CCDED_gv_hillRespawnTimer;
 
 // Function Declarations
 void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition);

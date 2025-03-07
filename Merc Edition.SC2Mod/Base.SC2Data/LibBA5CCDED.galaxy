@@ -26,6 +26,7 @@ void libBA5CCDED_InitVariables () {
 
     libBA5CCDED_gv_eventString = "";
     libBA5CCDED_gv_hillRespawnPoint = PlayerStartLocation(1);
+    libBA5CCDED_gv_hillRespawnTimer = TimerCreate();
 }
 
 // Functions
@@ -1660,13 +1661,20 @@ bool libBA5CCDED_gt_HillRespawn_Func (bool testConds, bool runActions) {
     }
 
     lv_hill = EventUnit();
-    libNtve_gf_MakeUnitInvulnerable(lv_hill, true);
-    libNtve_gf_MakeUnitUncommandable(lv_hill, true);
-    UnitSetPosition(lv_hill, libBA5CCDED_gv_hillRespawnPoint, false);
-    UnitBehaviorAdd(lv_hill, "Hill180sRespawn", lv_hill, 1);
-    Wait(180.0, c_timeGame);
-    libNtve_gf_MakeUnitInvulnerable(lv_hill, false);
-    libNtve_gf_MakeUnitUncommandable(lv_hill, false);
+    UnitSetPropertyFixed(lv_hill, c_unitPropLifePercent, 100.0);
+    if ((TimerGetRemaining(libBA5CCDED_gv_hillRespawnTimer) > 0.0)) {
+        libNtve_gf_MakeUnitInvulnerable(lv_hill, true);
+        libNtve_gf_MakeUnitUncommandable(lv_hill, true);
+        UnitSetPosition(lv_hill, libBA5CCDED_gv_hillRespawnPoint, false);
+        UnitBehaviorAdd(lv_hill, "Hill180sRespawn", lv_hill, 1);
+        Wait(180.0, c_timeGame);
+        libNtve_gf_MakeUnitInvulnerable(lv_hill, false);
+        libNtve_gf_MakeUnitUncommandable(lv_hill, false);
+    }
+    else {
+        UnitCreateEffectUnit(lv_hill, ("HillReviveDummy"), lv_hill);
+        TimerStart(libBA5CCDED_gv_hillRespawnTimer, 120.0, false, c_timeGame);
+    }
     return true;
 }
 
