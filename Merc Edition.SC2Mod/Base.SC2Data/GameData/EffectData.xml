@@ -395,6 +395,15 @@
         <EffectArray value="ShadowHallucinationAB"/>
         <EffectArray value="ShadowHallucinationLifeAB"/>
     </CEffectSet>
+    <CEffectDamage id="SpotterBioDischargeDamage" parent="DU_WEAP">
+        <AttributeBonus index="Structure" value="12"/>
+        <Amount value="12"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="SpotterBioDischargeLaunchMissile">
+        <ImpactEffect value="SpotterBioDischargeDamage"/>
+        <AmmoUnit value="SpotterBioDischargeWeapon"/>
+    </CEffectLaunchMissile>
     <CEffectEnumArea id="StarcruiserYamatoSA">
         <EditorCategories value=""/>
         <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>

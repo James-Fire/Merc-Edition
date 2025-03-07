@@ -465,6 +465,24 @@
         <Pitch value="4.000000,6.000000"/>
         <Volume value="-10.000000,-10.000000"/>
     </CSound>
+    <CSound id="SpotterBioDischargeImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact4.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,2.000000"/>
+        <Volume value="-12.000000,-10.000000"/>
+    </CSound>
+    <CSound id="SpotterBioDischargeLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthLaunch2.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,2.000000"/>
+        <Volume value="-12.000000,-8.000000"/>
+    </CSound>
     <CSound id="StarcruiserYamatoChargeUp" parent="Spell">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\PirateCapitalShip_YamatoAttackChargeUp_00.wav" Volume="6.000000,6.000000" FacialGroup=""/>

@@ -250,6 +250,85 @@
     <CUnit id="NovaLockdownMissile">
         <Mover value="LongboltMissileWeapon"/>
     </CUnit>
+    <!--                                                                                         -->
+    <!--  Brood Queen ............................................................................... -->
+    <!--                                                                                         -->
+    <CUnit id="QueenMP">
+        <LifeStart value="170"/>
+        <LifeMax value="170"/>
+    </CUnit>
+    <CUnit id="Spotter">
+        <DeathRevealRadius value="3"/>
+        <Facing value="45"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="AISupport" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Response value="Flee"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="420"/>
+        <LifeMax value="420"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="0.2734"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
+        <Mover value="Fly"/>
+        <Speed value="1.875"/>
+        <Acceleration value="2.125"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="11"/>
+        <Height value="4.25"/>
+        <VisionHeight value="4"/>
+        <Food value="8"/>
+        <CostCategory value="Army"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="SpotterContaminate"/>
+        <BehaviorArray Link="Detector8"/>
+        <WeaponArray Link="SpotterBioDischarge"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Contaminate" Type="AbilCmd" AbilCmd="Contaminate,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Detector" Type="Passive" Row="1" Column="0"/>
+        </CardLayouts>
+        <Radius value="1.375"/>
+        <SeparationRadius value="0.75"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="11"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAIThink value="AIThinkOverseer"/>
+        <AIEvalFactor value="0"/>
+        <TechAliasArray value="Alias_Overlord"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="210"/>
+        <GlossaryStrongArray value="Banshee"/>
+        <GlossaryStrongArray value="Wraith"/>
+        <GlossaryStrongArray value="DarkTemplar"/>
+        <GlossaryStrongArray value="Banshee"/>
+        <GlossaryStrongArray value="Roach"/>
+        <GlossaryStrongArray value="DarkTemplar"/>
+        <GlossaryWeakArray value="VikingFighter"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+    </CUnit>
     <CUnit id="PrisonZealot">
         <AbilArray index="5" Link="AnduinShadowCharge"/>
         <CardLayouts index="0">
@@ -1729,6 +1808,9 @@
         <Mover value="StarcruiserLaserBattery"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
+    <CUnit id="SpotterBioDischargeWeapon" parent="MISSILE">
+        <Mover value="SpotterBioDischargeMissile"/>
+    </CUnit>
     <CUnit id="Stalker">
         <CardLayouts index="0">
             <LayoutButtons Face="ZhakulGuardians" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
@@ -1749,6 +1831,96 @@
     <CUnit id="StarcruiserYamato" parent="MISSILE_INVULNERABLE">
         <Race value="Terr"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Stank">
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="AISplash" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PushPriority value="11"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Colossus" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="2500"/>
+        <LifeMax value="2500"/>
+        <LifeArmor value="3"/>
+        <LifeRegenRate value="0.2734"/>
+        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ZergWildMutation"/>
+        <Speed value="2"/>
+        <SpeedMultiplierCreep value="1.3"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <TurningRate value="360"/>
+        <Sight value="9"/>
+        <Food value="-6"/>
+        <CostCategory value="Army"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="150"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="BurrowUltraliskDown"/>
+        <AbilArray Link="UltraliskWeaponCooldown"/>
+        <AbilArray Link="UltraliskBurrowCharge"/>
+        <BehaviorArray Link="Frenzy"/>
+        <BehaviorArray Link="Frenzy"/>
+        <BehaviorArray Link="UltraliskOutOfCombat1"/>
+        <WeaponArray Link="Omegalisk"/>
+        <WeaponArray Link="OmegaliskHeadAttack"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Frenzied" Type="Passive" Behavior="Frenzy" Row="2" Column="0"/>
+            <LayoutButtons Face="UltraliskBurrowCharge" Type="AbilCmd" AbilCmd="UltraliskBurrowCharge,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <Radius value="1.75"/>
+        <SeparationRadius value="1"/>
+        <InnerRadius value="0.75"/>
+        <CargoSize value="8"/>
+        <ScoreMake value="500"/>
+        <ScoreKill value="500"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="18"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Ultralisk"/>
+        <TacticalAIThink value="AIThinkUltralisk"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="180"/>
+        <GlossaryStrongArray value="Marauder"/>
+        <GlossaryStrongArray value="Roach"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Banshee"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="VoidRay"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Always"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="50"/>
+            <ChanceArray index="Idle" value="50"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <AlliedPushPriority value="11"/>
+    </CUnit>
+    <CUnit id="Ultralisk">
+        <AbilArray index="5" removed="1"/>
     </CUnit>
     <CUnit id="ZeusLanderLanded">
         <DeathRevealRadius value="3"/>

@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="SpotterContaminate">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="Contaminate"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Charge Link=""/>
+            <Cooldown Link="" TimeUse="25"/>
+        </Cost>
+        <TargetFilters value="Structure,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="5"/>
+        <AutoCastFilters value="Structure,Visible;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="10"/>
+        <AutoCastValidatorArray value="NotContaminated"/>
+        <AutoCastValidatorArray value="IsNotBunker"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Contaminate"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="KarassPlasmaSurge">
         <Cost index="0">
             <Vital index="Energy" value="50"/>
@@ -578,6 +598,13 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="UltraliskBurrowCharge">
+        <Range index="0" value="15"/>
+        <AutoCastRange value="15"/>
+        <CmdButtonArray index="Execute" Requirements=""/>
+        <!--This makes it so it will no longer snap to units, also makes it so it wont autocast on units though-->
+        <!--IgnoreFilters value="Structure;-"/-->
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="WildSnipe">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="WildSnipeDamage"/>

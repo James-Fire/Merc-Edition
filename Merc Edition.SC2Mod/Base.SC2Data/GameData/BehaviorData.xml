@@ -166,6 +166,11 @@
         <Period value="0.33"/>
         <PeriodicEffect value="HankCombustionSA"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="Contaminated">
+        <Modification>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DeathFromBelowTimedLife">
         <BehaviorFlags index="Permanent" value="1"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
@@ -233,6 +238,15 @@
             <StateFlags index="Unstoppable" value="1"/>
             <StateFlags index="Untargetable" value="1"/>
             <BehaviorLinkDisableArray value="PermanentlyCloaked"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfestedMarineUpgrade">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-stukov-infestedmarinerangeupgrade.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedBonus="0.1484" RangedWeaponRange="0.5">
+            <DamageDealtScaled index="Ranged" value="1"/>
+            <VitalMaxArray index="Life" value="15"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShadowHallucination">

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="InfestedTerranCampaign">
+        <On Terms="Behavior.InfestedMarineUpgrade.On" Send="ModelSwap InfestedMarineUpgraded"/>
+        <On Terms="Behavior.InfestedMarineUpgrade.On" Send="SetTintColor 190,223,181"/>
+    </CActorUnit>
+    <CActorSound id="ContaminateLaunchSound">
+        <On Terms="Abil.SpotterContaminate.SourceCastStart" Send="Create"/>
+        <On Terms="Abil.SpotterContaminate.SourceChannelStop" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="ContaminateLoopSound">
+        <On Terms="Abil.SpotterContaminate.SourceChannelStart" Send="Create"/>
+        <On Terms="Abil.SpotterContaminate.SourceChannelStop" Send="Destroy"/>
+    </CActorSound>
     <CActorModel id="HillRespawnEnd" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.Hill180sRespawn.Off" Send="Create"/>
@@ -120,6 +132,43 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorUnit id="Spotter" parent="GenericUnitMorph" unitName="Spotter">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Overseer_Land"/>
+        <On Terms="Abil.Contaminate.SourceCastStart" Send="$Spell"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="$Spell"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SpotterDeath" SoundLink="Overseer_Death_Splat"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PortraitModel value="SpotterPortrait"/>
+        <BarOffset value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Overseer.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-overseer.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level0.dds"/>
+        <NameOffset value="70"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="Ready" value="Overseer_Ready"/>
+        <SoundArray index="What" value="Overseer_What"/>
+        <SoundArray index="Yes" value="Overseer_Yes"/>
+        <SoundArray index="Pissed" value="Overseer_Pissed"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-overseer.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Overseer.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
     <CActorSplat id="PsiStormShakurasCursorSplat">
         <Model value="AnduinStormCursorSplat"/>
     </CActorSplat>
@@ -717,6 +766,14 @@
         <Host Subject="_Missile"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
+    <CActorAction id="SpotterBioDischargeAction" parent="GenericAttack" effectImpact="SpotterBioDischargeDamage" effectLaunch="SpotterBioDischargeLaunchMissile">
+        <LaunchAssets Model="SpotterBioDischargeLaunchModel" Sound="SpotterBioDischargeLaunchSound"/>
+        <Missile value="SpotterBioDischargeWeaponMissile"/>
+        <ImpactMap index="None" Model="SpotterBioDischargeImpactModel" Sound="SpotterBioDischargeImpactSound"/>
+    </CActorAction>
+    <CActorMissile id="SpotterBioDischargeWeaponMissile" parent="GenericAttackMissile" unitName="SpotterBioDischargeWeapon">
+        <Model value="SpotterBioDischargeMissileModel"/>
+    </CActorMissile>
     <CActorUnit id="Stalker">
         <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinStalker"/>
     </CActorUnit>
@@ -1509,6 +1566,174 @@
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-assault.dds"/>
         </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Stank" parent="GenericUnitBase" unitName="Stank">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergLargeBurrowEffects"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Remove Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create LargeBurrowDownEffects"/>
+        <Remove Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create LargeBurrowUpEffects"/>
+        <Remove Terms="WeaponStart.KaiserBlades.AttackStart; ValidateUnit CleaveResearched" Send="AnimBracketStart Attack Spell,A"/>
+        <Remove Terms="WeaponStart.KaiserBlades.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <Remove Terms="WeaponStart.Ram.AttackStart" Send="AnimBracketStart Attack Spell"/>
+        <Remove Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownUltralisk"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="UnitBirth.Stank" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Ultra_Land"/>
+        <On Terms="ActorCreation" Send="StatusSet BurrowCharging 0"/>
+        <On Terms="TimerExpired; TimerName BurrowChargeFXMP; IsStatus BurrowCharging 1; !ModelIsLowQuality" Send="Create UltraliskBurrowChargeModel"/>
+        <On Terms="TimerExpired; TimerName BurrowChargeFXMP; IsStatus BurrowCharging 1" Send="TimerSet 0.200000 BurrowChargeFXMP"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="TimerSet 0.100000 BurrowChargeFXMP"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="AnimClear Fidget"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="AnimPlay BurrowChargeDown Burrow"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="AnimPlay Burrow Walk,Burrow PlayForever"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="Create BurrowChargeDownSound"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="Create BurrowChargeSprintSound"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="TimerSet 0.500000 BurrowChargingStateMP"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="StatusSet BurrowCharging 1"/>
+        <On Terms="TimerExpired; TimerName BurrowChargingStateMP" Send="StatusSet BurrowCharging 1"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="TimerSet 0.600000 ChargeFailTimerMP"/>
+        <On Terms="Abil.BurrowChargeRevD.SourceCastStart" Send="StatusSet ChargeFail 1"/>
+        <On Terms="Behavior.BurrowChargingRevD.On" Send="StatusSet ChargeFail 0"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimerMP; IsStatus ChargeFail 1" Send="AnimClear Burrow"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimerMP; IsStatus ChargeFail 1" Send="AnimClear BurrowChargeDown"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimerMP; IsStatus ChargeFail 1" Send="AnimPlay BurrowChargeUp Stand,Cover"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimerMP; IsStatus ChargeFail 1" Send="AnimBaselineStart"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimerMP; IsStatus ChargeFail 1" Send="Create BurrowChargeUpSound"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimerMP; IsStatus ChargeFail 1" Send="StatusSet BurrowCharging 0"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimerMP; IsStatus ChargeFail 1" Target="BurrowChargeSprintSound" Send="Destroy"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Send="AnimClear Burrow"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Send="AnimClear BurrowChargeDown"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Send="AnimPlay BurrowChargeUp Spell,C"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Send="AnimBaselineStart"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Send="Create BurrowChargeUpSound"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Send="StatusSet BurrowCharging 0"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Target="BurrowChargeSprintSound" Send="Destroy"/>
+        <On Terms="Effect.BurrowChargeTargetSearchRevD.Start; At Caster" Send="TimerSet 0.500000 AnimClearCheckDelay"/>
+        <On Terms="TimerExpired; TimerName AnimClearCheckDelay; UnitWalking" Send="AnimClear BurrowChargeUp"/>
+        <On Terms="WeaponStart.KaiserBlades.AttackStart" Send="AnimClear BurrowChargeUp"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear BurrowChargeUp"/>
+        <On Terms="ActorCreation" Send="StatusSet BurrowCharging 0"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="TimerSet 0.070000 BurrowChargeFX"/>
+        <On Terms="TimerExpired; TimerName BurrowChargeFX; IsStatus BurrowCharging 1; !ModelIsLowQuality" Send="Create UltraliskBurrowChargeModel"/>
+        <On Terms="TimerExpired; TimerName BurrowChargeFX; IsStatus BurrowCharging 1" Send="TimerSet 0.070000 BurrowChargeFX"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="AnimClear Fidget"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="AnimBaselineStop"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="AnimPlay BurrowChargeDown Burrow"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="AnimPlay Burrow Walk,Burrow PlayForever"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="Create BurrowChargeDownSound"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="TimerSet 0.500000 BurrowChargingState"/>
+        <On Terms="TimerExpired; TimerName BurrowChargingState" Send="StatusSet BurrowCharging 1"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="TimerSet 0.600000 ChargeFailTimer"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="StatusSet ChargeFail 1"/>
+        <On Terms="Behavior.BurrowCharging.On" Send="StatusSet ChargeFail 0"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimer; IsStatus ChargeFail 1" Send="AnimClear Burrow"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimer; IsStatus ChargeFail 1" Send="AnimClear BurrowChargeDown"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimer; IsStatus ChargeFail 1" Send="AnimPlay BurrowChargeUp Stand,Cover"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimer; IsStatus ChargeFail 1" Send="AnimBaselineStart"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimer; IsStatus ChargeFail 1" Send="Create BurrowChargeUpSound"/>
+        <On Terms="TimerExpired; TimerName ChargeFailTimer; IsStatus ChargeFail 1" Send="StatusSet BurrowCharging 0"/>
+        <On Terms="Effect.BurrowChargeTargetSearch.Start; At Caster" Send="AnimClear Burrow"/>
+        <On Terms="Effect.BurrowChargeTargetSearch.Start; At Caster" Send="AnimClear BurrowChargeDown"/>
+        <On Terms="Effect.BurrowChargeTargetSearch.Start; At Caster" Send="AnimPlay BurrowChargeUp Spell,C"/>
+        <On Terms="Effect.BurrowChargeTargetSearch.Start; At Caster" Send="AnimBaselineStart"/>
+        <On Terms="Effect.BurrowChargeTargetSearch.Start; At Caster" Send="Create BurrowChargeUpSound"/>
+        <On Terms="Effect.BurrowChargeTargetSearch.Start; At Caster" Send="StatusSet BurrowCharging 0"/>
+        <On Terms="Effect.BurrowChargeStructureTargetSearch.Start; At Caster" Send="AnimClear Burrow"/>
+        <On Terms="Effect.BurrowChargeStructureTargetSearch.Start; At Caster" Send="AnimClear BurrowChargeDown"/>
+        <On Terms="Effect.BurrowChargeStructureTargetSearch.Start; At Caster" Send="AnimPlay BurrowChargeUp Spell,C"/>
+        <On Terms="Effect.BurrowChargeStructureTargetSearch.Start; At Caster" Send="AnimBaselineStart"/>
+        <On Terms="Effect.BurrowChargeStructureTargetSearch.Start; At Caster" Send="Create BurrowChargeUpSound"/>
+        <On Terms="Effect.BurrowChargeStructureTargetSearch.Start; At Caster" Send="StatusSet BurrowCharging 0"/>
+        <On Terms="WeaponStart.KaiserBlades.AttackStart" Send="AnimClear BurrowChargeUp"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear BurrowChargeUp"/>
+        <On Terms="Abil.UltraliskBurrowCharge.SourceCastStart" Send="StatusSet BurrowCharging 1"/>
+        <On Terms="WeaponStart.Omegalisk.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.Omegalisk.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="WeaponStart.OmegaliskHeadAttack.AttackStart" Send="AnimBracketStart Spell Spell"/>
+        <On Terms="WeaponStop.OmegaliskHeadAttack.AttackStop" Send="AnimBracketStop Spell"/>
+        <AnimBlendTime value="0.300000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <EventDataSound Name="UltraliskAttack" Actor="UnitSound" Sound="Ultralisk_AttackLaunch"/>
+        <EventDataSound Name="UltraliskHeadAttack" Actor="UnitSound" Sound="Ultralisk_HeadAttackImpact"/>
+        <EventDataSound Name="UltraliskAttackImpact" Actor="UnitSound" Sound="Ultralisk_AttackImpact"/>
+        <DeathArray index="Normal" ModelLink="StankDeath" SoundLink="Ultralisk_Explode" VoiceLink=""/>
+        <DeathArray index="Disintegrate" ModelLink="UltraliskDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Fire" ModelLink="UltraliskDeathFire" SoundLink="Uni_DeathFXFireLarge"/>
+        <DeathCustoms ModelLink="ZergLargeUnitDeathLow" Name="AntiGravZerg"/>
+        <DeathCustoms ActorModel="UltraliskDeathRagdoll" ModelLink="UltraliskDeathRagdoll" Name="RagdollBasic"/>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="UltraliskDeathFire" Name="Variation19"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowLarge"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="StankPortrait"/>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="2.000000"/>
+            <RangeDown value="2.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleUltralisk"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.9375"/>
+        <BarOffset value="30"/>
+        <BarWidth value="160"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Ultralisk.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-omegalisk.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <NameOffset value="40"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="Ready" value="Ultralisk_Ready"/>
+        <SoundArray index="What" value="Ultralisk_What"/>
+        <SoundArray index="Yes" value="Ultralisk_Yes"/>
+        <SoundArray index="Attack" value="Ultralisk_Attack"/>
+        <SoundArray index="Pissed" value="Ultralisk_Pissed"/>
+        <SoundArray index="Movement" value="Ultralisk_Movement"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-omegalisk.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-mod-l2d_zerg-stank.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
     </CActorUnit>
     <CActorAction id="WildSnipe" parent="GenericAttack" effectAttack="WildSnipeDamage">
         <EditorCategories value=""/>
