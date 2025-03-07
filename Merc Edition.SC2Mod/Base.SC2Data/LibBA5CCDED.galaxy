@@ -101,9 +101,10 @@ bool auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc (bool testConds, bool runAc
     int auto5694256B_u;
     unit auto5694256B_var;
     string autoF1BE7618_val;
+    string auto91D9F428_val;
 
     // Implementation
-    auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterHidden - 32))), 0);
+    auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), 0), 0);
     auto5694256B_u = UnitGroupCount(auto5694256B_g, c_unitCountAll);
     for (;; auto5694256B_u -= 1) {
         auto5694256B_var = UnitGroupUnitFromEnd(auto5694256B_g, auto5694256B_u);
@@ -187,7 +188,58 @@ bool auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc (bool testConds, bool runAc
         else if (autoF1BE7618_val == "Medivac") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "CharonDropship", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
+        if (auto91D9F428_val == "Probe") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "ACV", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Zealot") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "WarPig", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Stalker") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "HammerSecurity", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Sentry") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "MercMedic", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "HighTemplar") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Phantom", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Colossus") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "SiegeBreaker", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Immortal") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Titan", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Carrier") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Starcruiser", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Nexus") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "CommandCenter", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Gateway") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Barracks", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Pylon") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "SupplyDepot", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "PhotonCannon") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "MissileTurret", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Forge") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "EngineeringBay", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "CyberneticsCore") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Armory", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "TwilightCouncil") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "GhostAcademy", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
+        if (auto91D9F428_val == "Assimilator") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Refinery", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
         else {
+        }
+        auto91D9F428_val = UnitGetType(auto5694256B_var);
+        {
         }
     }
     return true;
@@ -497,7 +549,7 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    Wait(0.1, c_timeGame);
+    Wait(0.5, c_timeAI);
     TriggerExecute(libBA5CCDED_gt_InitUnitReplace, true, false);
     Wait(2.0, c_timeGame);
     TriggerExecute(libBA5CCDED_gt_InitACVMultibuild, true, false);
