@@ -6,6 +6,33 @@
     <CModel id="CashRegisterLaunchModel" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Launch\Nova_Snipe_Launch.m3"/>
     </CModel>
+    <CModel id="HillRespawnEnd">
+        <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="HillRespawnGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Nova_Buff_Damage\Glaze_Nova_Buff_Damage.m3"/>
+    </CModel>
+    <CModel id="HillRespawnGlaze2">
+        <Model value="Assets\Effects\Glaze\Glaze_Nova_Holographic_Decoy\Glaze_Nova_Holographic_Decoy.m3"/>
+    </CModel>
+    <CModel id="HillRespawnModel">
+        <Model value="Assets\Effects\Protoss\TimeWarpImpact\TimeWarpImpact.m3"/>
+        <ScaleMax value="0.700000,0.700000,1.000000"/>
+        <ScaleMin value="0.700000,0.700000,1.000000"/>
+    </CModel>
+    <CModel id="InfestedMarineUpgraded" parent="Unit">
+        <Model value="Assets\Units\Zerg\InfestedMarine\InfestedMarine.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.150000,1.150000,1.150000"/>
+        <ScaleMin value="1.150000,1.150000,1.150000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
     <CModel id="LockdownLaunch">
         <Model value="Assets\Effects\Protoss\ShadowCannonLaunch\ShadowCannonLaunch.m3"/>
     </CModel>
@@ -228,6 +255,27 @@
     <CModel id="NovaLockdownMissile">
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="Spotter" parent="OverseerBase">
+        <Model value="Assets\Units\Zerg\L2D_Spotter\L2D_Spotter.m3"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+    </CModel>
+    <CModel id="SpotterBioDischargeImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\KerriganCorrosiveSporesImpact\KerriganCorrosiveSporesImpact.m3"/>
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModel>
+    <CModel id="SpotterBioDischargeMissileModel" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\SporeColonyMissile\SporeColonyMissile.m3"/>
+    </CModel>
+    <CModel id="SpotterDeath" parent="OverseerDeathBase">
+        <Model value="Assets\Units\Zerg\L2D_SpotterDeath\L2D_SpotterDeath.m3"/>
+    </CModel>
+    <CModel id="SpotterPortrait" parent="OverseerPortraitBase">
+        <Model value="Assets\Portraits\Zerg\L2D_SpotterPortrait\L2D_SpotterPortrait.m3"/>
+        <Image value="Assets\Textures\OverseerPortrait_Static.dds"/>
+        <Lighting value="OverseerPortrait"/>
     </CModel>
     <CModel id="SensorTowerMorph">
         <Model value="Assets\Models\SensorTowerMorph.m3"/>
@@ -1296,6 +1344,20 @@
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
         <Occlusion value="Show"/>
         <VariationCount value="2"/>
+    </CModel>
+    <CModel id="Stank" parent="UltraliskBase">
+        <Model value="Assets\Units\Zerg\L2D_Stank\L2D_Stank.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="StankDeath" parent="UltraliskDeathBase">
+        <Model value="Assets\Units\Zerg\L2D_StankDeath\L2D_StankDeath_00.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="StankPortrait" parent="UltraliskPortraitBase">
+        <Model value="Assets\Portraits\Zerg\L2D_StankPortrait\L2D_StankPortrait.m3"/>
+        <Image value="Assets\Textures\UltraliskPortrait_Static.dds"/>
+        <Lighting value="UltraliskPortrait"/>
     </CModel>
     <CModel id="WildSnipeDamageBeam">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Beam\Nova_Snipe_Beam.m3"/>

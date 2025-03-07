@@ -66,6 +66,7 @@ Abil/Name/SilentMode=Silent Mode
 Abil/Name/SkibisAngelRepairDrone=Skibi's Angel Repair Drone
 Abil/Name/SnipePhantom=Snipe
 Abil/Name/SpiderMineUnburrowRangeDummyCondor=Spider Mine Unburrow Range Dummy
+Abil/Name/SpotterContaminate=Spotter Contaminate
 Abil/Name/SprayandPay=Spray and Pay
 Abil/Name/StabilizerMedpackHeal=Stabilizer Medpack Heal
 Abil/Name/StarcruiserYamatoGun=Yamato Gun
@@ -99,6 +100,7 @@ Behavior/Name/Hellraiser=Hellraiser
 Behavior/Name/HellraiserEasterEgg=Hellraiser
 Behavior/Name/ImmolationFluid=Immolation Fluid
 Behavior/Name/IncomingAnarchistJump=Incoming!
+Behavior/Name/InfestedMarineUpgrade=Infested Mercenary
 Behavior/Name/Inspire=Inspire
 Behavior/Name/LowGradeStims=Low Grade Stims
 Behavior/Name/NanitePulse=Nanite Pulse
@@ -142,6 +144,7 @@ Behavior/Tooltip/AdjudicatorCloakingField=This unit is cloaked unless revealed b
 Behavior/Tooltip/AdrenalineRush=This unit has temporarily increased movement and attack speeds.
 Behavior/Tooltip/AfterburnersHelsAngel=This unit is moving faster.
 Behavior/Tooltip/ConcussiveShrapnel=This unit is slowed.
+Behavior/Tooltip/Contaminated=This structure is unable to train new units, research upgrades, or attack.
 Behavior/Tooltip/DemonRockets=This unit is stunned.
 Behavior/Tooltip/FearPliableArmor=This unit is running in fear.
 Behavior/Tooltip/ForceMissiles=This unit is stunned.
@@ -150,6 +153,7 @@ Behavior/Tooltip/Hellraiser=This unit is attacking significantly faster.
 Behavior/Tooltip/HellraiserEasterEgg=This unit is attacking significantly faster.
 Behavior/Tooltip/ImmolationFluid=This unit is burning for damage over time.
 Behavior/Tooltip/IncomingAnarchistJump=The Anarchist has more armor.
+Behavior/Tooltip/InfestedMarineUpgrade=This infested is stronger.
 Behavior/Tooltip/Inspire=This unit has increased movement and attack speed.
 Behavior/Tooltip/LowGradeStims=This unit is firing faster.
 Behavior/Tooltip/NomadMissileTint=This unit is being targeted by a Seeker Missile.
@@ -377,6 +381,7 @@ Button/Tooltip/AnduinOpenGate=Manipulate metal gates to open.
 Button/Tooltip/AnduinPlasmaSurge=Recharges <d ref="Effect,KarassPlasmaSurgeModifyUnit,VitalArray[1].Change"/> shield points for all friendly Protoss units in the target area.
 Button/Tooltip/ApolloInjectionPods=Survivor's Guilt applies when unloading units, with a cooldown. Suvivor's Guilt duration when the Samson is destroyed is doubled.
 Button/Tooltip/ArmAdjudicatorwithNuke=Arms the Adjudicator with a Tactical Nuke.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 400 (+300 vs. structures) damage in a large radius.<n/><n/>Use a Phantom or Shadow to designate the target.
+Button/Tooltip/ArmoredHousing=Missile Turrets gain 125 life and 3 armor.
 Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and will blink away when it runs out.
 Button/Tooltip/AutomatedRefinery=Improved Refinery that sends refined vespene gas straight to the Command Center via short-range warp fields. Eliminates the need for SCVs in vespene gas production, but still allows them to be allocated for faster harvesting.
 Button/Tooltip/AutomatedRefineryTextKicker8=<s val="Kicker_Refinery">+8</s><IMG path="Assets\Textures\icon-gas-terran.dds" height="32" width="32"/>
@@ -428,7 +433,7 @@ Button/Tooltip/DeadMenTellNoTales=Explodes on death, dealing 50 damage to nearby
 Button/Tooltip/DeathFromBelow=Upon death, Mr. Hill leaves behind a large amount of spider mines, and is then resurrected at the last checkpoint.
 Button/Tooltip/DemonRockets=Attacks stun enemy structures.
 Button/Tooltip/DeployRevitalizer=Deploy a device that heals all friendly units nearby for 4% of their maximum life per second. Lasts for <d time="28"/>.
-Button/Tooltip/DevastatorOverride=Replaces main attack with a stronger one, has an additional area-damage attack, and can now attack ground units.
+Button/Tooltip/DevastatorOverride=Missile Turrets gain a stronger primary weapon, an additional area-damage weapon, and can now target ground units.
 Button/Tooltip/DevilDogGrapple=Launch yourself to the target location.
 Button/Tooltip/DieselBasedNapalm=Attacks leave their primary target burning, dealing 5 damage per second for <d time="7"/>.
 Button/Tooltip/DivineArmor=Titans have a base armor of 3.
@@ -493,6 +498,7 @@ Button/Tooltip/NaniteCloudEmitterBurrowed=Automated Gas Defense system. Destroy 
 Button/Tooltip/NanitePulse=Nanite Cloud Emitters now affect mechanical units, and will periodically emit a pulse to deal additional damage. 
 Button/Tooltip/NapalmStrike=Fires a small napalm missile that deals 80 damage on impact and leaves the area on fire for a short time, dealing 30 damage per second.
 Button/Tooltip/NeoTitaniumPlating=Grants 10 armor in Siege mode or 5 armor in Tank mode, lasting for <d time="7"/>.
+Button/Tooltip/NeosteelCupHolders=Bunkered units gain 3 sight and weapon range.
 Button/Tooltip/NormalModeNomad=Exit Silent Mode, allowing movement and other abilities again.
 Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nukes take <d time="18"/> to land, but they deal up to 400 (+300 vs. structures) damage to enemies in a large radius.
 Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to train the unit.
@@ -537,10 +543,12 @@ Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
 Button/Tooltip/SmartServosMKIV=Siege Breakers siege and unsiege 66% faster, can attack air units in siege mode, and gradually gains range in siege mode, up to +4.
 Button/Tooltip/SnipePhantom=Deals 55 damage to a biological enemy. Ignores armor.
 Button/Tooltip/SpiderMineReplenishCondor=Constructs a new Spider Mine to replace those used.<n/><n/>A Condor can only carry 4 Spider Mines at a time.
+Button/Tooltip/Spotter=Advanced aerial observer. Provides the same supply as an Overlord. Can use the Spawn Changeling ability.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/SprayandPay=Deal 6 damage in an arc to enemy units.
 Button/Tooltip/SquadSIghtAres=Nearby allied units gain +2 range.
 Button/Tooltip/StabilizerHeal=Heals a friendly biological or mechanical target and up to one unit near them.<n/><n/><c val="f078ff">Heals <d ref="Effect,SkibisAngelHeal,RechargeVitalRate"/> life per <d ref="Effect,SkibisAngelHeal,RechargeVitalRate * Effect,SkibisAngelHeal,DrainVitalCostFactor"/> energy.
 Button/Tooltip/StabilizerMedpacksMerc=Increases Skibi's Angel heal speed, energy efficiency, and causes Signal Flare to heal nearby units.
+Button/Tooltip/Stank=Heavy assault unit. Has an area-damage cleave attack.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/Starcruiser=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/SulfurMissiles=Hel's Angels missiles now deal area damage and apply more damage over time. On death, the Hel's Angel explodes to deal damage with more damage over time.
 Button/Tooltip/SuperRadar=Able to expose enemy movements within its radar capability. Does not reveal the area.<n/><n/><c val="FFFF80">Radar Tower</c><n/>•Larger Radius<n/>•Outlines Enemies<n/>•Senses Cloaked & Burrowed<n/>•Gives Allies Range
@@ -914,6 +922,8 @@ Effect/Name/SpartanCompanyAirWeaponSet=Spartan Company Air Weapon Set
 Effect/Name/SpartanCompanyShellShowerFull=Spartan Company Shell Shower Full
 Effect/Name/SpartanCompanyWeaponSet=Spartan Company Weapon Set
 Effect/Name/SpiderMineSwitch=Spider Mine Switch
+Effect/Name/SpotterBioDischargeDamage=SpotterBioDischargeDamage
+Effect/Name/SpotterBioDischargeLaunchMissile=SpotterBioDischargeLaunchMissile
 Effect/Name/SprayandPayCP=Spray and Pay CP
 Effect/Name/SprayandPayDamage=Spray and Pay Damage
 Effect/Name/SprayandPaySA=Spray and Pay SA
@@ -1026,6 +1036,7 @@ SkibidiSkibidiHeHeHaHa=x2
 StarcruiserShields=Shield Generator
 StarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevenge2ShieldsStarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevengeHeroShields=Shield Generator
 UI/Upgrading=Upgrading
+Unit/Category/TerranUnits=Terran
 Unit/Name/250mmUranusCarronadesWeapon=250mm Uranus Carronades Projectile
 Unit/Name/ACV=ACV
 Unit/Name/ARESMissileMissile=ARES Missile Missile
@@ -1099,7 +1110,10 @@ Unit/Name/SignalFlareTargetDummy=Signal Flare Target Dummy
 Unit/Name/SignalFlareUnit=Signal Flare Unit
 Unit/Name/SignifierAnduin=Signifier Anduin
 Unit/Name/SkibisAngel=Skibi's Angel
+Unit/Name/Spotter=Spotter
+Unit/Name/SpotterBioDischargeWeapon=Bio-Discharge Projectile
 Unit/Name/StalkerAnduin=Huntsman
+Unit/Name/Stank=Stank
 Unit/Name/Starcruiser=Starcruiser
 Unit/Name/StarcruiserLaserBattery=Starcruiser Laser Battery
 Unit/Name/StarcruiserYamato=Starcruiser Yamato
@@ -1222,6 +1236,7 @@ Weapon/Name/RagnarokNRoll=Ragnarok N' Roll
 Weapon/Name/RaidersRival=Raider's Rival
 Weapon/Name/Railcannon=Railcannon
 Weapon/Name/ScorpionMissiles=Scorpion Missiles
+Weapon/Name/SpotterBioDischarge=Bio-Discharge
 Weapon/Name/TheConcillator=The Concillator
 Weapon/Name/TheGrill=The Grill
 Weapon/Name/ThermalBurst=Thermal Burst

@@ -256,7 +256,6 @@
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
     <CRequirementLT id="LTSumCountUnitAlias_SpiderMineCompleteOnlyAtUnit4">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="SumCountUnitAlias_SpiderMineCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="4"/>
     </CRequirementLT>
@@ -284,4 +283,16 @@
     <CRequirementSum id="SumCountUnitAlias_SpiderMineCompleteOnlyAtUnit">
         <OperandArray value="CountUnitAlias_SpiderMineCompleteOnlyAtUnit"/>
     </CRequirementSum>
+    <CRequirementCountUpgrade id="UpgradeOverseer2CompleteOnly">
+        <Count Link="Spotter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="UpgradeOverseer2QueuedOrBetter">
+        <Count Link="Spotter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="UpgradeUltralisk2CompleteOnly">
+        <Count Link="Stank"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="UpgradeUltralisk2QueuedOrBetter">
+        <Count Link="Stank"/>
+    </CRequirementCountUpgrade>
 </Catalog>

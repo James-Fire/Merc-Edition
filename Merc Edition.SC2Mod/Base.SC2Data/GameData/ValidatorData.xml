@@ -25,6 +25,9 @@
         <Type value="Load"/>
         <Value value="5"/>
     </CValidatorUnitCompareCargo>
+    <CValidatorLocationCompareRange id="BurrowChargeMinimumRange">
+        <Range value="4"/>
+    </CValidatorLocationCompareRange>
     <CValidatorUnitAbil id="CasterCanAttack">
         <WhichUnit Value="Caster"/>
         <Find value="1"/>

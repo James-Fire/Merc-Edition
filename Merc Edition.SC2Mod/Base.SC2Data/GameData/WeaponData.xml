@@ -102,6 +102,14 @@
         <AllowedMovement value="Moving"/>
         <RandomDelayMax value="0.1875"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="SpotterBioDischarge">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="SpotterBioDischargeDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="4"/>
+        <Period value="1.52"/>
+        <Effect value="SpotterBioDischargeLaunchMissile"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="VanirMissiles">
         <EditorCategories value="Race:Terran"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>

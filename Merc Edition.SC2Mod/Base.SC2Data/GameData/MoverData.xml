@@ -190,6 +190,7 @@
             <Overlays/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="SpotterBioDischargeMissile" parent="HydraliskImpaleMissile"/>
     <CMoverMissile id="StarcruiserLaserBattery">
         <MotionPhases>
             <Driver value="Guidance"/>

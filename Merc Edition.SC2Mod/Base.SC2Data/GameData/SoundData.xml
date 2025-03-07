@@ -405,6 +405,20 @@
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death07.wav"/>
         <VariationMinimum value="7"/>
     </CSound>
+    <CSound id="HillRespawnFinish" parent="Combat">
+        <AssetArray File="Assets\Sounds\Spell_Preordain_Impact_00.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="HillRespawnLoop" parent="Combat">
+        <AssetArray>
+            <File value="Assets\Sounds\XelNaga_KeyStone_SetPiece_Rev_Loop.wav"/>
+            <LoopCount value="555"/>
+            <LoopTime value="0,269649"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <Volume value="-9.000000,-9.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="15.569972" Volume="-96.000000"/>
+    </CSound>
     <CSound id="MinikinLaunch" parent="Combat">
         <AssetArray File="Assets\Sounds\Liberator_AA_Launch_04.wav" FacialGroup=""/>
         <Volume value="-11.000000,-11.000000"/>
@@ -450,6 +464,24 @@
         <AssetArray File="Assets\Sounds\CarrierAiur_ReconstructionBeam_Launch03_1ch.wav" FacialGroup=""/>
         <Pitch value="4.000000,6.000000"/>
         <Volume value="-10.000000,-10.000000"/>
+    </CSound>
+    <CSound id="SpotterBioDischargeImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact4.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,2.000000"/>
+        <Volume value="-12.000000,-10.000000"/>
+    </CSound>
+    <CSound id="SpotterBioDischargeLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthLaunch2.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,2.000000"/>
+        <Volume value="-12.000000,-8.000000"/>
     </CSound>
     <CSound id="StarcruiserYamatoChargeUp" parent="Spell">
         <EditorCategories value="Race:Terran"/>
