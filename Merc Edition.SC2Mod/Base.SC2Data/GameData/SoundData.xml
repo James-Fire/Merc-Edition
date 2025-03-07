@@ -400,6 +400,11 @@
         <Pitch value="-2.000000,4.000000"/>
         <Volume value="-12.000000,-7.000000"/>
     </CSound>
+    <CSound id="HillDeath" parent="Death">
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death04.wav"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death07.wav"/>
+        <VariationMinimum value="7"/>
+    </CSound>
     <CSound id="MinikinLaunch" parent="Combat">
         <AssetArray File="Assets\Sounds\Liberator_AA_Launch_04.wav" FacialGroup=""/>
         <Volume value="-11.000000,-11.000000"/>

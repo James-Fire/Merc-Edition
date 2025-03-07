@@ -20,6 +20,39 @@
         <Amount value="25"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="DeathFromBelowCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterPoint"/>
+        <PeriodCount value="12"/>
+        <PeriodicEffectArray value="DeathFromBelowRP"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="DeathFromBelowCU">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="DeathFromBelowSet"/>
+        <SpawnUnit value="SpiderMineBurrowed"/>
+    </CEffectCreateUnit>
+    <CEffectIssueOrder id="DeathFromBelowOrder">
+        <EditorCategories value=""/>
+        <Abil value="CondorSpiderMineUnburrow"/>
+        <Player Value="Caster"/>
+    </CEffectIssueOrder>
+    <CEffectRandomPointInCircle id="DeathFromBelowRP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="SourcePoint"/>
+        <Effect value="DeathFromBelowCU"/>
+        <Count value="2"/>
+        <Radius value="4"/>
+    </CEffectRandomPointInCircle>
+    <CEffectSet id="DeathFromBelowSet">
+        <EditorCategories value=""/>
+        <EffectArray value="DeathFromBelowOrder"/>
+        <EffectArray value="DeathFromBelowTimedLifeAB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="DeathFromBelowTimedLifeAB">
+        <Behavior value="DeathFromBelowTimedLife"/>
+    </CEffectApplyBehavior>
     <CEffectModifyUnit id="KarassPlasmaSurgeModifyUnit">
         <VitalArray index="Shields">
             <Change value="100"/>

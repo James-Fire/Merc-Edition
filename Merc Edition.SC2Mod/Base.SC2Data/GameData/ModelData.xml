@@ -225,6 +225,10 @@
         <Lighting value="HillPortrait"/>
         <PausedParticleSystemBehavior value="FreezeAll"/>
     </CModel>
+    <CModel id="NovaLockdownMissile">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
     <CModel id="SensorTowerMorph">
         <Model value="Assets\Models\SensorTowerMorph.m3"/>
     </CModel>
