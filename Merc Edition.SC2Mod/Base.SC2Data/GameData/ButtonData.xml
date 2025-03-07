@@ -55,6 +55,10 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="DeathFromBelow">
+        <Icon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
+    </CButton>
     <CButton id="DemonRockets">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
@@ -214,9 +218,17 @@
         <EditorCategories value="Race:Protoss"/>
         <TintRacially value="1"/>
     </CButton>
+    <CButton id="HillJumpJets">
+        <Icon value="Assets\Textures\btn-upgrade-nova-jetpack.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-nova-jetpack.dds"/>
+    </CButton>
     <CButton id="KelMorianRipperRounds">
         <Icon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-tychus-ripperrounds.dds"/>
+    </CButton>
+    <CButton id="LockdownMkII">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="Minikin">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -335,9 +347,13 @@
         <AlertIcon value="Assets\Textures\btn-unit-collectoin-terran-mecha-vikingassault.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="WildSnipe">
+        <Icon value="Assets\Textures\btn-ability-terran-snipe.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-snipe.dds"/>
+    </CButton>
     <CButton id="WillofRaszagal">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-hardenedshields.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-hardenedshields.dds"/>
         <TintRacially value="1"/>
     </CButton>
     <CButton id="YamatoCulverin">

@@ -69,6 +69,7 @@
             <YawPitchRoll value="719.2968"/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="AnduinPlasmaBlastMissile" parent="HydraliskImpaleMissile"/>
     <CMoverMissile id="DevastatorMissilesMercMissile" parent="LiberatorAGMissile">
         <MotionPhases index="0">
             <Driver value="Ballistic"/>

@@ -213,6 +213,20 @@
     <CAbilMorph id="MilitarizedColonistShipLiftOff">
         <InfoArray index="0" Unit="ZeusLanderFlying"/>
     </CAbilMorph>
+    <CAbilEffectTarget id="LockdownMkII">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="LockdownMkIILM"/>
+        <Cost>
+            <Cooldown TimeUse="40"/>
+        </Cost>
+        <TargetFilters value="-;Player,Ally,Heroic"/>
+        <Range value="9"/>
+        <PrepTime value="0.15"/>
+        <FinishTime value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LockdownMkII"/>
+    </CAbilEffectTarget>
     <CAbilArmMagazine id="OdinRepairDroneMagazine">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AutoCreate" value="1"/>
@@ -564,6 +578,25 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="WildSnipe">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="WildSnipeDamage"/>
+        <Cost>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="23"/>
+            </Charge>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <Range value="9"/>
+        <PrepTime value="0.15"/>
+        <FinishTime value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="WildSnipe"/>
+    </CAbilEffectTarget>
     <CAbilTrain id="ZeusLanderTrain">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <Range value="5"/>

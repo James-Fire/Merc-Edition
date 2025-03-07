@@ -293,6 +293,22 @@
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Blink_SP_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Blink_SP_02.wav" FacialGroup=""/>
     </CSound>
+    <CSound id="AnduinPlasmaBlastImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackImpact3.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+    </CSound>
+    <CSound id="AnduinPlasmaBlastLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackLaunch2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\Karass\Karass_AttackLaunch3.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
     <CSound id="AnduinPsiStormLayerS" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Construct_Eso_EnergyWave_01.wav" FacialGroup=""/>
         <Volume value="-8.000000,-8.000000"/>
@@ -360,6 +376,29 @@
         <Flags index="Download" value="0"/>
         <Select value="Sequential"/>
         <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="CashRegisterImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleBulletImpact10.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,2.000000"/>
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="CashRegisterLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Spectre\Spectre_UltraSonicPulseLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Spectre\Spectre_UltraSonicPulseLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Spectre\Spectre_UltraSonicPulseLaunch2.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-2.000000,4.000000"/>
+        <Volume value="-12.000000,-7.000000"/>
     </CSound>
     <CSound id="MinikinLaunch" parent="Combat">
         <AssetArray File="Assets\Sounds\Liberator_AA_Launch_04.wav" FacialGroup=""/>
@@ -1191,6 +1230,18 @@
         <OverlapTimeDelta value="100"/>
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-7.960000,-6.120000"/>
+    </CSound>
+    <CSound id="WildSnipeImpact" parent="Combat">
+        <AssetArray File="Assets\Sounds\Explosion_CarpetBurn_2.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="WildSnipeLaunch" parent="Combat">
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleAttackLaunch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleAttackLaunch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleAttackLaunch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifleAttackLaunch_04.wav" FacialGroup=""/>
+        <Category value="Spell"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="0.000000,1.000000"/>
     </CSound>
     <CSound id="ZeusBattleTankAttackLaunch" parent="Combat">
         <EditorCategories value="Race:Terran"/>

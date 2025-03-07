@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="CashRegisterAction" parent="GenericAttack" effectAttack="CashRegisterDamage">
+        <LaunchAssets Model="CashRegisterLaunchModel" Sound="CashRegisterLaunchSound"/>
+        <Missile value="CashRegisterWeaponMissile"/>
+        <ImpactMap index="None" Model="CashRegisterImpactModel" Sound="CashRegisterImpactSound"/>
+    </CActorAction>
+    <CActorAction id="Lockdown" effectImpact="LockdownMkIIAB" effectLaunch="LockdownMkIILM">
+        <On index="6" Terms="Effect.LockdownMkIILM.Start; At Caster"/>
+        <LaunchAttachQuery Methods="Weapon 0"/>
+        <LaunchAssets Sound="VoodooLockdownLaunch"/>
+        <ImpactMap index="None" Sound="Ghost_EMPAttackImpact"/>
+    </CActorAction>
+    <!-- Lock Down                                                                               -->
+    <CActorMissile id="LockdownMissile" unitName="NovaLockdownMissile">
+        <On index="0" Terms="UnitBirth.NovaLockdownMissile"/>
+        <Model value="NovaLockdownMissile"/>
+    </CActorMissile>
+    <CActorSound id="LockdownMkIIImpact" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.LockdownMkIIAB.Start; At Target" Send="Create"/>
+        <Sound value="VoodooLockdownImpact"/>
+    </CActorSound>
+    <CActorRange id="LockdownMkIIRange" parent="RangeAbil" abil="LockdownMkII">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorAction id="AnduinPlasmaBlastAction" parent="GenericAttack" effectImpact="AnduinPlasmaBlastDamage" effectLaunch="AnduinPlasmaBlastLaunchMissile">
+        <LaunchAssets Model="AnduinPlasmaBlastLaunchModel" Sound="AnduinPlasmaBlastLaunchSound"/>
+        <Missile value="AnduinPlasmaBlastWeaponMissile"/>
+        <ImpactMap index="None" Model="AnduinPlasmaBlastImpactModel" Sound="AnduinPlasmaBlastImpactSound"/>
+        <LaunchAttachQuery Methods="Center 0" Fallback="Head"/>
+    </CActorAction>
+    <CActorMissile id="AnduinPlasmaBlastWeaponMissile" parent="GenericAttackMissile" unitName="AnduinPlasmaBlastWeapon">
+        <Model value="AnduinPlasmaBlastMissileModel"/>
+    </CActorMissile>
     <CActorUnit id="ImmortalShakuras">
         <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinImmortal"/>
     </CActorUnit>
@@ -24,6 +58,30 @@
         <On Terms="Effect.PsiStormShakurasPersistent.Start" Send="Create"/>
         <On Terms="Effect.PsiStormShakurasPersistent.Stop" Send="Destroy"/>
     </CActorSound>
+    <CActorUnit id="GravenHill" parent="GenericUnitStandard" unitName="GravenHill">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="UnitMovementUpdate.GravenHill.Walk" Send="AnimClear SnipeSpell"/>
+        <On Terms="Abil.WildSnipe.SourcePrepStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.300000 AsDuration"/>
+        <On Terms="UnitMovementUpdate.GravenHill.Walk" Send="AnimClear Attack"/>
+        <On Terms="Abil.LockdownMkII.SourcePrepStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.300000 AsDuration"/>
+        <DeathArray index="Normal" ModelLink="GravenHillDeath"/>
+        <PortraitModel value="GravenHillPortrait"/>
+        <WalkAnimMoveSpeed value="3"/>
+        <BarOffset value="20"/>
+        <BarWidth value="55"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Nova.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-spectre.dds"/>
+        <UnitKillRank Text="UnitKillRank/GravenHill"/>
+        <UnitKillRank MinKills="250" Text="UnitKillRank/GravenHillSecret"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-spectre.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorRange id="OpenGateRange" parent="RangeAbil" abil="AnduinOpenGate">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
@@ -61,7 +119,7 @@
         <On Terms="UnitHeightUpdate.*.Land" Send="Create HighTemplar_Land"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Templar_LandSweetener"/>
         <On Terms="Upgrade.DarkProtoss.Add" Send="DeathCustomsEnablePhysics 0"/>
-        <On Terms="WeaponStart.HighTemplarWeapon.AttackStart" Send="$Spell,A"/>
+        <On Terms="WeaponStart.AnduinPlasmaBlast.AttackStart" Send="$Spell,A"/>
         <On Terms="ActorCreation" Send="SetTeamColor 0,255,0 0,255,0"/>
         <AnimBlendTime value="0.450000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
@@ -1418,6 +1476,23 @@
             <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-assault.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorAction id="WildSnipe" parent="GenericAttack" effectAttack="WildSnipeDamage">
+        <EditorCategories value=""/>
+        <Beam value="WildSnipeDamageBeam"/>
+    </CActorAction>
+    <CActorBeamSimple id="WildSnipeDamageBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <On Terms="Effect.WildSnipeDamage.Start; At Target" Send="Create"/>
+        <On Terms="Effect.WildSnipeDamage.Start" Send="TimerSet 1.000000 Kill"/>
+        <On Terms="TimerExpired; TimerName Kill" Send="Destroy"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorRange id="WildSnipeRange" parent="RangeAbil" abil="WildSnipe">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorUnit id="WreckingCrewAssault">
         <On Terms="AbilMorph.*.Finish; MorphTo CabalAssault" Send="Destroy"/>
     </CActorUnit>

@@ -26,6 +26,14 @@
         <Range value="0.1"/>
         <Period value="1.5"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="AnduinPlasmaBlast">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="AnduinPlasmaBlastDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.25"/>
+        <Effect value="AnduinPlasmaBlastLaunchMissile"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="BarBreakersFlying">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
@@ -47,6 +55,14 @@
         <Period value="1.5"/>
         <DamagePoint value="0.083"/>
         <Backswing value="1.167"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CashRegister">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="CashRegisterDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="1"/>
+        <Effect value="CashRegisterDamage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ChargedJupiterRail">
         <EditorCategories value="Race:Terran"/>
