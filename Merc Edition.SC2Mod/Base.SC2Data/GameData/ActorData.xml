@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="HillRespawnEnd" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Hill180sRespawn.Off" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorSound id="HillRespawnFinish" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Hill180sRespawn.Off" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="HillRespawnLoop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Hill180sRespawn.On" Send="Create"/>
+        <On Terms="Behavior.Hill180sRespawn.Off" Send="Destroy"/>
+    </CActorSound>
+    <CActorModel id="HillRespawnModel" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Hill180sRespawn.On" Send="Create"/>
+        <On Terms="Behavior.Hill180sRespawn.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpMoveDownBy2 SOpMoveDownBy2"/>
+    </CActorModel>
     <CActorAction id="CashRegisterAction" parent="GenericAttack" effectAttack="CashRegisterDamage">
         <LaunchAssets Model="CashRegisterLaunchModel" Sound="CashRegisterLaunchSound"/>
         <Missile value="CashRegisterWeaponMissile"/>
         <ImpactMap index="None" Model="CashRegisterImpactModel" Sound="CashRegisterImpactSound"/>
     </CActorAction>
+    <CActorModelMaterial id="HillRespawnGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.Hill180sRespawn.On" Send="Create"/>
+        <On index="6" Terms="Behavior.Hill180sRespawn.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorModelMaterial id="HillRespawnGlaze2" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.Hill180sRespawn.On" Send="Create"/>
+        <On index="6" Terms="Behavior.Hill180sRespawn.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
     <CActorAction id="Lockdown" effectImpact="LockdownMkIIAB" effectLaunch="LockdownMkIILM">
         <On index="6" Terms="Effect.LockdownMkIILM.Start; At Caster"/>
         <LaunchAttachQuery Methods="Weapon 0"/>
@@ -64,10 +96,12 @@
         <On Terms="Abil.WildSnipe.SourcePrepStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.300000 AsDuration"/>
         <On Terms="UnitMovementUpdate.GravenHill.Walk" Send="AnimClear Attack"/>
         <On Terms="Abil.LockdownMkII.SourcePrepStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.300000 AsDuration"/>
+        <On Terms="Behavior.Hill180sRespawn.On" Send="AnimSetPausedAll"/>
+        <On Terms="Behavior.Hill180sRespawn.Off" Send="AnimSetPausedAll 0"/>
         <DeathArray index="Normal" ModelLink="GravenHillDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="HillDeath"/>
         <PortraitModel value="GravenHillPortrait"/>
         <WalkAnimMoveSpeed value="3"/>
-        <BarOffset value="20"/>
+        <BarOffset value="30"/>
         <BarWidth value="55"/>
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Terran-Nova.dds"/>

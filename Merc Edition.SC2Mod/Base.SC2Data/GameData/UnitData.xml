@@ -182,7 +182,6 @@
         <Mob value="Campaign"/>
         <FlagArray index="Hero" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="Cloaked" value="1"/>
         <FlagArray index="ArmySelect" value="1"/>
         <PlaneArray index="Ground" value="1"/>
         <Collide index="Ground" value="1"/>
@@ -215,6 +214,8 @@
         <AbilArray Link="WildSnipe"/>
         <AbilArray Link="LockdownMkII"/>
         <BehaviorArray Link="ReaperJump"/>
+        <BehaviorArray Link="GenericDontDie"/>
+        <BehaviorArray Link="PermanentlyCloaked"/>
         <WeaponArray Link="CashRegister"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>

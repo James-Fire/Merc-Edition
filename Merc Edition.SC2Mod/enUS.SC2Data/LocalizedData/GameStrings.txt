@@ -1026,6 +1026,7 @@ SkibidiSkibidiHeHeHaHa=x2
 StarcruiserShields=Shield Generator
 StarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevenge2ShieldsStarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevengeHeroShields=Shield Generator
 UI/Upgrading=Upgrading
+Unit/Category/TerranUnits=Terran
 Unit/Name/250mmUranusCarronadesWeapon=250mm Uranus Carronades Projectile
 Unit/Name/ACV=ACV
 Unit/Name/ARESMissileMissile=ARES Missile Missile

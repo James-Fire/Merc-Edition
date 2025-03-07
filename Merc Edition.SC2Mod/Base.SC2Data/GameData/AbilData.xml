@@ -596,6 +596,7 @@
         <UninterruptibleArray index="Prep" value="1"/>
         <UninterruptibleArray index="Finish" value="1"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="WildSnipe"/>
+        <TargetFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
     </CAbilEffectTarget>
     <CAbilTrain id="ZeusLanderTrain">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
