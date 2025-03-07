@@ -132,6 +132,13 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorModel id="PlagueMunitions" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.PlagueMunitions.On" Send="Create"/>
+        <On Terms="Behavior.PlagueMunitions.Off" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
     <CActorUnit id="Spotter" parent="GenericUnitMorph" unitName="Spotter">
         <Aliases value="_UnitLarge"/>
         <Macros value="PhysicsDeathsSwarmAir"/>

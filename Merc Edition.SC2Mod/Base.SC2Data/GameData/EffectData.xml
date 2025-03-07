@@ -16,6 +16,12 @@
     <CEffectEnumArea id="ArtanisResurgenceSearch">
         <AreaArray index="0" Radius="8"/>
     </CEffectEnumArea>
+    <CEffectCreateUnit id="BroodlingGestationCU">
+        <ValidatorArray value="UseBroodlingGestation@Validator"/>
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterPoint"/>
+        <SpawnUnit value="KerriganInfestBroodling"/>
+    </CEffectCreateUnit>
     <CEffectDamage id="CashRegisterDamage" parent="DU_WEAP">
         <Amount value="25"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -53,6 +59,18 @@
     <CEffectApplyBehavior id="DeathFromBelowTimedLifeAB">
         <Behavior value="DeathFromBelowTimedLife"/>
     </CEffectApplyBehavior>
+    <CEffectIssueOrder id="HillReviveDummy">
+        <EditorCategories value=""/>
+        <Abil value="HillRevive"/>
+    </CEffectIssueOrder>
+    <CEffectSet id="HillReviveDummy2">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectSet id="InfestedMarineWeaponSet">
+        <EditorCategories value=""/>
+        <EffectArray value="InfestedGuassRifle"/>
+        <EffectArray value="PlagueMunitions@AB"/>
+    </CEffectSet>
     <CEffectModifyUnit id="KarassPlasmaSurgeModifyUnit">
         <VitalArray index="Shields">
             <Change value="100"/>
@@ -70,6 +88,14 @@
     <CEffectSet id="OpenGateDummy">
         <EditorCategories value=""/>
     </CEffectSet>
+    <CEffectApplyBehavior id="PlagueMunitions@AB">
+        <ValidatorArray index="0" value="UsePlagueMunitions@Validator"/>
+        <Behavior value="PlagueMunitions"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="PlagueMunitionsDamage">
+        <EditorCategories value=""/>
+        <Amount value="0.5"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="PsiStormCrippleAB">
         <ValidatorArray index="0" value="NotStructure"/>
         <ValidatorArray index="1" removed="1"/>

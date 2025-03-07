@@ -249,6 +249,15 @@
             <VitalMaxArray index="Life" value="15"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="PlagueMunitions">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-stukov-buff-infested marine&apos;s plague munitions.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="5"/>
+        <Duration value="10"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="PlagueMunitionsDamage"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ShadowHallucination">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>

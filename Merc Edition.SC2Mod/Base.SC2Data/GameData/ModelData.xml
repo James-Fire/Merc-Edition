@@ -256,6 +256,9 @@
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
+    <CModel id="PlagueMunitions">
+        <Model value="Assets\Effects\Zerg\L2D_StankBugSwarm\L2D_StankBugSwarm.m3"/>
+    </CModel>
     <CModel id="Spotter" parent="OverseerBase">
         <Model value="Assets\Units\Zerg\L2D_Spotter\L2D_Spotter.m3"/>
         <ScaleMax value="1.250000,1.250000,1.250000"/>

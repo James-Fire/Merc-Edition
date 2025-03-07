@@ -77,6 +77,7 @@
         <AffectedUnitArray value="NaniteCloudEmitterBurrowed"/>
         <AffectedUnitArray value="NaniteCloudEmitter"/>
     </CUpgrade>
+    <CUpgrade id="BroodlingGestation"/>
     <CUpgrade id="BurrowBunker"/>
     <CUpgrade id="BurstAmplifier">
         <EffectArray Reference="Weapon,ScorpionMissiles,DisplayAttackCount" Value="2"/>
@@ -85,6 +86,7 @@
         <AffectedUnitArray value="Harrier"/>
     </CUpgrade>
     <CUpgrade id="NaniteEmitter"/>
+    <CUpgrade id="PlagueMunitions"/>
     <CUpgrade id="UmojanCellularReactors">
         <Flags index="UpgradeCheat" value="0"/>
         <EffectArray Reference="Unit,DuskWing,EnergyStart" Value="100"/>

@@ -387,9 +387,17 @@
         <Find value="1"/>
         <Value value="UseAnduinProtoss"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="UseBroodlingGestation@Validator">
+        <Find value="1"/>
+        <Value value="UseBroodlingGestation"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="UseLegionSystems@Validator">
         <Find value="1"/>
         <Value value="UseLegionSystems"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="UsePlagueMunitions@Validator">
+        <Find value="1"/>
+        <Value value="UsePlagueMunitions"/>
     </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="bunkerunitisinsideofisnotburrowed">
         <WhichUnit Value="CasterOuter"/>
