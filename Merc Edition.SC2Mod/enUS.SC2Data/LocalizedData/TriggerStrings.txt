@@ -70,6 +70,7 @@ Variable/Name/lib_BA5CCDED_7DA5D659=ZeusCount
 Variable/Name/lib_BA5CCDED_9E09B7C9=Player
 Variable/Name/lib_BA5CCDED_9F6E05FA=Event Applied Increment
 Variable/Name/lib_BA5CCDED_ABDE3333=Event String
+Variable/Name/lib_BA5CCDED_B4158051=OdinRescued
 Variable/Name/lib_BA5CCDED_B510F62C=Generic Difficulty
 Variable/Name/lib_BA5CCDED_BCCEB33F=Player
 Variable/Name/lib_BA5CCDED_C2B557A7=EventBank

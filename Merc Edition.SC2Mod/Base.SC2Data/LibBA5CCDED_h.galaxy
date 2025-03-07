@@ -9,6 +9,7 @@ string libBA5CCDED_gv_eventString;
 int libBA5CCDED_gv_eventIncrement;
 int libBA5CCDED_gv_eventAppliedIncrement;
 int libBA5CCDED_gv_zeusCount;
+bool libBA5CCDED_gv_odinRescued;
 bool libBA5CCDED_gv_genericDifficulty;
 bool libBA5CCDED_gv_myWave;
 bool libBA5CCDED_gv_easterEggActive;
