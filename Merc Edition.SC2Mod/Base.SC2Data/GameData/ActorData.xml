@@ -64,7 +64,7 @@
         <On Terms="Abil.WildSnipe.SourcePrepStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.300000 AsDuration"/>
         <On Terms="UnitMovementUpdate.GravenHill.Walk" Send="AnimClear Attack"/>
         <On Terms="Abil.LockdownMkII.SourcePrepStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.300000 AsDuration"/>
-        <DeathArray index="Normal" ModelLink="GravenHillDeath"/>
+        <DeathArray index="Normal" ModelLink="GravenHillDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="HillDeath"/>
         <PortraitModel value="GravenHillPortrait"/>
         <WalkAnimMoveSpeed value="3"/>
         <BarOffset value="20"/>

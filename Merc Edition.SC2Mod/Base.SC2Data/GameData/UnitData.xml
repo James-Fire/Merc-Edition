@@ -244,6 +244,7 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <EffectArray index="Death" value="DeathFromBelowCP"/>
     </CUnit>
     <CUnit id="NovaLockdownMissile">
         <Mover value="LongboltMissileWeapon"/>
