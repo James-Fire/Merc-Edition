@@ -3,12 +3,12 @@
 <Abil id="SkibisAngelRepairDrone"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Behavior id="CabalRevive1"/>
+<Behavior id="Hill180sRespawn"/>
 <Behavior id="HellraiserEasterEgg"/>
 <Behavior id="RedlineReactorEasterEgg"/>
 <Behavior id="RevivalFieldCooldown"/>
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
-<Behavior id="SkibiCleanseStun"/>
 <Effect id="CabalAssaultReviveDummy"/>
 <Effect id="CabalFighterReviveDummy"/>
 <Effect id="SpartanCompanyShellShowerFull"/>

@@ -25,6 +25,7 @@ void libBA5CCDED_InitVariables () {
     libBA5CCDED_InitVariables_completed = true;
 
     libBA5CCDED_gv_eventString = "";
+    libBA5CCDED_gv_hillRespawnPoint = PlayerStartLocation(1);
 }
 
 // Functions
@@ -510,6 +511,41 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
 void libBA5CCDED_gt_Init_Init () {
     libBA5CCDED_gt_Init = TriggerCreate("libBA5CCDED_gt_Init_Func");
     TriggerAddEventMapInit(libBA5CCDED_gt_Init);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init...Hill Respawn
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_InitHillRespawn_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    int auto8A8A0E4C_val;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto8A8A0E4C_val = libCamp_gf_CurrentMap();
+    if (auto8A8A0E4C_val == libCamp_ge_MapID_MapTZeratul01) {
+        TriggerEnable(libBA5CCDED_gt_HillRespawn, true);
+    }
+    else if (auto8A8A0E4C_val == libCamp_ge_MapID_MapTZeratul02) {
+        TriggerEnable(libBA5CCDED_gt_HillRespawn, true);
+    }
+    else if (auto8A8A0E4C_val == libCamp_ge_MapID_MapTZeratul03) {
+        TriggerEnable(libBA5CCDED_gt_HillRespawn, true);
+    }
+    else if (auto8A8A0E4C_val == libCamp_ge_MapID_MapTZeratul04) {
+        TriggerEnable(libBA5CCDED_gt_HillRespawn, true);
+    }
+    else {
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_InitHillRespawn_Init () {
+    libBA5CCDED_gt_InitHillRespawn = TriggerCreate("libBA5CCDED_gt_InitHillRespawn_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1512,108 +1548,6 @@ void libBA5CCDED_gt_NaniteEmitterBurrow_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Skibis Angels Cleansing
-//--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_SkibisAngelsCleansing_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    unitgroup lv_units;
-    unitgroup lv_medics;
-
-    // Automatic Variable Declarations
-    unitgroup autoCF5BA87A_g;
-    int autoCF5BA87A_u;
-    unit autoCF5BA87A_var;
-    int autoC68F45B2_val;
-    unitgroup auto5FC5A150_g;
-    int auto5FC5A150_u;
-    unit auto5FC5A150_var;
-    unitgroup auto55F7CF94_g;
-    int auto55F7CF94_u;
-    unit auto55F7CF94_var;
-    unitgroup auto5BCEBEB2_g;
-    int auto5BCEBEB2_u;
-    unit auto5BCEBEB2_var;
-    unitgroup auto999EC3A8_g;
-    int auto999EC3A8_u;
-    unit auto999EC3A8_var;
-
-    // Variable Initialization
-    lv_units = UnitGroupSelected(EventPlayer());
-    lv_medics = UnitGroupEmpty();
-
-    // Conditions
-    if (testConds) {
-        if (!((EventPlayer() == 1))) {
-            return false;
-        }
-    }
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    autoCF5BA87A_g = lv_units;
-    autoCF5BA87A_u = UnitGroupCount(autoCF5BA87A_g, c_unitCountAll);
-    for (;; autoCF5BA87A_u -= 1) {
-        autoCF5BA87A_var = UnitGroupUnitFromEnd(autoCF5BA87A_g, autoCF5BA87A_u);
-        if (autoCF5BA87A_var == null) { break; }
-        if ((UnitGetType(autoCF5BA87A_var) == "SkibisAngel")) {
-            UnitGroupAdd(lv_medics, autoCF5BA87A_var);
-        }
-
-    }
-    if ((UnitGroupCount(lv_medics, c_unitCountAlive) < 4)) {
-        return true;
-    }
-
-    autoC68F45B2_val = libCamp_gf_CurrentMap();
-    if (autoC68F45B2_val == libCamp_ge_MapID_MapTHanson02) {
-        auto5FC5A150_g = UnitGroup("CommandCenter", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
-        auto5FC5A150_u = UnitGroupCount(auto5FC5A150_g, c_unitCountAll);
-        for (;; auto5FC5A150_u -= 1) {
-            auto5FC5A150_var = UnitGroupUnitFromEnd(auto5FC5A150_g, auto5FC5A150_u);
-            if (auto5FC5A150_var == null) { break; }
-            auto55F7CF94_g = UnitGroup("SkibisAngel", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 4);
-            auto55F7CF94_u = UnitGroupCount(auto55F7CF94_g, c_unitCountAll);
-            for (;; auto55F7CF94_u -= 1) {
-                auto55F7CF94_var = UnitGroupUnitFromEnd(auto55F7CF94_g, auto55F7CF94_u);
-                if (auto55F7CF94_var == null) { break; }
-                UnitBehaviorAddPlayer(auto55F7CF94_var, "SkibiCleanseStun", 1, 1);
-            }
-            Wait(90.0, c_timeGame);
-            UnitBehaviorRemove(auto5FC5A150_var, "ColonyInfestation", 1);
-        }
-    }
-    else if (autoC68F45B2_val == libCamp_ge_MapID_MapTValerian02B) {
-        auto5BCEBEB2_g = UnitGroup("CollapsibleTerranTower", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
-        auto5BCEBEB2_u = UnitGroupCount(auto5BCEBEB2_g, c_unitCountAll);
-        for (;; auto5BCEBEB2_u -= 1) {
-            auto5BCEBEB2_var = UnitGroupUnitFromEnd(auto5BCEBEB2_g, auto5BCEBEB2_u);
-            if (auto5BCEBEB2_var == null) { break; }
-            auto999EC3A8_g = UnitGroup("SkibisAngel", c_playerAny, RegionCircle(UnitGroupCenterOfGroup(lv_medics), 3.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 4);
-            auto999EC3A8_u = UnitGroupCount(auto999EC3A8_g, c_unitCountAll);
-            for (;; auto999EC3A8_u -= 1) {
-                auto999EC3A8_var = UnitGroupUnitFromEnd(auto999EC3A8_g, auto999EC3A8_u);
-                if (auto999EC3A8_var == null) { break; }
-                UnitBehaviorAddPlayer(auto999EC3A8_var, "SkibiCleanseStun", 1, 1);
-            }
-            Wait(90.0, c_timeGame);
-            UnitBehaviorRemove(auto5BCEBEB2_var, "ColonyInfestation", 1);
-        }
-    }
-    else {
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_SkibisAngelsCleansing_Init () {
-    libBA5CCDED_gt_SkibisAngelsCleansing = TriggerCreate("libBA5CCDED_gt_SkibisAngelsCleansing_Func");
-    TriggerAddEventButtonPressed(libBA5CCDED_gt_SkibisAngelsCleansing, c_playerAny, "Cleanse");
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: Cabal Cybernetic Reconstruction (Assault)
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Func (bool testConds, bool runActions) {
@@ -1703,11 +1637,52 @@ void libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init () {
     TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_CabalCyberneticReconstructionFighter, c_playerAny, "CabalFighterDeathDummy");
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Hill Respawn
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_HillRespawn_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_hill;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "GravenHill"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_hill = EventUnit();
+    libNtve_gf_MakeUnitInvulnerable(lv_hill, true);
+    libNtve_gf_MakeUnitUncommandable(lv_hill, true);
+    UnitSetPosition(lv_hill, libBA5CCDED_gv_hillRespawnPoint, false);
+    UnitBehaviorAdd(lv_hill, "Hill180sRespawn", lv_hill, 1);
+    Wait(180.0, c_timeGame);
+    libNtve_gf_MakeUnitInvulnerable(lv_hill, false);
+    libNtve_gf_MakeUnitUncommandable(lv_hill, false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_HillRespawn_Init () {
+    libBA5CCDED_gt_HillRespawn = TriggerCreate("libBA5CCDED_gt_HillRespawn_Func");
+    TriggerEnable(libBA5CCDED_gt_HillRespawn, false);
+    TriggerAddEventUnitDamaged(libBA5CCDED_gt_HillRespawn, null, c_unitDamageTypeAny, c_unitDamageFatal, null);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_OpenBanks_Init();
     libBA5CCDED_gt_SaveBanks_Init();
     libBA5CCDED_gt_ListenforChat_Init();
     libBA5CCDED_gt_Init_Init();
+    libBA5CCDED_gt_InitHillRespawn_Init();
     libBA5CCDED_gt_InitACVMultibuild_Init();
     libBA5CCDED_gt_InitAllowingUnits_Init();
     libBA5CCDED_gt_InitMercEditionUpgrade_Init();
@@ -1731,9 +1706,9 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_NomadSilentModeHeightDown_Init();
     libBA5CCDED_gt_SamsonZeusInjectionPods_Init();
     libBA5CCDED_gt_NaniteEmitterBurrow_Init();
-    libBA5CCDED_gt_SkibisAngelsCleansing_Init();
     libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Init();
     libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init();
+    libBA5CCDED_gt_HillRespawn_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

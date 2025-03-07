@@ -13,6 +13,7 @@ bool libBA5CCDED_gv_odinRescued;
 bool libBA5CCDED_gv_genericDifficulty;
 bool libBA5CCDED_gv_myWave;
 bool libBA5CCDED_gv_easterEggActive;
+point libBA5CCDED_gv_hillRespawnPoint;
 
 // Function Declarations
 void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition);
@@ -29,6 +30,7 @@ trigger libBA5CCDED_gt_OpenBanks;
 trigger libBA5CCDED_gt_SaveBanks;
 trigger libBA5CCDED_gt_ListenforChat;
 trigger libBA5CCDED_gt_Init;
+trigger libBA5CCDED_gt_InitHillRespawn;
 trigger libBA5CCDED_gt_InitACVMultibuild;
 trigger libBA5CCDED_gt_InitAllowingUnits;
 trigger libBA5CCDED_gt_InitMercEditionUpgrade;
@@ -52,9 +54,9 @@ trigger libBA5CCDED_gt_NomadSilentModeHeightUp;
 trigger libBA5CCDED_gt_NomadSilentModeHeightDown;
 trigger libBA5CCDED_gt_SamsonZeusInjectionPods;
 trigger libBA5CCDED_gt_NaniteEmitterBurrow;
-trigger libBA5CCDED_gt_SkibisAngelsCleansing;
 trigger libBA5CCDED_gt_CabalCyberneticReconstructionAssault;
 trigger libBA5CCDED_gt_CabalCyberneticReconstructionFighter;
+trigger libBA5CCDED_gt_HillRespawn;
 
 // Library Initialization
 void libBA5CCDED_InitVariables ();
