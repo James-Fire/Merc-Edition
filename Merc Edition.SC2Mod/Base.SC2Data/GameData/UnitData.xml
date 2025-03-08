@@ -171,6 +171,28 @@
         </CardLayouts>
         <AbilArray Link="SalvageShared"/>
     </CUnit>
+    <!-- StalkerAiur is swapped out for Dragoon -->
+    <CUnit id="Dragoon">
+        <AbilArray Link="SingularityBlast"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="SingularityBlast" Type="AbilCmd" AbilCmd="SingularityBlast,Execute"/>
+            <LayoutButtons index="7" Face="LostTrillicSystems" Requirements="DragoonPostilion"/>
+            <LayoutButtons Face="VoidStalkerDragoonWeapon" Type="Passive" Row="2" Column="0"/>
+            <LayoutButtons Face="VoidStalkerDragoonArmor" Type="Passive" Row="2" Column="1"/>
+            <LayoutButtons Face="SingularitySling" Type="Passive" Requirements="DragoonPostilion" Row="1" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="HighTemplar">
+        <AbilArray Link="PsiStormShakuras"/>
+        <AbilArray Link="GreaterFeedback"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="8" Face="AnduinCripplestorm" AbilCmd="PsiStormShakuras,Execute"/>
+            <LayoutButtons index="9" Face="GreaterFeedback" AbilCmd="GreaterFeedback,Execute"/>
+            <LayoutButtons Face="PsiStorm" Type="AbilCmd" AbilCmd="PsiStorm,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Feedback" Type="AbilCmd" AbilCmd="Feedback,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <!--WeaponArray Link="HighTemplarFakeWeapon"/-->
+    </CUnit>
     <CUnit id="ImmortalShakuras">
         <CardLayouts index="0">
             <LayoutButtons Face="ZhakulGuardians" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
@@ -393,15 +415,15 @@
         <Attributes index="Biological" value="1"/>
         <Attributes index="Psionic" value="1"/>
         <Attributes index="Heroic" value="1"/>
-        <LifeStart value="125"/>
-        <LifeMax value="125"/>
+        <LifeStart value="75"/>
+        <LifeMax value="75"/>
         <LifeRegenRate value="2"/>
         <LifeArmorName value="Unit/LifeArmorName/ProtossArmor"/>
         <EnergyStart value="200"/>
         <EnergyMax value="200"/>
         <EnergyRegenRate value="1.6875"/>
-        <ShieldsStart value="125"/>
-        <ShieldsMax value="125"/>
+        <ShieldsStart value="75"/>
+        <ShieldsMax value="75"/>
         <ShieldRegenDelay value="10"/>
         <ShieldRegenRate value="6"/>
         <ShieldArmorName value="Unit/ShieldArmorName/ProtossPlasmaShields"/>
@@ -468,6 +490,7 @@
         <TauntDuration index="Cheer" value="5"/>
         <TauntDuration index="Dance" value="5"/>
         <BehaviorArray Link="ArtanisResurgence"/>
+        <BehaviorArray Link="HighTemplarPartisan"/>
         <WeaponArray Link="AnduinPlasmaBlast"/>
     </CUnit>
     <CUnit id="OdinRepairDrone">

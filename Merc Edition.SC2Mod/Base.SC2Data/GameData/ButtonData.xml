@@ -74,6 +74,10 @@
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="GreaterFeedback">
+        <Icon value="Assets\Textures\btn-ability-protoss-feedbackaoe-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-feedbackaoe-color.dds"/>
+    </CButton>
     <CButton id="Hellraiser">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
@@ -230,6 +234,10 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="LostTrillicSystems">
+        <Icon value="Assets\Textures\btn-ability-protoss-dragoonchassis.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-dragoonchassis.dds"/>
+    </CButton>
     <CButton id="Minikin">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -257,6 +265,18 @@
     <CButton id="ShadowHallucinate">
         <Icon value="Assets\Icons and Wireframes\shadow-hallucination.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\shadow-hallucination.dds"/>
+    </CButton>
+    <CButton id="ShieldBooster">
+        <Icon value="Assets\Textures\btn-ability-zeratul-warpprism-shieldboosters.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zeratul-warpprism-shieldboosters.dds"/>
+    </CButton>
+    <CButton id="SingularityBlast">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-researchgravitysling.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-protoss-researchgravitysling.dds"/>
+    </CButton>
+    <CButton id="SingularitySling">
+        <Icon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
     </CButton>
     <CButton id="SuperRadar">
         <Icon value="Assets\Icons and Wireframes\superradar.dds"/>

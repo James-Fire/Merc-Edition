@@ -6,6 +6,34 @@
     <CModel id="CashRegisterLaunchModel" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Launch\Nova_Snipe_Launch.m3"/>
     </CModel>
+    <CModel id="GreaterFeedbackCursorSplat">
+        <Model value="Assets\UI\ProtossCursorEx2\ProtossCursorEx2.m3"/>
+        <ScaleMax value="0.290000,0.290000,0.290000"/>
+        <ScaleMin value="0.290000,0.290000,0.290000"/>
+    </CModel>
+    <CModel id="GreaterFeedbackM">
+        <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Shockwave\Arbiter_StasisField_Shockwave.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="HighTemplarPartisan" Prefix="Units\" Race="Protoss">
+        <Model value="Assets\Units\Protoss\HighTemplar_Golden\HighTemplar_Golden.m3"/>
+        <RequiredAnims value="Assets\Units\Protoss\HighTemplar_SwarmAnims\HighTemplar_SwarmAnims.m3a"/>
+        <Lighting value="HighTemplar"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh05"/>
+        <Radius value="0.400000"/>
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="LightArmor"/>
+        <TechPurchaseCamera value="Star2CameraHigh05"/>
+        <TextureDeclares Prefix="templar_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraHigh05"/>
+    </CModel>
     <CModel id="HillInvulnerability">
         <Model value="Assets\Effects\Glaze\Glaze_Goliath_Lockdown\Glaze_Goliath_Lockdown.m3"/>
     </CModel>
@@ -266,6 +294,19 @@
     </CModel>
     <CModel id="PlagueMunitions">
         <Model value="Assets\Effects\Zerg\L2D_StankBugSwarm\L2D_StankBugSwarm.m3"/>
+    </CModel>
+    <CModel id="SingularityBlastChannel">
+        <Model value="Assets\Effects\Protoss\DisruptionBlast_ChargeUp\DisruptionBlast_ChargeUp.m3"/>
+    </CModel>
+    <CModel id="SingularityBlastCursorSplat">
+        <Model value="Assets\UI\ProtossCursorEx2\ProtossCursorEx2.m3"/>
+        <ScaleMax value="0.320000,0.320000,0.320000"/>
+        <ScaleMin value="0.320000,0.320000,0.320000"/>
+    </CModel>
+    <CModel id="SingularityBlastImpact">
+        <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
     <CModel id="Spotter" parent="OverseerBase">
         <Model value="Assets\Units\Zerg\L2D_Spotter\L2D_Spotter.m3"/>

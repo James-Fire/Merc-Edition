@@ -59,6 +59,12 @@
     <CEffectApplyBehavior id="DeathFromBelowTimedLifeAB">
         <Behavior value="DeathFromBelowTimedLife"/>
     </CEffectApplyBehavior>
+    <CEffectEnumArea id="GreaterFeedbackSA">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="-;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="1.3" Effect="FeedbackSet"/>
+    </CEffectEnumArea>
     <CEffectApplyBehavior id="HillInvulnerabilityAB">
         <WhichUnit Value="Caster"/>
         <Behavior value="HillInvulnerability"/>
@@ -428,6 +434,14 @@
         <EffectArray value="ShadowHallucinationAB"/>
         <EffectArray value="ShadowHallucinationLifeAB"/>
     </CEffectSet>
+    <CEffectApplyBehavior id="SingularityBlastAB">
+        <Behavior value="SingularityBlastStunned"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="SingularityBlastSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="2" Effect="SingularityBlastAB"/>
+    </CEffectEnumArea>
     <CEffectDamage id="SpotterBioDischargeDamage" parent="DU_WEAP">
         <AttributeBonus index="Structure" value="12"/>
         <Amount value="12"/>

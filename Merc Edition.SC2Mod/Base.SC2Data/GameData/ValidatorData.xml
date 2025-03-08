@@ -108,6 +108,15 @@
         <WhichUnit Value="CasterOuter"/>
         <Value value="Bunker"/>
     </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="HighTemplarPartisan">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="HighTemplarPartisan"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotHighTemplarPartisan">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="HighTemplarPartisan"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitType id="IsACV">
         <Value value="ACV"/>
     </CValidatorUnitType>
