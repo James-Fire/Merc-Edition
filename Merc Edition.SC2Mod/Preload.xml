@@ -15,5 +15,6 @@
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
 <Sound id="RedlineReactorMusicEasterEgg"/>
+<Unit id="InfestedTerran"/>
 <Unit id="ARESWarbotMercMod"/>
 </Preload>

@@ -11,6 +11,7 @@ int libBA5CCDED_gv_eventAppliedIncrement;
 int libBA5CCDED_gv_zeusCount;
 bool libBA5CCDED_gv_odinRescued;
 bool libBA5CCDED_gv_genericDifficulty;
+bool libBA5CCDED_gv_nightmarePlus;
 bool libBA5CCDED_gv_myWave;
 bool libBA5CCDED_gv_easterEggActive;
 point libBA5CCDED_gv_hillRespawnPoint;
@@ -27,6 +28,13 @@ void libBA5CCDED_gf_Ihanriiify (playergroup lp_players);
 void libBA5CCDED_gf_MidasTouched (playergroup lp_players);
 
 // Trigger Declarations
+trigger libBA5CCDED_gt_Gonnaneedabiggerboat;
+trigger libBA5CCDED_gt_WeRobBanks;
+trigger libBA5CCDED_gt_Showmethemoney;
+trigger libBA5CCDED_gt_Rosebud;
+trigger libBA5CCDED_gt_Failuretocommunicate;
+trigger libBA5CCDED_gt_Iseedeadpeople;
+trigger libBA5CCDED_gt_NightmarePlus;
 trigger libBA5CCDED_gt_OpenBanks;
 trigger libBA5CCDED_gt_SaveBanks;
 trigger libBA5CCDED_gt_ListenforChat;
@@ -58,6 +66,9 @@ trigger libBA5CCDED_gt_NaniteEmitterBurrow;
 trigger libBA5CCDED_gt_CabalCyberneticReconstructionAssault;
 trigger libBA5CCDED_gt_CabalCyberneticReconstructionFighter;
 trigger libBA5CCDED_gt_HillRespawn;
+trigger libBA5CCDED_gt_SpawnInfested;
+trigger libBA5CCDED_gt_NightmarePlusEvent;
+trigger libBA5CCDED_gt_NightmarePlusInitial;
 
 // Library Initialization
 void libBA5CCDED_InitVariables ();

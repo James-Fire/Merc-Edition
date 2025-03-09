@@ -458,6 +458,168 @@ void libBA5CCDED_gf_MidasTouched (playergroup lp_players) {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Gonna need a bigger boat
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_Gonnaneedabiggerboat_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Supply Usage Disabled"));
+    PlayerSetState(1, c_playerStateFoodIgnored, true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_Gonnaneedabiggerboat_Init () {
+    libBA5CCDED_gt_Gonnaneedabiggerboat = TriggerCreate("libBA5CCDED_gt_Gonnaneedabiggerboat_Func");
+    TriggerAddEventChatMessage(libBA5CCDED_gt_Gonnaneedabiggerboat, c_playerAny, "Gonna need a bigger boat", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: We Rob Banks
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_WeRobBanks_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("5 mil credits granted"));
+    libCamp_gf_SetStoryCredits((libCamp_gf_StoryCredits()+5000000));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_WeRobBanks_Init () {
+    libBA5CCDED_gt_WeRobBanks = TriggerCreate("libBA5CCDED_gt_WeRobBanks_Func");
+    TriggerAddEventChatMessage(libBA5CCDED_gt_WeRobBanks, c_playerAny, "We Rob Banks", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Show me the money
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_Showmethemoney_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Minerals and Vespene Granted"));
+    PlayerModifyPropertyInt(1, c_playerPropMinerals, c_playerPropOperAdd, 10000);
+    PlayerModifyPropertyInt(1, c_playerPropVespene, c_playerPropOperAdd, 10000);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_Showmethemoney_Init () {
+    libBA5CCDED_gt_Showmethemoney = TriggerCreate("libBA5CCDED_gt_Showmethemoney_Func");
+    TriggerAddEventChatMessage(libBA5CCDED_gt_Showmethemoney, c_playerAny, "Show me the money", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Rosebud
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_Rosebud_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("VICTORY"));
+    GameOver(1, c_gameOverVictory, true, true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_Rosebud_Init () {
+    libBA5CCDED_gt_Rosebud = TriggerCreate("libBA5CCDED_gt_Rosebud_Func");
+    TriggerAddEventChatMessage(libBA5CCDED_gt_Rosebud, c_playerAny, "Rosebud", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Failure to communicate
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_Failuretocommunicate_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("DEFEAT"));
+    GameOver(1, c_gameOverDefeat, true, true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_Failuretocommunicate_Init () {
+    libBA5CCDED_gt_Failuretocommunicate = TriggerCreate("libBA5CCDED_gt_Failuretocommunicate_Func");
+    TriggerAddEventChatMessage(libBA5CCDED_gt_Failuretocommunicate, c_playerAny, "Failure to communicate", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: I see dead people
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_Iseedeadpeople_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((TriggerIsEnabled(libBA5CCDED_gt_SpawnInfested) == false)) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Units spawn infested on death"));
+        TriggerEnable(libBA5CCDED_gt_SpawnInfested, true);
+    }
+    else {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Units no longer spawn infested on death"));
+        TriggerEnable(libBA5CCDED_gt_SpawnInfested, false);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_Iseedeadpeople_Init () {
+    libBA5CCDED_gt_Iseedeadpeople = TriggerCreate("libBA5CCDED_gt_Iseedeadpeople_Func");
+    TriggerAddEventChatMessage(libBA5CCDED_gt_Iseedeadpeople, c_playerAny, "I see dead people", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nightmare Plus
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NightmarePlus_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((libBA5CCDED_gv_nightmarePlus == true)) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Enemies no longer get +25% damage"));
+        libBA5CCDED_gv_nightmarePlus = false;
+        TriggerEnable(libBA5CCDED_gt_NightmarePlusEvent, false);
+    }
+    else {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Enemies get +25% damage"));
+        libBA5CCDED_gv_nightmarePlus = true;
+        TriggerEnable(libBA5CCDED_gt_NightmarePlusEvent, true);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NightmarePlus_Init () {
+    libBA5CCDED_gt_NightmarePlus = TriggerCreate("libBA5CCDED_gt_NightmarePlus_Func");
+    TriggerAddEventChatMessage(libBA5CCDED_gt_NightmarePlus, c_playerAny, "Nightmare Plus", true);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Open Banks
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
@@ -472,10 +634,15 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
     libBA5CCDED_gv_zeusCount = BankValueGetAsInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount");
     libBA5CCDED_gv_odinRescued = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "Odin");
     libBA5CCDED_gv_genericDifficulty = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty");
+    libBA5CCDED_gv_nightmarePlus = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "NightmarePlus");
     TechTreeUpgradeAddLevel(1, (BankValueGetAsString(libBA5CCDED_gv_eventBank, "Persistent Units", "Warbot Upgrade")), 1);
     if ((libBA5CCDED_gv_genericDifficulty == true)) {
         TriggerExecute(libBA5CCDED_gt_ProtossGenericDifficulty, true, false);
         TriggerEnable(libBA5CCDED_gt_ZergTerranGenericDifficulty, true);
+    }
+
+    if ((libBA5CCDED_gv_nightmarePlus == true)) {
+        TriggerEnable(libBA5CCDED_gt_NightmarePlusEvent, true);
     }
 
     return true;
@@ -499,6 +666,7 @@ bool libBA5CCDED_gt_SaveBanks_Func (bool testConds, bool runActions) {
 
     BankValueSetFromInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount", libBA5CCDED_gv_zeusCount);
     BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty", libBA5CCDED_gv_genericDifficulty);
+    BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Settings", "NightmarePlus", libBA5CCDED_gv_nightmarePlus);
     BankSave(libBA5CCDED_gv_eventBank);
     return true;
 }
@@ -1737,7 +1905,85 @@ void libBA5CCDED_gt_HillRespawn_Init () {
     TriggerAddEventUnitDamaged(libBA5CCDED_gt_HillRespawn, null, c_unitDamageTypeAny, c_unitDamageFatal, null);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Spawn Infested
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SpawnInfested_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(UnitGetPropertyInt(EventUnit(), c_unitPropSuppliesUsed, c_unitPropCurrent), "InfestedTerran", 0, 15, UnitGetPosition(EventUnit()));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SpawnInfested_Init () {
+    libBA5CCDED_gt_SpawnInfested = TriggerCreate("libBA5CCDED_gt_SpawnInfested_Func");
+    TriggerEnable(libBA5CCDED_gt_SpawnInfested, false);
+    TriggerAddEventUnitDied(libBA5CCDED_gt_SpawnInfested, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nightmare Plus Event
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NightmarePlusEvent_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnitCreatedUnit()) == 1))) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NightmarePlusEvent_Init () {
+    libBA5CCDED_gt_NightmarePlusEvent = TriggerCreate("libBA5CCDED_gt_NightmarePlusEvent_Func");
+    TriggerEnable(libBA5CCDED_gt_NightmarePlusEvent, false);
+    TriggerAddEventUnitCreated(libBA5CCDED_gt_NightmarePlusEvent, null, null, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nightmare Plus Initial
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_NightmarePlusInitial_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto8CFDA2F3_g;
+    int auto8CFDA2F3_u;
+    unit auto8CFDA2F3_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto8CFDA2F3_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, 0, (1 << (c_targetFilterDead - 32))), 0);
+    auto8CFDA2F3_u = UnitGroupCount(auto8CFDA2F3_g, c_unitCountAll);
+    for (;; auto8CFDA2F3_u -= 1) {
+        auto8CFDA2F3_var = UnitGroupUnitFromEnd(auto8CFDA2F3_g, auto8CFDA2F3_u);
+        if (auto8CFDA2F3_var == null) { break; }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_NightmarePlusInitial_Init () {
+    libBA5CCDED_gt_NightmarePlusInitial = TriggerCreate("libBA5CCDED_gt_NightmarePlusInitial_Func");
+}
+
 void libBA5CCDED_InitTriggers () {
+    libBA5CCDED_gt_Gonnaneedabiggerboat_Init();
+    libBA5CCDED_gt_WeRobBanks_Init();
+    libBA5CCDED_gt_Showmethemoney_Init();
+    libBA5CCDED_gt_Rosebud_Init();
+    libBA5CCDED_gt_Failuretocommunicate_Init();
+    libBA5CCDED_gt_Iseedeadpeople_Init();
+    libBA5CCDED_gt_NightmarePlus_Init();
     libBA5CCDED_gt_OpenBanks_Init();
     libBA5CCDED_gt_SaveBanks_Init();
     libBA5CCDED_gt_ListenforChat_Init();
@@ -1769,6 +2015,9 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Init();
     libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init();
     libBA5CCDED_gt_HillRespawn_Init();
+    libBA5CCDED_gt_SpawnInfested_Init();
+    libBA5CCDED_gt_NightmarePlusEvent_Init();
+    libBA5CCDED_gt_NightmarePlusInitial_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
