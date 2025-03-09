@@ -9,6 +9,16 @@
         <OperandArray value="CountUpgradeFireSuppressionSystemsCompleteOnly"/>
         <OperandArray value="CountUpgradeSwannsSuppressionCompleteOnly"/>
     </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorDragoonPostilionCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="DragoonPostilion" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorHighTemplarPartisanCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="HighTemplarPartisan" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorMinikinCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Minikin" State="CompleteOnlyAtUnit"/>

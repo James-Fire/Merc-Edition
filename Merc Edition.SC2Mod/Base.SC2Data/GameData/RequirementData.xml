@@ -3,6 +3,9 @@
     <CRequirement id="DontHaveStabilizerMedpacks">
         <NodeArray index="Show" Link="NotCountUpgradeStabilizerMedpacksMercCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="DragoonPostilion">
+        <NodeArray index="Show" Link="CountBehaviorDragoonPostilionCompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="FireSuppressionSystemsNotResearched">
         <NodeArray index="Use" Link="NotAndCountUpgradeFireSuppressionSystemsCompleteOnlyCountUpgradeSwannsSuppressionCompleteOnly"/>
     </CRequirement>
@@ -11,6 +14,9 @@
     </CRequirement>
     <CRequirement id="HaveOrbitalRelay">
         <NodeArray index="Show" Link="OrCountUpgradeOrbitalRelayCompleteOnlyCountUpgradeAdvancedOrbitalCommandCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="IsHighTemplarPartisan">
+        <NodeArray index="Show" Link="CountBehaviorHighTemplarPartisanCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="IsInSilentMode">
         <NodeArray index="Show" Link="CountBehaviorNomadSilentModeCompleteOnlyAtUnit"/>

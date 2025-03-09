@@ -227,6 +227,26 @@
             <AbilLinkDisableArray value="CommandCenterTransport"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="HighTemplarPartisan">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoFlags index="AlwaysUseGameText" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification UnitNameOverride="HighTemplarPartisanName">
+            <VitalMaxArray index="Life" value="50"/>
+            <VitalMaxArray index="Shields" value="50"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DragoonPostilion">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoFlags index="AlwaysUseGameText" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification RangedWeaponRange="4" UnitNameOverride="DragoonPostilion">
+            <AdditiveAttackSpeedFactor value="0.2"/>
+            <VitalMaxArray index="Life" value="110"/>
+            <VitalMaxArray index="Shields" value="100"/>
+            <VitalRegenArray index="Shields" value="4"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="Hill180sRespawn">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -807,6 +827,19 @@
         <BuffFlags index="RefreshStack" value="1"/>
         <MaxStackCount value="13"/>
         <Tooltip value="Button/Tooltip/ShellShower"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SingularityBlastStunned">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="4"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="Reveal" value="1"/>
+            <ModifyFlags index="Detected" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="VoidHighTemplarPsiStormCripple">
         <InfoFlags index="Hidden" value="1"/>

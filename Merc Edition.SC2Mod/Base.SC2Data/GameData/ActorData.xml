@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSplat id="GreaterFeedbackCursorSplat" parent="CursorSplat" abil="GreaterFeedback"/>
+    <CActorRange id="GreaterFeedbackRange" parent="RangeAbil" abil="GreaterFeedback">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorModel id="GreaterFeedbackM" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.GreaterFeedbackSA.Start; At Effect" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {185,222,255 1.500000}"/>
+    </CActorModel>
+    <CActorSound id="GreaterFeedbackS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.GreaterFeedbackSA.Start; At Effect" Send="Create"/>
+        <Sound value="ArtanisVoid_PsionicAssaultLaunch"/>
+    </CActorSound>
+    <CActorUnit id="HighTemplar">
+        <On Terms="Behavior.HighTemplarPartisan.On" Send="ModelSwap HighTemplarPartisan"/>
+        <On Terms="Abil.PsiStormShakuras.SourceCastStart" Send="AnimPlay A A"/>
+        <On Terms="Abil.GreaterFeedback.SourceCastStart" Send="AnimPlay B B"/>
+    </CActorUnit>
     <CActorModelMaterial id="HillInvulnerability" parent="BehaviorGlaze">
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.HillInvulnerability.On" Send="Create"/>
@@ -161,6 +181,39 @@
         <Host Subject="_Unit"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
+    <CActorModel id="SingularityBlastChannel" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Abil.SingularityBlast.SourcePrepStart" Send="Create"/>
+        <On Terms="Abil.SingularityBlast.SourcePrepStop" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorSound id="SingularityBlastChargeup" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.SingularityBlast.SourcePrepStart" Send="Create"/>
+        <On Terms="Abil.SingularityBlast.SourcePrepStop" Send="Destroy"/>
+        <Sound value="Artanis_ResurgenceCharge"/>
+    </CActorSound>
+    <CActorSplat id="SingularityBlastCursorSplat" parent="CursorSplat" abil="SingularityBlast"/>
+    <CActorModel id="SingularityBlastImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SingularityBlastSA.Start; At Effect" Send="Create"/>
+    </CActorModel>
+    <CActorRange id="SingularityBlastRange" parent="RangeAbil" abil="SingularityBlast">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorSound id="SingularityBlastSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SingularityBlastSA.Start; At Effect" Send="Create"/>
+        <Sound value="Kerrigan_CelestialBeam_Launch"/>
+        <Layers Sound="Tempest_AirAttackImpact">
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
     <CActorUnit id="Spotter" parent="GenericUnitMorph" unitName="Spotter">
         <Aliases value="_UnitLarge"/>
         <Macros value="PhysicsDeathsSwarmAir"/>
@@ -1287,6 +1340,8 @@
     <CActorModel id="GenericStunOverheadModel">
         <On Terms="Behavior.StunnedPenetratorRound.On" Send="Create"/>
         <On Terms="Behavior.StunnedPenetratorRound.Off" Send="Destroy"/>
+        <On Terms="Behavior.SingularityBlastStunned.On" Send="Create"/>
+        <On Terms="Behavior.SingularityBlastStunned.Off" Send="Destroy"/>
     </CActorModel>
     <CActorModel id="Inspire" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>

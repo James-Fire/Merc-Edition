@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="GreaterFeedback">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="GreaterFeedbackSA"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Charge Link=""/>
+            <Cooldown Link=""/>
+        </Cost>
+        <TargetFilters value="CanHaveEnergy,Visible,HasEnergy;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <CursorEffect value="GreaterFeedbackSA"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Feedback" Requirements="IsHighTemplarPartisan"/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="HillRevive">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="HillInvulnerabilityAB"/>
@@ -11,6 +27,21 @@
             <Flags index="IgnoreUser" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="SingularityBlast">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SingularityBlastSA"/>
+        <Cost>
+            <Cooldown TimeUse="40"/>
+        </Cost>
+        <Range value="11"/>
+        <Arc value="360"/>
+        <PrepTime value="2.5"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <CursorEffect value="SingularityBlastSA"/>
+        <ProgressButtonArray index="Prep" value="SingularityBlast"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SingularityBlast" Requirements="DragoonPostilion"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="SpotterContaminate">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
         <Effect index="0" value="Contaminate"/>
@@ -307,6 +338,7 @@
             <Vital index="Energy" value="50"/>
         </Cost>
         <Range index="0" value="11"/>
+        <CmdButtonArray index="Execute" Requirements="IsHighTemplarPartisan"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="ReaperMissiles">
         <EditorCategories value="AbilityorEffectType:Units"/>
