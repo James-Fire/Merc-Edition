@@ -633,6 +633,7 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
     libBA5CCDED_gv_eventBank = BankLastCreated();
     libBA5CCDED_gv_zeusCount = BankValueGetAsInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount");
     libBA5CCDED_gv_odinRescued = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "Odin");
+    libBA5CCDED_gv_supplyMaxxed = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "SupplyMaxxed");
     libBA5CCDED_gv_genericDifficulty = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty");
     libBA5CCDED_gv_nightmarePlus = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "NightmarePlus");
     TechTreeUpgradeAddLevel(1, (BankValueGetAsString(libBA5CCDED_gv_eventBank, "Persistent Units", "Warbot Upgrade")), 1);
@@ -643,6 +644,10 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
 
     if ((libBA5CCDED_gv_nightmarePlus == true)) {
         TriggerEnable(libBA5CCDED_gt_NightmarePlusEvent, true);
+    }
+
+    if ((libBA5CCDED_gv_supplyMaxxed == true)) {
+        PlayerModifyPropertyInt(1, c_playerPropSuppliesMade, c_playerPropOperSetTo, 200);
     }
 
     return true;

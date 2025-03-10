@@ -80,6 +80,7 @@ Variable/Name/lib_BA5CCDED_4097A7BD=NightmarePlus
 Variable/Name/lib_BA5CCDED_415F61E0=rng
 Variable/Name/lib_BA5CCDED_474F7F82=Easter Egg Active?
 Variable/Name/lib_BA5CCDED_60A0B28B=Hill Respawn Point
+Variable/Name/lib_BA5CCDED_72832601=SupplyMaxxed
 Variable/Name/lib_BA5CCDED_7DA5D659=ZeusCount
 Variable/Name/lib_BA5CCDED_7E24084C=Hill
 Variable/Name/lib_BA5CCDED_9E09B7C9=Player

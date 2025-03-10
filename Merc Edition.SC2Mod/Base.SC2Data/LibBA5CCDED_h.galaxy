@@ -10,6 +10,7 @@ int libBA5CCDED_gv_eventIncrement;
 int libBA5CCDED_gv_eventAppliedIncrement;
 int libBA5CCDED_gv_zeusCount;
 bool libBA5CCDED_gv_odinRescued;
+bool libBA5CCDED_gv_supplyMaxxed;
 bool libBA5CCDED_gv_genericDifficulty;
 bool libBA5CCDED_gv_nightmarePlus;
 bool libBA5CCDED_gv_myWave;
