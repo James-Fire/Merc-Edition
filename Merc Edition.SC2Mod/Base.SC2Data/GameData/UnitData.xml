@@ -315,6 +315,7 @@
         <AbilArray Link="HeroNuclearStrike"/>
         <AbilArray Link="NaniteSnipe"/>
         <AbilArray Link="EchoDropPods"/>
+        <AbilArray Link="EchoNuke"/>
         <BehaviorArray Link="GhostEnergyUserRadar"/>
         <BehaviorArray Link="HeroDetectorRadar"/>
         <WeaponArray Link="NovaWeaponCanisterRifle"/>
@@ -327,7 +328,7 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="HeroNuclearStrike,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="PermanentlyCloakedNova" Type="Passive" Row="1" Column="1"/>
-            <LayoutButtons Face="ReapTheWhirlwind" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="ReapTheWhirlwind" Type="AbilCmd" AbilCmd="EchoNuke,Execute" Row="1" Column="0"/>
             <LayoutButtons Face="HeroNukeCalldown" Type="AbilCmd" AbilCmd="HeroNuclearStrike,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="NaniteSnipe" Type="AbilCmd" AbilCmd="NaniteSnipe,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="EchoDropPods" Type="AbilCmd" AbilCmd="EchoDropPods,Execute" Row="2" Column="1"/>

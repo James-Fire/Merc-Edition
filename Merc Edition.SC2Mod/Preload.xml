@@ -10,11 +10,11 @@
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
 <Effect id="HeroNukeDetonate"/>
+<Effect id="EchoDropPodsIndicatorDummy"/>
 <Effect id="CabalAssaultReviveDummy"/>
 <Effect id="CabalFighterReviveDummy"/>
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
-<Effect id="EchoDropPodsIndicatorDummy"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
 <Sound id="RedlineReactorMusicEasterEgg"/>
 <Unit id="InfestedTerran"/>

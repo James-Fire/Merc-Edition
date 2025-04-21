@@ -12,6 +12,15 @@
         <ProgressButtonArray index="Prep" value="EchoDropPods"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="EchoDropPods"/>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="EchoNuke">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="120"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ReapTheWhirlwind">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="GreaterFeedback">
         <Alignment value="Negative"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>

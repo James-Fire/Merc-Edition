@@ -1885,12 +1885,20 @@ void libBA5CCDED_gt_EchoDroppodsIndicator_Init () {
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_EchoDeath_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitAbilityGetCooldown(EventUnit(), "EchoNuke", "Abil/EchoNuke") == 0.0))) {
+            return false;
+        }
+    }
+
     // Actions
     if (!runActions) {
         return true;
     }
 
     PlayerCreateEffectPoint(EventPlayer(), "HeroNukeDetonate", EventPlayerEffectUsedPoint(c_effectLocationSourcePoint));
+    UnitAbilitySpendExplicit(EventUnit(), AbilityCommand("EchoNuke", 0), c_spendLocationAll, 1.0, 1.0, 1.0, 1.0);
     return true;
 }
 

@@ -17,6 +17,7 @@ Abil/Name/CondorSpiderMineUnburrow=Spider Mine Unburrow
 Abil/Name/CondorSpiderMines=Use Spider Mines
 Abil/Name/DevilDogGrapple=Grapple
 Abil/Name/EchoDropPods=Echo Drop Pods
+Abil/Name/EchoNuke=Echo Nuke
 Abil/Name/FerrierofSouls=Ferrier of Souls
 Abil/Name/FlashFlame=Flash Flame
 Abil/Name/FortressBombardment=Fortress Bombardment
