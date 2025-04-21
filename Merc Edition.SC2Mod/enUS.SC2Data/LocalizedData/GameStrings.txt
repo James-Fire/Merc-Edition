@@ -16,6 +16,7 @@ Abil/Name/CharonDropshipTrain=Train
 Abil/Name/CondorSpiderMineUnburrow=Spider Mine Unburrow
 Abil/Name/CondorSpiderMines=Use Spider Mines
 Abil/Name/DevilDogGrapple=Grapple
+Abil/Name/EchoDropPods=Echo Drop Pods
 Abil/Name/FerrierofSouls=Ferrier of Souls
 Abil/Name/FlashFlame=Flash Flame
 Abil/Name/FortressBombardment=Fortress Bombardment
@@ -38,6 +39,7 @@ Abil/Name/MorphToAgitator=Morph To Agitator
 Abil/Name/MorphToAnarchist=Morph To Anarchist
 Abil/Name/NaniteCloudEmitterBurrow=Nanite Cloud Emitter Burrow
 Abil/Name/NaniteCloudEmitterUnburrow=Nanite Cloud Emitter Unburrow
+Abil/Name/NaniteSnipe=Nanite Snipe
 Abil/Name/NeoTitanium=Neo-Titanium
 Abil/Name/NomadClusterMissileDummy=Nomad Cluster Missile Dummy
 Abil/Name/NomadTargetLock=Target Lock
@@ -253,6 +255,7 @@ Button/Name/DieselBasedNapalm=Diesel Based Napalm
 Button/Name/DivineArmor=Divine Armor
 Button/Name/DukesRevenge=Duke's Revenge
 Button/Name/ED067=ED-067
+Button/Name/EchoDropPods=Drop Pods
 Button/Name/EidolonSuit=Eidolon Suit
 Button/Name/EnableBatteries=Enable Batteries
 Button/Name/EnableRagnarok=Enable Ragnarok
@@ -301,6 +304,7 @@ Button/Name/Minikin=Minikin
 Button/Name/MorphtoAgitator=Morph to Agitator
 Button/Name/MorphtoAnarchist=Morph to Anarchist
 Button/Name/NanitePulse=Nanite Pulse
+Button/Name/NaniteSnipe=Nanite Snipe
 Button/Name/NapalmStrike=Napalm Strike
 Button/Name/NeoTitaniumPlating=Neo-Titanium Plating
 Button/Name/NeosteelCupHolders=Neosteel Cup Holders
@@ -316,6 +320,7 @@ Button/Name/RagnarokWeapons=Ragnarok Weapons
 Button/Name/RapidAlgorithms=Rapid Algorithms
 Button/Name/Rattlesnake22=Rattlesnake
 Button/Name/RaynorSpecial=Raynor Special
+Button/Name/ReapTheWhirlwind=Reap The Whirlwind
 Button/Name/ReaperMissiles=Reaper Missiles
 Button/Name/RedlineReactor=Redline Reactor
 Button/Name/ReflectiveArmor=Reflective Armor
@@ -453,6 +458,8 @@ Button/Tooltip/DivineArmor=Titans have a base armor of 3.
 Button/Tooltip/DukesRevenge=This capital ship dates back to the early days of the Terran Dominion just after the loss of General Duke to the Queen of Blades.  It has had multiple captains over the years and is said to be haunted by the Generals ghost. <n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/DukesRevengeHero=Powerful warship.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/ED067=Apex Security Partnership's ED-067, a peacekeeping machine designed for urban pacification, malfunctioned during its first demonstration, killing junior executive Mr. Losumn. Dr. Rorke and technicians struggled to control the faulty robot, shutting it down.  The Predator program was given green-light due to the Losumn tragedy and due to rumors of the Enforcement Droid series using salvaged Dragoon parts from the first war.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Echo=Nova is permanently cloaked, has a powerful ranged attack, and has multiple special abilities. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/>
+Button/Tooltip/EchoDropPods=Echo calls down three drop pods each loaded with 2 War Pigs, 1 Hammer Security and 2 Block B Reapers to fight. 
 Button/Tooltip/EidolonSuit=Phantom Cloak no longer costs energy to use. Upon cloaking, gain Super Cloak for <d time="7"/>, occuring once every <d time="168"/>.
 Button/Tooltip/EnableBatteries=Enable numerous rapid-fire laser batteries effective versus groups.
 Button/Tooltip/EnableRagnarok=Enable a slower, stronger cannon effective versus singular targets.
@@ -511,6 +518,7 @@ Button/Tooltip/MorphtoAnarchist=Close range combat unit. Deals damage in a small
 Button/Tooltip/NaniteCloudEmitter=Automated Gas Defense system. Destroy to open the containment door.
 Button/Tooltip/NaniteCloudEmitterBurrowed=Automated Gas Defense system. Destroy to open the containment door.
 Button/Tooltip/NanitePulse=Nanite Cloud Emitters now affect mechanical units, and will periodically emit a pulse to deal additional damage. 
+Button/Tooltip/NaniteSnipe=Deals 200 damage to the target enemy unit.  If the target Is a mechanical unit then this ability kills the pilot inside and then takes over the unit granting it an increase in damage and attack speed by 30%.<n/><n/>Can target biological and mechanical units. <n/><n/><c val="FFFF80">Heroic units are immune.</c>
 Button/Tooltip/NapalmStrike=Fires a small napalm missile that deals 80 damage on impact and leaves the area on fire for a short time, dealing 30 damage per second.
 Button/Tooltip/NeoTitaniumPlating=Grants 10 armor in Siege mode or 5 armor in Tank mode, lasting for <d time="7"/>.
 Button/Tooltip/NeosteelCupHolders=Bunkered units gain 3 sight and weapon range.
@@ -519,11 +527,13 @@ Button/Tooltip/NukeCalldown=Calls down a Nuclear Strike at a target location. Nu
 Button/Tooltip/OptimizedUEDLogistics=Significantly reduces the time required to train the unit.
 Button/Tooltip/PenetratorRound=Deal 200 damage to ground enemies in a line and stun them for 4 seconds.
 Button/Tooltip/PermanentCloakDuskWing=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.
+Button/Tooltip/PermanentlyCloakedNova=Echo is permanently cloaked.
 Button/Tooltip/Phantom=Infiltration unit. Can use Snipe and Cloak abilities. Can also call down Tactical Nukes.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/PliableArmor=Increases Agitator and Anarchist armor by 1 and movement speed by 2. When killed, the area is ignited, causing enemies to run in fear. Transformation time halved.
 Button/Tooltip/PointBreakDrone=Uses a laser to shoot down enemy missiles.  <n/>Cannot target special attacks. <n/>Times out after <d ref="Behavior,PointDefenseDroneTimedLife,Duration"/> seconds.<n/><n/><c val="f078ff">Each shot consumes 10 energy.</c>
 Button/Tooltip/PsiDispersionDevice=Defensive structure. Slows the attack and movement speeds of all nearby Zerg units.<n/><n/><c val="#ColorAttackInfo">Heroic units are immune.</c>
 Button/Tooltip/PsiDisruptionDevice=Defensive structure. Slows the attack and movement speeds of all nearby Zerg units, and damages them for 5 life per second.<n/><n/><c val="#ColorAttackInfo">Heroic units are immune.</c>
+Button/Tooltip/PsionicRadar=Allows Echo to see enemy psionic units on radar.
 Button/Tooltip/PsychoMissiles=Launch a volley of missiles that deals 30 damage. Automatically cast when attacking targets.
 Button/Tooltip/R31TearGasRounds=Wolverine attacks have a 10% chance to Fear enemies in a small area, causing them to run around uncontrollably for 2 seconds.<n/><n/><c val="FFFF80">The same enemy cannot be Feared more than once every 4 seconds.</c>
 Button/Tooltip/RadarTower=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy. <n/><n/><c val="FFE303">Detector</c>
@@ -532,6 +542,7 @@ Button/Tooltip/RailGunTurret=Automated defensive turret. Damages all enemy groun
 Button/Tooltip/RapidAlgorithms=Charon Dropships gain the Ignite Afterburners ability and 2 movement speed. Deploying units is now instant.
 Button/Tooltip/Rattlesnake22=Kev "Rattlesnake" West is a terran mercenary marauder and is one of the few mercenaries to be honorably discharged from the Armed Forces. Though he refuses to take jobs that have the possibility of harming innocent people, West still works steadily. His war days might be behind him, but he did not lose his bite.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorSpecial=Condors can now jump up and down cliffs, and fire while moving.
+Button/Tooltip/ReapTheWhirlwind=Upon taking fatal damage, a nuke detonates on their location to clear out nearby enemy forces.  Echo is then resurrected at the last checkpoint.
 Button/Tooltip/ReaperMissiles=Fires several high explosive missiles that each deal 500 damage in an area.
 Button/Tooltip/RedlineReactor=Increases damage by 10 and doubles movement speed for <d time="8.4"/>.
 Button/Tooltip/ReflectiveArmor=Copperheads take half damage from all sources. When taking damage, damage dealt is briefly increased.
@@ -720,6 +731,16 @@ Effect/Name/DropTrainSetMerc=Drop Train Set Merc
 Effect/Name/DropTrainStarport=Drop Train Starport
 Effect/Name/ED067AttackDamage=ED-067 Attack Damage
 Effect/Name/ED067AttackSet=ED-067 Attack Set
+Effect/Name/EchoBellyIncapacitated=Echo Belly Incapacitated
+Effect/Name/EchoDeathDummy=Echo Death Dummy
+Effect/Name/EchoDropPodsCP=Echo Drop Pods CP
+Effect/Name/EchoDropPodsCUBB=Echo Drop Pods CU (BB)
+Effect/Name/EchoDropPodsCUHS=Echo Drop Pods CU (HS)
+Effect/Name/EchoDropPodsCUWP=Echo Drop Pods CU (WP)
+Effect/Name/EchoDropPodsCUZeus=Echo Drop Pods CU (Zeus)
+Effect/Name/EchoDropPodsDelayAB=Echo Drop Pods Delay AB
+Effect/Name/EchoDropPodsIndicatorDummy=Echo Drop Pods Indicator Dummy
+Effect/Name/EchoDropPodsSet=Echo Drop Pods Set
 Effect/Name/FRANomadKingCannonsDamage=FR-A Nomad King Cannons Damage
 Effect/Name/FearPliableArmorApplyBehavior=FearPliableArmorApplyBehavior
 Effect/Name/FerrierofSoulsApplyBehavior=FerrierofSoulsApplyBehavior
@@ -800,6 +821,10 @@ Effect/Name/MinikinCU=Minikin CU
 Effect/Name/MinikinLaunchMissile=Minikin Launch Missile
 Effect/Name/NanitePulseDamage=Nanite Pulse Damage
 Effect/Name/NanitePulseSA=Nanite Pulse SA
+Effect/Name/NaniteSnipeDamage=Nanite Snipe (Damage)
+Effect/Name/NaniteSnipeDeathrattleAB=Nanite Snipe Deathrattle AB
+Effect/Name/NaniteSnipeMindControl=Nanite Snipe Mind Control
+Effect/Name/NaniteSnipeSet=Nanite Snipe Set
 Effect/Name/NaniteTurretBurrowOrder=Nanite Turret Burrow Order
 Effect/Name/NanitesHeal=Nanites Heal
 Effect/Name/NanobotInjectorsDamage=NanobotInjectorsDamage
@@ -1092,6 +1117,7 @@ Unit/Name/DukesRevengeHero=Duke's Revenge
 Unit/Name/DuskWingWeaponSecondary=Dusk Wing Secondary
 Unit/Name/DuskWingWeaponTertiary=Dusk Wing Tertiary
 Unit/Name/ED067=ED-067
+Unit/Name/Echo=Echo
 Unit/Name/FlyingBlockB=Flying Block B
 Unit/Name/FortressBombardmentMissile=Fortress Bombardment Missile
 Unit/Name/Freyja=Freyja
@@ -1158,6 +1184,7 @@ Unit/Name/ZealotAnduin=Militant
 Unit/Name/ZeusLanderFlying=Samson
 Unit/Name/ZeusLanderLanded=Samson
 UnitKillRank/ARESMercEdition=Security Robot 
+UnitKillRank/Echo=Dominion Assassin
 UnitKillRank/GravenHill=Graven Hill
 UnitKillRank/GravenHillSecret=Mercenary Gigachad
 UnitKillRank/MercRaynor=Rebel Commander
@@ -1184,6 +1211,7 @@ Upgrade/Name/ConcussiveShrapnel=Concussive Shrapnel
 Upgrade/Name/ConfederateReactor=Confederate Reactor
 Upgrade/Name/DeadManSwitch=Dead Man Switch
 Upgrade/Name/DevastatorOverride=Devastator Override
+Upgrade/Name/EchoBelly=EchoBelly
 Upgrade/Name/EidolonSuit=Eidolon Suit
 Upgrade/Name/ExplosiveCalibrations=Explosive Calibrations
 Upgrade/Name/Gen1Plating=Gen 1 Plating

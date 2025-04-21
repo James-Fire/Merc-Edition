@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="EchoDropPods">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <PrepEffect value="EchoDropPodsIndicatorDummy"/>
+        <Effect index="0" value="EchoDropPodsCP"/>
+        <Cost/>
+        <Range value="5"/>
+        <PrepTime value="4"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <ProgressButtonArray index="Prep" value="EchoDropPods"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="EchoDropPods"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="GreaterFeedback">
         <Alignment value="Negative"/>
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
@@ -41,6 +53,24 @@
         <CursorEffect value="SingularityBlastSA"/>
         <ProgressButtonArray index="Prep" value="SingularityBlast"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SingularityBlast" Requirements="DragoonPostilion"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="NaniteSnipe">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="NaniteSnipeSet"/>
+        <Cost>
+            <Cooldown TimeUse="10"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <AutoCastFilters value="Visible;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="8"/>
+        <AutoCastValidatorArray value="TargetLifeGE80"/>
+        <CastIntroTime value="0.5"/>
+        <Marker>
+            <MatchFlags index="Link" value="0"/>
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SniperBotSnipe"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SpotterContaminate">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
@@ -1220,7 +1250,10 @@
             <Cooldown TimeUse="84"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="LowGradeStims"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
         <Flags index="Transient" value="1"/>
+        <AutoCastValidatorArray value="CasterInCombat"/>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="MagrailMunitions">
         <EditorCategories value="AbilityorEffectType:Units"/>

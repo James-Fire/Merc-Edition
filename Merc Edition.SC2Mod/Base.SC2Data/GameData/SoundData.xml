@@ -400,6 +400,10 @@
         <Pitch value="-2.000000,4.000000"/>
         <Volume value="-12.000000,-7.000000"/>
     </CSound>
+    <CSound id="EchoDropPodsLaunchS" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\DropPod\DropPod_Drop0.wav" FacialGroup=""/>
+        <Mode value="3DHead"/>
+    </CSound>
     <CSound id="HillDeath" parent="Death">
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death04.wav"/>
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death07.wav"/>
@@ -427,6 +431,26 @@
     <CSound id="MinikinLaunch" parent="Combat">
         <AssetArray File="Assets\Sounds\Liberator_AA_Launch_04.wav" FacialGroup=""/>
         <Volume value="-11.000000,-11.000000"/>
+    </CSound>
+    <CSound id="NaniteSnipeControlS" parent="Combat">
+        <AssetArray File="Assets\Sounds\DarkArchon_MindControl00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\DarkArchon_MindControl01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\DarkArchon_MindControl02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\DarkArchon_MindControl03.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="NaniteSnipeLaunch" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch05_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch06_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch07_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch08_1ch.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="3.000000,3.000000"/>
+        <Volume value="-2.000000,-2.000000"/>
     </CSound>
     <CSound id="RadarTowerMorphStart" parent="Combat">
         <AssetArray File="Assets\Sounds\Liberator_MorphToDefender_SmartServos.wav" FacialGroup=""/>

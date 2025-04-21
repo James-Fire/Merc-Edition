@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="EchoDropPodsDelay">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="2.3"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Benign" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ATXPointDefense">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -289,6 +304,51 @@
             <BehaviorLinkDisableArray value="Detector9"/>
             <BehaviorLinkDisableArray value="Detector7"/>
             <BehaviorLinkDisableArray value="Detector8"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaniteSnipeDeathrattle">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.15"/>
+        <DamageResponse Fatal="1" Handled="NaniteSnipeMindControl" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NaniteSnipeMindControl">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-mindcontrol.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Player Value="Caster"/>
+        <Modification>
+            <StateFlags index="SuppressRequirements" value="1"/>
+            <AdditiveAttackSpeedFactor value="0.3"/>
+            <DamageDealtFraction index="Spell" value="0.3"/>
+            <DamageDealtFraction index="Melee" value="0.3"/>
+            <DamageDealtFraction index="Ranged" value="0.3"/>
+            <DamageDealtFraction index="Splash" value="0.3"/>
+            <AbilClassDisableArray index="CAbilBuild" value="1"/>
+            <AbilClassDisableArray index="CAbilMerge" value="1"/>
+            <AbilClassDisableArray index="CAbilResearch" value="1"/>
+            <AbilClassDisableArray index="CAbilTrain" value="1"/>
+            <AbilClassDisableArray index="CAbilWarpTrain" value="1"/>
+            <AbilLinkDisableArray value="SpectreNuke"/>
+            <AbilLinkDisableArray value="HallucinationArchon"/>
+            <AbilLinkDisableArray value="HallucinationColossus"/>
+            <AbilLinkDisableArray value="HallucinationHighTemplar"/>
+            <AbilLinkDisableArray value="HallucinationImmortal"/>
+            <AbilLinkDisableArray value="HallucinationPhoenix"/>
+            <AbilLinkDisableArray value="HallucinationProbe"/>
+            <AbilLinkDisableArray value="HallucinationStalker"/>
+            <AbilLinkDisableArray value="HallucinationVoidRay"/>
+            <AbilLinkDisableArray value="HallucinationWarpPrism"/>
+            <AbilLinkDisableArray value="HallucinationZealot"/>
+            <AbilLinkDisableArray value="HallucinationAdept"/>
+            <AbilLinkDisableArray value="HallucinationOracle"/>
+            <AbilLinkDisableArray value="HallucinationDisruptor"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="PlagueMunitions">

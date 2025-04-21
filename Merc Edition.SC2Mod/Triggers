@@ -12662,6 +12662,8 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="9081B1CC"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="9AC69EBF"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="C95C801A"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="C7C4EC77"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="BC2204E6"/>
             <Item Type="Variable" Library="BA5CCDED" Id="60A0B28B"/>
             <Item Type="Variable" Library="BA5CCDED" Id="C0399DBE"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="27DDC8B9"/>
@@ -16137,6 +16139,122 @@
             <Value>CabalRevive1</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Trigger" Id="C7C4EC77">
+            <Event Type="Comment" Library="BA5CCDED" Id="FEEEDD25"/>
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="3E4BAB62"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="E51A7C55"/>
+        </Element>
+        <Element Type="Comment" Id="FEEEDD25">
+            <Comment>
+                oh the humanity
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="3E4BAB62">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D00F9D6F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FB812605"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2AC021D0"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="16DD89C2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0A999D81"/>
+        </Element>
+        <Element Type="Param" Id="FB812605">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EE631277"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="2AC021D0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="BB4C37B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="B3616A1A"/>
+        </Element>
+        <Element Type="Param" Id="16DD89C2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ACC52290"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="03977D39"/>
+        </Element>
+        <Element Type="Param" Id="0A999D81">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3F2584C8"/>
+            <Value>EchoDropPods</Value>
+            <ValueType Type="abilcmd"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E51A7C55">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="6263AB61"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CA5D6F4F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="65637AB2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B7C61A40"/>
+        </Element>
+        <Element Type="Param" Id="CA5D6F4F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A43AFC2"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F864696A"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F864696A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
+        <Element Type="Param" Id="65637AB2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="0054BBD3"/>
+            <Value>EchoDropPodsIndicatorDummy</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="Param" Id="B7C61A40">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="AD458092"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="7033B51E"/>
+        </Element>
+        <Element Type="FunctionCall" Id="7033B51E">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000312"/>
+        </Element>
+        <Element Type="Trigger" Id="BC2204E6">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="42492A9D"/>
+            <Action Type="Comment" Library="BA5CCDED" Id="F1EACECD"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="618142B0"/>
+        </Element>
+        <Element Type="FunctionCall" Id="42492A9D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7434BC92"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2837CE71"/>
+        </Element>
+        <Element Type="Param" Id="7434BC92">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="2837CE71">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>EchoDeathDummy</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="Comment" Id="F1EACECD">
+            <Comment>
+                needs cooldown
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="618142B0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="AB4663C2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="35A62F27"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3DB6A42C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="152C8CB1"/>
+        </Element>
+        <Element Type="Param" Id="35A62F27">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EA2CBB1A"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="261384B4"/>
+        </Element>
+        <Element Type="FunctionCall" Id="261384B4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="3DB6A42C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="FF6AF0FE"/>
+            <Value>HeroNukeDetonate</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="Param" Id="152C8CB1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="01D6D660"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="38552646"/>
+        </Element>
+        <Element Type="FunctionCall" Id="38552646">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="0E9617C3"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="22283BB2"/>
+        </Element>
+        <Element Type="Param" Id="22283BB2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="DE00215F"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C95C9118"/>
         </Element>
         <Element Type="Variable" Id="60A0B28B">
             <VariableType>

@@ -66,6 +66,8 @@ trigger libBA5CCDED_gt_SamsonZeusInjectionPods;
 trigger libBA5CCDED_gt_NaniteEmitterBurrow;
 trigger libBA5CCDED_gt_CabalCyberneticReconstructionAssault;
 trigger libBA5CCDED_gt_CabalCyberneticReconstructionFighter;
+trigger libBA5CCDED_gt_EchoDroppodsIndicator;
+trigger libBA5CCDED_gt_EchoDeath;
 trigger libBA5CCDED_gt_HillRespawn;
 trigger libBA5CCDED_gt_SpawnInfested;
 trigger libBA5CCDED_gt_NightmarePlusEvent;

@@ -400,6 +400,10 @@
         <Find value="1"/>
         <Value value="UseBroodlingGestation"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="UseEchoBelly@Validator">
+        <Find value="1"/>
+        <Value value="UseEchoBelly"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="UseLegionSystems@Validator">
         <Find value="1"/>
         <Value value="UseLegionSystems"/>

@@ -188,52 +188,52 @@ bool auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc (bool testConds, bool runAc
         else if (autoF1BE7618_val == "Medivac") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "CharonDropship", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Probe") {
+        else if (autoF1BE7618_val == "Probe") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "ACV", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Zealot") {
+        else if (autoF1BE7618_val == "Zealot") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "WarPig", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Stalker") {
+        else if (autoF1BE7618_val == "Stalker") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "HammerSecurity", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Sentry") {
+        else if (autoF1BE7618_val == "Sentry") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "MercMedic", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "HighTemplar") {
+        else if (autoF1BE7618_val == "HighTemplar") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "Phantom", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Colossus") {
+        else if (autoF1BE7618_val == "Colossus") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "SiegeBreaker", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Immortal") {
+        else if (autoF1BE7618_val == "Immortal") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "Titan", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Carrier") {
+        else if (autoF1BE7618_val == "Carrier") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "Starcruiser", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Nexus") {
+        else if (autoF1BE7618_val == "Nexus") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "CommandCenter", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Gateway") {
+        else if (autoF1BE7618_val == "Gateway") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "Barracks", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Pylon") {
+        else if (autoF1BE7618_val == "Pylon") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "SupplyDepot", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "PhotonCannon") {
+        else if (autoF1BE7618_val == "PhotonCannon") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "MissileTurret", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Forge") {
+        else if (autoF1BE7618_val == "Forge") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "EngineeringBay", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "CyberneticsCore") {
+        else if (autoF1BE7618_val == "CyberneticsCore") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "Armory", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "TwilightCouncil") {
+        else if (autoF1BE7618_val == "TwilightCouncil") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "GhostAcademy", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
-        if (auto91D9F428_val == "Assimilator") {
+        else if (autoF1BE7618_val == "Assimilator") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "Refinery", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
         else {
@@ -1861,6 +1861,46 @@ void libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Echo Droppods Indicator
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_EchoDroppodsIndicator_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreateEffectPoint(EventUnit(), "EchoDropPodsIndicatorDummy", EventUnitTargetPoint());
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_EchoDroppodsIndicator_Init () {
+    libBA5CCDED_gt_EchoDroppodsIndicator = TriggerCreate("libBA5CCDED_gt_EchoDroppodsIndicator_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_EchoDroppodsIndicator, null, AbilityCommand("EchoDropPods", 0), c_abilEffectStagePrep, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Echo Death
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_EchoDeath_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerCreateEffectPoint(EventPlayer(), "HeroNukeDetonate", EventPlayerEffectUsedPoint(c_effectLocationSourcePoint));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_EchoDeath_Init () {
+    libBA5CCDED_gt_EchoDeath = TriggerCreate("libBA5CCDED_gt_EchoDeath_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_EchoDeath, c_playerAny, "EchoDeathDummy");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Hill Respawn
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_HillRespawn_Func (bool testConds, bool runActions) {
@@ -2016,6 +2056,8 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_NaniteEmitterBurrow_Init();
     libBA5CCDED_gt_CabalCyberneticReconstructionAssault_Init();
     libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init();
+    libBA5CCDED_gt_EchoDroppodsIndicator_Init();
+    libBA5CCDED_gt_EchoDeath_Init();
     libBA5CCDED_gt_HillRespawn_Init();
     libBA5CCDED_gt_SpawnInfested_Init();
     libBA5CCDED_gt_NightmarePlusEvent_Init();

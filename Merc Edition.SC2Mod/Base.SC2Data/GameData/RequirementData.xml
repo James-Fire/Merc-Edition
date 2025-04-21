@@ -143,6 +143,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeDevastatorOverrideCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseEchoBelly">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeEchoBellyCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseEidolonSuit">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeEidolonSuitCompleteOnly"/>

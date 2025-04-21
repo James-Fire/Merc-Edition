@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="EchoBellyIncapacitated">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="Incapacitated"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="EchoDeathDummy">
+        <EditorCategories value=""/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectCreateUnit id="EchoDropPodsCUZeus">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="EchoDropPodsDelayAB"/>
+        <SpawnUnit value="ARESWarbotMercMod"/>
+        <SpawnCount value="0"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="EchoDropPodsDelayAB">
+        <Behavior value="EchoDropPodsDelay"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="EchoDropPodsIndicatorDummy">
+        <EditorCategories value=""/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="AnduinPlasmaBlastDamage" parent="DU_WEAP">
         <Amount value="20"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -59,6 +80,43 @@
     <CEffectApplyBehavior id="DeathFromBelowTimedLifeAB">
         <Behavior value="DeathFromBelowTimedLife"/>
     </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="EchoDropPodsCP">
+        <EditorCategories value=""/>
+        <PeriodCount value="3"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicEffectArray value="EchoDropPodsSet"/>
+        <PeriodicOffsetArray value="-1,0,0"/>
+        <PeriodicOffsetArray value="1,0,0"/>
+        <PeriodicOffsetArray value="0,1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="EchoDropPodsCUHS">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnUnit value="HammerSecurity"/>
+        <SpawnEffect value="EchoDropPodsDelayAB"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="EchoDropPodsCUWP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnUnit value="WarPig"/>
+        <SpawnCount value="2"/>
+        <SpawnEffect value="EchoDropPodsDelayAB"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="EchoDropPodsCUBB">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnUnit value="BlockB"/>
+        <SpawnCount value="2"/>
+        <SpawnEffect value="EchoDropPodsDelayAB"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="EchoDropPodsSet">
+        <EditorCategories value=""/>
+        <EffectArray value="EchoDropPodsCUBB"/>
+        <EffectArray value="EchoDropPodsCUWP"/>
+        <EffectArray value="EchoDropPodsCUHS"/>
+        <EffectArray value="EchoDropPodsCUZeus"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
     <CEffectEnumArea id="GreaterFeedbackSA">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetPoint"/>
@@ -98,6 +156,18 @@
         <ImpactEffect value="LockdownMkIIAB"/>
         <AmmoUnit value="NovaLockdownMissile"/>
     </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="NaniteSnipeDeathrattleAB">
+        <ValidatorArray index="0" value="IsMechanical"/>
+        <Behavior value="NaniteSnipeDeathrattle"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="NaniteSnipeMindControl">
+        <WhichUnit Value="Source"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="NaniteSnipeSet">
+        <EditorCategories value=""/>
+        <EffectArray value="NaniteSnipeDeathrattleAB"/>
+        <EffectArray value="NaniteSnipeDamage"/>
+    </CEffectSet>
     <CEffectSet id="OpenGateDummy">
         <EditorCategories value=""/>
     </CEffectSet>
@@ -442,6 +512,14 @@
         <SearchFilters value="-;Player,Ally,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
         <AreaArray Radius="2" Effect="SingularityBlastAB"/>
     </CEffectEnumArea>
+    <CEffectDamage id="NaniteSnipeDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <ArmorReduction value="0"/>
+        <Kind value="Spell"/>
+        <Amount value="200"/>
+        <Death value="Silentkill"/>
+    </CEffectDamage>
     <CEffectDamage id="SpotterBioDischargeDamage" parent="DU_WEAP">
         <AttributeBonus index="Structure" value="12"/>
         <Amount value="12"/>

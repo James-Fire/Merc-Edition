@@ -74,6 +74,10 @@
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="ReapTheWhirlwind">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="GreaterFeedback">
         <Icon value="Assets\Textures\btn-ability-protoss-feedbackaoe-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-feedbackaoe-color.dds"/>
@@ -245,6 +249,14 @@
     <CButton id="Freyja">
         <Icon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
+    </CButton>
+    <CButton id="NaniteSnipe">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="EchoDropPods">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="NapalmStrike">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>

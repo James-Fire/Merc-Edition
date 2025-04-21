@@ -11,12 +11,10 @@
     </CRequirementAnd>
     <CRequirementCountBehavior id="CountBehaviorDragoonPostilionCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="DragoonPostilion" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorHighTemplarPartisanCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="HighTemplarPartisan" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorMinikinCompleteOnlyAtUnit">
@@ -102,6 +100,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDevastatorOverrideCompleteOnly">
         <Count Link="DevastatorOverride" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeEchoBellyCompleteOnly">
+        <Count Link="EchoBelly" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
         <Count Link="EidolonSuit" State="CompleteOnly"/>

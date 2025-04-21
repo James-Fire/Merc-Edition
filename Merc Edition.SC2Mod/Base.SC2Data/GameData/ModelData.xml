@@ -288,9 +288,42 @@
         <Lighting value="HillPortrait"/>
         <PausedParticleSystemBehavior value="FreezeAll"/>
     </CModel>
+    <CModel id="Echo" parent="Unit">
+        <Model value="Assets\Units\Terran\GhostEcho\GhostEcho.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="EchoDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\NovaDeath\NovaDeath.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Lighting value=""/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="NaniteSnipeControl">
+        <Model value="Assets\Effects\Protoss\Adept_Missile_Impact\Adept_Missile_Impact.m3"/>
+        <AnimSpeed value="2.000000"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
     <CModel id="NovaLockdownMissile">
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="EchoPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\GhostEchoPortrait\GhostEchoPortrait.m3"/>
+        <RequiredAnims value="Assets\Portraits\Terran\NovaPortrait_RequiredAnims\NovaPortrait_RequiredAnims.m3a"/>
+        <RequiredAnims value="Assets\StoryModeCharacters\Terran\SM_Nova_FacialAnims\SM_Nova_FacialAnims.m3a"/>
+        <FacialController value="LocalizedData\Facial\NovaPortrait.fxa"/>
+        <Flags index="Download" value="1"/>
+        <Image value="Assets\Textures\NovaPortrait_Static.dds"/>
+        <Lighting value="NovaPortrait"/>
     </CModel>
     <CModel id="PlagueMunitions">
         <Model value="Assets\Effects\Zerg\L2D_StankBugSwarm\L2D_StankBugSwarm.m3"/>

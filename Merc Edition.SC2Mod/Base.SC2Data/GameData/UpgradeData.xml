@@ -85,6 +85,13 @@
         <EffectArray Reference="Effect,ScorpionMissilesPersistent,PeriodCount" Value="2"/>
         <AffectedUnitArray value="Harrier"/>
     </CUpgrade>
+    <CUpgrade id="EchoBelly">
+        <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCUZeus,SpawnCount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCUWP,SpawnCount" Value="0"/>
+        <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCUHS,SpawnCount" Value="0"/>
+        <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCUBB,SpawnCount" Value="0"/>
+        <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCP,PeriodCount" Value="1"/>
+    </CUpgrade>
     <CUpgrade id="NaniteEmitter"/>
     <CUpgrade id="PlagueMunitions"/>
     <CUpgrade id="UmojanCellularReactors">

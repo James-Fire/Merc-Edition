@@ -276,6 +276,81 @@
     <CUnit id="InfestedTerranCampaign">
         <EffectArray index="Death" value="BroodlingGestationCU"/>
     </CUnit>
+    <CUnit id="Echo">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Cloaked" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <LifeArmor value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <EnergyStart value="250"/>
+        <EnergyMax value="250"/>
+        <EnergyRegenRate value="0.5625"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <Sight value="13"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="41.667"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HeroNuclearStrike"/>
+        <AbilArray Link="NaniteSnipe"/>
+        <AbilArray Link="EchoDropPods"/>
+        <BehaviorArray Link="GhostEnergyUserRadar"/>
+        <BehaviorArray Link="HeroDetectorRadar"/>
+        <WeaponArray Link="NovaWeaponCanisterRifle"/>
+        <EffectArray index="Death" value="EchoDeathDummy"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="HeroNuclearStrike,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="PermanentlyCloakedNova" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="ReapTheWhirlwind" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="HeroNukeCalldown" Type="AbilCmd" AbilCmd="HeroNuclearStrike,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="NaniteSnipe" Type="AbilCmd" AbilCmd="NaniteSnipe,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="EchoDropPods" Type="AbilCmd" AbilCmd="EchoDropPods,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="PsionicRadar" Type="Passive" AbilCmd="Domination,Execute" Row="1" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="500"/>
+        <ScoreKill value="1000"/>
+        <SubgroupPriority value="99"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Campaign"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="340"/>
+        <GlossaryWeakArray value="Raven"/>
+        <GlossaryWeakArray value="MissileTurret"/>
+        <HotkeyCategory value="Unit/Category/TerranStory"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+    </CUnit>
     <CUnit id="NovaLockdownMissile">
         <Mover value="LongboltMissileWeapon"/>
     </CUnit>

@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="EchoDropPodsFallingS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.EchoDropPodsSet.Start" Send="Create"/>
+        <Sound value="TerranDropPodImpact"/>
+    </CActorSound>
+    <CActorSound id="EchoDropPodsLaunchS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.EchoDropPods.SourcePrepStart" Send="Create"/>
+    </CActorSound>
+    <CActorRange id="EchoDropPodsRange" parent="RangeAbil" abil="EchoDropPods">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorModel id="NaniteSnipeControl" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.NaniteSnipeMindControl.Start; At Source" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="NaniteSnipeControlS" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.NaniteSnipeMindControl.Start; At Source" Send="Create"/>
+    </CActorSound>
     <CActorSplat id="GreaterFeedbackCursorSplat" parent="CursorSplat" abil="GreaterFeedback"/>
     <CActorRange id="GreaterFeedbackRange" parent="RangeAbil" abil="GreaterFeedback">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
@@ -170,10 +191,50 @@
             <Image value="Assets\Textures\wireframe-terran-spectre.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="Echo" parent="GenericUnitStandard" unitName="Echo">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="Abil.HeroNuclearStrike.SourceCastStart" Send="AnimBracketStart Spell Work,Start Work Work,End"/>
+        <On Terms="Abil.HeroNuclearStrike.SourceFinishStart" Send="AnimBracketStop Spell"/>
+        <On Terms="Abil.HeroNuclearStrike.SourceCancel" Send="AnimBracketStop Spell"/>
+        <On Terms="Abil.NaniteSnipe.SourceCastStart" Send="AnimBracketStart Spell Work,Start Work Work,End"/>
+        <On Terms="Abil.NaniteSnipe.SourceCastStop" Send="AnimBracketStop Spell"/>
+        <On Terms="UnitMovementUpdate.Echo.Walk" Send="AnimClear SnipeSpell"/>
+        <On Terms="Abil.EchoDropPods.SourcePrepStart" Send="AnimBracketStart Spell Work,Start Work Work,End ContentForceLooping 1.010000 AsTimeScale"/>
+        <On Terms="Abil.EchoDropPods.SourcePrepStop" Send="AnimBracketStop Spell"/>
+        <On Terms="UnitMovementUpdate.Echo.Walk" Send="AnimClear Spell"/>
+        <DeathArray index="Normal" ModelLink="EchoDeath" SoundLink="Nova_Death"/>
+        <PortraitModel value="EchoPortrait"/>
+        <WalkAnimMoveSpeed value="3.5"/>
+        <BarOffset value="20"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Nova.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui-heroicon-nova.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-Nova.dds"/>
+        <UnitKillRank Text="UnitKillRank/Echo"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Nova.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorRange id="OpenGateRange" parent="RangeAbil" abil="AnduinOpenGate">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorAction id="NaniteSnipeAttack" parent="GenericAttack" effectAttack="NaniteSnipeSet">
+        <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
+        <LaunchAssets Model="GhostSnipeAttackLaunch" Sound="NaniteSnipeLaunch"/>
+        <Beam value="NaniteSnipeBeam"/>
+        <ImpactMap index="None" Model="GhostSnipeAttackImpact" Sound="Ghost_SnipeImpact"/>
+    </CActorAction>
+    <CActorBeamSimple id="NaniteSnipeBeam" parent="GenericAttackBeam">
+        <On Terms="ActorCreation" Send="SetTintColor {40,148,255 4.000000}"/>
+        <Model value="GhostSnipeAttackBeam"/>
+    </CActorBeamSimple>
+    <CActorRange id="NaniteSnipeRange" parent="RangeAbil" abil="NaniteSnipe"/>
     <CActorModel id="PlagueMunitions" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.PlagueMunitions.On" Send="Create"/>
@@ -214,6 +275,19 @@
             <Volume value="0.000000,0.000000"/>
         </Layers>
     </CActorSound>
+    <CActorModel id="EchoDropPodsIndicator" parent="ModelAnimationStyleOneShot">
+        <On Terms="ActorCreation" Send="TimerSet 4.500000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.EchoDropPodsIndicatorDummy.Start" Send="Create"/>
+        <Model value="droppodIndicatorModel"/>
+        <Scale value="0.500000"/>
+    </CActorModel>
+    <CActorModel id="EchoDropPodsDropM" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.EchoDropPodsSet.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 3.000000 1"/>
+        <On Terms="TimerExpired; TimerName" Send="Destroy"/>
+        <Model value="droppodDropModel"/>
+    </CActorModel>
     <CActorUnit id="Spotter" parent="GenericUnitMorph" unitName="Spotter">
         <Aliases value="_UnitLarge"/>
         <Macros value="PhysicsDeathsSwarmAir"/>
