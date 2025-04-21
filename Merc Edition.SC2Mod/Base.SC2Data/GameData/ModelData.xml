@@ -6,6 +6,11 @@
     <CModel id="CashRegisterLaunchModel" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Launch\Nova_Snipe_Launch.m3"/>
     </CModel>
+    <CModelFoliage id="FortressBombardmentSlagImpact">
+        <Model value="Assets\Effects\Zerg\YagdraFireBallMissileImpact\YagdraFireBallMissileImpact.m3"/>
+        <ScaleMax value="2.000000,2.000000,1.000000"/>
+        <ScaleMin value="2.000000,2.000000,1.000000"/>
+    </CModelFoliage>
     <CModel id="GreaterFeedbackCursorSplat">
         <Model value="Assets\UI\ProtossCursorEx2\ProtossCursorEx2.m3"/>
         <ScaleMax value="0.290000,0.290000,0.290000"/>

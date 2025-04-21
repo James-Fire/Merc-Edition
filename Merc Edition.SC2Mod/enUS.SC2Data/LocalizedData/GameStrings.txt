@@ -272,6 +272,7 @@ Button/Name/GiveEmSomePepper=Give 'Em Some Pepper
 Button/Name/GreaterFeedback=Greater Feedback
 Button/Name/HammerMunitions=Hammer Munitions
 Button/Name/HankHarnack=Hank Harnack
+Button/Name/HeatTreatedNanitesBellyBonus=Heat Treated Nanites
 Button/Name/Hellraiser=Hellraiser
 Button/Name/HillJumpJets=Jump Jets
 Button/Name/HyperjumpStarcruiser=Tactical Jump
@@ -340,6 +341,7 @@ Button/Name/SignalFlare=Signal Flare
 Button/Name/SilentMode=Silent Mode
 Button/Name/SingularityBlast=Singularity Blast
 Button/Name/SingularitySling=Singularity Sling
+Button/Name/SlagShellsBellyBonus=Slag Shells
 Button/Name/SmartServosMKIV=Smart Servos MKIV
 Button/Name/SnipePhantom=Snipe
 Button/Name/SpiderMineReplenishCondor=Replenish Spider Mine
@@ -405,7 +407,7 @@ Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and w
 Button/Tooltip/AutomatedRefinery=Improved Refinery that sends refined vespene gas straight to the Command Center via short-range warp fields. Eliminates the need for SCVs in vespene gas production, but still allows them to be allocated for faster harvesting.
 Button/Tooltip/AutomatedRefineryTextKicker8=<s val="Kicker_Refinery">+8</s><IMG path="Assets\Textures\icon-gas-terran.dds" height="32" width="32"/>
 Button/Tooltip/BearclawGauntlets=Increases Devil Dog attack radius by 60% and grants the Grapple ability.
-Button/Tooltip/BombardmentFortress=Randomly bombard a location with 4 missiles, each dealing up to 225 (+200 vs Structure) damage in an area. Fires an additional missile per SCV loaded.
+Button/Tooltip/BombardmentFortress=Randomly bombard a location with 4 missiles, each dealing up to <d ref="Effect,FortressBombardmentDamage,Amount"/> (+200 vs Structure) damage in an area. Fires an additional missile per SCV loaded.
 Button/Tooltip/BoxofScraps=Nanite Cloud Emitters gain 2 armor and are built nearly instantly.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/BuildAdjudicator=Tactical support craft. Cloaks nearby units and attacks enemies for damage over time. Can use Nano-Repair, Irradiate, and Transwarp.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
@@ -481,6 +483,7 @@ Button/Tooltip/HERCGrappleDummy=No one will believe you.
 Button/Tooltip/HammerMunitions=Rattlesnake's attacks deal 50% of their damage in an area of effect.
 Button/Tooltip/HankHarnack=Henry "Hank" Harnack, the son of a trucking company operator, became a private in the Confederate Marine Corps' famous Heaven's Devils platoon. Friends with fellow marines Jim Raynor and Ryk Kydd, he was quick to anger and had an impulsive attitude.  He was officially listed as KIA and much like Emperor Palpatine he somehow survived.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/HeatTreatedNanitesBellyBonus=Increases damage and life by 50%.
 Button/Tooltip/Hellraiser=Increase attack speed by 150%. Lasts for <d time="10"/>.
 Button/Tooltip/HillJumpJets=Mr. Hill can travel up and down cliffs.
 Button/Tooltip/HyperjumpStarcruiser=After <d time="6"/>, warps to the target location. The Starcruiser is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
@@ -570,6 +573,7 @@ Button/Tooltip/SilentMode=Enter Silent Mode, increasing sight radius, providing 
 Button/Tooltip/SingularityBlast=After a charge-up, stun enemies in an area for 4 seconds.
 Button/Tooltip/SingularitySling=Increases attack range by 4 and attack speed by 20%.
 Button/Tooltip/SkibisAngel=Support trooper. Heals nearby biological units.
+Button/Tooltip/SlagShellsBellyBonus=Increases damage and life by 50%.
 Button/Tooltip/SmartServosMKIV=Siege Breakers siege and unsiege 66% faster, can attack air units in siege mode, and gradually gains range in siege mode, up to +4.
 Button/Tooltip/SnipePhantom=Deals 55 damage to a biological enemy. Ignores armor.
 Button/Tooltip/SpiderMineReplenishCondor=Constructs a new Spider Mine to replace those used.<n/><n/>A Condor can only carry 4 Spider Mines at a time.
@@ -754,7 +758,7 @@ Effect/Name/FortressBombardmentCP6=Fortress Bombardment CP (6)
 Effect/Name/FortressBombardmentCP7=Fortress Bombardment CP (7)
 Effect/Name/FortressBombardmentCP8=Fortress Bombardment CP (8)
 Effect/Name/FortressBombardmentCP9=Fortress Bombardment CP (9)
-Effect/Name/FortressBombardmentDamage2=Fortress Bombardment Damage
+Effect/Name/FortressBombardmentDamage=Fortress Bombardment Damage
 Effect/Name/FortressBombardmentFiringApplyBehavior=FortressBombardmentFiringApplyBehavior
 Effect/Name/FortressBombardmentLaunchMissile=Fortress Bombardment Launch Missile
 Effect/Name/FortressBombardmentRP=Fortress Bombardment RP
@@ -1216,6 +1220,7 @@ Upgrade/Name/EchoBelly=EchoBelly
 Upgrade/Name/EidolonSuit=Eidolon Suit
 Upgrade/Name/ExplosiveCalibrations=Explosive Calibrations
 Upgrade/Name/Gen1Plating=Gen 1 Plating
+Upgrade/Name/HeatTreatedNanitesBellyBonus=Heat Treated Nanites
 Upgrade/Name/IFFSpiderRounds=IFF Spider Rounds
 Upgrade/Name/ImpalerRoundsShadow=Impaler Rounds
 Upgrade/Name/JetPackOverdrive=Jet Pack Overdrive
@@ -1249,6 +1254,7 @@ Upgrade/Name/RevivalField=Revival Field
 Upgrade/Name/RorkesRedline=Rorke's Redline
 Upgrade/Name/ShimmerScreen=Shimmer Screen
 Upgrade/Name/SilentMode=Silent Mode
+Upgrade/Name/SlagShellsBellyBonus=Slag Shells
 Upgrade/Name/SmartServosMKIV=Smart Servos MKIV
 Upgrade/Name/StabilizerMedpacksMerc=Stabilizer Medpacks
 Upgrade/Name/SulfurMissiles=Sulfur Missiles

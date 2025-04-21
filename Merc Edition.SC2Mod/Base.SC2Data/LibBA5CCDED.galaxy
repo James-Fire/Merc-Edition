@@ -1898,7 +1898,7 @@ bool libBA5CCDED_gt_EchoDeath_Func (bool testConds, bool runActions) {
     }
 
     PlayerCreateEffectPoint(EventPlayer(), "HeroNukeDetonate", EventPlayerEffectUsedPoint(c_effectLocationSourcePoint));
-    UnitAbilitySpendExplicit(EventUnit(), AbilityCommand("EchoNuke", 0), c_spendLocationAll, 1.0, 1.0, 1.0, 1.0);
+    PlayerAddCooldown(1, "Abil/EchoNuke", 120.0);
     return true;
 }
 

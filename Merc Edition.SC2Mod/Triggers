@@ -16296,50 +16296,25 @@
             <Preset Type="PresetValue" Library="Ntve" Id="C95C9118"/>
         </Element>
         <Element Type="FunctionCall" Id="00CE3107">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="6D567C7E"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="34A0D936"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="766FCA8A"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="2805A609"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="C7AA2EB7"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="662B11AF"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="393646F4"/>
-            <Parameter Type="Param" Library="BA5CCDED" Id="B9CADBE5"/>
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="95EAE029"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="52F3F98B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D68709F6"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="86E14B24"/>
         </Element>
-        <Element Type="Param" Id="34A0D936">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="4938E0EA"/>
-            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="21F5089A"/>
+        <Element Type="Param" Id="52F3F98B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A0583248"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
         </Element>
-        <Element Type="FunctionCall" Id="21F5089A">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        <Element Type="Param" Id="D68709F6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C7ADDBA0"/>
+            <Value>Abil/EchoNuke</Value>
+            <ValueType Type="string"/>
         </Element>
-        <Element Type="Param" Id="766FCA8A">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="41E49332"/>
-            <Preset Type="PresetValue" Library="Ntve" Id="33339FBF"/>
-        </Element>
-        <Element Type="Param" Id="2805A609">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="1A939F78"/>
-            <Value>1.0</Value>
+        <Element Type="Param" Id="86E14B24">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="5C3CC684"/>
+            <Value>120.0</Value>
             <ValueType Type="fixed"/>
-        </Element>
-        <Element Type="Param" Id="C7AA2EB7">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="8E5F2F40"/>
-            <Value>1.0</Value>
-            <ValueType Type="fixed"/>
-        </Element>
-        <Element Type="Param" Id="662B11AF">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="300FBA6C"/>
-            <Value>1.0</Value>
-            <ValueType Type="fixed"/>
-        </Element>
-        <Element Type="Param" Id="393646F4">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="C936F93F"/>
-            <Value>1.0</Value>
-            <ValueType Type="fixed"/>
-        </Element>
-        <Element Type="Param" Id="B9CADBE5">
-            <ParameterDef Type="ParamDef" Library="Ntve" Id="BD2F9B9B"/>
-            <Value>EchoNuke</Value>
-            <ValueType Type="abilcmd"/>
         </Element>
         <Element Type="Variable" Id="60A0B28B">
             <VariableType>

@@ -13,6 +13,10 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
     </CActorRange>
+    <CActorModel id="FortressBombardmentSlagImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FortressBombardmentDamage.Start; ValidateEffect UseSlagShellsBellyBonus@Validator" Send="Create"/>
+    </CActorModel>
     <CActorModel id="NaniteSnipeControl" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.NaniteSnipeMindControl.Start; At Source" Send="Create"/>
@@ -1096,7 +1100,7 @@
     </CActorSound>
     <CActorSound id="FortressBombardmentImpactSound" parent="SoundOneShot">
         <EditorCategories value=""/>
-        <On Terms="Effect.FortressBombardmentDamage2.Start" Send="Create"/>
+        <On Terms="Effect.FortressBombardmentDamage.Start" Send="Create"/>
     </CActorSound>
     <CActorSound id="FreyjaBombardmentImpactSound" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -1454,7 +1458,7 @@
     </CActorSound>
     <CActorModel id="FortressBombardmentImpactModel" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
-        <On Terms="Effect.FortressBombardmentDamage2.Start" Send="Create"/>
+        <On Terms="Effect.FortressBombardmentDamage.Start" Send="Create"/>
     </CActorModel>
     <!-- Ground Attack                                                                           -->
     <CActorMissile id="MilitarizedColonistShipGroundAttackMissile">

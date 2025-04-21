@@ -195,6 +195,9 @@
     <CRequirementCountUpgrade id="CountUpgradeSilentModeCompleteOnly">
         <Count Link="SilentMode" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSlagShellsBellyBonusCompleteOnly">
+        <Count Link="SlagShellsBellyBonus" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSmartServosMKIVCompleteOnly">
         <Count Link="SmartServosMKIV" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

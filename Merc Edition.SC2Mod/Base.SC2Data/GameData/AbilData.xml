@@ -15,7 +15,8 @@
     <CAbilEffectInstant id="EchoNuke">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Cost>
-            <Cooldown TimeUse="120"/>
+            <Charge Location="Player"/>
+            <Cooldown Location="Player" TimeUse="120"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="ReapTheWhirlwind">
             <Flags index="IgnoreUser" value="1"/>

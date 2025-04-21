@@ -412,6 +412,10 @@
         <Find value="1"/>
         <Value value="UsePlagueMunitions"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="UseSlagShellsBellyBonus@Validator">
+        <Find value="1"/>
+        <Value value="UseSlagShellsBellyBonus"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="bunkerunitisinsideofisnotburrowed">
         <WhichUnit Value="CasterOuter"/>
         <Compare value="NE"/>

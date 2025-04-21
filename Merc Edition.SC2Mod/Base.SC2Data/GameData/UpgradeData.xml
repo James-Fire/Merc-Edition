@@ -94,6 +94,22 @@
     </CUpgrade>
     <CUpgrade id="NaniteEmitter"/>
     <CUpgrade id="PlagueMunitions"/>
+    <CUpgrade id="SlagShellsBellyBonus">
+        <AffectedUnitArray value="PlanetaryFortress"/>
+        <EffectArray Reference="Unit,PlanetaryFortress,LifeMax" Value="750"/>
+        <EffectArray Reference="Unit,PlanetaryFortress,LifeStart" Value="750"/>
+        <EffectArray Reference="Effect,TwinIbiksCannon,Amount" Value="20"/>
+        <EffectArray Reference="Effect,FortressBombardmentDamage,Amount" Value="112"/>
+    </CUpgrade>
+    <CUpgrade id="HeatTreatedNanitesBellyBonus">
+        <EffectArray Reference="Unit,NaniteCloudEmitter,LifeMax" Value="200"/>
+        <EffectArray Reference="Unit,NaniteCloudEmitter,LifeStart" Value="200"/>
+        <EffectArray Reference="Unit,NaniteCloudEmitterBurrowed,LifeMax" Value="200"/>
+        <EffectArray Reference="Unit,NaniteCloudEmitterBurrowed,LifeStart" Value="200"/>
+        <EffectArray Reference="Effect,PoisonGasDamage,Amount" Value="1"/>
+        <AffectedUnitArray value="NaniteCloudEmitter"/>
+        <AffectedUnitArray value="NaniteCloudEmitterBurrowed"/>
+    </CUpgrade>
     <CUpgrade id="UmojanCellularReactors">
         <Flags index="UpgradeCheat" value="0"/>
         <EffectArray Reference="Unit,DuskWing,EnergyStart" Value="100"/>

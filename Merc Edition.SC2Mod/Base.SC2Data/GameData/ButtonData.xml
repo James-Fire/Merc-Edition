@@ -74,6 +74,10 @@
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="HeatTreatedNanitesBellyBonus">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
+    </CButton>
     <CButton id="ReapTheWhirlwind">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -289,6 +293,10 @@
     <CButton id="SingularitySling">
         <Icon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
+    </CButton>
+    <CButton id="SlagShellsBellyBonus">
+        <Icon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
     </CButton>
     <CButton id="SuperRadar">
         <Icon value="Assets\Icons and Wireframes\superradar.dds"/>

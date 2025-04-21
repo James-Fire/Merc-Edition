@@ -267,6 +267,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSilentModeCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseSlagShellsBellyBonus">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSlagShellsBellyBonusCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseSmartServosMKIV">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSmartServosMKIVCompleteOnly"/>

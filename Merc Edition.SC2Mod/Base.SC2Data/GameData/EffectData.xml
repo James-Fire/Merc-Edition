@@ -1074,7 +1074,7 @@
         <PeriodicEffectArray value="FortressBombardmentSet"/>
         <PeriodicPeriodArray value="1"/>
     </CEffectCreatePersistent>
-    <CEffectDamage id="FortressBombardmentDamage2">
+    <CEffectDamage id="FortressBombardmentDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetPoint"/>
         <AttributeBonus index="Structure" value="200"/>
@@ -1090,7 +1090,7 @@
     </CEffectApplyBehavior>
     <CEffectLaunchMissile id="FortressBombardmentLaunchMissile">
         <ImpactLocation Value="TargetPoint"/>
-        <ImpactEffect value="FortressBombardmentDamage2"/>
+        <ImpactEffect value="FortressBombardmentDamage"/>
         <AmmoUnit value="FortressBombardmentMissile"/>
     </CEffectLaunchMissile>
     <CEffectRandomPointInCircle id="FortressBombardmentRP">
