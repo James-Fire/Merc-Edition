@@ -71,6 +71,9 @@
     <CRequirementCountUpgrade id="CountUpgradeBoxofScrapsCompleteOnly">
         <Count Link="BoxofScraps" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBreakoutMissionCompleteOnly">
+        <Count Link="BreakoutMission" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBroodlingGestationCompleteOnly">
         <Count Link="BroodlingGestation" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

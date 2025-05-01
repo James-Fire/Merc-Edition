@@ -1909,6 +1909,82 @@ void libBA5CCDED_gt_EchoDeath_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Spectre No 15 Super Cloak
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SpectreNo15SuperCloak_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(EventUnit(), "SpectreNo15SuperCloak", EventUnit(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SpectreNo15SuperCloak_Init () {
+    libBA5CCDED_gt_SpectreNo15SuperCloak = TriggerCreate("libBA5CCDED_gt_SpectreNo15SuperCloak_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_SpectreNo15SuperCloak, null, AbilityCommand("SpectreNo15ShadowFury", 0), c_unitAbilStageComplete, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Spectre No 15 Deathrattle
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SpectreNo15Deathrattle_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitAbilityGetCooldown(EventUnit(), "SpectreNo15Deathrattle", "Abil/SpectreNo15Deathrattle") == 0.0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerAddCooldown(1, "Abil/SpectreNo15Deathrattle", 240.0);
+    Wait(2.0, c_timeReal);
+    PlayerCreateEffectPoint(EventPlayer(), "SpectreNo15DeadRingerCP", EventPlayerEffectUsedPoint(c_effectLocationSourcePoint));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SpectreNo15Deathrattle_Init () {
+    libBA5CCDED_gt_SpectreNo15Deathrattle = TriggerCreate("libBA5CCDED_gt_SpectreNo15Deathrattle_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_SpectreNo15Deathrattle, c_playerAny, "SpectreNo15DeathDummy");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Spectre No 15 Nuke Launch
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_SpectreNo15NukeLaunch_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "SpectreNo15"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    SoundPlayForPlayer(SoundLink("Spectre15NukeLaunch", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_SpectreNo15NukeLaunch_Init () {
+    libBA5CCDED_gt_SpectreNo15NukeLaunch = TriggerCreate("libBA5CCDED_gt_SpectreNo15NukeLaunch_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_SpectreNo15NukeLaunch, null, AbilityCommand("HeroNuclearStrike", 0), c_unitAbilStageExecute, false);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Hill Respawn
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_HillRespawn_Func (bool testConds, bool runActions) {
@@ -2066,6 +2142,9 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_CabalCyberneticReconstructionFighter_Init();
     libBA5CCDED_gt_EchoDroppodsIndicator_Init();
     libBA5CCDED_gt_EchoDeath_Init();
+    libBA5CCDED_gt_SpectreNo15SuperCloak_Init();
+    libBA5CCDED_gt_SpectreNo15Deathrattle_Init();
+    libBA5CCDED_gt_SpectreNo15NukeLaunch_Init();
     libBA5CCDED_gt_HillRespawn_Init();
     libBA5CCDED_gt_SpawnInfested_Init();
     libBA5CCDED_gt_NightmarePlusEvent_Init();

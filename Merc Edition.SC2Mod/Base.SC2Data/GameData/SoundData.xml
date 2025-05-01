@@ -26,6 +26,33 @@
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="AGRWhiplashImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact05_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact06_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact07_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact08_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_Impact09_1ch.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="AGRWhiplashLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch05_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch06_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch07_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ImmortalShakuras_ShadowCannon_AttackLaunch08_1ch.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="2.000000,3.000000"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
     <CSound id="AlphaSquadronImpactS" parent="Combat">
         <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy00.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy01.wav" FacialGroup=""/>
@@ -404,6 +431,14 @@
         <AssetArray File="Assets\Sounds\Terran\DropPod\DropPod_Drop0.wav" FacialGroup=""/>
         <Mode value="3DHead"/>
     </CSound>
+    <CSound id="Spectre15NukeLaunch" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Nuke calldown\spectre 15 nuke.wav" FacialGroup=""/>
+        <DupeDestroyCount value="4"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Mode value="2D"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
     <CSound id="HillDeath" parent="Death">
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death04.wav"/>
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Tosh\Tosh_Death07.wav"/>
@@ -493,6 +528,58 @@
         <AssetArray File="Assets\Sounds\CarrierAiur_ReconstructionBeam_Launch03_1ch.wav" FacialGroup=""/>
         <Pitch value="4.000000,6.000000"/>
         <Volume value="-10.000000,-10.000000"/>
+    </CSound>
+    <CSound id="Spectre15Attack" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Attack Order\spectre 15 attack 1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Attack Order\spectre 15 attack 2.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Spectre15Help" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Spectre 15\When Selected Repeatedly\spectre 15 pissed 3.wav" FacialGroup=""/>
+        <Category value="Alert"/>
+        <Mode value="2D"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Spectre15DeathrattleSound2" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\HellionTankMorph_StandMorphStart_Stage02.wav" FacialGroup=""/>
+        <DupeDestroyCount value="4"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Mode value="2D"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="Spectre15Pissed" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Spectre 15\When Selected Repeatedly\spectre 15 pissed 1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\When Selected Repeatedly\spectre 15 pissed 2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\When Selected Repeatedly\spectre 15 pissed 3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\When Selected Repeatedly\spectre 15 pissed 4.wav" FacialGroup=""/>
+        <Select value="Sequential"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Spectre15Ready" parent="Ready">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Trained_Revived\spectre 15 ready.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Spectre15What" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Selected\spectre 15 what 1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Selected\spectre 15 what 2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Selected\spectre 15 what 3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Selected\spectre 15 what 4.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Spectre15Yes" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Move Order\spectre 15 yes 1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Move Order\spectre 15 yes 2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Attack Order\spectre 15 attack 1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\Attack Order\spectre 15 attack 2.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Spectre15Death" parent="Death">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\When Killed\spectre 15 death 1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Spectre 15\When Killed\spectre 15 death 2.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="SpotterBioDischargeImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Zerg\Infestor\Infestor_FungalGrowthImpact0.wav" FacialGroup=""/>

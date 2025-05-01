@@ -26,6 +26,14 @@
         <Range value="0.1"/>
         <Period value="1.5"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="AGRWhiplash">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="AGRWhiplashDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.25"/>
+        <Effect value="AGRWhiplashDamage"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="AnduinPlasmaBlast">
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
         <DisplayEffect value="AnduinPlasmaBlastDamage"/>

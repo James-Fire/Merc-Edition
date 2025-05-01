@@ -103,6 +103,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBoxofScrapsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBreakoutMission">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBreakoutMissionCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBroodlingGestation">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeBroodlingGestationCompleteOnly"/>

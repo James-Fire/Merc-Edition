@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="DarkTemplarShadowFuryImpact">
+        <On Terms="ActorCreation; ValidateEffect UseBreakoutMission@Validator" Send="SetTintColor {0,223,0 1.500000}"/>
+    </CActorModel>
+    <CActorSound id="DefensiveMatrixBirth">
+        <On Terms="Behavior.SpectreNo15ThornShield.On" Send="Create"/>
+        <On Terms="Behavior.SpectreNo15ThornShield.Off" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="DefensiveMatrixDeath">
+        <On Terms="Behavior.SpectreNo15ThornShield.Off" Send="Create"/>
+    </CActorSound>
+    <CActorAction id="AGRWhiplashAction" parent="GenericAttack" effectAttack="AGRWhiplashDamage">
+        <LaunchAssets Model="AGRWhiplashLaunchModel" Sound="AGRWhiplashLaunchSound"/>
+        <Missile value="AGRWhiplashWeaponMissile"/>
+        <ImpactMap index="None" Model="AGRWhiplashImpactModel" Sound="AGRWhiplashImpactSound"/>
+        <ImpactPhysics Name="AGRWhiplashImpactPhysics" MatchKeys="Basic" Physics="AGRWhiplashForce"/>
+    </CActorAction>
+    <CActorForceSphere id="AGRWhiplashForce">
+        <On Terms="Effect.AGRWhiplashDamage; At Caster" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create AGRWhiplashForceUp"/>
+        <HostSiteOps Ops="SOpIncomingDirectDot15"/>
+        <Magnitude value="12.000000,7.000000"/>
+        <Radius value="5.000000"/>
+    </CActorForceSphere>
+    <CActorForceSphere id="AGRWhiplashForceUp">
+        <Receiver Subject="::Main"/>
+        <Field value="Directional"/>
+        <Duration value="0.150000"/>
+        <Magnitude value="10.000000,3.000000"/>
+        <Radius value="5.000000"/>
+    </CActorForceSphere>
     <CActorSound id="EchoDropPodsFallingS" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.EchoDropPodsSet.Start" Send="Create"/>
@@ -292,6 +322,54 @@
         <On Terms="TimerExpired; TimerName" Send="Destroy"/>
         <Model value="droppodDropModel"/>
     </CActorModel>
+    <CActorModel id="SpectreNo15DeathrattleBeacon" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SpectreNo15DeathDummy.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetScale 1.000000,1.000000,0.100000"/>
+        <On Terms="ActorCreation" Send="SetScale 1.000000 1.500000"/>
+        <On Terms="ActorCreation" Send="TimerSet 2.000000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetOpacity 0.000000 1.000000"/>
+        <On Terms="TimerExpired; TimerName 1" Send="TimerSet 1.000000 2"/>
+        <On Terms="TimerExpired; TimerName 2" Send="Destroy"/>
+    </CActorModel>
+    <CActorSound id="SpectreNo15DeathrattleBeaconSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SpectreNo15DeathDummy.Start" Send="Create"/>
+        <Sound value="Spectre15NukeLaunch"/>
+        <Layers>
+            <Sound value="Spectre15DeathrattleSound2"/>
+            <PitchSource value="Sound"/>
+            <PlayDelaySource value="Sound"/>
+            <VolumeSource value="Sound"/>
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorModel id="SpectreNo15DeathrattleModel" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SpectreNo15DeathrattleBlast.Start" Send="Create"/>
+        <Model value="MengskSiegeTankSiegedAttackImpact"/>
+        <Scale value="1.350000"/>
+    </CActorModel>
+    <CActorSound id="SpectreNo15DeathrattleSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SpectreNo15DeathrattleBlast.Start" Send="Create"/>
+        <Sound value="SiegeBreaker_SiegedAttackImpact"/>
+    </CActorSound>
+    <CActorModel id="SpectreNo15ThornShield" parent="ModelAnimationStyleContinuous">
+        <On Terms="Behavior.SpectreNo15ThornShield.On" Send="Create"/>
+        <On Terms="Behavior.SpectreNo15ThornShield.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <AutoScaleFactor value="1.000000"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
+    <CActorRange id="SpectreNo15ThornShieldRange" parent="RangeAbil" abil="SpectreNo15ThornShield">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorUnit id="Spotter" parent="GenericUnitMorph" unitName="Spotter">
         <Aliases value="_UnitLarge"/>
         <Macros value="PhysicsDeathsSwarmAir"/>
@@ -1672,6 +1750,29 @@
             <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-siegemode.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorSound id="SpectreNo15SuperCloakEnd" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SpectreNo15SuperCloak.Off" Send="Create"/>
+        <Sound value="SuperCloakEnd"/>
+    </CActorSound>
+    <CActorModel id="SpectreNo15SuperCloakEndModel" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SpectreNo15SuperCloak.Off" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,255,255 2.500000}"/>
+        <Model value="SuperCloakEndModel"/>
+    </CActorModel>
+    <CActorModelMaterial id="SpectreNo15SuperCloakGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.SpectreNo15SuperCloak.On" Send="Create"/>
+        <On index="6" Terms="Behavior.SpectreNo15SuperCloak.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.SpectreNo15SuperCloak.Off" Send="AnimBracketStop BSD"/>
+        <Model value="SuperCloakGlaze"/>
+    </CActorModelMaterial>
+    <CActorSound id="SpectreNo15SuperCloakLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.SpectreNo15SuperCloak.On" Send="Create"/>
+        <Sound value="SuperCloakLaunch"/>
+    </CActorSound>
     <CActorModel id="SuperRadarBuff" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.SuperRadarRangeBuff.On" Send="Create"/>
@@ -1697,6 +1798,51 @@
         <On Terms="Behavior.SurvivorsGuiltApollo.On" Send="Create"/>
         <On Terms="Behavior.AdrenalineRush.On" Send="Create"/>
     </CActorSound>
+    <CActorUnit id="SpectreNo15" parent="GenericUnitBase" unitName="SpectreNo15">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="Abil.HeroNuclearStrike.SourceCastStart" Send="AnimBracketStart Spell Work,Start Work Work,End"/>
+        <On Terms="Abil.HeroNuclearStrike.SourceFinishStart" Send="AnimBracketStop Spell"/>
+        <On Terms="Abil.HeroNuclearStrike.SourceCancel" Send="AnimBracketStop Spell"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Work"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Work"/>
+        <On Terms="Abil.nuke.SourceCastStart" Send="AnimBracketStart Nuke Work,Start Work Work,End"/>
+        <On Terms="Abil.nuke.SourceChannelStop" Send="AnimBracketStop Nuke"/>
+        <On Terms="Abil.RogueRogueBombTosh.SourceCastStart" Send="AnimPlay SpellA Spell,A"/>
+        <On Terms="Abil.KillerPhantasmHydralisk.SourceCastStart" Send="$Spell"/>
+        <On Terms="Abil.KillerPhantasmUltralisk.SourceCastStart" Send="$Spell"/>
+        <On Terms="Abil.KillerPhantasmZergling.SourceCastStart" Send="$Spell"/>
+        <On Terms="Abil.MindBlast.SourceCastStart" Send="$Spell,B NonLooping"/>
+        <On Terms="Abil.Consumption.SourceCastStart" Send="$Spell"/>
+        <On Terms="Abil.Consumption.SourceCastStart" Send="Create ConsumptionSound"/>
+        <On Terms="Abil.ToshShadowClones.SourceCastStart" Send="$Spell"/>
+        <BuildModel value="ToshTeleportIn"/>
+        <DeathArray index="Normal" ModelLink="SpectreNo15Death" SoundLink="Spectre15Death"/>
+        <PortraitModel value="PortraitSpectreNo15"/>
+        <WalkAnimMoveSpeed value="3"/>
+        <BarOffset value="40"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Tosh.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui-heroicon-tosh.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-ability-terran-defensivematrix.dds"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-Tosh.dds"/>
+        <UnitKillRank Text="UnitKillRank/SpectreNo15"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Tosh.dds"/>
+        </Wireframe>
+        <SoundArray index="Ready" value="Spectre15Ready"/>
+        <SoundArray index="Help" value="Spectre15Help"/>
+        <SoundArray index="What" value="Spectre15What"/>
+        <SoundArray index="Yes" value="Spectre15Yes"/>
+        <SoundArray index="Attack" value="Spectre15Attack"/>
+        <SoundArray index="Pissed" value="Spectre15Pissed"/>
+    </CActorUnit>
     <CActorRange id="TotalAnnihilationRange" parent="RangeAbil" abil="TotalAnnihilation">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
@@ -1960,6 +2106,10 @@
     <CActorSound id="WreckingCrewFighterMode">
         <On Terms="AbilMorph.*.Start; MorphTo CabalFighter" Send="Create"/>
     </CActorSound>
+    <!-- ZHybrid 02 Psionic Shockwave -->
+    <CActorModel id="ZHybridPsionicShockwave">
+        <On index="0" Terms="Effect.ZHybridPsionicShockwaveCreatePersistent.Start; At Target"/>
+    </CActorModel>
     <CActorUnit id="ZeusLanderLanded" parent="TerranBuilding" unitName="ZeusLanderLanded">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>
@@ -4293,6 +4443,8 @@
     </CActorModel>
     <CActorModel id="VoidDarkTemplarShadowFury">
         <On Terms="ActorCreation" Send="SetTintColor 145,0,0"/>
+        <On Terms="ActorCreation; ValidateEffect UseBreakoutMission@Validator" Send="SetTintColor {0,225,68 1.500000}"/>
+        <On Terms="ActorCreation; ValidateEffect UseBreakoutMission@Validator" Send="SetTintColor {28,255,96 2.000000} 2.000000"/>
     </CActorModel>
     <CActorSimple id="VoidDetectorRadarSetup">
         <On Terms="Behavior.AdjudicatorCloakingField.On" Send="Create"/>

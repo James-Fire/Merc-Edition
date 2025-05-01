@@ -77,6 +77,12 @@
         <AffectedUnitArray value="NaniteCloudEmitterBurrowed"/>
         <AffectedUnitArray value="NaniteCloudEmitter"/>
     </CUpgrade>
+    <CUpgrade id="BreakoutMission">
+        <EffectArray Reference="Effect,DarkTemplarShadowFuryDamage,Amount" Value="35"/>
+        <EffectArray Operation="Set" Reference="Behavior,DarkTemplarShadowFuryController,Period" Value="0.150000"/>
+        <EffectArray Operation="Set" Reference="Behavior,DarkTemplarShadowFuryFinalDelay,Duration" Value="0.150000"/>
+        <AffectedUnitArray value="SpectreNo15"/>
+    </CUpgrade>
     <CUpgrade id="BroodlingGestation"/>
     <CUpgrade id="BurrowBunker"/>
     <CUpgrade id="BurstAmplifier">
@@ -512,6 +518,7 @@
     </CUpgrade>
     <CUpgrade id="MercEdition">
         <EffectArray Operation="Set" Reference="Unit,PlanetaryFortress,Name" Value="Unit/Name/BombardmentFortress"/>
+        <EffectArray Operation="Set" Reference="Effect,ZHybridPsionicShockwaveSpellDamage,Amount" Value="100"/>
     </CUpgrade>
     <CUpgrade id="NeosteelCupHolders">
         <EffectArray Reference="Behavior,BunkerWeaponRangeBonus,Modification.WeaponRange" Value="3"/>

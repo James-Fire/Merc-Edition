@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectInstant id="SpectreNo15Deathrattle">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge Location="Player"/>
+            <Cooldown Location="Player" TimeUse="240"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DeadRinger">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="SpectreNo15ShadowFury">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Effect index="0" value="DarkTemplarShadowFuryPersistent"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="15"/>
+            </Charge>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="Ground;Self,Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7.3"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure"/>
+        <AutoCastRange value="4"/>
+        <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
+        <AutoCastValidatorArray value="ShadowFuryAutoCast"/>
+        <UninterruptibleArray index="Wait" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <UninterruptibleArray index="Bail" value="1"/>
+        <CursorEffect value="DarkTemplarShadowFurySearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidDarkTemplarShadowFury"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="EchoDropPods">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <PrepEffect value="EchoDropPodsIndicatorDummy"/>
@@ -81,6 +120,17 @@
             <MatchFlags index="CasterUnit" value="1"/>
         </Marker>
         <CmdButtonArray index="Execute" DefaultButtonFace="SniperBotSnipe"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SpectreNo15ThornShield">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SpectreNo15ThornShieldAB"/>
+        <Flags index="TransientPreferred" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="18"/>
+        </Cost>
+        <Range value="7.3"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ThornShield"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SpotterContaminate">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>

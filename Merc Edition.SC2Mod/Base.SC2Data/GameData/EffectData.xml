@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="AGRWhiplashDamage" parent="DU_WEAP">
+        <AttributeBonus index="Armored" value="15"/>
+        <Amount value="40"/>
+        <Death value="Blast"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="SpectreNo15DeathrattleBlast" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <LaunchLocation Value="SourcePoint"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AttributeBonus index="Structure" value="80"/>
+        <Kind value="Splash"/>
+        <KindSplash value="Splash"/>
+        <Amount value="80"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="0.5" Fraction="1"/>
+        <AreaArray Radius="0.9" Fraction="0.5"/>
+        <AreaArray Radius="1.4" Fraction="0.25"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="EchoBellyIncapacitated">
         <WhichUnit Value="Caster"/>
         <Behavior value="Incapacitated"/>
@@ -520,6 +541,25 @@
         <Amount value="200"/>
         <Death value="Silentkill"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="SpectreNo15DeadRingerCP">
+        <EditorCategories value=""/>
+        <PeriodCount value="100"/>
+        <PeriodicEffectArray value="SpectreNo15DeadRingerRP"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectRandomPointInCircle id="SpectreNo15DeadRingerRP">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="SpectreNo15DeathrattleBlast"/>
+        <Radius value="10"/>
+    </CEffectRandomPointInCircle>
+    <CEffectSet id="SpectreNo15DeathDummy">
+        <EditorCategories value=""/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="SpectreNo15ThornShieldAB">
+        <Behavior value="SpectreNo15ThornShield"/>
+    </CEffectApplyBehavior>
     <CEffectDamage id="SpotterBioDischargeDamage" parent="DU_WEAP">
         <AttributeBonus index="Structure" value="12"/>
         <Amount value="12"/>
@@ -2551,4 +2591,7 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="BlockBFlyDuration"/>
     </CEffectApplyBehavior>
+    <CEffectEnumArea id="ZHybridPsionicShockwaveSearchArea">
+        <SearchFilters value="-;Player,Ally,Structure,Buried,Stasis,Hidden,Invulnerable,Unstoppable"/>
+    </CEffectEnumArea>
 </Catalog>

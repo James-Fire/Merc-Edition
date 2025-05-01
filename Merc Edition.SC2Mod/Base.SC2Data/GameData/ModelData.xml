@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="AGRWhiplashImpactModel" parent="ImpactFX">
+        <Model value="Assets\COOP\Zeratul\Effects\Immortal_Zeratul_COOP_CannonImpact\Immortal_Zeratul_COOP_CannonImpact.m3"/>
+        <AnimSpeed value="1.500000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="AGRWhiplashLaunchModel" parent="LaunchFX">
+        <Model value="Assets\COOP\Zeratul\Effects\Immortal_Zeratul_COOP_CannonLaunch\Immortal_Zeratul_COOP_CannonLaunch.m3"/>
+    </CModel>
     <CModel id="CashRegisterImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModel>
@@ -345,6 +354,14 @@
         <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="SpectreNo15DeathrattleBeacon">
+        <Model value="Assets\UI\Feedback\AIBeaconClaim\AIBeaconClaim.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="SpectreNo15ThornShield">
+        <Model value="Assets\Effects\Terran\Nova_Blink_Shield\Nova_Blink_Shield.m3"/>
     </CModel>
     <CModel id="Spotter" parent="OverseerBase">
         <Model value="Assets\Units\Zerg\L2D_Spotter\L2D_Spotter.m3"/>
@@ -1448,6 +1465,32 @@
         <Model value="Assets\Portraits\Zerg\L2D_StankPortrait\L2D_StankPortrait.m3"/>
         <Image value="Assets\Textures\UltraliskPortrait_Static.dds"/>
         <Lighting value="UltraliskPortrait"/>
+    </CModel>
+    <CModel id="SpectreNo15" parent="Unit">
+        <Model value="Assets\Models\Spectre 15.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Lighting value="SpecterUnit"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.150000,1.150000,1.150000"/>
+        <ScaleMin value="1.150000,1.150000,1.150000"/>
+    </CModel>
+    <CModel id="SpectreNo15Death" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\ToshDeath\ToshDeath.m3"/>
+    </CModel>
+    <CModel id="PortraitSpectreNo15" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\ToshPortrait\ToshPortrait.m3"/>
+        <RequiredAnims value="Assets\Portraits\Terran\ToshPortrait_RequiredAnims\ToshPortrait_RequiredAnims.m3a"/>
+        <RequiredAnims value="Assets\StoryModeCharacters\Terran\SM_BountyHunter_FacialAnims\SM_BountyHunter_FacialAnims.m3a"/>
+        <FacialController value="LocalizedData\Facial\ToshPortrait.fxa"/>
+        <Image value="Assets\Textures\ToshPortrait_Static.dds"/>
+        <Lighting value="ToshPortrait"/>
     </CModel>
     <CModel id="WildSnipeDamageBeam">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Beam\Nova_Snipe_Beam.m3"/>

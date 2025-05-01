@@ -8,6 +8,7 @@
 <Behavior id="RedlineReactorEasterEgg"/>
 <Behavior id="RevivalFieldCooldown"/>
 <Behavior id="GraduatingRangeController"/>
+<Behavior id="SpectreNo15SuperCloak"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
 <Effect id="HeroNukeDetonate"/>
 <Effect id="EchoDropPodsIndicatorDummy"/>
@@ -15,8 +16,10 @@
 <Effect id="CabalFighterReviveDummy"/>
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
+<Effect id="SpectreNo15DeadRingerCP"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
 <Sound id="RedlineReactorMusicEasterEgg"/>
+<Sound id="Spectre15NukeLaunch"/>
 <Unit id="InfestedTerran"/>
 <Unit id="ARESWarbotMercMod"/>
 </Preload>

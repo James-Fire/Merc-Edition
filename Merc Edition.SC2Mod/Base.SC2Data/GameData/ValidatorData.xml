@@ -396,6 +396,10 @@
         <Find value="1"/>
         <Value value="UseAnduinProtoss"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="UseBreakoutMission@Validator">
+        <Find value="1"/>
+        <Value value="UseBreakoutMission"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="UseBroodlingGestation@Validator">
         <Find value="1"/>
         <Value value="UseBroodlingGestation"/>

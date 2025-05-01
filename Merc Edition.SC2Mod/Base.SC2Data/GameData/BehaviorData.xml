@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="DarkTemplarShadowFuryController">
+        <InfoFlags index="Hidden" value="0"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DarkTemplarShadowFuryFinalDelay">
+        <InfoFlags index="Hidden" value="0"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="EchoDropPodsDelay">
         <InfoFlags index="Hidden" value="1"/>
         <Duration value="2.3"/>
@@ -899,6 +905,27 @@
             <ModifyFlags index="Reveal" value="1"/>
             <ModifyFlags index="Detected" value="1"/>
             <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpectreNo15SuperCloak">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-nova-buff-invulnerability.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="IsCloaked"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpectreNo15ThornShield">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-barrier-upgraded.dds"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="5"/>
+        <FinalEffect value="ZHybridPsionicShockwaveCreatePersistent"/>
+        <Modification>
+            <VitalMaxArray index="Shields" value="300"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="VoidHighTemplarPsiStormCripple">
