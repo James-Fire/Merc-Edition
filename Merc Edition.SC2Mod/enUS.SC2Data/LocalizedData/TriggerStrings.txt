@@ -50,6 +50,7 @@ Trigger/Name/lib_BA5CCDED_6CD89C64=Block B Fly Heighter 2
 Trigger/Name/lib_BA5CCDED_6D3674D2=Spectre No 15 Nuke Launch
 Trigger/Name/lib_BA5CCDED_76D687B9=Gonna need a bigger boat
 Trigger/Name/lib_BA5CCDED_79A437F4=Harrier Recall
+Trigger/Name/lib_BA5CCDED_7C5C3224=Init...Zeus
 Trigger/Name/lib_BA5CCDED_823F66AD=I see dead people
 Trigger/Name/lib_BA5CCDED_8F9E8555=Init...Tech
 Trigger/Name/lib_BA5CCDED_9081B1CC=Nanite Emitter Burrow

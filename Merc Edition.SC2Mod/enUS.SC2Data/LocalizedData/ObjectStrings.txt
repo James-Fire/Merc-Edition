@@ -11,7 +11,6 @@ Abil/EditorPrefix/AspisBlink=Spartan Company -
 Abil/EditorPrefix/BunkerLower=Bunker -
 Abil/EditorPrefix/BunkerRaise=Bunker -
 Abil/EditorPrefix/CharonDropshipTrain=Charon Dropship -
-Abil/EditorPrefix/CommandCenterTrain=Command Center -
 Abil/EditorPrefix/CondorSpiderMineUnburrow=Condor -
 Abil/EditorPrefix/CondorSpiderMines=Condor -
 Abil/EditorPrefix/DevilDogGrapple=Devil Dog -

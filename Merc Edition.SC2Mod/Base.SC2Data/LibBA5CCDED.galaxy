@@ -725,6 +725,7 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
     Wait(0.5, c_timeAI);
     TriggerExecute(libBA5CCDED_gt_InitUnitReplace, true, false);
     Wait(2.0, c_timeGame);
+    TriggerExecute(libBA5CCDED_gt_InitZeus, true, false);
     TriggerExecute(libBA5CCDED_gt_InitACVMultibuild, true, false);
     TriggerExecute(libBA5CCDED_gt_InitMercEditionUpgrade, true, false);
     TriggerExecute(libBA5CCDED_gt_InitPassiveUpgrades, true, false);
@@ -737,6 +738,49 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
 void libBA5CCDED_gt_Init_Init () {
     libBA5CCDED_gt_Init = TriggerCreate("libBA5CCDED_gt_Init_Func");
     TriggerAddEventMapInit(libBA5CCDED_gt_Init);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init...Zeus
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_InitZeus_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    int auto1906DD13_val;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 2), false);
+    TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 3), false);
+    TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 4), false);
+    TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 5), false);
+    TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 6), false);
+    auto1906DD13_val = libBA5CCDED_gv_zeusCount;
+    if (auto1906DD13_val == 1) {
+        TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 2), true);
+    }
+    else if (auto1906DD13_val == 2) {
+        TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 3), true);
+    }
+    else if (auto1906DD13_val == 3) {
+        TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 4), true);
+    }
+    else if (auto1906DD13_val == 4) {
+        TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 5), true);
+    }
+    else if (auto1906DD13_val == 5) {
+        TechTreeAbilityAllow(1, AbilityCommand("CommandCenterTrain", 6), true);
+    }
+    else {
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_InitZeus_Init () {
+    libBA5CCDED_gt_InitZeus = TriggerCreate("libBA5CCDED_gt_InitZeus_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2114,6 +2158,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_SaveBanks_Init();
     libBA5CCDED_gt_ListenforChat_Init();
     libBA5CCDED_gt_Init_Init();
+    libBA5CCDED_gt_InitZeus_Init();
     libBA5CCDED_gt_InitHillRespawn_Init();
     libBA5CCDED_gt_InitACVMultibuild_Init();
     libBA5CCDED_gt_InitAllowingUnits_Init();

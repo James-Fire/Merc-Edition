@@ -2134,7 +2134,7 @@
         <LifeArmor value="2"/>
         <AbilArray Link="TychusSecretStash"/>
         <BehaviorArray index="0" Link="HailOfLeadDummy"/>
-        <BehaviorArray index="1" removed="1"/>
+        <BehaviorArray index="1" Link="HeroDeathPrevention"/>
         <CardLayouts index="0">
             <LayoutButtons index="5" Row="1" Column="0"/>
             <LayoutButtons Face="TychusSecretStash" Type="AbilCmd" AbilCmd="TychusSecretStash,Execute" Row="2" Column="1"/>

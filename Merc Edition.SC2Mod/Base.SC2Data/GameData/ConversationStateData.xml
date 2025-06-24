@@ -159,4 +159,27 @@
             <InfoValue Id="Item Count" Value="3"/>
         </Indices>
     </CConversationState>
+    <CConversationState id="Tech">
+        <Indices index="8">
+            <InfoValue index="0" Value="110000"/>
+            <InfoUpgrade index="0" Upgrade="SuperStim"/>
+            <InfoAbilCmd index="1" Abil="SuperStim"/>
+        </Indices>
+        <Indices index="9">
+            <InfoValue index="0" Value="90000"/>
+        </Indices>
+        <Indices index="10">
+            <InfoValue index="0" Value="115000"/>
+            <InfoUpgrade index="0" Upgrade="StabilizerMedpacksMerc"/>
+        </Indices>
+        <Indices index="12">
+            <InfoValue index="0" Value="95000"/>
+            <InfoUpgrade index="0" Upgrade="BearclawGauntlets"/>
+            <InfoAbilCmd Id="AC2" Abil="DevilDogGrapple"/>
+        </Indices>
+        <Indices index="13">
+            <InfoValue index="0" Value="110000"/>
+            <InfoUpgrade index="0" Upgrade="ChemicalPlating"/>
+        </Indices>
+    </CConversationState>
 </Catalog>

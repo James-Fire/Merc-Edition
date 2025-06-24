@@ -9,6 +9,22 @@
             <Button DefaultButtonFace="1BuildZeusBattleTank" Requirements="Zeus1Requirement"/>
             <Unit value="ARESWarbotMercMod"/>
         </InfoArray>
+        <InfoArray index="Train4" Time="63">
+            <Button DefaultButtonFace="2BuildZeusBattleTank" Requirements="Zeus2Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="63">
+            <Button DefaultButtonFace="3BuildZeusBattleTank" Requirements="Zeus3Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="63">
+            <Button DefaultButtonFace="4BuildZeusBattleTank" Requirements="Zeus4Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="63">
+            <Button DefaultButtonFace="5BuildZeusBattleTank" Requirements="Zeus5Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
     </CAbilTrain>
     <CAbilMerge id="PartisanGrandArchonMerge">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
