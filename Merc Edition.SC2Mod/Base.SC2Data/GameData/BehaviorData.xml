@@ -6,6 +6,27 @@
     <CBehaviorBuff id="DarkTemplarShadowFuryFinalDelay">
         <InfoFlags index="Hidden" value="0"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ColossusCuirassier">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoFlags index="AlwaysUseGameText" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UseAnduinProtoss@Validator"/>
+        <Modification>
+            <VitalMaxArray index="Life" value="100"/>
+            <VitalMaxArray index="Shields" value="75"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GrandArchon">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoFlags index="AlwaysUseGameText" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UseAnduinProtoss@Validator"/>
+        <Modification RadiusMultiplier="1.25">
+            <VitalMaxArray index="Shields" value="260"/>
+            <VitalMaxArray index="Energy" value="200"/>
+            <VitalRegenArray index="Energy" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="EchoDropPodsDelay">
         <InfoFlags index="Hidden" value="1"/>
         <Duration value="2.3"/>
@@ -252,6 +273,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <InfoFlags index="AlwaysUseGameText" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UseAnduinProtoss@Validator"/>
         <Modification UnitNameOverride="HighTemplarPartisanName">
             <VitalMaxArray index="Life" value="50"/>
             <VitalMaxArray index="Shields" value="50"/>
@@ -261,6 +283,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <InfoFlags index="AlwaysUseGameText" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UseAnduinProtoss@Validator"/>
         <Modification RangedWeaponRange="4" UnitNameOverride="DragoonPostilion">
             <AdditiveAttackSpeedFactor value="0.2"/>
             <VitalMaxArray index="Life" value="110"/>
@@ -365,6 +388,18 @@
         <Duration value="10"/>
         <Period value="0.5"/>
         <PeriodicEffect value="PlagueMunitionsDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TychusStimpack">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="3">
+            <DamageTakenFraction index="Spell" value="-0.6"/>
+            <DamageTakenFraction index="Melee" value="-0.6"/>
+            <DamageTakenFraction index="Ranged" value="-0.6"/>
+            <DamageTakenFraction index="Splash" value="-0.6"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ShadowHallucination">
         <InfoFlags index="Hidden" value="1"/>
@@ -893,6 +928,22 @@
         <BuffFlags index="RefreshStack" value="1"/>
         <MaxStackCount value="13"/>
         <Tooltip value="Button/Tooltip/ShellShower"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShieldBooster">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zeratul-warpprism-shieldboosters.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.8"/>
+        <Modification>
+            <VitalRegenArray index="Shields" value="4"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShieldBoosterAura">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="UseAnduinProtoss"/>
+        <Period value="1"/>
+        <PeriodicEffect value="ShieldBoosterSA"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SingularityBlastStunned">
         <Alignment value="Negative"/>

@@ -113,6 +113,10 @@
         <Value value="1"/>
         <Behavior value="HighTemplarPartisan"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="IsGrandArchon@Validator">
+        <Find value="1"/>
+        <Value value="IsGrandArchon"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="NotHighTemplarPartisan">
         <WhichUnit Value="Caster"/>
         <Behavior value="HighTemplarPartisan"/>
@@ -392,6 +396,11 @@
     <CValidatorUnitOrderTargetType id="TargetIsPoint">
         <Type value="Point"/>
     </CValidatorUnitOrderTargetType>
+    <CValidatorUnitCompareBehaviorCount id="TychusHasSecretStash">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="TychusStimpack"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorPlayerRequirement id="UseAnduinProtoss@Validator">
         <Find value="1"/>
         <Value value="UseAnduinProtoss"/>

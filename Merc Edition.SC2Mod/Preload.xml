@@ -14,12 +14,12 @@
 <Effect id="EchoDropPodsIndicatorDummy"/>
 <Effect id="CabalAssaultReviveDummy"/>
 <Effect id="CabalFighterReviveDummy"/>
+<Effect id="SpectreNo15DeadRingerCP"/>
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
-<Effect id="SpectreNo15DeadRingerCP"/>
+<Sound id="Spectre15NukeLaunch"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
 <Sound id="RedlineReactorMusicEasterEgg"/>
-<Sound id="Spectre15NukeLaunch"/>
 <Unit id="InfestedTerran"/>
 <Unit id="ARESWarbotMercMod"/>
 </Preload>

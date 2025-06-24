@@ -6,6 +6,60 @@
         <Death value="Blast"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="AnduinConjureCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterPoint"/>
+        <PeriodCount value="5"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="AnduinConjureSA"/>
+        <PeriodicOffsetArray value="0,-2.5,0"/>
+        <PeriodicPeriodArray value="0.3"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="AnduinConjureDamage">
+        <Amount value="55"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="AnduinConjureLaunchMissile">
+        <ImpactEffect value="AnduinConjureDamage"/>
+        <AmmoUnit value="AnduinConjureMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectEnumArea id="AnduinConjureSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground,Visible;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray>
+            <MaxCount value="1"/>
+            <RectangleWidth value="5"/>
+            <RectangleHeight value="8"/>
+            <Effect value="AnduinConjureLaunchMissile"/>
+        </AreaArray>
+        <DebugTrace value="1"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <TargetSorts>
+            <SortArray value="TSRandom"/>
+        </TargetSorts>
+    </CEffectEnumArea>
+    <CEffectDamage id="GrandArchonWeaponDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <AttributeBonus index="Armored" value="25"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="40"/>
+        <AreaArray Radius="0.3" Fraction="1"/>
+        <AreaArray Radius="0.6" Fraction="0.5"/>
+        <AreaArray Radius="1.2" Fraction="0.25"/>
+        <ExcludeArray Value="Outer"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="ShieldBoosterAB">
+        <Behavior value="ShieldBoosterAura"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="ShieldBoosterSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AreaArray Radius="7" Effect="ShieldBoosterAB"/>
+    </CEffectEnumArea>
     <CEffectDamage id="SpectreNo15DeathrattleBlast" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <LaunchLocation Value="SourcePoint"/>
@@ -2235,6 +2289,9 @@
         <CaseArray Validator="IsMovingandHasBurstAmplifiers" Effect="ScorpionMissilesAmplifiedDamage"/>
         <CaseDefault value="ScorpionMissiles"/>
     </CEffectSwitch>
+    <CEffectDamage id="ThermalLancesFireBeamDamage">
+        <Amount value="15"/>
+    </CEffectDamage>
     <CEffectIssueOrder id="TitanWreckageAbil">
         <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
@@ -2297,6 +2354,13 @@
     <CEffectApplyBehavior id="TriggerOverdriveApplyBehavior">
         <WhichUnit Value="Caster"/>
         <Behavior value="TriggerOverdrive"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="TychusCommandoAttackDamage">
+        <AreaArray index="0" Fraction="0.33"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="TychusStimpackAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="TychusStimpack"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="U-240RoundsBombApplyBehavior">
         <ValidatorArray index="0" value="HaveU240Rounds"/>

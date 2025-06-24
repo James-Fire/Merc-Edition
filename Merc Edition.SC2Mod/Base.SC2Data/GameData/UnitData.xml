@@ -115,11 +115,21 @@
     <CUnit id="AlphaSquadronMissile2" parent="MISSILE">
         <Mover value="AlphaSquadronMissile"/>
     </CUnit>
+    <CUnit id="AnduinConjureMissile" parent="MISSILE">
+        <Mover value="ArtanisLightningDashMissile"/>
+    </CUnit>
     <CUnit id="AnduinPlasmaBlastWeapon" parent="MISSILE">
         <Mover value="AnduinPlasmaBlastMissile"/>
     </CUnit>
     <CUnit id="Archon">
-        <AbilArray index="6" removed="1"/>
+        <AbilArray index="6" Link="CripplingPsiStorm"/>
+        <AbilArray Link="Conjure"/>
+        <BehaviorArray Link="GrandArchon"/>
+        <WeaponArray Link="DivineShockwave"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="AnduinCripplestorm" Type="AbilCmd" AbilCmd="CripplingPsiStorm,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="GrandArchonConjure" Type="AbilCmd" AbilCmd="Conjure,Execute" Row="2" Column="1"/>
+        </CardLayouts>
         <!--BehaviorArray Link="SOACheatDeathSupply4"/-->
     </CUnit>
     <CUnit id="AutomatedRefinery">
@@ -171,6 +181,13 @@
         </CardLayouts>
         <AbilArray Link="SalvageShared"/>
     </CUnit>
+    <CUnit id="Colossus">
+        <BehaviorArray Link="ColossusCuirassier"/>
+        <WeaponArray Link="ColossusPurifierThermalLances" Turret="Colossus"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="VoidColossusFireBeam" Type="Passive" Requirements="UseAnduinProtoss" Row="2" Column="1"/>
+        </CardLayouts>
+    </CUnit>
     <!-- StalkerAiur is swapped out for Dragoon -->
     <CUnit id="Dragoon">
         <AbilArray Link="SingularityBlast"/>
@@ -181,6 +198,7 @@
             <LayoutButtons Face="VoidStalkerDragoonArmor" Type="Passive" Row="2" Column="1"/>
             <LayoutButtons Face="SingularitySling" Type="Passive" Requirements="DragoonPostilion" Row="1" Column="0"/>
         </CardLayouts>
+        <BehaviorArray Link="DragoonPostilion"/>
     </CUnit>
     <CUnit id="HighTemplar">
         <AbilArray Link="PsiStormShakuras"/>
@@ -190,7 +208,10 @@
             <LayoutButtons index="9" Face="GreaterFeedback" AbilCmd="GreaterFeedback,Execute"/>
             <LayoutButtons Face="PsiStorm" Type="AbilCmd" AbilCmd="PsiStorm,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="Feedback" Type="AbilCmd" AbilCmd="Feedback,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="ShieldBooster" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
         </CardLayouts>
+        <BehaviorArray Link="HighTemplarPartisan"/>
+        <BehaviorArray Link="ShieldBoosterAura"/>
         <!--WeaponArray Link="HighTemplarFakeWeapon"/-->
     </CUnit>
     <CUnit id="ImmortalShakuras">
@@ -763,6 +784,7 @@
             <LayoutButtons index="12" Face="Scan" Type="AbilCmd" AbilCmd="ScannerSweep,Execute" Column="1"/>
             <LayoutButtons index="13" Face="TrainACV" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
+            <LayoutButtons Face="1BuildZeusBattleTank" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train3" Row="0" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="SCV" Type="AbilCmd" AbilCmd="CommandCenterTrain,Train2" Row="0" Column="0"/>
@@ -1920,8 +1942,11 @@
     </CUnit>
     <CUnit id="Stalker">
         <CardLayouts index="0">
+            <LayoutButtons index="6" AbilCmd="BlinkMultiple,Execute"/>
+            <LayoutButtons Face="Blink" Type="AbilCmd" AbilCmd="Blink,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="ZhakulGuardians" Type="Passive" Requirements="UseAnduinProtoss" Row="1" Column="0"/>
         </CardLayouts>
+        <AbilArray Link="BlinkMultiple"/>
     </CUnit>
     <CUnit id="SupplyDepot">
         <AbilArray Link="SalvageShared"/>
@@ -2101,6 +2126,19 @@
         </Fidget>
         <WeaponArray Link="AGRWhiplash"/>
         <EffectArray index="Death" value="SpectreNo15DeathDummy"/>
+    </CUnit>
+    <CUnit id="TychusCommando">
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="250"/>
+        <LifeMax value="250"/>
+        <LifeArmor value="2"/>
+        <AbilArray Link="TychusSecretStash"/>
+        <BehaviorArray index="0" Link="HailOfLeadDummy"/>
+        <BehaviorArray index="1" removed="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Row="1" Column="0"/>
+            <LayoutButtons Face="TychusSecretStash" Type="AbilCmd" AbilCmd="TychusSecretStash,Execute" Row="2" Column="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="Ultralisk">
         <AbilArray index="5" removed="1"/>

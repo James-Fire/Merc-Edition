@@ -9,6 +9,49 @@
     <CModel id="AGRWhiplashLaunchModel" parent="LaunchFX">
         <Model value="Assets\COOP\Zeratul\Effects\Immortal_Zeratul_COOP_CannonLaunch\Immortal_Zeratul_COOP_CannonLaunch.m3"/>
     </CModel>
+    <CModel id="AnduinArchon" parent="ArchonBase">
+        <Model value="Assets\Units\Protoss\Archon_Golden\Archon_Golden.m3"/>
+        <LowQualityModel value="ArchonLow"/>
+        <ScaleMax value="1.150000,1.150000,1.150000"/>
+        <ScaleMin value="1.150000,1.150000,1.150000"/>
+        <TextureDeclares Prefix="archon_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="AnduinConjureDeath">
+        <Model value="Assets\Effects\Protoss\Adept_Missile_Impact\Adept_Missile_Impact.m3"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="AnduinConjureMissile">
+        <Model value="Assets\Units\Protoss\Zealot_Golden\Zealot_Golden.m3"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
+    </CModel>
+    <CModel id="AnduinColossus" parent="ColossusBase">
+        <Model value="Assets\Units\Protoss\Colossus_Golden\Colossus_Golden.m3"/>
+        <TextureDeclares Prefix="colossus_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="ColossusPurifierAttackBeam">
+        <Model value="Assets\Effects\Protoss\Colossus_Purifier_Coop_TimeBeam\Colossus_Purifier_Coop_TimeBeam.m3"/>
+    </CModel>
+    <CModel id="ColossusPurifierAttackBeamUnitImpact">
+        <Model value="Assets\COOP\Zeratul\Effects\Immortal_Zeratul_COOP_CannonImpactUpgraded\Immortal_Zeratul_COOP_CannonImpactUpgraded.m3"/>
+        <AnimSpeed value="0.500000"/>
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModel>
+    <CModel id="ConjureAnduinArchon">
+        <Model value="Assets\Effects\Zerg\HybridEnergizeImpact\HybridEnergizeImpact.m3"/>
+    </CModel>
+    <CModel id="GrandArchonAttackBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Models\GrandArchonBeam.m3"/>
+        <LowQualityModel value="ArchonAttackBeamLow"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
     <CModel id="CashRegisterImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModel>
@@ -1491,6 +1534,13 @@
         <FacialController value="LocalizedData\Facial\ToshPortrait.fxa"/>
         <Image value="Assets\Textures\ToshPortrait_Static.dds"/>
         <Lighting value="ToshPortrait"/>
+    </CModel>
+    <CModel id="ThermalLancesFireBeamModel">
+        <!--Model value="Assets\Doodads\FireMedium\FireMedium.m3"/-->
+        <!--Model value="Assets\Effects\Protoss\ColossusBeamBurn\ColossusBeamBurn.m3"/-->
+        <Model value="Assets\Doodads\GenericProtossFire_Shakuras_Medium_Long\GenericProtossFire_Shakuras_Medium_Long.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
     <CModel id="WildSnipeDamageBeam">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Beam\Nova_Snipe_Beam.m3"/>

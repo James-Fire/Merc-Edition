@@ -316,6 +316,20 @@
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_017.fxe"/>
         </AssetArray>
     </CSound>
+    <CSound id="AnduinConjureImpact" parent="Combat">
+        <AssetArray File="Assets\Sounds\Dragoon_AttackImpact01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dragoon_AttackImpact02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dragoon_AttackImpact03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dragoon_AttackImpact04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dragoon_AttackImpact05.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="AnduinConjureStart" parent="Combat">
+        <AssetArray File="Assets\Sounds\Hybrid_Dom_Boss_Birth_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Hybrid_Dom_Boss_Birth_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Hybrid_Dom_Boss_Birth_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Hybrid_Dom_Boss_Birth_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Hybrid_Dom_Boss_Birth_07.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="AnduinOpenGateS" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Blink_SP_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Blink_SP_02.wav" FacialGroup=""/>
@@ -339,6 +353,23 @@
     <CSound id="AnduinPsiStormLayerS" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Construct_Eso_EnergyWave_01.wav" FacialGroup=""/>
         <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="GrandArchonAttackImpact" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackImpact01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackImpact02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackImpact03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackImpact04.wav" FacialGroup=""/>
+        <Volume value="-12.349999,-12.349999"/>
+    </CSound>
+    <CSound id="GrandArchonAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackLaunch01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackLaunch02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackLaunch03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackLaunch04.wav" FacialGroup=""/>
+        <Flags index="VariationFallback" value="0"/>
+        <Pitch value="0.000000,6.000000"/>
     </CSound>
     <CSound id="CabalReady" parent="Ready">
         <AssetArray File="Assets\Sounds\VO Cabal\Ready\00-i076.wav" FacialGroup=""/>
@@ -430,6 +461,29 @@
     <CSound id="EchoDropPodsLaunchS" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\DropPod\DropPod_Drop0.wav" FacialGroup=""/>
         <Mode value="3DHead"/>
+    </CSound>
+    <!--                                                                                         -->
+    <!-- Units                                                                                   -->
+    <!--                                                                                         -->
+    <CSound id="Raven_AutoTurretAttackLaunch">
+        <DupeDestroyCount value="20"/>
+    </CSound>
+    <CSound id="TychusAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_09.wav" FacialGroup=""/>
+        <Flags index="VariationFallback" value="0"/>
+        <DupeDestroyCount value="20"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-1.000000,0.500000"/>
+        <Volume value="-10.000000,-10.000000"/>
     </CSound>
     <CSound id="Spectre15NukeLaunch" parent="Spell">
         <EditorCategories value="Race:Terran"/>
@@ -1383,6 +1437,26 @@
         <OverlapTimeDelta value="100"/>
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-7.960000,-6.120000"/>
+    </CSound>
+    <CSound id="TychusAttackLaunchStimpack" parent="Combat">
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tychus_WH_AutoTurret_Att_Launch_09.wav" FacialGroup=""/>
+        <Flags index="VariationFallback" value="0"/>
+        <DupeDestroyCount value="20"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-3.000000,-3.000000"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="TychusStimpack" parent="Combat">
+        <AssetArray File="Assets\Sounds\VO Tychus\TychusHero_Stim1.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Tychus\TychusHero_Stim2.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Tychus\TychusHero_Stim3.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Tychus\TychusHero_Stim4.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VO Tychus\TychusHero_Stim5.ogg" FacialGroup=""/>
+        <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="WildSnipeImpact" parent="Combat">
         <AssetArray File="Assets\Sounds\Explosion_CarpetBurn_2.wav" FacialGroup=""/>
