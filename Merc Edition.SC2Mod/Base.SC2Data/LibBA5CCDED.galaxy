@@ -1125,6 +1125,7 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh03A) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_BFA1DFC0"));
+        TechTreeUpgradeAddLevel(1, ("BreakoutMission"), 1);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTTosh03B) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_0FCD1833"));
@@ -1149,6 +1150,7 @@ bool libBA5CCDED_gt_MissionDirectives_Func (bool testConds, bool runActions) {
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02A) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_4D7D6BB1"));
+        TechTreeUpgradeAddLevel(1, ("EchoBelly"), 1);
     }
     else if (auto8C0CF512_val == libCamp_ge_MapID_MapTValerian02B) {
         libBA5CCDED_gf_WillEmail(StringExternal("Param/Value/lib_BA5CCDED_20259278"));
