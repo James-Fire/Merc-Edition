@@ -84,6 +84,14 @@
         <Effect value="ChargedJupiterRailDamage"/>
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
+    <!--CWeaponLegacy id="ThermalLances">-->
+    <!--        <Range value="9"/>-->
+    <!--    </CWeaponLegacy-->
+    <CWeaponLegacy id="ColossusPurifierThermalLances">
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Range value="10"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="DevastatorMissilesMerc">
         <Options index="Disabled" value="1"/>
         <Options index="Hidden" value="1"/>
@@ -113,6 +121,21 @@
     <CWeaponLegacy id="InfestedGuassRifle">
         <Effect value="InfestedMarineWeaponSet"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="DivineShockwave">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="GrandArchonWeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="3"/>
+        <TeleportResetRange value="0"/>
+        <Cost>
+            <Cooldown Location="Unit"/>
+        </Cost>
+        <Period value="2.1542"/>
+        <Effect value="GrandArchonWeaponDamage"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="SpotterBioDischarge">
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="SpotterBioDischargeDamage"/>
@@ -120,6 +143,9 @@
         <Range value="4"/>
         <Period value="1.52"/>
         <Effect value="SpotterBioDischargeLaunchMissile"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TychusCommandoChaingun">
+        <PreEffect value="VulcanCannonsAB"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="VanirMissiles">
         <EditorCategories value="Race:Terran"/>

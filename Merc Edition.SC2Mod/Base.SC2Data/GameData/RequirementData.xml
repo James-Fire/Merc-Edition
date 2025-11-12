@@ -18,6 +18,9 @@
     <CRequirement id="IsHighTemplarPartisan">
         <NodeArray index="Show" Link="CountBehaviorHighTemplarPartisanCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="IsGrandArchon">
+        <NodeArray index="Show" Link="CountBehaviorGrandArchonCompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="IsInSilentMode">
         <NodeArray index="Show" Link="CountBehaviorNomadSilentModeCompleteOnlyAtUnit"/>
     </CRequirement>
@@ -327,8 +330,28 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeViralFlammenwerferCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="Zeus1Requirement">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="LT830165722CountUnitARESWarbotMercModQueuedOrBetter1"/>
+    </CRequirement>
     <CRequirement id="UseZeusTankSecretUpgrade">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeZeusTankSecretUpgradeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="Zeus2Requirement">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="LT830165722CountUnitARESWarbotMercModQueuedOrBetter2"/>
+    </CRequirement>
+    <CRequirement id="Zeus3Requirement">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="LT830165722CountUnitARESWarbotMercModQueuedOrBetter3"/>
+    </CRequirement>
+    <CRequirement id="Zeus4Requirement">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="LT830165722CountUnitARESWarbotMercModQueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="Zeus5Requirement">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="LT830165722CountUnitARESWarbotMercModQueuedOrBetter5"/>
     </CRequirement>
 </Catalog>

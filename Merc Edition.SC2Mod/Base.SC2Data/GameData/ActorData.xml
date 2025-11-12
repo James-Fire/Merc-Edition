@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <!--                                                                                         -->
+    <!-- Colossus                                                                         -->
+    <!--                                                                                         -->
+    <CActorUnit id="Colossus">
+        <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinColossus"/>
+    </CActorUnit>
+    <CActorSound id="AnduinConjureStart" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnduinConjureCP.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="ConjureAnduinArchon" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnduinConjureCP.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.700000"/>
+        <On Terms="Effect.AnduinConjureCP.Stop" Send="Destroy"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorAction id="AnduinConjure" parent="GenericAttack" effectImpact="AnduinConjureDamage" effectLaunch="AnduinConjureLaunchMissile">
+        <LaunchSiteOps Ops="SOpAttachOrigin"/>
+        <LaunchAttachQuery Methods="Weapon 0"/>
+        <ImpactSiteOps Ops="SOpAttachOrigin"/>
+    </CActorAction>
+    <CActorModel id="AnduinConjureDeath" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.AnduinConjureDamage.Start; At Target" Send="Create"/>
+        <On Terms="Effect.AnduinConjureLaunchMissile.Start; At Missile" Send="Create"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <HostSiteOps Ops="SOpAttachCenterStationary"/>
+    </CActorModel>
+    <CActorModelMaterial id="AnduinConjureGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="4" Terms="ActorCreation" Send="ModelMaterialApplyTo _Missile"/>
+        <On index="5" Terms="UnitCreation.AnduinConjureMissile" Target="_Missile" Send="Create"/>
+        <On index="6" removed="1"/>
+        <Model value="GlazeNovaBaseDecoy"/>
+    </CActorModelMaterial>
+    <CActorMissile id="AnduinConjureMissile" parent="GenericAttackMissile" unitName="AnduinConjureMissile">
+        <On Terms="ActorCreation" Send="AnimPlay Walk Spell,Walk"/>
+        <On Terms="ActorCreation" Send="Create ChargingSound"/>
+        <On Terms="ActorCreation" Send="SetTintColor {32,138,255 3.000000}"/>
+    </CActorMissile>
+    <CActorAction id="GrandArchonAttack" parent="GenericAttack" effectAttack="GrandArchonWeaponDamage">
+        <Beam value="GrandArchonBeam"/>
+        <BeamScope value="Caster"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeNoVizEnhance VoidRaySOpForwardLaunch"/>
+        <ImpactMap index="None" Model=""/>
+        <ActionFlags index="ImpactMonitorsTeleports" value="1"/>
+    </CActorAction>
+    <CActorBeamSimple id="GrandArchonBeam" parent="BeamSimpleAnimationStyleOneShot">
+        <Macros value="ActionTargetTeleportDestroy"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkArchonAttackBeam"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="AnimBracketStart BSDb Birth Stand Death ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSDb" Send="Destroy"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkArchonAttackBeam"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="AnimBracketStart BSDb Birth Stand Death ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSDb" Send="Destroy"/>
+        <Model value="GrandArchonAttackBeam"/>
+        <Scale value="0.500000"/>
+    </CActorBeamSimple>
+    <CActorRange id="CripplingPsiStormRange" parent="RangeAbil" abil="CripplingPsiStorm">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorSound id="HighTemplarPsiStormLaunchSound">
+        <On Terms="Abil.CripplingPsiStorm" Send="Create"/>
+    </CActorSound>
+    <CActorSplat id="GrandArchonStormSplat" parent="ProtossCursorSplat" abil="CripplingPsiStorm">
+        <Model value="AnduinStormCursorSplat"/>
+    </CActorSplat>
+    <CActorUnit id="Archon">
+        <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinArchon"/>
+        <On Terms="Abil.Conjure.SourceCastStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.500000 AsDuration"/>
+        <On Terms="Abil.CripplingPsiStorm.SourceCastStart" Send="AnimPlay Attack Attack"/>
+    </CActorUnit>
     <CActorModel id="DarkTemplarShadowFuryImpact">
         <On Terms="ActorCreation; ValidateEffect UseBreakoutMission@Validator" Send="SetTintColor {0,223,0 1.500000}"/>
     </CActorModel>
@@ -46,6 +120,7 @@
     <CActorModel id="FortressBombardmentSlagImpact" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.FortressBombardmentDamage.Start; ValidateEffect UseSlagShellsBellyBonus@Validator" Send="Create"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorModel id="NaniteSnipeControl" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
@@ -64,6 +139,7 @@
         <EditorCategories value=""/>
         <On Terms="Effect.GreaterFeedbackSA.Start; At Effect" Send="Create"/>
         <On Terms="ActorCreation" Send="SetTintColor {185,222,255 1.500000}"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorSound id="GreaterFeedbackS" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -315,12 +391,14 @@
         <On Terms="Effect.EchoDropPodsIndicatorDummy.Start" Send="Create"/>
         <Model value="droppodIndicatorModel"/>
         <Scale value="0.500000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorModel id="EchoDropPodsDropM" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.EchoDropPodsSet.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="TimerSet 3.000000 1"/>
         <On Terms="TimerExpired; TimerName" Send="Destroy"/>
         <Model value="droppodDropModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorModel id="SpectreNo15DeathrattleBeacon" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
@@ -620,6 +698,7 @@
         <On Terms="Effect.AlphaSquadronCUWarPigs.Start" Send="Create"/>
         <On Terms="Effect.AlphaSquadronCUTank.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="SetOpacity 0.000000 1.000000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorSound id="AlphaSquadronImpactS" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -1188,6 +1267,7 @@
     <CActorModel id="FreyjaBombardmentImpact" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.FreyjaBombardmentSA.Start" Send="Create"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorModelMaterial id="Hellraiser" parent="BehaviorGlaze">
         <EditorCategories value=""/>
@@ -1249,6 +1329,7 @@
     <CActorModel id="MinikinSpawn" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.Minikin.On" Send="Create"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorSound id="MinikinSpawnSound" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -1537,6 +1618,7 @@
     <CActorModel id="FortressBombardmentImpactModel" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.FortressBombardmentDamage.Start" Send="Create"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <!-- Ground Attack                                                                           -->
     <CActorMissile id="MilitarizedColonistShipGroundAttackMissile">
@@ -2043,6 +2125,19 @@
         </Wireframe>
         <WireframeShieldColor value="255,0,128,0"/>
     </CActorUnit>
+    <CActorSound id="TychusAttackLaunchStimpack" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.TychusCommandoAttackDamage.Start; ValidateEffect TychusHasSecretStash" Send="Create"/>
+    </CActorSound>
+    <!--                                                                                         -->
+    <!-- Tychus Commando ....................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="TychusCommando">
+        <AbilSoundArray AbilCmd="TychusSecretStash,Execute" Sound="TychusStimpack"/>
+    </CActorUnit>
+    <CActorAction id="TychusCommandoAttack">
+        <LaunchAssets Sound="TychusAttackLaunch"/>
+    </CActorAction>
     <CActorAction id="WildSnipe" parent="GenericAttack" effectAttack="WildSnipeDamage">
         <EditorCategories value=""/>
         <Beam value="WildSnipeDamageBeam"/>
@@ -2932,6 +3027,7 @@
         <EditorCategories value=""/>
         <On Terms="Effect.ChemicalPlatingDummy.Start; At Target" Send="Create"/>
         <On Terms="ActorCreation" Send="SetTintColor {0,255,0 7.000000}"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorSound id="ChemicalPlatingImpacted" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -3140,10 +3236,12 @@
         <EditorCategories value=""/>
         <On Terms="Effect.DeadMenTellNoTales.Start" Send="Create"/>
         <Scale value="1.500000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorModel id="DevilDogGrappleImpact" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.DevilDogGrappleRemovePrecursor.Start" Send="Create"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorModel id="DevilDogGrappleJets" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
@@ -3439,12 +3537,14 @@
         <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
         <On Terms="Behavior.SuperStim.On" Send="Create"/>
         <On Terms="Behavior.SecretStashStimpack.On" Send="Create"/>
+        <On Terms="Behavior.TychusStimpack.On" Send="Create"/>
     </CActorSound>
     <CActorModel id="LowGradeStimEnd" parent="ModelAnimationStyleOneShot">
         <Inherits index="CloakEffect" value="1"/>
         <On Terms="Behavior.LowGradeStims.Off" Send="Create"/>
         <On Terms="Behavior.SuperStim.Off" Send="Create"/>
         <On Terms="Behavior.SecretStashStimpack.Off" Send="Create"/>
+        <On Terms="Behavior.TychusStimpack.Off" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
@@ -4024,6 +4124,7 @@
         <On Terms="Behavior.LowGradeStims.On" Send="Create"/>
         <On Terms="Behavior.SuperStim.On" Send="Create"/>
         <On Terms="Behavior.SecretStashStimpack.On" Send="Create"/>
+        <On Terms="Behavior.TychusStimpack.On" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>

@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilTrain id="CommandCenterTrain">
+        <InfoArray index="Train2" Time="17">
+            <Button DefaultButtonFace="TrainACV" State="Restricted"/>
+            <Unit value="ACV"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="63">
+            <Button DefaultButtonFace="1BuildZeusBattleTank" Requirements="Zeus1Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="63">
+            <Button DefaultButtonFace="2BuildZeusBattleTank" Requirements="Zeus2Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="63">
+            <Button DefaultButtonFace="3BuildZeusBattleTank" Requirements="Zeus3Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="63">
+            <Button DefaultButtonFace="4BuildZeusBattleTank" Requirements="Zeus4Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="63">
+            <Button DefaultButtonFace="5BuildZeusBattleTank" Requirements="Zeus5Requirement"/>
+            <Unit value="ARESWarbotMercMod"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilMerge id="PartisanGrandArchonMerge">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="AWrp" State="Restricted">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="ArchonWarpTarget" State="Restricted"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Info Unit="Archon" Time="12"/>
+        <Range value="5"/>
+    </CAbilMerge>
+    <CAbilEffectTarget id="BlinkMultiple">
+        <CmdButtonArray index="Execute" Requirements="UseAnduinProtoss"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Conjure">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AnduinConjureCP"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown TimeUse="4.5"/>
+        </Cost>
+        <Range value="8"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="GrandArchonConjure"/>
+        <FinishTime value="1.55"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CursorRangeMode value="Clamp"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="CripplingPsiStorm">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PsiStormShakurasPersistent"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Range value="11"/>
+        <CastOutroTime value="0.5"/>
+        <CursorEffect value="PsiStormShakurasSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CripplingPsionicStorm" Requirements="IsGrandArchon"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="KarassPlasmaSurge">
+        <Cost index="0">
+            <Vital index="Energy" value="50"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="TychusSecretStash">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="TychusStimpackAB"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Life" value="30"/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SuperStim"/>
+    </CAbilEffectInstant>
     <CAbilEffectInstant id="SpectreNo15Deathrattle">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Cost>
@@ -152,11 +233,6 @@
         <AINotifyEffect value=""/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Contaminate"/>
     </CAbilEffectTarget>
-    <CAbilEffectTarget id="KarassPlasmaSurge">
-        <Cost index="0">
-            <Vital index="Energy" value="50"/>
-        </Cost>
-    </CAbilEffectTarget>
     <CAbilEffectTarget id="AnduinOpenGate">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="OpenGateDummy"/>
@@ -229,16 +305,6 @@
     <CAbilEffectTarget id="CalldownMULE">
         <CmdButtonArray index="Execute" Requirements="UseAdvancedOrbitalCommand"/>
     </CAbilEffectTarget>
-    <CAbilTrain id="CommandCenterTrain">
-        <InfoArray index="Train2" Time="17">
-            <Button DefaultButtonFace="TrainACV" State="Restricted"/>
-            <Unit value="ACV"/>
-        </InfoArray>
-        <InfoArray index="Train3" Time="63">
-            <Button DefaultButtonFace="BuildZeusBattleTank"/>
-            <Unit value="ARESWarbotMercMod"/>
-        </InfoArray>
-    </CAbilTrain>
     <CAbilEffectInstant id="FerrierofSouls">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="FerrierofSoulsApplyBehavior"/>

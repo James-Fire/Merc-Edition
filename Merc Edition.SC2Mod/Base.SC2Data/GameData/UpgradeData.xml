@@ -30,9 +30,19 @@
         <EffectArray Operation="Set" Reference="Unit,Sentry,Speed" Value="3.050700"/>
         <EffectArray Operation="Set" Reference="Unit,PrisonZealot,Speed" Value="3.050700"/>
         <EffectArray Operation="Set" Reference="Unit,ImmortalShakuras,Speed" Value="3.050700"/>
-        <EffectArray Operation="Set" Reference="Unit,Stalker,Name" Value="Unit/Name/StalkerAnduin"/>
+        <EffectArray Operation="Set" Reference="Weapon,PsionicShockwave,Options[Disabled]" Value="1"/>
         <EffectArray Operation="Set" Reference="Unit,Sentry,Name" Value="Unit/Name/SentryAnduin"/>
         <EffectArray Operation="Set" Reference="Unit,PrisonZealot,Name" Value="Unit/Name/ZealotAnduin"/>
+        <EffectArray Operation="Set" Reference="Unit,Archon,Name" Value="Unit/Name/ArchonAnduin"/>
+        <EffectArray Operation="Set" Reference="Weapon,SJBattlecruiser,AcquireCliffLevelRange" Value="1,-1"/>
+        <EffectArray Operation="Set" Reference="Weapon,PsionicShockwave,Options[Hidden]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,DivineShockwave,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DivineShockwave,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusPurifierThermalLances,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusPurifierThermalLances,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,Colossus,Name" Value="Unit/Name/ColossusAnduin"/>
+        <EffectArray Operation="Set" Reference="Weapon,ThermalLances,Options[Hidden]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,ThermalLances,Options[Disabled]" Value="1"/>
         <AffectedUnitArray value="Stalker"/>
         <AffectedUnitArray value="Sentry"/>
         <AffectedUnitArray value="ImmortalShakuras"/>
@@ -844,6 +854,9 @@
         <EffectArray Operation="Set" Reference="Actor,AnarchistAttackLaunch,Scale" Value="1.500000,1.000000,1.000000"/>
         <AffectedUnitArray value="Anarchist"/>
         <AffectedUnitArray value="Agitator"/>
+    </CUpgrade>
+    <CUpgrade id="ZeusCount">
+        <MaxLevel value="5"/>
     </CUpgrade>
     <CUpgrade id="ZeusTankSecretUpgrade">
         <EffectArray Operation="Multiply" Reference="Unit,ARESWarbotMercMod,LifeMax" Value="1.33"/>

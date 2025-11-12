@@ -40,6 +40,7 @@ trigger libBA5CCDED_gt_OpenBanks;
 trigger libBA5CCDED_gt_SaveBanks;
 trigger libBA5CCDED_gt_ListenforChat;
 trigger libBA5CCDED_gt_Init;
+trigger libBA5CCDED_gt_InitZeus;
 trigger libBA5CCDED_gt_InitHillRespawn;
 trigger libBA5CCDED_gt_InitACVMultibuild;
 trigger libBA5CCDED_gt_InitAllowingUnits;

@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="2BuildZeusBattleTank">
+        <Icon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+        <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+    </CButton>
+    <CButton id="3BuildZeusBattleTank">
+        <Icon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+        <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+    </CButton>
+    <CButton id="4BuildZeusBattleTank">
+        <Icon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+        <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+    </CButton>
+    <CButton id="5BuildZeusBattleTank">
+        <Icon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+        <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
+    </CButton>
     <CButton id="ARESTargetLock">
         <Icon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
@@ -42,7 +62,7 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
-    <CButton id="BuildZeusBattleTank">
+    <CButton id="1BuildZeusBattleTank">
         <Icon value="Assets\Textures\btn-unit-terran-ares.dds"/>
         <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
@@ -73,6 +93,10 @@
         <EditorCategories value="Race:Terran"/>
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
+    </CButton>
+    <CButton id="GrandArchonConjure">
+        <Icon value="Assets\Textures\talent-artanis-level01-swiftretribution.dds"/>
+        <AlertIcon value="Assets\Textures\talent-artanis-level01-swiftretribution.dds"/>
     </CButton>
     <CButton id="HeatTreatedNanitesBellyBonus">
         <Icon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>

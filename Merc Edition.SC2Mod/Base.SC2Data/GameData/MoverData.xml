@@ -58,11 +58,32 @@
             <YawPitchRoll value="5568.75"/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="AlarakACBaneBladesCharge">
+        <Flags index="RestoreHeight" value="1"/>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Speed value="20"/>
+            <ArrivalTestType value="2D"/>
+            <Timeout value="0.5"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverMissile id="AlphaSquadronMissile">
         <MotionPhases>
             <Driver value="Guidance"/>
             <Acceleration value="3200"/>
             <MaxSpeed value="25"/>
+            <Outro value="-1"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="AnduinConjureMissile">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="9"/>
             <Outro value="-1"/>
             <ThrowBandYaw value="-360,-360,-360,-360"/>
             <ThrowBandPitch value="-360,-360,-360,-360"/>

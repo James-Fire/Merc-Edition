@@ -13,6 +13,10 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="DragoonPostilion" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorGrandArchonCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="GrandArchon" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorHighTemplarPartisanCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="HighTemplarPartisan" State="CompleteOnlyAtUnit"/>
@@ -29,6 +33,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="SgtHammerSieged" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitARESWarbotMercModQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ARESWarbotMercMod" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAlias_SpiderMineCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Alias_SpiderMine" State="CompleteOnlyAtUnit"/>
@@ -258,6 +267,26 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="ZeusTankSecretUpgrade" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementLT id="LT830165722CountUnitARESWarbotMercModQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitARESWarbotMercModQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT830165722CountUnitARESWarbotMercModQueuedOrBetter2">
+        <OperandArray index="0" value="CountUnitARESWarbotMercModQueuedOrBetter"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT830165722CountUnitARESWarbotMercModQueuedOrBetter3">
+        <OperandArray index="0" value="CountUnitARESWarbotMercModQueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT830165722CountUnitARESWarbotMercModQueuedOrBetter4">
+        <OperandArray index="0" value="CountUnitARESWarbotMercModQueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT830165722CountUnitARESWarbotMercModQueuedOrBetter5">
+        <OperandArray index="0" value="CountUnitARESWarbotMercModQueuedOrBetter"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementLT>
     <CRequirementLTE id="LTCountUpgradeStabilizerMedpacksMercQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeStabilizerMedpacksMercQueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
