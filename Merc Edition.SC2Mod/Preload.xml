@@ -2,6 +2,7 @@
 <Preload>
 <Abil id="SkibisAngelRepairDrone"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="GenericDontDie"/>
 <Behavior id="CabalRevive1"/>
 <Behavior id="Hill180sRespawn"/>
 <Behavior id="HellraiserEasterEgg"/>
@@ -10,6 +11,7 @@
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SpectreNo15SuperCloak"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
+<Effect id="NukeDetonate"/>
 <Effect id="HeroNukeDetonate"/>
 <Effect id="EchoDropPodsIndicatorDummy"/>
 <Effect id="CabalAssaultReviveDummy"/>

@@ -101,7 +101,6 @@ bool auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc (bool testConds, bool runAc
     int auto5694256B_u;
     unit auto5694256B_var;
     string autoF1BE7618_val;
-    string auto91D9F428_val;
 
     // Implementation
     auto5694256B_g = UnitGroup(null, 1, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), 0), 0);
@@ -188,6 +187,9 @@ bool auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc (bool testConds, bool runAc
         else if (autoF1BE7618_val == "Medivac") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "CharonDropship", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
+        else if (autoF1BE7618_val == "Nova") {
+            libNtve_gf_ReplaceUnit(auto5694256B_var, "Echo", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
+        }
         else if (autoF1BE7618_val == "Probe") {
             libNtve_gf_ReplaceUnit(auto5694256B_var, "ACV", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
@@ -237,9 +239,6 @@ bool auto_libBA5CCDED_gf_MercUnitReplace_TriggerFunc (bool testConds, bool runAc
             libNtve_gf_ReplaceUnit(auto5694256B_var, "Refinery", libNtve_ge_ReplaceUnitOptions_OldUnitsRelative);
         }
         else {
-        }
-        auto91D9F428_val = UnitGetType(auto5694256B_var);
-        {
         }
     }
     return true;
@@ -2042,7 +2041,7 @@ bool libBA5CCDED_gt_HillRespawn_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "GravenHill"))) {
+        if (!(((UnitGetType(EventUnit()) == "Echo") || (UnitGetType(EventUnit()) == "GravenHill")))) {
             return false;
         }
     }
@@ -2054,19 +2053,22 @@ bool libBA5CCDED_gt_HillRespawn_Func (bool testConds, bool runActions) {
 
     lv_hill = EventUnit();
     UnitSetPropertyFixed(lv_hill, c_unitPropLifePercent, 100.0);
-    if ((TimerGetRemaining(libBA5CCDED_gv_hillRespawnTimer) > 0.0)) {
+    if ((TimerGetRemaining(libBA5CCDED_gv_hillRespawnTimer) <= 0.0)) {
+        if ((UnitGetType(EventUnit()) == "Echo")) {
+            UnitCreateEffectPoint(lv_hill, "NukeDetonate", UnitGetPosition(lv_hill));
+        }
+
         libNtve_gf_MakeUnitInvulnerable(lv_hill, true);
         libNtve_gf_MakeUnitUncommandable(lv_hill, true);
         UnitSetPosition(lv_hill, libBA5CCDED_gv_hillRespawnPoint, false);
+        UnitCreateEffectUnit(lv_hill, ("HillReviveDummy"), lv_hill);
+        TimerStart(libBA5CCDED_gv_hillRespawnTimer, 120.0, false, c_timeGame);
         UnitBehaviorAdd(lv_hill, "Hill180sRespawn", lv_hill, 1);
         Wait(180.0, c_timeGame);
         libNtve_gf_MakeUnitInvulnerable(lv_hill, false);
         libNtve_gf_MakeUnitUncommandable(lv_hill, false);
     }
-    else {
-        UnitCreateEffectUnit(lv_hill, ("HillReviveDummy"), lv_hill);
-        TimerStart(libBA5CCDED_gv_hillRespawnTimer, 120.0, false, c_timeGame);
-    }
+
     return true;
 }
 
@@ -2075,6 +2077,7 @@ void libBA5CCDED_gt_HillRespawn_Init () {
     libBA5CCDED_gt_HillRespawn = TriggerCreate("libBA5CCDED_gt_HillRespawn_Func");
     TriggerEnable(libBA5CCDED_gt_HillRespawn, false);
     TriggerAddEventUnitDamaged(libBA5CCDED_gt_HillRespawn, null, c_unitDamageTypeAny, c_unitDamageFatal, null);
+    TriggerAddEventUnitDamageAbsorbed(libBA5CCDED_gt_HillRespawn, null, "GenericDontDie");
 }
 
 //--------------------------------------------------------------------------------------------------
