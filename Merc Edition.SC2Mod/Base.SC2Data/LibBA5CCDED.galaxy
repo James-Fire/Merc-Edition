@@ -635,6 +635,7 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
     libBA5CCDED_gv_supplyMaxxed = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "SupplyMaxxed");
     libBA5CCDED_gv_genericDifficulty = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty");
     libBA5CCDED_gv_nightmarePlus = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "NightmarePlus");
+    libBA5CCDED_gv_taurenAllowed = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "TaurenAllowed");
     TechTreeUpgradeAddLevel(1, (BankValueGetAsString(libBA5CCDED_gv_eventBank, "Persistent Units", "Warbot Upgrade")), 1);
     if ((libBA5CCDED_gv_genericDifficulty == true)) {
         TriggerExecute(libBA5CCDED_gt_ProtossGenericDifficulty, true, false);
@@ -646,6 +647,10 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
     }
 
     if ((libBA5CCDED_gv_supplyMaxxed == true)) {
+        PlayerModifyPropertyInt(1, c_playerPropSuppliesMade, c_playerPropOperSetTo, 200);
+    }
+
+    if ((libBA5CCDED_gv_taurenAllowed == true)) {
         PlayerModifyPropertyInt(1, c_playerPropSuppliesMade, c_playerPropOperSetTo, 200);
     }
 
@@ -669,6 +674,7 @@ bool libBA5CCDED_gt_SaveBanks_Func (bool testConds, bool runActions) {
     }
 
     BankValueSetFromInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount", libBA5CCDED_gv_zeusCount);
+    BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "TaurenAllowed", libBA5CCDED_gv_taurenAllowed);
     BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty", libBA5CCDED_gv_genericDifficulty);
     BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Settings", "NightmarePlus", libBA5CCDED_gv_nightmarePlus);
     BankSave(libBA5CCDED_gv_eventBank);
@@ -2041,7 +2047,7 @@ bool libBA5CCDED_gt_HillRespawn_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!(((UnitGetType(EventUnit()) == "Echo") || (UnitGetType(EventUnit()) == "GravenHill")))) {
+        if (!(((UnitGetType(EventUnit()) == "SpectreNo15") || (UnitGetType(EventUnit()) == "Echo") || (UnitGetType(EventUnit()) == "GravenHill")))) {
             return false;
         }
     }
