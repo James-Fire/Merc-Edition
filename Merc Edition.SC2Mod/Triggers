@@ -762,6 +762,7 @@
             <Item Type="Variable" Library="BA5CCDED" Id="B4158051"/>
             <Item Type="Variable" Library="BA5CCDED" Id="72832601"/>
             <Item Type="Variable" Library="BA5CCDED" Id="65C50D0D"/>
+            <Item Type="Variable" Library="BA5CCDED" Id="9F4740CE"/>
         </Element>
         <Element Type="Category" Id="296AEF25">
             <Item Type="Variable" Library="BA5CCDED" Id="C2B557A7"/>
@@ -821,11 +822,13 @@
             <Action Type="FunctionCall" Library="BA5CCDED" Id="D7778958"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="B4AA0450"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="9DF7D4D9"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="2B61A3B7"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="60CE337A"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="8DD0D61D"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="6A422663"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="C93F7CAE"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="9E8AEA92"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="47E3D112"/>
         </Element>
         <Element Type="FunctionCall" Id="95F04120">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
@@ -1079,6 +1082,39 @@
             <Value>Persistent Units</Value>
             <ValueType Type="string"/>
         </Element>
+        <Element Type="FunctionCall" Id="2B61A3B7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="25191F70"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8513F455"/>
+        </Element>
+        <Element Type="Param" Id="25191F70">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="9F4740CE"/>
+        </Element>
+        <Element Type="Param" Id="8513F455">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FB3227A7"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FB3227A7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000304"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A08374CF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D1F41A4C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="08BD2908"/>
+        </Element>
+        <Element Type="Param" Id="A08374CF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000526"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="C2B557A7"/>
+        </Element>
+        <Element Type="Param" Id="D1F41A4C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000528"/>
+            <Value>StoneRescued</Value>
+            <ValueType Type="string"/>
+        </Element>
+        <Element Type="Param" Id="08BD2908">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000527"/>
+            <Value>Persistent Units</Value>
+            <ValueType Type="string"/>
+        </Element>
         <Element Type="FunctionCall" Id="60CE337A">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
             <Parameter Type="Param" Library="BA5CCDED" Id="D67F47EB"/>
@@ -1281,8 +1317,15 @@
         </Element>
         <Element Type="FunctionCall" Id="9E8AEA92">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="Comment" Library="BA5CCDED" Id="0A09AC56"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F9AF2594"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E97E6F60"/>
+        </Element>
+        <Element Type="Comment" Id="0A09AC56">
+            <Comment>
+                Allowed to make Taurens
+            </Comment>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
         </Element>
         <Element Type="FunctionCall" Id="F9AF2594">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="943DF2F7"/>
@@ -1330,10 +1373,90 @@
             <Value>true</Value>
             <ValueType Type="bool"/>
         </Element>
+        <Element Type="FunctionCall" Id="47E3D112">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="Comment" Library="BA5CCDED" Id="7DF83B57"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E4A07C2E"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EE476437"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CB2E58D6"/>
+        </Element>
+        <Element Type="Comment" Id="7DF83B57">
+            <Comment>
+                Bombardment Fortress and Nanite Emitter
+            </Comment>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E4A07C2E">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8CEE3B18"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="89F5E800"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="551F8A03"/>
+        </Element>
+        <Element Type="Param" Id="8CEE3B18">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="89F5E800">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="551F8A03">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>SlagShellsBellyBonus</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EE476437">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="213D9183"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6E0C506B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="EB4FCE41"/>
+        </Element>
+        <Element Type="Param" Id="213D9183">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="6E0C506B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="EB4FCE41">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>HeatTreatedNanitesBellyBonus</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CB2E58D6">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="33A92557"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1216D220"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="782FFDF0"/>
+        </Element>
+        <Element Type="Param" Id="33A92557">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="9F4740CE"/>
+        </Element>
+        <Element Type="Param" Id="1216D220">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="782FFDF0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>true</Value>
+            <ValueType Type="bool"/>
+        </Element>
         <Element Type="Trigger" Id="B08C6318">
             <Event Type="FunctionCall" Library="BA5CCDED" Id="C556C78E"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="55C162A8"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="48314168"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="F69ACD09"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="7A4FE3B1"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="F7591C3D"/>
             <Action Type="FunctionCall" Library="BA5CCDED" Id="7D7A95E2"/>
@@ -1397,6 +1520,31 @@
             <ValueType Type="string"/>
         </Element>
         <Element Type="Param" Id="2563FA85">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000554"/>
+            <Value>Persistent Units</Value>
+            <ValueType Type="string"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F69ACD09">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000298"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="37CCF775"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9959320E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C764A0F2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CEEC4DB2"/>
+        </Element>
+        <Element Type="Param" Id="37CCF775">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000553"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="C2B557A7"/>
+        </Element>
+        <Element Type="Param" Id="9959320E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000568"/>
+            <Variable Type="Variable" Library="BA5CCDED" Id="9F4740CE"/>
+        </Element>
+        <Element Type="Param" Id="C764A0F2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000555"/>
+            <Value>StoneRescued</Value>
+            <ValueType Type="string"/>
+        </Element>
+        <Element Type="Param" Id="CEEC4DB2">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000554"/>
             <Value>Persistent Units</Value>
             <ValueType Type="string"/>
@@ -1938,6 +2086,16 @@
             <Value Type="Param" Library="BA5CCDED" Id="1CFA9895"/>
         </Element>
         <Element Type="Param" Id="1CFA9895">
+            <Value>false</Value>
+            <ValueType Type="bool"/>
+        </Element>
+        <Element Type="Variable" Id="9F4740CE">
+            <VariableType>
+                <Type Value="bool"/>
+            </VariableType>
+            <Value Type="Param" Library="BA5CCDED" Id="55DD61D7"/>
+        </Element>
+        <Element Type="Param" Id="55DD61D7">
             <Value>false</Value>
             <ValueType Type="bool"/>
         </Element>

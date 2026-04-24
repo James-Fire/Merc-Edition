@@ -636,6 +636,7 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
     libBA5CCDED_gv_genericDifficulty = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty");
     libBA5CCDED_gv_nightmarePlus = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Settings", "NightmarePlus");
     libBA5CCDED_gv_taurenAllowed = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "TaurenAllowed");
+    libBA5CCDED_gv_stoneRescued = BankValueGetAsFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "StoneRescued");
     TechTreeUpgradeAddLevel(1, (BankValueGetAsString(libBA5CCDED_gv_eventBank, "Persistent Units", "Warbot Upgrade")), 1);
     if ((libBA5CCDED_gv_genericDifficulty == true)) {
         TriggerExecute(libBA5CCDED_gt_ProtossGenericDifficulty, true, false);
@@ -652,6 +653,11 @@ bool libBA5CCDED_gt_OpenBanks_Func (bool testConds, bool runActions) {
 
     if ((libBA5CCDED_gv_taurenAllowed == true)) {
         PlayerModifyPropertyInt(1, c_playerPropSuppliesMade, c_playerPropOperSetTo, 200);
+    }
+
+    if ((libBA5CCDED_gv_stoneRescued == true)) {
+        TechTreeUpgradeAddLevel(1, "SlagShellsBellyBonus", 1);
+        TechTreeUpgradeAddLevel(1, "HeatTreatedNanitesBellyBonus", 1);
     }
 
     return true;
@@ -675,6 +681,7 @@ bool libBA5CCDED_gt_SaveBanks_Func (bool testConds, bool runActions) {
 
     BankValueSetFromInt(libBA5CCDED_gv_eventBank, "Persistent Units", "ZeusCount", libBA5CCDED_gv_zeusCount);
     BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "TaurenAllowed", libBA5CCDED_gv_taurenAllowed);
+    BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Persistent Units", "StoneRescued", libBA5CCDED_gv_stoneRescued);
     BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Settings", "GenericDifficulty", libBA5CCDED_gv_genericDifficulty);
     BankValueSetFromFlag(libBA5CCDED_gv_eventBank, "Settings", "NightmarePlus", libBA5CCDED_gv_nightmarePlus);
     BankSave(libBA5CCDED_gv_eventBank);
