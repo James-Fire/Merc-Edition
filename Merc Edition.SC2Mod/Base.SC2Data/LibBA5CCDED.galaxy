@@ -600,12 +600,12 @@ bool libBA5CCDED_gt_NightmarePlus_Func (bool testConds, bool runActions) {
     }
 
     if ((libBA5CCDED_gv_nightmarePlus == true)) {
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Enemies no longer get +25% damage"));
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Enemies no longer deal +25% damage"));
         libBA5CCDED_gv_nightmarePlus = false;
         TriggerEnable(libBA5CCDED_gt_NightmarePlusEvent, false);
     }
     else {
-        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Enemies get +25% damage"));
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringToText("Enemies deal +25% damage"));
         libBA5CCDED_gv_nightmarePlus = true;
         TriggerEnable(libBA5CCDED_gt_NightmarePlusEvent, true);
     }
@@ -2126,6 +2126,12 @@ bool libBA5CCDED_gt_NightmarePlusEvent_Func (bool testConds, bool runActions) {
         }
     }
 
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAddPlayer(EventUnitCreatedUnit(), "NightmarePlus", 1, 1);
     return true;
 }
 
@@ -2155,6 +2161,7 @@ bool libBA5CCDED_gt_NightmarePlusInitial_Func (bool testConds, bool runActions) 
     for (;; auto8CFDA2F3_u -= 1) {
         auto8CFDA2F3_var = UnitGroupUnitFromEnd(auto8CFDA2F3_g, auto8CFDA2F3_u);
         if (auto8CFDA2F3_var == null) { break; }
+        UnitBehaviorAddPlayer(auto8CFDA2F3_var, "NightmarePlus", 1, 1);
     }
     return true;
 }

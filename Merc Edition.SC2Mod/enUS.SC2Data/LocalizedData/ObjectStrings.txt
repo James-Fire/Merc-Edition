@@ -803,6 +803,7 @@ Behavior/Name/NaniteEmitterInstabuilddelay=Nanite Emitter Insta build delay
 Behavior/Name/NaniteSnipeDeathrattle=Nanite Snipe Deathrattle
 Behavior/Name/NaniteSnipeMindControl=Nanite Snipe Mind Control
 Behavior/Name/NaniteTurretBurrow=Turret Burrow
+Behavior/Name/NightmarePlus=NightmarePlus
 Behavior/Name/PsiDisruptorDamage=Psi Disruptor Damage
 Behavior/Name/PsiDisruptorDamageSearch=Psi Disruptor Damage Search
 Behavior/Name/RadarTowerRadar=Radar Tower Radar

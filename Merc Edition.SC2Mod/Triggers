@@ -637,7 +637,7 @@
         </Element>
         <Element Type="Param" Id="1D95FB75">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="30693AA2"/>
-            <Value>Enemies no longer get +25% damage</Value>
+            <Value>Enemies no longer deal +25% damage</Value>
             <ValueType Type="string"/>
         </Element>
         <Element Type="FunctionCall" Id="5E88C60C">
@@ -668,7 +668,7 @@
         </Element>
         <Element Type="Param" Id="A261B87B">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="30693AA2"/>
-            <Value>Enemies get +25% damage</Value>
+            <Value>Enemies deal +25% damage</Value>
             <ValueType Type="string"/>
         </Element>
         <Element Type="FunctionCall" Id="94081596">
@@ -1375,16 +1375,9 @@
         </Element>
         <Element Type="FunctionCall" Id="47E3D112">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
-            <FunctionCall Type="Comment" Library="BA5CCDED" Id="7DF83B57"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E4A07C2E"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EE476437"/>
             <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CB2E58D6"/>
-        </Element>
-        <Element Type="Comment" Id="7DF83B57">
-            <Comment>
-                Bombardment Fortress and Nanite Emitter
-            </Comment>
-            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
         </Element>
         <Element Type="FunctionCall" Id="E4A07C2E">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
@@ -17858,6 +17851,7 @@
             <InitOff/>
             <Event Type="FunctionCall" Library="BA5CCDED" Id="62B76A4E"/>
             <Condition Type="FunctionCall" Library="BA5CCDED" Id="4C2061A3"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="0589D229"/>
         </Element>
         <Element Type="FunctionCall" Id="62B76A4E">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="18377668"/>
@@ -17907,12 +17901,43 @@
             <Value>1</Value>
             <ValueType Type="int"/>
         </Element>
+        <Element Type="FunctionCall" Id="0589D229">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="CB774E72"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A3FF5D2D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="42ADCC99"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2AA6B2CB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FDFCF385"/>
+        </Element>
+        <Element Type="Param" Id="A3FF5D2D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8B9F7B61"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="42ADCC99">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="E463F943"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="2AA6B2CB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="E39E14DF"/>
+            <Value>NightmarePlus</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="FDFCF385">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="10968B1B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="7112953D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="7112953D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="11EB5EB1"/>
+        </Element>
         <Element Type="Trigger" Id="ED467E3E">
             <Action Type="FunctionCall" Library="BA5CCDED" Id="8CFDA2F3"/>
         </Element>
         <Element Type="FunctionCall" Id="8CFDA2F3">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="C4DC760C"/>
             <Parameter Type="Param" Library="BA5CCDED" Id="ED72C3F6"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="404E7C97"/>
         </Element>
         <Element Type="Param" Id="ED72C3F6">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="F96B466D"/>
@@ -17950,6 +17975,37 @@
         <Element Type="Param" Id="D02A81B3">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000694"/>
             <Preset Type="PresetValue" Library="Ntve" Id="1468BD55"/>
+        </Element>
+        <Element Type="FunctionCall" Id="404E7C97">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="CB774E72"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="9441B8B5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="94203CD6"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FAB7AB7F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D5220E23"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="302D1565"/>
+        </Element>
+        <Element Type="Param" Id="94203CD6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8B9F7B61"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="FAB7AB7F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="E463F943"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="D5220E23">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="E39E14DF"/>
+            <Value>NightmarePlus</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Behavior"/>
+        </Element>
+        <Element Type="Param" Id="302D1565">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="10968B1B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="74CF6A81"/>
+        </Element>
+        <Element Type="FunctionCall" Id="74CF6A81">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="19CE733E"/>
         </Element>
     </Library>
 </TriggerData>

@@ -380,6 +380,18 @@
             <AbilLinkDisableArray value="HallucinationDisruptor"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="NightmarePlus">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageTakenFraction index="Spell" value="1.25"/>
+            <DamageTakenFraction index="Melee" value="1.25"/>
+            <DamageTakenFraction index="Ranged" value="1.25"/>
+            <DamageTakenFraction index="Splash" value="1.25"/>
+            <DamageTakenFraction index="NoProc" value="1.25"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="PlagueMunitions">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-stukov-buff-infested marine&apos;s plague munitions.dds"/>

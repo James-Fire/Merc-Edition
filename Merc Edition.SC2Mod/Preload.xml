@@ -11,6 +11,7 @@
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SpectreNo15SuperCloak"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
+<Behavior id="NightmarePlus"/>
 <Effect id="NukeDetonate"/>
 <Effect id="HeroNukeDetonate"/>
 <Effect id="EchoDropPodsIndicatorDummy"/>
