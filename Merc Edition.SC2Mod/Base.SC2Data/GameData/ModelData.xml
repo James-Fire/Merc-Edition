@@ -2773,4 +2773,63 @@
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
+    <!-- SCEvo remastered minerals (ResourceMineralsSCBW set, not the BW Classic set). Stock ids overridden: base = @Low LOD, *High = full model (Ultra/Extreme) -->
+    <CModel id="MineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Low\ResourceMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="MineralField450">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Low\ResourceMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="MineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Low\ResourceMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="MineralFieldHigh">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW\ResourceMineralsSCBW.m3"/>
+    </CModel>
+    <CModel id="HighYieldMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Low\ResourceHighYieldMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="HighYieldMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Low\ResourceHighYieldMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="HighYieldMineralFieldHigh">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW\ResourceHighYieldMineralsSCBW.m3"/>
+    </CModel>
+    <CModel id="LabMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Lab\ResourceMineralsSCBW@Lab.m3"/>
+    </CModel>
+    <CModel id="LabMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Lab\ResourceMineralsSCBW@Lab.m3"/>
+    </CModel>
+    <CModel id="BattleStationMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@BattleStation\ResourceMineralsSCBW@BattleStation.m3"/>
+    </CModel>
+    <CModel id="BattleStationMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@BattleStation\ResourceMineralsSCBW@BattleStation.m3"/>
+    </CModel>
+    <CModel id="PurifierMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Purifier\ResourceMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="PurifierMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Purifier\ResourceMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="PurifierRichMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Purifier\ResourceHighYieldMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="PurifierRichMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Purifier\ResourceHighYieldMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="CarryMineralFieldMinerals">
+        <Model value="Assets\Buildings\Resources\ResourceCrystalSCBW\ResourceCrystalSCBW.m3"/>
+    </CModel>
+    <CModel id="CarryHighYieldMineralFieldMinerals">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldCrystalSCBW\ResourceHighYieldCrystalSCBW.m3"/>
+    </CModel>
+    <!-- Geyser: stock Ex2 asset (same data change SCEvo Core makes); High also pointed at it so Ultra/Extreme match -->
+    <CModel id="VespeneGeyser">
+        <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
+    </CModel>
+    <CModel id="VespeneGeyserHigh">
+        <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
+    </CModel>
 </Catalog>

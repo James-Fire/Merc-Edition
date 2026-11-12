@@ -3560,7 +3560,37 @@ void libCamp_gf_TS_InitializeMercDataSingle (int lp_iD, text lp_name, text lp_de
     libCamp_gv_tS_MercNoCreditImage[lv_mercIndex] = lp_noCreditImage;
 }
 
+void libCamp_gf_TS_InitializeMercDataHero (int lp_iD, string lp_hero, int lp_techSubgroup, string lp_video, abilcmd lp_command, string lp_upgrade) {
+    // Implementation
+    libCamp_gf_TS_InitializeMercDataSingle(lp_iD,
+        UserDataGetText("MercHeroes", lp_hero, "Name", 1),
+        UserDataGetText("MercHeroes", lp_hero, "Description", 1),
+        UserDataGetInt("MercHeroes", lp_hero, "Cost", 1),
+        lp_techSubgroup, 1, libCamp_ge_StoryTechGroup_StoryTechGroupNone, 0,
+        UserDataGetText("MercHeroes", lp_hero, "UnitText", 1),
+        UserDataGetGameLink("MercHeroes", lp_hero, "Unit", 1),
+        UserDataGetText("MercHeroes", lp_hero, "Availability", 1),
+        UserDataGetText("MercHeroes", lp_hero, "Special", 1),
+        UserDataGetGameLink("MercHeroes", lp_hero, "PortraitModel", 1),
+        lp_video, lp_command, null, null, lp_upgrade,
+        UserDataGetImagePath("MercHeroes", lp_hero, "HiredImage", 1),
+        UserDataGetImagePath("MercHeroes", lp_hero, "NoCreditImage", 1));
+}
+
 void libCamp_gf_TS_InitializeMercData () {
+    // Implementation
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercKelmorianMercenaries, "JimRaynor", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarine, "Assets\\Textures\\merccontract_marines.ogv", AbilityCommand("SummonMercenaries", 0), "HireKelmorianMinersPH");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDevilDogs, "HankHarnack", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryFirebat, "Assets\\Textures\\merccontract_firebats.ogv", AbilityCommand("SummonMercenaries", 1), "HireDevilDogsPH");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercHammerSecurities, "Rattlesnake", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarauder, "Assets\\Textures\\merccontract_marauders.ogv", AbilityCommand("SummonMercenaries", 3), "HireHammerSecuritiesPH");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercSpartanCompany, "ED067", libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesGoliath, "Assets\\Textures\\merccontract_goliaths.ogv", AbilityCommand("SummonMercenaries", 2), "HireSpartanCompanyPH");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercSiegeBreakers, "SgtHammer", libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesSiegeTank, "Assets\\Textures\\merccontract_siegetanks.ogv", AbilityCommand("SummonMercenaries", 4), "HireSiegeBreakersPH");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercHelsAngels, "Cabal", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsViking, "Assets\\Textures\\merccontract_viking.ogv", AbilityCommand("SummonMercenaries", 5), "HireHelsAngelsPH");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDuskWing, "Freyja", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBanshee, "Assets\\Textures\\merccontract_banshees.ogv", AbilityCommand("SummonMercenaries", 6), "HireDuskWingPH");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDukesRevenge, "DukesRevenge", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBattlecruiser, "Assets\\Textures\\merccontract_battlecruisers.ogv", AbilityCommand("SummonMercenaries", 7), "HireDukesRevenge");
+}
+
+// Stock WoL contract data
+void libCamp_gf_TS_InitializeMercDataStock () {
     // Automatic Variable Declarations
     // Implementation
     libCamp_gf_TS_InitializeMercDataSingle(libCamp_ge_StoryMercID_MercKelmorianMercenaries, StringExternal("Param/Value/lib_Camp_5709963B"), StringExternal("Param/Value/lib_Camp_82484E1D"), 35000, libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarine, 4, libCamp_ge_StoryTechGroup_StoryTechGroupNone, 0, StringExternal("Param/Value/lib_Camp_E6C595F8"), "WarPig", StringToText(""), StringExternal("Param/Value/lib_Camp_84A6C943"), "MarineMercenaryPortrait", "Assets\\Textures\\merccontract_marines.ogv", AbilityCommand("SummonMercenaries", 0), null, null, "HireKelmorianMinersPH", "Assets\\Textures\\ui_mercenaries_marinemercenaryportrait_hired.dds", "Assets\\Textures\\ui_mercenaries_marinemercenaryportrait_nocredit.dds");
@@ -3669,6 +3699,7 @@ void libCamp_gf_TS_UpdateMercStatus () {
         }
         auto94ADC81C_i = auto94ADC81C_i + 1;
     }
+    libCamp_gf_SetMercStatus(libCamp_ge_StoryMercID_MercKelmorianMercenaries, libCamp_ge_StoryMercStatus_Purchased);
 }
 
 void libCamp_gf_TS_ApplyMercUpgrades (int lp_player) {
@@ -3752,6 +3783,7 @@ void libCamp_gf_TS_MercUIUpdateUI () {
             MercenarySetCost(MercenaryLastCreated(), libCamp_gf_MercCost(lv_indexMerc));
             MercenarySetUnitText(MercenaryLastCreated(), libCamp_gf_MercUnitText(lv_indexMerc));
             MercenarySetSpecialText(MercenaryLastCreated(), libCamp_gf_MercSpecialText(lv_indexMerc));
+            MercenarySetAvailabilityText(MercenaryLastCreated(), libCamp_gf_MercAvailablityText(lv_indexMerc));
             MercenarySetModelLink(MercenaryLastCreated(), libCamp_gf_MercPortraitModel(lv_indexMerc));
             MercenarySetScenePath(MercenaryLastCreated(), libCamp_gf_MercVideo(lv_indexMerc));
             auto90A2DADE_val = lv_indexMerc;
@@ -3806,7 +3838,8 @@ void libCamp_gf_TS_MercUIUpdateUI () {
 void libCamp_gf_TS_MercUIGift (int lp_mercGifted) {
     // Automatic Variable Declarations
     // Implementation
-    if ((lp_mercGifted == libCamp_ge_StoryMercID_MercNone) && (libCamp_gf_MercStatusCheck(lp_mercGifted, libCamp_ge_StoryMercStatus_Purchased) == true)) {
+    // Merc: was "&&", which re-gifted (and replayed the purchase animation) every time the panel opened.
+    if ((lp_mercGifted == libCamp_ge_StoryMercID_MercNone) || (libCamp_gf_MercStatusCheck(lp_mercGifted, libCamp_ge_StoryMercStatus_Purchased) == true)) {
         return ;
     }
 
@@ -12394,6 +12427,61 @@ void libCamp_gt_TS_MercUIPurchase_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Merc Heroes - Refresh On Load (Merc Edition)
+// A loaded save restores the script variables it was saved with, including the merc text, cost
+// and art, so a save made before the hero data changed would keep showing the old contracts.
+// Re-read MercHeroes after every load, keep the saved hire states, and update the panel cards.
+//--------------------------------------------------------------------------------------------------
+trigger libCamp_gt_MercHeroesRefreshOnLoad;
+
+bool libCamp_gt_MercHeroesRefreshOnLoad_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_i;
+    int lv_merc;
+    int lv_card;
+    int[17] lv_status;
+
+    // Implementation
+    if (!runActions) {
+        return true;
+    }
+
+    lv_i = libCamp_gv_TSC_MERC_FIRST;
+    while (lv_i <= libCamp_gv_TSC_MERC_LAST) {
+        lv_merc = libCamp_gv_tS_MercID[lv_i];
+        lv_status[lv_merc] = libCamp_gv_tSX_MercStatus[lv_merc];
+        lv_i = lv_i + 1;
+    }
+    libCamp_gf_TS_InitializeMercData();
+    lv_i = libCamp_gv_TSC_MERC_FIRST;
+    while (lv_i <= libCamp_gv_TSC_MERC_LAST) {
+        lv_merc = libCamp_gv_tS_MercID[lv_i];
+        libCamp_gv_tSX_MercStatus[lv_merc] = lv_status[lv_merc];
+        if (libCamp_gv_tS_MercUICreated == true) {
+            lv_card = libCamp_gv_tS_MercUIMercenaries[lv_merc];
+            MercenarySetTitleText(lv_card, libCamp_gf_MercName(lv_merc));
+            MercenarySetDescriptionText(lv_card, libCamp_gf_MercDescription(lv_merc));
+            MercenarySetCost(lv_card, libCamp_gf_MercCost(lv_merc));
+            MercenarySetUnitText(lv_card, libCamp_gf_MercUnitText(lv_merc));
+            MercenarySetSpecialText(lv_card, libCamp_gf_MercSpecialText(lv_merc));
+            MercenarySetAvailabilityText(lv_card, libCamp_gf_MercAvailablityText(lv_merc));
+            MercenarySetModelLink(lv_card, libCamp_gf_MercPortraitModel(lv_merc));
+        }
+        lv_i = lv_i + 1;
+    }
+    libCamp_gf_TS_UpdateMercStatus();
+    if (libCamp_gv_tS_MercUICreated == true) {
+        libCamp_gf_TS_MercUIUpdateUI();
+    }
+    return true;
+}
+
+void libCamp_gt_MercHeroesRefreshOnLoad_Init () {
+    libCamp_gt_MercHeroesRefreshOnLoad = TriggerCreate("libCamp_gt_MercHeroesRefreshOnLoad_Func");
+    TriggerAddEventLoadGameDone(libCamp_gt_MercHeroesRefreshOnLoad);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: TS_MercUI - Exit
 //--------------------------------------------------------------------------------------------------
 bool libCamp_gt_TS_MercUIExit_Func (bool testConds, bool runActions) {
@@ -14625,6 +14713,7 @@ void libCamp_InitTriggers () {
     libCamp_gt_ZS_CampaignTrialDialogUpgradeClicked_Init();
     libCamp_gt_TS_MercNewToAvailable_Init();
     libCamp_gt_TS_MercUIPurchase_Init();
+    libCamp_gt_MercHeroesRefreshOnLoad_Init();
     libCamp_gt_TS_MercUIExit_Init();
     libCamp_gt_TS_BattleReportMissionReplay_Init();
     libCamp_gt_TS_BattleReportSceneReplay_Init();

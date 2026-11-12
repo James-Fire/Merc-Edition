@@ -1553,6 +1553,46 @@ UserData/MercArmyTypes/Max-Tech_Type Name=Max-Tech
 UserData/MercArmyTypes/Mid-Tech_Type Name=Mid-Tech
 UserData/MercArmyTypes/Starships_Type Name=Starships
 UserData/MercArmyTypes/Vehicles_Type Name=Vehicles
+UserData/MercHeroes/Cabal_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">5 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">120 s</s>
+UserData/MercHeroes/Cabal_Description=<s val="MercDescription">Computer Assisted Biologically Augmented Lifeform, or CABAL for short, is an unknown entity that appeared in the Koprulu sector some time ago. Very little is known of where it came from, but for the moment it appears to want to "save" the local populace from their oppressive government, which it keeps calling the Grand Dominion Institute.</s>
+UserData/MercHeroes/Cabal_Name=Cabal
+UserData/MercHeroes/Cabal_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Fighter/Mech Mode, Reaper Missiles, Cybernetic Reconstruction, Vulcan Cannons</s>
+UserData/MercHeroes/Cabal_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Hel's Angel upgrades</s>
+UserData/MercHeroes/DukesRevenge_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">9 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">240 s</s>
+UserData/MercHeroes/DukesRevenge_Description=<s val="MercDescription">This capital ship dates back to the early days of the Terran Dominion, just after General Duke was lost to the Queen of Blades. It has had many captains over the years and is said to be haunted by the general's ghost.</s>
+UserData/MercHeroes/DukesRevenge_Name=Duke's Revenge
+UserData/MercHeroes/DukesRevenge_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Yamato Cannon, Deploy Tac Fighters, Point Defense Laser</s>
+UserData/MercHeroes/DukesRevenge_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Starcruiser upgrades</s>
+UserData/MercHeroes/ED067_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">6 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">120 s</s>
+UserData/MercHeroes/ED067_Description=<s val="MercDescription">Apex Security Partnership's ED-067, a peacekeeping machine designed for urban pacification, malfunctioned during its first demonstration, killing junior executive Mr. Losumn. Dr. Rorke and his technicians struggled to control the faulty robot before shutting it down. The Predator program was green-lit because of the Losumn tragedy and rumors that the Enforcement Droid series used salvaged Dragoon parts from the first war.</s>
+UserData/MercHeroes/ED067_Name=ED-067
+UserData/MercHeroes/ED067_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Kel-Morian Ripper Rounds, Shell Shower, Minikin</s>
+UserData/MercHeroes/ED067_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Spartan Company upgrades</s>
+UserData/MercHeroes/Freyja_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">7 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">150 s</s>
+UserData/MercHeroes/Freyja_Description=<s val="MercDescription">Freyja commands the Valkyrie Squadron of the Midgard Warriors, a mercenary organization founded by survivors of the UED expedition fleet who took on mercenary work after its destruction. Today they are a high-tech outfit that uses the latest technology and looks after its members, avoiding losses wherever possible. No wonder their paychecks are so high. Then again, they do every job flawlessly.</s>
+UserData/MercHeroes/Freyja_Name=Freyja
+UserData/MercHeroes/Freyja_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Demon Rockets, Bombardment, Afterburners</s>
+UserData/MercHeroes/Freyja_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Dusk Wing upgrades</s>
+UserData/MercHeroes/HankHarnack_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">4 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">90 s</s>
+UserData/MercHeroes/HankHarnack_Description=<s val="MercDescription">Henry "Hank" Harnack, the son of a trucking company operator, became a private in the Confederate Marine Corps' famous Heaven's Devils platoon. Friends with fellow marines Jim Raynor and Ryk Kydd, he was quick to anger and had an impulsive attitude. He was officially listed as KIA, and much like Emperor Palpatine, he somehow survived.</s>
+UserData/MercHeroes/HankHarnack_Name=Hank Harnack
+UserData/MercHeroes/HankHarnack_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Flash Flames, Combustion, Meltdown</s>
+UserData/MercHeroes/HankHarnack_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Devil Dog upgrades</s>
+UserData/MercHeroes/JimRaynor_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">3 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">60 s</s>
+UserData/MercHeroes/JimRaynor_Description=<s val="MercDescription">James Eugene "Jim" Raynor is a former Terran marshal turned rebel, who has become one of the major figures in the Koprulu sector through his work to bring down the Confederacy and, later, in the struggle against the Confederacy's successor, the Dominion. Raynor is one of the few terrans to engage in a long-term alliance with the Protoss.</s>
+UserData/MercHeroes/JimRaynor_Name=Jim Raynor
+UserData/MercHeroes/JimRaynor_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Inspire, Give 'Em Some Pepper, Penetrator Round</s>
+UserData/MercHeroes/JimRaynor_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">War Pig upgrades</s>
+UserData/MercHeroes/Rattlesnake_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">5 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">90 s</s>
+UserData/MercHeroes/Rattlesnake_Description=<s val="MercDescription">Kev "Rattlesnake" West is a terran mercenary marauder and one of the few mercenaries to be honorably discharged from the Armed Forces. Though he refuses to take jobs that could harm innocent people, West still works steadily. His war days might be behind him, but he did not lose his bite.</s>
+UserData/MercHeroes/Rattlesnake_Name=Rattlesnake
+UserData/MercHeroes/Rattlesnake_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Deploy Revitalizer, Secret Stash Stimpack, Hammer Munitions</s>
+UserData/MercHeroes/Rattlesnake_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Hammer Security upgrades</s>
+UserData/MercHeroes/SgtHammer_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">7 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">150 s</s>
+UserData/MercHeroes/SgtHammer_Description=<s val="MercDescription">Sergeant Alabama "Bama the Hammer" Kowalski is a siege tank operator. She is said to be so accurate with her tank's shock cannon that she can drop shells inches away from friendly forces without harming them. A "rough and tumble Southern gal," Kowalski takes great pride in her tank, as well as her rank.</s>
+UserData/MercHeroes/SgtHammer_Name=Sgt. Hammer
+UserData/MercHeroes/SgtHammer_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Siege Mode, Neo Titanium Plating, Napalm Strike</s>
+UserData/MercHeroes/SgtHammer_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Siege Breaker upgrades</s>
 Weapon/Name/250mmUranusCarronades=250mm Uranus Carronades
 Weapon/Name/ACVFusionCutter=Fusion Cutter
 Weapon/Name/AGRShadeHunter=AGR Shade Hunter

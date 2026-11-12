@@ -1699,4 +1699,385 @@
             </GameLink>
         </Instances>
     </CUser>
+    <CUser id="MercHeroes">
+        <Fields Id="Contract" Type="Int" EditorColumn="1"/>
+        <Fields Id="Name" Type="Text" EditorColumn="2"/>
+        <Fields Id="Cost" Type="Int" EditorColumn="3"/>
+        <Fields>
+            <Id value="Unit"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Unit"/>
+            <EditorColumn value="4"/>
+        </Fields>
+        <Fields>
+            <Id value="PortraitModel"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Model"/>
+            <EditorColumn value="5"/>
+        </Fields>
+        <Fields Id="Description" Type="Text"/>
+        <Fields Id="UnitText" Type="Text"/>
+        <Fields Id="Availability" Type="Text"/>
+        <Fields Id="Special" Type="Text"/>
+        <Fields Id="PreviewSheet" Type="Image"/>
+        <Fields Id="HiredImage" Type="Image"/>
+        <Fields Id="NoCreditImage" Type="Image"/>
+        <Fields Id="ButtonIcon" Type="Image"/>
+        <Fields Id="UnlockMission" Type="String"/>
+        <Fields Id="SpawnDelay" Type="Int" EditorColumn="6"/>
+        <Fields Id="Respawn" Type="Int" EditorColumn="7"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="JimRaynor">
+            <Int Int="1">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/JimRaynor_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="0">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="JimRaynor">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="RaynorMarinePortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_marinemercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_marinemercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-MarineRaynor.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="180">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="60">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="HankHarnack">
+            <Int Int="2">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/HankHarnack_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="35000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="HankHarnack">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="HankHarnackPortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_firebatmercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_firebatmercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-FirebatMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="240">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="90">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="Rattlesnake">
+            <Int Int="3">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="45000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="Rattlesnake">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="RattlesnakePortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_maraudermercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_maraudermercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-MarauderMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="300">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="90">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="ED067">
+            <Int Int="4">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/ED067_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="60000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="ED067">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="PortraitED067">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_goliathmercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_goliathmercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-GoliathMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="360">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="120">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="SgtHammer">
+            <Int Int="5">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/SgtHammer_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="90000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="SgtHammer">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="SgtHammerPortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_siegetankmercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_siegetankmercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="420">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="150">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="Cabal">
+            <Int Int="6">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/Cabal_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="100000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="CabalFighter">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="CabalFighterPortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_vikingmercenaryfighterportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_vikingmercenaryfighterportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="300">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="120">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="Freyja">
+            <Int Int="7">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/Freyja_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="125000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="Freyja">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="PortraitFreyja">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_bansheemercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_bansheemercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-BansheeMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="420">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="150">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="DukesRevenge">
+            <Int Int="8">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="175000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="DukesRevengeHero">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="DukesRevengePortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_battlecruisermercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_battlecruisermercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\wireframe-terran-battlecruiserc.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="540">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="240">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+    </CUser>
 </Catalog>
