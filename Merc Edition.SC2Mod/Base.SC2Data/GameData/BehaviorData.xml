@@ -1408,4 +1408,9 @@
         <FinalEffect value="BlockBLandIssueLandRetryAB"/>
         <ExpireEffect value="BlockBLandIssueLandRetryAB"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BroodWarSkin">
+        <EditorCategories value="Race:Terran"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+    </CBehaviorBuff>
 </Catalog>

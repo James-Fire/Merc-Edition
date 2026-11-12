@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StyleFile>
+    <Constant name="BetaArmory_Green" val="255,4,225,15"/>
+    <Constant name="BetaArmory_Red" val="255,196,0,0"/>
+    <Constant name="BetaArmory_Grey" val="255,140,140,140"/>
+
+    <Style name="BetaArmory_CreditsHeading" template="PurchasePanelCreditsHeading" height="13" textcolor="255,255,255,255"/>
+    <Style name="BetaArmory_Credits" template="PurchasePanelCredits" height="19" textcolor="#BetaArmory_Green"/>
+    <Style name="BetaArmory_Credits_Available" template="BetaArmory_Credits" textcolor="#BetaArmory_Green"/>
+    <Style name="BetaArmory_Credits_Purchased" template="BetaArmory_Credits" textcolor="#BetaArmory_Grey"/>
+    <Style name="BetaArmory_Credits_Unaffordable" template="BetaArmory_Credits" textcolor="#BetaArmory_Red"/>
+    <Style name="BetaArmory_GroupName" template="PurchasePanelGroupName" height="15" textcolor="#BetaArmory_Green"/>
+    <Style name="BetaArmory_PurchaseButton" template="PurchasePanelPurchaseButton" height="28" textcolor="255,255,255,255"/>
+    <Style name="BetaArmory_PurchaseButton_Available" template="BetaArmory_PurchaseButton" textcolor="255,255,255,255"/>
+    <Style name="BetaArmory_PurchaseButton_Purchased" template="BetaArmory_PurchaseButton" textcolor="#BetaArmory_Grey"/>
+    <Style name="BetaArmory_PurchaseButton_Unaffordable" template="BetaArmory_PurchaseButton" textcolor="#BetaArmory_Red"/>
+    <Style name="BetaArmory_InfoItemName" template="PurchasePanelSelectedPurchaseItemName" height="26" textcolor="255,255,255,255"/>
+    <Style name="BetaArmory_InfoItemUpgrade" template="PurchasePanelSelectedPurchaseItemDescription" height="18" textcolor="#BetaArmory_Green" glowcolor="#BetaArmory_Green"/>
+    <Style name="BetaArmory_InfoItemDescription" font="UI\Fonts\EurostileExt-Reg.otf" template="PurchasePanelSelectedPurchaseItemDescription" height="16" textcolor="255,255,255,255"/>
+</StyleFile>

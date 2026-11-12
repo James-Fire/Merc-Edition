@@ -18,6 +18,10 @@ void libBA5CCDED_InitLibraries () {
 bool libBA5CCDED_InitVariables_completed = false;
 
 void libBA5CCDED_InitVariables () {
+    int init_i1;
+    int init_j1;
+    int init_k1;
+
     if (libBA5CCDED_InitVariables_completed) {
         return;
     }
@@ -27,6 +31,48 @@ void libBA5CCDED_InitVariables () {
     libBA5CCDED_gv_eventString = "";
     libBA5CCDED_gv_hillRespawnPoint = PlayerStartLocation(1);
     libBA5CCDED_gv_hillRespawnTimer = TimerCreate();
+    libBA5CCDED_gv_mU_Armory.lv_armoryDialog = c_invalidDialogId;
+    libBA5CCDED_gv_mU_Armory.lv_armoryPanel = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_videoPlayer = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_creditsLabel = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_costLabel = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_info_NameLabel = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_info_ListLabel = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_info_DescLabel = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_techPurchaseButton = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_Armory.lv_closeButton = c_invalidDialogControlId;
+    for (init_i1 = 0; init_i1 <= libBA5CCDED_gv_mU_ArmoryTechCategories; init_i1 += 1) {
+        libBA5CCDED_gv_mU_Armory.lv_armyCategory_Panel[init_i1] = c_invalidDialogControlId;
+    }
+    for (init_i1 = 0; init_i1 <= libBA5CCDED_gv_mU_ArmoryTechCategories; init_i1 += 1) {
+        libBA5CCDED_gv_mU_Armory.lv_armyCategory_NameLabel[init_i1] = c_invalidDialogControlId;
+    }
+    for (init_i1 = 0; init_i1 <= libBA5CCDED_gv_mU_ArmoryTechCategories; init_i1 += 1) {
+        for (init_j1 = 0; init_j1 <= libBA5CCDED_gv_mU_ArmoryTechUnits; init_j1 += 1) {
+            libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[init_i1][init_j1] = c_invalidDialogControlId;
+        }
+    }
+    for (init_i1 = 0; init_i1 <= libBA5CCDED_gv_mU_ArmoryTechCategories; init_i1 += 1) {
+        for (init_j1 = 0; init_j1 <= libBA5CCDED_gv_mU_ArmoryTechUnits; init_j1 += 1) {
+            for (init_k1 = 0; init_k1 <= libBA5CCDED_gv_mU_ArmoryTechButtons; init_k1 += 1) {
+                libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[init_i1][init_j1][init_k1] = c_invalidDialogControlId;
+            }
+        }
+    }
+    for (init_i1 = 0; init_i1 <= libBA5CCDED_gv_mU_ArmoryTechCategories; init_i1 += 1) {
+        for (init_j1 = 0; init_j1 <= libBA5CCDED_gv_mU_ArmoryTechUnits; init_j1 += 1) {
+            libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitIcon[init_i1][init_j1] = c_invalidDialogControlId;
+        }
+    }
+    for (init_i1 = 0; init_i1 <= libBA5CCDED_gv_mU_ArmoryTechCategories; init_i1 += 1) {
+        for (init_j1 = 0; init_j1 <= libBA5CCDED_gv_mU_ArmoryTechUnits; init_j1 += 1) {
+            for (init_k1 = 0; init_k1 <= libBA5CCDED_gv_mU_ArmoryTechButtons; init_k1 += 1) {
+                libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeIcon[init_i1][init_j1][init_k1] = c_invalidDialogControlId;
+            }
+        }
+    }
+    libBA5CCDED_gv_mU_Armory.lv_inputBlocker = c_invalidDialogControlId;
+    libBA5CCDED_gv_mU_TestCredits = 420000;
 }
 
 // Functions
@@ -319,6 +365,161 @@ bool auto_libBA5CCDED_gf_GiveResearch_TriggerFunc (bool testConds, bool runActio
     return true;
 }
 
+bool libBA5CCDED_gf_IsTownBuilding (unit lp_unit) {
+    // Variable Declarations
+    int lv_index;
+
+    // Automatic Variable Declarations
+    int auto3ECEDF93_ae;
+    const int auto3ECEDF93_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    auto3ECEDF93_ae = UserDataInstanceCount("MercTownBuildings");
+    lv_index = 1;
+    for ( ; ( (auto3ECEDF93_ai >= 0 && lv_index <= auto3ECEDF93_ae) || (auto3ECEDF93_ai < 0 && lv_index >= auto3ECEDF93_ae) ) ; lv_index += auto3ECEDF93_ai ) {
+        if ((UnitGetType(lp_unit) == UserDataGetUnit("MercTownBuildings", UserDataInstance("MercTownBuildings", lv_index), "Unit", 1))) {
+            return true;
+        }
+
+    }
+    return false;
+}
+
+unit libBA5CCDED_gf_TownRallyMineral (unit lp_town) {
+    // Variable Declarations
+    unitgroup lv_minerals;
+    unit lv_outer;
+    unit lv_inner;
+    unit lv_best;
+    fixed lv_bestDistance;
+    fixed lv_curDistance;
+
+    // Automatic Variable Declarations
+    unitgroup auto5EFCFF5F_g;
+    int auto5EFCFF5F_u;
+    unitgroup auto084663E1_g;
+    int auto084663E1_u;
+
+    // Variable Initialization
+    lv_minerals = UnitGroupEmpty();
+
+    // Implementation
+    lv_minerals = UnitGroup(null, 0, RegionCircle(UnitGetPosition(lp_town), 10.0), UnitFilter((1 << c_targetFilterHarvestableResource), 0, (1 << c_targetFilterRawResource) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    auto5EFCFF5F_g = lv_minerals;
+    auto5EFCFF5F_u = UnitGroupCount(auto5EFCFF5F_g, c_unitCountAll);
+    for (;; auto5EFCFF5F_u -= 1) {
+        lv_outer = UnitGroupUnitFromEnd(auto5EFCFF5F_g, auto5EFCFF5F_u);
+        if (lv_outer == null) { break; }
+        lv_curDistance = 0.0;
+        auto084663E1_g = lv_minerals;
+        auto084663E1_u = UnitGroupCount(auto084663E1_g, c_unitCountAll);
+        for (;; auto084663E1_u -= 1) {
+            lv_inner = UnitGroupUnitFromEnd(auto084663E1_g, auto084663E1_u);
+            if (lv_inner == null) { break; }
+            lv_curDistance = (lv_curDistance + DistanceBetweenPoints(UnitGetPosition(lv_inner), UnitGetPosition(lv_outer)));
+        }
+        if (((lv_bestDistance == 0.0) || (lv_curDistance < lv_bestDistance))) {
+            lv_bestDistance = lv_curDistance;
+            lv_best = lv_outer;
+        }
+
+    }
+    return lv_best;
+}
+
+void libBA5CCDED_gf_RallyTownToMinerals (unit lp_town) {
+    // Variable Declarations
+    unit lv_mineral;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Implementation
+    lv_mineral = libBA5CCDED_gf_TownRallyMineral(lp_town);
+    if ((lv_mineral != null)) {
+        UnitIssueOrder(lp_town, OrderTargetingUnit(null, lv_mineral), c_orderQueueReplace);
+    }
+
+}
+
+void libBA5CCDED_gf_RallyPlayerTownsToMinerals (int lp_player) {
+    // Variable Declarations
+    unit lv_town;
+
+    // Automatic Variable Declarations
+    unitgroup autoD4698F4F_g;
+    int autoD4698F4F_u;
+
+    // Variable Initialization
+
+    // Implementation
+    if ((PlayerGetState(lp_player, c_playerStateStartingRallyEnabled) == false)) {
+        return ;
+    }
+
+    autoD4698F4F_g = UnitGroup(null, lp_player, RegionEntireMap(), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterUnderConstruction - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    autoD4698F4F_u = UnitGroupCount(autoD4698F4F_g, c_unitCountAll);
+    for (;; autoD4698F4F_u -= 1) {
+        lv_town = UnitGroupUnitFromEnd(autoD4698F4F_g, autoD4698F4F_u);
+        if (lv_town == null) { break; }
+        if ((libBA5CCDED_gf_IsTownBuilding(lv_town) == true)) {
+            libBA5CCDED_gf_RallyTownToMinerals(lv_town);
+        }
+
+    }
+}
+
+void libBA5CCDED_gf_StartingWorkersAutoHarvest (int lp_player, region lp_mineralRegion, region lp_gasRegion) {
+    // Variable Declarations
+    unit lv_worker;
+    unitgroup lv_resources;
+
+    // Automatic Variable Declarations
+    unitgroup auto0FD02567_g;
+    int auto0FD02567_u;
+    unitgroup auto4DAFD482_g;
+    int auto4DAFD482_u;
+
+    // Variable Initialization
+    lv_resources = UnitGroupEmpty();
+
+    // Implementation
+    if ((PlayerGetState(lp_player, c_playerStateStartingRallyEnabled) == false)) {
+        return ;
+    }
+
+    if ((lp_mineralRegion != null)) {
+        auto0FD02567_g = UnitGroup(null, lp_player, lp_mineralRegion, UnitFilter((1 << c_targetFilterWorker), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto0FD02567_u = UnitGroupCount(auto0FD02567_g, c_unitCountAll);
+        for (;; auto0FD02567_u -= 1) {
+            lv_worker = UnitGroupUnitFromEnd(auto0FD02567_g, auto0FD02567_u);
+            if (lv_worker == null) { break; }
+            lv_resources = UnitGroup(null, 0, RegionCircle(UnitGetPosition(lv_worker), 8.0), UnitFilter((1 << c_targetFilterHarvestableResource), 0, (1 << c_targetFilterRawResource) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+            if ((UnitGroupCount(lv_resources, c_unitCountAlive) > 0)) {
+                UnitIssueOrder(lv_worker, OrderTargetingUnit(null, UnitGroupClosestToPoint(lv_resources, UnitGetPosition(lv_worker))), c_orderQueueReplace);
+            }
+
+        }
+    }
+
+    if ((lp_gasRegion != null)) {
+        auto4DAFD482_g = UnitGroup(null, lp_player, lp_gasRegion, UnitFilter((1 << c_targetFilterWorker), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto4DAFD482_u = UnitGroupCount(auto4DAFD482_g, c_unitCountAll);
+        for (;; auto4DAFD482_u -= 1) {
+            lv_worker = UnitGroupUnitFromEnd(auto4DAFD482_g, auto4DAFD482_u);
+            if (lv_worker == null) { break; }
+            lv_resources = UnitGroup(null, lp_player, RegionCircle(UnitGetPosition(lv_worker), 8.0), UnitFilter((1 << c_targetFilterHarvestableResource), 0, (1 << c_targetFilterRawResource) | (1 << c_targetFilterMissile), (1 << (c_targetFilterUnderConstruction - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+            if ((UnitGroupCount(lv_resources, c_unitCountAlive) > 0)) {
+                UnitIssueOrder(lv_worker, OrderTargetingUnit(null, UnitGroupClosestToPoint(lv_resources, UnitGetPosition(lv_worker))), c_orderQueueReplace);
+            }
+
+        }
+    }
+
+}
+
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players) {
     // Variable Declarations
     int lv_player;
@@ -453,6 +654,374 @@ void libBA5CCDED_gf_MidasTouched (playergroup lp_players) {
         libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "WarpPrismGolden", true);
         libNtve_gf_PlayerApplySkinReplacingExistingUnit(lv_player, "ZealotGolden", true);
     }
+}
+
+text libBA5CCDED_gf_MU_FormatCredits (int lp_value) {
+    // Variable Declarations
+    int lv_amount;
+    string lv_digits;
+    string lv_grouped;
+    string lv_sign;
+    int lv_length;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_digits = "";
+    lv_grouped = "";
+    lv_sign = "";
+
+    // Implementation
+    lv_amount = lp_value;
+    if ((lv_amount < 0)) {
+        lv_sign = "-";
+        lv_amount = (0 - lv_amount);
+    }
+
+    lv_digits = IntToString(lv_amount);
+    lv_length = StringLength(lv_digits);
+    while ((lv_length > 3)) {
+        lv_grouped = ("," + StringSub(lv_digits, (lv_length - 2), lv_length) + lv_grouped);
+        lv_digits = StringSub(lv_digits, 1, (lv_length - 3));
+        lv_length = (lv_length - 3);
+    }
+    return StringToText((lv_sign + "$" + lv_digits + lv_grouped));
+}
+
+void libBA5CCDED_gf_MU_HookupUI () {
+    // Variable Declarations
+    int lv_categoryI;
+    int lv_unitI;
+    int lv_upgradeI;
+
+    // Automatic Variable Declarations
+    const int auto51C71BD1_ae = libBA5CCDED_gv_mU_ArmoryTechCategories;
+    const int auto51C71BD1_ai = 1;
+    const int autoCB89E961_ae = libBA5CCDED_gv_mU_ArmoryTechUnits;
+    const int autoCB89E961_ai = 1;
+    const int autoF5866682_ae = libBA5CCDED_gv_mU_ArmoryTechButtons;
+    const int autoF5866682_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    if ((libBA5CCDED_gv_mU_Armory.lv_armoryDialog != c_invalidDialogId)) {
+        return ;
+    }
+
+    DialogCreate(500, 400, c_anchorCenter, 0, 0, true);
+    DialogSetFullscreen(DialogLastCreated(), true);
+    DialogSetImageVisible(DialogLastCreated(), false);
+    libBA5CCDED_gv_mU_Armory.lv_armoryDialog = DialogLastCreated();
+    DialogControlCreateFromTemplate(libBA5CCDED_gv_mU_Armory.lv_armoryDialog, c_triggerControlTypePanel, "Merc_BetaArmoryPanel/BetaArmoryPanelTemplate");
+    libBA5CCDED_gv_mU_Armory.lv_armoryPanel = DialogControlLastCreated();
+    lv_categoryI = 1;
+    for ( ; ( (auto51C71BD1_ai >= 0 && lv_categoryI <= auto51C71BD1_ae) || (auto51C71BD1_ai < 0 && lv_categoryI >= auto51C71BD1_ae) ) ; lv_categoryI += auto51C71BD1_ai ) {
+        DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypePanel, libNtve_gf_ConvertStringToUILayoutFrameName(("TechArmyCategoryPanel" + IntToString(lv_categoryI))));
+        libBA5CCDED_gv_mU_Armory.lv_armyCategory_Panel[lv_categoryI] = DialogControlLastCreated();
+        DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armyCategory_Panel[lv_categoryI], c_triggerControlTypeLabel, libNtve_gf_ConvertStringToUILayoutFrameName(("TitleLabel")));
+        libBA5CCDED_gv_mU_Armory.lv_armyCategory_NameLabel[lv_categoryI] = DialogControlLastCreated();
+        lv_unitI = 1;
+        for ( ; ( (autoCB89E961_ai >= 0 && lv_unitI <= autoCB89E961_ae) || (autoCB89E961_ai < 0 && lv_unitI >= autoCB89E961_ae) ) ; lv_unitI += autoCB89E961_ai ) {
+            DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armyCategory_Panel[lv_categoryI], c_triggerControlTypePanel, libNtve_gf_ConvertStringToUILayoutFrameName(("ArmoryCategoryModule" + IntToString(lv_unitI))));
+            libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI] = DialogControlLastCreated();
+            DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], c_triggerControlTypeImage, libNtve_gf_ConvertStringToUILayoutFrameName("ArmyUnitIcon/Icon"));
+            libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitIcon[lv_categoryI][lv_unitI] = DialogControlLastCreated();
+            lv_upgradeI = 1;
+            for ( ; ( (autoF5866682_ai >= 0 && lv_upgradeI <= autoF5866682_ae) || (autoF5866682_ai < 0 && lv_upgradeI >= autoF5866682_ae) ) ; lv_upgradeI += autoF5866682_ai ) {
+                DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], c_triggerControlTypeButton, libNtve_gf_ConvertStringToUILayoutFrameName(("ArmyUpgrade" + IntToString(lv_upgradeI))));
+                libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI] = DialogControlLastCreated();
+                DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], c_triggerControlTypeImage, libNtve_gf_ConvertStringToUILayoutFrameName("UpgradeIcon"));
+                libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeIcon[lv_categoryI][lv_unitI][lv_upgradeI] = DialogControlLastCreated();
+            }
+        }
+    }
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeLabel, libNtve_gf_ConvertStringToUILayoutFrameName("TechCreditsLabel"));
+    libBA5CCDED_gv_mU_Armory.lv_creditsLabel = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeLabel, libNtve_gf_ConvertStringToUILayoutFrameName("TechCostLabel"));
+    libBA5CCDED_gv_mU_Armory.lv_costLabel = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeLabel, libNtve_gf_ConvertStringToUILayoutFrameName("TechPurchaseInfoPanel/TechNameLabel"));
+    libBA5CCDED_gv_mU_Armory.lv_info_NameLabel = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeLabel, libNtve_gf_ConvertStringToUILayoutFrameName("TechPurchaseInfoPanel/TechBenefitsLabel"));
+    libBA5CCDED_gv_mU_Armory.lv_info_ListLabel = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeLabel, libNtve_gf_ConvertStringToUILayoutFrameName("TechPurchaseInfoPanel/TechDescriptionLabel"));
+    libBA5CCDED_gv_mU_Armory.lv_info_DescLabel = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeButton, libNtve_gf_ConvertStringToUILayoutFrameName("TechPurchaseInfoPanel/TechPurchaseButton"));
+    libBA5CCDED_gv_mU_Armory.lv_techPurchaseButton = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeButton, libNtve_gf_ConvertStringToUILayoutFrameName("CloseButton"));
+    libBA5CCDED_gv_mU_Armory.lv_closeButton = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypePanel, libNtve_gf_ConvertStringToUILayoutFrameName("InputBlocker"));
+    libBA5CCDED_gv_mU_Armory.lv_inputBlocker = DialogControlLastCreated();
+}
+
+void libBA5CCDED_gf_MU_UpdateArmoryPanel () {
+    // Variable Declarations
+    int lv_categoryI;
+    int lv_unitI;
+    int lv_upgradeI;
+    string lv_unit;
+    string lv_upgrade;
+    int lv_shown;
+
+    // Automatic Variable Declarations
+    const int autoD4FF6B39_ae = libBA5CCDED_gv_mU_ArmoryTechCategories;
+    const int autoD4FF6B39_ai = 1;
+    const int auto23C8F46D_ae = libBA5CCDED_gv_mU_ArmoryTechUnits;
+    const int auto23C8F46D_ai = 1;
+    const int auto98272034_ae = libBA5CCDED_gv_mU_ArmoryTechButtons;
+    const int auto98272034_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    lv_categoryI = 1;
+    for ( ; ( (autoD4FF6B39_ai >= 0 && lv_categoryI <= autoD4FF6B39_ae) || (autoD4FF6B39_ai < 0 && lv_categoryI >= autoD4FF6B39_ae) ) ; lv_categoryI += autoD4FF6B39_ai ) {
+        libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_armyCategory_NameLabel[lv_categoryI], UserDataGetText("MercArmyTypes", UserDataInstance("MercArmyTypes", lv_categoryI), "Type Name", 1), PlayerGroupAll());
+        lv_unitI = 1;
+        for ( ; ( (auto23C8F46D_ai >= 0 && lv_unitI <= auto23C8F46D_ae) || (auto23C8F46D_ai < 0 && lv_unitI >= auto23C8F46D_ae) ) ; lv_unitI += auto23C8F46D_ai ) {
+            lv_unit = UserDataGetUserInstance("MercArmyTypes", UserDataInstance("MercArmyTypes", lv_categoryI), "UnitType", lv_unitI);
+            if ((lv_unit == null)) {
+                DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], PlayerGroupAll(), "DataState", "Empty");
+                continue;
+            }
+
+            if ((libBA5CCDED_gf_MU_UnitHasVisibleUpgrade(lv_unit) == false) && (UserDataGetUserInstance("MercArmoryUnits", lv_unit, "AltUnit", 1) != null) && (libBA5CCDED_gf_MU_UnitHasVisibleUpgrade(UserDataGetUserInstance("MercArmoryUnits", lv_unit, "AltUnit", 1)) == true)) {
+                lv_unit = UserDataGetUserInstance("MercArmoryUnits", lv_unit, "AltUnit", 1);
+            }
+
+            if ((UserDataGetInt("MercArmyTypes", UserDataInstance("MercArmyTypes", lv_categoryI), "TitleFromUnit", 1) == 1) && (libBA5CCDED_gf_MU_UnitHasVisibleUpgrade(lv_unit) == true)) {
+                libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_armyCategory_NameLabel[lv_categoryI], UserDataGetText("MercArmoryUnits", lv_unit, "Name", 1), PlayerGroupAll());
+            }
+
+            DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], PlayerGroupAll(), "DataState", "Normal");
+            libNtve_gf_SetDialogItemImage(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitIcon[lv_categoryI][lv_unitI], UserDataGetImagePath("MercArmoryUnits", lv_unit, "Icon", 1), PlayerGroupAll());
+            lv_shown = 0;
+            lv_upgradeI = 1;
+            for ( ; ( (auto98272034_ai >= 0 && lv_upgradeI <= auto98272034_ae) || (auto98272034_ai < 0 && lv_upgradeI >= auto98272034_ae) ) ; lv_upgradeI += auto98272034_ai ) {
+                lv_upgrade = UserDataGetUserInstance("MercArmoryUnits", lv_unit, "Upgrades", lv_upgradeI);
+                libBA5CCDED_gv_mU_Armory.lv_armyCategory_SlotUpgrade[lv_categoryI][lv_unitI][lv_upgradeI] = lv_upgrade;
+                if (((lv_upgrade == null) || (libBA5CCDED_gf_MU_UpgradeIsHidden(lv_upgrade) == true))) {
+                    DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), false);
+                    continue;
+                }
+
+                DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), true);
+                lv_shown = (lv_shown + 1);
+                libNtve_gf_SetDialogItemImage(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeIcon[lv_categoryI][lv_unitI][lv_upgradeI], UserDataGetImagePath("MercArmoryUpgrades", lv_upgrade, "Icon", 1), PlayerGroupAll());
+                if ((libBA5CCDED_gf_MU_UpgradeIsPurchased(lv_upgrade) == true)) {
+                    DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Purchased");
+                }
+                else {
+                    if (((libBA5CCDED_gf_MU_UpgradeIsBuyable(lv_upgrade) == false) || (libBA5CCDED_gf_MU_UpgradeCost(lv_upgrade) > libCamp_gf_StoryCredits()))) {
+                        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Unaffordable");
+                    }
+                    else {
+                        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Available");
+                    }
+                }
+            }
+            if ((lv_shown == 0) && (UserDataGetUserInstance("MercArmoryUnits", lv_unit, "Upgrades", 1) != null)) {
+                DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], PlayerGroupAll(), "DataState", "Empty");
+            }
+
+        }
+    }
+    libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_creditsLabel, libBA5CCDED_gf_MU_FormatCredits(libCamp_gf_StoryCredits()), PlayerGroupAll());
+}
+
+void libBA5CCDED_gf_MU_DisplayArmoryPanel () {
+    // Variable Declarations
+    int lv_categoryI;
+    int lv_unitI;
+    int lv_upgradeI;
+
+    // Automatic Variable Declarations
+    const int autoAD82A760_ae = libBA5CCDED_gv_mU_ArmoryTechCategories;
+    const int autoAD82A760_ai = 1;
+    const int autoF734797B_ae = libBA5CCDED_gv_mU_ArmoryTechUnits;
+    const int autoF734797B_ai = 1;
+    const int auto19F2DD42_ae = libBA5CCDED_gv_mU_ArmoryTechButtons;
+    const int auto19F2DD42_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    libBA5CCDED_gf_MU_HookupUI();
+    libBA5CCDED_gf_MU_UpdateArmoryPanel();
+    libBA5CCDED_gv_mU_Armory.lv_selectedUpgrade = null;
+    libBA5CCDED_gv_mU_Armory.lv_selected_Category = 0;
+    libBA5CCDED_gv_mU_Armory.lv_selected_Unit = 0;
+    libBA5CCDED_gv_mU_Armory.lv_selected_Upgrade = 0;
+    lv_categoryI = 1;
+    for ( ; ( (autoAD82A760_ai >= 0 && lv_categoryI <= autoAD82A760_ae) || (autoAD82A760_ai < 0 && lv_categoryI >= autoAD82A760_ae) ) ; lv_categoryI += autoAD82A760_ai ) {
+        lv_unitI = 1;
+        for ( ; ( (autoF734797B_ai >= 0 && lv_unitI <= autoF734797B_ae) || (autoF734797B_ai < 0 && lv_unitI >= autoF734797B_ae) ) ; lv_unitI += autoF734797B_ai ) {
+            lv_upgradeI = 1;
+            for ( ; ( (auto19F2DD42_ai >= 0 && lv_upgradeI <= auto19F2DD42_ae) || (auto19F2DD42_ai < 0 && lv_upgradeI >= auto19F2DD42_ae) ) ; lv_upgradeI += auto19F2DD42_ai ) {
+                libNtve_gf_SetDialogItemToggled(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], false, PlayerGroupAll());
+            }
+        }
+    }
+    libBA5CCDED_gf_MU_SetInfoPanel(null);
+    DialogSetVisible(libBA5CCDED_gv_mU_Armory.lv_armoryDialog, PlayerGroupAll(), true);
+}
+
+bool libBA5CCDED_gf_MU_UsedUpgradeButton (int lp_dialogItem) {
+    // Variable Declarations
+    int lv_categoryI;
+    int lv_unitI;
+    int lv_upgradeI;
+
+    // Automatic Variable Declarations
+    const int auto296FF954_ae = libBA5CCDED_gv_mU_ArmoryTechCategories;
+    const int auto296FF954_ai = 1;
+    const int auto08862EF1_ae = libBA5CCDED_gv_mU_ArmoryTechUnits;
+    const int auto08862EF1_ai = 1;
+    const int auto71D83168_ae = libBA5CCDED_gv_mU_ArmoryTechButtons;
+    const int auto71D83168_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    lv_categoryI = 1;
+    for ( ; ( (auto296FF954_ai >= 0 && lv_categoryI <= auto296FF954_ae) || (auto296FF954_ai < 0 && lv_categoryI >= auto296FF954_ae) ) ; lv_categoryI += auto296FF954_ai ) {
+        lv_unitI = 1;
+        for ( ; ( (auto08862EF1_ai >= 0 && lv_unitI <= auto08862EF1_ae) || (auto08862EF1_ai < 0 && lv_unitI >= auto08862EF1_ae) ) ; lv_unitI += auto08862EF1_ai ) {
+            lv_upgradeI = 1;
+            for ( ; ( (auto71D83168_ai >= 0 && lv_upgradeI <= auto71D83168_ae) || (auto71D83168_ai < 0 && lv_upgradeI >= auto71D83168_ae) ) ; lv_upgradeI += auto71D83168_ai ) {
+                if ((lp_dialogItem == libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI])) {
+                    libBA5CCDED_gv_mU_Armory.lv_used_Category = lv_categoryI;
+                    libBA5CCDED_gv_mU_Armory.lv_used_Unit = lv_unitI;
+                    libBA5CCDED_gv_mU_Armory.lv_used_Upgrade = lv_upgradeI;
+                    return true;
+                }
+
+            }
+        }
+    }
+    return false;
+}
+
+string libBA5CCDED_gf_MU_UsedUpgrade (int lp_dialogItem) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((libBA5CCDED_gf_MU_UsedUpgradeButton(lp_dialogItem) == false)) {
+        return null;
+    }
+
+    return libBA5CCDED_gv_mU_Armory.lv_armyCategory_SlotUpgrade[libBA5CCDED_gv_mU_Armory.lv_used_Category][libBA5CCDED_gv_mU_Armory.lv_used_Unit][libBA5CCDED_gv_mU_Armory.lv_used_Upgrade];
+}
+
+void libBA5CCDED_gf_MU_SetInfoPanel (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((lp_upgrade == null)) {
+        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, PlayerGroupAll(), "PurchaseState", "Empty");
+        return ;
+    }
+
+    libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_info_NameLabel, UserDataGetText("MercArmoryUpgrades", lp_upgrade, "Name", 1), PlayerGroupAll());
+    libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_info_ListLabel, UserDataGetText("MercArmoryUpgrades", lp_upgrade, "Benefits", 1), PlayerGroupAll());
+    libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_info_DescLabel, UserDataGetText("MercArmoryUpgrades", lp_upgrade, "Description", 1), PlayerGroupAll());
+    libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_costLabel, libBA5CCDED_gf_MU_FormatCredits(libBA5CCDED_gf_MU_UpgradeCost(lp_upgrade)), PlayerGroupAll());
+    if ((libBA5CCDED_gf_MU_UpgradeIsPurchased(lp_upgrade) == true)) {
+        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, PlayerGroupAll(), "PurchaseState", "Purchased");
+    }
+    else {
+        if ((libBA5CCDED_gf_MU_UpgradeIsBuyable(lp_upgrade) == false)) {
+            DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, PlayerGroupAll(), "PurchaseState", "Locked");
+        }
+        else {
+            if ((libBA5CCDED_gf_MU_UpgradeCost(lp_upgrade) > libCamp_gf_StoryCredits())) {
+                DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, PlayerGroupAll(), "PurchaseState", "Unaffordable");
+            }
+            else {
+                DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, PlayerGroupAll(), "PurchaseState", "Available");
+            }
+        }
+    }
+}
+
+int libBA5CCDED_gf_MU_UpgradeTech (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    return UserDataGetInt("MercArmoryUpgrades", lp_upgrade, "TechID", 1);
+}
+
+int libBA5CCDED_gf_MU_UpgradeStatus (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    return libCamp_gf_MercTechStatus(libBA5CCDED_gf_MU_UpgradeTech(lp_upgrade));
+}
+
+int libBA5CCDED_gf_MU_UpgradeCost (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((libBA5CCDED_gf_MU_UpgradeTech(lp_upgrade) < 1)) {
+        return UserDataGetInt("MercArmoryUpgrades", lp_upgrade, "PreviewCosts", 1);
+    }
+
+    return libCamp_gf_StoryTechCost(libBA5CCDED_gf_MU_UpgradeTech(lp_upgrade));
+}
+
+bool libBA5CCDED_gf_MU_UpgradeIsBuyable (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    if (((libBA5CCDED_gf_MU_UpgradeStatus(lp_upgrade) == 1) || (libBA5CCDED_gf_MU_UpgradeStatus(lp_upgrade) == 4))) {
+        return true;
+    }
+
+    return false;
+}
+
+bool libBA5CCDED_gf_MU_UpgradeIsHidden (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((libBA5CCDED_gf_MU_UpgradeTech(lp_upgrade) < 1)) {
+        return false;
+    }
+
+    return (libCamp_gf_MercTechGroupVisible(libCamp_gf_MercTechGroupOf(libBA5CCDED_gf_MU_UpgradeTech(lp_upgrade))) == false);
+}
+
+bool libBA5CCDED_gf_MU_UnitHasVisibleUpgrade (string lp_unit) {
+    // Variable Declarations
+    int lv_index;
+    string lv_upgrade;
+
+    // Automatic Variable Declarations
+    const int autoB0450ADA_ae = libBA5CCDED_gv_mU_ArmoryTechButtons;
+    const int autoB0450ADA_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    lv_index = 1;
+    for ( ; ( (autoB0450ADA_ai >= 0 && lv_index <= autoB0450ADA_ae) || (autoB0450ADA_ai < 0 && lv_index >= autoB0450ADA_ae) ) ; lv_index += autoB0450ADA_ai ) {
+        lv_upgrade = UserDataGetUserInstance("MercArmoryUnits", lp_unit, "Upgrades", lv_index);
+        if ((lv_upgrade != null) && (libBA5CCDED_gf_MU_UpgradeIsHidden(lv_upgrade) == false)) {
+            return true;
+        }
+
+    }
+    return false;
+}
+
+bool libBA5CCDED_gf_MU_UpgradeIsPurchased (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    return (libBA5CCDED_gf_MU_UpgradeStatus(lp_upgrade) == 2);
+}
+
+void libBA5CCDED_gf_MU_SetUpgradePurchased (string lp_upgrade) {
+    // Automatic Variable Declarations
+    // Implementation
+    UserDataSetInt("MercArmoryUpgrades", lp_upgrade, "TestPurchased", 1, 1);
+}
+
+void libBA5CCDED_gf_SetBriefingDisplayUnit (int lp_mission, string lp_unit) {
+    // Automatic Variable Declarations
+    // Implementation
+    DataTableSetString(true, ("MercBriefingUnit/" + libCamp_gf_MapFile(lp_mission)), (lp_unit));
 }
 
 // Triggers
@@ -734,6 +1303,7 @@ bool libBA5CCDED_gt_Init_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    TriggerExecute(libBA5CCDED_gt_InitBriefingUnits, true, false);
     Wait(0.5, c_timeAI);
     TriggerExecute(libBA5CCDED_gt_InitUnitReplace, true, false);
     Wait(2.0, c_timeGame);
@@ -1101,6 +1671,45 @@ bool libBA5CCDED_gt_InitTech_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void libBA5CCDED_gt_InitTech_Init () {
     libBA5CCDED_gt_InitTech = TriggerCreate("libBA5CCDED_gt_InitTech_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init...Briefing Units
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_InitBriefingUnits_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTRaynor01, "WarPig");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTRaynor02, "SkibisAngel");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTRaynor03, "Bunker");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHanson01, "DevilDog");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHanson02, "Agitator");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHanson03A, "HelsAngelFighter");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHanson03B, "HelsAngelFighter");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus01, "HammerSecurity");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus02, "SiegeBreaker");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus03, "CharonDropship");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus04, "DuskWing");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus05, "Starcruiser");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh01, "MercReaper");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh02, "SpartanCompany");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh03A, "QuestionMark");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh03B, "Phantom");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHorner01, "Copperhead");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHorner02, "Condor");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHorner03, "Harrier");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHorner04, "Titan");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTHorner05S, "HybridReaver");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_InitBriefingUnits_Init () {
+    libBA5CCDED_gt_InitBriefingUnits = TriggerCreate("libBA5CCDED_gt_InitBriefingUnits_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2171,6 +2780,192 @@ void libBA5CCDED_gt_NightmarePlusInitial_Init () {
     libBA5CCDED_gt_NightmarePlusInitial = TriggerCreate("libBA5CCDED_gt_NightmarePlusInitial_Func");
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: MU_Init
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MU_Init_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libCamp_gf_MercSetArmoryOpenHook(libBA5CCDED_gt_MU_OpenArmory);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MU_Init_Init () {
+    libBA5CCDED_gt_MU_Init = TriggerCreate("libBA5CCDED_gt_MU_Init_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_MU_Init);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: MU_OpenArmory
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MU_OpenArmory_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libBA5CCDED_gf_MU_DisplayArmoryPanel();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MU_OpenArmory_Init () {
+    libBA5CCDED_gt_MU_OpenArmory = TriggerCreate("libBA5CCDED_gt_MU_OpenArmory_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: MU_UpgradeButtonPressed
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MU_UpgradeButtonPressed_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((libBA5CCDED_gf_MU_UsedUpgradeButton(EventDialogControl()) == true))) {
+            return false;
+        }
+
+        if (!((EventPlayer() == 1))) {
+            return false;
+        }
+
+        if (!((libBA5CCDED_gv_mU_PurchaseInProgress == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libBA5CCDED_gf_MU_SetInfoPanel(libBA5CCDED_gf_MU_UsedUpgrade(EventDialogControl()));
+    libBA5CCDED_gv_mU_Armory.lv_selected_Category = libBA5CCDED_gv_mU_Armory.lv_used_Category;
+    libBA5CCDED_gv_mU_Armory.lv_selected_Unit = libBA5CCDED_gv_mU_Armory.lv_used_Unit;
+    libBA5CCDED_gv_mU_Armory.lv_selected_Upgrade = libBA5CCDED_gv_mU_Armory.lv_used_Upgrade;
+    libBA5CCDED_gv_mU_Armory.lv_selectedUpgrade = libBA5CCDED_gv_mU_Armory.lv_armyCategory_SlotUpgrade[libBA5CCDED_gv_mU_Armory.lv_used_Category][libBA5CCDED_gv_mU_Armory.lv_used_Unit][libBA5CCDED_gv_mU_Armory.lv_used_Upgrade];
+    libCamp_gf_MercClearTechNew(libBA5CCDED_gf_MU_UpgradeTech(libBA5CCDED_gf_MU_UsedUpgrade(EventDialogControl())));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MU_UpgradeButtonPressed_Init () {
+    libBA5CCDED_gt_MU_UpgradeButtonPressed = TriggerCreate("libBA5CCDED_gt_MU_UpgradeButtonPressed_Func");
+    TriggerAddEventDialogControl(libBA5CCDED_gt_MU_UpgradeButtonPressed, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: MU_PurchaseButtonPressed
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MU_PurchaseButtonPressed_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_upgrade;
+    int lv_cost;
+    int lv_oldCredits;
+    int lv_step;
+
+    // Automatic Variable Declarations
+    const int auto47DA0B83_ae = 30;
+    const int auto47DA0B83_ai = 1;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((EventDialogControl() == libBA5CCDED_gv_mU_Armory.lv_techPurchaseButton))) {
+            return false;
+        }
+
+        if (!((EventPlayer() == 1))) {
+            return false;
+        }
+
+        if (!((libBA5CCDED_gv_mU_PurchaseInProgress == false))) {
+            return false;
+        }
+
+        if (!((libBA5CCDED_gv_mU_Armory.lv_selectedUpgrade != null))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_upgrade = libBA5CCDED_gv_mU_Armory.lv_selectedUpgrade;
+    lv_cost = libBA5CCDED_gf_MU_UpgradeCost(lv_upgrade);
+    lv_oldCredits = libCamp_gf_StoryCredits();
+    if ((libCamp_gf_MercTryPurchaseTech(libBA5CCDED_gf_MU_UpgradeTech(lv_upgrade)) == false)) {
+        libBA5CCDED_gf_MU_UpdateArmoryPanel();
+        libBA5CCDED_gf_MU_SetInfoPanel(lv_upgrade);
+        return true;
+    }
+
+    libBA5CCDED_gv_mU_PurchaseInProgress = true;
+    DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_inputBlocker, PlayerGroupAll(), true);
+    DialogControlSendAnimationEvent(libBA5CCDED_gv_mU_Armory.lv_techPurchaseButton, PlayerGroupAll(), "PurchaseFX");
+    DialogControlSendAnimationEvent(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[libBA5CCDED_gv_mU_Armory.lv_selected_Category][libBA5CCDED_gv_mU_Armory.lv_selected_Unit][libBA5CCDED_gv_mU_Armory.lv_selected_Upgrade], PlayerGroupAll(), "PurchaseFX");
+    lv_step = 1;
+    for ( ; ( (auto47DA0B83_ai >= 0 && lv_step <= auto47DA0B83_ae) || (auto47DA0B83_ai < 0 && lv_step >= auto47DA0B83_ae) ) ; lv_step += auto47DA0B83_ai ) {
+        libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_creditsLabel, libBA5CCDED_gf_MU_FormatCredits((lv_oldCredits - ((((lv_cost * lv_step) / 30) / 1000) * 1000))), PlayerGroupAll());
+        Wait(0.0333, c_timeReal);
+    }
+    libBA5CCDED_gf_MU_UpdateArmoryPanel();
+    libBA5CCDED_gf_MU_SetInfoPanel(lv_upgrade);
+    DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_inputBlocker, PlayerGroupAll(), false);
+    libBA5CCDED_gv_mU_PurchaseInProgress = false;
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MU_PurchaseButtonPressed_Init () {
+    libBA5CCDED_gt_MU_PurchaseButtonPressed = TriggerCreate("libBA5CCDED_gt_MU_PurchaseButtonPressed_Func");
+    TriggerAddEventDialogControl(libBA5CCDED_gt_MU_PurchaseButtonPressed, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: MU_CloseButtonPressed
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MU_CloseButtonPressed_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventDialogControl() == libBA5CCDED_gv_mU_Armory.lv_closeButton))) {
+            return false;
+        }
+
+        if (!((EventPlayer() == 1))) {
+            return false;
+        }
+
+        if (!((libBA5CCDED_gv_mU_PurchaseInProgress == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogSetVisible(libBA5CCDED_gv_mU_Armory.lv_armoryDialog, PlayerGroupAll(), false);
+    libCamp_gf_MercArmoryClosed();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MU_CloseButtonPressed_Init () {
+    libBA5CCDED_gt_MU_CloseButtonPressed = TriggerCreate("libBA5CCDED_gt_MU_CloseButtonPressed_Func");
+    TriggerAddEventDialogControl(libBA5CCDED_gt_MU_CloseButtonPressed, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
 void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_Gonnaneedabiggerboat_Init();
     libBA5CCDED_gt_WeRobBanks_Init();
@@ -2191,6 +2986,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_InitPassiveUpgrades_Init();
     libBA5CCDED_gt_InitUnitReplace_Init();
     libBA5CCDED_gt_InitTech_Init();
+    libBA5CCDED_gt_InitBriefingUnits_Init();
     libBA5CCDED_gt_MissionDirectives_Init();
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_ZergTerranGenericDifficulty_Init();
@@ -2219,6 +3015,11 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_SpawnInfested_Init();
     libBA5CCDED_gt_NightmarePlusEvent_Init();
     libBA5CCDED_gt_NightmarePlusInitial_Init();
+    libBA5CCDED_gt_MU_Init_Init();
+    libBA5CCDED_gt_MU_OpenArmory_Init();
+    libBA5CCDED_gt_MU_UpgradeButtonPressed_Init();
+    libBA5CCDED_gt_MU_PurchaseButtonPressed_Init();
+    libBA5CCDED_gt_MU_CloseButtonPressed_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

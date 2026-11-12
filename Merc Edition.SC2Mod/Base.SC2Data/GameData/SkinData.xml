@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!-- Brood War skins. Apply per player with "Apply Skin (Replacing Existing Units)"
+         (libNtve_gf_PlayerApplySkinReplacingExistingUnit), like Taldarimify / Ihanriiify. -->
+    <CSkin id="MarineBroodWar">
+        <ReplacementArray Catalog="Model" From="Marine" To="MarineSCBW"/>
+        <ReplacementArray Catalog="Model" From="MarineDeath" To="MarineSCBW@Death"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathAcid" To="MarineSCBW@DeathAcid"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathBlast" To="MarineSCBW@DeathBlast"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathFire" To="MarineSCBW@DeathFire"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathRagdoll" To="MarineSCBW@DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathEviscerate" To="MarineSCBW@DeathEviscerate"/>
+        <ReplacementArray Catalog="Model" From="MarinePortrait" To="MarineSCBW@Portrait"/>
+        <EffectArray Operation="Set" Reference="Actor,Marine,UnitIcon" Value="Assets\Textures\btn-unit-terran-marine@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Marine,Wireframe.Image[0]" Value="Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Marine,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Marine,Icon" Value="Assets\Textures\btn-unit-terran-marine@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Marine,AlertIcon" Value="Assets\Textures\btn-unit-terran-marine@scbw.dds"/>
+        <DisplayModel value="MarineSCBW"/>
+    </CSkin>
+    <CSkin id="BarracksBroodWar">
+        <ReplacementArray Catalog="Model" From="Barracks" To="BarracksSCBW"/>
+        <ReplacementArray Catalog="Model" From="BarracksDeath" To="BarracksSCBW@Death"/>
+        <ReplacementArray Catalog="Model" From="BarracksFlyDeath" To="BarracksSCBW@FlyDeath"/>
+        <ReplacementArray Catalog="Model" From="BarracksPlacement" To="BarracksSCBW@Placement"/>
+        <ReplacementArray Catalog="Model" From="BarracksBuild" To="BarracksSCBW@Build"/>
+        <ReplacementArray Catalog="Model" From="BarracksSplat" To="BarracksSCBW@Splat"/>
+        <EffectArray Operation="Set" Reference="Actor,Barracks,UnitIcon" Value="Assets\Textures\btn-building-terran-barracks@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Barracks,Wireframe.Image[0]" Value="Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Barracks,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Barracks,Icon" Value="Assets\Textures\btn-building-terran-barracks@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Barracks,AlertIcon" Value="Assets\Textures\btn-building-terran-barracks@scbw.dds"/>
+        <DisplayModel value="BarracksSCBW"/>
+    </CSkin>
+    <CSkin id="SupplyDepotBroodWar">
+        <ReplacementArray Catalog="Model" From="SupplyDepot" To="SupplyDepotSCBW"/>
+        <ReplacementArray Catalog="Model" From="SupplyDepotLowered" To="SupplyDepotSCBW"/>
+        <ReplacementArray Catalog="Model" From="SupplyDepotDeath" To="SupplyDepotSCBW@Death"/>
+        <ReplacementArray Catalog="Model" From="SupplyDepotLoweredDeath" To="SupplyDepotSCBW@Death"/>
+        <ReplacementArray Catalog="Model" From="SupplyDepotPlacement" To="SupplyDepotSCBW@Placement"/>
+        <ReplacementArray Catalog="Model" From="SupplyDepotBuild" To="SupplyDepotSCBW@Build"/>
+        <ReplacementArray Catalog="Model" From="SupplyDepotSplat" To="SupplyDepotSCBW@Splat"/>
+        <EffectArray Operation="Set" Reference="Actor,SupplyDepot,UnitIcon" Value="Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupplyDepot,Wireframe.Image[0]" Value="Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupplyDepot,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupplyDepotLowered,UnitIcon" Value="Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupplyDepotLowered,Wireframe.Image[0]" Value="Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupplyDepotLowered,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Button,SupplyDepot,Icon" Value="Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <EffectArray Operation="Set" Reference="Button,SupplyDepot,AlertIcon" Value="Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <DisplayModel value="SupplyDepotSCBW"/>
+    </CSkin>
+</Catalog>

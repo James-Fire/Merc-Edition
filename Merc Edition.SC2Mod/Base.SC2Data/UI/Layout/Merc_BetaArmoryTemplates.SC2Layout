@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+    <Frame type="Image" name="TechCategoryTitleHeaderTemplate">
+
+        <Texture val="Assets\Textures\ui_load_frame_columtitle_normaloverpressedover.dds"/>
+        <TextureType val="EndCap"/>
+        <StateCount val="2"/>
+        <Height val="37"/>
+    </Frame>
+
+    <Frame type="Button" name="TechPurchaseButtonTemplate">
+        <Width val="390"/>
+        <Height val="65"/>
+
+        <NormalImage val="NormalImage"/>
+        <HoverImage val="HoverImage"/>
+        <HitTestFrame val="HitTestFrame"/>
+        <Text val="@UI/PurchasePanelPurchase"/>
+        <Style val="BetaArmory_PurchaseButton"/>
+
+        <Frame type="Frame" name="HitTestFrame">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="5"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-5"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-5"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="5"/>
+        </Frame>
+
+        <Frame type="Image" name="NormalImage">
+            <Anchor relative="$parent"/>
+
+            <StateCount val="2"/>
+            <Texture val="Assets\Textures\ui_battlenet_glue_mediumorangebutton_normalpressed.dds"/>
+            <TextureType val="EndCap"/>
+        </Frame>
+
+        <Frame type="Image" name="HoverImage">
+            <Anchor relative="$parent"/>
+
+            <StateCount val="2"/>
+            <Texture val="Assets\Textures\ui_battlenet_glue_mediumorangebutton_normaloverpressedover.dds"/>
+            <TextureType val="EndCap"/>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseFlash">
+            <Anchor relative="$parent"/>
+            <StateCount val="2"/>
+            <Texture val="Assets\Textures\ui_battlenet_glue_mediumorangebutton_normaloverpressedover.dds"/>
+            <TextureType val="EndCap"/>
+            <BlendMode val="Add"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Sound" end="Pause" frame="$this">
+                    <Key type="Sound" time="0.0" sound="@TUI_ArmoryConsolePurchase"/>
+                </Controller>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="True"/>
+                    <Key type="Bool" time="0.6" value="False"/>
+                </Controller>
+
+                <Controller type="Fade" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.08" value="200" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="0" in="linear" out="linear"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseShimmer">
+            <Anchor relative="$parent"/>
+            <Visible val="False"/>
+            <LayerCount val="2"/>
+
+
+            <Texture val="Assets\Textures\ui_battlenet_glue_mediumorangebutton_normalpressed.dds" layer="0"/>
+            <TextureType val="EndCap" layer="0"/>
+            <StateCount val="2" layer="0"/>
+            <AlphaLayer val="True" layer="0"/>
+
+            <Texture val="Assets\Textures\sc2_ui_ingame_storymode_highlightshimmer.dds" layer="1"/>
+            <TextureType val="Normal" layer="1"/>
+            <Height val="120" layer="1"/>
+            <BlendMode val="Add" layer="1"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.05" value="True"/>
+                    <Key type="Bool" time="0.75" value="False"/>
+                </Controller>
+
+                <Controller type="LayerUV" layer="1" side="Top" relative="False" sidelock="True" end="Pause">
+                    <Key type="Curve" time="0" value="-2" out="Fast"/>
+                    <Key type="Curve" time="0.05" value="-2" out="Fast"/>
+                    <Key type="Curve" time="0.75" value="1.1" in="Slow"/>
+                </Controller>
+            </Animation>
+        </Frame>
+    </Frame>
+
+    <!-- Composite Panels -->
+
+    <!-- Tech Army Category Panel Templates -->
+    <Frame type="Frame" name="ArmyCategoryUnitIconTemplate">
+        <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="5"/>
+
+        <Width val="52"/>
+        <Height val="52"/>
+
+        <Frame type="Image" name="ArmyUnitBackground">
+            <Anchor relative="$parent"/>
+
+            <Texture val="Assets\Textures\btn-ability-zerg-genemutation-carapace.dds"/>
+            <ColorAdjustMode val="Fill"/>
+            <AdjustmentColor val="000000"/>
+        </Frame>
+
+        <Frame type="Image" name="Icon">
+            <Anchor relative="$parent" offset="-1"/>
+
+            <Texture val="Assets\Textures\btn-unit-terran-scv.dds"/>
+            <Visible val="True"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="Button" name="ArmyTechButtonTemplate">
+        <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="7"/>
+
+        <Width val="44"/>
+        <Height val="44"/>
+        <Toggleable val="True"/>
+        <Visible val="True"/>
+
+        <StateGroup name="UpgradeState">
+            <DefaultState val="Unaffordable"/>
+
+            <State name="Available">
+                <When type="AnimationState" frame="$this" UpgradeState="Available"/>
+
+                <Action type="SetProperty" frame="$this/UpgradeIcon" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/UpgradeIcon" LightAdjustColor="93ff8f"/>
+            </State>
+
+            <State name="Unaffordable">
+                <When type="AnimationState" frame="$this" UpgradeState="Unaffordable"/>
+
+                <Action type="SetProperty" frame="$this/NormalImage" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/NormalImage" AdjustmentColor="8a0000"/>
+                <Action type="SetProperty" frame="$this/HoverImage" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/HoverImage" AdjustmentColor="8a0000"/>
+                <Action type="SetProperty" frame="$this/UpgradeIcon" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/UpgradeIcon" LightAdjustColor="c40000"/>
+            </State>
+
+            <State name="Purchased">
+                <When type="AnimationState" frame="$this" UpgradeState="Purchased"/>
+
+                <Action type="SetProperty" frame="$this/PurchasedGlow" Visible="True"/>
+
+                <Action type="SetProperty" frame="$this/NormalImage" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/NormalImage" AdjustmentColor="006a8a"/>
+                <Action type="SetProperty" frame="$this/HoverImage" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/HoverImage" AdjustmentColor="006a8a"/>
+                <Action type="SetProperty" frame="$this/UpgradeIcon" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/UpgradeIcon" LightAdjustColor="3192af"/>
+            </State>
+        </StateGroup>
+
+        <StateGroup name="Toggled">
+            <State name="Normal">
+                <When type="Property" frame="$this" Toggled="False"/>
+            </State>
+
+            <State name="Toggled">
+                <When type="Property" frame="$this" Toggled="True"/>
+
+                <Action type="SetProperty" frame="$this/NormalImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_defaultterran.dds"/>
+                <Action type="SetProperty" frame="$this" RenderPriority="600"/>
+                <Action type="SetProperty" frame="$parent" RenderPriority="600"/>
+                <Action type="SetProperty" frame="$parent/$parent" RenderPriority="600"/>
+            </State>
+        </StateGroup>
+
+        <Frame type="Image" name="PurchasedGlow">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="22"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-21"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="23"/>
+            
+            <Texture val="Assets\Textures\ui_techpurchase_button_terran_purchased.dds"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+        </Frame>
+
+        <Frame type="Image" name="NormalImage">
+            <Anchor relative="$parent"/>
+
+            <Texture val="Assets\Textures\ui_console_commandbutton_normal_defaultterran.dds"/>
+        </Frame>
+
+        <Frame type="Image" name="HoverImage">
+            <Anchor relative="$parent"/>
+
+            <Texture val="Assets\Textures\ui_console_commandbutton_highlighted_defaultterran.dds"/>
+        </Frame>
+
+        <Frame type="Image" name="UpgradeIcon">
+            <Anchor relative="$parent" offset="-1"/>
+
+            <Texture val="Assets\Textures\btn-techupgrade-terran-attacksair.dds"/>
+
+            <Frame type="Image" name="HoverAdd">
+                <Anchor relative="$parent"/>
+
+                <Texture val="{$parent/@Texture}"/>
+                <BlendMode val="Add"/>
+                <Visible val="{$parent/$parent/@Hovering}"/>
+                <Alpha val="50"/>
+
+                <StateGroup name="HoverAdd">
+                    <DefaultState val="Normal"/>
+
+                    <State name="Normal">
+                        <When type="Property" frame="$parent/$parent" Hovering="False"/>
+                        <When type="Property" frame="$parent/$parent" Toggled="False"/>
+                        <Action type="SetProperty" frame="$this" Visible="False"/>
+                    </State>
+
+                    <State name="Hover">
+                        <When type="Property" frame="$parent/$parent" Hovering="True"/>
+
+                        <Action type="SetProperty" frame="$this" Visible="True"/>
+                    </State>
+
+                    <State name="Toggled">
+                        <When type="Property" frame="$parent/$parent" Toggled="True"/>
+
+                        <Action type="SetProperty" frame="$this" Visible="True"/>
+                    </State>
+                </StateGroup>
+            </Frame>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseFrame">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-20"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="20"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-20"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="20"/>
+            <Texture val="Assets\Textures\techpurchase_frame.dds"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="True"/>
+                    <Key type="Bool" time="0.067" value="False"/>
+                    <Key type="Bool" time="0.1" value="True"/>
+                    <Key type="Bool" time="0.167" value="False"/>
+                    <Key type="Bool" time="0.233" value="True"/>
+                    <Key type="Bool" time="0.3" value="False"/>
+                    <Key type="Bool" time="0.367" value="True"/>
+                    <Key type="Bool" time="1.75" value="False"/>
+                </Controller>
+
+                <Controller type="Fade" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="107" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.067" value="107" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.1" value="255" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.833" value="255" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.267" value="204" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.4" value="204" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.75" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="-6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="-6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Right" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Bottom" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseFrameFlash">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-20"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="20"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-20"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="20"/>
+            <Texture val="Assets\Textures\techpurchase_frame.dds"/>
+            <Color val="65BBA7"/>
+            <BlendMode val="Add"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.367" value="True"/>
+                    <Key type="Bool" time="0.833" value="False"/>
+                </Controller>
+
+                <Controller type="Fade" end="Pause" frame="$this">
+                    <Key type="Curve" time="0" value="217" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="217" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.833" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="-6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="-6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Right" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Bottom" relative="True">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.367" value="6" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="0" in="linear" out="linear"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseFrameEcho">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-20"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="20"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-20"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="20"/>
+            <Texture val="Assets\Textures\techpurchase_frame.dds"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.367" value="True"/>
+                    <Key type="Bool" time="0.867" value="False"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseBandH">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-104"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-2"/>
+            <Width val="150"/>
+            <Height val="48"/>
+            <Texture val="Assets\Textures\techpurchase_scanlines.dds"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.233" value="True"/>
+                    <Key type="Bool" time="1.067" value="False"/>
+                </Controller>
+
+                <Controller type="Fade" end="Pause" frame="$this">
+                    <Key type="Curve" time="0" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.233" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.467" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.5" value="100" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.533" value="109" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="119" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="128" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.633" value="125" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="118" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.767" value="111" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.833" value="104" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="97" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.967" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.0" value="52" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.033" value="13" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                    <Key type="Curve" time="0" value="-104" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.233" value="-104" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.467" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.5" value="-3" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="-14" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.633" value="-17" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="-24" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="-35" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.967" value="-52" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.033" value="-52" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                    <Key type="Curve" time="0" value="-2" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.233" value="-2" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Dimension" end="Pause" frame="$this" dimension="Width" relative="False">
+                    <Key type="Curve" time="0" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.233" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.467" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.5" value="135" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="92" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.633" value="97" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="108" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="124" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.967" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.033" value="142" in="linear" out="linear"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseBandHTint">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-104"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-2"/>
+            <Width val="150"/>
+            <Height val="48"/>
+            <Texture val="Assets\Textures\techpurchase_scanlines.dds"/>
+            <Color val="65BBA7"/>
+            <BlendMode val="Add"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.6" value="True"/>
+                    <Key type="Bool" time="1.067" value="False"/>
+                </Controller>
+
+                <Controller type="Fade" end="Pause" frame="$this">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.633" value="11" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="32" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="58" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="79" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.967" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.0" value="52" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.033" value="13" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                    <Key type="Curve" time="0" value="-104" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.233" value="-104" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.467" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.5" value="-3" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="-14" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.633" value="-17" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="-24" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="-35" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.967" value="-52" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.033" value="-52" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                    <Key type="Curve" time="0" value="-2" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.233" value="-2" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Dimension" end="Pause" frame="$this" dimension="Width" relative="False">
+                    <Key type="Curve" time="0" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.233" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.467" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.5" value="135" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="92" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.633" value="97" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="108" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="124" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.967" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.033" value="142" in="linear" out="linear"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseBandV">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-53"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-54"/>
+            <Width val="150"/>
+            <Height val="48"/>
+            <Rotation val="270"/>
+            <Texture val="Assets\Textures\techpurchase_scanlines.dds"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.333" value="True"/>
+                    <Key type="Bool" time="1.367" value="False"/>
+                </Controller>
+
+                <Controller type="Fade" end="Pause" frame="$this">
+                    <Key type="Curve" time="0" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="100" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="128" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.733" value="125" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="118" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="107" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.967" value="100" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.1" value="80" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.167" value="60" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.233" value="40" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.3" value="20" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.367" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                    <Key type="Curve" time="0" value="-53" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="-53" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="-53" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="-44" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="-16" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="-26" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="-36" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="-53" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                    <Key type="Curve" time="0" value="-54" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="-54" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="49" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="36" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="-2" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="-2" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="-3" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="-4" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Dimension" end="Pause" frame="$this" dimension="Width" relative="False">
+                    <Key type="Curve" time="0" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="132" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="77" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="97" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="117" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="150" in="linear" out="linear"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="PurchaseBandVTint">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-53"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-54"/>
+            <Width val="150"/>
+            <Height val="48"/>
+            <Rotation val="270"/>
+            <Texture val="Assets\Textures\techpurchase_scanlines.dds"/>
+            <Color val="65BBA7"/>
+            <BlendMode val="Add"/>
+            <Unclipped val="True"/>
+            <Visible val="False"/>
+
+            <Animation name="PurchaseFX">
+                <Event event="PurchaseFX" action="Reset,Play" frame="$parent"/>
+
+                <Controller type="Visibility" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.7" value="True"/>
+                    <Key type="Bool" time="1.367" value="False"/>
+                </Controller>
+
+                <Controller type="Fade" end="Pause" frame="$this">
+                    <Key type="Curve" time="0" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="0" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.733" value="11" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="32" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="87" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="90" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.1" value="80" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.167" value="60" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.233" value="40" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.3" value="20" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.367" value="0" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                    <Key type="Curve" time="0" value="-53" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="-53" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="-53" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="-44" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="-16" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="-26" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="-36" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="-53" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                    <Key type="Curve" time="0" value="-54" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="-54" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="49" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="36" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="-2" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="-2" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="-3" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="-4" in="linear" out="linear"/>
+                </Controller>
+
+                <Controller type="Dimension" end="Pause" frame="$this" dimension="Width" relative="False">
+                    <Key type="Curve" time="0" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.333" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.567" value="150" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.6" value="132" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.7" value="77" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.8" value="97" in="linear" out="linear"/>
+                    <Key type="Curve" time="0.9" value="117" in="linear" out="linear"/>
+                    <Key type="Curve" time="1.067" value="150" in="linear" out="linear"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Frame" name="PurchaseStreaks">
+            <Anchor relative="$parent"/>
+
+            <Frame type="Image" name="StreakV1">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-49"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="16"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Rotation val="90"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.0" value="True"/>
+                        <Key type="Bool" time="0.733" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0.0" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.7" value="0" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                        <Key type="Curve" time="0.0" value="-49" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.7" value="8" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakV2">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-49"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="16"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Rotation val="90"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.2" value="True"/>
+                        <Key type="Bool" time="0.9" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.2" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.867" value="8" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                        <Key type="Curve" time="0" value="-49" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.2" value="-49" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.867" value="8" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakV3">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-49"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="16"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Rotation val="90"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.333" value="True"/>
+                        <Key type="Bool" time="1.033" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.333" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.0" value="59" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                        <Key type="Curve" time="0" value="-49" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.333" value="-49" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.0" value="8" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakV4">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-49"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="16"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Rotation val="90"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.467" value="True"/>
+                        <Key type="Bool" time="1.167" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.467" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.133" value="59" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Left" relative="False">
+                        <Key type="Curve" time="0" value="-49" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.467" value="-49" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.133" value="8" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakH1">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="44"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.0" value="True"/>
+                        <Key type="Bool" time="0.733" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0.0" value="255" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.7" value="64" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                        <Key type="Curve" time="0.0" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.7" value="-10" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakH2">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="44"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Texture val="Assets\Textures\techpurchase_line2.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.167" value="True"/>
+                        <Key type="Bool" time="0.867" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.167" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.833" value="128" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                        <Key type="Curve" time="0" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.167" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.833" value="-10" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakH3">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="44"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.367" value="True"/>
+                        <Key type="Bool" time="1.067" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.367" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.033" value="0" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                        <Key type="Curve" time="0" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.367" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.033" value="-10" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakH4">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="44"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Texture val="Assets\Textures\techpurchase_line2.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.5" value="True"/>
+                        <Key type="Bool" time="1.2" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="204" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.5" value="204" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.167" value="112" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                        <Key type="Curve" time="0" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.5" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.167" value="-10" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakH5">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="44"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.233" value="True"/>
+                        <Key type="Bool" time="0.833" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="255" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.233" value="255" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.8" value="64" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                        <Key type="Curve" time="0" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.233" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.8" value="-10" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakH6">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="44"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Texture val="Assets\Textures\techpurchase_line2.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.633" value="True"/>
+                        <Key type="Bool" time="1.333" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.633" value="128" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.3" value="128" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                        <Key type="Curve" time="0" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.633" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.3" value="-10" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+
+            <Frame type="Image" name="StreakH7">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="-22"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="44"/>
+                <Width val="86"/>
+                <Height val="12"/>
+                <Texture val="Assets\Textures\techpurchase_line1.dds"/>
+                <Visible val="False"/>
+
+                <Animation name="PurchaseFX">
+                    <Event event="PurchaseFX" action="Reset,Play" frame="$parent/$parent"/>
+
+                    <Controller type="Visibility" end="Pause" frame="$this">
+                        <Key type="Bool" time="0.933" value="True"/>
+                        <Key type="Bool" time="1.533" value="False"/>
+                    </Controller>
+
+                    <Controller type="Fade" end="Pause" frame="$this">
+                        <Key type="Curve" time="0" value="64" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.933" value="64" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.5" value="0" in="linear" out="linear"/>
+                    </Controller>
+
+                    <Controller type="Anchor" end="Pause" frame="$this" side="Top" relative="False">
+                        <Key type="Curve" time="0" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="0.933" value="44" in="linear" out="linear"/>
+                        <Key type="Curve" time="1.5" value="-10" in="linear" out="linear"/>
+                    </Controller>
+                </Animation>
+            </Frame>
+        </Frame>
+    </Frame>
+
+    <Frame type="Frame" name="ArmoryCategoryButtonModuleTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Max" offset="1"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+
+        <Height val="60"/>
+
+        <Frame type="Frame" name="ArmyUnitIcon" template="Merc_BetaArmoryTemplates/ArmyCategoryUnitIconTemplate">
+        </Frame>
+
+        <Frame type="Button" name="ArmyUpgrade1" template="Merc_BetaArmoryTemplates/ArmyTechButtonTemplate">
+            <Anchor side="Left" relative="$parent/ArmyUnitIcon" pos="Max" offset="3"/>
+        </Frame>
+
+        <Frame type="Button" name="ArmyUpgrade2" template="Merc_BetaArmoryTemplates/ArmyTechButtonTemplate">
+        </Frame>
+
+        <StateGroup name="DataState">
+            <DefaultState val="Normal"/>
+
+            <State name="Normal">
+                <When type="AnimationState" frame="$this" DataState="Normal"/>
+
+                <Action type="SetProperty" frame="$this/ArmyUnitIcon/Icon" Visible="True"/>
+            </State>
+
+            <State name="Unaffordable">
+                <When type="AnimationState" frame="$this" DataState="Unaffordable"/>
+
+                <Action type="SetProperty" frame="$this/ArmyUnitIcon/Icon" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this/ArmyUnitIcon/Icon" AdjustmentColor="8a0000"/>
+            </State>
+
+            <State name="Empty">
+                <When type="AnimationState" frame="$this" DataState="Empty"/>
+
+                <Action type="SetProperty" frame="$this/ArmyUnitIcon/Icon" Visible="False"/>
+                <Action type="SetProperty" frame="$this/ArmyUpgrade1" Visible="False"/>
+                <Action type="SetProperty" frame="$this/ArmyUpgrade2" Visible="False"/>
+            </State>
+
+            <State name="Locked">
+                <When type="AnimationState" frame="$this" DataState="Locked"/>
+
+                <Action type="SetProperty" frame="$this/ArmyUnitIcon/Icon" Visible="False"/>
+                <Action type="SetProperty" frame="$this/ArmyUpgrade1" Visible="False"/>
+                <Action type="SetProperty" frame="$this/ArmyUpgrade2" Visible="False"/>
+            </State>
+        </StateGroup>
+    </Frame>
+
+    <Frame type="Frame" name="TechArmyCategoryPanelTemplate">
+        <Frame type="Image" name="TitleHeader" template="Merc_BetaArmoryTemplates/TechCategoryTitleHeaderTemplate">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        </Frame>
+
+        <Frame type="Label" name="TitleLabel">
+            <Anchor relative="$parent/TitleHeader"/>
+
+            <Style val="BetaArmory_GroupName"/>
+            <Text val="Base"/>
+        </Frame>
+
+        <Frame type="Frame" name="ArmoryCategoryModule1" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate">
+            <Anchor side="Top" relative="$parent/TitleHeader" pos="Max" offset="-2"/>
+        </Frame>
+
+        <Frame type="Frame" name="ArmoryCategoryModule2" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate">
+            <Anchor side="Top" relative="$sibling-1" pos="Max" offset="1"/>
+        </Frame>
+        <Frame type="Frame" name="ArmoryCategoryModule3" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate"/>
+        <Frame type="Frame" name="ArmoryCategoryModule4" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate"/>
+        <Frame type="Frame" name="ArmoryCategoryModule5" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate"/>
+    </Frame>
+</Desc>

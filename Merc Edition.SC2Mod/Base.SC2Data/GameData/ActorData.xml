@@ -4744,4 +4744,87 @@
         <Host Subject="_Unit"/>
     </CActorSound>
     <CActorSound id="BlockBFlyLoop" parent="SoundContinuous"/>
+    <CActorUnit id="Marine">
+        <On Terms="Behavior.BroodWarSkin.On" Send="ModelSwap MarineSCBW"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetUnitIcon Assets\Textures\btn-unit-terran-marine@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetWireframe 0 Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="ModelSwap MarineSCBW"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-unit-terran-marine@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="ModelSwap MarineSCBW"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-unit-terran-marine@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-marine@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="ModelSwap Marine"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetUnitIcon Assets\Textures\btn-unit-terran-marine.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetWireframe 0 Assets\Textures\Wireframe-Terran-Marine.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-Marine.dds"/>
+        <On Terms="UnitPortrait.*.Customize; ValidateUnit HasBroodWarSkin" Send="PortraitCustomize MarineSCBW@Portrait"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
+        <DeathCustoms Name="BroodWar" ModelLink="MarineSCBW@Death"/>
+    </CActorUnit>
+    <CActorUnit id="Barracks">
+        <On Terms="Behavior.BroodWarSkin.On" Send="ModelSwap BarracksSCBW"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetUnitIcon Assets\Textures\btn-building-terran-barracks@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetWireframe 0 Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="ModelSwap BarracksSCBW"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-building-terran-barracks@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="ModelSwap BarracksSCBW"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-building-terran-barracks@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-barracks@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="ModelSwap Barracks"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetUnitIcon Assets\Textures\btn-building-terran-barracks.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetWireframe 0 Assets\Textures\Wireframe-Terran-Barracks.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-Barracks.dds"/>
+        <On Terms="UnitDeathCustomize.Barracks; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
+        <On Terms="UnitDeathCustomize.BarracksFlying; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWarFlying"/>
+        <DeathCustoms Name="BroodWar" ModelLink="BarracksSCBW@Death" SoundLink="Barracks_Explode"/>
+        <DeathCustoms Name="BroodWarFlying" ModelLink="BarracksSCBW@FlyDeath" SoundLink="Barracks_Explode"/>
+    </CActorUnit>
+    <CActorUnit id="SupplyDepot">
+        <On Terms="Behavior.BroodWarSkin.On" Send="ModelSwap SupplyDepotSCBW"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetWireframe 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="ModelSwap SupplyDepotSCBW"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="ModelSwap SupplyDepotSCBW"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="ModelSwap SupplyDepot"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetWireframe 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
+        <DeathCustoms Name="BroodWar" ModelLink="SupplyDepotSCBW@Death" SoundLink="SupplyDepot_Explode"/>
+    </CActorUnit>
+    <CActorUnit id="SupplyDepotLowered">
+        <On Terms="Behavior.BroodWarSkin.On" Send="ModelSwap SupplyDepotSCBW"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetWireframe 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="ModelSwap SupplyDepotSCBW"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="ActorCreation; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="ModelSwap SupplyDepotSCBW"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetWireframe 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="AbilMorph.*.Finish; ValidateUnit HasBroodWarSkin" Send="SetGroupIcon 0 Assets\Textures\wireframe-terran-supplydepot@scbw.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="ModelSwap SupplyDepotLowered"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetUnitIcon Assets\Textures\btn-building-terran-supplydepotlowered.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetWireframe 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Lowered.dds"/>
+        <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Lowered.dds"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
+        <DeathCustoms Name="BroodWar" ModelLink="SupplyDepotSCBW@Death" SoundLink="SupplyDepot_Explode"/>
+    </CActorUnit>
 </Catalog>

@@ -4,6 +4,15 @@ include "TriggerLibs/LibertyLib"
 include "TriggerLibs/CampaignLib_h"
 
 //--------------------------------------------------------------------------------------------------
+// Merc Edition: Beta Armory hooks (declared here, NOT in the stock CampaignLib_h)
+// The armory view lives in the mod's GUI library (Merc Edition Data, category "UI - Merc Armory").
+// libCamp compiles before that library, so it cannot call it by name: the GUI library registers
+// its open trigger through libCamp_gf_MercSetArmoryOpenHook at map initialization.
+//--------------------------------------------------------------------------------------------------
+trigger libCamp_gv_MercArmoryOpenHook;
+trigger libCamp_gv_MercArmoryExitCallback;
+
+//--------------------------------------------------------------------------------------------------
 // Library: Campaign
 //--------------------------------------------------------------------------------------------------
 // External Library Initialization
@@ -6309,6 +6318,7 @@ int libCamp_gf_AddPlanet (int lp_planet) {
     int lv_bonusRewards;
     string lv_contactTooltipConvo;
     string lv_techTooltipID;
+    string lv_mercBriefingUnit;
 
     // Automatic Variable Declarations
     int autoA0174EFC_i;
@@ -6389,6 +6399,12 @@ int libCamp_gf_AddPlanet (int lp_planet) {
         PlanetSetTechnologyName(PlanetLastCreated(), StringToText(""));
         PlanetSetTechnologyText(PlanetLastCreated(), StringToText(""));
         PlanetSetTechnologyUnitLink(PlanetLastCreated(), "QuestionMark");
+    }
+
+    // Merc Edition: per-mission display unit, set by the Merc GUI library (Set Briefing Display Unit, Init...Briefing Units).
+    lv_mercBriefingUnit = DataTableGetString(true, ("MercBriefingUnit/" + libCamp_gf_MapFile(lv_mission)));
+    if ((lv_mercBriefingUnit != null) && (lv_mercBriefingUnit != "")) {
+        PlanetSetTechnologyUnitLink(PlanetLastCreated(), lv_mercBriefingUnit);
     }
 
     lv_contactIndex = (libCamp_gv_tS_MissionContact[lv_missionIndex]);
@@ -6820,17 +6836,122 @@ void libCamp_gf_SetTechRestrictionsCallback (trigger lp_callbackTrigger) {
     libCamp_gv_tS_TechLimitsCallback = lp_callbackTrigger;
 }
 
-void libCamp_gf_DisplayTechConsole (trigger lp_exitTrigger) {
-    // Automatic Variable Declarations
-    // Implementation
-    libCamp_gv_tS_TechExitCallback = lp_exitTrigger;
-    libCamp_gf_TS_CreateTechUI();
-    libCamp_gf_HideStoryUI(false, false);
-    UISetFrameVisible(PlayerGroupAll(), c_syncFrameTypePurchasePanel, true);
-    if ((PurchaseGetSelectedPurchaseCategory(1) == c_invalidPurchaseCategoryId)) {
-        PurchaseSetSelectedPurchaseCategory(PlayerGroupAll(), libCamp_gv_tS_TechCategory_UI[(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry)]);
+//--------------------------------------------------------------------------------------------------
+// Merc Edition: Beta Armory (custom armory panel replaces the native Purchase panel)
+//--------------------------------------------------------------------------------------------------
+void libCamp_gf_MercSetArmoryOpenHook (trigger lp_openTrigger) {
+    libCamp_gv_MercArmoryOpenHook = lp_openTrigger;
+}
+
+// Called by the Merc armory GUI when the panel closes (mirrors libCamp_gt_TSTechConsoleExit).
+void libCamp_gf_MercArmoryClosed () {
+    libCamp_gf_HideStoryUI(true, false);
+    libCamp_gf_ApplyCampaignTech(1);
+    TriggerExecute(libCamp_gv_MercArmoryExitCallback, true, false);
+}
+
+// Purchase logic shared by every armory UI (extracted from libCamp_gt_TSTechConsolePurchase_Func).
+// Validates, sets TechPurchased, deducts credits, adds the recent tech and updates the TStory01
+// achievement terms. Makes no PurchaseItem* calls. Returns true when the tech was bought.
+bool libCamp_gf_MercTryPurchaseTech (int lp_tech) {
+    if (lp_tech == libCamp_ge_StoryTech_StoryTechNone) {
+        return false;
+    }
+    if (libCamp_gf_StoryCredits() < libCamp_gf_StoryTechCost(lp_tech)) {
+        return false;
+    }
+    if ((libCamp_gv_tSX_Tech_Status[(lp_tech)] != libCamp_ge_StoryTechStates_TechAvailable) && (libCamp_gv_tSX_Tech_Status[(lp_tech)] != libCamp_ge_StoryTechStates_TechNew)) {
+        return false;
     }
 
+    libCamp_gv_tSX_Tech_Status[(lp_tech)] = libCamp_ge_StoryTechStates_TechPurchased;
+    libCamp_gf_SetStoryCredits((libCamp_gf_StoryCredits() - libCamp_gf_StoryTechCost(lp_tech)));
+    PlayerModifyPropertyInt(1, c_playerPropCredits, c_playerPropOperSetTo, libCamp_gf_StoryCredits());
+    libCamp_gf_TS_AddRecentTech(lp_tech);
+    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_Camp_D1E7DDD8") + IntToText(libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry))), false);
+    AchievementTermQuantitySet(1, "TStory01_1", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry));
+    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_Camp_E40FD404") + IntToText(libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryVehicles))), false);
+    AchievementTermQuantitySet(1, "TStory01_2", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryVehicles));
+    AchievementTermQuantitySet(1, "TStory01_3", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryStarships));
+    AchievementTermQuantitySet(1, "TStory01_4", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryBase));
+    AchievementTermQuantitySet(1, "TStory01_5", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryDominion));
+    return true;
+}
+
+// Read-only helpers so the armory GUI never touches libCamp arrays directly.
+int libCamp_gf_MercTechStatus (int lp_tech) {
+    return libCamp_gv_tSX_Tech_Status[(lp_tech)];
+}
+
+int libCamp_gf_MercTechGroupOf (int lp_tech) {
+    return libCamp_gv_tS_Tech_GroupID[(lp_tech)];
+}
+
+int libCamp_gf_MercTechOfGroupSlot (int lp_group, int lp_slot) {
+    int lv_i;
+    int lv_tech;
+
+    lv_i = libCamp_gv_TSC_TECH_FIRST;
+    while (lv_i <= libCamp_gv_TSC_TECH_LAST) {
+        lv_tech = libCamp_gv_tS_TechID[lv_i];
+        if ((libCamp_gv_tS_Tech_GroupID[(lv_tech)] == lp_group) && (libCamp_gf_StoryTechSlot(lv_tech) == lp_slot)) {
+            return lv_tech;
+        }
+        lv_i = lv_i + 1;
+    }
+    return libCamp_ge_StoryTech_StoryTechNone;
+}
+
+bool libCamp_gf_MercTechGroupVisible (int lp_group) {
+    return libCamp_gf_TS_StoryTechGroupUIUnlocked(lp_group);
+}
+
+string libCamp_gf_MercTechGroupUnitType (int lp_group) {
+    return libCamp_gv_tS_TechGroupUnitType[(lp_group)];
+}
+
+string libCamp_gf_MercTechGroupIcon (int lp_group) {
+    return libCamp_gv_tS_TechGroupIcon[(lp_group)];
+}
+
+text libCamp_gf_MercTechGroupName (int lp_group) {
+    return libCamp_gv_tS_TechGroupName[(lp_group)];
+}
+
+int libCamp_gf_MercTechRequires (int lp_tech) {
+    return libCamp_gv_tS_Tech_Requires[(lp_tech)];
+}
+
+// TechNew -> TechAvailable on first select (logic from libCamp_gt_TSTechItemSelected_Func).
+void libCamp_gf_MercClearTechNew (int lp_tech) {
+    if ((libCamp_gv_tSX_Tech_Status[(lp_tech)] == libCamp_ge_StoryTechStates_TechNew)) {
+        libCamp_gv_tSX_Tech_Status[(lp_tech)] = libCamp_ge_StoryTechStates_TechAvailable;
+    }
+}
+
+void libCamp_gf_DisplayTechConsole (trigger lp_exitTrigger) {
+    // Merc Edition: open the custom armory panel instead of the native Purchase panel.
+    libCamp_gv_tS_TechExitCallback = lp_exitTrigger;
+    libCamp_gv_MercArmoryExitCallback = lp_exitTrigger;
+    libCamp_gf_TS_UpdateTechStates();
+    if (libCamp_gv_MercArmoryOpenHook == null) {
+        // Load-order bug: the armory GUI library never registered. No native fallback by design;
+        // report it and return the hub to normal instead of leaving it stuck.
+        TriggerDebugOutput(1, StringToText("[Merc Armory] libCamp_gv_MercArmoryOpenHook is not set; the armory GUI library did not register its open trigger."), true);
+        libCamp_gf_MercArmoryClosed();
+        return;
+    }
+    libCamp_gf_HideStoryUI(false, false);
+    TriggerExecute(libCamp_gv_MercArmoryOpenHook, true, false);
+
+    // Stock native-panel body, kept for reference only (the native panel no longer runs):
+    // libCamp_gv_tS_TechExitCallback = lp_exitTrigger;
+    // libCamp_gf_TS_CreateTechUI();
+    // libCamp_gf_HideStoryUI(false, false);
+    // UISetFrameVisible(PlayerGroupAll(), c_syncFrameTypePurchasePanel, true);
+    // if ((PurchaseGetSelectedPurchaseCategory(1) == c_invalidPurchaseCategoryId)) {
+    //     PurchaseSetSelectedPurchaseCategory(PlayerGroupAll(), libCamp_gv_tS_TechCategory_UI[(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry)]);
+    // }
 }
 
 void libCamp_gf_EnableCampaignTechUnit (bool lp_enableDisable, int lp_techUnit, int lp_player) {
@@ -12689,19 +12810,9 @@ bool libCamp_gt_TSTechConsolePurchase_Func (bool testConds, bool runActions) {
     }
 
     lv_tech = libCamp_gf_TechPurchasableTechID(EventPurchaseMade());
-    if ((lv_tech != libCamp_ge_StoryTech_StoryTechNone) && (libCamp_gf_StoryCredits() >= libCamp_gf_StoryTechCost(lv_tech)) && ((libCamp_gv_tSX_Tech_Status[(lv_tech)] == libCamp_ge_StoryTechStates_TechAvailable) || (libCamp_gv_tSX_Tech_Status[(lv_tech)] == libCamp_ge_StoryTechStates_TechNew))) {
-        libCamp_gv_tSX_Tech_Status[(lv_tech)] = libCamp_ge_StoryTechStates_TechPurchased;
-        libCamp_gf_SetStoryCredits((libCamp_gf_StoryCredits() - libCamp_gf_StoryTechCost(lv_tech)));
-        PlayerModifyPropertyInt(1, c_playerPropCredits, c_playerPropOperSetTo, libCamp_gf_StoryCredits());
-        libCamp_gf_TS_AddRecentTech(lv_tech);
+    // Merc Edition: logic moved to libCamp_gf_MercTryPurchaseTech (native panel no longer opens).
+    if (libCamp_gf_MercTryPurchaseTech(lv_tech)) {
         PurchaseItemPurchase(libCamp_gv_tS_Tech_UI[(lv_tech)]);
-        TriggerDebugOutput(1, (StringExternal("Param/Value/lib_Camp_D1E7DDD8") + IntToText(libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry))), false);
-        AchievementTermQuantitySet(1, "TStory01_1", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry));
-        TriggerDebugOutput(1, (StringExternal("Param/Value/lib_Camp_E40FD404") + IntToText(libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryVehicles))), false);
-        AchievementTermQuantitySet(1, "TStory01_2", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryVehicles));
-        AchievementTermQuantitySet(1, "TStory01_3", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryStarships));
-        AchievementTermQuantitySet(1, "TStory01_4", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryBase));
-        AchievementTermQuantitySet(1, "TStory01_5", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryDominion));
     }
 
     libCamp_gf_TS_UpdateTechVisuals();

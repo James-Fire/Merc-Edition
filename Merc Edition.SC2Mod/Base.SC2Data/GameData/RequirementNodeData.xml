@@ -347,4 +347,11 @@
     <CRequirementCountUpgrade id="UpgradeUltralisk2QueuedOrBetter">
         <Count Link="Stank"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountBehavior id="CountBehaviorBroodWarSkinCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BroodWarSkin" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementNot id="NotCountBehaviorBroodWarSkinCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorBroodWarSkinCompleteOnlyAtUnit"/>
+    </CRequirementNot>
 </Catalog>

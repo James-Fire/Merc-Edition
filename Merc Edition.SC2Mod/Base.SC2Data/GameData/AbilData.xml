@@ -1760,4 +1760,7 @@
         <Flags index="WaitUntilStopped" value="0"/>
         <InfoArray Unit="FlyingBlockB"/>
     </CAbilMorph>
+    <CAbilMorph id="SupplyDepotLower">
+        <CmdButtonArray index="Execute" DefaultButtonFace="Lower" Requirements="SupplyDepotLowerAllowed"/>
+    </CAbilMorph>
 </Catalog>

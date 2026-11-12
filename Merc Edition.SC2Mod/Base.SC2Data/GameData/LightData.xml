@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!-- Ported from SC Evo (SCEvo_Multi LightData.xml) -->
+    <CLight id="MarineSCBW@Portrait">
+        <ToDInfoArray index="0" Id="MarineSCBW@Portrait" AmbientColor="0.070588,0.137255,0.196078" OperatorHDR="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="1.030000"/>
+            <Param index="HDREmisMultiplier" value="3.500000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.850980,0.717647,0.615686"/>
+                <ColorMultiplier value="1.738000"/>
+                <SpecularColor value="0.619608,0.701961,0.921569"/>
+                <SpecColorMultiplier value="0.871000"/>
+                <Direction value="-0.535181,0.688214,-0.489839"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.274510,0.556863,1.000000" ColorMultiplier="0.794000" Direction="-0.688291,0.484636,-0.539800"/>
+            <DirectionalLight index="Back" Color="0.121569,0.384314,0.803922" ColorMultiplier="1.365000" Direction="0.009738,-0.871759,-0.489839"/>
+        </ToDInfoArray>
+    </CLight>
+</Catalog>

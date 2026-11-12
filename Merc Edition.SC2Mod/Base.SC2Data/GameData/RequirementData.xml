@@ -354,4 +354,8 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="LT830165722CountUnitARESWarbotMercModQueuedOrBetter5"/>
     </CRequirement>
+    <CRequirement id="SupplyDepotLowerAllowed">
+        <NodeArray index="Use" Link="NotCountBehaviorBroodWarSkinCompleteOnlyAtUnit"/>
+        <NodeArray index="Show" Link="NotCountBehaviorBroodWarSkinCompleteOnlyAtUnit"/>
+    </CRequirement>
 </Catalog>
