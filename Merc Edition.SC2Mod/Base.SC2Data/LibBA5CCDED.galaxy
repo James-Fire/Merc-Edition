@@ -365,6 +365,125 @@ bool auto_libBA5CCDED_gf_GiveResearch_TriggerFunc (bool testConds, bool runActio
     return true;
 }
 
+unit libBA5CCDED_gf_PM_NexusBestWorkerRallyMineral (unit lp_nexus) {
+    // Variable Declarations
+    unit lv_indexUnitOuter;
+    unit lv_indexUnitInner;
+    unit lv_indexResource;
+    fixed lv_bestDistance;
+    fixed lv_curDistance;
+    region lv_searchArea;
+    unitgroup lv_mineralGroup;
+    unit lv_bestMineral;
+
+    // Automatic Variable Declarations
+    unitgroup auto238C07FA_g;
+    int auto238C07FA_u;
+    unitgroup auto7DECB7BB_g;
+    int auto7DECB7BB_u;
+    unitgroup autoA9E19F23_g;
+    int autoA9E19F23_u;
+
+    // Variable Initialization
+    lv_mineralGroup = UnitGroupEmpty();
+
+    // Implementation
+    lv_searchArea = RegionCircle(UnitGetPosition(lp_nexus), 10.0);
+    lv_mineralGroup = UnitGroup(null, c_playerAny, lv_searchArea, UnitFilter((1 << c_targetFilterHarvestableResource), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32))), 0);
+    auto238C07FA_g = lv_mineralGroup;
+    auto238C07FA_u = UnitGroupCount(auto238C07FA_g, c_unitCountAll);
+    for (;; auto238C07FA_u -= 1) {
+        lv_indexResource = UnitGroupUnitFromEnd(auto238C07FA_g, auto238C07FA_u);
+        if (lv_indexResource == null) { break; }
+        if ((CatalogFieldValueGet(c_gameCatalogUnit, UnitGetType(lv_indexResource), "ResourceType", c_playerAny) != "Minerals")) {
+            UnitGroupRemove(lv_mineralGroup, lv_indexResource);
+        }
+
+    }
+    auto7DECB7BB_g = lv_mineralGroup;
+    auto7DECB7BB_u = UnitGroupCount(auto7DECB7BB_g, c_unitCountAll);
+    for (;; auto7DECB7BB_u -= 1) {
+        lv_indexUnitOuter = UnitGroupUnitFromEnd(auto7DECB7BB_g, auto7DECB7BB_u);
+        if (lv_indexUnitOuter == null) { break; }
+        lv_curDistance = 0.0;
+        autoA9E19F23_g = lv_mineralGroup;
+        autoA9E19F23_u = UnitGroupCount(autoA9E19F23_g, c_unitCountAll);
+        for (;; autoA9E19F23_u -= 1) {
+            lv_indexUnitInner = UnitGroupUnitFromEnd(autoA9E19F23_g, autoA9E19F23_u);
+            if (lv_indexUnitInner == null) { break; }
+            if ((lv_indexUnitOuter != lv_indexUnitInner)) {
+                lv_curDistance += DistanceBetweenPoints(UnitGetPosition(lv_indexUnitOuter), UnitGetPosition(lv_indexUnitInner));
+            }
+
+        }
+        if (((lv_bestDistance == 0.0) || (lv_curDistance < lv_bestDistance))) {
+            lv_bestDistance = lv_curDistance;
+            lv_bestMineral = lv_indexUnitOuter;
+        }
+
+    }
+    return lv_bestMineral;
+}
+
+void libBA5CCDED_gf_SetWorkerRallyPointforNexus (unit lp_nexus) {
+    // Variable Declarations
+    unit lv_bestMineral;
+    point lv_rallyPoint;
+
+    // Automatic Variable Declarations
+    string autoF30375E2_val;
+
+    // Variable Initialization
+
+    // Implementation
+    lv_bestMineral = libBA5CCDED_gf_PM_NexusBestWorkerRallyMineral(lp_nexus);
+    if ((lv_bestMineral != null)) {
+        autoF30375E2_val = UnitGetType(lp_nexus);
+        if (autoF30375E2_val == "Nexus") {
+            UnitIssueOrder(lp_nexus, OrderTargetingUnit(AbilityCommand("RallyNexus", 1), lv_bestMineral), c_orderQueueReplace);
+        }
+        else if (autoF30375E2_val == "CommandCenter") {
+            UnitIssueOrder(lp_nexus, OrderTargetingUnit(AbilityCommand("RallyCommand", 0), lv_bestMineral), c_orderQueueReplace);
+        }
+        else if (autoF30375E2_val == "OrbitalCommand") {
+            UnitIssueOrder(lp_nexus, OrderTargetingUnit(AbilityCommand("RallyCommand", 0), lv_bestMineral), c_orderQueueReplace);
+        }
+        else if (autoF30375E2_val == "PlanetaryFortress") {
+            UnitIssueOrder(lp_nexus, OrderTargetingUnit(AbilityCommand("RallyCommand", 0), lv_bestMineral), c_orderQueueReplace);
+        }
+        else {
+            UnitIssueOrder(lp_nexus, OrderTargetingUnit(AbilityCommand("RallyCommand", 0), lv_bestMineral), c_orderQueueReplace);
+        }
+    }
+
+}
+
+void libBA5CCDED_gf_SetWorkerRallyPointsPlayersNexuses (int lp_player) {
+    // Variable Declarations
+    unit lv_indexNexus;
+    unitgroup lv_nexusGroup;
+
+    // Automatic Variable Declarations
+    unitgroup auto9B3A81CA_g;
+    int auto9B3A81CA_u;
+
+    // Variable Initialization
+    lv_nexusGroup = UnitGroupEmpty();
+
+    // Implementation
+    lv_nexusGroup = UnitGroup("Nexus", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    UnitGroupAddUnitGroup(lv_nexusGroup, UnitGroup("CommandCenter", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+    UnitGroupAddUnitGroup(lv_nexusGroup, UnitGroup("OrbitalCommand", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+    UnitGroupAddUnitGroup(lv_nexusGroup, UnitGroup("PlanetaryFortress", lp_player, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+    auto9B3A81CA_g = lv_nexusGroup;
+    auto9B3A81CA_u = UnitGroupCount(auto9B3A81CA_g, c_unitCountAll);
+    for (;; auto9B3A81CA_u -= 1) {
+        lv_indexNexus = UnitGroupUnitFromEnd(auto9B3A81CA_g, auto9B3A81CA_u);
+        if (lv_indexNexus == null) { break; }
+        libBA5CCDED_gf_SetWorkerRallyPointforNexus(lv_indexNexus);
+    }
+}
+
 bool libBA5CCDED_gf_IsTownBuilding (unit lp_unit) {
     // Variable Declarations
     int lv_index;
@@ -385,90 +504,6 @@ bool libBA5CCDED_gf_IsTownBuilding (unit lp_unit) {
 
     }
     return false;
-}
-
-unit libBA5CCDED_gf_TownRallyMineral (unit lp_town) {
-    // Variable Declarations
-    unitgroup lv_minerals;
-    unit lv_outer;
-    unit lv_inner;
-    unit lv_best;
-    fixed lv_bestDistance;
-    fixed lv_curDistance;
-
-    // Automatic Variable Declarations
-    unitgroup auto5EFCFF5F_g;
-    int auto5EFCFF5F_u;
-    unitgroup auto084663E1_g;
-    int auto084663E1_u;
-
-    // Variable Initialization
-    lv_minerals = UnitGroupEmpty();
-
-    // Implementation
-    lv_minerals = UnitGroup(null, 0, RegionCircle(UnitGetPosition(lp_town), 10.0), UnitFilter((1 << c_targetFilterHarvestableResource), 0, (1 << c_targetFilterRawResource) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
-    auto5EFCFF5F_g = lv_minerals;
-    auto5EFCFF5F_u = UnitGroupCount(auto5EFCFF5F_g, c_unitCountAll);
-    for (;; auto5EFCFF5F_u -= 1) {
-        lv_outer = UnitGroupUnitFromEnd(auto5EFCFF5F_g, auto5EFCFF5F_u);
-        if (lv_outer == null) { break; }
-        lv_curDistance = 0.0;
-        auto084663E1_g = lv_minerals;
-        auto084663E1_u = UnitGroupCount(auto084663E1_g, c_unitCountAll);
-        for (;; auto084663E1_u -= 1) {
-            lv_inner = UnitGroupUnitFromEnd(auto084663E1_g, auto084663E1_u);
-            if (lv_inner == null) { break; }
-            lv_curDistance = (lv_curDistance + DistanceBetweenPoints(UnitGetPosition(lv_inner), UnitGetPosition(lv_outer)));
-        }
-        if (((lv_bestDistance == 0.0) || (lv_curDistance < lv_bestDistance))) {
-            lv_bestDistance = lv_curDistance;
-            lv_best = lv_outer;
-        }
-
-    }
-    return lv_best;
-}
-
-void libBA5CCDED_gf_RallyTownToMinerals (unit lp_town) {
-    // Variable Declarations
-    unit lv_mineral;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-
-    // Implementation
-    lv_mineral = libBA5CCDED_gf_TownRallyMineral(lp_town);
-    if ((lv_mineral != null)) {
-        UnitIssueOrder(lp_town, OrderTargetingUnit(null, lv_mineral), c_orderQueueReplace);
-    }
-
-}
-
-void libBA5CCDED_gf_RallyPlayerTownsToMinerals (int lp_player) {
-    // Variable Declarations
-    unit lv_town;
-
-    // Automatic Variable Declarations
-    unitgroup autoD4698F4F_g;
-    int autoD4698F4F_u;
-
-    // Variable Initialization
-
-    // Implementation
-    if ((PlayerGetState(lp_player, c_playerStateStartingRallyEnabled) == false)) {
-        return ;
-    }
-
-    autoD4698F4F_g = UnitGroup(null, lp_player, RegionEntireMap(), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterUnderConstruction - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
-    autoD4698F4F_u = UnitGroupCount(autoD4698F4F_g, c_unitCountAll);
-    for (;; autoD4698F4F_u -= 1) {
-        lv_town = UnitGroupUnitFromEnd(autoD4698F4F_g, autoD4698F4F_u);
-        if (lv_town == null) { break; }
-        if ((libBA5CCDED_gf_IsTownBuilding(lv_town) == true)) {
-            libBA5CCDED_gf_RallyTownToMinerals(lv_town);
-        }
-
-    }
 }
 
 void libBA5CCDED_gf_StartingWorkersAutoHarvest (int lp_player, region lp_mineralRegion, region lp_gasRegion) {
