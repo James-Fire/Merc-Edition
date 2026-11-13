@@ -474,4 +474,8 @@
         <WhichUnit Value="Source"/>
         <Value value="BlockB"/>
     </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="HasBroodWarSkin">
+        <Behavior value="BroodWarSkin"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
 </Catalog>

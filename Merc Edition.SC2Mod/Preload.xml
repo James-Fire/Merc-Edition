@@ -5,13 +5,13 @@
 <Behavior id="GenericDontDie"/>
 <Behavior id="CabalRevive1"/>
 <Behavior id="Hill180sRespawn"/>
+<Behavior id="NightmarePlus"/>
 <Behavior id="HellraiserEasterEgg"/>
 <Behavior id="RedlineReactorEasterEgg"/>
 <Behavior id="RevivalFieldCooldown"/>
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SpectreNo15SuperCloak"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
-<Behavior id="NightmarePlus"/>
 <Effect id="NukeDetonate"/>
 <Effect id="HeroNukeDetonate"/>
 <Effect id="EchoDropPodsIndicatorDummy"/>

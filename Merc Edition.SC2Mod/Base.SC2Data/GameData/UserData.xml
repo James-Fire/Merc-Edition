@@ -1,0 +1,2083 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="MercArmoryUnits">
+        <Fields Id="Icon" Type="Image" EditorColumn="1"/>
+        <Fields Id="Name" Type="Text" EditorColumn="4"/>
+        <Fields>
+            <Id value="Upgrades"/>
+            <Type value="User"/>
+            <UserType value="MercArmoryUpgrades"/>
+            <Count value="2"/>
+            <EditorColumn value="2"/>
+        </Fields>
+        <Fields>
+            <Id value="AltUnit"/>
+            <Type value="User"/>
+            <UserType value="MercArmoryUnits"/>
+            <EditorColumn value="3"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Bunker">
+            <Image Image="Assets\Textures\btn-building-terran-bunker.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Bunker - Neosteel Cup Holders">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Bunker - Chairs and A.C ">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Missile Turret">
+            <Image Image="Assets\Textures\btn-building-terran-missileturret.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Missile Turret - Devastator Override">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Missile Turret - Armored Housing">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="ACV">
+            <Image Image="Assets\Textures\btn-unit-terran-scvfusionwelder.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="ACV - Micro Fusion Reactor">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="[Default]">
+                <Field Id="AltUnit"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="ACV - Kel Morian Cutters">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Terran Buildings">
+            <Image Image="Assets\Textures\btn-building-terran-commandcenter.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Building - Adv. Orbital Command">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Building - Swann&apos;s Suppression">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Nanite Emitter">
+            <Image Image="Assets\Textures\btn-unit-terran-popupturret.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Nanite Emitter - Box of Scraps">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Nanite Emitter - Danger Mist">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="War Pig">
+            <Image Image="Assets\Textures\btn-unit-terran-merc-marine.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUnits" Instance="[Default]">
+                <Field Id="AltUnit"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="War Pig - Super Stim">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="War Pig - Thorn Shield">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Skibi&apos;s Angel">
+            <Image Image="Assets\Textures\btn-unit-terran-medicmercenary.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUnits" Instance="[Default]">
+                <Field Id="AltUnit"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Skibi - Advanced Stabilizers">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Skibi - AI Enhancement">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Devil Dog">
+            <Image Image="Assets\Textures\btn-unit-terran-firebatmercenary.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Devil Dog - Chemical Plating">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Devil Dog - Bearclaw Nozzles">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Hammer Security">
+            <Image Image="Assets\Textures\btn-unit-terran-maraudermercenary.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Hammer Security - Concussive Shrapnel">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Hammer Security - Ablative Scales">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Block B">
+            <Image Image="Assets\Textures\btn-unit-terran-reapermercenary.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Block B - U-240 Rounds">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Block B - Jet Pack Overdrive">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Agitator">
+            <Image Image="Assets\Textures\btn-unit-terran-hellionmercenary.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUnits" Instance="[Default]">
+                <Field Id="AltUnit"/>
+            </User>
+                    <User Type="MercArmoryUpgrades" Instance="Agitator - Viral Flammenwerfer">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Agitator - Pliable Armor">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Siege Breaker">
+            <Image Image="Assets\Textures\btn-unit-terran-merc-siegetanktank.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Siege Breaker - IFF Spider Rounds">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Siege Breaker - Smart Servos MKIV">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Copperhead">
+            <Image Image="Assets\Icons and Wireframes\btn-unit-diamondbackbronze.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Copperhead - Confederate Reactor">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Copperhead - Reflective Armor">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Spartan Company">
+            <Image Image="Assets\Textures\btn-unit-terran-goliathmercenary.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Spartan Company - Legion Systems">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Spartan Company - Aspis Blink Shield">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Condor">
+            <Image Image="Assets\Icons and Wireframes\btn-unit-terran-mercvulture.dds">
+                <Field Id="Icon"/>
+            </Image>
+                    <User Type="MercArmoryUpgrades" Instance="Condor - Loose Engine Seals">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Condor - Raynor Special">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Hel&apos;s Angel">
+            <Image Image="Assets\Textures\btn-unit-terran-merc-viking.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Hel&apos;s Angel - Sulfur Missiles">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Hel&apos;s Angel - Deimos Systems">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Dusk Wing">
+            <Image Image="Assets\Textures\btn-unit-terran-merc-banshee.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Dusk Wing - Shimmer Screen">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Dusk Wing - ASP Rocket Pods">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Charon Dropship">
+            <Image Image="Assets\Textures\btn-unit-terran-merc-medivac.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Charon Dropship - M.A.S.H">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Charon Dropship - Rapid Algorithms">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Harrier">
+            <Image Image="Assets\Textures\btn-unit-terran-wraith.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Harrier - Burst Amplifier">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Harrier - Revival Field">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Starcruiser">
+            <Image Image="Assets\Textures\btn-unit-terran-merc-battlecruiser.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Starcruiser - Ragnarok Weapons">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Starcruiser - Rorke&apos;s Redline">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Phantom">
+            <Image Image="Assets\Textures\btn-unit-terran-ghost.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Phantom - Tyrador Implants">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Phantom - Eidolon Suit">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Shadow">
+                <Field Id="AltUnit"/>
+            </User>
+                    <Text Text="UserData/MercArmoryUnits/Phantom_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Shadow">
+            <Image Image="Assets\Textures\btn-unit-terran-spectre.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Shadow - Terrazine Shots">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Shadow - Jorium Lined Suit">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+                    <Text Text="UserData/MercArmoryUnits/Shadow_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Max-Tech Soldiers">
+            <Image Image="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Soldiers - Advanced Training">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Soldiers - Liberated ESP">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Max-Tech Vehicles">
+            <Image Image="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Vehicles - Advanced Training">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Vehicles - Swann&apos;s Extra Supplies">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Max-Tech Upgrades">
+            <Image Image="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Upgrades - Speedy Research">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Upgrades - Merged Upgrades">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Titan">
+            <Image Image="Assets\Textures\btn-unit-terran-merc-thor.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Titan - Hazardous Payload">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Titan - Dead Man Switch">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Nomad">
+            <Image Image="Assets\Textures\btn-unit-terran-raven.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Nomad - Explosive Calibrations">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Nomad - Silent Mode">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Adjudicator">
+            <Image Image="Assets\Textures\btn-unit-terran-sciencevessel.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Adjudicator - Mobile Stockpile">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Adjudicator - Swann Nanites">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Samson">
+            <Image Image="Assets\Textures\btn-unit-terran-hercules.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Samson - ATX Ordnance">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Samson - Apollo Injection Pods">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Wolverine">
+            <Image Image="Assets\Textures\btn-unit-terran-warhound.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <User Type="MercArmoryUpgrades" Instance="Wolverine - Piercing Strike">
+                <Field Id="Upgrades"/>
+            </User>
+            <User Type="MercArmoryUpgrades" Instance="Wolverine - Chaotic Power">
+                <Field Id="Upgrades" Index="1"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="MercArmoryUpgrades">
+        <Fields Id="Name" Type="Text" EditorColumn="1"/>
+        <Fields Id="Benefits" Type="Text"/>
+        <Fields Id="Description" Type="Text"/>
+        <Fields Id="Icon" Type="Image" EditorColumn="2"/>
+        <Fields Id="TechID" Type="Int"/>
+        <Fields Id="PreviewCosts" Type="Int" EditorColumn="3"/>
+        <Fields Id="TestPurchased" Type="Int">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Bunker - Neosteel Cup Holders">
+            <Int Int="4">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-neosteelframe.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="100000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Bunker - Neosteel Cup Holders_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Bunker - Neosteel Cup Holders_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Bunker - Neosteel Cup Holders_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Bunker - Chairs and A.C ">
+            <Int Int="3">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-neosteelbunker.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="130000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Bunker - Chairs and A.C _Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Bunker - Chairs and A.C _Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Bunker - Chairs and A.C _Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+        </Instances>
+        <Instances Id="Missile Turret - Devastator Override">
+            <Int Int="6">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-hailstormmissilepods.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="150000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Missile Turret - Devastator Override_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Missile Turret - Devastator Override_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Missile Turret - Devastator Override_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Missile Turret - Armored Housing">
+            <Int Int="5">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-microfusionreactor.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="85000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Missile Turret - Armored Housing_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Missile Turret - Armored Housing_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Missile Turret - Armored Housing_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="ACV - Micro Fusion Reactor">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-dualfusionwelders.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="80000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="TechID"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/ACV - Micro Fusion Reactor_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/ACV - Micro Fusion Reactor_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/ACV - Micro Fusion Reactor_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="ACV - Kel Morian Cutters">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-automatedselfrepair.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="2">
+                <Field Id="TechID"/>
+            </Int>
+            <Int Int="125000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/ACV - Kel Morian Cutters_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/ACV - Kel Morian Cutters_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/ACV - Kel Morian Cutters_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Building - Swann&apos;s Suppression">
+            <Int Int="8">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-firesuppressionsystem.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="125000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Building - Swann&apos;s Suppression_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Building - Swann&apos;s Suppression_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Building - Swann&apos;s Suppression_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+        </Instances>
+        <Instances Id="Building - Adv. Orbital Command">
+            <Int Int="7">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-orbitalcommand.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="130000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Building - Adv. Orbital Command_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Building - Adv. Orbital Command_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Building - Adv. Orbital Command_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+        </Instances>
+        <Instances Id="War Pig - Super Stim">
+            <Int Int="9">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-stimpack.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="110000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/War Pig - Super Stim_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/War Pig - Super Stim_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/War Pig - Super Stim_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="War Pig - Thorn Shield">
+            <Int Int="10">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-combatshield.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="90000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/War Pig - Thorn Shield_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/War Pig - Thorn Shield_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/War Pig - Thorn Shield_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Skibi - Advanced Stabilizers">
+            <Int Int="11">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-stabilizermedpacks.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="115000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Skibi - Advanced Stabilizers_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Skibi - Advanced Stabilizers_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Skibi - Advanced Stabilizers_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+        </Instances>
+        <Instances Id="Skibi - AI Enhancement">
+            <Int Int="12">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-nano-botinjectors.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="85000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Skibi - AI Enhancement_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Skibi - AI Enhancement_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Skibi - AI Enhancement_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Nanite Emitter - Box of Scraps">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-modularconstruction.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="150000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Nanite Emitter - Box of Scraps_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nanite Emitter - Box of Scraps_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nanite Emitter - Box of Scraps_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Nanite Emitter - Danger Mist">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-empround.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="100000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Nanite Emitter - Danger Mist_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nanite Emitter - Danger Mist_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nanite Emitter - Danger Mist_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Devil Dog - Chemical Plating">
+            <Int Int="14">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-juggernautplating.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="110000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Devil Dog - Chemical Plating_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Devil Dog - Chemical Plating_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Devil Dog - Chemical Plating_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Devil Dog - Bearclaw Nozzles">
+            <Int Int="13">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="95000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Devil Dog - Bearclaw Nozzles_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Devil Dog - Bearclaw Nozzles_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Devil Dog - Bearclaw Nozzles_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Hammer Security - Concussive Shrapnel">
+            <Int Int="15">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-kineticfoam.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="90000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Hammer Security - Concussive Shrapnel_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hammer Security - Concussive Shrapnel_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hammer Security - Concussive Shrapnel_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Hammer Security - Ablative Scales">
+            <Int Int="16">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-jackhammerconcussion.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="85000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Hammer Security - Ablative Scales_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hammer Security - Ablative Scales_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hammer Security - Ablative Scales_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Block B - U-240 Rounds">
+            <Int Int="18">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-d-8charges.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="110000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Block B - U-240 Rounds_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Block B - U-240 Rounds_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Block B - U-240 Rounds_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Block B - Jet Pack Overdrive">
+            <Int Int="17">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-u238rounds.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="75000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Block B - Jet Pack Overdrive_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Block B - Jet Pack Overdrive_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Block B - Jet Pack Overdrive_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Agitator - Viral Flammenwerfer">
+            <Int Int="20">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-infernalpreigniter.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="115000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Agitator - Viral Flammenwerfer_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Agitator - Viral Flammenwerfer_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Agitator - Viral Flammenwerfer_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Agitator - Pliable Armor">
+            <Int Int="19">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-twin-linkedflamethrower.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="150000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Agitator - Pliable Armor_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Agitator - Pliable Armor_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Agitator - Pliable Armor_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Siege Breaker - IFF Spider Rounds">
+            <Int Int="27">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-maelstromrounds.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="200000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Siege Breaker - IFF Spider Rounds_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Siege Breaker - IFF Spider Rounds_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Siege Breaker - IFF Spider Rounds_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Siege Breaker - Smart Servos MKIV">
+            <Int Int="28">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-shapedblast.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="175000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Siege Breaker - Smart Servos MKIV_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Siege Breaker - Smart Servos MKIV_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Siege Breaker - Smart Servos MKIV_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Copperhead - Confederate Reactor">
+            <Int Int="25">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-trilithiumpowercell.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="80000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Copperhead - Confederate Reactor_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Copperhead - Confederate Reactor_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Copperhead - Confederate Reactor_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Copperhead - Reflective Armor">
+            <Int Int="26">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-shapedhull.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="105000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Copperhead - Reflective Armor_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Copperhead - Reflective Armor_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Copperhead - Reflective Armor_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Spartan Company - Legion Systems">
+            <Int Int="22">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-charonboosters.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="130000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Spartan Company - Legion Systems_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Spartan Company - Legion Systems_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Spartan Company - Legion Systems_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Spartan Company - Aspis Blink Shield">
+            <Int Int="21">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-multilocktargetingsystem.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="95000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Spartan Company - Aspis Blink Shield_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Spartan Company - Aspis Blink Shield_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Spartan Company - Aspis Blink Shield_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Condor - Loose Engine Seals">
+            <Int Int="23">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-cerberusmine.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="60000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Condor - Loose Engine Seals_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Condor - Loose Engine Seals_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Condor - Loose Engine Seals_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Condor - Raynor Special">
+            <Int Int="24">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-replenishablemagazine.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="75000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Condor - Raynor Special_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Condor - Raynor Special_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Condor - Raynor Special_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Hel&apos;s Angel - Sulfur Missiles">
+            <Int Int="34">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-ripwavemissiles.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="85000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Hel&apos;s Angel - Sulfur Missiles_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hel&apos;s Angel - Sulfur Missiles_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hel&apos;s Angel - Sulfur Missiles_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Hel&apos;s Angel - Deimos Systems">
+            <Int Int="33">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-jotunboosters.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="145000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Hel&apos;s Angel - Deimos Systems_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hel&apos;s Angel - Deimos Systems_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Hel&apos;s Angel - Deimos Systems_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Dusk Wing - Shimmer Screen">
+            <Int Int="35">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-clusterwarheads.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="105000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Dusk Wing - Shimmer Screen_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Dusk Wing - Shimmer Screen_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Dusk Wing - Shimmer Screen_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Dusk Wing - ASP Rocket Pods">
+            <Int Int="36">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-crossspectrumdampeners.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="145000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Dusk Wing - ASP Rocket Pods_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Dusk Wing - ASP Rocket Pods_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Dusk Wing - ASP Rocket Pods_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Charon Dropship - M.A.S.H">
+            <Int Int="30">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-rapiddeployment.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="125000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Charon Dropship - M.A.S.H_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Charon Dropship - M.A.S.H_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Charon Dropship - M.A.S.H_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Charon Dropship - Rapid Algorithms">
+            <Int Int="29">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-ability-terran-advancedhealingai.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="80000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Charon Dropship - Rapid Algorithms_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Charon Dropship - Rapid Algorithms_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Charon Dropship - Rapid Algorithms_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Harrier - Burst Amplifier">
+            <Int Int="31">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-tomahawkpowercell.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="110000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Harrier - Burst Amplifier_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Harrier - Burst Amplifier_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Harrier - Burst Amplifier_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Harrier - Revival Field">
+            <Int Int="32">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-cloakdistortionfield.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="200000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Harrier - Revival Field_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Harrier - Revival Field_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Harrier - Revival Field_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Starcruiser - Ragnarok Weapons">
+            <Int Int="37">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-missilepods.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="210000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Starcruiser - Ragnarok Weapons_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Starcruiser - Ragnarok Weapons_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Starcruiser - Ragnarok Weapons_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Starcruiser - Rorke&apos;s Redline">
+            <Int Int="38">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-defensivematrix.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="190000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Starcruiser - Rorke&apos;s Redline_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Starcruiser - Rorke&apos;s Redline_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Starcruiser - Rorke&apos;s Redline_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Phantom - Tyrador Implants">
+            <Int Int="39">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-ocularimplants.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="125000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Phantom - Tyrador Implants_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Phantom - Tyrador Implants_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Phantom - Tyrador Implants_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Phantom - Eidolon Suit">
+            <Int Int="40">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-criussuit.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="165000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Phantom - Eidolon Suit_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Phantom - Eidolon Suit_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Phantom - Eidolon Suit_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Shadow - Terrazine Shots">
+            <Int Int="41">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-psioniclash.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="135000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Shadow - Terrazine Shots_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Shadow - Terrazine Shots_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Shadow - Terrazine Shots_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Shadow - Jorium Lined Suit">
+            <Int Int="42">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-nyxcloakingclassmodule.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="165000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Shadow - Jorium Lined Suit_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Shadow - Jorium Lined Suit_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Shadow - Jorium Lined Suit_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Soldiers - Advanced Training">
+            <Image Image="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="125000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Soldiers - Advanced Training_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Soldiers - Advanced Training_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Soldiers - Advanced Training_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Soldiers - Liberated ESP">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-kineticfoam.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="150000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Soldiers - Liberated ESP_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Soldiers - Liberated ESP_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Soldiers - Liberated ESP_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Vehicles - Advanced Training">
+            <Image Image="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="125000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Vehicles - Advanced Training_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Vehicles - Advanced Training_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Vehicles - Advanced Training_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Vehicles - Swann&apos;s Extra Supplies">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-fusionwelder.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="175000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Vehicles - Swann&apos;s Extra Supplies_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Vehicles - Swann&apos;s Extra Supplies_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Vehicles - Swann&apos;s Extra Supplies_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Upgrades - Speedy Research">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-burstcapacitors.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="150000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Upgrades - Speedy Research_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Upgrades - Speedy Research_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Upgrades - Speedy Research_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Upgrades - Merged Upgrades">
+            <Image Image="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="200000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Upgrades - Merged Upgrades_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Upgrades - Merged Upgrades_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Upgrades - Merged Upgrades_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Titan - Hazardous Payload">
+            <Int Int="43">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-330mmbarragecannon.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="210000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Titan - Hazardous Payload_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Titan - Hazardous Payload_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Titan - Hazardous Payload_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Titan - Dead Man Switch">
+            <Int Int="44">
+                <Field Id="TechID"/>
+            </Int>
+            <Image Image="Assets\Textures\btn-techupgrade-terran-immortalityprotocol.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="180000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Titan - Dead Man Switch_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Titan - Dead Man Switch_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Titan - Dead Man Switch_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Nomad - Explosive Calibrations">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-seekermissile.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="195000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Nomad - Explosive Calibrations_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nomad - Explosive Calibrations_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nomad - Explosive Calibrations_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Nomad - Silent Mode">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-raven.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="75000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Nomad - Silent Mode_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nomad - Silent Mode_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Nomad - Silent Mode_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Adjudicator - Mobile Stockpile">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-nuclearstrike.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="90000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Adjudicator - Mobile Stockpile_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Adjudicator - Mobile Stockpile_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Adjudicator - Mobile Stockpile_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Adjudicator - Swann Nanites">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-automatedselfrepair.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="80000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Adjudicator - Swann Nanites_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Adjudicator - Swann Nanites_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Adjudicator - Swann Nanites_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Samson - ATX Ordnance">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-particlecannon.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="85000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Samson - ATX Ordnance_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Samson - ATX Ordnance_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Samson - ATX Ordnance_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Samson - Apollo Injection Pods">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-hurculescantrainunit.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="120000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Samson - Apollo Injection Pods_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Samson - Apollo Injection Pods_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Samson - Apollo Injection Pods_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Wolverine - Piercing Strike">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-impalerrounds.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="90000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Wolverine - Piercing Strike_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Wolverine - Piercing Strike_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Wolverine - Piercing Strike_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Wolverine - Chaotic Power">
+            <Image Image="Assets\Textures\btn-techupgrade-terran-minesplatter.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="100000">
+                <Field Id="PreviewCosts"/>
+            </Int>
+            <Text Text="UserData/MercArmoryUpgrades/Wolverine - Chaotic Power_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Wolverine - Chaotic Power_Benefits">
+                <Field Id="Benefits"/>
+            </Text>
+            <Text Text="UserData/MercArmoryUpgrades/Wolverine - Chaotic Power_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+    </CUser>
+    <CUser id="MercArmyTypes">
+        <Fields>
+            <Id value="UnitType"/>
+            <Type value="User"/>
+            <UserType value="MercArmoryUnits"/>
+            <Count value="5"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Fields Id="Type Name" Type="Text" EditorColumn="5"/>
+        <Fields Id="TitleFromUnit" Type="Int" EditorColumn="6"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Base">
+            <Text Text="UserData/MercArmyTypes/Base_Type Name">
+                <Field Id="Type Name"/>
+            </Text>
+            <User Type="MercArmoryUnits" Instance="Bunker">
+                <Field Id="UnitType"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Missile Turret">
+                <Field Id="UnitType" Index="1"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="ACV">
+                <Field Id="UnitType" Index="2"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Terran Buildings">
+                <Field Id="UnitType" Index="3"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Nanite Emitter">
+                <Field Id="UnitType" Index="4"/>
+            </User>
+        </Instances>
+        <Instances Id="Infantry">
+            <Text Text="UserData/MercArmyTypes/Infantry_Type Name">
+                <Field Id="Type Name"/>
+            </Text>
+            <User Type="MercArmoryUnits" Instance="War Pig">
+                <Field Id="UnitType"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Skibi&apos;s Angel">
+                <Field Id="UnitType" Index="1"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Devil Dog">
+                <Field Id="UnitType" Index="2"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Hammer Security">
+                <Field Id="UnitType" Index="3"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Block B">
+                <Field Id="UnitType" Index="4"/>
+            </User>
+        </Instances>
+        <Instances Id="Vehicles">
+            <Text Text="UserData/MercArmyTypes/Vehicles_Type Name">
+                <Field Id="Type Name"/>
+            </Text>
+            <User Type="MercArmoryUnits" Instance="Agitator">
+                <Field Id="UnitType"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Siege Breaker">
+                <Field Id="UnitType" Index="1"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Copperhead">
+                <Field Id="UnitType" Index="2"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Condor">
+                <Field Id="UnitType" Index="4"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Spartan Company">
+                <Field Id="UnitType" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="Starships">
+            <Text Text="UserData/MercArmyTypes/Starships_Type Name">
+                <Field Id="Type Name"/>
+            </Text>
+                    <User Type="MercArmoryUnits" Instance="Hel&apos;s Angel">
+                <Field Id="UnitType"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Dusk Wing">
+                <Field Id="UnitType" Index="1"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Charon Dropship">
+                <Field Id="UnitType" Index="2"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Harrier">
+                <Field Id="UnitType" Index="3"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Starcruiser">
+                <Field Id="UnitType" Index="4"/>
+            </User>
+        </Instances>
+        <Instances Id="Max-Tech">
+            <Text Text="UserData/MercArmyTypes/Max-Tech_Type Name">
+                <Field Id="Type Name"/>
+            </Text>
+                    <User Type="MercArmoryUnits" Instance="Max-Tech Soldiers">
+                <Field Id="UnitType"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Max-Tech Vehicles">
+                <Field Id="UnitType" Index="1"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Max-Tech Upgrades">
+                <Field Id="UnitType" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="Ghost/Spectre">
+            <Text Text="UserData/MercArmyTypes/Ghost/Spectre_Type Name">
+                <Field Id="Type Name"/>
+            </Text>
+                    <User Type="MercArmoryUnits" Instance="Phantom">
+                <Field Id="UnitType"/>
+            </User>
+                    <Int Int="1">
+                <Field Id="TitleFromUnit"/>
+            </Int>
+        </Instances>
+        <Instances Id="Dominion">
+            <Text Text="UserData/MercArmyTypes/Dominion_Type Name">
+                <Field Id="Type Name"/>
+            </Text>
+                    <User Type="MercArmoryUnits" Instance="Titan">
+                <Field Id="UnitType"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Nomad">
+                <Field Id="UnitType" Index="1"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Adjudicator">
+                <Field Id="UnitType" Index="2"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Samson">
+                <Field Id="UnitType" Index="3"/>
+            </User>
+            <User Type="MercArmoryUnits" Instance="Wolverine">
+                <Field Id="UnitType" Index="4"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="MercTownBuildings">
+        <Fields>
+            <Id value="Unit"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Unit"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="CommandCenter">
+            <GameLink GameLink="CommandCenter">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="OrbitalCommand">
+            <GameLink GameLink="OrbitalCommand">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="PlanetaryFortress">
+            <GameLink GameLink="PlanetaryFortress">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="Nexus">
+            <GameLink GameLink="Nexus">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+    </CUser>
+    <CUser id="MercHeroes">
+        <Fields Id="Contract" Type="Int" EditorColumn="1"/>
+        <Fields Id="Name" Type="Text" EditorColumn="2"/>
+        <Fields Id="Cost" Type="Int" EditorColumn="3"/>
+        <Fields>
+            <Id value="Unit"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Unit"/>
+            <EditorColumn value="4"/>
+        </Fields>
+        <Fields>
+            <Id value="PortraitModel"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Model"/>
+            <EditorColumn value="5"/>
+        </Fields>
+        <Fields Id="Description" Type="Text"/>
+        <Fields Id="UnitText" Type="Text"/>
+        <Fields Id="Availability" Type="Text"/>
+        <Fields Id="Special" Type="Text"/>
+        <Fields Id="PreviewSheet" Type="Image"/>
+        <Fields Id="HiredImage" Type="Image"/>
+        <Fields Id="NoCreditImage" Type="Image"/>
+        <Fields Id="ButtonIcon" Type="Image"/>
+        <Fields Id="UnlockMission" Type="String"/>
+        <Fields Id="SpawnDelay" Type="Int" EditorColumn="6"/>
+        <Fields Id="Respawn" Type="Int" EditorColumn="7"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="JimRaynor">
+            <Int Int="1">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/JimRaynor_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/JimRaynor_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="0">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="JimRaynor">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="RaynorMarinePortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_marinemercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_marinemercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-MarineRaynor.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="180">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="60">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="HankHarnack">
+            <Int Int="2">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/HankHarnack_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/HankHarnack_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="35000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="HankHarnack">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="HankHarnackPortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_firebatmercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_firebatmercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-FirebatMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="240">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="90">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="Rattlesnake">
+            <Int Int="3">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Rattlesnake_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="45000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="Rattlesnake">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="RattlesnakePortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_maraudermercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_maraudermercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-MarauderMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="300">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="90">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="ED067">
+            <Int Int="4">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/ED067_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/ED067_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="60000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="ED067">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="PortraitED067">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_goliathmercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_goliathmercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-GoliathMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="360">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="120">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="SgtHammer">
+            <Int Int="5">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/SgtHammer_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/SgtHammer_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="90000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="SgtHammer">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="SgtHammerPortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_siegetankmercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_siegetankmercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="420">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="150">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="Cabal">
+            <Int Int="6">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/Cabal_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Cabal_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="100000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="CabalFighter">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="CabalFighterPortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_vikingmercenaryfighterportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_vikingmercenaryfighterportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="300">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="120">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="Freyja">
+            <Int Int="7">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/Freyja_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/Freyja_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="125000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="Freyja">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="PortraitFreyja">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_bansheemercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_bansheemercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\BTN-Unit-Terran-BansheeMercenary.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="420">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="150">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+        <Instances Id="DukesRevenge">
+            <Int Int="8">
+                <Field Id="Contract"/>
+            </Int>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_UnitText">
+                <Field Id="UnitText"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Availability">
+                <Field Id="Availability"/>
+            </Text>
+            <Text Text="UserData/MercHeroes/DukesRevenge_Special">
+                <Field Id="Special"/>
+            </Text>
+            <Int Int="175000">
+                <Field Id="Cost"/>
+            </Int>
+            <GameLink GameLink="DukesRevengeHero">
+                <Field Id="Unit"/>
+            </GameLink>
+            <GameLink GameLink="DukesRevengePortrait">
+                <Field Id="PortraitModel"/>
+            </GameLink>
+            <Image Image="Assets\Textures\ui_mercenaries_battlecruisermercenaryportrait_hired.dds">
+                <Field Id="HiredImage"/>
+            </Image>
+            <Image Image="Assets\Textures\ui_mercenaries_battlecruisermercenaryportrait_nocredit.dds">
+                <Field Id="NoCreditImage"/>
+            </Image>
+            <Image Image="Assets\Textures\wireframe-terran-battlecruiserc.dds">
+                <Field Id="ButtonIcon"/>
+            </Image>
+            <Int Int="540">
+                <Field Id="SpawnDelay"/>
+            </Int>
+            <Int Int="240">
+                <Field Id="Respawn"/>
+            </Int>
+        </Instances>
+    </CUser>
+</Catalog>

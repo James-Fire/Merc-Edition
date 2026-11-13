@@ -2664,4 +2664,172 @@
         <TechPurchaseCamera value="TechPurchaseReaper"/>
         <UnitGlossaryCamera value="Star2CameraLow04"/>
     </CModel>
+    <!-- ===== Brood War skins (ported from SC Evo SCEvo_Assets / SCEvo_Core) ===== -->
+    <!-- Marine -->
+    <CModel id="MarineSCBW" parent="MarineBase">
+        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MarineSCBW@Death" parent="MarineDeathBase">
+        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW@Death.m3"/>
+        <Radius value="0.375000"/>
+    </CModel>
+    <CModel id="MarineSCBW@DeathAcid" parent="MarineDeathAcidBase">
+        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW@DeathAcid.m3"/>
+        <Radius value="0.375000"/>
+    </CModel>
+    <CModel id="MarineSCBW@DeathBlast" parent="MarineDeathBlastBase">
+        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW@DeathBlast.m3"/>
+        <Radius value="0.375000"/>
+    </CModel>
+    <CModel id="MarineSCBW@DeathFire" parent="MarineDeathFireBase">
+        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW@DeathFire.m3"/>
+        <Radius value="0.375000"/>
+    </CModel>
+    <CModel id="MarineSCBW@DeathRagdoll" parent="MarineDeathRagdollBase">
+        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW@DeathRagdoll.m3"/>
+        <Radius value="0.375000"/>
+    </CModel>
+    <CModel id="MarineSCBW@DeathEviscerate" parent="MarineDeathEviscerateBase">
+        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW@Death.m3"/>
+        <Radius value="0.375000"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="MarineSCBW@Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Portraits\Terran\MarineSCBW@Portrait\MarinePortraitSCBW.m3"/>
+        <Lighting value="MarineSCBW@Portrait"/>
+    </CModel>
+    <!-- Barracks (ground + flying share the Barracks model) -->
+    <CModel id="BarracksSCBW" parent="BarracksBase">
+        <Model value="Assets\Buildings\Terran\BarracksSCBW\BarracksSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="BarracksSCBW@Death" parent="BarracksDeathBase">
+        <Model value="Assets\Buildings\Terran\BarracksSCBW\BarracksSCBW@Death.m3"/>
+    </CModel>
+    <CModel id="BarracksSCBW@FlyDeath" parent="BarracksFlyDeathBase">
+        <Model value="Assets\Buildings\Terran\BarracksSCBW\BarracksSCBW@FlyDeath.m3"/>
+    </CModel>
+    <CModel id="BarracksSCBW@Placement" parent="BarracksPlacementBase">
+        <Model value="Assets\Buildings\Terran\BarracksSCBW\BarracksSCBW@Placement.m3"/>
+        <LowQualityModel value="BarracksSCBW"/>
+    </CModel>
+    <CModel id="BarracksSCBW@Build" parent="BarracksBuildBase">
+        <Model value="Assets\Buildings\Terran\TerranBuildSCBW\TerranBuildSCBW.m3"/>
+        <ScaleMax value="0.960000,0.960000,0.960000"/>
+        <ScaleMin value="0.960000,0.960000,0.960000"/>
+    </CModel>
+    <CModel id="BarracksSCBW@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_BarracksSCBW\Splat_BarracksSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.880000,0.880000,0.880000"/>
+        <ScaleMin value="0.880000,0.880000,0.880000"/>
+    </CModel>
+    <!-- Supply Depot (raised + lowered; the BW model has no lower/raise animation) -->
+    <CModel id="SupplyDepotSCBW" parent="SupplyDepotBase">
+        <Model value="Assets\Buildings\Terran\SupplyDepotSCBW\SupplyDepotSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="1.400000"/>
+        <ShadowRadius value="1.400000"/>
+    </CModel>
+    <CModel id="SupplyDepotSCBW@Death" parent="SupplyDepotDeathBase">
+        <Model value="Assets\Buildings\Terran\SupplyDepotSCBW\SupplyDepotSCBW@Death.m3"/>
+        <Events index="0">
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events index="1">
+            <Anim value="Death,01"/>
+            <Name value="Terran_SnowMission_Explosion"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events index="2">
+            <Anim value="Death,01"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.150000"/>
+        </Events>
+        <Events index="3" removed="1"/>
+        <VariationCount value="2"/>
+    </CModel>
+    <CModel id="SupplyDepotSCBW@Placement" parent="SupplyDepotPlacementBase">
+        <Model value="Assets\Buildings\Terran\SupplyDepotSCBW\SupplyDepotSCBW@Placement.m3"/>
+        <LowQualityModel value="SupplyDepotSCBW"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="SupplyDepotSCBW@Build" parent="SupplyDepotBuildBase">
+        <ScaleMax value="0.550000,0.550000,0.550000"/>
+        <ScaleMin value="0.550000,0.550000,0.550000"/>
+    </CModel>
+    <CModel id="SupplyDepotSCBW@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_SupplyDepotSCBW\Splat_SupplyDepotSCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <!-- SCEvo remastered minerals (ResourceMineralsSCBW set, not the BW Classic set). Stock ids overridden: base = @Low LOD, *High = full model (Ultra/Extreme) -->
+    <CModel id="MineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Low\ResourceMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="MineralField450">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Low\ResourceMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="MineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Low\ResourceMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="MineralFieldHigh">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW\ResourceMineralsSCBW.m3"/>
+    </CModel>
+    <CModel id="HighYieldMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Low\ResourceHighYieldMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="HighYieldMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Low\ResourceHighYieldMineralsSCBW@Low.m3"/>
+    </CModel>
+    <CModel id="HighYieldMineralFieldHigh">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW\ResourceHighYieldMineralsSCBW.m3"/>
+    </CModel>
+    <CModel id="LabMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Lab\ResourceMineralsSCBW@Lab.m3"/>
+    </CModel>
+    <CModel id="LabMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Lab\ResourceMineralsSCBW@Lab.m3"/>
+    </CModel>
+    <CModel id="BattleStationMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@BattleStation\ResourceMineralsSCBW@BattleStation.m3"/>
+    </CModel>
+    <CModel id="BattleStationMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@BattleStation\ResourceMineralsSCBW@BattleStation.m3"/>
+    </CModel>
+    <CModel id="PurifierMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Purifier\ResourceMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="PurifierMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceMineralsSCBW@Purifier\ResourceMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="PurifierRichMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Purifier\ResourceHighYieldMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="PurifierRichMineralField750">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldMineralsSCBW@Purifier\ResourceHighYieldMineralsSCBW@Purifier.m3"/>
+    </CModel>
+    <CModel id="CarryMineralFieldMinerals">
+        <Model value="Assets\Buildings\Resources\ResourceCrystalSCBW\ResourceCrystalSCBW.m3"/>
+    </CModel>
+    <CModel id="CarryHighYieldMineralFieldMinerals">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldCrystalSCBW\ResourceHighYieldCrystalSCBW.m3"/>
+    </CModel>
+    <!-- Geyser: stock Ex2 asset (same data change SCEvo Core makes); High also pointed at it so Ultra/Extreme match -->
+    <CModel id="VespeneGeyser">
+        <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
+    </CModel>
+    <CModel id="VespeneGeyserHigh">
+        <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
+    </CModel>
 </Catalog>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+    <Frame type="Frame" name="BetaArmoryPanelTemplate">
+        <Anchor relative="$parent"/>
+
+        <Frame type="Frame" name="BlackoutImage">
+            <Anchor relative="$parent"/>
+            
+            <AcceptsMouse val="True"/>
+            <Color val="000000"/>
+            <Alpha val="150"/>
+        </Frame>
+
+        <Frame type="Image" name="BlackFill">
+            <Anchor relative="$ArmoryPanelBackground/InnerLineImage" offset="10"/>
+
+            <Color val="000000"/>
+        </Frame>
+
+        <Frame type="Frame" name="CompositeArmoryPanel">
+            <Anchor side="Left" relative="$ArmoryPanelBackground/InnerLineImage" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$ArmoryPanelBackground/InnerLineImage" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$ArmoryPanelBackground/InnerLineImage" pos="Mid" offset="0"/>
+            <Anchor side="Top" relative="$ArmoryPanelBackground/InnerLineImage" pos="Mid" offset="0"/>
+            
+            <Frame type="Image" name="VideoPlayer">
+                <Anchor relative="$parent/GlassOverlay"/>
+
+                <Texture val="Assets/Textures/UI_BetaArmory_TestPreview.dds"/>
+            </Frame>
+
+            <Frame type="Image" name="GlassOverlay">
+                <Anchor side="Left" relative="$parent/VideoFrame" pos="Min" offset="17"/>
+                <Anchor side="Right" relative="$parent/VideoFrame" pos="Max" offset="-25"/>
+                <Anchor side="Top" relative="$parent/VideoFrame" pos="Min" offset="22"/>
+                <Anchor side="Bottom" relative="$parent/VideoFrame" pos="Max" offset="-19"/>
+
+                <Texture val="Assets/Textures/UI_BetaArmory_GlassOverlay.dds"/>
+            </Frame>
+
+            <Frame type="Image" name="VideoFrame">
+                <Anchor relative="$parent/VideoFrameAnchor"/>
+
+                <Texture val="Assets/Textures/ui_battlereport_metalframe_inner.dds"/>
+                <TextureType val="Border"/>
+            </Frame>
+
+            <Frame type="Image" name="RenderedElementsBackground">
+                <Anchor relative="$parent"/>
+
+                <Texture val="Assets/Textures/UI_BetaArmory_Composite.dds"/>
+            </Frame>
+            
+            <Width val="1240"/>
+            <Height val="848"/>
+
+            <Frame type="Frame" name="TechInfoFrameAnchor">
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+
+                <Width val="614"/>
+                <Height val="396"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechCreditsPanelAnchor">
+                <Anchor side="Bottom" relative="$parent/TechInfoFrameAnchor" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent/TechInfoFrameAnchor" pos="Min" offset="0"/>
+
+                <Width val="265"/>
+                <Height val="88"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechCostPanelAnchor">
+                <Anchor side="Bottom" relative="$parent/TechInfoFrameAnchor" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent/TechInfoFrameAnchor" pos="Max" offset="0"/>
+
+                <Width val="265"/>
+                <Height val="88"/>
+            </Frame>
+
+            <Frame type="Frame" name="VideoFrameAnchor">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-36"/>
+
+                <Height val="390"/>
+                <Width val="617"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechColumnAnchor1">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="7"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="4"/>
+
+                <Width val="165"/>
+                <Height val="339"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechColumnAnchor2">
+                <Anchor side="Left" relative="$sibling-1" pos="Max" offset="13"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="4"/>
+
+                <Width val="165"/>
+                <Height val="339"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechColumnAnchor3">
+                <Anchor side="Left" relative="$sibling-1" pos="Max" offset="12"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="4"/>
+
+                <Width val="165"/>
+                <Height val="339"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechColumnAnchor4">
+                <Anchor side="Left" relative="$sibling-1" pos="Max" offset="12"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="4"/>
+
+                <Width val="165"/>
+                <Height val="339"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechColumnAnchor5">
+                <Anchor side="Left" relative="$sibling-1" pos="Max" offset="14"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="4"/>
+
+                <Width val="165"/>
+                <Height val="339"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechColumnAnchor6">
+                <Anchor side="Left" relative="$sibling-1" pos="Max" offset="13"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="4"/>
+
+                <Width val="165"/>
+                <Height val="339"/>
+            </Frame>
+
+            <Frame type="Frame" name="TechColumnAnchor7">
+                <Anchor side="Left" relative="$sibling-1" pos="Max" offset="11"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="4"/>
+
+                <Width val="165"/>
+                <Height val="339"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="BackgroundFrame" template="StandardTemplates/StandardLargePanelTemplate">
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="70"/>
+
+            <Width val="1385"/>
+            <Height val="1000"/>
+            <Handle val="ArmoryPanelBackground"/>
+
+            <Frame type="Image" name="LeftWireImage">
+                <Anchor side="Bottom" relative="$parent" pos="Min" offset="72"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="210"/>
+                <Texture val="@@UI/CampaignPanelLeftWire" layer="0"/>
+                <RequiredDefines val="Terr"/>
+                <Unclipped val="True"/>
+            </Frame>
+
+            <Frame type="Image" name="RightWireImage">
+                <Anchor side="Bottom" relative="$parent" pos="Min" offset="72"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-210"/>
+                <Texture val="@@UI/CampaignPanelRightWire" layer="0"/>
+                <RequiredDefines val="Terr"/>
+                <Unclipped val="True"/>
+            </Frame>
+
+            <Frame type="Image" name="TitleBackgroundImage">
+                <Anchor side="Bottom" relative="$parent" pos="Min" offset="60"/>
+                <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+                <Texture val="@@UI/CampaignPanelTitleBackground" layer="0"/>
+                <Unclipped val="True"/>
+            </Frame>
+
+            <Frame type="Label" name="TitleLabel">
+                <Anchor side="Top" relative="$parent/TitleBackgroundImage" pos="Min" offset="80"/>
+                <Anchor side="Left" relative="$parent/TitleBackgroundImage" pos="Min" offset="10"/>
+                <Anchor side="Right" relative="$parent/TitleBackgroundImage" pos="Max" offset="-10"/>
+                <Style val="CampaignPanelTitle"/>
+                <Alpha val="120"/>
+                <RenderPriority val="560"/>
+                <Unclipped val="True"/>
+                <Text val="@Unit/Name/Armory"/>
+            </Frame>
+
+            <Frame type="Image" name="LeftConnectorImage">
+                <Anchor side="Bottom" relative="$parent/TopLeftCornerImage" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="50"/>
+                <Texture val="@@UI/CampaignPanelLeftConnector" layer="0"/>
+                <RenderPriority val="550"/>
+                <Unclipped val="True"/>
+            </Frame>
+
+            <Frame type="Image" name="RightConnectorImage">
+                <Anchor side="Bottom" relative="$parent/TopRightCornerImage" pos="Max" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-20"/>
+                <Texture val="@@UI/CampaignPanelRightConnector" layer="0"/>
+                <RenderPriority val="550"/>
+                <Unclipped val="True"/>
+            </Frame>
+
+            <Frame type="Image" name="InnerLineImage">
+                <Visible val="False"/>
+            </Frame>
+
+            <Frame type="Image" name="GradientImage">
+                <Visible val="False"/>
+            </Frame>
+
+            <Frame type="Image" name="BlackMaskImage">
+                <Visible val="False"/>
+            </Frame>
+        </Frame>
+
+        <!-- States -->
+
+        <StateGroup name="PurchaseState">
+            <DefaultState val="Empty"/>
+
+            <State name="Empty">
+                <When type="AnimationState" frame="$this" PurchaseState="Empty"/>
+
+                <Action type="SetProperty" frame="$this/TechCostLabel" Visible="False"/>
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel" Visible="False"/>
+                <Action type="SetProperty" frame="$this/EmptyUpgradeLabel"  Visible="True"/>
+            </State>
+
+            <State name="Locked">
+                <When type="AnimationState" frame="$this" PurchaseState="Locked"/>
+
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Enabled="False"/>
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Text="Locked"/>
+            </State>
+
+            <State name="Available">
+                <When type="AnimationState" frame="$this" PurchaseState="Available"/>
+
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Enabled="True"/>
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Text="Purchase"/>
+                <Action type="SetProperty" frame="$this/TechCostLabel" Style="BetaArmory_Credits_Available"/>
+            </State>
+
+            <State name="Purchased">
+                <When type="AnimationState" frame="$this" PurchaseState="Purchased"/>
+
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Enabled="False"/>
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Text="Purchased"/>
+                <Action type="SetProperty" frame="$this/TechCostLabel" Style="BetaArmory_Credits_Purchased"/>   
+            </State>
+
+            <State name="Unaffordable">
+                <When type="AnimationState" frame="$this" PurchaseState="Unaffordable"/>
+
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Enabled="False"/>
+                <Action type="SetProperty" frame="$this/TechPurchaseInfoPanel/TechPurchaseButton" Text="Unaffordable"/>
+                <Action type="SetProperty" frame="$this/TechCostLabel" Style="BetaArmory_Credits_Unaffordable"/>
+            </State>
+        </StateGroup>
+
+        <!-- Tech Category Panels -->
+
+        <Frame type="Frame" name="TechArmyCategoryPanel1" template="Merc_BetaArmoryTemplates/TechArmyCategoryPanelTemplate">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechColumnAnchor1"/>
+        </Frame>
+
+        <Frame type="Frame" name="TechArmyCategoryPanel2" template="Merc_BetaArmoryTemplates/TechArmyCategoryPanelTemplate">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechColumnAnchor2"/>
+        </Frame>
+
+        <Frame type="Frame" name="TechArmyCategoryPanel3" template="Merc_BetaArmoryTemplates/TechArmyCategoryPanelTemplate">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechColumnAnchor3"/>
+        </Frame>
+
+        <Frame type="Frame" name="TechArmyCategoryPanel4" template="Merc_BetaArmoryTemplates/TechArmyCategoryPanelTemplate">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechColumnAnchor4"/>
+        </Frame>
+
+        <Frame type="Frame" name="TechArmyCategoryPanel5" template="Merc_BetaArmoryTemplates/TechArmyCategoryPanelTemplate">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechColumnAnchor5"/>
+        </Frame>
+
+        <Frame type="Frame" name="TechArmyCategoryPanel6" template="Merc_BetaArmoryTemplates/TechArmyCategoryPanelTemplate">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechColumnAnchor6"/>
+        </Frame>
+
+        <Frame type="Frame" name="TechArmyCategoryPanel7" template="Merc_BetaArmoryTemplates/TechArmyCategoryPanelTemplate">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechColumnAnchor7"/>
+        </Frame>
+
+        <!-- Tab Control -->
+
+        <Frame type="TabControl" name="TabControl">
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule1/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule1/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule2/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule2/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule3/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule3/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule4/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule4/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule5/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel1/ArmoryCategoryModule5/ArmyUpgrade2"/>
+
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule1/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule1/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule2/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule2/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule3/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule3/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule4/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule4/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule5/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel2/ArmoryCategoryModule5/ArmyUpgrade2"/>
+
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule1/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule1/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule2/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule2/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule3/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule3/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule4/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule4/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule5/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel3/ArmoryCategoryModule5/ArmyUpgrade2"/>
+
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule1/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule1/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule2/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule2/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule3/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule3/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule4/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule4/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule5/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel4/ArmoryCategoryModule5/ArmyUpgrade2"/>
+
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule1/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule1/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule2/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule2/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule3/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule3/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule4/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule4/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule5/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule5/ArmyUpgrade2"/>
+
+            <SelectedIndex val="200"/>
+        </Frame>
+
+        <!-- Tech Purchase Info Panel -->
+
+        <Frame type="Label" name="TechCreditsAvailableLabel">
+            <Anchor side="Left" relative="$parent/CompositeArmoryPanel/TechCreditsPanelAnchor" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent/CompositeArmoryPanel/TechCreditsPanelAnchor" pos="Mid" offset="0"/>
+            <Anchor side="Top" relative="$parent/CompositeArmoryPanel/TechCreditsPanelAnchor" pos="Min" offset="8"/>
+
+            <Style val="BetaArmory_CreditsHeading"/>
+            <Text val="@UI/PurchasePanelCreditsHeading"/>
+        </Frame>
+
+        <Frame type="Label" name="TechCreditsLabel">
+            <Anchor side="Left" relative="$parent/TechCreditsAvailableLabel" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent/TechCreditsAvailableLabel" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/CompositeArmoryPanel/TechCreditsPanelAnchor" pos="Max" offset="-24"/>
+
+            <Style val="BetaArmory_Credits"/>
+            <Text val="$120,000"/>
+        </Frame>
+
+        <Frame type="Label" name="TechCreditsCostLabel">
+            <Anchor side="Left" relative="$parent/CompositeArmoryPanel/TechCostPanelAnchor" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent/CompositeArmoryPanel/TechCostPanelAnchor" pos="Mid" offset="0"/>
+            <Anchor side="Top" relative="$parent/CompositeArmoryPanel/TechCostPanelAnchor" pos="Min" offset="8"/>
+
+            <Style val="BetaArmory_CreditsHeading"/>
+            <Text val="@UI/PurchasePanelCostHeading"/>
+        </Frame>
+
+        <Frame type="Label" name="TechCostLabel">
+            <Anchor side="Left" relative="$parent/TechCreditsCostLabel" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent/TechCreditsCostLabel" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/CompositeArmoryPanel/TechCostPanelAnchor" pos="Max" offset="-24"/>
+
+            <Style val="BetaArmory_Credits"/>
+            <Text val="$60,000"/>
+        </Frame>
+
+        <Frame type="Frame" name="TechPurchaseInfoPanel">
+            <Anchor relative="$parent/CompositeArmoryPanel/TechInfoFrameAnchor"/>
+
+            <Visible val="True"/>
+
+            <Frame type="Label" name="TechNameLabel">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="18"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-15"/>
+
+                <Text val="Bunker Shrike Turret"/>
+                <Style val="PurchasePanelSelectedPurchaseItemName"/>
+            </Frame>
+
+            <Frame type="Label" name="TechBenefitsLabel">
+                <Anchor side="Top" relative="$parent/TechNameLabel" pos="Max" offset="8"/>
+                <Anchor side="Left" relative="$parent/TechNameLabel" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent/TechNameLabel" pos="Max" offset="0"/>
+
+                <Style val="BetaArmory_InfoItemUpgrade"/>
+                <Text val="Increases damage by 10%"/>
+            </Frame>
+
+            <Frame type="Label" name="TechDescriptionLabel">
+                <Anchor side="Top" relative="$parent/TechBenefitsLabel" pos="Max" offset="8"/>
+                <Anchor side="Left" relative="$parent/TechNameLabel" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent/TechNameLabel" pos="Max" offset="0"/>
+
+                <Style val="BetaArmory_InfoItemDescription"/>
+                <Text val="Description_placeholder_pls"/>
+            </Frame>
+
+            <Frame type="Button" name="TechPurchaseButton" template="Merc_BetaArmoryTemplates/TechPurchaseButtonTemplate">
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-20"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="20"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Label" name="EmptyUpgradeLabel">
+            <Anchor side="Top" relative="$parent/TechPurchaseInfoPanel" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/TechPurchaseInfoPanel" pos="Mid" offset="0"/>
+            <Anchor side="Left" relative="$parent/TechPurchaseInfoPanel" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent/TechPurchaseInfoPanel" pos="Mid" offset="0"/>
+
+            <Style val="PurchasePanelSelectedPurchaseItemName"/>
+            <Text val="Select an upgrade"/>
+            <Visible val="False"/>
+        </Frame>
+
+        <Frame type="Button" name="CloseButton">
+            <Anchor side="Right" relative="$ArmoryPanelBackground" pos="Max" offset="-40"/>
+            <Anchor side="Bottom" relative="$ArmoryPanelBackground" pos="Max" offset="-20"/>
+
+            <Width val="250"/>
+            <Height val="130"/>
+
+            <NormalImage val="NormalImage"/>
+            <HoverImage val="HoverImage"/>
+            <HitTestFrame val="HitTestFrame"/>
+
+            <Frame type="Frame" name="HitTestFrame">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-42"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="56"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-34"/>
+            </Frame>
+
+            <Frame type="Image" name="NormalImage">
+                <Anchor relative="$parent"/>
+                
+                <Texture val="Assets\Textures\ui_button_popup_right_normalpressed_terran.dds"/>
+                <StateCount val="2"/>
+                <TextureType val="EndCap"/>
+            </Frame>
+
+            <Frame type="Image" name="HoverImage">
+                <Anchor relative="$parent"/>
+
+                <Texture val="Assets\Textures\ui_button_popup_right_normaloverpressedover_terran.dds"/>
+                <StateCount val="2"/>
+                <TextureType val="EndCap"/>
+            </Frame>
+
+            <Frame type="Label" name="Label">
+                <Anchor relative="$parent/HitTestFrame"/>
+
+                <Style val="StoryModePlayBackButton"/>
+                <Text val="@UI/Exit"/>
+            </Frame>
+        </Frame>
+
+        <!-- Blocks UI interactions during the purchase animation -->
+        <Frame type="Frame" name="InputBlocker">
+            <Anchor relative="$parent"/>
+            <AcceptsMouse val="True"/>
+            <RenderPriority val="1000"/>
+            <Visible val="False"/>
+        </Frame>
+    </Frame>
+
+    <!--Frame type="Frame" name="GameUI/UIContainer/FullscreenUpperContainer" file="GameUI">
+        <Frame type="Frame" name="Frame" template="Merc_BetaArmoryPanel/BetaArmoryPanelTemplate"></Frame>
+    </Frame-->
+</Desc>

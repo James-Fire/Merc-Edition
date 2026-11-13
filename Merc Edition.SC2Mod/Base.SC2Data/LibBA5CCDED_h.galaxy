@@ -3,6 +3,40 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: Merc Edition Data
 //--------------------------------------------------------------------------------------------------
+// Constants
+const int libBA5CCDED_gv_mU_ArmoryTechCategories = 7;
+const int libBA5CCDED_gv_mU_ArmoryTechUnits = 5;
+const int libBA5CCDED_gv_mU_ArmoryTechButtons = 2;
+
+// Structures
+struct libBA5CCDED_gs_MU_Armory {
+    int lv_armoryDialog;
+    int lv_armoryPanel;
+    int lv_videoPlayer;
+    int lv_creditsLabel;
+    int lv_costLabel;
+    int lv_info_NameLabel;
+    int lv_info_ListLabel;
+    int lv_info_DescLabel;
+    int lv_techPurchaseButton;
+    int lv_closeButton;
+    int[libBA5CCDED_gv_mU_ArmoryTechCategories + 1] lv_armyCategory_Panel;
+    int[libBA5CCDED_gv_mU_ArmoryTechCategories + 1] lv_armyCategory_NameLabel;
+    int[libBA5CCDED_gv_mU_ArmoryTechCategories + 1][libBA5CCDED_gv_mU_ArmoryTechUnits + 1] lv_armyCategory_UnitModule;
+    int[libBA5CCDED_gv_mU_ArmoryTechCategories + 1][libBA5CCDED_gv_mU_ArmoryTechUnits + 1][libBA5CCDED_gv_mU_ArmoryTechButtons + 1] lv_armyCategory_UpgradeButton;
+    int[libBA5CCDED_gv_mU_ArmoryTechCategories + 1][libBA5CCDED_gv_mU_ArmoryTechUnits + 1] lv_armyCategory_UnitIcon;
+    int[libBA5CCDED_gv_mU_ArmoryTechCategories + 1][libBA5CCDED_gv_mU_ArmoryTechUnits + 1][libBA5CCDED_gv_mU_ArmoryTechButtons + 1] lv_armyCategory_UpgradeIcon;
+    string[libBA5CCDED_gv_mU_ArmoryTechCategories + 1][libBA5CCDED_gv_mU_ArmoryTechUnits + 1][libBA5CCDED_gv_mU_ArmoryTechButtons + 1] lv_armyCategory_SlotUpgrade;
+    int lv_used_Category;
+    int lv_used_Unit;
+    int lv_used_Upgrade;
+    string lv_selectedUpgrade;
+    int lv_selected_Category;
+    int lv_selected_Unit;
+    int lv_selected_Upgrade;
+    int lv_inputBlocker;
+};
+
 // Variable Declarations
 bank libBA5CCDED_gv_eventBank;
 string libBA5CCDED_gv_eventString;
@@ -19,6 +53,9 @@ bool libBA5CCDED_gv_myWave;
 bool libBA5CCDED_gv_easterEggActive;
 point libBA5CCDED_gv_hillRespawnPoint;
 timer libBA5CCDED_gv_hillRespawnTimer;
+libBA5CCDED_gs_MU_Armory libBA5CCDED_gv_mU_Armory;
+int libBA5CCDED_gv_mU_TestCredits;
+bool libBA5CCDED_gv_mU_PurchaseInProgress;
 
 // Function Declarations
 void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition);
@@ -26,9 +63,30 @@ void libBA5CCDED_gf_RescueZeus (unit lp_zeus);
 void libBA5CCDED_gf_MercUnitReplace ();
 void libBA5CCDED_gf_WillEmail (text lp_emailText);
 void libBA5CCDED_gf_GiveResearch (unit lp_unitPoint, int lp_researchCount, int lp_researchType);
+unit libBA5CCDED_gf_PM_NexusBestWorkerRallyMineral (unit lp_nexus);
+void libBA5CCDED_gf_SetWorkerRallyPointforNexus (unit lp_nexus);
+void libBA5CCDED_gf_SetWorkerRallyPointsPlayersNexuses (int lp_player);
+bool libBA5CCDED_gf_IsTownBuilding (unit lp_unit);
+void libBA5CCDED_gf_StartingWorkersAutoHarvest (int lp_player, region lp_mineralRegion, region lp_gasRegion);
 void libBA5CCDED_gf_Taldarimify (playergroup lp_players);
 void libBA5CCDED_gf_Ihanriiify (playergroup lp_players);
 void libBA5CCDED_gf_MidasTouched (playergroup lp_players);
+text libBA5CCDED_gf_MU_FormatCredits (int lp_value);
+void libBA5CCDED_gf_MU_HookupUI ();
+void libBA5CCDED_gf_MU_UpdateArmoryPanel ();
+void libBA5CCDED_gf_MU_DisplayArmoryPanel ();
+bool libBA5CCDED_gf_MU_UsedUpgradeButton (int lp_dialogItem);
+string libBA5CCDED_gf_MU_UsedUpgrade (int lp_dialogItem);
+void libBA5CCDED_gf_MU_SetInfoPanel (string lp_upgrade);
+int libBA5CCDED_gf_MU_UpgradeTech (string lp_upgrade);
+int libBA5CCDED_gf_MU_UpgradeStatus (string lp_upgrade);
+int libBA5CCDED_gf_MU_UpgradeCost (string lp_upgrade);
+bool libBA5CCDED_gf_MU_UpgradeIsBuyable (string lp_upgrade);
+bool libBA5CCDED_gf_MU_UpgradeIsHidden (string lp_upgrade);
+bool libBA5CCDED_gf_MU_UnitHasVisibleUpgrade (string lp_unit);
+bool libBA5CCDED_gf_MU_UpgradeIsPurchased (string lp_upgrade);
+void libBA5CCDED_gf_MU_SetUpgradePurchased (string lp_upgrade);
+void libBA5CCDED_gf_SetBriefingDisplayUnit (int lp_mission, string lp_unit);
 
 // Trigger Declarations
 trigger libBA5CCDED_gt_Gonnaneedabiggerboat;
@@ -50,6 +108,7 @@ trigger libBA5CCDED_gt_InitMercEditionUpgrade;
 trigger libBA5CCDED_gt_InitPassiveUpgrades;
 trigger libBA5CCDED_gt_InitUnitReplace;
 trigger libBA5CCDED_gt_InitTech;
+trigger libBA5CCDED_gt_InitBriefingUnits;
 trigger libBA5CCDED_gt_MissionDirectives;
 trigger libBA5CCDED_gt_DepositMoney;
 trigger libBA5CCDED_gt_ZergTerranGenericDifficulty;
@@ -78,6 +137,11 @@ trigger libBA5CCDED_gt_HillRespawn;
 trigger libBA5CCDED_gt_SpawnInfested;
 trigger libBA5CCDED_gt_NightmarePlusEvent;
 trigger libBA5CCDED_gt_NightmarePlusInitial;
+trigger libBA5CCDED_gt_MU_Init;
+trigger libBA5CCDED_gt_MU_OpenArmory;
+trigger libBA5CCDED_gt_MU_UpgradeButtonPressed;
+trigger libBA5CCDED_gt_MU_PurchaseButtonPressed;
+trigger libBA5CCDED_gt_MU_CloseButtonPressed;
 
 // Library Initialization
 void libBA5CCDED_InitVariables ();

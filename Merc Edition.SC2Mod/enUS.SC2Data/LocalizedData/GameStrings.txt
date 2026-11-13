@@ -1141,6 +1141,7 @@ Param/Value/lib_BA5CCDED_810267DE=Init...Tech
 Param/Value/lib_BA5CCDED_8DD58E43=The cash flow from these Tosh contracts is relentless, and while Terrazine is a highly sought-after commodity in both legitimate and illicit markets, our focus isn't on acquiring it. The Protoss will attempt to thwart our operations by securing those locations, but if we let them locking down six of them, we can offload the research data for a substantial profit. After all, the scientists are willing to shell out big bucks for this type of information. Also Stetmann keeps going off about some gliders in the area, no idea what he is talking about but you may want to check around to see what he is talking about.
 Param/Value/lib_BA5CCDED_984C9EC5=Lava planets are a nightmare, much like those who believe that charging headfirst into an enemy stronghold when they hold the upper hand is a sound strategy. If we manage to take out one of the bases, whether it's the North or the South, it will create a substantial landing zone for reinforcements, allowing them to arrive with a greater chance of safety. There's even a possibility that they might compensate us for providing the optimal landing coordinates. 
 Param/Value/lib_BA5CCDED_A1E81C99=<c val="0000FF">+
+Param/Value/lib_BA5CCDED_ADE2C2DB=0
 Param/Value/lib_BA5CCDED_AE9D912E=<n/><n/>Graven Hill Log Entry 00867
 Param/Value/lib_BA5CCDED_AFDC2748=There's nothing I despise more than a mercenary who betrays their contract. Now, let's get to the point: I've got some news, both good and bad. The bad news is that I've uncovered a hidden feature in our mineral counter. Once we accumulate the required minerals to settle our debt with Mira, she'll siphon off some of our credits intended for upgrading our forces. The good news, while not exactly a silver lining, is that we can thwart Mira's schemes. I've managed to adjust the mineral threshold needed to pay her off, which means if we can eliminate Orlan's base before we hit that target, I can exploit a loophole in her finances and pilfer a significant chunk of her credits once the dust settles. And just so you know, this brilliant plan was all Matt's doing. 
 Param/Value/lib_BA5CCDED_BB341F98=The Mar Sara rebels are under heavy fire from the Dominion, and their desperation for help is evident. However, any aid we offer must come with a price. Until we secure a formal agreement, we must stay out of the fray. Keep a watchful eye on developments, but hold back on deploying any resources without a contract in place.<n/><n/>We've also picked up strange signals from the north, hinting at either a new danger or a potential advantage. While it's not critical to probe these readings immediately, doing so could yield valuable intelligence. Proceed with caution; the situation warrants attention, but prioritize our strategic interests. 
@@ -1350,6 +1351,248 @@ Upgrade/Name/UranusProtocol=Uranus Protocol
 Upgrade/Name/ViralFlammenwerfer=Viral Flammenwerfer
 Upgrade/Name/ZeusCount=Zeus Count
 Upgrade/Name/ZeusTankSecretUpgrade=ZeusTankSecretUpgrade
+UserData/MercArmoryUnits/Phantom_Name=Phantom
+UserData/MercArmoryUnits/Shadow_Name=Shadow
+UserData/MercArmoryUpgrades/ACV - Kel Morian Cutters_Benefits=- A.C.Vs repair twice as fast and reduces repair cost by 25%<n/>- A.C.Vs harvest 15 more minerals per trip<n/>- Can now repair Bunkers when bunkered inside
+UserData/MercArmoryUpgrades/ACV - Kel Morian Cutters_Description=These new Kel Morian Cutters allow the A.C.V to harvest more minerals and repair twice as fast making sure to keep allies in the battle longer for a greater chance at victory. 
+UserData/MercArmoryUpgrades/ACV - Kel Morian Cutters_Name=Kel Morian Cutters
+UserData/MercArmoryUpgrades/ACV - Micro Fusion Reactor_Benefits=- Multiple A.C.Vs can build structures that greatly reduces build time<n/>- Increases A.C.V base speed by 1.5
+UserData/MercArmoryUpgrades/ACV - Micro Fusion Reactor_Description=The delivery of the new ASP Micro Fusion Reactors mistakenly included SCV advanced computers, allowing A.C.Vs to work on the same structure simultaneously, resulting in faster base building.
+UserData/MercArmoryUpgrades/ACV - Micro Fusion Reactor_Name=Micro Fusion Reactor
+UserData/MercArmoryUpgrades/Adjudicator - Mobile Stockpile_Benefits=- Allows Adjudicators to build nuclear missiles<n/>- Builds nuclear missile 60% faster<n/>- Nuclear Missiles cost 50% less<n/>- Phantom or Shadow is still required to mark the target
+UserData/MercArmoryUpgrades/Adjudicator - Mobile Stockpile_Description=For the rebel on the go this nice add on gives your Adjudicators the ability to store multiple warheads for later use against you enemies.  Be warned though they can only be launched with the proper laser designation given to specialized teams.
+UserData/MercArmoryUpgrades/Adjudicator - Mobile Stockpile_Name=Mobile Stockpile
+UserData/MercArmoryUpgrades/Adjudicator - Swann Nanites_Benefits=- Nano repair no longer costs energy and repairs 50% faster<n/>- Can now repair two units at once along with structures<n/>- Irradiation now damages mechanical units.
+UserData/MercArmoryUpgrades/Adjudicator - Swann Nanites_Description=Swann's Advanced Nano Repair provides worry-free repair energy for mechanized allies, eliminating the need for SCVs or Mules. Purchased now, an extra repair beam is included for an additional 80k, ensuring the protection of your mechanized forces.
+UserData/MercArmoryUpgrades/Adjudicator - Swann Nanites_Name=Swann Nanites
+UserData/MercArmoryUpgrades/Agitator - Pliable Armor_Benefits=- Gains +1 armor and +2 Speed<n/>- When killed ignites area in flames causing fear to enemy units for 4 seconds<n/>- Transformation time decreased by 50%
+UserData/MercArmoryUpgrades/Agitator - Pliable Armor_Description=New armor enhancements have made it possible for our Agitator/Anarchist to gain addition speed while on the field at the cost of having slightly more armor. Warning may have adverse effects when unit is destroyed.
+UserData/MercArmoryUpgrades/Agitator - Pliable Armor_Name=Pliable Armor
+UserData/MercArmoryUpgrades/Agitator - Viral Flammenwerfer_Benefits=- Gains +15 damage to biological and light units<n/>- +3 range and doubles the width of attacks
+UserData/MercArmoryUpgrades/Agitator - Viral Flammenwerfer_Description=This upgrade adds a viral component to the Agitator/Anarchist attack, making sure to give it that extra bit of damage to anyone foolish enough to be within range.
+UserData/MercArmoryUpgrades/Agitator - Viral Flammenwerfer_Name=Viral Flammenwerfer
+UserData/MercArmoryUpgrades/Block B - Jet Pack Overdrive_Benefits=- Increases Block B movement speed by 1.75<n/>- Grants Block B the ability to fly for 10 seconds<n/>- Able to attack air units while in flight
+UserData/MercArmoryUpgrades/Block B - Jet Pack Overdrive_Description=Reapers are rumored to be part of a prisoner selection, but they have created unique upgrades using Mira Hans' one-of-a-kind Jet Packs. If we pay for these we can expect our Block B Reapers to literally rain hell from above.
+UserData/MercArmoryUpgrades/Block B - Jet Pack Overdrive_Name=Jet Pack Overdrive
+UserData/MercArmoryUpgrades/Block B - U-240 Rounds_Benefits=- Block B gains +1 range and +3 damage to light<n/>- Enemies killed detonate as a G-4 Clusterbomb<n/>- Does not damage friendly units
+UserData/MercArmoryUpgrades/Block B - U-240 Rounds_Description=U-240 Rounds, an experimental depleted uranium round with increased range and harder hitting power, were reportedly intended for Mira Han, with most rounds marked with her logo and a high explosive sign, though it's unclear if Matt has any involvement.
+UserData/MercArmoryUpgrades/Block B - U-240 Rounds_Name=U-240 Rounds
+UserData/MercArmoryUpgrades/Building - Adv. Orbital Command_Benefits=- Grants Scanner Sweep ability<n/>- Can call down additional supplies <n/>- Turns Command Centers into detectors
+UserData/MercArmoryUpgrades/Building - Adv. Orbital Command_Description=ATVX has partnered with ASP to develop an advanced satellite comlink that uses less energy, reveals unexplored areas, and can call down additional supplies. It also doubles as a sensor tower, detecting cloaked units.
+UserData/MercArmoryUpgrades/Building - Adv. Orbital Command_Name=Adv. Orbital Command
+UserData/MercArmoryUpgrades/Building - Swann's Suppression_Benefits=- All structures quickly repair themselves to 80% life<n/>- All structure fires are automatically put out
+UserData/MercArmoryUpgrades/Building - Swann's Suppression_Description=Swann has developed an all-in-one safety system that uses robotic drones to combat fires and repair damaged structures. These drones have been modified with suppression systems and mechanical appendages for more intricate repairs, but lack strong AI for full restoration.
+UserData/MercArmoryUpgrades/Building - Swann's Suppression_Name=Swann's Suppression
+UserData/MercArmoryUpgrades/Bunker - Chairs and A.C _Benefits=- Bunkers gain 4  additional slots<n/>- Bunkers gain +3 armor
+UserData/MercArmoryUpgrades/Bunker - Chairs and A.C _Description=The next generation of bunkers are fortified enough to withstand the onslaught of a Zerg Ultralisk.  However, what soldiers are most excited about is that these bunkers now come with chairs and air conditioning for comfortable reconnaissance, even in sweltering tropical zones. 
+UserData/MercArmoryUpgrades/Bunker - Chairs and A.C _Name=Chairs and A.C 
+UserData/MercArmoryUpgrades/Bunker - Neosteel Cup Holders_Benefits=- Bunkered units gain +3 sight and range
+UserData/MercArmoryUpgrades/Bunker - Neosteel Cup Holders_Description=A technician developed a bunker upgrade using the Wolfe Industry standard and a Neosteel frame, resulting in a more fortified and deadly bunker. He also complained about lack of cup storage, so cup holders are now available for all bunkers. 
+UserData/MercArmoryUpgrades/Bunker - Neosteel Cup Holders_Name=Neosteel Cup Holders
+UserData/MercArmoryUpgrades/Charon Dropship - M.A.S.H_Benefits=- Charon Dropship heals up to 3 targets at one<n/>- Heals units inside Dropship<n/>- Charon Dropship can train Skibis Angels directly on the battlefield for 25% less cost and training speed
+UserData/MercArmoryUpgrades/Charon Dropship - M.A.S.H_Description=The Medivac has been upgraded with a new AI for simultaneous healing, allowing for faster energy expenditure and ensuring troop survival. Additionally, each Medivac now comes with a mobile army surgical hospital wing for on-the-go training.
+UserData/MercArmoryUpgrades/Charon Dropship - M.A.S.H_Name=M.A.S.H
+UserData/MercArmoryUpgrades/Charon Dropship - Rapid Algorithms_Benefits=- Charon Dropship gains +2 movement speed<n/>- Gains Afterburner ability<n/>- Can now deploy units instantly
+UserData/MercArmoryUpgrades/Charon Dropship - Rapid Algorithms_Description=Bellerephon has developed a new gravity tube to reduce the risk of slow drop of troops on hostile battlefields. This tube can deploy medivac contents instantly, and with a slight addition, ASP was able to increase the speed of the medivacs equipped with this upgrade. Patent Pending on trial of Bellerephon v ASP
+UserData/MercArmoryUpgrades/Charon Dropship - Rapid Algorithms_Name=Rapid Algorithms
+UserData/MercArmoryUpgrades/Condor - Loose Engine Seals_Benefits=- Condor speed increased by +2<n/>- Upon death Condor explodes and leaves behind 3 Spider Mines
+UserData/MercArmoryUpgrades/Condor - Loose Engine Seals_Description=Swann's statement about unstable engine seals as a death trap for pilots is accurate. However, tinkering can make their last ride more dramatic by making the explosions more cinematic
+UserData/MercArmoryUpgrades/Condor - Loose Engine Seals_Name=Loose Engine Seals
+UserData/MercArmoryUpgrades/Condor - Raynor Special_Benefits=- Condors can now fire while moving<n/>- Condors can now jump gaps and leap up and down cliffs
+UserData/MercArmoryUpgrades/Condor - Raynor Special_Description=Raynor "accidentally" removed safety latches from the weapons and engine thrusters, causing our Condors to have a move and scoot launcher and the ability to perform wheelies in their spare time. This is the last time we allowed him near the tools when Swann is not present
+UserData/MercArmoryUpgrades/Condor - Raynor Special_Name=Raynor Special
+UserData/MercArmoryUpgrades/Copperhead - Confederate Reactor_Benefits=- Copperhead gains +1 range and movement speed<n/>- Gains +35% attack speed
+UserData/MercArmoryUpgrades/Copperhead - Confederate Reactor_Description=The original prototype Diamondbacks are rare and their power cells are no longer available on the market. However, a merc found a small stash of these cells in a abandoned warehouse and offered to supply them to us for a price.
+UserData/MercArmoryUpgrades/Copperhead - Confederate Reactor_Name=Confederate Reactor
+UserData/MercArmoryUpgrades/Copperhead - Reflective Armor_Benefits=- Copperhead takes 50% less damage from all sources<n/>- When taking damage weapon damage is increased by 25%
+UserData/MercArmoryUpgrades/Copperhead - Reflective Armor_Description=Scientists and engineers have developed a reflective armor upgrade for Copperhead , enhancing their life expectancy and firepower. This upgrade not only improves the armor's effectiveness against other Terran enemies but also enhances the hull's resistance to enemy fire.
+UserData/MercArmoryUpgrades/Copperhead - Reflective Armor_Name=Reflective Armor
+UserData/MercArmoryUpgrades/Devil Dog - Bearclaw Nozzles_Benefits=- Grants Jump Jet ability<n/>- Devil Dogs gain a 60% larger attack area
+UserData/MercArmoryUpgrades/Devil Dog - Bearclaw Nozzles_Description=Herc equipment makes for a great addition to our Devil Dog teams making them more deadly. Now for the icing on the cake, combining some covert ops equipment with them should make for an interesting combination.
+UserData/MercArmoryUpgrades/Devil Dog - Bearclaw Nozzles_Name=Bearclaw Nozzles
+UserData/MercArmoryUpgrades/Devil Dog - Chemical Plating_Benefits=- Increases Devil Dog armor by +3<n/>- Gains immunity to all acid based attacks
+UserData/MercArmoryUpgrades/Devil Dog - Chemical Plating_Description=Ever since the Zerg Baneling emerged the Kel Morians hated them. With their hatred brings us more protection, we can now treat our Devil Dogs to some nicer acid resistant armor to keep them alive longer on the field
+UserData/MercArmoryUpgrades/Devil Dog - Chemical Plating_Name=Chemical Plating
+UserData/MercArmoryUpgrades/Dusk Wing - ASP Rocket Pods_Benefits=- Dusk Wings gain 2 extra attacks<n/>- Dusk Wings gain the Shockwave Missile ability<n/>- Deal 25% more damage while cloaked
+UserData/MercArmoryUpgrades/Dusk Wing - ASP Rocket Pods_Description=Apex Security Partnership's ASP Rocket Pods are a revolutionary weapon that can be fired at point blank range without harming the pilot, demonstrating their commitment to customer satisfaction and the well-being of pilots.
+UserData/MercArmoryUpgrades/Dusk Wing - ASP Rocket Pods_Name=ASP Rocket Pods
+UserData/MercArmoryUpgrades/Dusk Wing - Shimmer Screen_Benefits=- Dusk Wings are now permanently cloaked<n/>- Dusk Wings dodge 15% of incoming damage while cloaked<n/>- Gain 25% extra speed while cloaked
+UserData/MercArmoryUpgrades/Dusk Wing - Shimmer Screen_Description=ASP and their scientists improved the Dominion version created by Wolfe Industries, adding a shimmer to stealth, resulting in a 15% decrease in damage taken
+UserData/MercArmoryUpgrades/Dusk Wing - Shimmer Screen_Name=Shimmer Screen
+UserData/MercArmoryUpgrades/Hammer Security - Ablative Scales_Benefits=- Hammer Security gains +75 life<n/>- Immune to splash damage
+UserData/MercArmoryUpgrades/Hammer Security - Ablative Scales_Description=Wolfe Industries provides a Kinetic Foam undersuit for marauder infantry, while Apex Security Partnership introduces Ablative Scales, increasing survivability and making them immune to shrapnel from both friendly and hostile units.
+UserData/MercArmoryUpgrades/Hammer Security - Ablative Scales_Name=Ablative Scales
+UserData/MercArmoryUpgrades/Hammer Security - Concussive Shrapnel_Benefits=- Attacks slow all units in target area and in cone<n/>- Effect: Decreases the movement speed on enemy target by 60% and slow enemies behind their initial target in a wide cone
+UserData/MercArmoryUpgrades/Hammer Security - Concussive Shrapnel_Description=Concussive Shells actually form a gravitational warp when they detonate. This warp not only damages the target, but it also slows the movement speed of all nearby units to a crawl for a short period of time.
+UserData/MercArmoryUpgrades/Hammer Security - Concussive Shrapnel_Name=Concussive Shrapnel
+UserData/MercArmoryUpgrades/Harrier - Burst Amplifier_Benefits=- Harrier gains 2 additional attacks<n/>- Increases the damage of Gemini Missiles by 100% and Burst Lasers by 300% while the Harrier is moving
+UserData/MercArmoryUpgrades/Harrier - Burst Amplifier_Description=The Brood Wars saw significant research and pilot advancements, including the use of burst lasers on a Wraith, the development of three lasers and engines for flybys, and the addition of amplifiers for increased effectiveness.
+UserData/MercArmoryUpgrades/Harrier - Burst Amplifier_Name=Burst Amplifier
+UserData/MercArmoryUpgrades/Harrier - Revival Field_Benefits=- Harrier now evades every other attack while cloaked<n/>- Upon taking fatal damage when cloaked, gets recalled to nearest Starport, 4 minute cooldown
+UserData/MercArmoryUpgrades/Harrier - Revival Field_Description=ATVX developed a displacement field that reduced the standard wraith's dodge rate by less than a quarter. ASP scientists improved this by adding a flux capacitor, allowing the Harrier to dodge every other attack, resulting in a 30% increase in dodge rate.
+UserData/MercArmoryUpgrades/Harrier - Revival Field_Name=Revival Field
+UserData/MercArmoryUpgrades/Hel's Angel - Deimos Systems_Benefits=- Hel's Angel gains Shredder Rounds<n/>- Hel's Angel gains +2 missile and cannon range<n/>- Transformation time reduced by 66%
+UserData/MercArmoryUpgrades/Hel's Angel - Deimos Systems_Description=Matt has created schematics with some engineers which he believes can increase cannon and missile range as well as decrease transformation time between modes. The added bonus is the shredder rounds that Matt says "must be added." Mira may have more influence on Matt than he admits
+UserData/MercArmoryUpgrades/Hel's Angel - Deimos Systems_Name=Deimos Systems
+UserData/MercArmoryUpgrades/Hel's Angel - Sulfur Missiles_Benefits=- Hel's Angel missiles do area damage<n/>- Missiles cause damage over time to all units in a large area<n/>- Chance to cause fear
+UserData/MercArmoryUpgrades/Hel's Angel - Sulfur Missiles_Description=Similar to Ripwave Missiles, producing shrapnel when hitting their targets. These missiles, have a 50% larger shrapnel radius and a distinct smell. Despite their effectiveness, they are criticized for their unpleasant odor.
+UserData/MercArmoryUpgrades/Hel's Angel - Sulfur Missiles_Name=Sulfur Missiles
+UserData/MercArmoryUpgrades/Missile Turret - Armored Housing_Benefits=Missile Turret gains +125 life<n/>Missile Turret gains +3 armor
+UserData/MercArmoryUpgrades/Missile Turret - Armored Housing_Description=Tactically acquired Enlightened Dynamics' plans gradually increased turret life, but upon selling these plans to the Kel Morians, they made significant armor improvements for their new Missile Turrets.
+UserData/MercArmoryUpgrades/Missile Turret - Armored Housing_Name=Armored Housing
+UserData/MercArmoryUpgrades/Missile Turret - Devastator Override_Benefits=- Targets ground and air units<n/>- Replaces main attack with Devastator Missiles that attack with 8 range and deals 25 damage<n/>- Second attack deals area damage and unleashes an additional volley of projectiles with each attack. 
+UserData/MercArmoryUpgrades/Missile Turret - Devastator Override_Description=During a salvage run on Bhekar Ro, mercenary forces discovered abandoned military Missile Turrets, one of which had been manually used to target ground forces with great effectiveness.
+UserData/MercArmoryUpgrades/Missile Turret - Devastator Override_Name=Devastator Override
+UserData/MercArmoryUpgrades/Nanite Emitter - Box of Scraps_Benefits=- Deploys Nanite Emitter instantly<n/>- Gains +2 armor
+UserData/MercArmoryUpgrades/Nanite Emitter - Box of Scraps_Description=Thanks to some tinkering done by Dr. Rorke in a cave on Albion the Nanite Emitters have been given more armor and can now survive an orbital deployment direct from the Hyperion.
+UserData/MercArmoryUpgrades/Nanite Emitter - Box of Scraps_Name=Box of Scraps
+UserData/MercArmoryUpgrades/Nanite Emitter - Danger Mist_Benefits=- Nanites now damage enemy mechanical units
+UserData/MercArmoryUpgrades/Nanite Emitter - Danger Mist_Description=Don't tell Swann or Stetmann but Dr. Rorke used some of their budget to come up with this little upgrade to the Nanite Emitters tiny little robots.  I'm sure the contractors won't mind but I'm not to sure about the other two.
+UserData/MercArmoryUpgrades/Nanite Emitter - Danger Mist_Name=Danger Mist
+UserData/MercArmoryUpgrades/Nomad - Explosive Calibrations_Benefits=- Increases the damage of Railgun Turrets and Hunter Seeker Missiles by 40%<n/>- Hunter Seeker Missile's unit tracking range by 50% and the explosion radius by 30%<n/>- Decreases energy cost of turrets from 50 to 30
+UserData/MercArmoryUpgrades/Nomad - Explosive Calibrations_Description=Do we really need more explosive Hunter Seeker Missiles and Railgun Turrets….yes…yes we do.
+UserData/MercArmoryUpgrades/Nomad - Explosive Calibrations_Name=Explosive Calibrations
+UserData/MercArmoryUpgrades/Nomad - Silent Mode_Benefits=- Grants the Nomad cloaking but removes its ability to move and use other active abilities.<n/>- This ability can be canceled after activation.<n/>- Increases sight radius by 6<n/>- Grants target lock ability in this form only
+UserData/MercArmoryUpgrades/Nomad - Silent Mode_Description=Simple, cheap and effective, this turns our Nomads into a good spotter for defensive forces, too bad we couldn’t add in a better cloaking module, though the added target lock aids our tanks quite a bit for dishing out a bit more damage to high value targets.
+UserData/MercArmoryUpgrades/Nomad - Silent Mode_Name=Silent Mode
+UserData/MercArmoryUpgrades/Phantom - Eidolon Suit_Benefits=- Phantoms cloak no longer cost energy to use<n/>- Gain super cloak for the first 5 seconds after activating<n/>- Super Cloak only activates once every 2 minutes
+UserData/MercArmoryUpgrades/Phantom - Eidolon Suit_Description=Few ghosts survive the Dominions program to become veterans, but those who do gain access to the exclusive Eidolon suits. Even fewer leave, but they ensure they can never be found unless they want to be found.
+UserData/MercArmoryUpgrades/Phantom - Eidolon Suit_Name=Eidolon Suit
+UserData/MercArmoryUpgrades/Phantom - Tyrador Implants_Benefits=- Phantoms gain +3 weapon and sight range<n/>- Able to calldown nuclear strikes 50% faster<n/>- Reduce snipe cost by 10%
+UserData/MercArmoryUpgrades/Phantom - Tyrador Implants_Description=The implants, originally purchased by a wealthy vacationer from Tyradors beaches, enabled oneself to see further. Due to a failing stock, the original creator sold them to us, allowing more flexibility in upgrades. This resulted in significant improvements in their targeting systems on their rifles.
+UserData/MercArmoryUpgrades/Phantom - Tyrador Implants_Name=Tyrador Implants
+UserData/MercArmoryUpgrades/Samson - Apollo Injection Pods_Benefits=- Survivor's Guilt now applies when unloading units normally. Cooldown of 30 seconds when applied this way.<n/>- Survivor's Guilt triggering off the Samson dying lasts twice as long.
+UserData/MercArmoryUpgrades/Samson - Apollo Injection Pods_Description=A.S.P has been able to install sprinklers in all Samson's under the guise of helping with interior fires when in fact they instead spray a concentrate mixture of some kind that "helps" with combat efficiency
+UserData/MercArmoryUpgrades/Samson - Apollo Injection Pods_Name=Apollo Injection Pods
+UserData/MercArmoryUpgrades/Samson - ATX Ordnance_Benefits=- Replaces standard weaponry with ATX Laser Batteries & ATX Point Defense<n/>- ATX Point Defense shoots down enemy projectiles periodically<n/>- ATX Point Defense does not use energy, but will not negate 100% of incoming projectiles
+UserData/MercArmoryUpgrades/Samson - ATX Ordnance_Description=The ATX laser battery is a capital ship weapon developed by the Terran Dominion for their elite Battlecruisers.  These batteries allowed battlecruisers to target multiple enemies at once up to four targets.
+UserData/MercArmoryUpgrades/Samson - ATX Ordnance_Name=ATX Ordnance
+UserData/MercArmoryUpgrades/SCV - Kel Morian Cutters_Benefits=- A.C.Vs repair twice as fast and reduces repair cost by 25%<n/>- A.C.Vs harvest 15 more minerals per trip<n/>- Can now repair Bunkers when bunkered inside
+UserData/MercArmoryUpgrades/SCV - Kel Morian Cutters_Description=These new Kel Morian Cutters allow the A.C.V to harvest more minerals and repair twice as fast making sure to keep allies in the battle longer for a greater chance at victory. 
+UserData/MercArmoryUpgrades/SCV - Kel Morian Cutters_Name=Kel Morian Cutters
+UserData/MercArmoryUpgrades/SCV - Micro Fusion Reactor_Benefits=- Multiple A.C.Vs can build structures that greatly reduces build time<n/>- Increases A.C.V base speed by 1.5
+UserData/MercArmoryUpgrades/SCV - Micro Fusion Reactor_Description=The delivery of the new ASP Micro Fusion Reactors mistakenly included SCV advanced computers, allowing A.C.Vs to work on the same structure simultaneously, resulting in faster base building.
+UserData/MercArmoryUpgrades/SCV - Micro Fusion Reactor_Name=Micro Fusion Reactor
+UserData/MercArmoryUpgrades/SCV - Upgd A_Benefits=- Test Benefit A<n/>- 100% Betterer-er<n/>- -10% suckyness
+UserData/MercArmoryUpgrades/SCV - Upgd A_Description=Just testing a description, the contents don't matter
+UserData/MercArmoryUpgrades/SCV - Upgd A_Name=Besto SCV Upgrado Numba Wan
+UserData/MercArmoryUpgrades/SCV - Upgrade B_Benefits=- Makes stuff good<n/>- Makes it less bad
+UserData/MercArmoryUpgrades/SCV - Upgrade B_Description=Another test upgrade
+UserData/MercArmoryUpgrades/SCV - Upgrade B_Name=Best-er Repair
+UserData/MercArmoryUpgrades/Shadow - Jorium Lined Suit_Benefits=- Grants Shadows Hallucination and Psi Lash ability<n/>- Cloak no longer costs energy to use
+UserData/MercArmoryUpgrades/Shadow - Jorium Lined Suit_Description=Made out of jealousy of the Eidolon Suit or just made from having too much contact with the jorium these suits are specially designed by Tosh himself.  Once the funding of these suits is complete it will grant our specialists a way to access their once inert psi powers and use them more effectively against our enemies.
+UserData/MercArmoryUpgrades/Shadow - Jorium Lined Suit_Name=Jorium Lined Suit
+UserData/MercArmoryUpgrades/Shadow - Terrazine Shots_Benefits=- Shadows gain +25% attack speed and +2 sight<n/>- Gains +1.25 move speed and range<n/>- Decreases Shadow Fury cooldown by 60%
+UserData/MercArmoryUpgrades/Shadow - Terrazine Shots_Description=I’m pretty sure these things were designed because someone was jealous of the high grade stims. If we can scrape the funding together for this it will give our shadowy friends a huge advantage in their fights.  Attack, movement, and sight all get a big increase as well as their signature blade strike
+UserData/MercArmoryUpgrades/Shadow - Terrazine Shots_Name=Terrazine Shots
+UserData/MercArmoryUpgrades/Siege Breaker - IFF Spider Rounds_Benefits=- Siege Breaker deals +60 damage to primary target<n/>- Siege mode deal 80% less damage to friendly units<n/>- Initial impact leaves a Spider Mine on the battlefield
+UserData/MercArmoryUpgrades/Siege Breaker - IFF Spider Rounds_Description=Larscorp and ASP have developed a new "smart shell" that scans for allies and adjusts detonation to minimize damage. Field tests show it reduces friendly fire fatalities by 80%. The shell also occasionally leaves a spider mine after impact. Rumors suggest some tank drivers are old vulture pilots
+UserData/MercArmoryUpgrades/Siege Breaker - IFF Spider Rounds_Name=IFF Spider Rounds
+UserData/MercArmoryUpgrades/Siege Breaker - Smart Servos MKIV_Benefits=- Reduces transformation time by 66%<n/>- Siege mode can now target air units<n/>- Increases range the longer it remains in siege mode, range increase up to +4
+UserData/MercArmoryUpgrades/Siege Breaker - Smart Servos MKIV_Description=Smart Servos in military units have been widely used, with Emperor Mengsk using them for his royal guard. However, ASP and Wolfe Industries are continuously improving on the original idea, focusing on hardware advancements for siege tanks to quickly outperform their competitors.
+UserData/MercArmoryUpgrades/Siege Breaker - Smart Servos MKIV_Name=Smart Servos MKIV
+UserData/MercArmoryUpgrades/Skibi - Advanced Stabilizers_Benefits=- Skibis Angels heal 35% faster and use 50% less energy<n/>- Skibis Angels heal an area around their initial target<n/>- Skibis Angels heal two targets at once<n/>- Heals mechanical at a slower rate
+UserData/MercArmoryUpgrades/Skibi - Advanced Stabilizers_Description=The Stabilizer Medpack is a new generation of medical nanobots that efficiently heal targets and can be injected faster.  However, it leaves mechanical units lacking quick repair capabilities.
+UserData/MercArmoryUpgrades/Skibi - Advanced Stabilizers_Name=Advanced Stabilizers
+UserData/MercArmoryUpgrades/Skibi - AI Enhancement_Benefits=- Reduces cost by 35%<n/>- No longer require Tech Lab add on<n/>- Can heal outside units when in a Bunker
+UserData/MercArmoryUpgrades/Skibi - AI Enhancement_Description=Remedius Medical Systems has introduced a storage facility in the Barracks, eliminating the need for Tech Labs for medpack storage, enabling medics to "liberate" supplies before field visits.
+UserData/MercArmoryUpgrades/Skibi - AI Enhancement_Name=A.I Enhancement
+UserData/MercArmoryUpgrades/Soldiers - Advanced Training_Benefits=- Increases attack speed by 5%<n/>- Increases movement speed by 3%<n/>- Increase infantry life by 10%
+UserData/MercArmoryUpgrades/Soldiers - Advanced Training_Description=ASP has allowed us to borrow their best Infantry trainers, Major Payne and Gunnery Sgt Ermey, in order for us to get the absolute best results from our infantry contractors.
+UserData/MercArmoryUpgrades/Soldiers - Advanced Training_Name=Advanced Training
+UserData/MercArmoryUpgrades/Soldiers - Liberated ESP_Benefits=- Grants Emergency Survival Protocol to all infantry
+UserData/MercArmoryUpgrades/Soldiers - Liberated ESP_Description=Thanks to some rather skilled specialists we have managed to get our hands on Nadrels ESP for our infantry.  I'm sure he won't mind in the least.
+UserData/MercArmoryUpgrades/Soldiers - Liberated ESP_Name=Liberated ESP
+UserData/MercArmoryUpgrades/Spartan Company - Aspis Blink Shield_Benefits=- Spartan Company gains a 50 point rechargeable hardened shield<n/>- When shield depletes Spartan Company blinks away from the engagement<n/>- Can use blink
+UserData/MercArmoryUpgrades/Spartan Company - Aspis Blink Shield_Description=We managed to get our hands on some Immortal Hardened Shields and Dr. Rorke took it and combined it with a Stalkers Blink.  Pay the man so we can get these please.
+UserData/MercArmoryUpgrades/Spartan Company - Aspis Blink Shield_Name=Aspis Blink Shield
+UserData/MercArmoryUpgrades/Spartan Company - Legion Systems_Benefits=- Spartan Company can fire at air and ground units simultaneously<n/>- Gains +3 missile range and +2 cannon range
+UserData/MercArmoryUpgrades/Spartan Company - Legion Systems_Description=ASP has integrated the Multi-Lock and Ares Class Targeting System into a Legion upgrade, this is expected to attract more Spartan Company troops who may be willing to stay permanently with this impressive equipment.
+UserData/MercArmoryUpgrades/Spartan Company - Legion Systems_Name=Legion Systems
+UserData/MercArmoryUpgrades/Starcruiser - Ragnarok Weapons_Benefits=- Starcruiser weapons systems are upgraded to a powerful particle cannon that deals 200 damage per attack.<n/>- Can be turned on or off for each individual Starcruiser
+UserData/MercArmoryUpgrades/Starcruiser - Ragnarok Weapons_Description=The overcharged reactor, despite its name, is a powerful weapon that can quickly resolve the Yamato Cannon issue. Installing these systems with easy payments allows Starcruisers to receive a faster Yamato Cannon, but it's crucial to power down other weapon systems first before use.
+UserData/MercArmoryUpgrades/Starcruiser - Ragnarok Weapons_Name=Ragnarok Weapons
+UserData/MercArmoryUpgrades/Starcruiser - Rorke's Redline_Benefits=- Starcruiser gains a 250 point rechargeable shield<n/>- Grants Redline Reactor ability that doubles Stracruisers speed for 6 seconds<n/>- Increases damage to enemy targets by 10 when active
+UserData/MercArmoryUpgrades/Starcruiser - Rorke's Redline_Description=ASP scientist Dr. Rorke has successfully added shields to Starcruisers, despite the Defensive Matrix  not lasting as long as expected. This achievement is a testament to the effectiveness of ASP tech and the ability of not having a giant green balloon in space.
+UserData/MercArmoryUpgrades/Starcruiser - Rorke's Redline_Name=Rorke's Redline
+UserData/MercArmoryUpgrades/Titan - Dead Man Switch_Benefits=- Titans can be rebuilt in the field when destroyed,<n/>- If destroyed before being rebuilt Titans go nuclear
+UserData/MercArmoryUpgrades/Titan - Dead Man Switch_Description=Titans can be rebuilt on the battlefield, but they often face enemy aggression. ASP has developed a dead man's switch that turns Titans into walking nukes, and destroying a Titan as it's being rebuilt can result in a nasty surprise.
+UserData/MercArmoryUpgrades/Titan - Dead Man Switch_Name=Dead Man Switch
+UserData/MercArmoryUpgrades/Titan - Hazardous Payload_Benefits=- Titans can now switch to a High Impact Payload<n/>- Titans can now switch to a Explosive Payload
+UserData/MercArmoryUpgrades/Titan - Hazardous Payload_Description=Why the Dominion is sleeping on these upgrades I do not know but what I do know is that these cannons give a significant improvement over the standard ones and we would be fools not to utilize them.
+UserData/MercArmoryUpgrades/Titan - Hazardous Payload_Name=Hazardous Payload
+UserData/MercArmoryUpgrades/Upgrades - Merged Upgrades_Benefits=- Infantry, Vehicle, and Ship upgrades are now consolidated to two options instead of the usual six
+UserData/MercArmoryUpgrades/Upgrades - Merged Upgrades_Description=Thanks to the efforts of Han & Horner we have somehow been able to combine all of our weapon and armor upgrades into two research options now located in the Armory.
+UserData/MercArmoryUpgrades/Upgrades - Merged Upgrades_Name=Merged Upgrades
+UserData/MercArmoryUpgrades/Upgrades - Speedy Research_Benefits=- Reduce research time of upgrades by 50%
+UserData/MercArmoryUpgrades/Upgrades - Speedy Research_Description=Dr. Rorke is able to supply us with additional research materials that should prove useful in quickly upgrading our forces when on the field.
+UserData/MercArmoryUpgrades/Upgrades - Speedy Research_Name=Speedy Research
+UserData/MercArmoryUpgrades/Vehicles - Advanced Training_Benefits=- Increases attack speed by 5%<n/>- Increases movement speed by 3%<n/>- Increase vehicle life by 10%
+UserData/MercArmoryUpgrades/Vehicles - Advanced Training_Description=ASP has allowed us to borrow their best vehicle specialists, Mr. Frank Martin and Mr. Brian Connor, in order for us to get the absolute best results from our mechanized contractors.
+UserData/MercArmoryUpgrades/Vehicles - Advanced Training_Name=Advanced Training
+UserData/MercArmoryUpgrades/Vehicles - Swann's Extra Supplies_Benefits=- All mechanical units are 25% cheaper to build
+UserData/MercArmoryUpgrades/Vehicles - Swann's Extra Supplies_Description=Found some extra supplies stashed away behind some old crates in the armory, when I asked Swann about it he tried to deny he hid them until I told him we could pay him for the extra equipment and he begrudgingly agreed.
+UserData/MercArmoryUpgrades/Vehicles - Swann's Extra Supplies_Name=Swann's Extra Supplies
+UserData/MercArmoryUpgrades/War Pig - Super Stim_Benefits=- Grants Super Stim ability<n/>- Effect: Increases unit's attack and movement speeds by 50% and heals unit for 30 HP <n/>- Duration: 15 seconds
+UserData/MercArmoryUpgrades/War Pig - Super Stim_Description=Standard Stimpacks temporarily boost attack and movement speeds with adrenaline, endorphins, and aggression enhancers, but these new tactically acquired Super Stims bypass negative effects and prolong contractors' survival on the field.
+UserData/MercArmoryUpgrades/War Pig - Super Stim_Name=Super Stim
+UserData/MercArmoryUpgrades/War Pig - Thorn Shield_Benefits=- War Pigs and Skibis Angels gain +15hp<n/>- Reflects some damage back to melee attackers
+UserData/MercArmoryUpgrades/War Pig - Thorn Shield_Description=The M98 Combat Shields are useful for marines fighting melee-focused attackers. ASP's research has led to the development of a new type of shield that can reflect damage back to these attackers. 
+UserData/MercArmoryUpgrades/War Pig - Thorn Shield_Name=Thorn Shield
+UserData/MercArmoryUpgrades/Wolverine - Chaotic Power_Benefits=- Wolverines now deploy two mag mines per cast<n/>- Cooldown reduced to 15 seconds<n/>- When killed Wolverine leaves behind 5 mag mines
+UserData/MercArmoryUpgrades/Wolverine - Chaotic Power_Description=Thanks to the war stretching the Dominions funds thin they have been forced to find other ways to protect their mineral fields in a cheap way.  Long story short mag mines are cheap and super effective.
+UserData/MercArmoryUpgrades/Wolverine - Chaotic Power_Name=Chaotic Power
+UserData/MercArmoryUpgrades/Wolverine - Piercing Strike_Benefits=- Wolverine can now strike multiple targets with its main gun
+UserData/MercArmoryUpgrades/Wolverine - Piercing Strike_Description=Thanks to Dr, Rorke we have access to some new magnetic induction coils to better outfit our Wolverines.  This neat little upgrade allows them to deal damage to enemy units behind the target.
+UserData/MercArmoryUpgrades/Wolverine - Piercing Strike_Name=Piercing Strike
+UserData/MercArmyTypes/Base_Type Name=Base
+UserData/MercArmyTypes/Dominion_Type Name=Dominion
+UserData/MercArmyTypes/Ghost/Spectre_Type Name=Phantom/Shadow
+UserData/MercArmyTypes/Infantry_Type Name=Infantry
+UserData/MercArmyTypes/Max-Tech_Type Name=Max-Tech
+UserData/MercArmyTypes/Mid-Tech_Type Name=Mid-Tech
+UserData/MercArmyTypes/Starships_Type Name=Starships
+UserData/MercArmyTypes/Vehicles_Type Name=Vehicles
+UserData/MercHeroes/Cabal_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">5 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">120 s</s>
+UserData/MercHeroes/Cabal_Description=<s val="MercDescription">Computer Assisted Biologically Augmented Lifeform, or CABAL for short, is an unknown entity that appeared in the Koprulu sector some time ago. Very little is known of where it came from, but for the moment it appears to want to "save" the local populace from their oppressive government, which it keeps calling the Grand Dominion Institute.</s>
+UserData/MercHeroes/Cabal_Name=Cabal
+UserData/MercHeroes/Cabal_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Fighter/Mech Mode, Reaper Missiles, Cybernetic Reconstruction, Vulcan Cannons</s>
+UserData/MercHeroes/Cabal_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Hel's Angel upgrades</s>
+UserData/MercHeroes/DukesRevenge_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">9 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">240 s</s>
+UserData/MercHeroes/DukesRevenge_Description=<s val="MercDescription">This capital ship dates back to the early days of the Terran Dominion, just after General Duke was lost to the Queen of Blades. It has had many captains over the years and is said to be haunted by the general's ghost.</s>
+UserData/MercHeroes/DukesRevenge_Name=Duke's Revenge
+UserData/MercHeroes/DukesRevenge_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Yamato Cannon, Deploy Tac Fighters, Point Defense Laser</s>
+UserData/MercHeroes/DukesRevenge_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Starcruiser upgrades</s>
+UserData/MercHeroes/ED067_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">6 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">120 s</s>
+UserData/MercHeroes/ED067_Description=<s val="MercDescription">Apex Security Partnership's ED-067, a peacekeeping machine designed for urban pacification, malfunctioned during its first demonstration, killing junior executive Mr. Losumn. Dr. Rorke and his technicians struggled to control the faulty robot before shutting it down. The Predator program was green-lit because of the Losumn tragedy and rumors that the Enforcement Droid series used salvaged Dragoon parts from the first war.</s>
+UserData/MercHeroes/ED067_Name=ED-067
+UserData/MercHeroes/ED067_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Kel-Morian Ripper Rounds, Shell Shower, Minikin</s>
+UserData/MercHeroes/ED067_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Spartan Company upgrades</s>
+UserData/MercHeroes/Freyja_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">7 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">150 s</s>
+UserData/MercHeroes/Freyja_Description=<s val="MercDescription">Freyja commands the Valkyrie Squadron of the Midgard Warriors, a mercenary organization founded by survivors of the UED expedition fleet who took on mercenary work after its destruction. Today they are a high-tech outfit that uses the latest technology and looks after its members, avoiding losses wherever possible. No wonder their paychecks are so high. Then again, they do every job flawlessly.</s>
+UserData/MercHeroes/Freyja_Name=Freyja
+UserData/MercHeroes/Freyja_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Demon Rockets, Bombardment, Afterburners</s>
+UserData/MercHeroes/Freyja_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Dusk Wing upgrades</s>
+UserData/MercHeroes/HankHarnack_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">4 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">90 s</s>
+UserData/MercHeroes/HankHarnack_Description=<s val="MercDescription">Henry "Hank" Harnack, the son of a trucking company operator, became a private in the Confederate Marine Corps' famous Heaven's Devils platoon. Friends with fellow marines Jim Raynor and Ryk Kydd, he was quick to anger and had an impulsive attitude. He was officially listed as KIA, and much like Emperor Palpatine, he somehow survived.</s>
+UserData/MercHeroes/HankHarnack_Name=Hank Harnack
+UserData/MercHeroes/HankHarnack_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Flash Flames, Combustion, Meltdown</s>
+UserData/MercHeroes/HankHarnack_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Devil Dog upgrades</s>
+UserData/MercHeroes/JimRaynor_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">3 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">60 s</s>
+UserData/MercHeroes/JimRaynor_Description=<s val="MercDescription">James Eugene "Jim" Raynor is a former Terran marshal turned rebel, who has become one of the major figures in the Koprulu sector through his work to bring down the Confederacy and, later, in the struggle against the Confederacy's successor, the Dominion. Raynor is one of the few terrans to engage in a long-term alliance with the Protoss.</s>
+UserData/MercHeroes/JimRaynor_Name=Jim Raynor
+UserData/MercHeroes/JimRaynor_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Inspire, Give 'Em Some Pepper, Penetrator Round</s>
+UserData/MercHeroes/JimRaynor_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">War Pig upgrades</s>
+UserData/MercHeroes/Rattlesnake_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">5 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">90 s</s>
+UserData/MercHeroes/Rattlesnake_Description=<s val="MercDescription">Kev "Rattlesnake" West is a terran mercenary marauder and one of the few mercenaries to be honorably discharged from the Armed Forces. Though he refuses to take jobs that could harm innocent people, West still works steadily. His war days might be behind him, but he did not lose his bite.</s>
+UserData/MercHeroes/Rattlesnake_Name=Rattlesnake
+UserData/MercHeroes/Rattlesnake_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Deploy Revitalizer, Secret Stash Stimpack, Hammer Munitions</s>
+UserData/MercHeroes/Rattlesnake_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Hammer Security upgrades</s>
+UserData/MercHeroes/SgtHammer_Availability=<s val="MercCategory">Deploys After:</s>  <s val="MercSummary">7 min</s><n/><s val="MercCategory">Respawn Time:</s>  <s val="MercSummary">150 s</s>
+UserData/MercHeroes/SgtHammer_Description=<s val="MercDescription">Sergeant Alabama "Bama the Hammer" Kowalski is a siege tank operator. She is said to be so accurate with her tank's shock cannon that she can drop shells inches away from friendly forces without harming them. A "rough and tumble Southern gal," Kowalski takes great pride in her tank, as well as her rank.</s>
+UserData/MercHeroes/SgtHammer_Name=Sgt. Hammer
+UserData/MercHeroes/SgtHammer_Special=<s val="MercCategory">Abilities:</s>  <s val="MercSummary">Siege Mode, Neo Titanium Plating, Napalm Strike</s>
+UserData/MercHeroes/SgtHammer_UnitText=<s val="MercCategory">Armory:</s>  <s val="MercSummary">Siege Breaker upgrades</s>
 Weapon/Name/250mmUranusCarronades=250mm Uranus Carronades
 Weapon/Name/ACVFusionCutter=Fusion Cutter
 Weapon/Name/AGRShadeHunter=AGR Shade Hunter
