@@ -572,6 +572,22 @@
         <AffectedUnitArray value="Nomad"/>
     </CUpgrade>
     <CUpgrade id="SmartServosMKIV">
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].SectionArray[Facing].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerSiege,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].SectionArray[Facing].DurationArray[Duration]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray Operation="Multiply" Reference="Abil,SgtHammerUnsiege,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="0.330000"/>
         <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
         <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].RandomDelayMax" Value="0.330000"/>
         <EffectArray Operation="Multiply" Reference="Abil,SiegeBreakerSiege,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.330000"/>

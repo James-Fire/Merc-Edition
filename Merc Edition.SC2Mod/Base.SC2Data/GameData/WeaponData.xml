@@ -144,6 +144,11 @@
         <Period value="1.52"/>
         <Effect value="SpotterBioDischargeLaunchMissile"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="TaurenSpaceMarineGaussRifle">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <DamagePoint value="0.1"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="TychusCommandoChaingun">
         <PreEffect value="VulcanCannonsAB"/>
     </CWeaponLegacy>

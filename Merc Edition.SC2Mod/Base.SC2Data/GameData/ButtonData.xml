@@ -54,8 +54,8 @@
         <TintRacially value="1"/>
     </CButton>
     <CButton id="AnduinOpenGate">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Textures\cursor-interactive-activate.dds"/>
+        <AlertIcon value="Assets\Textures\cursor-interactive-activate.dds"/>
         <TintRacially value="1"/>
     </CButton>
     <CButton id="ApolloInjectionPods">
@@ -79,6 +79,10 @@
         <Icon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
     </CButton>
+    <CButton id="DeathMetal">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="DemonRockets">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
@@ -94,6 +98,10 @@
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="FaceMelt">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="GrandArchonConjure">
         <Icon value="Assets\Textures\talent-artanis-level01-swiftretribution.dds"/>
         <AlertIcon value="Assets\Textures\talent-artanis-level01-swiftretribution.dds"/>
@@ -101,6 +109,10 @@
     <CButton id="HeatTreatedNanitesBellyBonus">
         <Icon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
+    </CButton>
+    <CButton id="PowerSlide">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="SpectreNo15Nuke">
         <Icon value="Assets\Textures\btn-ability-terran-nuclearstrike-color.dds"/>

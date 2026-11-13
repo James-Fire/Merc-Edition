@@ -2121,48 +2121,6 @@ void libBA5CCDED_gt_ProtossGenericDifficulty_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Redline Reactor
-//--------------------------------------------------------------------------------------------------
-bool libBA5CCDED_gt_RedlineReactor_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    int lv_rng;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-
-    // Conditions
-    if (testConds) {
-        if (!((libBA5CCDED_gv_easterEggActive == false))) {
-            return false;
-        }
-    }
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    lv_rng = RandomInt(1, 100);
-    if ((lv_rng <= 3)) {
-        libBA5CCDED_gv_easterEggActive = true;
-        UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RedlineReactor", 1);
-        UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RedlineReactorEasterEgg", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
-        SoundPlayForPlayer(SoundLink("RedlineReactorMusicEasterEgg", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
-        Wait(12.0, c_timeReal);
-        libBA5CCDED_gv_easterEggActive = false;
-        UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "RedlineReactorEasterEgg", 1);
-    }
-
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libBA5CCDED_gt_RedlineReactor_Init () {
-    libBA5CCDED_gt_RedlineReactor = TriggerCreate("libBA5CCDED_gt_RedlineReactor_Func");
-    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_RedlineReactor, c_playerAny, "RedlineReactorAB");
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: Freyja
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_Freyja_Func (bool testConds, bool runActions) {
@@ -2215,6 +2173,136 @@ bool libBA5CCDED_gt_NomadMineDroneSpawner_Func (bool testConds, bool runActions)
 //--------------------------------------------------------------------------------------------------
 void libBA5CCDED_gt_NomadMineDroneSpawner_Init () {
     libBA5CCDED_gt_NomadMineDroneSpawner = TriggerCreate("libBA5CCDED_gt_NomadMineDroneSpawner_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ETC Power Slide
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_ETCPowerSlide_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitIssueOrder(EventUnit(), OrderTargetingPoint(AbilityCommand("move", 0), EventUnitTargetPoint()), c_orderQueueAddToFront);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_ETCPowerSlide_Init () {
+    libBA5CCDED_gt_ETCPowerSlide = TriggerCreate("libBA5CCDED_gt_ETCPowerSlide_Func");
+    TriggerAddEventUnitAbility(libBA5CCDED_gt_ETCPowerSlide, null, AbilityCommand("PsiStrikeWalk", 0), c_unitAbilStageExecute, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ETC Death Metal CD
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_ETCDeathMetalCD_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "DeathMetal", 1);
+    Wait(120.0, c_timeGame);
+    UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "DeathMetal", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_ETCDeathMetalCD_Init () {
+    libBA5CCDED_gt_ETCDeathMetalCD = TriggerCreate("libBA5CCDED_gt_ETCDeathMetalCD_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_ETCDeathMetalCD, c_playerAny, "DeathMetalHealAB");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ETC Death Metal Dance
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_ETCDeathMetalDance_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_counter;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_counter = RandomFixed(0.0, 300.0);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    while ((UnitHasBehavior2(EventUnit(), "L800DeathMetalDance") == true)) {
+        Wait(0.0625, c_timeGame);
+        UnitSetFacing(EventUnit(), lv_counter, 0.0);
+        lv_counter += 10.0;
+        if ((lv_counter >= 360.0)) {
+            lv_counter = 0.0;
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_ETCDeathMetalDance_Init () {
+    libBA5CCDED_gt_ETCDeathMetalDance = TriggerCreate("libBA5CCDED_gt_ETCDeathMetalDance_Func");
+    TriggerAddEventUnitBehaviorChange(libBA5CCDED_gt_ETCDeathMetalDance, null, "L800DeathMetalDance", c_unitBehaviorChangeCreate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ETC Death Metal Shake
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_ETCDeathMetalShake_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((DistanceBetweenPoints(EventPlayerEffectUsedPoint(c_effectLocationCasterUnit), CameraGetTarget(EventPlayer())) <= 22.0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    CameraShake(EventPlayer(), "Massive", "Tremor", 0.0, 0.3, 0.6);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_ETCDeathMetalShake_Init () {
+    libBA5CCDED_gt_ETCDeathMetalShake = TriggerCreate("libBA5CCDED_gt_ETCDeathMetalShake_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_ETCDeathMetalShake, c_playerAny, "DeathMetalSA");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ETC Face Melt Shake
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_ETCFaceMeltShake_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((DistanceBetweenPoints(EventPlayerEffectUsedPoint(c_effectLocationCasterUnit), CameraGetTarget(EventPlayer())) <= 22.0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    CameraShakeStart(EventPlayer(), c_cameraPositionEye, c_cameraDirectionXYZ, 1.0, 2.0, 50.0, 0.2);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_ETCFaceMeltShake_Init () {
+    libBA5CCDED_gt_ETCFaceMeltShake = TriggerCreate("libBA5CCDED_gt_ETCFaceMeltShake_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_ETCFaceMeltShake, c_playerAny, "FaceMeltSA");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -3026,9 +3114,13 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_ZergTerranGenericDifficulty_Init();
     libBA5CCDED_gt_ProtossGenericDifficulty_Init();
-    libBA5CCDED_gt_RedlineReactor_Init();
     libBA5CCDED_gt_Freyja_Init();
     libBA5CCDED_gt_NomadMineDroneSpawner_Init();
+    libBA5CCDED_gt_ETCPowerSlide_Init();
+    libBA5CCDED_gt_ETCDeathMetalCD_Init();
+    libBA5CCDED_gt_ETCDeathMetalDance_Init();
+    libBA5CCDED_gt_ETCDeathMetalShake_Init();
+    libBA5CCDED_gt_ETCFaceMeltShake_Init();
     libBA5CCDED_gt_SpartanCompanyCabalShellShowerFull_Init();
     libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
     libBA5CCDED_gt_SkibisAngelRepairDrone_Init();

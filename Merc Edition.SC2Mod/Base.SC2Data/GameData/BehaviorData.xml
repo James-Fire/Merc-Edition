@@ -16,6 +16,39 @@
             <VitalMaxArray index="Shields" value="75"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="DeathMetal">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse Fatal="1" Handled="DeathMetalHealAB" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DeathMetalHealing">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="1.1"/>
+        <Period value="0.1"/>
+        <InitialEffect value="DeathMetalCooldown"/>
+        <PeriodicEffect value="DeathMetalHeal"/>
+        <FinalEffect value="DeathMetalSA"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+        <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FaceMeltPush">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.25"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="FaceMeltForce"/>
+        <Modification MoveSpeedMaximum="20" MoveSpeedMinimum="20">
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="GrandArchon">
         <InfoFlags index="Hidden" value="1"/>
         <InfoFlags index="AlwaysUseGameText" value="1"/>
@@ -328,6 +361,29 @@
             <VitalMaxArray index="Life" value="15"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="L800DeathMetalDance">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Period value="0.2"/>
+        <PeriodicEffect value="DeathMetalDamage"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="L800PowerSlideStun">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="Reveal" value="1"/>
+            <ModifyFlags index="Detected" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="LockdownB">
         <Modification>
             <BehaviorLinkDisableArray value="Detector9"/>
@@ -400,6 +456,19 @@
         <Duration value="10"/>
         <Period value="0.5"/>
         <PeriodicEffect value="PlagueMunitionsDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsiStrikeWalkSpeed">
+        <Duration value="0.75"/>
+        <Modification MoveSpeedMultiplier="4.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RockinShields">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="100"/>
+        <Duration value="3"/>
+        <Modification>
+            <VitalMaxArray index="Shields" value="20"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="TychusStimpack">
         <Alignment value="Positive"/>
