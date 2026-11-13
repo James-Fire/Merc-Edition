@@ -3,6 +3,7 @@
 <Abil id="SkibisAngelRepairDrone"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Behavior id="GenericDontDie"/>
+<Behavior id="DeathMetal"/>
 <Behavior id="CabalRevive1"/>
 <Behavior id="Hill180sRespawn"/>
 <Behavior id="NightmarePlus"/>
@@ -11,7 +12,6 @@
 <Behavior id="GraduatingRangeController"/>
 <Behavior id="SpectreNo15SuperCloak"/>
 <Behavior id="SurvivorsGuiltApolloCD"/>
-<Behavior id="DeathMetal"/>
 <Effect id="NukeDetonate"/>
 <Effect id="HeroNukeDetonate"/>
 <Effect id="EchoDropPodsIndicatorDummy"/>
@@ -22,6 +22,13 @@
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
 <Sound id="Spectre15NukeLaunch"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
+<Sound id="UIArmoryCloseButtonPressed"/>
+<Sound id="UIArmoryCloseButtonPressed2"/>
+<Sound id="UIArmoryCreditDeductLoop"/>
+<Sound id="UIArmoryPurchaseButtonPress"/>
+<Sound id="UIArmoryPurchaseButtonPress2"/>
+<Sound id="UIArmoryPurchaseButtonPress3"/>
+<Sound id="UIArmoryUpgradePressed"/>
 <Unit id="InfestedTerran"/>
 <Unit id="ARESWarbotMercMod"/>
 </Preload>

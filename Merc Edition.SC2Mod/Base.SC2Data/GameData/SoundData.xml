@@ -1520,6 +1520,56 @@
         <AssetArray File="Assets\Sounds\VO Tychus\TychusHero_Stim5.ogg" FacialGroup=""/>
         <Volume value="6.000000,6.000000"/>
     </CSound>
+    <CSound id="UIArmoryButtonHover" parent="UI">
+        <AssetArray File="Assets\Sounds\Uni\UI\UI_TextCrawlType01.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="UIArmoryCloseButtonPressed" parent="UI">
+        <AssetArray File="Assets\Sounds\Uni\UI\UI_GenericTransition_Quick_2.wav" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="UIArmoryCloseButtonPressed2" parent="UI">
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Revive_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Revive_02.wav" FacialGroup=""/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="UIArmoryCreditDeductLoop" parent="UI">
+        <AssetArray>
+            <File value="Assets\Sounds\Uni\UI\UI_ScoreScreenMissionCreditsLoop0.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,10744"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="UIArmoryOpen" parent="UI">
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Hero_PowerUp.wav" FacialGroup=""/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="UIArmoryPurchaseButtonPress" parent="UI">
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Bluesy_Intro_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Bluesy_Intro_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Bluesy_Intro_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Bluesy_Intro_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Bluesy_Intro_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Bluesy_Intro_06.wav" FacialGroup=""/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="UIArmoryPurchaseButtonPress2" parent="UI">
+        <AssetArray File="Assets\Sounds\Uni\UI\BattleNet_UI\UI_BnetLevelUpFadeOut_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\UI\BattleNet_UI\UI_BnetLevelUpFadeOut_02.ogg" FacialGroup=""/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="UIArmoryPurchaseButtonPress3" parent="UI">
+        <AssetArray File="Assets\Sounds\SheHunieOnMyMunieTillIPop.ogg" FacialGroup=""/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="UIArmoryUpgradePressed" parent="UI">
+        <AssetArray File="Assets\Sounds\Uni\UI\BattleNet_UI\UI_BnetSelect02_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\UI\BattleNet_UI\UI_BnetSelect02_1.wav" FacialGroup=""/>
+        <Pitch value="-0.500000,0.500000"/>
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
     <CSound id="WildSnipeImpact" parent="Combat">
         <AssetArray File="Assets\Sounds\Explosion_CarpetBurn_2.wav" FacialGroup=""/>
     </CSound>

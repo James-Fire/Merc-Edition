@@ -87,6 +87,7 @@ bool libBA5CCDED_gf_MU_UnitHasVisibleUpgrade (string lp_unit);
 bool libBA5CCDED_gf_MU_UpgradeIsPurchased (string lp_upgrade);
 void libBA5CCDED_gf_MU_SetUpgradePurchased (string lp_upgrade);
 void libBA5CCDED_gf_SetBriefingDisplayUnit (int lp_mission, string lp_unit);
+void libBA5CCDED_gf_SetBriefingDisplayText (int lp_mission, text lp_name, text lp_description);
 
 // Trigger Declarations
 trigger libBA5CCDED_gt_Gonnaneedabiggerboat;
@@ -144,8 +145,11 @@ trigger libBA5CCDED_gt_NightmarePlusInitial;
 trigger libBA5CCDED_gt_MU_Init;
 trigger libBA5CCDED_gt_MU_OpenArmory;
 trigger libBA5CCDED_gt_MU_UpgradeButtonPressed;
+trigger libBA5CCDED_gt_UpgradeButtonSFX;
 trigger libBA5CCDED_gt_MU_PurchaseButtonPressed;
+trigger libBA5CCDED_gt_PurchaseButtonSFX;
 trigger libBA5CCDED_gt_MU_CloseButtonPressed;
+trigger libBA5CCDED_gt_CloseButtonSFX;
 
 // Library Initialization
 void libBA5CCDED_InitVariables ();
