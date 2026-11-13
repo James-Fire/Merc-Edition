@@ -80,6 +80,7 @@
             <LayoutButtons Face="HiveMindEmulator" Type="AbilCmd" AbilCmd="TerranBuild,Build22" Row="2" Column="3"/>
             <LayoutButtons Face="PsiDisruptor" Type="AbilCmd" AbilCmd="TerranBuild,Build26" Row="2" Column="3"/>
             <LayoutButtons Face="PsiDisruptor" Type="AbilCmd" AbilCmd="TerranBuild,Build8" Row="2" Column="3"/>
+            <LayoutButtons Face="MercCompound" Type="AbilCmd" AbilCmd="TerranBuild,Build13" Row="0" Column="3"/>
         </CardLayouts>
         <CardLayouts CardId="TBl2">
             <LayoutButtons Face="GhostAcademy" Type="AbilCmd" AbilCmd="TerranBuild,Build10" Row="0" Column="0"/>
@@ -88,7 +89,6 @@
             <LayoutButtons Face="Starport" Type="AbilCmd" AbilCmd="TerranBuild,Build12" Row="2" Column="0"/>
             <LayoutButtons Face="FusionCore" Type="AbilCmd" AbilCmd="TerranBuild,Build16" Row="2" Column="1"/>
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
-            <LayoutButtons Face="MercCompound" Type="AbilCmd" AbilCmd="TerranBuild,Build13" Row="0" Column="1"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -2126,6 +2126,64 @@
         </Fidget>
         <WeaponArray Link="AGRWhiplash"/>
         <EffectArray index="Death" value="SpectreNo15DeathDummy"/>
+    </CUnit>
+    <CUnit id="L800ETC">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="OnHold"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
+        <LifeArmor value="2"/>
+        <LifeRegenRate value="10"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <ShieldArmorName value="L800ETCShields"/>
+        <Speed value="2.5"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="1999.6875"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="300"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="PsiStrikeWalk"/>
+        <AbilArray Link="FaceMelt"/>
+        <AbilArray Link="DeathMetal"/>
+        <BehaviorArray Link="DeathMetal"/>
+        <WeaponArray Link="TaurenSpaceMarineGaussRifle"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="PowerSlide" Type="AbilCmd" AbilCmd="PsiStrikeWalk,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="FaceMelt" Type="AbilCmd" AbilCmd="FaceMelt,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="DeathMetal" Type="AbilCmd" AbilCmd="DeathMetal,Execute" Row="1" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <InnerRadius value="0.75"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="6"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAIThink value="AIThinkMarine"/>
     </CUnit>
     <CUnit id="TychusCommando">
         <Attributes index="Heroic" value="1"/>

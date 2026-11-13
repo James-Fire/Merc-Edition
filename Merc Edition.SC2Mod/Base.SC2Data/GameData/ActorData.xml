@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="DeathMetalCharge" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.DeathMetalHealing.On" Send="Create"/>
+        <On Terms="Behavior.DeathMetalHealing.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,255 4.000000}"/>
+        <On Terms="ActorCreation" Send="SetScale 3.000000,3.000000,5.000000 2.000000"/>
+        <Host Subject="_Unit"/>
+    </CActorModel>
+    <CActorSimple id="DeathMetalDance">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.L800DeathMetalDance.On" Send="Create"/>
+        <On Terms="ActorCreation" Target="::Main" Send="AnimPlay Dance Dance PlayForever,ForceLooping"/>
+        <On Terms="Behavior.L800DeathMetalDance.Off" Target="::Main" Send="AnimClear Dance"/>
+    </CActorSimple>
+    <CActorModel id="DeathMetalImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DeathMetalDanceAB.Start; At Target" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpShadow SOpAttachCenter"/>
+    </CActorModel>
+    <CActorSound id="DeathMetalMusic" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.L800DeathMetalDance.On" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="DeathMetalShockwave" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DeathMetalSA.Start" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="DeathMetalSmoke" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DeathMetalSA.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,255 2.000000}"/>
+    </CActorModel>
+    <CActorSound id="DeathMetalSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DeathMetalSA.Start" Send="Create"/>
+        <Layers>
+            <Sound value="FaceMeltSwt"/>
+            <PitchSource value="Actor"/>
+            <PlayDelaySource value="Actor"/>
+            <VolumeSource value="Actor"/>
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorModel id="FaceMeltImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.FaceMeltPush.On" Send="Create"/>
+        <Host Subject="_Unit"/>
+    </CActorModel>
     <!--                                                                                         -->
     <!-- Colossus                                                                         -->
     <!--                                                                                         -->
@@ -41,6 +93,29 @@
         <On Terms="ActorCreation" Send="Create ChargingSound"/>
         <On Terms="ActorCreation" Send="SetTintColor {32,138,255 3.000000}"/>
     </CActorMissile>
+    <CActorModel id="FaceMelt" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FaceMeltSA.Start" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="FaceMelt2" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FaceMeltSA.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,255,0 6.000000}"/>
+    </CActorModel>
+    <CActorSound id="FaceMeltLaunch" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FaceMeltSA.Start" Send="Create"/>
+        <Layers>
+            <Sound value="FaceMeltSwt"/>
+            <PitchSource value="Sound"/>
+            <PlayDelaySource value="Sound"/>
+            <VolumeSource value="Sound"/>
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
     <CActorAction id="GrandArchonAttack" parent="GenericAttack" effectAttack="GrandArchonWeaponDamage">
         <Beam value="GrandArchonBeam"/>
         <BeamScope value="Caster"/>
@@ -352,6 +427,18 @@
         <Host Subject="_Unit"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
+    <CActorSound id="PsiStrikeLaunchSound">
+        <Layers>
+            <Sound value="PowerSlideSwt"/>
+            <PitchSource value="Sound"/>
+            <PlayDelaySource value="Sound"/>
+            <VolumeSource value="Sound"/>
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
     <CActorModel id="SingularityBlastChannel" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Abil.SingularityBlast.SourcePrepStart" Send="Create"/>
@@ -1059,19 +1146,19 @@
         <HeroIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
         <NameOffset value="50"/>
-        <SoundArray index="Birth" value="SiegeTankBirth"/>
-        <SoundArray index="Ready" value="SiegeBreaker_Ready"/>
-        <SoundArray index="Help" value="SiegeBreaker_Help"/>
-        <SoundArray index="What" value="SiegeBreaker_What"/>
-        <SoundArray index="Yes" value="SiegeBreaker_Yes"/>
-        <SoundArray index="Attack" value="SiegeBreaker_Attack"/>
-        <SoundArray index="Pissed" value="SiegeBreaker_Pissed"/>
-        <SoundArray index="Movement" value="SiegeTankMovement"/>
-        <SoundArray index="Turning" value="SiegeTankTurning"/>
-        <SoundArray index="Board" value="SiegeTankBoard"/>
-        <SoundArray index="Click" value="SiegeTankClick"/>
-        <SoundArray index="ClickError" value="SiegeTankClickError"/>
-        <SoundArray index="Highlight" value="SiegeTankHighlight"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
         <UnitIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-tankmode.dds"/>
@@ -1579,6 +1666,8 @@
         <On Terms="Behavior.StunnedPenetratorRound.Off" Send="Destroy"/>
         <On Terms="Behavior.SingularityBlastStunned.On" Send="Create"/>
         <On Terms="Behavior.SingularityBlastStunned.Off" Send="Destroy"/>
+        <On Terms="Behavior.L800PowerSlideStun.On" Send="Create"/>
+        <On Terms="Behavior.L800PowerSlideStun.Off" Send="Destroy"/>
     </CActorModel>
     <CActorModel id="Inspire" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
@@ -1831,6 +1920,19 @@
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-siegetank-mercenary-siegemode.dds"/>
         </Wireframe>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
     </CActorUnit>
     <CActorSound id="SpectreNo15SuperCloakEnd" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -1924,6 +2026,32 @@
         <SoundArray index="Yes" value="Spectre15Yes"/>
         <SoundArray index="Attack" value="Spectre15Attack"/>
         <SoundArray index="Pissed" value="Spectre15Pissed"/>
+    </CActorUnit>
+    <CActorUnit id="L800ETC" parent="GenericUnitStandard" unitName="L800ETC">
+        <Aliases value="_UnitSmall"/>
+        <DeathArray index="Normal" SoundLink="TaurenSpaceMarine_Explode"/>
+        <PortraitModel value="TaurenMarinePortrait"/>
+        <StandAnimTurnTime value="3"/>
+        <WalkAnimMoveSpeed value="3"/>
+        <BarOffset value="55"/>
+        <BarWidth value="85"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-taurenspacemarine.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-TaurenSpaceMarine.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <SoundArray index="Ready" value="TaurenSpaceMarine_Ready"/>
+        <SoundArray index="Help" value="TaurenSpaceMarine_Help"/>
+        <SoundArray index="What" value="TaurenSpaceMarine_What"/>
+        <SoundArray index="Yes" value="TaurenSpaceMarine_Yes"/>
+        <SoundArray index="Attack" value="TaurenSpaceMarine_Attack"/>
+        <SoundArray index="Pissed" value="TaurenSpaceMarine_Pissed"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-TaurenSpaceMarine.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-taurenspacemarine.dds"/>
+        </Wireframe>
+        <On Terms="ActorCreation" Send="SetTeamColor 0,128,255 0,128,255"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
     </CActorUnit>
     <CActorRange id="TotalAnnihilationRange" parent="RangeAbil" abil="TotalAnnihilation">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
@@ -3568,6 +3696,7 @@
     </CActorSound>
     <CActorSound id="SiegeBreakerSiegeModeSound">
         <On index="1" Terms="AbilMorph.*.Start; MorphTo SiegeBreakerSieged; ValidatePlayer DontHaveSmartServosMKIV"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammerSieged; ValidatePlayer DontHaveSmartServosMKIV" Send="Create"/>
     </CActorSound>
     <CActorAction id="SiegeBreakerSiegedAttack">
         <LaunchAssets Model="" Sound=""/>
@@ -3586,6 +3715,7 @@
     <!--                                                                                         -->
     <CActorSound id="SiegeBreakerTankModeSound">
         <On index="1" Terms="AbilMorph.*.Start; MorphTo SiegeBreaker; ValidatePlayer DontHaveSmartServosMKIV"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammer; ValidatePlayer DontHaveSmartServosMKIV" Send="Create"/>
     </CActorSound>
     <CActorModel id="SiegeBreakerUpgradedAttackLaunch2" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
@@ -3607,10 +3737,12 @@
     <CActorSound id="SiegeBreakerUpgradedSiege" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="AbilMorph.*.Start; MorphTo SiegeBreakerSieged; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammerSieged; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
     </CActorSound>
     <CActorSound id="SiegeBreakerUpgradedUnsiege" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="AbilMorph.*.Start; MorphTo SiegeBreaker; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SgtHammer; ValidatePlayer HaveSmartServosMKIV" Send="Create"/>
     </CActorSound>
     <CActorAction id="SignalFlare" parent="GenericAttack" effectLaunch="SignalFlareRevealLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
@@ -4763,7 +4895,7 @@
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-Marine.dds"/>
         <On Terms="UnitPortrait.*.Customize; ValidateUnit HasBroodWarSkin" Send="PortraitCustomize MarineSCBW@Portrait"/>
         <On Terms="UnitDeathCustomize; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
-        <DeathCustoms Name="BroodWar" ModelLink="MarineSCBW@Death"/>
+        <DeathCustoms ModelLink="MarineSCBW@Death" Name="BroodWar"/>
     </CActorUnit>
     <CActorUnit id="Barracks">
         <On Terms="Behavior.BroodWarSkin.On" Send="ModelSwap BarracksSCBW"/>
@@ -4784,8 +4916,8 @@
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-Barracks.dds"/>
         <On Terms="UnitDeathCustomize.Barracks; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
         <On Terms="UnitDeathCustomize.BarracksFlying; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWarFlying"/>
-        <DeathCustoms Name="BroodWar" ModelLink="BarracksSCBW@Death" SoundLink="Barracks_Explode"/>
-        <DeathCustoms Name="BroodWarFlying" ModelLink="BarracksSCBW@FlyDeath" SoundLink="Barracks_Explode"/>
+        <DeathCustoms ModelLink="BarracksSCBW@Death" SoundLink="Barracks_Explode" Name="BroodWar"/>
+        <DeathCustoms ModelLink="BarracksSCBW@FlyDeath" SoundLink="Barracks_Explode" Name="BroodWarFlying"/>
     </CActorUnit>
     <CActorUnit id="SupplyDepot">
         <On Terms="Behavior.BroodWarSkin.On" Send="ModelSwap SupplyDepotSCBW"/>
@@ -4805,7 +4937,7 @@
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetWireframe 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
         <On Terms="UnitDeathCustomize; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
-        <DeathCustoms Name="BroodWar" ModelLink="SupplyDepotSCBW@Death" SoundLink="SupplyDepot_Explode"/>
+        <DeathCustoms ModelLink="SupplyDepotSCBW@Death" SoundLink="SupplyDepot_Explode" Name="BroodWar"/>
     </CActorUnit>
     <CActorUnit id="SupplyDepotLowered">
         <On Terms="Behavior.BroodWarSkin.On" Send="ModelSwap SupplyDepotSCBW"/>
@@ -4825,6 +4957,6 @@
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetWireframe 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Lowered.dds"/>
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-SupplyDepot-Lowered.dds"/>
         <On Terms="UnitDeathCustomize; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
-        <DeathCustoms Name="BroodWar" ModelLink="SupplyDepotSCBW@Death" SoundLink="SupplyDepot_Explode"/>
+        <DeathCustoms ModelLink="SupplyDepotSCBW@Death" SoundLink="SupplyDepot_Explode" Name="BroodWar"/>
     </CActorUnit>
 </Catalog>

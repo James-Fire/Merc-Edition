@@ -46,6 +46,33 @@
     <CModel id="ConjureAnduinArchon">
         <Model value="Assets\Effects\Zerg\HybridEnergizeImpact\HybridEnergizeImpact.m3"/>
     </CModel>
+    <CModel id="DeathMetalCharge">
+        <Model value="Assets\Effects\Zerg\HybridEnergyDrainCast\HybridEnergyDrainCast.m3"/>
+        <AnimSpeed value="3.000000"/>
+    </CModel>
+    <CModel id="DeathMetalImpact">
+        <Model value="Assets\Effects\Terran\Confetti_Explosion_Small\Confetti_Explosion_Small.m3"/>
+    </CModel>
+    <CModel id="DeathMetalShockwave">
+        <Model value="Assets\Effects\Protoss\Void_LifeCrystal_Shockwave\Void_LifeCrystal_Shockwave.m3"/>
+    </CModel>
+    <CModel id="DeathMetalSmoke">
+        <Model value="Assets\Doodads\TerrainShockwaveSnow\TerrainShockwaveSnow.m3"/>
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    </CModel>
+    <CModel id="FaceMelt">
+        <Model value="Assets\Effects\Protoss\Arbiter_Purifier_Coop_StasisField_Shockwave\Arbiter_Purifier_Coop_StasisField_Shockwave.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="FaceMelt2">
+        <Model value="Assets\Effects\Zerg\L2D_StankShockwave\L2D_StankShockwave.m3"/>
+    </CModel>
+    <CModel id="FaceMeltImpact">
+        <Model value="Assets\Effects\Protoss\Adept_Collection_Purifier_Missile_Impact\Adept_Collection_Purifier_Missile_Impact.m3"/>
+        <AnimSpeed value="2.000000"/>
+    </CModel>
     <CModel id="GrandArchonAttackBeam" parent="PersistentSpellFX">
         <Model value="Assets\Models\GrandArchonBeam.m3"/>
         <LowQualityModel value="ArchonAttackBeamLow"/>
@@ -384,6 +411,11 @@
     </CModel>
     <CModel id="PlagueMunitions">
         <Model value="Assets\Effects\Zerg\L2D_StankBugSwarm\L2D_StankBugSwarm.m3"/>
+    </CModel>
+    <CModel id="PsiStrikeModel">
+        <Model value="Assets\Models\WaterBlade_PLZ.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="SingularityBlastChannel">
         <Model value="Assets\Effects\Protoss\DisruptionBlast_ChargeUp\DisruptionBlast_ChargeUp.m3"/>
@@ -1057,8 +1089,12 @@
         <Image value="Assets\Textures\domgruntportrait_static.dds"/>
     </CModel>
     <CModel id="SgtHammer" parent="Unit">
-        <Model value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base_v07.m3"/>
+        <Model value="Assets\Units\Terran\TankMercenary\TankMercenary.m3"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
         <EditorCategories value="Race:Terran"/>
+        <Lighting value="SiegeBreaker"/>
         <Occlusion value="Show"/>
         <Radius value="1.050000"/>
         <SelectionRadius value="1.250000"/>
@@ -1067,25 +1103,32 @@
         <TipabilityLength value="0.800000"/>
         <TipabilityWidth value="0.400000"/>
         <UnitGlossaryCamera value="Star2CameraMid08"/>
-        <RequiredAnims value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base.m3a"/>
     </CModel>
     <CModel id="SgtHammerSieged" parent="Unit">
-        <Model value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base_v07.m3"/>
-        <RequiredAnims value="Assets\Models\Sgt Hammer\Storm_Hero_SgtHammer_Base.m3a"/>
+        <Model value="Assets\Units\Terran\SiegeTankMercenary\SiegeTankMercenary.m3"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
         <EditorCategories value="Race:Terran"/>
+        <Lighting value="SiegeBreakerSieged"/>
         <Occlusion value="Show"/>
         <Radius value="1.050000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
         <SelectionRadius value="1.250000"/>
         <ShadowRadius value="1.250000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
         <UnitGlossaryCamera value="Star2CameraMid08"/>
     </CModel>
     <CModel id="SgtHammerMorph" Prefix="Units\" Race="Neutral">
-        <Model value="Assets\Units\Terran\SiegeTankMorph_Commando_Collection\SiegeTankMorph_Commando_Collection.m3"/>
-        <Lighting value="MengskSiegeTankSiegedMorph"/>
+        <Model value="Assets\Units\Terran\SiegeTankMercenaryMorph\SiegeTankMercenaryMorph.m3"/>
+        <Lighting value="SiegeBreakerSiegedMorph"/>
         <Occlusion value="Show"/>
         <Radius value="1.050000"/>
-        <ScaleMax value="1.100000,1.100000,1.100000"/>
-        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
         <SelectionRadius value="1.250000"/>
         <ShadowRadius value="1.250000"/>
         <Tipability value="0.750000"/>
@@ -1534,6 +1577,15 @@
         <FacialController value="LocalizedData\Facial\ToshPortrait.fxa"/>
         <Image value="Assets\Textures\ToshPortrait_Static.dds"/>
         <Lighting value="ToshPortrait"/>
+    </CModel>
+    <CModel id="L800ETC" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\TaurenSpaceMarine\TaurenSpaceMarine.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="0.750000"/>
+        <ShadowRadius value="0.750000"/>
     </CModel>
     <CModel id="ThermalLancesFireBeamModel">
         <!--Model value="Assets\Doodads\FireMedium\FireMedium.m3"/-->
@@ -2666,10 +2718,7 @@
     </CModel>
     <!-- ===== Brood War skins (ported from SC Evo SCEvo_Assets / SCEvo_Core) ===== -->
     <!-- Marine -->
-    <CModel id="MarineSCBW" parent="MarineBase">
-        <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
+    <CModel id="MarineSCBW" parent="MarineBase"/>
     <CModel id="MarineSCBW@Death" parent="MarineDeathBase">
         <Model value="Assets\Units\Terran\MarineSCBW\MarineSCBW@Death.m3"/>
         <Radius value="0.375000"/>
@@ -2697,13 +2746,9 @@
     </CModel>
     <CModel id="MarineSCBW@Portrait" parent="MarinePortraitBase">
         <Model value="Assets\Portraits\Terran\MarineSCBW@Portrait\MarinePortraitSCBW.m3"/>
-        <Lighting value="MarineSCBW@Portrait"/>
     </CModel>
     <!-- Barracks (ground + flying share the Barracks model) -->
-    <CModel id="BarracksSCBW" parent="BarracksBase">
-        <Model value="Assets\Buildings\Terran\BarracksSCBW\BarracksSCBW.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
+    <CModel id="BarracksSCBW" parent="BarracksBase"/>
     <CModel id="BarracksSCBW@Death" parent="BarracksDeathBase">
         <Model value="Assets\Buildings\Terran\BarracksSCBW\BarracksSCBW@Death.m3"/>
     </CModel>
@@ -2727,8 +2772,6 @@
     </CModel>
     <!-- Supply Depot (raised + lowered; the BW model has no lower/raise animation) -->
     <CModel id="SupplyDepotSCBW" parent="SupplyDepotBase">
-        <Model value="Assets\Buildings\Terran\SupplyDepotSCBW\SupplyDepotSCBW.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
         <SelectionRadius value="1.400000"/>
@@ -2829,7 +2872,5 @@
     <CModel id="VespeneGeyser">
         <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
     </CModel>
-    <CModel id="VespeneGeyserHigh">
-        <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
-    </CModel>
+    <CModel id="VespeneGeyserHigh"/>
 </Catalog>

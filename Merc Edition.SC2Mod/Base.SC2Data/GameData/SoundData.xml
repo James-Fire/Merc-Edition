@@ -354,6 +354,37 @@
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Construct_Eso_EnergyWave_01.wav" FacialGroup=""/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="DeathMetalMusic" parent="Spell">
+        <AssetArray File="Assets\Sounds\ETC\ETC_GuitarSolo01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_GuitarSolo02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_GuitarSolo03.ogg" FacialGroup=""/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-12.000000,-9.000000"/>
+    </CSound>
+    <CSound id="DeathMetalSound" parent="Spell">
+        <AssetArray File="Assets\Sounds\Artanis_ResurgenceExplosion.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="FaceMeltLaunch" parent="Spell">
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_Launch01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_Launch02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_Launch03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_Launch04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_Launch05.ogg" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="FaceMeltSwt" parent="Spell">
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR010.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR011.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR07.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR08.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_FaceMelt_GTR09.ogg" FacialGroup=""/>
+    </CSound>
     <CSound id="GrandArchonAttackImpact" parent="Combat">
         <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\KhaydarinMonolith_AttackImpact01.wav" FacialGroup=""/>
@@ -462,11 +493,51 @@
         <AssetArray File="Assets\Sounds\Terran\DropPod\DropPod_Drop0.wav" FacialGroup=""/>
         <Mode value="3DHead"/>
     </CSound>
+    <CSound id="Kerrigan_PsionicShift">
+        <AssetArray index="0" File="Assets\Sounds\ETC\ETC_PowerSlide_Launch01.ogg"/>
+        <AssetArray index="1" File="Assets\Sounds\ETC\ETC_PowerSlide_Launch02.ogg"/>
+        <AssetArray index="2" File="Assets\Sounds\ETC\ETC_PowerSlide_Launch03.ogg"/>
+        <AssetArray index="3" File="Assets\Sounds\ETC\ETC_PowerSlide_Launch04.ogg"/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_PowerSlide_Launch05.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="PowerSlideSwt" parent="Spell">
+        <AssetArray File="Assets\Sounds\ETC\ETC_PowerSlide_GTR01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_PowerSlide_GTR02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_PowerSlide_GTR03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_PowerSlide_GTR04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\ETC_PowerSlide_GTR05.ogg" FacialGroup=""/>
+    </CSound>
     <!--                                                                                         -->
     <!-- Units                                                                                   -->
     <!--                                                                                         -->
     <CSound id="Raven_AutoTurretAttackLaunch">
         <DupeDestroyCount value="20"/>
+    </CSound>
+    <CSound id="TaurenSpaceMarine_AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact0.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact1.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact2.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact3.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact4.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-9.000000,-6.000000"/>
+    </CSound>
+    <CSound id="TaurenSpaceMarine_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\MengskTrooper_Rifle_AttackLaunch_00A.wav" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\MengskTrooper_Rifle_AttackLaunch_01A.wav" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\MengskTrooper_Rifle_AttackLaunch_11A.wav" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <Pitch value="3.000000,6.000000"/>
     </CSound>
     <CSound id="TychusAttackLaunch" parent="Combat">
         <EditorCategories value="Race:Terran"/>
@@ -978,15 +1049,6 @@
         <Volume value="-1.000000,-1.000000"/>
         <VolumeRolloffPoints Distance="15.472779"/>
         <VolumeRolloffPoints Distance="30.802292" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="RedlineReactorMusicEasterEgg">
-        <AssetArray File="Assets\Sounds\NeedlesInTheRed.mp3" FacialGroup=""/>
-        <DupeDestroyCount value="1"/>
-        <DupeMuteCount value="1"/>
-        <Volume value="-15.000000,-15.000000"/>
-        <Mode value="3DWorld"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="20.270269" Volume="-96.000000"/>
     </CSound>
     <CSound id="RevivalFieldDodgeSound" parent="Combat">
         <AssetArray File="Assets\Sounds\ColossusTaldarim_Beam_AttackImpact01_1ch.wav" FacialGroup=""/>
