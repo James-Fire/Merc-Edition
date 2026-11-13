@@ -855,6 +855,7 @@
         <TacticalAI value="DuskWingBansheeWeapon"/>
     </CUnit>
     <CUnit id="Freyja">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -917,8 +918,11 @@
         <GlossaryWeakArray value="Phoenix"/>
         <GlossaryWeakArray value="Marine"/>
         <AIEvaluateAlias value="Banshee"/>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="CabalAssault">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -998,8 +1002,10 @@
             <ChanceArray index="Idle" value="55"/>
             <ChanceArray index="Turn" value="30"/>
         </Fidget>
+        <TechAliasArray value="Alias_MercHero"/>
     </CUnit>
     <CUnit id="CabalFighter">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -1083,23 +1089,41 @@
         <GlossaryWeakArray value="Hydralisk"/>
         <GlossaryWeakArray value="Marine"/>
         <GlossaryWeakArray value="Stalker"/>
+        <TechAliasArray value="Alias_MercHero"/>
     </CUnit>
     <!-- Setting merc compound and merc units back to liberty settings -->
     <CUnit id="MercCompound">
+        <AbilArray Link="MercReviveJimRaynor"/>
+        <AbilArray Link="MercReviveHankHarnack"/>
+        <AbilArray Link="MercReviveRattlesnake"/>
+        <AbilArray Link="MercReviveED067"/>
+        <AbilArray Link="MercReviveSgtHammer"/>
+        <AbilArray Link="MercReviveCabal"/>
+        <AbilArray Link="MercReviveFreyja"/>
+        <AbilArray Link="MercReviveDukesRevenge"/>
+        <AbilArray Link="MercHeroTrain"/>
         <CardLayouts index="0">
-            <LayoutButtons index="0" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="255,255" Row="1" Column="3"/>
-            <LayoutButtons index="1" Face="Rally" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
-            <LayoutButtons index="2" Face="Halt" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
-            <LayoutButtons index="3" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons index="4" Face="JimRaynor" Type="Undefined" AbilCmd="" Row="0"/>
-            <LayoutButtons index="5" Face="HankHarnack" Type="Undefined" AbilCmd="" Row="0"/>
-            <LayoutButtons index="6" Face="ED067" Type="Undefined" AbilCmd="" Row="0" Column="3"/>
-            <LayoutButtons index="7" Face="Freyja" Type="Passive" AbilCmd="" Column="1"/>
-            <LayoutButtons index="8" Face="Rattlesnake22" Type="Undefined" AbilCmd="" Row="0" Column="2"/>
-            <LayoutButtons index="9" Face="DukesRevenge" Type="Undefined" AbilCmd="" Column="2"/>
-            <LayoutButtons index="10" removed="1"/>
-            <LayoutButtons index="11" removed="1"/>
-            <LayoutButtons index="12" removed="1"/>
+            <LayoutButtons index="0" Face="MercReviveJimRaynor" Type="AbilCmd" AbilCmd="MercReviveJimRaynor,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="1" Face="MercReviveHankHarnack" Type="AbilCmd" AbilCmd="MercReviveHankHarnack,Execute" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="MercReviveRattlesnake" Type="AbilCmd" AbilCmd="MercReviveRattlesnake,Execute" Row="0" Column="2"/>
+            <LayoutButtons index="3" Face="MercReviveED067" Type="AbilCmd" AbilCmd="MercReviveED067,Execute" Row="0" Column="3"/>
+            <LayoutButtons index="4" Face="MercReviveSgtHammer" Type="AbilCmd" AbilCmd="MercReviveSgtHammer,Execute" Row="1" Column="0"/>
+            <LayoutButtons index="5" Face="MercReviveCabal" Type="AbilCmd" AbilCmd="MercReviveCabal,Execute" Row="1" Column="1"/>
+            <LayoutButtons index="6" Face="MercReviveFreyja" Type="AbilCmd" AbilCmd="MercReviveFreyja,Execute" Row="1" Column="2"/>
+            <LayoutButtons index="7" Face="MercReviveDukesRevenge" Type="AbilCmd" AbilCmd="MercReviveDukesRevenge,Execute" Row="2" Column="0"/>
+            <LayoutButtons index="8" Face="MercHireJimRaynor" Type="AbilCmd" AbilCmd="MercHeroTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons index="9" Face="MercHireHankHarnack" Type="AbilCmd" AbilCmd="MercHeroTrain,Train2" Row="0" Column="1"/>
+            <LayoutButtons index="10" Face="MercHireRattlesnake" Type="AbilCmd" AbilCmd="MercHeroTrain,Train3" Row="0" Column="2"/>
+            <LayoutButtons index="11" Face="MercHireED067" Type="AbilCmd" AbilCmd="MercHeroTrain,Train4" Row="0" Column="3"/>
+            <LayoutButtons index="12" Face="MercHireSgtHammer" Type="AbilCmd" AbilCmd="MercHeroTrain,Train5" Row="1" Column="0"/>
+            <LayoutButtons index="13" Face="MercHireCabal" Type="AbilCmd" AbilCmd="MercHeroTrain,Train6" Row="1" Column="1"/>
+            <LayoutButtons index="14" Face="MercHireFreyja" Type="AbilCmd" AbilCmd="MercHeroTrain,Train7" Row="1" Column="2"/>
+            <LayoutButtons index="15" Face="MercHireDukesRevenge" Type="AbilCmd" AbilCmd="MercHeroTrain,Train8" Row="2" Column="0"/>
+            <LayoutButtons index="16" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="255,255" Row="1" Column="3"/>
+            <LayoutButtons index="17" Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons index="18" Face="ReaperSpeed" Type="AbilCmd" AbilCmd="MercCompoundResearch,Research4" Row="2" Column="1"/>
+            <LayoutButtons index="19" Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons index="20" Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="MinikinMissile" parent="MISSILE"/>
@@ -1177,6 +1201,7 @@
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
     </CUnit>
     <CUnit id="Rattlesnake">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -1244,8 +1269,11 @@
         <AIEvaluateAlias value="Marauder"/>
         <Radius value="0.625"/>
         <MinimapRadius value="0.625"/>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="HankHarnack">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -1322,6 +1350,8 @@
         </Fidget>
         <Radius value="0.6875"/>
         <MinimapRadius value="0.6875"/>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="EngineeringBay">
         <AbilArray Link="SalvageShared"/>
@@ -1463,6 +1493,7 @@
         </CardLayouts>
     </CUnit>
     <CUnit id="JimRaynor">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -1535,6 +1566,8 @@
         </Fidget>
         <Radius value="0.625"/>
         <MinimapRadius value="0.625"/>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="ReaperMissilesMissile" parent="MISSILE"/>
     <CUnit id="Refinery">
@@ -1546,6 +1579,7 @@
         </CardLayouts>
     </CUnit>
     <CUnit id="ED067">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <ReviveType value=""/>
         <Race value="Terr"/>
@@ -1625,6 +1659,8 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="RadarTower">
         <DeathRevealRadius value="3"/>
@@ -1699,6 +1735,7 @@
     </CUnit>
     <CUnit id="SgtHammerNapalmMissile" parent="MISSILE"/>
     <CUnit id="SgtHammerSieged">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Facing value="45"/>
         <Race value="Terr"/>
@@ -1767,8 +1804,11 @@
         <GlossaryWeakArray value="Immortal"/>
         <GlossaryWeakArray value="Zergling"/>
         <AIEvaluateAlias value="SiegeTankSieged"/>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="SgtHammer">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -1844,11 +1884,14 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="SpiderMine">
         <TechAliasArray value="Alias_SpiderMine"/>
     </CUnit>
     <CUnit id="DukesRevengeHero">
+        <DeathTime value="-1"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -1931,6 +1974,8 @@
         <GlossaryWeakArray value="VoidRay"/>
         <GlossaryWeakArray value="Corruptor"/>
         <AIEvaluateAlias value="Battlecruiser"/>
+        <TechAliasArray value="Alias_MercHero"/>
+        <FlagArray index="PreventDestroy" value="1"/>
     </CUnit>
     <CUnit id="DukesRevengeBatteryMissile" parent="MISSILE">
         <Race value="Terr"/>

@@ -698,7 +698,7 @@
     </CAbilEffectTarget>
     <CAbilBuild id="TerranBuild">
         <InfoArray index="Build25" Unit="NaniteCloudEmitterBurrowed" Time="52">
-            <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Suppressed" Requirements="HaveEngineeringBay"/>
+            <Button DefaultButtonFace="BuildNaniteCloudEmitter" State="Restricted" Requirements="HaveEngineeringBay"/>
         </InfoArray>
         <InfoArray index="Build26" Unit="PsiDispersionDevice" Time="82">
             <Button DefaultButtonFace="PsiDisruptor" Requirements="UsePsiDispersionDevice"/>
@@ -1137,7 +1137,7 @@
             <Unit value="Condor"/>
         </InfoArray>
         <InfoArray index="Train19" Time="55">
-            <Button DefaultButtonFace="BuildWolverine" Requirements="HaveAttachedTechLab"/>
+            <Button DefaultButtonFace="BuildWolverine" State="Restricted" Requirements="HaveAttachedTechLab"/>
             <Unit value="Wolverine"/>
         </InfoArray>
         <Range value="5"/>
@@ -1763,4 +1763,231 @@
     <CAbilMorph id="SupplyDepotLower">
         <CmdButtonArray index="Execute" DefaultButtonFace="Lower" Requirements="SupplyDepotLowerAllowed"/>
     </CAbilMorph>
+    <CAbilEffectInstant id="MercReviveJimRaynor">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventJimRaynor"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveJimRaynor" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveJimRaynor" State="Restricted" Requirements="MercHeroLimitJimRaynor"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MercReviveHankHarnack">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventHankHarnack"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveHankHarnack" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveHankHarnack" State="Restricted" Requirements="MercHeroLimitHankHarnack"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MercReviveRattlesnake">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventRattlesnake"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveRattlesnake" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveRattlesnake" State="Restricted" Requirements="MercHeroLimitRattlesnake"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MercReviveED067">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventED067"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveED067" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveED067" State="Restricted" Requirements="MercHeroLimitED067"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MercReviveSgtHammer">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventSgtHammer"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveSgtHammer" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveSgtHammer" State="Restricted" Requirements="MercHeroLimitSgtHammer"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MercReviveCabal">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventCabal"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveCabal" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveCabal" State="Restricted" Requirements="MercHeroLimitCabal"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MercReviveFreyja">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventFreyja"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveFreyja" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveFreyja" State="Restricted" Requirements="MercHeroLimitFreyja"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="MercReviveDukesRevenge">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect value="MercHeroReviveEventDukesRevenge"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Link="MercReviveDukesRevenge" Location="Player" TimeUse="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveDukesRevenge" State="Restricted" Requirements="MercHeroLimitDukesRevenge"/>
+    </CAbilEffectInstant>
+    <CAbilTrain id="MercHeroTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoArray index="Train1">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="125"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireJimRaynor"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireJimRaynor"/>
+                <Location value="Player"/>
+                <TimeStart value="180"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireJimRaynor" State="Restricted" Requirements="MercHeroLimitJimRaynor"/>
+            <Unit value="JimRaynor"/>
+        </InfoArray>
+        <InfoArray index="Train2">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="125"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireHankHarnack"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireHankHarnack"/>
+                <Location value="Player"/>
+                <TimeStart value="240"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireHankHarnack" State="Restricted" Requirements="MercHeroLimitHankHarnack"/>
+            <Unit value="HankHarnack"/>
+        </InfoArray>
+        <InfoArray index="Train3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="125"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireRattlesnake"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireRattlesnake"/>
+                <Location value="Player"/>
+                <TimeStart value="300"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireRattlesnake" State="Restricted" Requirements="MercHeroLimitRattlesnake"/>
+            <Unit value="Rattlesnake"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Resource index="Minerals" value="500"/>
+            <Resource index="Vespene" value="250"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireED067"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireED067"/>
+                <Location value="Player"/>
+                <TimeStart value="360"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireED067" State="Restricted" Requirements="MercHeroLimitED067"/>
+            <Unit value="ED067"/>
+        </InfoArray>
+        <InfoArray index="Train5">
+            <Resource index="Minerals" value="500"/>
+            <Resource index="Vespene" value="250"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireSgtHammer"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireSgtHammer"/>
+                <Location value="Player"/>
+                <TimeStart value="420"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireSgtHammer" State="Restricted" Requirements="MercHeroLimitSgtHammer"/>
+            <Unit value="SgtHammer"/>
+        </InfoArray>
+        <InfoArray index="Train6">
+            <Resource index="Minerals" value="750"/>
+            <Resource index="Vespene" value="500"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireCabal"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireCabal"/>
+                <Location value="Player"/>
+                <TimeStart value="300"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireCabal" State="Restricted" Requirements="MercHeroLimitCabal"/>
+            <Unit value="CabalFighter"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Resource index="Minerals" value="750"/>
+            <Resource index="Vespene" value="500"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireFreyja"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireFreyja"/>
+                <Location value="Player"/>
+                <TimeStart value="420"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireFreyja" State="Restricted" Requirements="MercHeroLimitFreyja"/>
+            <Unit value="Freyja"/>
+        </InfoArray>
+        <InfoArray index="Train8">
+            <Resource index="Minerals" value="1000"/>
+            <Resource index="Vespene" value="1000"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="MercHireDukesRevenge"/>
+                <Location value="Player"/>
+            </Charge>
+            <Cooldown>
+                <Link value="MercHireDukesRevenge"/>
+                <Location value="Player"/>
+                <TimeStart value="540"/>
+            </Cooldown>
+            <Button DefaultButtonFace="MercHireDukesRevenge" State="Restricted" Requirements="MercHeroLimitDukesRevenge"/>
+            <Unit value="DukesRevengeHero"/>
+        </InfoArray>
+    </CAbilTrain>
 </Catalog>

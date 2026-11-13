@@ -1814,6 +1814,9 @@
             <Int Int="90">
                 <Field Id="Respawn"/>
             </Int>
+            <String String="THanson01">
+                <Field Id="UnlockMission"/>
+            </String>
         </Instances>
         <Instances Id="Rattlesnake">
             <Int Int="3">
@@ -1858,6 +1861,9 @@
             <Int Int="90">
                 <Field Id="Respawn"/>
             </Int>
+            <String String="TTychus01">
+                <Field Id="UnlockMission"/>
+            </String>
         </Instances>
         <Instances Id="ED067">
             <Int Int="4">
@@ -1902,6 +1908,9 @@
             <Int Int="120">
                 <Field Id="Respawn"/>
             </Int>
+            <String String="TTosh02">
+                <Field Id="UnlockMission"/>
+            </String>
         </Instances>
         <Instances Id="SgtHammer">
             <Int Int="5">
@@ -1946,6 +1955,9 @@
             <Int Int="150">
                 <Field Id="Respawn"/>
             </Int>
+            <String String="TTychus02">
+                <Field Id="UnlockMission"/>
+            </String>
         </Instances>
         <Instances Id="Cabal">
             <Int Int="6">
@@ -1990,6 +2002,9 @@
             <Int Int="120">
                 <Field Id="Respawn"/>
             </Int>
+            <String String="THanson03A|THanson03B">
+                <Field Id="UnlockMission"/>
+            </String>
         </Instances>
         <Instances Id="Freyja">
             <Int Int="7">
@@ -2034,6 +2049,9 @@
             <Int Int="150">
                 <Field Id="Respawn"/>
             </Int>
+            <String String="TTychus04">
+                <Field Id="UnlockMission"/>
+            </String>
         </Instances>
         <Instances Id="DukesRevenge">
             <Int Int="8">
@@ -2078,6 +2096,9 @@
             <Int Int="240">
                 <Field Id="Respawn"/>
             </Int>
+            <String String="TTychus05">
+                <Field Id="UnlockMission"/>
+            </String>
         </Instances>
     </CUser>
 </Catalog>

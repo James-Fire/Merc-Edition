@@ -886,4 +886,84 @@
         <Icon value="Assets\Textures\btn-ability-protoss-shadowdashvorazun.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-shadowdashvorazun.dds"/>
     </CButton>
+    <CButton id="MercHireJimRaynor">
+        <Icon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercHireHankHarnack">
+        <Icon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercHireRattlesnake">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercHireED067">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-Terran_ED209.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-Terran_ED209.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercHireSgtHammer">
+        <Icon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercHireCabal">
+        <Icon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercHireFreyja">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercHireDukesRevenge">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveJimRaynor">
+        <Icon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveHankHarnack">
+        <Icon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveRattlesnake">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-KevRattlesnakeWest.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveED067">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-Terran_ED209.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-Terran_ED209.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveSgtHammer">
+        <Icon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Unit-Terran-SiegeTankMercenary-Tank.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveCabal">
+        <Icon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Fighter.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveFreyja">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-valkyrie-freya.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
+    <CButton id="MercReviveDukesRevenge">
+        <Icon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-unit-terran-BattlecruiserHurricane.dds"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+    </CButton>
 </Catalog>

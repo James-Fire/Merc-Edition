@@ -2658,4 +2658,28 @@
     <CEffectEnumArea id="ZHybridPsionicShockwaveSearchArea">
         <SearchFilters value="-;Player,Ally,Structure,Buried,Stasis,Hidden,Invulnerable,Unstoppable"/>
     </CEffectEnumArea>
+    <CEffectSet id="MercHeroReviveEventJimRaynor">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectSet id="MercHeroReviveEventHankHarnack">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectSet id="MercHeroReviveEventRattlesnake">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectSet id="MercHeroReviveEventED067">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectSet id="MercHeroReviveEventSgtHammer">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectSet id="MercHeroReviveEventCabal">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectSet id="MercHeroReviveEventFreyja">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
+    <CEffectSet id="MercHeroReviveEventDukesRevenge">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectSet>
 </Catalog>

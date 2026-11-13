@@ -1720,16 +1720,17 @@
     <CActorUnit id="MercRaynor" parent="GenericUnitStandard" unitName="JimRaynor">
         <Aliases value="_UnitSmall"/>
         <Macros value="UnloadDropAnim"/>
+        <On Terms="Behavior.MercGroundDrop.Create" Send="Create WarPigDropModel"/>
         <On Terms="Effect.PenetratorRoundCP.Start" Send="AnimPlay Attack Attack"/>
         <On Terms="ActorCreation" Send="TextureSelectById Decal_Terran_0002_01"/>
         <On Terms="Abil.PenetratorRound.SourceFinishStop" Send="AnimClear Attack"/>
-        <Model value="RaynorLab"/>
+        <Model value="Raynor"/>
         <ModelFlags index="SuppressPlayerDecals" value="1"/>
-        <BuildModel value="RaynorLab"/>
+        <BuildModel value="Raynor"/>
         <DeathArray index="Normal" ModelLink="MarineRaynorDeath" SoundLink="Raynor_Explode"/>
         <DeathArray index="Fire" ModelLink="RaynorDeathFire" SoundLink="Uni_DeathFXFire"/>
         <DeathActorModelLow value="UnitDeathModel"/>
-        <PlacementModel value="RaynorLab"/>
+        <PlacementModel value="Raynor"/>
         <PortraitModel value="RaynorMarinePortrait"/>
         <StandAnimTurnTime value="5"/>
         <WalkAnimMoveSpeed value="2.25"/>

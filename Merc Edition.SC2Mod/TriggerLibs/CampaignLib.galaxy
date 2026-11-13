@@ -12,6 +12,10 @@ include "TriggerLibs/CampaignLib_h"
 trigger libCamp_gv_MercArmoryOpenHook;
 trigger libCamp_gv_MercArmoryExitCallback;
 
+string[17] libCamp_gv_MercHeroInstance;
+string[17] libCamp_gv_MercHeroCooldown;
+string[17] libCamp_gv_MercHeroAltUnit;
+
 //--------------------------------------------------------------------------------------------------
 // Library: Campaign
 //--------------------------------------------------------------------------------------------------
@@ -3560,8 +3564,11 @@ void libCamp_gf_TS_InitializeMercDataSingle (int lp_iD, text lp_name, text lp_de
     libCamp_gv_tS_MercNoCreditImage[lv_mercIndex] = lp_noCreditImage;
 }
 
-void libCamp_gf_TS_InitializeMercDataHero (int lp_iD, string lp_hero, int lp_techSubgroup, string lp_video, abilcmd lp_command, string lp_upgrade) {
+void libCamp_gf_TS_InitializeMercDataHero (int lp_iD, string lp_hero, int lp_techSubgroup, string lp_video, abilcmd lp_command, string lp_upgrade, string lp_cooldown, string lp_altUnit) {
     // Implementation
+    libCamp_gv_MercHeroInstance[lp_iD] = lp_hero;
+    libCamp_gv_MercHeroCooldown[lp_iD] = lp_cooldown;
+    libCamp_gv_MercHeroAltUnit[lp_iD] = lp_altUnit;
     libCamp_gf_TS_InitializeMercDataSingle(lp_iD,
         UserDataGetText("MercHeroes", lp_hero, "Name", 1),
         UserDataGetText("MercHeroes", lp_hero, "Description", 1),
@@ -3579,14 +3586,14 @@ void libCamp_gf_TS_InitializeMercDataHero (int lp_iD, string lp_hero, int lp_tec
 
 void libCamp_gf_TS_InitializeMercData () {
     // Implementation
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercKelmorianMercenaries, "JimRaynor", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarine, "Assets\\Textures\\merccontract_marines.ogv", AbilityCommand("SummonMercenaries", 0), "HireKelmorianMinersPH");
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDevilDogs, "HankHarnack", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryFirebat, "Assets\\Textures\\merccontract_firebats.ogv", AbilityCommand("SummonMercenaries", 1), "HireDevilDogsPH");
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercHammerSecurities, "Rattlesnake", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarauder, "Assets\\Textures\\merccontract_marauders.ogv", AbilityCommand("SummonMercenaries", 3), "HireHammerSecuritiesPH");
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercSpartanCompany, "ED067", libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesGoliath, "Assets\\Textures\\merccontract_goliaths.ogv", AbilityCommand("SummonMercenaries", 2), "HireSpartanCompanyPH");
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercSiegeBreakers, "SgtHammer", libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesSiegeTank, "Assets\\Textures\\merccontract_siegetanks.ogv", AbilityCommand("SummonMercenaries", 4), "HireSiegeBreakersPH");
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercHelsAngels, "Cabal", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsViking, "Assets\\Textures\\merccontract_viking.ogv", AbilityCommand("SummonMercenaries", 5), "HireHelsAngelsPH");
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDuskWing, "Freyja", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBanshee, "Assets\\Textures\\merccontract_banshees.ogv", AbilityCommand("SummonMercenaries", 6), "HireDuskWingPH");
-    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDukesRevenge, "DukesRevenge", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBattlecruiser, "Assets\\Textures\\merccontract_battlecruisers.ogv", AbilityCommand("SummonMercenaries", 7), "HireDukesRevenge");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercKelmorianMercenaries, "JimRaynor", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarine, "Assets\\Textures\\merccontract_marines.ogv", AbilityCommand("MercHeroTrain", 0), "HireKelmorianMinersPH", "MercReviveJimRaynor", "");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDevilDogs, "HankHarnack", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryFirebat, "Assets\\Textures\\merccontract_firebats.ogv", AbilityCommand("MercHeroTrain", 1), "HireDevilDogsPH", "MercReviveHankHarnack", "");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercHammerSecurities, "Rattlesnake", libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarauder, "Assets\\Textures\\merccontract_marauders.ogv", AbilityCommand("MercHeroTrain", 2), "HireHammerSecuritiesPH", "MercReviveRattlesnake", "");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercSpartanCompany, "ED067", libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesGoliath, "Assets\\Textures\\merccontract_goliaths.ogv", AbilityCommand("MercHeroTrain", 3), "HireSpartanCompanyPH", "MercReviveED067", "");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercSiegeBreakers, "SgtHammer", libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesSiegeTank, "Assets\\Textures\\merccontract_siegetanks.ogv", AbilityCommand("MercHeroTrain", 4), "HireSiegeBreakersPH", "MercReviveSgtHammer", "SgtHammerSieged");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercHelsAngels, "Cabal", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsViking, "Assets\\Textures\\merccontract_viking.ogv", AbilityCommand("MercHeroTrain", 5), "HireHelsAngelsPH", "MercReviveCabal", "CabalAssault");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDuskWing, "Freyja", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBanshee, "Assets\\Textures\\merccontract_banshees.ogv", AbilityCommand("MercHeroTrain", 6), "HireDuskWingPH", "MercReviveFreyja", "");
+    libCamp_gf_TS_InitializeMercDataHero(libCamp_ge_StoryMercID_MercDukesRevenge, "DukesRevenge", libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBattlecruiser, "Assets\\Textures\\merccontract_battlecruisers.ogv", AbilityCommand("MercHeroTrain", 7), "HireDukesRevenge", "MercReviveDukesRevenge", "");
 }
 
 // Stock WoL contract data
@@ -3660,6 +3667,29 @@ void libCamp_gf_TS_ApplyMercenaryTech (int lp_player) {
 
         autoBF7CB687_i = autoBF7CB687_i + 1;
     }
+    TechTreeAbilityAllow(lp_player, AbilityCommand("TerranBuild", 12), (libCamp_gf_StoryState(libCamp_ge_StoryStateID_StoryStateCantinaOpened) != 0));
+}
+
+bool libCamp_gf_MercHeroUnlocked (int lp_mercID) {
+    string lv_missions;
+    int lv_map;
+
+    if (libCamp_gv_MercHeroInstance[lp_mercID] == "") {
+        return true;
+    }
+    lv_missions = UserDataGetString("MercHeroes", libCamp_gv_MercHeroInstance[lp_mercID], "UnlockMission", 1);
+    if (lv_missions == "") {
+        return true;
+    }
+    lv_missions = "|" + lv_missions + "|";
+    lv_map = libCamp_ge_MapID_MapTRaynor01;
+    while (lv_map < libCamp_ge_MapID_MapLast) {
+        if ((libCamp_gf_MapFile(lv_map) != "") && (StringFind(lv_missions, "|" + libCamp_gf_MapFile(lv_map) + "|", c_stringNoCase) != c_stringNotFound) && (libCamp_gf_MissionStatusCheck(lv_map, libCamp_ge_MissionStatus_Completed) == true)) {
+            return true;
+        }
+        lv_map = lv_map + 1;
+    }
+    return false;
 }
 
 void libCamp_gf_TS_UpdateMercStatus () {
@@ -3680,7 +3710,7 @@ void libCamp_gf_TS_UpdateMercStatus () {
     auto94ADC81C_i = libCamp_gv_TSC_MERC_FIRST;
     while (auto94ADC81C_i <= libCamp_gv_TSC_MERC_LAST) {
         lv_indexMerc = libCamp_gv_tS_MercID[auto94ADC81C_i];
-        lv_enabled = true;
+        lv_enabled = libCamp_gf_MercHeroUnlocked(lv_indexMerc);
         lv_index = 1;
 //        for ( ; ( (auto9CD7260A_ai >= 0 && lv_index <= auto9CD7260A_ae) || (auto9CD7260A_ai < 0 && lv_index >= auto9CD7260A_ae) ) ; lv_index += auto9CD7260A_ai ) {
 //            if ((libCamp_gf_MercTechSubgroup(lv_indexMerc, lv_index) != libCamp_ge_StoryTechGroup_StoryTechGroupNone) && (libCamp_gv_tS_TechGroupState[(libCamp_gf_MercTechSubgroup(lv_indexMerc, lv_index))] != c_purchaseCategoryStateEnabled)) {
@@ -3694,7 +3724,7 @@ void libCamp_gf_TS_UpdateMercStatus () {
             }
 
         }
-        else {
+        else if ((libCamp_gf_MercStatusCheck(lv_indexMerc, libCamp_ge_StoryMercStatus_Purchased) == false)) {
             libCamp_gf_SetMercStatus(lv_indexMerc, libCamp_ge_StoryMercStatus_Locked);
         }
         auto94ADC81C_i = auto94ADC81C_i + 1;
@@ -6352,6 +6382,7 @@ int libCamp_gf_AddPlanet (int lp_planet) {
     string lv_contactTooltipConvo;
     string lv_techTooltipID;
     string lv_mercBriefingUnit;
+    string lv_mercBriefingKey;
 
     // Automatic Variable Declarations
     int autoA0174EFC_i;
@@ -6438,6 +6469,20 @@ int libCamp_gf_AddPlanet (int lp_planet) {
     lv_mercBriefingUnit = DataTableGetString(true, ("MercBriefingUnit/" + libCamp_gf_MapFile(lv_mission)));
     if ((lv_mercBriefingUnit != null) && (lv_mercBriefingUnit != "")) {
         PlanetSetTechnologyUnitLink(PlanetLastCreated(), lv_mercBriefingUnit);
+        if ((lv_mercBriefingUnit != "QuestionMark")) {
+            PlanetSetTechnologyName(PlanetLastCreated(), UnitTypeGetName(lv_mercBriefingUnit));
+        }
+
+    }
+
+    lv_mercBriefingKey = ("MercBriefingName/" + libCamp_gf_MapFile(lv_mission));
+    if ((DataTableValueExists(true, lv_mercBriefingKey) == true)) {
+        PlanetSetTechnologyName(PlanetLastCreated(), DataTableGetText(true, lv_mercBriefingKey));
+    }
+
+    lv_mercBriefingKey = ("MercBriefingText/" + libCamp_gf_MapFile(lv_mission));
+    if ((DataTableValueExists(true, lv_mercBriefingKey) == true)) {
+        PlanetSetTechnologyText(PlanetLastCreated(), DataTableGetText(true, lv_mercBriefingKey));
     }
 
     lv_contactIndex = (libCamp_gv_tS_MissionContact[lv_missionIndex]);
@@ -7010,6 +7055,7 @@ void libCamp_gf_EnableCampaignTechUnit (bool lp_enableDisable, int lp_techUnit, 
     auto7F02F34F_val = lp_techUnit;
     if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupBaseSCV) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("CommandCenterTrain", 0), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("CommandCenterTrain", 1), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupBaseCommandCenter) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("TerranBuild", 0), lv_allowDisallow);
@@ -7024,51 +7070,74 @@ void libCamp_gf_EnableCampaignTechUnit (bool lp_enableDisable, int lp_techUnit, 
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarine) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 0), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 8), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("ZeusLanderTrain", 8), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMedic) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 4), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 12), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("ZeusLanderTrain", 12), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupInfantryFirebat) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 5), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 13), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("ZeusLanderTrain", 13), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupInfantryMarauder) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 3), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 11), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("ZeusLanderTrain", 11), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupInfantryReaper) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 1), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 9), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("ZeusLanderTrain", 9), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesHellion) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 5), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 13), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 14), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesGoliath) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 6), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 15), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesDiamondback) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 7), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 16), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesVulture) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 8), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 17), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupVehiclesSiegeTank) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 1), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 11), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsMedivac) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 0), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 9), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsWrath) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 7), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 13), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsViking) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 4), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 12), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBanshee) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 1), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 10), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupStarshipsBattlecruiser) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 3), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("StarportTrain", 11), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupDominionSpectre) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 6), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 14), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("ZeusLanderTrain", 14), lv_allowDisallow);
         if ((lv_allowDisallow == true)) {
             TechTreeUpgradeAddLevel(lp_player, "SpectreTooltipUpgrade", 1);
         }
@@ -7076,9 +7145,12 @@ void libCamp_gf_EnableCampaignTechUnit (bool lp_enableDisable, int lp_techUnit, 
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupDominionGhost) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 2), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksTrain", 10), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("ZeusLanderTrain", 10), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupDominionThor) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 4), lv_allowDisallow);
+        TechTreeAbilityAllow(lp_player, AbilityCommand("FactoryTrain", 12), lv_allowDisallow);
     }
     else if (auto7F02F34F_val == libCamp_ge_StoryTechGroup_StoryTechGroupxxxReactor) {
         TechTreeAbilityAllow(lp_player, AbilityCommand("BarracksAddOns", 1), lv_allowDisallow);
@@ -12476,6 +12548,120 @@ bool libCamp_gt_MercHeroesRefreshOnLoad_Func (bool testConds, bool runActions) {
     return true;
 }
 
+trigger libCamp_gt_MercHeroesRespawnTimer;
+
+string libCamp_gf_MercHeroInstanceOfUnit (string lp_unitType) {
+    int lv_i;
+    string lv_instance;
+
+    if (lp_unitType == "") {
+        return "";
+    }
+    if (lp_unitType == "SgtHammerSieged") {
+        return "SgtHammer";
+    }
+    if (lp_unitType == "CabalAssault") {
+        return "Cabal";
+    }
+    lv_i = 1;
+    while (lv_i <= UserDataInstanceCount("MercHeroes")) {
+        lv_instance = UserDataInstance("MercHeroes", lv_i);
+        if (UserDataGetGameLink("MercHeroes", lv_instance, "Unit", 1) == lp_unitType) {
+            return lv_instance;
+        }
+        lv_i = lv_i + 1;
+    }
+    return "";
+}
+
+bool libCamp_gt_MercHeroesRespawnTimer_Func (bool testConds, bool runActions) {
+    string lv_instance;
+    int lv_player;
+
+    if (!runActions) {
+        return true;
+    }
+
+    lv_instance = libCamp_gf_MercHeroInstanceOfUnit(UnitGetType(EventUnit()));
+    if (lv_instance == "") {
+        return true;
+    }
+    lv_player = UnitGetOwner(EventUnit());
+    TechTreeAbilityAllow(lv_player, AbilityCommand("MercRevive" + lv_instance, 0), true);
+    PlayerAddCooldown(lv_player, "MercRevive" + lv_instance, IntToFixed(UserDataGetInt("MercHeroes", lv_instance, "Respawn", 1)));
+    return true;
+}
+
+void libCamp_gt_MercHeroesRespawnTimer_Init () {
+    libCamp_gt_MercHeroesRespawnTimer = TriggerCreate("libCamp_gt_MercHeroesRespawnTimer_Func");
+    TriggerAddEventUnitDied(libCamp_gt_MercHeroesRespawnTimer, null);
+}
+
+trigger libCamp_gt_MercHeroesReviveCast;
+
+unit libCamp_gf_MercHeroDeadUnit (int lp_player, string lp_unitType) {
+    if (lp_unitType == "") {
+        return null;
+    }
+    return UnitGroupUnit(UnitGroup(lp_unitType, lp_player, RegionEntireMap(), UnitFilter(0, (1 << (c_targetFilterDead - 32)), 0, 0), 1), 1);
+}
+
+bool libCamp_gt_MercHeroesReviveCast_Func (bool testConds, bool runActions) {
+    int lv_player;
+    unit lv_compound;
+    unit lv_hero;
+    string lv_ability;
+    string lv_instance;
+
+    if (!runActions) {
+        return true;
+    }
+
+    lv_ability = AbilityCommandGetAbility(EventUnitAbility());
+    lv_compound = EventUnit();
+    lv_player = UnitGetOwner(lv_compound);
+    lv_instance = StringSub(lv_ability, StringLength("MercRevive") + 1, StringLength(lv_ability));
+    lv_hero = libCamp_gf_MercHeroDeadUnit(lv_player, UserDataGetGameLink("MercHeroes", lv_instance, "Unit", 1));
+    if ((lv_hero == null) && (lv_instance == "SgtHammer")) {
+        lv_hero = libCamp_gf_MercHeroDeadUnit(lv_player, "SgtHammerSieged");
+    }
+    if ((lv_hero == null) && (lv_instance == "Cabal")) {
+        lv_hero = libCamp_gf_MercHeroDeadUnit(lv_player, "CabalAssault");
+    }
+    if (lv_hero == null) {
+        UIDisplayMessage(PlayerGroupSingle(lv_player), c_messageAreaError, StringToText("No fallen hero to revive."));
+        return true;
+    }
+    if (lv_compound != null) {
+        UnitSetPosition(lv_hero, PointWithOffsetPolar(UnitGetPosition(lv_compound), 3.0, 270.0), false);
+    }
+    UnitRevive(lv_hero);
+    UnitSetPropertyFixed(lv_hero, c_unitPropLifePercent, 100.0);
+    UnitSetPropertyFixed(lv_hero, c_unitPropShieldsPercent, 100.0);
+    UnitSetPropertyFixed(lv_hero, c_unitPropEnergyPercent, 100.0);
+    if ((lv_compound != null) && (UnitRallyPointTargetCount(lv_compound, 1) > 0)) {
+        if (UnitRallyPointTargetUnit(lv_compound, 1, 1) != null) {
+            UnitIssueOrder(lv_hero, OrderTargetingUnit(AbilityCommand("move", 0), UnitRallyPointTargetUnit(lv_compound, 1, 1)), c_orderQueueReplace);
+        }
+        else {
+            UnitIssueOrder(lv_hero, OrderTargetingPoint(AbilityCommand("move", 0), UnitRallyPointTargetPoint(lv_compound, 1, 1)), c_orderQueueReplace);
+        }
+    }
+    return true;
+}
+
+void libCamp_gt_MercHeroesReviveCast_Init () {
+    libCamp_gt_MercHeroesReviveCast = TriggerCreate("libCamp_gt_MercHeroesReviveCast_Func");
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveJimRaynor", 0), c_abilEffectStageCast, false);
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveHankHarnack", 0), c_abilEffectStageCast, false);
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveRattlesnake", 0), c_abilEffectStageCast, false);
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveED067", 0), c_abilEffectStageCast, false);
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveSgtHammer", 0), c_abilEffectStageCast, false);
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveCabal", 0), c_abilEffectStageCast, false);
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveFreyja", 0), c_abilEffectStageCast, false);
+    TriggerAddEventUnitAbility(libCamp_gt_MercHeroesReviveCast, null, AbilityCommand("MercReviveDukesRevenge", 0), c_abilEffectStageCast, false);
+}
+
 void libCamp_gt_MercHeroesRefreshOnLoad_Init () {
     libCamp_gt_MercHeroesRefreshOnLoad = TriggerCreate("libCamp_gt_MercHeroesRefreshOnLoad_Func");
     TriggerAddEventLoadGameDone(libCamp_gt_MercHeroesRefreshOnLoad);
@@ -14714,6 +14900,8 @@ void libCamp_InitTriggers () {
     libCamp_gt_TS_MercNewToAvailable_Init();
     libCamp_gt_TS_MercUIPurchase_Init();
     libCamp_gt_MercHeroesRefreshOnLoad_Init();
+    libCamp_gt_MercHeroesRespawnTimer_Init();
+    libCamp_gt_MercHeroesReviveCast_Init();
     libCamp_gt_TS_MercUIExit_Init();
     libCamp_gt_TS_BattleReportMissionReplay_Init();
     libCamp_gt_TS_BattleReportSceneReplay_Init();

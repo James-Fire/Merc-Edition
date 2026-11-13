@@ -358,4 +358,36 @@
         <NodeArray index="Use" Link="NotCountBehaviorBroodWarSkinCompleteOnlyAtUnit"/>
         <NodeArray index="Show" Link="NotCountBehaviorBroodWarSkinCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="MercHeroLimitJimRaynor">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeployJimRaynor"/>
+    </CRequirement>
+    <CRequirement id="MercHeroLimitHankHarnack">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeployHankHarnack"/>
+    </CRequirement>
+    <CRequirement id="MercHeroLimitRattlesnake">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeployRattlesnake"/>
+    </CRequirement>
+    <CRequirement id="MercHeroLimitED067">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeployED067"/>
+    </CRequirement>
+    <CRequirement id="MercHeroLimitSgtHammer">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeploySgtHammer"/>
+    </CRequirement>
+    <CRequirement id="MercHeroLimitCabal">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeployCabal"/>
+    </CRequirement>
+    <CRequirement id="MercHeroLimitFreyja">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeployFreyja"/>
+    </CRequirement>
+    <CRequirement id="MercHeroLimitDukesRevenge">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Use" Link="AndMercHeroDeployDukesRevenge"/>
+    </CRequirement>
 </Catalog>

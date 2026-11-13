@@ -354,4 +354,145 @@
     <CRequirementNot id="NotCountBehaviorBroodWarSkinCompleteOnlyAtUnit">
         <OperandArray index="0" value="CountBehaviorBroodWarSkinCompleteOnlyAtUnit"/>
     </CRequirementNot>
+    <CRequirementCountUnit id="CountUnitJimRaynorMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="JimRaynor" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveJimRaynor">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitJimRaynorMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitHankHarnackMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="HankHarnack" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveHankHarnack">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitHankHarnackMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitRattlesnakeMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Rattlesnake" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveRattlesnake">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitRattlesnakeMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitED067MercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ED067" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveED067">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitED067MercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitSgtHammerMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SgtHammer" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveSgtHammer">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitSgtHammerMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitSgtHammerSiegedMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SgtHammerSieged" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveSgtHammerSieged">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitSgtHammerSiegedMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementAnd id="AndMercHeroAliveSgtHammer">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray value="LTMercHeroAliveSgtHammer"/>
+        <OperandArray value="LTMercHeroAliveSgtHammerSieged"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitCabalFighterMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CabalFighter" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveCabalFighter">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitCabalFighterMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitCabalAssaultMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CabalAssault" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveCabalAssault">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitCabalAssaultMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementAnd id="AndMercHeroAliveCabal">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray value="LTMercHeroAliveCabalFighter"/>
+        <OperandArray value="LTMercHeroAliveCabalAssault"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitFreyjaMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Freyja" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveFreyja">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitFreyjaMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitDukesRevengeHeroMercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DukesRevengeHero" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroAliveDukesRevengeHero">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroDeployed"/>
+        <OperandArray index="0" value="CountUnitDukesRevengeHeroMercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementCountUnit id="CountUnitAlias_MercHeroQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_MercHero" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementLT id="LTMercHeroCap">
+        <Tooltip value="RequirementNode/Tooltip/MercHeroCap"/>
+        <OperandArray index="0" value="CountUnitAlias_MercHeroQueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLT>
+    <CRequirementAnd id="AndMercHeroDeployJimRaynor">
+        <OperandArray value="LTMercHeroAliveJimRaynor"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndMercHeroDeployHankHarnack">
+        <OperandArray value="LTMercHeroAliveHankHarnack"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndMercHeroDeployRattlesnake">
+        <OperandArray value="LTMercHeroAliveRattlesnake"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndMercHeroDeployED067">
+        <OperandArray value="LTMercHeroAliveED067"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndMercHeroDeploySgtHammer">
+        <OperandArray value="AndMercHeroAliveSgtHammer"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndMercHeroDeployCabal">
+        <OperandArray value="AndMercHeroAliveCabal"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndMercHeroDeployFreyja">
+        <OperandArray value="LTMercHeroAliveFreyja"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndMercHeroDeployDukesRevenge">
+        <OperandArray value="LTMercHeroAliveDukesRevengeHero"/>
+        <OperandArray value="LTMercHeroCap"/>
+    </CRequirementAnd>
 </Catalog>
