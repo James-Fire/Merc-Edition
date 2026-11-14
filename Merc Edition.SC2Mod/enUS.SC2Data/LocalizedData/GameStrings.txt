@@ -1706,3 +1706,6 @@ Weapon/Name/VanirMissiles=Vanir Missiles
 Weapon/Name/Warbot120mmCannon=120mm Cannon
 Weapon/Tip/NomadMissile=
 Weapon/Tip/PlasmaTorpedo=Deals <d ref="Effect,LightningBombDamage,Amount*Behavior,LightningBomb,Duration/Behavior,LightningBomb,Period"/> damage over <d ref="Behavior,LightningBomb,Duration"/> seconds. Does not stack.
+ConversationState/Hotspots/CantinaMercLaptop=Mercenary Commanders
+UI/MercenaryPanelTitle=COMMANDERS
+UI/MercenaryPanelSelectHeading=SELECT A CCOMMANDER
