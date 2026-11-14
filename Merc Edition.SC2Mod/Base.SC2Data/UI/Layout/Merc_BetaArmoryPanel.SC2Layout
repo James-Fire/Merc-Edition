@@ -352,7 +352,29 @@
             <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule5/ArmyUpgrade1"/>
             <TabListItem val="$parent/TechArmyCategoryPanel5/ArmoryCategoryModule5/ArmyUpgrade2"/>
 
-            <SelectedIndex val="200"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule1/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule1/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule2/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule2/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule3/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule3/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule4/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule4/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule5/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel6/ArmoryCategoryModule5/ArmyUpgrade2"/>
+
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule1/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule1/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule2/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule2/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule3/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule3/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule4/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule4/ArmyUpgrade2"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule5/ArmyUpgrade1"/>
+            <TabListItem val="$parent/TechArmyCategoryPanel7/ArmoryCategoryModule5/ArmyUpgrade2"/>
+
+            <SelectedIndex val="400"/>
         </Frame>
 
         <!-- Tech Purchase Info Panel -->
