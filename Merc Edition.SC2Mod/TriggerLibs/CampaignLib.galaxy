@@ -6383,6 +6383,8 @@ int libCamp_gf_AddPlanet (int lp_planet) {
     string lv_techTooltipID;
     string lv_mercBriefingUnit;
     string lv_mercBriefingKey;
+    int lv_mercBriefingIndex;
+    text lv_mercBriefingText;
 
     // Automatic Variable Declarations
     int autoA0174EFC_i;
@@ -6465,24 +6467,40 @@ int libCamp_gf_AddPlanet (int lp_planet) {
         PlanetSetTechnologyUnitLink(PlanetLastCreated(), "QuestionMark");
     }
 
-    // Merc Edition: per-mission display unit, set by the Merc GUI library (Set Briefing Display Unit, Init...Briefing Units).
-    lv_mercBriefingUnit = DataTableGetString(true, ("MercBriefingUnit/" + libCamp_gf_MapFile(lv_mission)));
-    if ((lv_mercBriefingUnit != null) && (lv_mercBriefingUnit != "")) {
-        PlanetSetTechnologyUnitLink(PlanetLastCreated(), lv_mercBriefingUnit);
-        if ((lv_mercBriefingUnit != "QuestionMark")) {
-            PlanetSetTechnologyName(PlanetLastCreated(), UnitTypeGetName(lv_mercBriefingUnit));
+    // Merc Edition: per-mission briefing technology box from User Data "MercBriefings".
+    // Instance Id = the mission's map file (TRaynor01, TTosh01, THorner05S...). Fields: Unit (model + default name),
+    // Name (overrides the name), Description (overrides the text). Unset fields keep the stock value.
+    // Read here (planet creation), after Load Campaign Data has filled the map file names.
+    lv_mercBriefingKey = "";
+    lv_mercBriefingIndex = 1;
+    while (lv_mercBriefingIndex <= UserDataInstanceCount("MercBriefings")) {
+        if ((UserDataInstance("MercBriefings", lv_mercBriefingIndex) == libCamp_gf_MapFile(lv_mission))) {
+            lv_mercBriefingKey = libCamp_gf_MapFile(lv_mission);
+            break;
         }
 
+        lv_mercBriefingIndex += 1;
     }
+    if ((lv_mercBriefingKey != "")) {
+        lv_mercBriefingUnit = UserDataGetGameLink("MercBriefings", lv_mercBriefingKey, "Unit", 1);
+        if ((lv_mercBriefingUnit != null) && (lv_mercBriefingUnit != "")) {
+            PlanetSetTechnologyUnitLink(PlanetLastCreated(), lv_mercBriefingUnit);
+            if ((lv_mercBriefingUnit != "QuestionMark")) {
+                PlanetSetTechnologyName(PlanetLastCreated(), UnitTypeGetName(lv_mercBriefingUnit));
+            }
 
-    lv_mercBriefingKey = ("MercBriefingName/" + libCamp_gf_MapFile(lv_mission));
-    if ((DataTableValueExists(true, lv_mercBriefingKey) == true)) {
-        PlanetSetTechnologyName(PlanetLastCreated(), DataTableGetText(true, lv_mercBriefingKey));
-    }
+        }
 
-    lv_mercBriefingKey = ("MercBriefingText/" + libCamp_gf_MapFile(lv_mission));
-    if ((DataTableValueExists(true, lv_mercBriefingKey) == true)) {
-        PlanetSetTechnologyText(PlanetLastCreated(), DataTableGetText(true, lv_mercBriefingKey));
+        lv_mercBriefingText = UserDataGetText("MercBriefings", lv_mercBriefingKey, "Name", 1);
+        if ((lv_mercBriefingText != null)) {
+            PlanetSetTechnologyName(PlanetLastCreated(), lv_mercBriefingText);
+        }
+
+        lv_mercBriefingText = UserDataGetText("MercBriefings", lv_mercBriefingKey, "Description", 1);
+        if ((lv_mercBriefingText != null)) {
+            PlanetSetTechnologyText(PlanetLastCreated(), lv_mercBriefingText);
+        }
+
     }
 
     lv_contactIndex = (libCamp_gv_tS_MissionContact[lv_missionIndex]);

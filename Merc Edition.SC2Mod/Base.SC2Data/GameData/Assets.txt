@@ -1,0 +1,6 @@
+UI/Merc_HelpTips_Divider=Assets\Textures\UI_HelpTips_Divider_Zerg.dds
+UI/Merc_HelpTips_Frame_Blink=Assets\Textures\UI_HelpTips_Frame_Blink_Zerg.dds
+UI/Merc_HelpTips_Divider_Terr=Assets\Textures\UI_HelpTips_Divider_Terr.dds
+UI/Merc_HelpTips_Divider_Prot=Assets\Textures\UI_HelpTips_Divider_Prot.dds
+UI/Merc_HelpTips_Frame_Blink_Terr=Assets\Textures\UI_HelpTips_Frame_Blink_Terr.dds
+UI/Merc_HelpTips_Frame_Blink_Prot=Assets\Textures\UI_HelpTips_Frame_Blink_Prot.dds

@@ -376,11 +376,15 @@
         <Fields Id="Icon" Type="Image" EditorColumn="2"/>
         <Fields Id="TechID" Type="Int"/>
         <Fields Id="PreviewCosts" Type="Int" EditorColumn="3"/>
+        <Fields Id="Video" Type="User" UserType="MercVideos"/>
         <Fields Id="TestPurchased" Type="Int">
             <Flags index="Modifiable" value="1"/>
         </Fields>
         <Instances Id="[Default]"/>
         <Instances Id="Bunker - Neosteel Cup Holders">
+            <User Type="MercVideos" Instance="Merc_TechPurchase_Medic">
+                <Field Id="Video"/>
+            </User>
             <Int Int="4">
                 <Field Id="TechID"/>
             </Int>
@@ -2100,5 +2104,142 @@
                 <Field Id="UnlockMission"/>
             </String>
         </Instances>
+    </CUser>
+    <CUser id="MercVideos">
+        <Fields Id="Template" Type="String" EditorColumn="1"/>
+        <Fields Id="Sound" Type="GameLink" GameLinkType="Sound" EditorColumn="2"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Merc_TechPurchase_Medic">
+            <String String="Merc_VideoClips/Merc_TechPurchase_Medic">
+                <Field Id="Template"/>
+            </String>
+            <GameLink GameLink="Merc_TechPurchase_Medic">
+                <Field Id="Sound"/>
+            </GameLink>
+        </Instances>
+    </CUser>
+    <CUser id="MercBriefings">
+        <Fields>
+            <Id value="Unit"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Unit"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Fields Id="Name" Type="Text" EditorColumn="2"/>
+        <Fields Id="Description" Type="Text" EditorColumn="3"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="TRaynor01">
+            <GameLink GameLink="WarPig">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TRaynor02">
+            <GameLink GameLink="SkibisAngel">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TRaynor03">
+            <GameLink GameLink="Bunker">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THanson01">
+            <GameLink GameLink="DevilDog">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THanson02">
+            <GameLink GameLink="Agitator">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THanson03A">
+            <GameLink GameLink="HelsAngelFighter">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THanson03B">
+            <GameLink GameLink="HelsAngelFighter">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTosh01">
+            <GameLink GameLink="BlockB">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTosh02">
+            <GameLink GameLink="SpartanCompany">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTosh03A">
+            <GameLink GameLink="QuestionMark">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTosh03B">
+            <GameLink GameLink="Phantom">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THorner01">
+            <GameLink GameLink="Copperhead">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THorner02">
+            <GameLink GameLink="Condor">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THorner03">
+            <GameLink GameLink="Harrier">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THorner04">
+            <GameLink GameLink="Titan">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="THorner05S">
+            <GameLink GameLink="HybridReaver">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTychus01">
+            <GameLink GameLink="HammerSecurity">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTychus02">
+            <GameLink GameLink="SiegeBreaker">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTychus03">
+            <GameLink GameLink="CharonDropship">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTychus04">
+            <GameLink GameLink="DuskWing">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TTychus05">
+            <GameLink GameLink="Starcruiser">
+                <Field Id="Unit"/>
+            </GameLink>
+        </Instances>
+        <Instances Id="TZeratul01"/>
+        <Instances Id="TZeratul02"/>
+        <Instances Id="TZeratul03"/>
+        <Instances Id="TZeratul04"/>
+        <Instances Id="TValerian01"/>
+        <Instances Id="TValerian02A"/>
+        <Instances Id="TValerian02B"/>
+        <Instances Id="TValerian03"/>
     </CUser>
 </Catalog>

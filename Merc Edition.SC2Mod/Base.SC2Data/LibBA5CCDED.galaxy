@@ -73,6 +73,8 @@ void libBA5CCDED_InitVariables () {
     }
     libBA5CCDED_gv_mU_Armory.lv_inputBlocker = c_invalidDialogControlId;
     libBA5CCDED_gv_mU_TestCredits = 420000;
+    libBA5CCDED_gv_mV_Host = c_invalidDialogControlId;
+    libBA5CCDED_gv_mV_Clip = c_invalidDialogControlId;
 }
 
 // Functions
@@ -784,6 +786,8 @@ void libBA5CCDED_gf_MU_HookupUI () {
     libBA5CCDED_gv_mU_Armory.lv_techPurchaseButton = DialogControlLastCreated();
     DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypeButton, libNtve_gf_ConvertStringToUILayoutFrameName("CloseButton"));
     libBA5CCDED_gv_mU_Armory.lv_closeButton = DialogControlLastCreated();
+    DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypePanel, libNtve_gf_ConvertStringToUILayoutFrameName("CompositeArmoryPanel/VideoSurface/VideoClipHost"));
+    libBA5CCDED_gv_mV_Host = DialogControlLastCreated();
     DialogControlHookup(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, c_triggerControlTypePanel, libNtve_gf_ConvertStringToUILayoutFrameName("InputBlocker"));
     libBA5CCDED_gv_mU_Armory.lv_inputBlocker = DialogControlLastCreated();
 }
@@ -964,6 +968,7 @@ void libBA5CCDED_gf_MU_SetInfoPanel (string lp_upgrade) {
     // Implementation
     if ((lp_upgrade == null)) {
         DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armoryPanel, PlayerGroupAll(), "PurchaseState", "Empty");
+        libBA5CCDED_gf_MV_StopVideo();
         return ;
     }
 
@@ -987,6 +992,7 @@ void libBA5CCDED_gf_MU_SetInfoPanel (string lp_upgrade) {
             }
         }
     }
+    libBA5CCDED_gf_MV_PlayVideo(UserDataGetUserInstance("MercArmoryUpgrades", lp_upgrade, "Video", 1));
 }
 
 int libBA5CCDED_gf_MU_UpgradeTech (string lp_upgrade) {
@@ -1064,6 +1070,39 @@ void libBA5CCDED_gf_MU_SetUpgradePurchased (string lp_upgrade) {
     // Automatic Variable Declarations
     // Implementation
     UserDataSetInt("MercArmoryUpgrades", lp_upgrade, "TestPurchased", 1, 1);
+}
+
+void libBA5CCDED_gf_MV_StopVideo () {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((libBA5CCDED_gv_mV_Clip != c_invalidDialogControlId)) {
+        DialogControlDestroy(libBA5CCDED_gv_mV_Clip);
+        libBA5CCDED_gv_mV_Clip = c_invalidDialogControlId;
+    }
+
+    SoundStop(libBA5CCDED_gv_mV_Sound, false);
+    SoundChannelStop(PlayerGroupAll(), c_soundCategoryUser1);
+    libBA5CCDED_gv_mV_Current = null;
+}
+
+void libBA5CCDED_gf_MV_PlayVideo (string lp_video) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((lp_video == null)) {
+        libBA5CCDED_gf_MV_StopVideo();
+        return ;
+    }
+
+    if ((lp_video == libBA5CCDED_gv_mV_Current)) {
+        return ;
+    }
+
+    libBA5CCDED_gf_MV_StopVideo();
+    DialogControlCreateInPanelFromTemplate(libBA5CCDED_gv_mV_Host, c_triggerControlTypeImage, libNtve_gf_ConvertStringToUILayoutFrameName(UserDataGetString("MercVideos", lp_video, "Template", 1)));
+    libBA5CCDED_gv_mV_Clip = DialogControlLastCreated();
+    SoundPlayForPlayer(SoundLink(UserDataGetGameLink("MercVideos", lp_video, "Sound", 1), c_soundIndexAny), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    libBA5CCDED_gv_mV_Sound = SoundLastPlayed();
+    libBA5CCDED_gv_mV_Current = lp_video;
 }
 
 void libBA5CCDED_gf_SetBriefingDisplayUnit (int lp_mission, string lp_unit) {
@@ -1750,7 +1789,7 @@ bool libBA5CCDED_gt_InitBriefingUnits_Func (bool testConds, bool runActions) {
     libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus03, "CharonDropship");
     libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus04, "DuskWing");
     libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTychus05, "Starcruiser");
-    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh01, "MercReaper");
+    libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh01, "BlockB");
     libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh02, "SpartanCompany");
     libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh03A, "QuestionMark");
     libBA5CCDED_gf_SetBriefingDisplayUnit(libCamp_ge_MapID_MapTTosh03B, "Phantom");
@@ -3183,6 +3222,7 @@ bool libBA5CCDED_gt_MU_CloseButtonPressed_Func (bool testConds, bool runActions)
     }
 
     TriggerExecute(libBA5CCDED_gt_CloseButtonSFX, true, false);
+    libBA5CCDED_gf_MV_StopVideo();
     DialogSetVisible(libBA5CCDED_gv_mU_Armory.lv_armoryDialog, PlayerGroupAll(), false);
     libCamp_gf_MercArmoryClosed();
     return true;

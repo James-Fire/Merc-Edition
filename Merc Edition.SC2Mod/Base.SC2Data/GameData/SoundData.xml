@@ -1692,4 +1692,10 @@
         <PlayDelay value="0,100"/>
         <Volume value="-15.000000,-15.000000"/>
     </CSound>
+    <CSound id="Merc_TechPurchase_Medic" parent="UI">
+        <Category value="User1"/>
+        <LoopCount value="-1"/>
+        <AssetArray File="Assets\Sounds\Merc_TechPurchase_Medic.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
 </Catalog>

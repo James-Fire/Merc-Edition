@@ -56,6 +56,10 @@ timer libBA5CCDED_gv_hillRespawnTimer;
 libBA5CCDED_gs_MU_Armory libBA5CCDED_gv_mU_Armory;
 int libBA5CCDED_gv_mU_TestCredits;
 bool libBA5CCDED_gv_mU_PurchaseInProgress;
+sound libBA5CCDED_gv_mV_Sound;
+string libBA5CCDED_gv_mV_Current;
+int libBA5CCDED_gv_mV_Host;
+int libBA5CCDED_gv_mV_Clip;
 
 // Function Declarations
 void libBA5CCDED_gf_SpawnZeusonGameStart (point lp_spawnPosition);
@@ -86,6 +90,8 @@ bool libBA5CCDED_gf_MU_UpgradeIsHidden (string lp_upgrade);
 bool libBA5CCDED_gf_MU_UnitHasVisibleUpgrade (string lp_unit);
 bool libBA5CCDED_gf_MU_UpgradeIsPurchased (string lp_upgrade);
 void libBA5CCDED_gf_MU_SetUpgradePurchased (string lp_upgrade);
+void libBA5CCDED_gf_MV_StopVideo ();
+void libBA5CCDED_gf_MV_PlayVideo (string lp_video);
 void libBA5CCDED_gf_SetBriefingDisplayUnit (int lp_mission, string lp_unit);
 void libBA5CCDED_gf_SetBriefingDisplayText (int lp_mission, text lp_name, text lp_description);
 

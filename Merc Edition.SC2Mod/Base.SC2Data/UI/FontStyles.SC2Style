@@ -17,4 +17,13 @@
     <Style name="BetaArmory_InfoItemName" template="PurchasePanelSelectedPurchaseItemName" height="26" textcolor="255,255,255,255"/>
     <Style name="BetaArmory_InfoItemUpgrade" template="PurchasePanelSelectedPurchaseItemDescription" height="18" textcolor="#BetaArmory_Green" glowcolor="#BetaArmory_Green"/>
     <Style name="BetaArmory_InfoItemDescription" font="UI\Fonts\EurostileExt-Reg.otf" template="PurchasePanelSelectedPurchaseItemDescription" height="16" textcolor="255,255,255,255"/>
+
+    <!-- Help tips panel (ported from Evo Swarm_HelpTip_*) -->
+    <Style name="Merc_HelpTip_Text" font="#FontStandard" height="18" vjustify="Middle" styleflags="Shadow" textcolor="255,255,165,77"/>
+    <Style name="Merc_HelpTip_Title" font="#FontHeaderExtended" height="18" vjustify="Middle" styleflags="Glow" textcolor="255,255,255,255" glowcolor="255,201,28,28"/>
+    <!-- Race variants (from Evo _BWTe/_BWPr); picked by the @@ race-suffix lookup -->
+    <Style name="Merc_HelpTip_Text_Terr" template="Merc_HelpTip_Text" textcolor="255,158,255,174"/>
+    <Style name="Merc_HelpTip_Title_Terr" template="Merc_HelpTip_Title" glowcolor="255,96,255,0"/>
+    <Style name="Merc_HelpTip_Text_Prot" template="Merc_HelpTip_Text" textcolor="255,110,170,255"/>
+    <Style name="Merc_HelpTip_Title_Prot" template="Merc_HelpTip_Title" glowcolor="255,0,45,255"/>
 </StyleFile>
