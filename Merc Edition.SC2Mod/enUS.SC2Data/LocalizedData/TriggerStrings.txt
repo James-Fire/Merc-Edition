@@ -277,3 +277,4 @@ ParamDef/Name/lib_BA5CCDED_C63BDA41=Description
 FunctionDef/Name/lib_BA5CCDED_9F9DBF5F=Set Briefing Display Text
 FunctionDef/Grammar/lib_BA5CCDED_9F9DBF5F=Show ~name~ and ~description~ in the briefing technology box of ~mission~
 FunctionDef/Hint/lib_BA5CCDED_9F9DBF5F=Sets the technology name and description the star map briefing shows for this mission, replacing the stock tech group text. Without it, a mission with a Set Briefing Display Unit shows that unit's name and the stock description. Read by libCamp_gf_AddPlanet in CampaignLib.galaxy through the global data table keys "MercBriefingName/<map file>" and "MercBriefingText/<map file>". Call it from Init...Briefing Units.
+Variable/Name/lib_BA5CCDED_7CE2D424=ModuleI
