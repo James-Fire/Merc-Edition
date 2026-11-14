@@ -468,12 +468,16 @@
             <Anchor side="Right" relative="$ArmoryPanelBackground" pos="Max" offset="-40"/>
             <Anchor side="Bottom" relative="$ArmoryPanelBackground" pos="Max" offset="-20"/>
 
-            <Width val="250"/>
-            <Height val="130"/>
+            <Width val="300"/>
+            <Height val="150"/>
 
             <NormalImage val="NormalImage"/>
             <HoverImage val="HoverImage"/>
             <HitTestFrame val="HitTestFrame"/>
+            <Label val="Label"/>
+
+            <Shortcut val="@UI/Close_Hotkey"/>
+            <Text val="@UI/Close_Control"/>
 
             <Frame type="Frame" name="HitTestFrame">
                 <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
@@ -501,8 +505,7 @@
             <Frame type="Label" name="Label">
                 <Anchor relative="$parent/HitTestFrame"/>
 
-                <Style val="StoryModePlayBackButton"/>
-                <Text val="@UI/Exit"/>
+                <Style val="StandardLargePanelButton_Terr"/>
             </Frame>
         </Frame>
 
