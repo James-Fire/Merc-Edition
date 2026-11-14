@@ -2,6 +2,8 @@
 <Desc>
     <Include path="UI/Layout/Merc_BetaArmoryTemplates.SC2Layout"/>
     <Include path="UI/Layout/Merc_BetaArmoryPanel.SC2Layout"/>
+    <Include path="UI/Layout/Merc_VideoClips.SC2Layout"/>
     <Include path="UI/Layout/Merc_VictoryPanel.SC2Layout"/>
     <Include path="UI/Layout/Merc_BattleReportPanel.SC2Layout"/>
+    <Include path="UI/Layout/Merc_HelpPanel.SC2Layout"/>
 </Desc>
