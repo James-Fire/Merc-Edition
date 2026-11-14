@@ -35,6 +35,15 @@
                 <Texture val="Assets/Textures/UI_BetaArmory_TestPreview.dds"/>
             </Frame>
 
+            <!-- Sprite Sheet Video -->
+            <Frame type="Image" name="VideoSurface">
+                <Anchor relative="$parent/GlassOverlay"/>
+
+                <TextureType val="Normal"/>
+                <Visible val="false"/>
+                <AcceptsMouse val="false"/>
+            </Frame>
+
             <Frame type="Image" name="GlassOverlay">
                 <Anchor side="Left" relative="$parent/VideoFrame" pos="Min" offset="17"/>
                 <Anchor side="Right" relative="$parent/VideoFrame" pos="Max" offset="-25"/>
