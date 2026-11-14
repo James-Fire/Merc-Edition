@@ -795,7 +795,7 @@ void libBA5CCDED_gf_MU_UpdateArmoryPanel () {
     int lv_upgradeI;
     string lv_unit;
     string lv_upgrade;
-    int lv_shown;
+    int lv_moduleI;
 
     // Automatic Variable Declarations
     const int autoD4FF6B39_ae = libBA5CCDED_gv_mU_ArmoryTechCategories;
@@ -804,6 +804,10 @@ void libBA5CCDED_gf_MU_UpdateArmoryPanel () {
     const int auto23C8F46D_ai = 1;
     const int auto98272034_ae = libBA5CCDED_gv_mU_ArmoryTechButtons;
     const int auto98272034_ai = 1;
+    const int auto9AA3584E_ae = libBA5CCDED_gv_mU_ArmoryTechUnits;
+    const int auto9AA3584E_ai = 1;
+    const int auto5CD7061D_ae = libBA5CCDED_gv_mU_ArmoryTechButtons;
+    const int auto5CD7061D_ai = 1;
 
     // Variable Initialization
 
@@ -811,11 +815,11 @@ void libBA5CCDED_gf_MU_UpdateArmoryPanel () {
     lv_categoryI = 1;
     for ( ; ( (autoD4FF6B39_ai >= 0 && lv_categoryI <= autoD4FF6B39_ae) || (autoD4FF6B39_ai < 0 && lv_categoryI >= autoD4FF6B39_ae) ) ; lv_categoryI += autoD4FF6B39_ai ) {
         libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_armyCategory_NameLabel[lv_categoryI], UserDataGetText("MercArmyTypes", UserDataInstance("MercArmyTypes", lv_categoryI), "Type Name", 1), PlayerGroupAll());
+        lv_moduleI = 1;
         lv_unitI = 1;
         for ( ; ( (auto23C8F46D_ai >= 0 && lv_unitI <= auto23C8F46D_ae) || (auto23C8F46D_ai < 0 && lv_unitI >= auto23C8F46D_ae) ) ; lv_unitI += auto23C8F46D_ai ) {
             lv_unit = UserDataGetUserInstance("MercArmyTypes", UserDataInstance("MercArmyTypes", lv_categoryI), "UnitType", lv_unitI);
             if ((lv_unit == null)) {
-                DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], PlayerGroupAll(), "DataState", "Empty");
                 continue;
             }
 
@@ -823,41 +827,50 @@ void libBA5CCDED_gf_MU_UpdateArmoryPanel () {
                 lv_unit = UserDataGetUserInstance("MercArmoryUnits", lv_unit, "AltUnit", 1);
             }
 
+            if ((UserDataGetUserInstance("MercArmoryUnits", lv_unit, "Upgrades", 1) != null) && (libBA5CCDED_gf_MU_UnitHasVisibleUpgrade(lv_unit) == false)) {
+                continue;
+            }
+
             if ((UserDataGetInt("MercArmyTypes", UserDataInstance("MercArmyTypes", lv_categoryI), "TitleFromUnit", 1) == 1) && (libBA5CCDED_gf_MU_UnitHasVisibleUpgrade(lv_unit) == true)) {
                 libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_armyCategory_NameLabel[lv_categoryI], UserDataGetText("MercArmoryUnits", lv_unit, "Name", 1), PlayerGroupAll());
             }
 
-            DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], PlayerGroupAll(), "DataState", "Normal");
-            libNtve_gf_SetDialogItemImage(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitIcon[lv_categoryI][lv_unitI], UserDataGetImagePath("MercArmoryUnits", lv_unit, "Icon", 1), PlayerGroupAll());
-            lv_shown = 0;
+            DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_moduleI], PlayerGroupAll(), "DataState", "Normal");
+            libNtve_gf_SetDialogItemImage(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitIcon[lv_categoryI][lv_moduleI], UserDataGetImagePath("MercArmoryUnits", lv_unit, "Icon", 1), PlayerGroupAll());
             lv_upgradeI = 1;
             for ( ; ( (auto98272034_ai >= 0 && lv_upgradeI <= auto98272034_ae) || (auto98272034_ai < 0 && lv_upgradeI >= auto98272034_ae) ) ; lv_upgradeI += auto98272034_ai ) {
                 lv_upgrade = UserDataGetUserInstance("MercArmoryUnits", lv_unit, "Upgrades", lv_upgradeI);
-                libBA5CCDED_gv_mU_Armory.lv_armyCategory_SlotUpgrade[lv_categoryI][lv_unitI][lv_upgradeI] = lv_upgrade;
+                libBA5CCDED_gv_mU_Armory.lv_armyCategory_SlotUpgrade[lv_categoryI][lv_moduleI][lv_upgradeI] = lv_upgrade;
                 if (((lv_upgrade == null) || (libBA5CCDED_gf_MU_UpgradeIsHidden(lv_upgrade) == true))) {
-                    DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), false);
+                    DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_moduleI][lv_upgradeI], PlayerGroupAll(), false);
                     continue;
                 }
 
-                DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), true);
-                lv_shown = (lv_shown + 1);
-                libNtve_gf_SetDialogItemImage(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeIcon[lv_categoryI][lv_unitI][lv_upgradeI], UserDataGetImagePath("MercArmoryUpgrades", lv_upgrade, "Icon", 1), PlayerGroupAll());
+                DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_moduleI][lv_upgradeI], PlayerGroupAll(), true);
+                libNtve_gf_SetDialogItemImage(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeIcon[lv_categoryI][lv_moduleI][lv_upgradeI], UserDataGetImagePath("MercArmoryUpgrades", lv_upgrade, "Icon", 1), PlayerGroupAll());
                 if ((libBA5CCDED_gf_MU_UpgradeIsPurchased(lv_upgrade) == true)) {
-                    DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Purchased");
+                    DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_moduleI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Purchased");
                 }
                 else {
                     if (((libBA5CCDED_gf_MU_UpgradeIsBuyable(lv_upgrade) == false) || (libBA5CCDED_gf_MU_UpgradeCost(lv_upgrade) > libCamp_gf_StoryCredits()))) {
-                        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Unaffordable");
+                        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_moduleI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Unaffordable");
                     }
                     else {
-                        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_unitI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Available");
+                        DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_moduleI][lv_upgradeI], PlayerGroupAll(), "UpgradeState", "Available");
                     }
                 }
             }
-            if ((lv_shown == 0) && (UserDataGetUserInstance("MercArmoryUnits", lv_unit, "Upgrades", 1) != null)) {
-                DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_unitI], PlayerGroupAll(), "DataState", "Empty");
+            lv_moduleI = (lv_moduleI + 1);
+        }
+        lv_moduleI = lv_moduleI;
+        for ( ; ( (auto9AA3584E_ai >= 0 && lv_moduleI <= auto9AA3584E_ae) || (auto9AA3584E_ai < 0 && lv_moduleI >= auto9AA3584E_ae) ) ; lv_moduleI += auto9AA3584E_ai ) {
+            DialogControlSetAnimationState(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UnitModule[lv_categoryI][lv_moduleI], PlayerGroupAll(), "DataState", "Empty");
+            lv_upgradeI = 1;
+            for ( ; ( (auto5CD7061D_ai >= 0 && lv_upgradeI <= auto5CD7061D_ae) || (auto5CD7061D_ai < 0 && lv_upgradeI >= auto5CD7061D_ae) ) ; lv_upgradeI += auto5CD7061D_ai ) {
+                lv_upgrade = null;
+                libBA5CCDED_gv_mU_Armory.lv_armyCategory_SlotUpgrade[lv_categoryI][lv_moduleI][lv_upgradeI] = lv_upgrade;
+                DialogControlSetVisible(libBA5CCDED_gv_mU_Armory.lv_armyCategory_UpgradeButton[lv_categoryI][lv_moduleI][lv_upgradeI], PlayerGroupAll(), false);
             }
-
         }
     }
     libNtve_gf_SetDialogItemText(libBA5CCDED_gv_mU_Armory.lv_creditsLabel, libBA5CCDED_gf_MU_FormatCredits(libCamp_gf_StoryCredits()), PlayerGroupAll());
