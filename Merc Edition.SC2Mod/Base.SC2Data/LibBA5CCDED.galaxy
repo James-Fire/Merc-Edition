@@ -1059,6 +1059,13 @@ void libBA5CCDED_gf_SetBriefingDisplayUnit (int lp_mission, string lp_unit) {
     DataTableSetString(true, ("MercBriefingUnit/" + libCamp_gf_MapFile(lp_mission)), (lp_unit));
 }
 
+void libBA5CCDED_gf_SetBriefingDisplayText (int lp_mission, text lp_name, text lp_description) {
+    // Automatic Variable Declarations
+    // Implementation
+    DataTableSetText(true, ("MercBriefingName/" + libCamp_gf_MapFile(lp_mission)), lp_name);
+    DataTableSetText(true, ("MercBriefingText/" + libCamp_gf_MapFile(lp_mission)), lp_description);
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
 // Trigger: Gonna need a bigger boat
@@ -2967,6 +2974,7 @@ bool libBA5CCDED_gt_MU_UpgradeButtonPressed_Func (bool testConds, bool runAction
         return true;
     }
 
+    TriggerExecute(libBA5CCDED_gt_UpgradeButtonSFX, true, false);
     libBA5CCDED_gf_MU_SetInfoPanel(libBA5CCDED_gf_MU_UsedUpgrade(EventDialogControl()));
     libBA5CCDED_gv_mU_Armory.lv_selected_Category = libBA5CCDED_gv_mU_Armory.lv_used_Category;
     libBA5CCDED_gv_mU_Armory.lv_selected_Unit = libBA5CCDED_gv_mU_Armory.lv_used_Unit;
@@ -2980,6 +2988,25 @@ bool libBA5CCDED_gt_MU_UpgradeButtonPressed_Func (bool testConds, bool runAction
 void libBA5CCDED_gt_MU_UpgradeButtonPressed_Init () {
     libBA5CCDED_gt_MU_UpgradeButtonPressed = TriggerCreate("libBA5CCDED_gt_MU_UpgradeButtonPressed_Func");
     TriggerAddEventDialogControl(libBA5CCDED_gt_MU_UpgradeButtonPressed, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: UpgradeButtonSFX
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_UpgradeButtonSFX_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    SoundPlayForPlayer(SoundLink("UIArmoryUpgradePressed", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_UpgradeButtonSFX_Init () {
+    libBA5CCDED_gt_UpgradeButtonSFX = TriggerCreate("libBA5CCDED_gt_UpgradeButtonSFX_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -3022,6 +3049,7 @@ bool libBA5CCDED_gt_MU_PurchaseButtonPressed_Func (bool testConds, bool runActio
         return true;
     }
 
+    TriggerExecute(libBA5CCDED_gt_PurchaseButtonSFX, true, false);
     lv_upgrade = libBA5CCDED_gv_mU_Armory.lv_selectedUpgrade;
     lv_cost = libBA5CCDED_gf_MU_UpgradeCost(lv_upgrade);
     lv_oldCredits = libCamp_gf_StoryCredits();
@@ -3054,6 +3082,30 @@ void libBA5CCDED_gt_MU_PurchaseButtonPressed_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: PurchaseButtonSFX
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_PurchaseButtonSFX_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    SoundPlayForPlayer(SoundLink("UIArmoryPurchaseButtonPress", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    SoundPlayForPlayer(SoundLink("UIArmoryPurchaseButtonPress2", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    SoundPlayForPlayer(SoundLink("UIArmoryPurchaseButtonPress3", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    SoundPlayForPlayer(SoundLink("UIArmoryCreditDeductLoop", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    Wait(1.7, c_timeGame);
+    SoundStop(SoundLastPlayed(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_PurchaseButtonSFX_Init () {
+    libBA5CCDED_gt_PurchaseButtonSFX = TriggerCreate("libBA5CCDED_gt_PurchaseButtonSFX_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: MU_CloseButtonPressed
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_MU_CloseButtonPressed_Func (bool testConds, bool runActions) {
@@ -3078,6 +3130,7 @@ bool libBA5CCDED_gt_MU_CloseButtonPressed_Func (bool testConds, bool runActions)
         return true;
     }
 
+    TriggerExecute(libBA5CCDED_gt_CloseButtonSFX, true, false);
     DialogSetVisible(libBA5CCDED_gv_mU_Armory.lv_armoryDialog, PlayerGroupAll(), false);
     libCamp_gf_MercArmoryClosed();
     return true;
@@ -3087,6 +3140,26 @@ bool libBA5CCDED_gt_MU_CloseButtonPressed_Func (bool testConds, bool runActions)
 void libBA5CCDED_gt_MU_CloseButtonPressed_Init () {
     libBA5CCDED_gt_MU_CloseButtonPressed = TriggerCreate("libBA5CCDED_gt_MU_CloseButtonPressed_Func");
     TriggerAddEventDialogControl(libBA5CCDED_gt_MU_CloseButtonPressed, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CloseButtonSFX
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_CloseButtonSFX_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    SoundPlayForPlayer(SoundLink("UIArmoryCloseButtonPressed", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    SoundPlayForPlayer(SoundLink("UIArmoryCloseButtonPressed2", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_CloseButtonSFX_Init () {
+    libBA5CCDED_gt_CloseButtonSFX = TriggerCreate("libBA5CCDED_gt_CloseButtonSFX_Func");
 }
 
 void libBA5CCDED_InitTriggers () {
@@ -3145,8 +3218,11 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_MU_Init_Init();
     libBA5CCDED_gt_MU_OpenArmory_Init();
     libBA5CCDED_gt_MU_UpgradeButtonPressed_Init();
+    libBA5CCDED_gt_UpgradeButtonSFX_Init();
     libBA5CCDED_gt_MU_PurchaseButtonPressed_Init();
+    libBA5CCDED_gt_PurchaseButtonSFX_Init();
     libBA5CCDED_gt_MU_CloseButtonPressed_Init();
+    libBA5CCDED_gt_CloseButtonSFX_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
