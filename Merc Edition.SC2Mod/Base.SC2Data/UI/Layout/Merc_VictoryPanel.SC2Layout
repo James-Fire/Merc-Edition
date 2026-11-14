@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <!--
+        Void.SC2Campaign (LotV_VictoryPanelTerran.SC2Layout)
+        Modification Source
+    -->
+    <Frame type="VictoryPanel" name="VictoryPanelTemplate" file="VictoryPanel">
+
+        <Frame type="Frame" name="MainPanel">
+
+            <Frame type="Image" name="BackgroundImage">
+
+                <Anchor side="Bottom" relative="$parent/BorderImage" pos="Min" offset="412"/>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>
