@@ -2313,6 +2313,45 @@ void libBA5CCDED_gt_ETCFaceMeltShake_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: ETC Stage Dive
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_ETCStageDive_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_l800ETC;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_l800ETC = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitSetState(lv_l800ETC, c_unitStateInvulnerable, true);
+    libNtve_gf_MakeUnitUncommandable(lv_l800ETC, true);
+    UnitSetHeight(lv_l800ETC, 50.0, 1.0);
+    CameraPan(1, EventPlayerEffectUsedPoint(c_effectLocationTargetPoint), 1.0, -1, 10.0, false);
+    CameraLockInput(EventPlayer(), true);
+    Wait(1.75, c_timeGame);
+    UnitSetPosition(lv_l800ETC, EventPlayerEffectUsedPoint(c_effectLocationTargetPoint), false);
+    SoundPlayForPlayer(SoundLink("StageDiveLand", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    SoundPlayForPlayer(SoundLink("StageDiveLand2", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    UnitSetHeight(lv_l800ETC, 0.0, 0.25);
+    CameraLockInput(EventPlayer(), false);
+    Wait(1.0, c_timeGame);
+    UnitSetState(lv_l800ETC, c_unitStateInvulnerable, false);
+    libNtve_gf_MakeUnitUncommandable(lv_l800ETC, false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_ETCStageDive_Init () {
+    libBA5CCDED_gt_ETCStageDive = TriggerCreate("libBA5CCDED_gt_ETCStageDive_Func");
+    TriggerAddEventPlayerEffectUsed(libBA5CCDED_gt_ETCStageDive, c_playerAny, "StageDiveCP");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Spartan Company/Cabal Shell Shower Full
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_SpartanCompanyCabalShellShowerFull_Func (bool testConds, bool runActions) {
@@ -3194,6 +3233,7 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_ETCDeathMetalDance_Init();
     libBA5CCDED_gt_ETCDeathMetalShake_Init();
     libBA5CCDED_gt_ETCFaceMeltShake_Init();
+    libBA5CCDED_gt_ETCStageDive_Init();
     libBA5CCDED_gt_SpartanCompanyCabalShellShowerFull_Init();
     libBA5CCDED_gt_SiegeBreakerGraduatingRange_Init();
     libBA5CCDED_gt_SkibisAngelRepairDrone_Init();

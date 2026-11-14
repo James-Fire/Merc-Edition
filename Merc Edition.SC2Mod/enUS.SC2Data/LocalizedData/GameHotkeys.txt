@@ -108,6 +108,7 @@ Button/Hotkey/SpectreNo15Nuke=N
 Button/Hotkey/SpiderMineReplenishCondor=R
 Button/Hotkey/SprayandPay=R
 Button/Hotkey/StabilizerHeal=E
+Button/Hotkey/StageDive=R
 Button/Hotkey/SuperStim=T
 Button/Hotkey/TarBomb=T
 Button/Hotkey/ThornShield=T

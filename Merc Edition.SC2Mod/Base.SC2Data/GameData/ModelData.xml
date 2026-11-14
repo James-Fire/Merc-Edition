@@ -1139,6 +1139,34 @@
         <Model value="Assets\Effects\Protoss\MothershipMissile\MothershipMissile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="StageDiveChannel">
+        <Model value="Assets\Effects\Zerg\HybridEnergyDrainCast\HybridEnergyDrainCast.m3"/>
+        <AnimSpeed value="3.000000"/>
+    </CModel>
+    <CModel id="StageDiveConfetti">
+        <Model value="Assets\Effects\Neutral\Confetti_Death\Confetti_Death.m3"/>
+        <AnimSpeed value="2.000000"/>
+        <ScaleMax value="6.000000,6.000000,6.000000"/>
+        <ScaleMin value="6.000000,6.000000,6.000000"/>
+    </CModel>
+    <CModel id="StageDiveNuke">
+        <Model value="Assets\Effects\Terran\Nuke\Nuke.m3"/>
+        <AnimSpeed value="3.000000"/>
+        <ScaleMax value="1.500000,1.500000,1.000000"/>
+        <ScaleMin value="1.500000,1.500000,1.000000"/>
+    </CModel>
+    <CModel id="StageDivePrepare">
+        <Model value="Assets\Effects\Terran\Confetti_Explosion_Large\Confetti_Explosion_Large.m3"/>
+        <AnimSpeed value="4.000000"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="StageDiveShockwave">
+        <Model value="Assets\Effects\Zerg\L2D_StankShockwave\L2D_StankShockwave.m3"/>
+        <AnimSpeed value="0.660000"/>
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    </CModel>
     <CModel id="StarcruiserYamatoImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\CerberusYamatoMissileImpact\CerberusYamatoMissileImpact.m3"/>
         <EditorCategories value="Race:Terran"/>

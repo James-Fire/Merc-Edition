@@ -108,6 +108,7 @@
         <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCUBB,SpawnCount" Value="0"/>
         <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCP,PeriodCount" Value="1"/>
     </CUpgrade>
+    <CUpgrade id="L800ETCStageDive"/>
     <CUpgrade id="NaniteEmitter"/>
     <CUpgrade id="PlagueMunitions"/>
     <CUpgrade id="SlagShellsBellyBonus">

@@ -121,6 +121,7 @@ trigger libBA5CCDED_gt_ETCDeathMetalCD;
 trigger libBA5CCDED_gt_ETCDeathMetalDance;
 trigger libBA5CCDED_gt_ETCDeathMetalShake;
 trigger libBA5CCDED_gt_ETCFaceMeltShake;
+trigger libBA5CCDED_gt_ETCStageDive;
 trigger libBA5CCDED_gt_SpartanCompanyCabalShellShowerFull;
 trigger libBA5CCDED_gt_SiegeBreakerGraduatingRange;
 trigger libBA5CCDED_gt_SkibisAngelRepairDrone;

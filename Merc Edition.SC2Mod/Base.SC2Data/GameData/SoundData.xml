@@ -513,6 +513,29 @@
     <CSound id="Raven_AutoTurretAttackLaunch">
         <DupeDestroyCount value="20"/>
     </CSound>
+    <CSound id="StageDiveCast" parent="Spell">
+        <AssetArray File="Assets\Sounds\ETC\ETC_StageDive_Launch01.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="StageDiveImpact" parent="Spell">
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_NuclearStrikeImpact0.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="StageDiveImpact2" parent="Spell">
+        <AssetArray File="Assets\Sounds\Zurvan_TentacleImpact_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zurvan_TentacleImpact_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zurvan_TentacleImpact_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zurvan_TentacleImpact_5.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="StageDiveLand2" parent="Spell">
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombDrop_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombDrop_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombDrop_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombDrop_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombDrop_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombDrop_06.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="StageDiveLand" parent="Spell">
+        <AssetArray File="Assets\Sounds\ETC\ETC_StageDive_Impact01.ogg" FacialGroup=""/>
+    </CSound>
     <CSound id="TaurenSpaceMarine_AttackImpact">
         <AssetArray index="0" File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact0.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
         <AssetArray index="1" File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact1.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
@@ -538,6 +561,52 @@
         <AssetArray index="7" removed="1"/>
         <AssetArray index="8" removed="1"/>
         <Pitch value="3.000000,6.000000"/>
+    </CSound>
+    <CSound id="L800ETCHelp" parent="TerranAck">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Help01.ogg" FacialGroup=""/>
+        <Volume value="1.500000,1.500000"/>
+    </CSound>
+    <CSound id="L800ETCPissed" parent="Pissed">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Pissed01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Pissed02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Pissed03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Pissed04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Pissed05.ogg" FacialGroup=""/>
+        <Volume value="1.500000,1.500000"/>
+    </CSound>
+    <CSound id="L800ETCWhat" parent="TerranAck">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What07.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What08.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What09.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_What10.ogg" FacialGroup=""/>
+        <Volume value="1.500000,1.500000"/>
+    </CSound>
+    <CSound id="L800ETCYes" parent="TerranAck">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes07.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes08.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes09.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\ETC\L800_Yes10.ogg" FacialGroup=""/>
+        <Volume value="1.500000,1.500000"/>
+    </CSound>
+    <CSound id="L800ETCDeath" parent="Death">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Dead_Cue_02.wav" FacialGroup=""/>
     </CSound>
     <CSound id="TychusAttackLaunch" parent="Combat">
         <EditorCategories value="Race:Terran"/>
