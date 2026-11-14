@@ -35,7 +35,6 @@
     </CRequirementCountBehavior>
     <CRequirementCountUnit id="CountUnitARESWarbotMercModQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="ARESWarbotMercMod" State="QueuedOrBetter"/>
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAlias_SpiderMineCompleteOnlyAtUnit">
@@ -136,6 +135,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeKelmorianCuttersCompleteOnly">
         <Count Link="KelmorianCutters" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeL800ETCStageDiveCompleteOnly">
+        <Count Link="L800ETCStageDive" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeLegionSystemsCompleteOnly">
         <Count Link="LegionSystems" State="CompleteOnly"/>

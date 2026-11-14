@@ -21,6 +21,8 @@
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
 <Sound id="Spectre15NukeLaunch"/>
+<Sound id="StageDiveLand2"/>
+<Sound id="StageDiveLand"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
 <Sound id="UIArmoryCloseButtonPressed"/>
 <Sound id="UIArmoryCloseButtonPressed2"/>

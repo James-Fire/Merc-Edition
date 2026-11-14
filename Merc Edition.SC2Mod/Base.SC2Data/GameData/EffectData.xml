@@ -704,6 +704,24 @@
         <ImpactEffect value="SpotterBioDischargeDamage"/>
         <AmmoUnit value="SpotterBioDischargeWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="StageDiveCP">
+        <EditorCategories value=""/>
+        <InitialDelay value="2"/>
+        <InitialEffect value="StageDiveDamage"/>
+        <ExpireDelay value="3"/>
+        <RevealRadius value="15"/>
+        <RevealFlags index="Unfog" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="StageDiveDamage">
+        <EditorCategories value=""/>
+        <AttributeBonus index="Structure" value="500"/>
+        <Amount value="500"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="5" Fraction="1"/>
+        <AreaArray Radius="7" Fraction="0.33"/>
+        <AreaArray Radius="14" Fraction="0.1"/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectEnumArea id="StarcruiserYamatoSA">
         <EditorCategories value=""/>
         <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign"/>

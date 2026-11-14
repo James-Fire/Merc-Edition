@@ -1178,6 +1178,52 @@
     <CActorMissile id="SpotterBioDischargeWeaponMissile" parent="GenericAttackMissile" unitName="SpotterBioDischargeWeapon">
         <Model value="SpotterBioDischargeMissileModel"/>
     </CActorMissile>
+    <CActorSound id="StageDiveCast" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.StageDive.SourcePrepStart" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="StageDiveChannel" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Abil.StageDive.SourcePrepStart" Send="Create"/>
+        <On Terms="Abil.StageDive.SourcePrepStop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,255,255 3.000000}"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorModel id="StageDiveConfetti" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StageDiveDamage.Start; At Caster" Send="Create"/>
+        <HostSiteOps HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
+    <CActorSound id="StageDiveImpact" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StageDiveDamage.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="StageDiveImpact2" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StageDiveDamage.Start" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="StageDiveNuke" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StageDiveDamage.Start; At Caster" Send="Create"/>
+        <HostSiteOps HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
+    <CActorModel id="StageDivePrepare" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.StageDive.SourcePrepStop" Send="Create"/>
+        <HostSiteOps Ops="SOpShadow" HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
+    <CActorRange id="StageDiveRange" parent="RangeAbil" abil="StageDive">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconScale value="0.018000,0.006000"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorModel id="StageDiveShockwave" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.StageDiveDamage.Start; At Caster" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,128,64 5.000000}"/>
+        <HostSiteOps HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
     <CActorUnit id="Stalker">
         <On Terms="ActorCreation; ValidateUnit UseAnduinProtoss@Validator" Send="ModelSwap AnduinStalker"/>
     </CActorUnit>
@@ -2030,7 +2076,7 @@
     </CActorUnit>
     <CActorUnit id="L800ETC" parent="GenericUnitStandard" unitName="L800ETC">
         <Aliases value="_UnitSmall"/>
-        <DeathArray index="Normal" SoundLink="TaurenSpaceMarine_Explode"/>
+        <DeathArray index="Normal" SoundLink="TaurenSpaceMarine_Explode" VoiceLink="L800ETCDeath"/>
         <PortraitModel value="TaurenMarinePortrait"/>
         <StandAnimTurnTime value="3"/>
         <WalkAnimMoveSpeed value="3"/>
@@ -2041,12 +2087,12 @@
         </GroupIcon>
         <HeroIcon value="Assets\Textures\BTN-Unit-Terran-TaurenSpaceMarine.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
-        <SoundArray index="Ready" value="TaurenSpaceMarine_Ready"/>
-        <SoundArray index="Help" value="TaurenSpaceMarine_Help"/>
-        <SoundArray index="What" value="TaurenSpaceMarine_What"/>
-        <SoundArray index="Yes" value="TaurenSpaceMarine_Yes"/>
-        <SoundArray index="Attack" value="TaurenSpaceMarine_Attack"/>
-        <SoundArray index="Pissed" value="TaurenSpaceMarine_Pissed"/>
+        <SoundArray index="Ready" value="L800ETCPissed"/>
+        <SoundArray index="Help" value="L800ETCHelp"/>
+        <SoundArray index="What" value="L800ETCWhat"/>
+        <SoundArray index="Yes" value="L800ETCYes"/>
+        <SoundArray index="Attack" value="L800ETCYes"/>
+        <SoundArray index="Pissed" value="L800ETCPissed"/>
         <UnitIcon value="Assets\Textures\BTN-Unit-Terran-TaurenSpaceMarine.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-taurenspacemarine.dds"/>

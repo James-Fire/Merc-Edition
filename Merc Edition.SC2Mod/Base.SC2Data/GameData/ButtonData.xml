@@ -80,8 +80,8 @@
         <AlertIcon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
     </CButton>
     <CButton id="DeathMetal">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons and Wireframes\etc-deathmetal.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\etc-deathmetal.dds"/>
     </CButton>
     <CButton id="DemonRockets">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
@@ -99,8 +99,8 @@
         <Universal value="1"/>
     </CButton>
     <CButton id="FaceMelt">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons and Wireframes\etc-facemelt.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\etc-facemelt.dds"/>
     </CButton>
     <CButton id="GrandArchonConjure">
         <Icon value="Assets\Textures\talent-artanis-level01-swiftretribution.dds"/>
@@ -111,8 +111,8 @@
         <AlertIcon value="Assets\Textures\btn-upgrade-tychus-firebat-wildflamefuel.dds"/>
     </CButton>
     <CButton id="PowerSlide">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons and Wireframes\etc-powerslide.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\etc-powerslide.dds"/>
     </CButton>
     <CButton id="SpectreNo15Nuke">
         <Icon value="Assets\Textures\btn-ability-terran-nuclearstrike-color.dds"/>
@@ -122,6 +122,10 @@
     <CButton id="RaptoroftheMists">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="StageDive">
+        <Icon value="Assets\Icons and Wireframes\etc-stagedive.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\etc-stagedive.dds"/>
     </CButton>
     <CButton id="ThornShield">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
