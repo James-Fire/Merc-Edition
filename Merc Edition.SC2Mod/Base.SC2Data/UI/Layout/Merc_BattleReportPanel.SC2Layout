@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <!--
+        Restores the WoL battle report panel by hiding the LotV added frames
+        re-anchoring elements and restoring colors to WoL values.
+    -->
+    <!-- Constants -->
+    <Constant name="BattleReportListBoxItemNormalBackgroundMission" val="7fd5ec"/>
+    <Constant name="BattleReportListBoxItemNormalBackgroundCinematic" val="d49736"/>
+    <Constant name="BattleReportListBoxItemHoverBackgroundMission" val="92def0"/>
+    <Constant name="BattleReportListBoxItemHoverBackgroundCinematic" val="d49736"/>
+    <Constant name="BattleReportListBoxItemNormalTextMission" val="92def0"/>
+    <Constant name="BattleReportListBoxItemNormalTextCinematic" val="ffc616"/>
+    <Constant name="BattleReportNormalDifficultyAvailable" val="00ff09"/>
+    <Constant name="BattleReportHoverDifficultyCompleted" val="7fd7eb"/>
+    <Constant name="BattleReportHoverDifficultyAvailable" val="00fd00"/>
+
+    <!-- Restored Battle Report Panel -->
+
+    <Frame type="BattleReportListBoxItem" name="BattleReportListBoxItem" file="BattleReportPanel">
+        <Frame type="Image" name="NormalBackgroundImage">
+            <Texture val="@@UI/BattleReportListBoxBackgroundNormal" layer="0"/>
+            <TextureType val="Border" layer="0"/>
+            <StateCount val="2" layer="0"/>
+            <BlendMode val="Add"/>
+        </Frame>
+        <Frame type="Image" name="HoverBackgroundImage">
+            <Texture val="@@UI/BattleReportListBoxBackgroundHover" layer="0"/>
+            <TextureType val="Border" layer="0"/>
+            <StateCount val="2" layer="0"/>
+            <BlendMode val="Add"/>
+        </Frame>
+        <Frame type="Image" name="NormalButtonBackgroundImage">
+            <Anchor side="Bottom" relative="$parent/NormalBackgroundImage" pos="Max" offset="-12"/>
+        </Frame>
+        <Frame type="Image" name="HoverButtonBackgroundImage">
+            <Anchor side="Bottom" relative="$parent/NormalBackgroundImage" pos="Max" offset="-12"/>
+        </Frame>
+        <Frame type="Image" name="ButtonImage">
+            <Anchor side="Top" relative="$parent/NormalBackgroundImage" pos="Min" offset="9"/>
+        </Frame>
+        <Frame type="Label" name="TextLabel">
+            <Anchor side="Top" relative="$parent/NormalBackgroundImage" pos="Min" offset="15"/>
+            <Anchor side="Left" relative="$parent/NormalBackgroundImage" pos="Min" offset="70"/>
+            <Anchor side="Right" relative="$parent/NormalBackgroundImage" pos="Max" offset="-10"/>
+            <Style val="BattleReportPanelListBoxText"/>
+            <Alpha val="190"/>
+            <Anchor side="Bottom" relative="$parent/NormalBackgroundImage" pos="Min" offset="37"/>
+        </Frame>
+        <Frame type="Label" name="TypeLabel">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="SelectedBackgroundImage">
+            <Visible val="false"/>
+        </Frame>
+    </Frame>
+    <Frame type="BattleReportPanel" name="BattleReportPanelTemplate" file="BattleReportPanel">
+        <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+        <Width val="1670"/>
+        <Height val="1200"/>
+        <Visible val="false"/>
+        <Anchor side="Bottom" relative="$parent" pos="Min" offset="1200"/>
+        <Frame type="Image" name="BorderImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="TopLeftCornerImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="TopRightCornerImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="BottomLeftCornerImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="BottomRightCornerImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="TopMiddleImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="BottomMiddleImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="SideLeftImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="SideRightImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="LeftWireImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="RightWireImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="TitleBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Label" name="TitleLabel">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="LeftConnectorImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="RightConnectorImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="FullscreenBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="BackgroundGradientImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="BackgroundInterlaceImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="ListBackgroundImage">
+            <Anchor side="Top" relative="$parent/BorderImage" pos="Min" offset="10"/>
+            <Anchor side="Bottom" relative="$parent/BorderImage" pos="Max" offset="-45"/>
+            <Anchor side="Left" relative="$parent/BorderImage" pos="Min" offset="40"/>
+            <Width val="530"/>
+            <Texture val="@@UI/VictoryPanelSummaryBorder"/>
+            <TextureType val="HorizontalBorder"/>
+        </Frame>
+        <Frame type="Image" name="ListInnerBackgroundImage">
+            <Anchor side="Top" relative="$parent/ListBackgroundImage" pos="Min" offset="25"/>
+            <Anchor side="Bottom" relative="$parent/ListBackgroundImage" pos="Max" offset="-35"/>
+            <Anchor side="Left" relative="$parent/ListBackgroundImage" pos="Min" offset="25"/>
+            <Anchor side="Right" relative="$parent/ListBackgroundImage" pos="Max" offset="-25 "/>
+            <Texture val="@@UI/BattleReportPanelListInnerBackground" layer="0"/>
+            <TextureType val="Border" layer="0"/>
+            <LayerColor val="7ed3ea" layer="0"/>
+        </Frame>
+        <Frame type="Image" name="ListInnerTopBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="ListInnerTopBackgroundStubImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="ListInnerBottomBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="ListInnerListBoxBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="ListInnerListBoxBackgroundStubImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Label" name="SelectBattleReportHeadingLabel">
+            <Alpha val="75"/>
+        </Frame>
+        <Frame type="Label" name="MissionsCompletedHeadingLabel">
+            <Anchor side="Top" relative="$parent/ListInnerBottomBackgroundImage" pos="Min" offset="10"/>
+            <Anchor side="Left" relative="$parent/ListInnerBottomBackgroundImage" pos="Min" offset="10"/>
+            <Anchor side="Right" relative="$parent/ListInnerBottomBackgroundImage" pos="Max" offset="-10"/>
+            <Style val="BattleReportPanelMissionsCompletedHeading"/>
+            <Alpha val="75"/>
+            <Anchor side="Bottom" relative="$parent/ListInnerBottomBackgroundImage" pos="Min" offset="34"/>
+        </Frame>
+        <Frame type="Label" name="MissionsCompletedLabel">
+            <Anchor side="Bottom" relative="$parent/ListInnerBottomBackgroundImage" pos="Max" offset="-5"/>
+            <Anchor side="Left" relative="$parent/ListInnerBottomBackgroundImage" pos="Min" offset="10"/>
+            <Style val="BattleReportPanelMissionsCompleted"/>
+            <Alpha val="170"/>
+            <Anchor side="Top" relative="$parent/ListInnerBottomBackgroundImage" pos="Max" offset="-49"/>
+        </Frame>
+        <Frame type="ListBox" name="BattleReportListBox">
+            <ItemHeight val="75"/>
+            <ScrollBar val="$root/CampaignTemplates/CampaignScrollBarTemplate"/>
+            <HighlightOnHover val="true"/>
+            <Handle val="WoL_BattleReportPanel_BattleReportListBox"/>
+            <Anchor side="Top" relative="$parent/ListInnerTopBackgroundImage" pos="Max" offset="5"/>
+            <Anchor side="Bottom" relative="$parent/ListInnerBottomBackgroundImage" pos="Min" offset="-2"/>
+            <Anchor side="Left" relative="$parent/ListInnerBackgroundImage" pos="Min" offset="10"/>
+            <Anchor side="Right" relative="$parent/ListInnerBackgroundImage" pos="Max" offset="-12"/>
+            <ItemGap val="-10"/>
+            <Frame type="Image" name="BackgroundImage">
+                <Alpha val="0"/>
+                <DescFlags val="Internal"/>
+            </Frame>
+        </Frame>
+        <Frame type="Image" name="SummaryBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="SummaryTextBackgroundImage">
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Image" name="SummaryImageBackgroundImage">
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Image" name="SummaryImage">
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Label" name="ResearchTitleLabel">
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Label" name="ResearchTextLabel">
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Label" name="BonusTitleLabel">
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Label" name="BonusTextLabel">
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Label" name="SummaryTextLabel">
+            <Alpha val="190"/>
+        </Frame>
+        <Frame type="Label" name="SummaryTypeLabel">
+            <Alpha val="70"/>
+        </Frame>
+        <Frame type="Image" name="AchievementBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="AchievementBackgroundIconImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="AchievementFrame" name="AchievementFrame0">
+            <Height val="153"/>
+        </Frame>
+        <Frame type="AchievementFrame" name="AchievementFrame1">
+            <Height val="153"/>
+        </Frame>
+        <Frame type="AchievementFrame" name="AchievementFrame2">
+            <Height val="153"/>
+        </Frame>
+        <Frame type="Image" name="DifficultyBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="Image" name="DifficultyInnerBackgroundImage">
+            <Visible val="true"/>
+        </Frame>
+        <Frame type="BattleReportDifficultyButton" name="DifficultyButton3">
+            <Height val="80"/>
+        </Frame>
+        <Frame type="BattleReportDifficultyButton" name="DifficultyButton2">
+            <Height val="80"/>
+        </Frame>
+        <Frame type="BattleReportDifficultyButton" name="DifficultyButton1">
+            <Height val="80"/>
+        </Frame>
+        <Frame type="BattleReportDifficultyButton" name="DifficultyButton0">
+            <Height val="80"/>
+        </Frame>
+        <Frame type="Image" name="HardestDifficultyCompletedBackgroundImage">
+            <Anchor side="Bottom" relative="$parent/DifficultyButton0" pos="Min" offset="15"/>
+        </Frame>
+        <Frame type="Button" name="PlaySceneButton">
+            <Height val="90"/>
+        </Frame>
+        <Frame type="Button" name="CloseButton">
+            <Label val="ButtonLabel"/>
+            <Width val="400"/>
+            <Height val="140"/>
+            <Handle val="WoL_BattleReportPanel_CloseButton"/>
+            <Anchor side="Bottom" relative="$parent/BorderImage" pos="Max" offset="10"/>
+            <Anchor side="Right" relative="$parent/BorderImage" pos="Max" offset="0"/>
+            <Shortcut val="@UI/Close_Hotkey"/>
+            <Text val="@UI/Close_Control"/>
+            <Frame type="Image" name="BackgroundImage">
+                <Visible val="true"/>
+            </Frame>
+            <Frame type="Image" name="NormalImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="39"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="112"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-53"/>
+                <Height val="72"/>
+                <Texture val="@@UI/LargePanelRightButtonNormal"/>
+                <StateCount val="2"/>
+                <DescFlags val="Internal"/>
+                <Anchor side="Bottom" relative="$parent" pos="Min" offset="111"/>
+                <Tiled val="false" layer="0"/>
+                <DisabledAlpha val="255"/>
+            </Frame>
+            <Frame type="Image" name="HoverImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="39"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="112"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-53"/>
+                <Height val="72"/>
+                <Texture val="@@UI/LargePanelRightButtonHover"/>
+                <StateCount val="2"/>
+                <Anchor side="Bottom" relative="$parent" pos="Min" offset="111"/>
+                <Tiled val="false" layer="0"/>
+            </Frame>
+            <Frame type="Frame" name="HitTestFrame">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="54"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="127"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-68"/>
+                <DescFlags val="Internal"/>
+                <Anchor side="Bottom" relative="$parent" pos="Min" offset="96"/>
+            </Frame>
+            <Frame type="Label" name="Label">
+                <Visible val="false"/>
+            </Frame>
+            <Frame type="Image" name="HighlightImage">
+                <Visible val="false"/>
+            </Frame>
+        </Frame>
+        <Frame type="Frame" name="ScreenTitleFrame">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="ScreenBottomFrame">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="TopBorderImage">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="LeftBorderImage">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="RightBorderImage">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="BottomBorderImage">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Button" name="QuitButton">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="BattleBuddyButtonAnchor">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="BackgroundImage">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="InnerBackgroundImage">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="MissionSummaryContainer">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="CinematicSummaryContainer">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="BottomBorder">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="TitleScanLines">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameHexGlow_Left">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameHexGlow_LeftBottom">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameHexGlow_Right">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameHexGlow_RightBottom">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="BackgroundFrame">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="TopLinePowerUp">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="TopLineEndCap">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="BottomLinePowerUp">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="BottomLineEndCap">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="LeftLinePowerUp">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="LeftLineEndCap">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Frame" name="RightLinePowerUp">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="RightLineEndCap">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="TopShimmer">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="BottomShimmer">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="LeftShimmer">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="RightShimmer">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrame_Left">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_Left">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_LeftSide">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrame_Right">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_Right">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_RightSide">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrame_BottomLeft">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_BottomLeft">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_BottomLeftSide">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrame_BottomRight">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_BottomRight">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Image" name="CornerFrameGlow_BottomRightSide">
+            <Visible val="false"/>
+        </Frame>
+    </Frame>
+</Desc>
