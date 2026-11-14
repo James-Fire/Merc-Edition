@@ -6,7 +6,7 @@
         <Texture val="Assets\Textures\ui_load_frame_columtitle_normaloverpressedover.dds"/>
         <TextureType val="EndCap"/>
         <StateCount val="2"/>
-        <Height val="37"/>
+        <Height val="40"/>
     </Frame>
 
     <Frame type="Button" name="TechPurchaseButtonTemplate">
@@ -109,10 +109,10 @@
     <Frame type="Frame" name="ArmyCategoryUnitIconTemplate">
         <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
         <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
-        <Anchor side="Left" relative="$parent" pos="Min" offset="5"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="8"/>
 
-        <Width val="52"/>
-        <Height val="52"/>
+        <Width val="60"/>
+        <Height val="60"/>
 
         <Frame type="Image" name="ArmyUnitBackground">
             <Anchor relative="$parent"/>
@@ -123,7 +123,7 @@
         </Frame>
 
         <Frame type="Image" name="Icon">
-            <Anchor relative="$parent" offset="-1"/>
+            <Anchor relative="$parent" offset="-4"/>
 
             <Texture val="Assets\Textures\btn-unit-terran-scv.dds"/>
             <Visible val="True"/>
@@ -135,8 +135,8 @@
         <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
         <Anchor side="Left" relative="$sibling-1" pos="Max" offset="7"/>
 
-        <Width val="44"/>
-        <Height val="44"/>
+        <Width val="52"/>
+        <Height val="52"/>
         <Toggleable val="True"/>
         <Visible val="True"/>
 
@@ -1001,13 +1001,13 @@
         <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
 
-        <Height val="60"/>
+        <Height val="72"/>
 
         <Frame type="Frame" name="ArmyUnitIcon" template="Merc_BetaArmoryTemplates/ArmyCategoryUnitIconTemplate">
         </Frame>
 
         <Frame type="Button" name="ArmyUpgrade1" template="Merc_BetaArmoryTemplates/ArmyTechButtonTemplate">
-            <Anchor side="Left" relative="$parent/ArmyUnitIcon" pos="Max" offset="3"/>
+            <Anchor side="Left" relative="$parent/ArmyUnitIcon" pos="Max" offset="4"/>
         </Frame>
 
         <Frame type="Button" name="ArmyUpgrade2" template="Merc_BetaArmoryTemplates/ArmyTechButtonTemplate">
@@ -1062,13 +1062,16 @@
         </Frame>
 
         <Frame type="Frame" name="ArmoryCategoryModule1" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate">
-            <Anchor side="Top" relative="$parent/TitleHeader" pos="Max" offset="-2"/>
+            <Anchor side="Top" relative="$parent/TitleHeader" pos="Max" offset="-1"/>
         </Frame>
 
         <Frame type="Frame" name="ArmoryCategoryModule2" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate">
-            <Anchor side="Top" relative="$sibling-1" pos="Max" offset="1"/>
+            <Anchor side="Top" relative="$sibling-1" pos="Max" offset="2"/>
         </Frame>
-        <Frame type="Frame" name="ArmoryCategoryModule3" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate"/>
+        <Frame type="Frame" name="ArmoryCategoryModule3" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate">
+            <Anchor side="Top" relative="$sibling-1" pos="Max" offset="-2"/>
+        </Frame>    
+        
         <Frame type="Frame" name="ArmoryCategoryModule4" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate"/>
         <Frame type="Frame" name="ArmoryCategoryModule5" template="Merc_BetaArmoryTemplates/ArmoryCategoryButtonModuleTemplate"/>
     </Frame>
