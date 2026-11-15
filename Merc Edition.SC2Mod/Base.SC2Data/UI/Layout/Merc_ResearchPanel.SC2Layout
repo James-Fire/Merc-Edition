@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <!-- Merc Lab. Gate numbers below must match MercLabGate in CampaignLib. -->
+    <Frame type="ResearchPanel" name="ResearchPanelTemplate" file="ResearchPanel">
+        <Frame type="ResearchCategoryFrame" name="ResearchCategoryFrame0">
+            <Frame type="Label" name="NameLabel">
+                <Anchor side="Top" relative="$parent/NameBorderImage" pos="Min" offset="8"/>
+                <Anchor side="Bottom" relative="$parent/CurrentLevelBorderImage" pos="Max" offset="-8"/>
+            </Frame>
+            <Frame type="Label" name="ProgressLabel">
+                <Visible val="false"/>
+            </Frame>
+            <Frame type="Label" name="CurrentLevelLabel">
+                <Visible val="false"/>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame0">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Protoss"/>
+                    <Text val="5"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame1">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Protoss"/>
+                    <Text val="12"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame2">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Protoss"/>
+                    <Text val="20"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame3">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Protoss"/>
+                    <Text val="30"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame4">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Protoss"/>
+                    <Text val="40"/>
+                </Frame>
+            </Frame>
+        </Frame>
+        <Frame type="ResearchCategoryFrame" name="ResearchCategoryFrame1">
+            <Frame type="Label" name="NameLabel">
+                <Anchor side="Top" relative="$parent/NameBorderImage" pos="Min" offset="8"/>
+                <Anchor side="Bottom" relative="$parent/CurrentLevelBorderImage" pos="Max" offset="-8"/>
+            </Frame>
+            <Frame type="Label" name="ProgressLabel">
+                <Visible val="false"/>
+            </Frame>
+            <Frame type="Label" name="CurrentLevelLabel">
+                <Visible val="false"/>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame0">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Zerg"/>
+                    <Text val="5"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame1">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Zerg"/>
+                    <Text val="12"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame2">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Zerg"/>
+                    <Text val="20"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame3">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Zerg"/>
+                    <Text val="30"/>
+                </Frame>
+            </Frame>
+            <Frame type="ResearchTierFrame" name="ResearchTierFrame4">
+                <Frame type="Label" name="RequiredLevelLabel">
+                    <Visible val="false"/>
+                    <Alpha val="0"/>
+                </Frame>
+                <Frame type="Label" name="SelectLabel">
+                    <Text val=""/>
+                </Frame>
+                <Frame type="Label" name="MercGateLabel">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="-100"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="100"/>
+                    <Style val="ResearchTierRequiredLevel_Zerg"/>
+                    <Text val="40"/>
+                </Frame>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>

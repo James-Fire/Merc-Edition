@@ -6,4 +6,5 @@
     <Include path="UI/Layout/Merc_VictoryPanel.SC2Layout"/>
     <Include path="UI/Layout/Merc_BattleReportPanel.SC2Layout"/>
     <Include path="UI/Layout/Merc_HelpPanel.SC2Layout"/>
+    <Include path="UI/Layout/Merc_ResearchPanel.SC2Layout"/>
 </Desc>

@@ -21031,6 +21031,7 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="7D35FF4F"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="BCF1550E"/>
             <Item Type="FunctionDef" Library="BA5CCDED" Id="40C05367"/>
+            <Item Type="FunctionDef" Library="BA5CCDED" Id="5E7A1C30"/>
         </Element>
         <Element Type="FunctionDef" Id="53DD8D84">
             <Identifier>libCamp_gf_MercSetArmoryOpenHook</Identifier>
@@ -21198,6 +21199,23 @@
             </ParameterType>
         </Element>
         <Element Type="ParamDef" Id="23624BC8">
+            <ParameterType>
+                <Type Value="int"/>
+            </ParameterType>
+        </Element>
+        <Element Type="FunctionDef" Id="5E7A1C30">
+            <Identifier>libCamp_gf_MercDebugAddResearchLevel</Identifier>
+            <FlagAction/>
+            <FlagNative/>
+            <Parameter Type="ParamDef" Library="BA5CCDED" Id="5E7A1C31"/>
+            <Parameter Type="ParamDef" Library="BA5CCDED" Id="5E7A1C32"/>
+        </Element>
+        <Element Type="ParamDef" Id="5E7A1C31">
+            <ParameterType>
+                <Type Value="int"/>
+            </ParameterType>
+        </Element>
+        <Element Type="ParamDef" Id="5E7A1C32">
             <ParameterType>
                 <Type Value="int"/>
             </ParameterType>

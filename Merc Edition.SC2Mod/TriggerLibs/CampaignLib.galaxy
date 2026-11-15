@@ -4943,20 +4943,7 @@ int libCamp_gf_StoryResearchPointsConverted (int lp_categeory) {
 }
 
 int libCamp_gf_StoryResearchPointCap (int lp_categeory) {
-    // Automatic Variable Declarations
-    int autoC9E12BFB_val;
-
-    // Implementation
-    autoC9E12BFB_val = lp_categeory;
-    if (autoC9E12BFB_val == libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss) {
-        return FixedToInt(ConversationDataStateFixedValue("LabResearchConstants|ResearchPointCapProt", "Value"));
-    }
-    else if (autoC9E12BFB_val == libCamp_ge_StoryResearchCategory_ResearchCategoryZerg) {
-        return FixedToInt(ConversationDataStateFixedValue("LabResearchConstants|ResearchPointCapZerg", "Value"));
-    }
-    else {
-    }
-    return 0;
+    return 100000;
 }
 
 int libCamp_gf_StoryResearchCreditsPerPoint () {
@@ -5570,21 +5557,250 @@ int libCamp_gf_TS_ResearchUIResearchID (int lp_researchItem) {
     return libCamp_ge_StoryResearchID_ResearchNone;
 }
 
+//--------------------------------------------------------------------------------------------------
+// Merc Edition: Lab research shop.
+// To tune: costs are just below, gates are in MercLabGate (also change the numbers in Merc_ResearchPanel.SC2Layout).
+//--------------------------------------------------------------------------------------------------
+bool libCamp_gv_mercLabPurchaseBusy;
+int libCamp_gv_mercLabArmedItem;
+bool libCamp_gv_mercLabArmed;
+trigger libCamp_gv_mercLabSelectTrigger;
+trigger libCamp_gv_mercLabNoticeTrigger;
+trigger libCamp_gv_mercLabNoticeCloseTrigger;
+trigger libCamp_gv_mercLabNoticeDismissTrigger;
+bool libCamp_gv_mercLabNoticeUp;
+int libCamp_gv_mercLabNoticeButton;
+// Cost of the first and second item bought in a tier.
+const int libCamp_gv_MERC_LAB_COST_FIRST = 5;
+const int libCamp_gv_MERC_LAB_COST_SECOND = 8;
+// Credits per spare research point once a race has everything.
+const int libCamp_gv_MERC_LAB_CREDITS_PER_POINT = 10000;
+// true = vanilla Moebius pop-up (works only when launched as a campaign, e.g. CCM). false = our own pop-up (works everywhere).
+const bool libCamp_gv_MERC_LAB_VANILLA_DIALOG = true;
+const string libCamp_gv_MERC_LAB_COST_ICON_PROT = "Assets\\Textures\\btn-tips-researchunlocked.dds";
+const string libCamp_gv_MERC_LAB_COST_ICON_ZERG = "Assets\\Textures\\btn-tips-researchunlocked.dds";
+
+// Research level needed to open each tier.
+int libCamp_gf_MercLabGate (int lp_category, int lp_tier) {
+    if (lp_tier <= 0) { return 0; }
+    if (lp_tier == 1) { return 5; }
+    if (lp_tier == 2) { return 12; }
+    if (lp_tier == 3) { return 20; }
+    if (lp_tier == 4) { return 30; }
+    return 40;
+}
+
+int libCamp_gf_MercLabDisplayLevel (int lp_category, int lp_level) {
+    int lv_t;
+    int lv_lo;
+    int lv_hi;
+
+    if (lp_level <= 0) { return 0; }
+    if (lp_level >= libCamp_gf_MercLabGate(lp_category, 5)) { return 5 * libCamp_gv_tSC_RESEARCH_TIERLEVEL; }
+    lv_t = 0;
+    while ((lv_t < 5) && (lp_level >= libCamp_gf_MercLabGate(lp_category, lv_t + 1))) {
+        lv_t += 1;
+    }
+    lv_lo = libCamp_gf_MercLabGate(lp_category, lv_t);
+    lv_hi = libCamp_gf_MercLabGate(lp_category, lv_t + 1);
+    return (lv_t * libCamp_gv_tSC_RESEARCH_TIERLEVEL) + ((libCamp_gv_tSC_RESEARCH_TIERLEVEL * (lp_level - lv_lo)) / (lv_hi - lv_lo));
+}
+
+int libCamp_gf_MercLabResearchLevel (int lp_category) {
+    return libCamp_gf_StoryResearchPoints(lp_category);
+}
+
+bool libCamp_gf_MercLabOwned (int lp_researchID) {
+    return libCamp_gf_StoryResearchStateCheck(lp_researchID, libCamp_ge_StoryResearchState_ResearchStatePurchased);
+}
+
+int libCamp_gf_MercLabSpent (int lp_category) {
+    int lv_i;
+    int lv_id;
+    int lv_spent;
+
+    lv_spent = 0;
+    lv_i = libCamp_gv_TSC_RESEARCH_FIRST;
+    while (lv_i <= libCamp_gv_TSC_RESEARCH_LAST) {
+        lv_id = libCamp_gv_tS_ResearchID[lv_i];
+        if ((libCamp_gf_StoryResearchCategory(lv_id) == lp_category) && libCamp_gf_MercLabOwned(lv_id)) {
+            lv_spent += libCamp_gv_MERC_LAB_COST_FIRST;
+            // Count each full pair's extra once, from the item with the lower id.
+            if ((lv_id < libCamp_gf_TS_StoryResearchTheOtherOfTheSameTier(lv_id)) && libCamp_gf_MercLabOwned(libCamp_gf_TS_StoryResearchTheOtherOfTheSameTier(lv_id))) {
+                lv_spent += (libCamp_gv_MERC_LAB_COST_SECOND - libCamp_gv_MERC_LAB_COST_FIRST);
+            }
+        }
+        lv_i = lv_i + 1;
+    }
+    return lv_spent;
+}
+
+int libCamp_gf_MercLabAvailable (int lp_category) {
+    return (libCamp_gf_MercLabResearchLevel(lp_category) - libCamp_gf_MercLabSpent(lp_category) - libCamp_gf_StoryResearchPointsConverted(lp_category));
+}
+
+bool libCamp_gf_MercLabRaceComplete (int lp_category) {
+    int lv_i;
+    int lv_id;
+
+    lv_i = libCamp_gv_TSC_RESEARCH_FIRST;
+    while (lv_i <= libCamp_gv_TSC_RESEARCH_LAST) {
+        lv_id = libCamp_gv_tS_ResearchID[lv_i];
+        if ((libCamp_gf_StoryResearchCategory(lv_id) == lp_category) && !libCamp_gf_MercLabOwned(lv_id)) {
+            return false;
+        }
+        lv_i = lv_i + 1;
+    }
+    return true;
+}
+
+// Pays spare points as credits, only for a race that owns everything. Returns credits paid.
+int libCamp_gf_MercLabPaySpare (int lp_category) {
+    int lv_spare;
+    int lv_credits;
+
+    if (!libCamp_gf_MercLabRaceComplete(lp_category)) { return 0; }
+    lv_spare = libCamp_gf_MercLabAvailable(lp_category);
+    if (lv_spare <= 0) { return 0; }
+    lv_credits = lv_spare * libCamp_gv_MERC_LAB_CREDITS_PER_POINT;
+    libCamp_gf_SetStoryResearchPointsConverted(lp_category, libCamp_gf_StoryResearchPointsConverted(lp_category) + lv_spare);
+    ConversationDataStateSetValue("Credits", ConversationDataStateGetValue("Credits") + lv_credits);
+    PlayerModifyPropertyInt(1, c_playerPropCredits, c_playerPropOperSetTo, ConversationDataStateGetValue("Credits"));
+    return lv_credits;
+}
+
+int libCamp_gf_MercLabCost (int lp_researchID) {
+    if (libCamp_gf_MercLabOwned(libCamp_gf_TS_StoryResearchTheOtherOfTheSameTier(lp_researchID))) {
+        return libCamp_gv_MERC_LAB_COST_SECOND;
+    }
+    return libCamp_gv_MERC_LAB_COST_FIRST;
+}
+
+bool libCamp_gf_MercLabTierOpen (int lp_researchID) {
+    int lv_cat;
+
+    lv_cat = libCamp_gf_StoryResearchCategory(lp_researchID);
+    return (libCamp_gf_MercLabResearchLevel(lv_cat) >= libCamp_gf_MercLabGate(lv_cat, libCamp_gf_TS_StoryResearchTier(lp_researchID)));
+}
+
+bool libCamp_gf_MercLabCanBuy (int lp_researchID) {
+    if (libCamp_gf_MercLabOwned(lp_researchID)) { return false; }
+    if (!libCamp_gf_MercLabTierOpen(lp_researchID)) { return false; }
+    return (libCamp_gf_MercLabAvailable(libCamp_gf_StoryResearchCategory(lp_researchID)) >= libCamp_gf_MercLabCost(lp_researchID));
+}
+
+text libCamp_gf_MercLabCostLine (int lp_researchID) {
+    int lv_cat;
+    string lv_icon;
+    string lv_s;
+
+    lv_cat = libCamp_gf_StoryResearchCategory(lp_researchID);
+    lv_icon = libCamp_gv_MERC_LAB_COST_ICON_PROT;
+    if (lv_cat == libCamp_ge_StoryResearchCategory_ResearchCategoryZerg) {
+        lv_icon = libCamp_gv_MERC_LAB_COST_ICON_ZERG;
+    }
+    lv_s = "";
+    if (lv_icon != "") {
+        lv_s = "<img path=\"" + lv_icon + "\" width=\"30\" height=\"30\" alignment=\"absolutemiddle\"/> ";
+    }
+    if (libCamp_gf_MercLabOwned(lp_researchID)) {
+        lv_s = lv_s + "Researched";
+    }
+    else {
+        lv_s = lv_s + "Research Cost: " + IntToString(libCamp_gf_MercLabCost(lp_researchID));
+    }
+    return StringToText(lv_s + "<n/><n/>");
+}
+
+text libCamp_gf_MercLabCategoryTitle (int lp_category) {
+    text lv_name;
+    string lv_style;
+    string lv_line;
+
+    if (lp_category == libCamp_ge_StoryResearchCategory_ResearchCategoryZerg) {
+        lv_name = StringExternal("Param/Value/lib_Camp_F968DADB");
+        lv_style = "ResearchCategoryProgress_Zerg";
+    }
+    else {
+        lv_name = StringExternal("Param/Value/lib_Camp_3E9A4A97");
+        lv_style = "ResearchCategoryProgress_Protoss";
+    }
+    if (libCamp_gf_MercLabRaceComplete(lp_category)) {
+        lv_line = "All research complete.";
+    }
+    else {
+        lv_line = "Available Research Points: <c val=\"ffffff\">" + IntToString(MaxI(0, libCamp_gf_MercLabAvailable(lp_category))) + "</c>";
+    }
+    return (lv_name + StringToText("<n/>Research Level: <c val=\"ffffff\">" + IntToString(libCamp_gf_MercLabResearchLevel(lp_category)) + "</c><n/><s val=\"" + lv_style + "\">" + lv_line + "</s>"));
+}
+
+bool libCamp_gf_MercLabCanBuyAny (int lp_category) {
+    int lv_i;
+    int lv_id;
+
+    lv_i = libCamp_gv_TSC_RESEARCH_FIRST;
+    while (lv_i <= libCamp_gv_TSC_RESEARCH_LAST) {
+        lv_id = libCamp_gv_tS_ResearchID[lv_i];
+        if ((libCamp_gf_StoryResearchCategory(lv_id) == lp_category) && libCamp_gf_MercLabCanBuy(lv_id)) {
+            return true;
+        }
+        lv_i = lv_i + 1;
+    }
+    return false;
+}
+
+void libCamp_gf_MercLabRefresh () {
+    int lv_i;
+    int lv_id;
+    int lv_item;
+    bool[3] lv_canBuyAny;
+
+    lv_canBuyAny[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)] = libCamp_gf_MercLabCanBuyAny(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss);
+    lv_canBuyAny[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)] = libCamp_gf_MercLabCanBuyAny(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg);
+    lv_i = libCamp_gv_TSC_RESEARCH_FIRST;
+    while (lv_i <= libCamp_gv_TSC_RESEARCH_LAST) {
+        lv_id = libCamp_gv_tS_ResearchID[lv_i];
+        lv_item = libCamp_gf_TS_StoryResearchUIItem(lv_id);
+        ResearchItemSetConfirmationText(lv_item, StringToText(""));
+        // No hover pop-up when nothing in this race can be bought.
+        if (lv_canBuyAny[(libCamp_gf_StoryResearchCategory(lv_id))]) {
+            ResearchItemSetTooltipText(lv_item, libCamp_gf_StoryResearchTooltip(lv_id));
+        }
+        else {
+            ResearchItemSetTooltipText(lv_item, StringToText(""));
+        }
+        ResearchItemSetDescriptionText(lv_item, (libCamp_gf_MercLabCostLine(lv_id) + libCamp_gf_StoryResearchDescription(lv_id)));
+        if (libCamp_gf_MercLabOwned(lv_id)) {
+            ResearchItemSetState(lv_item, c_researchItemStatePurchased);
+        }
+        else if (libCamp_gf_MercLabCanBuy(lv_id)) {
+            ResearchItemSetState(lv_item, c_researchItemStateEnabled);
+        }
+        else {
+            ResearchItemSetState(lv_item, c_researchItemStateDisabled);
+        }
+        lv_i = lv_i + 1;
+    }
+    ResearchCategorySetNameText(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)], libCamp_gf_MercLabCategoryTitle(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss));
+    ResearchCategorySetNameText(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)], libCamp_gf_MercLabCategoryTitle(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg));
+}
+
 void libCamp_gf_DisplayResearchPanel (trigger lp_exitCallback) {
     // Automatic Variable Declarations
     // Implementation
     libCamp_gv_tS_ResearchUIExitCallback = lp_exitCallback;
     libCamp_gv_tS_ResearchUIExitEnabled = false;
     libCamp_gf_TS_ResearchUICreate();
-    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)], libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)]);
-    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)], libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)]);
-    ResearchCategorySetLastLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)], libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)]);
-    ResearchCategorySetLastLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)], libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)]);
+    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)], libCamp_gf_MercLabDisplayLevel(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss, libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)]));
+    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)], libCamp_gf_MercLabDisplayLevel(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg, libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)]));
+    ResearchCategorySetLastLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)], libCamp_gf_MercLabDisplayLevel(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss, libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)]));
+    ResearchCategorySetLastLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)], libCamp_gf_MercLabDisplayLevel(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg, libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)]));
     libCamp_gf_TS_ResearchUIUpdate();
     libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)] = libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss);
     libCamp_gv_tSX_ResearchUIOldPoints[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)] = libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg);
     libCamp_gv_tS_ResearchUIExitEnabled = true;
     UISetFrameVisible(PlayerGroupAll(), c_syncFrameTypeResearchPanel, true);
+    TriggerExecute(libCamp_gv_mercLabNoticeTrigger, true, false);
 }
 
 void libCamp_gf_TS_ResearchUICreate () {
@@ -5646,7 +5862,7 @@ void libCamp_gf_TS_ResearchUICreate () {
         for ( ; ( (autoBD7EADA4_ai >= 0 && lv_tierIndex <= autoBD7EADA4_ae) || (autoBD7EADA4_ai < 0 && lv_tierIndex >= autoBD7EADA4_ae) ) ; lv_tierIndex += autoBD7EADA4_ai ) {
             ResearchTierCreate(PlayerGroupAll(), ResearchCategoryLastCreated(), lv_tierIndex);
             libCamp_gv_tS_ResearchUITiers[lv_categoryIndex][lv_tierIndex] = ResearchTierLastCreated();
-            ResearchTierSetMaxPurchasesAllowed(ResearchTierLastCreated(), 1);
+            ResearchTierSetMaxPurchasesAllowed(ResearchTierLastCreated(), 2);
             ResearchTierSetRequiredLevel(ResearchTierLastCreated(), (lv_tierIndex * libCamp_gv_tSC_RESEARCH_TIERLEVEL));
         }
     }
@@ -5664,7 +5880,7 @@ void libCamp_gf_TS_ResearchUICreate () {
         ResearchItemSetIconFilePath(ResearchItemLastCreated(), libCamp_gf_StoryResearchIcon(lv_indexResearch));
         ResearchItemSetMovieFilePath(ResearchItemLastCreated(), libCamp_gf_StoryResearchMovie(lv_indexResearch));
         ResearchItemSetTooltipText(ResearchItemLastCreated(), libCamp_gf_StoryResearchTooltip(lv_indexResearch));
-        ResearchItemSetConfirmationText(ResearchItemLastCreated(), libCamp_gf_StoryResearchConfirmationText(lv_indexResearch));
+        ResearchItemSetConfirmationText(ResearchItemLastCreated(), StringToText(""));
         ResearchItemSetState(ResearchItemLastCreated(), c_researchItemStateEnabled);
         auto9C5BB20A_i = auto9C5BB20A_i + 1;
     }
@@ -5687,38 +5903,9 @@ void libCamp_gf_TS_ResearchUIUpdate () {
 
     // Implementation
     libCamp_gf_TS_ResearchUICreate();
-    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)], MinI(libCamp_gf_StoryResearchPointCap(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss), libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)));
-    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)], MinI(libCamp_gf_StoryResearchPointCap(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg), libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)));
-    autoCE1E6292_i = libCamp_gv_TSC_RESEARCH_FIRST;
-    while (autoCE1E6292_i <= libCamp_gv_TSC_RESEARCH_LAST) {
-        lv_indexResearch = libCamp_gv_tS_ResearchID[autoCE1E6292_i];
-        ResearchItemSetTooltipText(libCamp_gv_tS_ResearchUIItem[(lv_indexResearch)], libCamp_gf_StoryResearchTooltip(lv_indexResearch));
-        ResearchItemSetState(libCamp_gf_TS_StoryResearchUIItem(lv_indexResearch), c_researchItemStateEnabled);
-        autoCE1E6292_i = autoCE1E6292_i + 1;
-    }
-    autoBAF0C87C_i = libCamp_gv_TSC_RESEARCH_FIRST;
-    while (autoBAF0C87C_i <= libCamp_gv_TSC_RESEARCH_LAST) {
-        lv_indexResearch = libCamp_gv_tS_ResearchID[autoBAF0C87C_i];
-        if ((libCamp_gf_StoryResearchStateCheck(lv_indexResearch, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
-            ResearchItemSetState(libCamp_gf_TS_StoryResearchUIItem(lv_indexResearch), c_researchItemStatePurchased);
-            lv_otherResearch = libCamp_gf_TS_StoryResearchTheOtherOfTheSameTier(lv_indexResearch);
-            ResearchItemSetState(libCamp_gf_TS_StoryResearchUIItem(lv_otherResearch), c_researchItemStateDisabled);
-            autoD1456021_val = libCamp_gf_StoryResearchCategory(lv_otherResearch);
-            if (autoD1456021_val == libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss) {
-                lv_tip = (StringExternal("Param/Value/lib_Camp_922BF17E") + libCamp_gf_StoryResearchName(lv_otherResearch) + StringExternal("Param/Value/lib_Camp_323EDACB"));
-                libCamp_gf_TS_ResearchUIClearProtossConfirmationText();
-            }
-            else if (autoD1456021_val == libCamp_ge_StoryResearchCategory_ResearchCategoryZerg) {
-                lv_tip = (StringExternal("Param/Value/lib_Camp_F92407E3") + libCamp_gf_StoryResearchName(lv_otherResearch) + StringExternal("Param/Value/lib_Camp_D7DAE7B6"));
-                libCamp_gf_TS_ResearchUIClearZergConfirmationText();
-            }
-            else {
-            }
-            ResearchItemSetTooltipText(libCamp_gv_tS_ResearchUIItem[(lv_otherResearch)], lv_tip);
-        }
-
-        autoBAF0C87C_i = autoBAF0C87C_i + 1;
-    }
+    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)], libCamp_gf_MercLabDisplayLevel(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss, libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)));
+    ResearchCategorySetCurrentLevel(libCamp_gv_tS_ResearchUICategories[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)], libCamp_gf_MercLabDisplayLevel(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg, libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)));
+    libCamp_gf_MercLabRefresh();
 }
 
 void libCamp_gf_TS_ResearchUIClearProtossConfirmationText () {
@@ -7102,6 +7289,13 @@ void libCamp_gf_MercAddStoryResearch (int lp_zerg, int lp_protoss) {
     if ((libCamp_gf_TS_StoryResearchMissionProgressCurrent(lv_zerg) > libCamp_gf_StoryResearchMissionProgress(libCamp_gv_tS_CurrentMap, lv_zerg))) {
         libCamp_gv_tSX_ResearchMissionProgress[(libCamp_gv_tS_CurrentMap)][lv_zerg] = libCamp_gf_TS_StoryResearchMissionProgressCurrent(lv_zerg);
     }
+}
+
+// Test only: adds research level.
+void libCamp_gf_MercDebugAddResearchLevel (int lp_zerg, int lp_protoss) {
+    libCamp_gv_tSX_DebugResearchLevel[(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg)] += lp_zerg;
+    libCamp_gv_tSX_DebugResearchLevel[(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss)] += lp_protoss;
+    libCamp_gf_TS_ResearchUIUpdate();
 }
 
 // Research earned in this run of the current mission: every Add Progress To Story Research / Give Research
@@ -12995,6 +13189,86 @@ void libCamp_gt_TS_BattleReportPanelLeave_Init () {
 //--------------------------------------------------------------------------------------------------
 // Trigger: TS_ResearchUI - Purchase
 //--------------------------------------------------------------------------------------------------
+// Message box on top of the Lab (the vanilla one is Blizzard-only). Waits for OK.
+void libCamp_gf_MercLabShowNotice (text lp_title, text lp_body) {
+    int lv_dialog;
+
+    if (libCamp_gv_MERC_LAB_VANILLA_DIALOG) {
+        libCamp_gv_mercLabNoticeUp = true;
+        UIShowCustomDialog(PlayerGroupAll(), libNtve_ge_CustomDialogType_c_customDialogTypeMessage, lp_title, lp_body, true);
+        while (libCamp_gv_mercLabNoticeUp) {
+            Wait(0.125, c_timeReal);
+        }
+        return;
+    }
+    lv_dialog = DialogCreate(720, 500, c_anchorCenter, 0, 0, true);
+    DialogSetRenderPriority(lv_dialog, 2000);
+    DialogControlCreate(lv_dialog, c_triggerControlTypeLabel);
+    DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 640, 50);
+    DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTop, 0, 40);
+    DialogControlSetPropertyAsText(DialogControlLastCreated(), c_triggerControlPropertyText, PlayerGroupAll(), lp_title);
+    DialogControlCreate(lv_dialog, c_triggerControlTypeLabel);
+    DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 640, 300);
+    DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTop, 0, 95);
+    DialogControlSetPropertyAsText(DialogControlLastCreated(), c_triggerControlPropertyText, PlayerGroupAll(), lp_body);
+    DialogControlCreate(lv_dialog, c_triggerControlTypeButton);
+    DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 220, 60);
+    DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorBottom, 0, 35);
+    DialogControlSetPropertyAsText(DialogControlLastCreated(), c_triggerControlPropertyText, PlayerGroupAll(), StringToText("OK"));
+    libCamp_gv_mercLabNoticeButton = DialogControlLastCreated();
+    libCamp_gv_mercLabNoticeUp = true;
+    DialogSetVisible(lv_dialog, PlayerGroupAll(), true);
+    while (libCamp_gv_mercLabNoticeUp) {
+        Wait(0.125, c_timeReal);
+    }
+    DialogDestroy(lv_dialog);
+}
+
+// Moebius letter the first time a race is complete, then the "Research Items Sold" note when spare points pay out.
+void libCamp_gf_MercLabNoticeRace (int lp_category, int lp_noticeState, string lp_letterTitle, string lp_letter1, string lp_letter2, string lp_soldTitle, string lp_sold1, string lp_sold2, string lp_sold3, string lp_sold4) {
+    int lv_paid;
+    text lv_rate;
+
+    if (!libCamp_gf_MercLabRaceComplete(lp_category)) { return; }
+    lv_rate = libCamp_gf_FormatCredits(libCamp_gv_MERC_LAB_CREDITS_PER_POINT, false);
+    if (libCamp_gf_StoryState(lp_noticeState) == 0) {
+        libCamp_gf_SetStoryState(lp_noticeState, 1);
+        libCamp_gf_MercLabShowNotice(ConversationDataStateText(lp_letterTitle, "Text"), (ConversationDataStateText(lp_letter1, "Text") + lv_rate + ConversationDataStateText(lp_letter2, "Text")));
+    }
+    lv_paid = libCamp_gf_MercLabPaySpare(lp_category);
+    if (lv_paid > 0) {
+        libCamp_gf_TS_ResearchUIUpdate();
+        libCamp_gf_MercLabShowNotice(ConversationDataStateText(lp_soldTitle, "Text"), (ConversationDataStateText(lp_sold1, "Text") + lv_rate + ConversationDataStateText(lp_sold2, "Text") + ConversationDataStateText(lp_sold3, "Text") + libCamp_gf_FormatCredits(lv_paid, false) + ConversationDataStateText(lp_sold4, "Text")));
+    }
+}
+
+bool libCamp_gt_MercLabNotice_Func (bool testConds, bool runActions) {
+    libCamp_gf_MercLabNoticeRace(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss, libCamp_ge_StoryStateID_StoryStateResearchCappedNoticeProtoss, "LabResearchText|LabResearchText01", "LabResearchText|LabResearchText02", "LabResearchText|LabResearchText03", "LabResearchText|LabResearchText04", "LabResearchText|LabResearchText05", "LabResearchText|LabResearchText06", "LabResearchText|LabResearchText07", "LabResearchText|LabResearchText15");
+    libCamp_gf_MercLabNoticeRace(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg, libCamp_ge_StoryStateID_StoryStateResearchCappedNoticeZerg, "LabResearchText|LabResearchText08", "LabResearchText|LabResearchText09", "LabResearchText|LabResearchText10", "LabResearchText|LabResearchText11", "LabResearchText|LabResearchText12", "LabResearchText|LabResearchText13", "LabResearchText|LabResearchText14", "LabResearchText|LabResearchText16");
+    return true;
+}
+
+bool libCamp_gt_MercLabNoticeDismiss_Func (bool testConds, bool runActions) {
+    libCamp_gv_mercLabNoticeUp = false;
+    return true;
+}
+
+bool libCamp_gt_MercLabNoticeClose_Func (bool testConds, bool runActions) {
+    if (EventDialogControl() != libCamp_gv_mercLabNoticeButton) { return true; }
+    libCamp_gv_mercLabNoticeUp = false;
+    return true;
+}
+
+bool libCamp_gt_MercLabSelectionChanged_Func (bool testConds, bool runActions) {
+    if (!runActions) {
+        return true;
+    }
+    libCamp_gv_mercLabArmedItem = ResearchItemGetSelected(1);
+    libCamp_gv_mercLabArmed = true;
+    TriggerDebugOutput(1, StringToText("Merc lab: selected research " + IntToString(libCamp_gf_TS_ResearchUIResearchID(libCamp_gv_mercLabArmedItem))), true);
+    return true;
+}
+
 bool libCamp_gt_TS_ResearchUIPurchase_Func (bool testConds, bool runActions) {
     // Variable Declarations
     int lv_researchID;
@@ -13016,12 +13290,24 @@ bool libCamp_gt_TS_ResearchUIPurchase_Func (bool testConds, bool runActions) {
     }
 
     lv_researchID = libCamp_gf_TS_ResearchUIResearchID(ResearchItemGetSelected(1));
+    // Only buy the item the player actually clicked.
+    if (libCamp_gv_mercLabPurchaseBusy || !libCamp_gv_mercLabArmed || (ResearchItemGetSelected(1) != libCamp_gv_mercLabArmedItem)) {
+        TriggerDebugOutput(1, StringToText("Merc lab: purchase event IGNORED, research " + IntToString(lv_researchID)), true);
+        return true;
+    }
+    libCamp_gv_mercLabArmed = false;
+    TriggerDebugOutput(1, StringToText("Merc lab: purchase, research " + IntToString(lv_researchID)), true);
     if ((lv_researchID == libCamp_ge_StoryResearchID_ResearchNone)) {
         return true;
     }
 
-    ResearchItemPurchase(ResearchItemGetSelected(1));
+    if (!libCamp_gf_MercLabCanBuy(lv_researchID)) {
+        libCamp_gf_TS_ResearchUIUpdate();
+        return true;
+    }
+    libCamp_gv_mercLabPurchaseBusy = true;
     libCamp_gf_SetStoryResearchPurchased(lv_researchID);
+    ResearchItemPurchase(ResearchItemGetSelected(1));
     libCamp_gf_TS_ResearchUIUpdate();
     libCamp_gf_TS_AddRecentResearch(lv_researchID);
     lv_purchasedCountZerg = 0;
@@ -13047,6 +13333,7 @@ bool libCamp_gt_TS_ResearchUIPurchase_Func (bool testConds, bool runActions) {
     }
     AchievementTermQuantitySet(1, "TStory01_8", lv_purchasedCountProt);
     AchievementTermQuantitySet(1, "TStory01_7", lv_purchasedCountZerg);
+    libCamp_gv_mercLabPurchaseBusy = false;
     return true;
 }
 
@@ -13054,6 +13341,13 @@ bool libCamp_gt_TS_ResearchUIPurchase_Func (bool testConds, bool runActions) {
 void libCamp_gt_TS_ResearchUIPurchase_Init () {
     libCamp_gt_TS_ResearchUIPurchase = TriggerCreate("libCamp_gt_TS_ResearchUIPurchase_Func");
     TriggerAddEventResearchPanelPurchase(libCamp_gt_TS_ResearchUIPurchase, c_playerAny);
+    libCamp_gv_mercLabSelectTrigger = TriggerCreate("libCamp_gt_MercLabSelectionChanged_Func");
+    TriggerAddEventResearchPanelSelectionChanged(libCamp_gv_mercLabSelectTrigger, c_playerAny, c_invalidResearchItemId);
+    libCamp_gv_mercLabNoticeTrigger = TriggerCreate("libCamp_gt_MercLabNotice_Func");
+    libCamp_gv_mercLabNoticeCloseTrigger = TriggerCreate("libCamp_gt_MercLabNoticeClose_Func");
+    TriggerAddEventDialogControl(libCamp_gv_mercLabNoticeCloseTrigger, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+    libCamp_gv_mercLabNoticeDismissTrigger = TriggerCreate("libCamp_gt_MercLabNoticeDismiss_Func");
+    TriggerAddEventCustomDialogDismissed(libCamp_gv_mercLabNoticeDismissTrigger, c_playerAny, libNtve_ge_CustomDialogResult_c_customDialogResultAny);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -14228,10 +14522,10 @@ bool libCamp_gt_TS_DebugResearchPoint_Func (bool testConds, bool runActions) {
 
     lv_cat = libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss;
     libCamp_gv_tSX_DebugResearchLevel[(lv_cat)] = 0;
-    libCamp_gv_tSX_DebugResearchLevel[(lv_cat)] = (libCamp_gf_StoryResearchPointCap(lv_cat) - libCamp_gf_StoryResearchPoints(lv_cat));
+    libCamp_gv_tSX_DebugResearchLevel[(lv_cat)] = (libCamp_gf_MercLabGate(lv_cat, 5) - libCamp_gf_StoryResearchPoints(lv_cat));
     lv_cat = libCamp_ge_StoryResearchCategory_ResearchCategoryZerg;
     libCamp_gv_tSX_DebugResearchLevel[(lv_cat)] = 0;
-    libCamp_gv_tSX_DebugResearchLevel[(lv_cat)] = (libCamp_gf_StoryResearchPointCap(lv_cat) - libCamp_gf_StoryResearchPoints(lv_cat));
+    libCamp_gv_tSX_DebugResearchLevel[(lv_cat)] = (libCamp_gf_MercLabGate(lv_cat, 5) - libCamp_gf_StoryResearchPoints(lv_cat));
     libCamp_gf_TS_ResearchUIUpdate();
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_Camp_89D7C0D6"));
     return true;
