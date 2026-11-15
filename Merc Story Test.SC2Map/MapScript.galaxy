@@ -1,0 +1,667 @@
+//==================================================================================================
+// 
+// Generated Map Script
+// 
+// Name:   Merc Story Test
+// 
+//==================================================================================================
+include "TriggerLibs/NativeLib"
+include "TriggerLibs/CampaignLib"
+include "LibBA5CCDED"
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+void InitLibs () {
+    libNtve_InitLib();
+    libCamp_InitLib();
+    libBA5CCDED_InitLib();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Global Variables
+//--------------------------------------------------------------------------------------------------
+int gv_consoleDialog;
+int gv_consoleStatusLabel;
+int gv_consoleLogLabel;
+int gv_consoleMissionList;
+int[41] gv_consoleButtons;
+int gv_consoleButtonCount;
+bool gv_consoleShown;
+int[32] gv_missions;
+string gv_missionPathAverage;
+
+void InitGlobals () {
+    int init_i;
+
+    gv_consoleDialog = c_invalidDialogId;
+    gv_consoleStatusLabel = c_invalidDialogControlId;
+    gv_consoleLogLabel = c_invalidDialogControlId;
+    gv_consoleMissionList = c_invalidDialogControlId;
+    for (init_i = 0; init_i <= 40; init_i += 1) {
+        gv_consoleButtons[init_i] = c_invalidDialogControlId;
+    }
+    for (init_i = 0; init_i <= 31; init_i += 1) {
+        gv_missions[init_i] = libCamp_ge_MapID_MapNone;
+    }
+    gv_missionPathAverage = "000000000000000000000000000000100000000000000000000000000000110000000000000000000000000000111000000000000010000000000000111100000000000010000000000000111110011101000011000000000000111110011011000011000000000000111110000000000010000000000000111110010000000010000000000000111111011001100011000000000000111110111001100011000000000000111110011100000000000000000000111110011011000000000000000000111110011101100000000000000000111110011011110000000000000000111110011101111000000000000000111110000000000000000000000000111111011100000010000000000000111110111011100011000000000000111111011101110011100110000000111110111011110011110110000000111111011100000011000000000000111110111010000011000100000000111111011100000011000110000000111110111010000011000111000000111111011101110011111110000000111110111011110011111110010000111111011101110011111110010000111110111011110011111110011000000000000000000000000000000000";
+}
+
+//--------------------------------------------------------------------------------------------------
+// Global Function Declarations
+//--------------------------------------------------------------------------------------------------
+void gf_StoryTestLog (text lp_message);
+void gf_StoryTestSaveCampaign ();
+void gf_StoryTestRefresh ();
+void gf_StoryTestWinMission (int lp_index, int lp_mode);
+void gf_StoryTestAddButton (text lp_text, text lp_tooltip, int lp_x, int lp_y, int lp_width);
+
+//--------------------------------------------------------------------------------------------------
+// Trigger Variables
+//--------------------------------------------------------------------------------------------------
+trigger gt_StoryTestPanelClosed;
+trigger gt_StoryTestInit;
+trigger gt_StoryTestToggleHotkey;
+trigger gt_StoryTestToggleChat;
+trigger gt_StoryTestButtonClicked;
+
+//--------------------------------------------------------------------------------------------------
+// Global Functions
+//--------------------------------------------------------------------------------------------------
+void gf_StoryTestLog (text lp_message) {
+    // Automatic Variable Declarations
+    // Implementation
+    libNtve_gf_SetDialogItemText(gv_consoleLogLabel, (StringToText("Last action:  ") + lp_message), PlayerGroupAll());
+}
+
+void gf_StoryTestSaveCampaign () {
+    // Automatic Variable Declarations
+    // Implementation
+    libCamp_gf_PrepareForStoryMode(c_gameOverVictory, PlayerDifficulty(1));
+}
+
+void gf_StoryTestRefresh () {
+    // Variable Declarations
+    int lv_i;
+    int lv_selected;
+    text lv_mark;
+
+    // Automatic Variable Declarations
+    const int auto014A8A83_ae = 30;
+    const int auto014A8A83_ai = 1;
+
+    // Variable Initialization
+    lv_selected = 1;
+
+    // Implementation
+    libNtve_gf_SetDialogItemText(gv_consoleStatusLabel, ((((((((((StringToText("Credits  ") + IntToText(libCamp_gf_StoryCredits())) + StringToText("      Done  ")) + IntToText(libCamp_gf_NumberOfMissions(libCamp_ge_MissionCountOptions_Completed))) + StringToText(" / 29")) + StringToText("      Last win  ")) + libCamp_gf_MissionName(libCamp_gf_LastSuccessfulMission())) + StringToText("      Research  P ")) + IntToText(libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss))) + StringToText("  Z ")) + IntToText(libCamp_gf_StoryResearchPoints(libCamp_ge_StoryResearchCategory_ResearchCategoryZerg))), PlayerGroupAll());
+    lv_selected = DialogControlGetSelectedItem(gv_consoleMissionList, 1);
+    DialogControlRemoveAllItems(gv_consoleMissionList, PlayerGroupAll());
+    lv_i = 1;
+    for ( ; ( (auto014A8A83_ai >= 0 && lv_i <= auto014A8A83_ae) || (auto014A8A83_ai < 0 && lv_i >= auto014A8A83_ae) ) ; lv_i += auto014A8A83_ai ) {
+        lv_mark = StringToText("[  ]   ");
+        if ((libCamp_gf_MissionStatusCheck(gv_missions[lv_i], libCamp_ge_MissionStatus_Available) == true)) {
+            lv_mark = StringToText("[>]   ");
+        }
+
+        if ((libCamp_gf_MissionStatusCheck(gv_missions[lv_i], libCamp_ge_MissionStatus_Completed) == true)) {
+            lv_mark = StringToText("[x]   ");
+        }
+
+        DialogControlAddItem(gv_consoleMissionList, PlayerGroupAll(), (lv_mark + libCamp_gf_MissionName(gv_missions[lv_i])));
+    }
+    if ((lv_selected < 1)) {
+        lv_selected = 1;
+    }
+
+    DialogControlSelectItem(gv_consoleMissionList, PlayerGroupAll(), lv_selected);
+}
+
+void gf_StoryTestWinMission (int lp_index, int lp_mode) {
+    // Variable Declarations
+    int lv_i;
+    int lv_credits;
+    int lv_earlierMissions;
+    bank lv_campaignBank;
+
+    // Automatic Variable Declarations
+    const int auto32641D6F_ae = 30;
+    const int auto32641D6F_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    if ((lp_index < 1)) {
+        gf_StoryTestLog(StringToText("Pick a mission in the list first."));
+        return ;
+    }
+
+    gf_StoryTestSaveCampaign();
+    BankLoad("TCampaign", 1);
+    lv_campaignBank = BankLastCreated();
+    lv_credits = BankValueGetAsInt(lv_campaignBank, "StoryStage", "8");
+    lv_i = 1;
+    for ( ; ( (auto32641D6F_ai >= 0 && lv_i <= auto32641D6F_ae) || (auto32641D6F_ai < 0 && lv_i >= auto32641D6F_ae) ) ; lv_i += auto32641D6F_ai ) {
+        if ((lv_i != lp_index) && (StringSub(gv_missionPathAverage, (((lp_index - 1) * 30) + lv_i), (((lp_index - 1) * 30) + lv_i)) == "1") && (libCamp_gf_MissionStatusCheck(gv_missions[lv_i], libCamp_ge_MissionStatus_Completed) == false)) {
+            BankValueSetFromInt(lv_campaignBank, "MissionCompletedAge", IntToString(lv_i), (31 - lv_i));
+            BankKeyRemove(lv_campaignBank, "MissionAvailableAge", IntToString(lv_i));
+            lv_credits = (lv_credits + libCamp_gf_MissionReward(gv_missions[lv_i]));
+            lv_earlierMissions = (lv_earlierMissions + 1);
+        }
+
+    }
+    BankValueSetFromInt(lv_campaignBank, "StoryStage", "8", lv_credits);
+    BankSave(lv_campaignBank);
+    BankLoad("MercStoryTest", 1);
+    BankValueSetFromInt(BankLastCreated(), "Pending", "Mission", lp_index);
+    BankValueSetFromInt(BankLastCreated(), "Pending", "Mode", lp_mode);
+    BankSave(BankLastCreated());
+    gf_StoryTestLog(((((StringToText("Winning ") + libCamp_gf_MissionName(gv_missions[lp_index])) + StringToText(" (+")) + IntToText(lv_earlierMissions)) + StringToText(" earlier missions). Reloading...")));
+    GameSetNextMap(GameMapPath());
+    GameOver(1, c_gameOverVictory, false, false);
+}
+
+void gf_StoryTestAddButton (text lp_text, text lp_tooltip, int lp_x, int lp_y, int lp_width) {
+    // Automatic Variable Declarations
+    // Implementation
+    DialogControlCreate(gv_consoleDialog, c_triggerControlTypeButton);
+    DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), lp_width, 40);
+    DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopLeft, lp_x, lp_y);
+    libNtve_gf_SetDialogItemText(DialogControlLastCreated(), lp_text, PlayerGroupAll());
+    libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), lp_tooltip, PlayerGroupAll());
+    gv_consoleButtonCount = (gv_consoleButtonCount + 1);
+    gv_consoleButtons[gv_consoleButtonCount] = DialogControlLastCreated();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Story Test - Panel Closed
+//--------------------------------------------------------------------------------------------------
+bool gt_StoryTestPanelClosed_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), true);
+    gv_consoleShown = true;
+    gf_StoryTestSaveCampaign();
+    gf_StoryTestRefresh();
+    gf_StoryTestLog(StringToText("Panel closed, state saved."));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_StoryTestPanelClosed_Init () {
+    gt_StoryTestPanelClosed = TriggerCreate("gt_StoryTestPanelClosed_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Story Test - Init
+//--------------------------------------------------------------------------------------------------
+bool gt_StoryTestInit_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_pendingMission;
+    int lv_pendingMode;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    gv_missions[1] = libCamp_ge_MapID_MapTRaynor01;
+    gv_missions[2] = libCamp_ge_MapID_MapTRaynor02;
+    gv_missions[3] = libCamp_ge_MapID_MapTRaynor03;
+    gv_missions[4] = libCamp_ge_MapID_MapTHanson01;
+    gv_missions[5] = libCamp_ge_MapID_MapTHanson02;
+    gv_missions[6] = libCamp_ge_MapID_MapTHanson03A;
+    gv_missions[7] = libCamp_ge_MapID_MapTHanson03B;
+    gv_missions[8] = libCamp_ge_MapID_MapTTosh01;
+    gv_missions[9] = libCamp_ge_MapID_MapTTosh02;
+    gv_missions[10] = libCamp_ge_MapID_MapTTosh03A;
+    gv_missions[11] = libCamp_ge_MapID_MapTTosh03B;
+    gv_missions[12] = libCamp_ge_MapID_MapTHorner01;
+    gv_missions[13] = libCamp_ge_MapID_MapTHorner02;
+    gv_missions[14] = libCamp_ge_MapID_MapTHorner03;
+    gv_missions[15] = libCamp_ge_MapID_MapTHorner04;
+    gv_missions[16] = libCamp_ge_MapID_MapTHorner05S;
+    gv_missions[17] = libCamp_ge_MapID_MapTTychus01;
+    gv_missions[18] = libCamp_ge_MapID_MapTTychus02;
+    gv_missions[19] = libCamp_ge_MapID_MapTTychus03;
+    gv_missions[20] = libCamp_ge_MapID_MapTTychus04;
+    gv_missions[21] = libCamp_ge_MapID_MapTTychus05;
+    gv_missions[22] = libCamp_ge_MapID_MapTZeratul01;
+    gv_missions[23] = libCamp_ge_MapID_MapTZeratul02;
+    gv_missions[24] = libCamp_ge_MapID_MapTZeratul03;
+    gv_missions[25] = libCamp_ge_MapID_MapTZeratul04;
+    gv_missions[26] = libCamp_ge_MapID_MapTValerian01;
+    gv_missions[27] = libCamp_ge_MapID_MapTValerian02A;
+    gv_missions[28] = libCamp_ge_MapID_MapTValerian02B;
+    gv_missions[29] = libCamp_ge_MapID_MapTValerian03;
+    gv_missions[30] = libCamp_ge_MapID_MapTSecret01;
+    BankLoad("MercStoryTest", 1);
+    lv_pendingMission = BankValueGetAsInt(BankLastCreated(), "Pending", "Mission");
+    lv_pendingMode = BankValueGetAsInt(BankLastCreated(), "Pending", "Mode");
+    if ((lv_pendingMission > 0)) {
+        BankKeyRemove(BankLastCreated(), "Pending", "Mission");
+        BankKeyRemove(BankLastCreated(), "Pending", "Mode");
+        BankSave(BankLastCreated());
+        libCamp_gf_LoadCampaignData(gv_missions[lv_pendingMission]);
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, ((StringToText("Story Test: completing ") + libCamp_gf_MissionName(gv_missions[lv_pendingMission])) + StringToText("...")));
+        Wait(1.0, c_timeReal);
+        if ((lv_pendingMode == 2)) {
+            libCamp_gf_DisplayCampaignVictoryScoreScreen(gv_missions[lv_pendingMission]);
+            return true;
+        }
+
+        if ((lv_pendingMode == 3)) {
+            libCamp_gf_SetStoryCredits((libCamp_gf_StoryCredits() + libCamp_gf_MissionReward(gv_missions[lv_pendingMission])));
+        }
+
+        libCamp_gf_PrepareForStoryMode(c_gameOverVictory, PlayerDifficulty(1));
+        if ((lv_pendingMode == 3)) {
+            GameSetNextMap(GameMapPath());
+        }
+
+        GameOver(1, c_gameOverVictory, false, false);
+        return true;
+    }
+
+    libCamp_gf_LoadCampaignData(libCamp_ge_MapID_MapTStory01);
+    libNtve_gf_HideGameUI(false, PlayerGroupAll());
+    DialogCreate(1200, 730, c_anchorCenter, 0, 0, false);
+    gv_consoleDialog = DialogLastCreated();
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 700, 36, c_anchorTopLeft, 40, 32, StringToText("MERC EDITION  ·  STORY TEST"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 340, 30, c_anchorTopLeft, 820, 38, StringToText("Ctrl+Shift+D  or  -story  to show / hide"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltip", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 1120, 32, c_anchorTopLeft, 40, 74, StringToText(""), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader", PlayerGroupAll());
+    gv_consoleStatusLabel = DialogControlLastCreated();
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 215, 30, c_anchorTopLeft, 500, 116, StringToText("RESOURCES"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 215, 30, c_anchorTopLeft, 725, 116, StringToText("UNLOCKS"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 215, 30, c_anchorTopLeft, 950, 116, StringToText("OPEN PANEL"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 215, 30, c_anchorTopLeft, 500, 376, StringToText("STORY"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 215, 30, c_anchorTopLeft, 725, 376, StringToText("SAVE"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 215, 30, c_anchorTopLeft, 950, 376, StringToText("GO"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 420, 30, c_anchorTopLeft, 40, 116, StringToText("MISSIONS     [x] done   [>] open"), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltipHeader_Terr", PlayerGroupAll());
+    DialogControlCreate(gv_consoleDialog, c_triggerControlTypeListBox);
+    gv_consoleMissionList = DialogControlLastCreated();
+    DialogControlSetSize(gv_consoleMissionList, PlayerGroupAll(), 420, 426);
+    DialogControlSetPosition(gv_consoleMissionList, PlayerGroupAll(), c_anchorTopLeft, 40, 150);
+    gf_StoryTestAddButton(StringToText("Win: to hub"), StringToText("Wins the selected mission (and the ones it needs first), then loads tstory01, which pays the reward and plays the debriefing."), 40, 590, 200);
+    gf_StoryTestAddButton(StringToText("Win: victory"), StringToText("Wins the selected mission and shows the real victory score screen; Continue goes to tstory01."), 260, 590, 200);
+    gf_StoryTestAddButton(StringToText("Win: stay"), StringToText("Wins the selected mission, adds its credits and comes back to this console (the map reloads)."), 40, 636, 200);
+    gf_StoryTestAddButton(StringToText("Launch"), StringToText("Saves, then loads the selected mission map with the current campaign state."), 260, 636, 200);
+    gf_StoryTestAddButton(StringToText("+1,000 credits"), StringToText(""), 500, 150, 215);
+    gf_StoryTestAddButton(StringToText("+10,000 credits"), StringToText(""), 500, 196, 215);
+    gf_StoryTestAddButton(StringToText("Credits to 0"), StringToText(""), 500, 242, 215);
+    gf_StoryTestAddButton(StringToText("+5 Protoss RP"), StringToText("Adds 5 progress to the \"Find Protoss Relics\" research objective."), 500, 288, 215);
+    gf_StoryTestAddButton(StringToText("+5 Zerg RP"), StringToText("Adds 5 progress to the \"Find Chrysalis DNA\" research objective."), 500, 334, 215);
+    gf_StoryTestAddButton(StringToText("Buy all tech"), StringToText("Buys every armory tech that is currently available, for free (credits are put back)."), 725, 150, 215);
+    gf_StoryTestAddButton(StringToText("Hire all mercs"), StringToText("Sets every mercenary contract (hero) to Purchased."), 725, 196, 215);
+    gf_StoryTestAddButton(StringToText("Unhire mercs"), StringToText("Sets every mercenary contract back to Available (unlocked, not hired)."), 725, 242, 215);
+    gf_StoryTestAddButton(StringToText("Lab: 1st picks"), StringToText("Marks the first research of every Protoss and Zerg tier as purchased."), 725, 288, 215);
+    gf_StoryTestAddButton(StringToText("Armory"), StringToText("Opens the Merc armory panel."), 950, 150, 215);
+    gf_StoryTestAddButton(StringToText("Mercenaries"), StringToText("Opens the mercenary (heroes) panel."), 950, 196, 215);
+    gf_StoryTestAddButton(StringToText("Lab research"), StringToText("Opens the lab research panel."), 950, 242, 215);
+    gf_StoryTestAddButton(StringToText("Archives"), StringToText("Opens the mission archives (battle report)."), 950, 288, 215);
+    gf_StoryTestAddButton(StringToText("Scenes unplayed"), StringToText("Marks every story scene as not played, so the hub plays them again."), 500, 410, 215);
+    gf_StoryTestAddButton(StringToText("Scenes played"), StringToText("Marks every story scene as played."), 500, 456, 215);
+    gf_StoryTestAddButton(StringToText("Save now"), StringToText("Writes the current state to the TCampaign bank."), 725, 410, 215);
+    gf_StoryTestAddButton(StringToText("Reload map"), StringToText("Saves and reloads this map, so everything is read fresh from the save."), 725, 456, 215);
+    gf_StoryTestAddButton(StringToText("Wipe save"), StringToText("Deletes the TCampaign and CampaignPS banks and reloads this map with a fresh campaign."), 725, 502, 215);
+    gf_StoryTestAddButton(StringToText("Go to hub"), StringToText("Saves and loads tstory01 without a debriefing. Hub debug chat (editor test): ROOM, deb, BRIEFING, starmap, battle, merc, lab, armory."), 950, 410, 215);
+    gf_StoryTestAddButton(StringToText("Close"), StringToText("Hides the console. Ctrl+Shift+D or -story brings it back."), 950, 456, 215);
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 660, 60, c_anchorTopLeft, 500, 558, StringToText(""), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltip", PlayerGroupAll());
+    gv_consoleLogLabel = DialogControlLastCreated();
+    libNtve_gf_CreateDialogItemLabel(gv_consoleDialog, 1120, 44, c_anchorTopLeft, 40, 664, StringToText("A win reloads this map once to complete the mission, like a real victory. Earlier missions on Blizzard's average path are marked done too. \"CampaignMode is not authorized\" errors are normal in Test Document."), ColorWithAlpha(0,0,0,0), false, 2.0);
+    libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "StandardTooltip", PlayerGroupAll());
+    DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), true);
+    gv_consoleShown = true;
+    gf_StoryTestRefresh();
+    gf_StoryTestLog(StringToText("Console ready."));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_StoryTestInit_Init () {
+    gt_StoryTestInit = TriggerCreate("gt_StoryTestInit_Func");
+    TriggerAddEventMapInit(gt_StoryTestInit);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Story Test - Toggle (Hotkey)
+//--------------------------------------------------------------------------------------------------
+bool gt_StoryTestToggleHotkey_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((gv_consoleShown == true)) {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), false);
+        gv_consoleShown = false;
+    }
+    else {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), true);
+        gv_consoleShown = true;
+        gf_StoryTestRefresh();
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_StoryTestToggleHotkey_Init () {
+    gt_StoryTestToggleHotkey = TriggerCreate("gt_StoryTestToggleHotkey_Func");
+    TriggerAddEventKeyPressed(gt_StoryTestToggleHotkey, 1, c_keyD, true, c_keyModifierStateRequire, c_keyModifierStateRequire, c_keyModifierStateExclude);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Story Test - Toggle (Chat)
+//--------------------------------------------------------------------------------------------------
+bool gt_StoryTestToggleChat_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((gv_consoleShown == true)) {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), false);
+        gv_consoleShown = false;
+    }
+    else {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), true);
+        gv_consoleShown = true;
+        gf_StoryTestRefresh();
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_StoryTestToggleChat_Init () {
+    gt_StoryTestToggleChat = TriggerCreate("gt_StoryTestToggleChat_Func");
+    TriggerAddEventChatMessage(gt_StoryTestToggleChat, c_playerAny, "-story", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Story Test - Button Clicked
+//--------------------------------------------------------------------------------------------------
+bool gt_StoryTestButtonClicked_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_tech;
+    bool lv_bought;
+    int lv_creditsBefore;
+    int lv_merc;
+    int lv_scene;
+
+    // Automatic Variable Declarations
+    const int auto3944FBF4_ae = 44;
+    const int auto3944FBF4_ai = 1;
+    int auto3EE72663_i;
+    int auto18C4F51E_i;
+    int auto6683CF96_i;
+    int auto6F0EBA8E_i;
+
+    // Variable Initialization
+    lv_merc = libCamp_ge_StoryMercID_MercNone;
+    lv_scene = libCamp_ge_SceneID_SceneNone;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[1])) {
+        gf_StoryTestWinMission(DialogControlGetSelectedItem(gv_consoleMissionList, 1), 1);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[2])) {
+        gf_StoryTestWinMission(DialogControlGetSelectedItem(gv_consoleMissionList, 1), 2);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[3])) {
+        gf_StoryTestWinMission(DialogControlGetSelectedItem(gv_consoleMissionList, 1), 3);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[4])) {
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestLog(StringToText("Launching the selected mission..."));
+        libCamp_gf_LaunchMission(gv_missions[DialogControlGetSelectedItem(gv_consoleMissionList, 1)], false, PlayerDifficulty(1));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[5])) {
+        libCamp_gf_SetStoryCredits((libCamp_gf_StoryCredits() + 1000));
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("+1,000 credits."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[6])) {
+        libCamp_gf_SetStoryCredits((libCamp_gf_StoryCredits() + 10000));
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("+10,000 credits."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[7])) {
+        libCamp_gf_SetStoryCredits(0);
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("Credits set to 0."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[8])) {
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectFindProtossRelics, 5);
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("+5 Protoss research progress."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[9])) {
+        libCamp_gf_AddProgressToStoryResearch(libCamp_ge_StoryResearchObject_ResearchObjectFindChrysalisDNA, 5);
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("+5 Zerg research progress."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[10])) {
+        lv_creditsBefore = libCamp_gf_StoryCredits();
+        libCamp_gf_SetStoryCredits(9999999);
+        lv_tech = 1;
+        for ( ; ( (auto3944FBF4_ai >= 0 && lv_tech <= auto3944FBF4_ae) || (auto3944FBF4_ai < 0 && lv_tech >= auto3944FBF4_ae) ) ; lv_tech += auto3944FBF4_ai ) {
+            lv_bought = libCamp_gf_MercTryPurchaseTech(lv_tech);
+        }
+        libCamp_gf_SetStoryCredits(lv_creditsBefore);
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("Bought all available armory tech."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[11])) {
+        auto3EE72663_i = libCamp_gv_TSC_MERC_FIRST;
+        while (auto3EE72663_i <= libCamp_gv_TSC_MERC_LAST) {
+            lv_merc = libCamp_gv_tS_MercID[auto3EE72663_i];
+            libCamp_gf_SetMercStatus(lv_merc, libCamp_ge_StoryMercStatus_Purchased);
+            auto3EE72663_i = auto3EE72663_i + 1;
+        }
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("All mercenaries hired."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[12])) {
+        auto18C4F51E_i = libCamp_gv_TSC_MERC_FIRST;
+        while (auto18C4F51E_i <= libCamp_gv_TSC_MERC_LAST) {
+            lv_merc = libCamp_gv_tS_MercID[auto18C4F51E_i];
+            libCamp_gf_SetMercStatus(lv_merc, libCamp_ge_StoryMercStatus_Available);
+            auto18C4F51E_i = auto18C4F51E_i + 1;
+        }
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("Mercenaries set back to available."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[13])) {
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchP11UltraCapacitors);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchP21OrbitalDepots);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchP31AutomatedRefinery);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchP41Raven);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchP51TechReactor);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchZ11ShrikeTurret);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchZ21PlanetaryFortress);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchZ31Predator);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchZ41CellularReactors);
+        libCamp_gf_SetStoryResearchPurchased(libCamp_ge_StoryResearchID_ResearchZ51HiveMindEmulator);
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("First research option bought in every tier."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[14])) {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), false);
+        gv_consoleShown = false;
+        libCamp_gf_DisplayTechConsole(gt_StoryTestPanelClosed);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[15])) {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), false);
+        gv_consoleShown = false;
+        libCamp_gf_DisplayMercenaryPanel(gt_StoryTestPanelClosed);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[16])) {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), false);
+        gv_consoleShown = false;
+        libCamp_gf_DisplayResearchPanel(gt_StoryTestPanelClosed);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[17])) {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), false);
+        gv_consoleShown = false;
+        libCamp_gf_DisplayBattleReport(null, gt_StoryTestPanelClosed);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[18])) {
+        auto6683CF96_i = libCamp_gv_TSC_SCENE_FIRST;
+        while (auto6683CF96_i <= libCamp_gv_TSC_SCENE_LAST) {
+            lv_scene = libCamp_gv_tS_SceneIDs[auto6683CF96_i];
+            libCamp_gf_SetScenePlayed(lv_scene, false);
+            auto6683CF96_i = auto6683CF96_i + 1;
+        }
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("All scenes marked unplayed."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[19])) {
+        auto6F0EBA8E_i = libCamp_gv_TSC_SCENE_FIRST;
+        while (auto6F0EBA8E_i <= libCamp_gv_TSC_SCENE_LAST) {
+            lv_scene = libCamp_gv_tS_SceneIDs[auto6F0EBA8E_i];
+            libCamp_gf_SetScenePlayed(lv_scene, true);
+            auto6F0EBA8E_i = auto6F0EBA8E_i + 1;
+        }
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("All scenes marked played."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[20])) {
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestRefresh();
+        gf_StoryTestLog(StringToText("Saved."));
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[21])) {
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestLog(StringToText("Reloading..."));
+        GameSetNextMap(GameMapPath());
+        GameOver(1, c_gameOverVictory, false, false);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[22])) {
+        BankLoad("TCampaign", 1);
+        BankRemove(BankLastCreated());
+        BankLoad("CampaignPS", 1);
+        BankRemove(BankLastCreated());
+        gf_StoryTestLog(StringToText("Campaign save wiped. Reloading..."));
+        GameSetNextMap(GameMapPath());
+        GameOver(1, c_gameOverVictory, false, false);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[23])) {
+        gf_StoryTestSaveCampaign();
+        gf_StoryTestLog(StringToText("Going to the hub..."));
+        GameOver(1, c_gameOverVictory, false, false);
+        return true;
+    }
+
+    if ((EventDialogControl() == gv_consoleButtons[24])) {
+        DialogSetVisible(gv_consoleDialog, PlayerGroupAll(), false);
+        gv_consoleShown = false;
+        return true;
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_StoryTestButtonClicked_Init () {
+    gt_StoryTestButtonClicked = TriggerCreate("gt_StoryTestButtonClicked_Func");
+    TriggerAddEventDialogControl(gt_StoryTestButtonClicked, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger Initialization
+//--------------------------------------------------------------------------------------------------
+void InitTriggers () {
+    gt_StoryTestPanelClosed_Init();
+    gt_StoryTestInit_Init();
+    gt_StoryTestToggleHotkey_Init();
+    gt_StoryTestToggleChat_Init();
+    gt_StoryTestButtonClicked_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Map Initialization
+//--------------------------------------------------------------------------------------------------
+void InitMap () {
+    InitLibs();
+    InitGlobals();
+    InitTriggers();
+}
