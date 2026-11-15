@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BankList>
-    <Bank Name="MercStoryTest" Player="1"/>
-    <Bank Name="CampaignPS" Player="1"/>
     <Bank Name="TCampaign" Player="1"/>
+    <Bank Name="CampaignPS" Player="1"/>
+    <Bank Name="MercStoryTest" Player="1"/>
     <Bank Name="TTychus02" Player="1"/>
     <Bank Name="TRaynor03" Player="1"/>
     <Bank Name="TTosh01" Player="1"/>
