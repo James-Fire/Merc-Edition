@@ -156,6 +156,7 @@ trigger libBA5CCDED_gt_UpgradeButtonSFX;
 trigger libBA5CCDED_gt_MU_PurchaseButtonPressed;
 trigger libBA5CCDED_gt_PurchaseButtonSFX;
 trigger libBA5CCDED_gt_MU_CloseButtonPressed;
+trigger libBA5CCDED_gt_MU_CloseHotkeyPressed;
 trigger libBA5CCDED_gt_CloseButtonSFX;
 
 // Library Initialization

@@ -16,6 +16,7 @@
             <UserType value="MercArmoryUnits"/>
             <EditorColumn value="3"/>
         </Fields>
+        <Fields Id="UnlockUnit" Type="String" EditorColumn="5"/>
         <Instances Id="[Default]"/>
         <Instances Id="Bunker">
             <Image Image="Assets\Textures\btn-building-terran-bunker.dds">
@@ -74,6 +75,9 @@
             <User Type="MercArmoryUpgrades" Instance="Nanite Emitter - Danger Mist">
                 <Field Id="Upgrades" Index="1"/>
             </User>
+                    <String String="NaniteCloudEmitter">
+                <Field Id="UnlockUnit"/>
+            </String>
         </Instances>
         <Instances Id="War Pig">
             <Image Image="Assets\Textures\btn-unit-terran-merc-marine.dds">
@@ -334,6 +338,9 @@
             <User Type="MercArmoryUpgrades" Instance="Nomad - Silent Mode">
                 <Field Id="Upgrades" Index="1"/>
             </User>
+                    <String String="Nomad">
+                <Field Id="UnlockUnit"/>
+            </String>
         </Instances>
         <Instances Id="Adjudicator">
             <Image Image="Assets\Textures\btn-unit-terran-sciencevessel.dds">
@@ -345,6 +352,9 @@
             <User Type="MercArmoryUpgrades" Instance="Adjudicator - Swann Nanites">
                 <Field Id="Upgrades" Index="1"/>
             </User>
+                    <String String="Adjudicator">
+                <Field Id="UnlockUnit"/>
+            </String>
         </Instances>
         <Instances Id="Samson">
             <Image Image="Assets\Textures\btn-unit-terran-hercules.dds">
@@ -356,6 +366,9 @@
             <User Type="MercArmoryUpgrades" Instance="Samson - Apollo Injection Pods">
                 <Field Id="Upgrades" Index="1"/>
             </User>
+                    <String String="ZeusLanderFlying">
+                <Field Id="UnlockUnit"/>
+            </String>
         </Instances>
         <Instances Id="Wolverine">
             <Image Image="Assets\Textures\btn-unit-terran-warhound.dds">
@@ -367,6 +380,9 @@
             <User Type="MercArmoryUpgrades" Instance="Wolverine - Chaotic Power">
                 <Field Id="Upgrades" Index="1"/>
             </User>
+                    <String String="Wolverine">
+                <Field Id="UnlockUnit"/>
+            </String>
         </Instances>
     </CUser>
     <CUser id="MercArmoryUpgrades">

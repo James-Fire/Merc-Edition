@@ -1613,6 +1613,10 @@
             <Button DefaultButtonFace="BuildNomad" Requirements="HaveAttachedTechLab"/>
             <Unit value="Nomad"/>
         </InfoArray>
+        <InfoArray index="Train17" Time="70">
+            <Button DefaultButtonFace="BuildZeusLander" State="Restricted" Requirements="HaveAttachedStarportTechLabAndFusionCore"/>
+            <Unit value="ZeusLanderFlying"/>
+        </InfoArray>
     </CAbilTrain>
     <CAbilEffectInstant id="SuperStim">
         <EditorCategories value="AbilityorEffectType:Units"/>

@@ -4688,8 +4688,6 @@ void libCamp_gf_TS_InitializeMissionObjectiveData () {
     libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_THanson03AObjective1, libCamp_ge_MapID_MapTHanson03A, "MissionObjective|THanson03A_1");
     libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_THanson03AObjective2, libCamp_ge_MapID_MapTHanson03A, "MissionObjective|THanson03A_2");
     libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_THanson03AObjective3, libCamp_ge_MapID_MapTHanson03A, "MissionObjective|THanson03A_3");
-    libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_THanson03AObjective4, libCamp_ge_MapID_MapTHanson03A, "MissionObjective|THanson03A_3");
-    libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_THanson03AObjective5, libCamp_ge_MapID_MapTHanson03A, "MissionObjective|THanson03A_3");
     libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_THanson03BObjective1, libCamp_ge_MapID_MapTHanson03B, "MissionObjective|THanson03B_1");
     libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_TTosh01Objective1, libCamp_ge_MapID_MapTTosh01, "MissionObjective|TTosh01_1");
     libCamp_gf_TS_InitializeMissionObjectiveDataSingle(libCamp_ge_MissionObjective_TTosh01Objective2, libCamp_ge_MapID_MapTTosh01, "MissionObjective|TTosh01_2");
@@ -5068,6 +5066,40 @@ int libCamp_gf_TS_StoryResearchMissionMainObjectiveReward (int lp_mission, int l
     return 0;
 }
 
+int libCamp_gf_MercMissionResearchShown (int lp_mission, int lp_category) {
+    int lv_zerg = 0;
+    int lv_prot = 0;
+
+    if (lp_mission == libCamp_ge_MapID_MapTRaynor01) { lv_zerg = 3; }
+    else if (lp_mission == libCamp_ge_MapID_MapTRaynor02) { lv_zerg = 2; }
+    else if (lp_mission == libCamp_ge_MapID_MapTRaynor03) { lv_prot = 5; }
+    else if (lp_mission == libCamp_ge_MapID_MapTHanson01) { lv_zerg = 4; }
+    else if (lp_mission == libCamp_ge_MapID_MapTHanson02) { lv_zerg = 2; }
+    else if (lp_mission == libCamp_ge_MapID_MapTHanson03B) { lv_zerg = 3; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTychus01) { lv_prot = 5; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTychus02) { lv_prot = 5; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTychus03) { lv_zerg = 2; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTychus05) { lv_prot = 5; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTosh01) { lv_prot = 7; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTosh02) { lv_prot = 6; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTosh03A) { lv_prot = 3; }
+    else if (lp_mission == libCamp_ge_MapID_MapTTosh03B) { lv_zerg = 3; }
+    else if (lp_mission == libCamp_ge_MapID_MapTHorner04) { lv_zerg = 2; lv_prot = 2; }
+    else if (lp_mission == libCamp_ge_MapID_MapTHorner05S) { lv_zerg = 15; lv_prot = 15; }
+    else if (lp_mission == libCamp_ge_MapID_MapTZeratul01) { lv_zerg = 5; lv_prot = 5; }
+    else if (lp_mission == libCamp_ge_MapID_MapTZeratul02) { lv_prot = 2; }
+    else if (lp_mission == libCamp_ge_MapID_MapTZeratul03) { lv_zerg = 2; }
+    else if (lp_mission == libCamp_ge_MapID_MapTZeratul04) { lv_zerg = 5; lv_prot = 5; }
+
+    if (lp_category == libCamp_ge_StoryResearchCategory_ResearchCategoryZerg) {
+        return lv_zerg;
+    }
+    if (lp_category == libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss) {
+        return lv_prot;
+    }
+    return 0;
+}
+
 int libCamp_gf_TS_StoryResearchMissionOpportunities (int lp_mission, int lp_category) {
     // Variable Declarations
     int lv_index;
@@ -5086,6 +5118,7 @@ int libCamp_gf_TS_StoryResearchMissionOpportunities (int lp_mission, int lp_cate
         lv_point += (libCamp_gf_StoryResearchObjectReward(libCamp_gf_TS_StoryResearchMissionObject(lp_mission, lv_index), lp_category) * libCamp_gf_TS_StoryResearchMissionObjectCount(lp_mission, lv_index));
     }
     lv_point += libCamp_gf_TS_StoryResearchMissionMainObjectiveReward(lp_mission, lp_category);
+    lv_point += libCamp_gf_MercMissionResearchShown(lp_mission, lp_category);
     return lv_point;
 }
 
@@ -5432,11 +5465,11 @@ void libCamp_gf_TS_UpdateResearchUnitHelpPanel (int lp_player) {
     // Automatic Variable Declarations
     // Implementation
     if ((libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchP41Raven, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
-        libCamp_gf_AddUnitTypeToUnitHelpPanel("Raven", true, lp_player);
+        libCamp_gf_AddUnitTypeToUnitHelpPanel("Nomad", true, lp_player); // Merc: research P4_1 is the Nomad
     }
 
     if ((libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchP42ScienceVessel, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
-        libCamp_gf_AddUnitTypeToUnitHelpPanel("ScienceVessel", true, lp_player);
+        libCamp_gf_AddUnitTypeToUnitHelpPanel("Adjudicator", true, lp_player); // Merc: research P4_2 is the Adjudicator
     }
 
     if ((libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchP51TechReactor, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
@@ -5448,15 +5481,15 @@ void libCamp_gf_TS_UpdateResearchUnitHelpPanel (int lp_player) {
     }
 
     if ((libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ22PerditionTurret, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
-        libCamp_gf_AddUnitTypeToUnitHelpPanel("PerditionTurret", true, lp_player);
+        libCamp_gf_AddUnitTypeToUnitHelpPanel("NaniteCloudEmitter", true, lp_player); // Merc: research Z2_2 is the Nanite Emitter
     }
 
     if ((libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ31Predator, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
-        libCamp_gf_AddUnitTypeToUnitHelpPanel("Predator", true, lp_player);
+        libCamp_gf_AddUnitTypeToUnitHelpPanel("Wolverine", true, lp_player); // Merc: research Z3_1 is the Wolverine
     }
 
     if ((libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ32Hercules, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
-        libCamp_gf_AddUnitTypeToUnitHelpPanel("Hercules", true, lp_player);
+        libCamp_gf_AddUnitTypeToUnitHelpPanel("ZeusLanderFlying", true, lp_player); // Merc: research Z3_2 is the Samson
     }
 
     if ((libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ51HiveMindEmulator, libCamp_ge_StoryResearchState_ResearchStatePurchased) == true)) {
@@ -6287,6 +6320,8 @@ text libCamp_gf_PlanetMissionResearchOpportunitiesText (int lp_mission, text lp_
     lv_researchText = StringToText("");
     lv_researchProtoss = libCamp_gf_TS_StoryResearchMissionOpportunities(lp_mission, libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss);
     lv_researchZerg = libCamp_gf_TS_StoryResearchMissionOpportunities(lp_mission, libCamp_ge_StoryResearchCategory_ResearchCategoryZerg);
+    lv_researchProtoss += libCamp_gf_TS_MissionRewardResearchPoints(lp_mission, libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss);
+    lv_researchZerg += libCamp_gf_TS_MissionRewardResearchPoints(lp_mission, libCamp_ge_StoryResearchCategory_ResearchCategoryZerg);
     if ((lv_researchProtoss <= 0) && (lv_researchZerg <= 0)) {
         return null;
     }
@@ -6830,6 +6865,27 @@ bool libCamp_gf_StoryTechUnitIsEnabled (string lp_techUnit) {
         return libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ52SigmaProjector, libCamp_ge_StoryResearchState_ResearchStatePurchased);
     }
 
+    // Merc Edition.
+    if ((lp_techUnit == "Nomad")) {
+        return libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchP41Raven, libCamp_ge_StoryResearchState_ResearchStatePurchased);
+    }
+
+    if ((lp_techUnit == "Adjudicator")) {
+        return libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchP42ScienceVessel, libCamp_ge_StoryResearchState_ResearchStatePurchased);
+    }
+
+    if ((lp_techUnit == "NaniteCloudEmitter")) {
+        return libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ22PerditionTurret, libCamp_ge_StoryResearchState_ResearchStatePurchased);
+    }
+
+    if ((lp_techUnit == "Wolverine")) {
+        return libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ31Predator, libCamp_ge_StoryResearchState_ResearchStatePurchased);
+    }
+
+    if ((lp_techUnit == "ZeusLanderFlying")) {
+        return libCamp_gf_StoryResearchStateCheck(libCamp_ge_StoryResearchID_ResearchZ32Hercules, libCamp_ge_StoryResearchState_ResearchStatePurchased);
+    }
+
     return false;
 }
 
@@ -7023,6 +7079,73 @@ void libCamp_gf_MercClearTechNew (int lp_tech) {
     if ((libCamp_gv_tSX_Tech_Status[(lp_tech)] == libCamp_ge_StoryTechStates_TechNew)) {
         libCamp_gv_tSX_Tech_Status[(lp_tech)] = libCamp_ge_StoryTechStates_TechAvailable;
     }
+}
+
+//--------------------------------------------------------------------------------------------------
+// Merc Edition: mission research and bonus credits (GUI: "Give Research", score-screen lines)
+//--------------------------------------------------------------------------------------------------
+// Adds research to the current mission without a stand-in research object. Same banking as
+// libCamp_gf_AddProgressToStoryResearch: the run's total grows, and the mission keeps its best total.
+void libCamp_gf_MercAddStoryResearch (int lp_zerg, int lp_protoss) {
+    int lv_zerg = libCamp_ge_StoryResearchCategory_ResearchCategoryZerg;
+    int lv_prot = libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss;
+
+    if (lp_zerg > 0) {
+        libCamp_gv_tS_ResearchMissionProgressCurrent[lv_zerg] += lp_zerg;
+    }
+    if (lp_protoss > 0) {
+        libCamp_gv_tS_ResearchMissionProgressCurrent[lv_prot] += lp_protoss;
+    }
+    if ((libCamp_gf_TS_StoryResearchMissionProgressCurrent(lv_prot) > libCamp_gf_StoryResearchMissionProgress(libCamp_gv_tS_CurrentMap, lv_prot))) {
+        libCamp_gv_tSX_ResearchMissionProgress[(libCamp_gv_tS_CurrentMap)][lv_prot] = libCamp_gf_TS_StoryResearchMissionProgressCurrent(lv_prot);
+    }
+    if ((libCamp_gf_TS_StoryResearchMissionProgressCurrent(lv_zerg) > libCamp_gf_StoryResearchMissionProgress(libCamp_gv_tS_CurrentMap, lv_zerg))) {
+        libCamp_gv_tSX_ResearchMissionProgress[(libCamp_gv_tS_CurrentMap)][lv_zerg] = libCamp_gf_TS_StoryResearchMissionProgressCurrent(lv_zerg);
+    }
+}
+
+// Research earned in this run of the current mission: every Add Progress To Story Research / Give Research
+// so far, plus the mission's end-of-mission reward (Maps|X ResearchZerg/ResearchProtoss).
+// For the score screen, which only shows on victory. lp_type: 1 Zerg, 2 Protoss.
+int libCamp_gf_MercMissionResearchEarned (int lp_type) {
+    int lv_cat;
+
+    if (lp_type == 1) {
+        lv_cat = libCamp_ge_StoryResearchCategory_ResearchCategoryZerg;
+    }
+    else if (lp_type == 2) {
+        lv_cat = libCamp_ge_StoryResearchCategory_ResearchCategoryProtoss;
+    }
+    else {
+        return 0;
+    }
+    return (libCamp_gf_TS_StoryResearchMissionProgressCurrent(lv_cat) + libCamp_gf_TS_MissionRewardResearchPoints(libCamp_gv_tS_CurrentMap, lv_cat));
+}
+
+// Bonus credits from this run's bonus objectives (Add Progress To Story Objective) in the current mission.
+// Each objective counts at most its Item Count, so it never shows more than the Briefing promises.
+// Unlike MissionObjectiveRewardsEarnedLastMission, a replay still shows what this run earned.
+int libCamp_gf_MercMissionBonusCreditsEarned () {
+    int lv_i;
+    int lv_obj;
+    int lv_progress;
+    int lv_total;
+
+    lv_i = 1;
+    while (lv_i <= libCamp_gv_TSC_MISSIONOBJECTIVECOUNT) {
+        lv_obj = libCamp_gv_tS_MissionObjectives[libCamp_gv_tS_CurrentMap][lv_i];
+        if (lv_obj != 0) {
+            lv_progress = libCamp_gv_tS_MissionObjProgressCurrent[(lv_obj)];
+            if (lv_progress > libCamp_gf_MissionObjectiveItemCount(lv_obj)) {
+                lv_progress = libCamp_gf_MissionObjectiveItemCount(lv_obj);
+            }
+            if (lv_progress > 0) {
+                lv_total += (lv_progress * libCamp_gf_MissionObjectiveCreditsPerItem(lv_obj));
+            }
+        }
+        lv_i = lv_i + 1;
+    }
+    return lv_total;
 }
 
 void libCamp_gf_DisplayTechConsole (trigger lp_exitTrigger) {
@@ -10262,6 +10385,7 @@ void libCamp_gf_HideStoryUI (bool lp_showHide, bool lp_includeTip) {
 void libCamp_gf_DisplayCampaignVictoryScoreScreen (int lp_mission) {
     // Variable Declarations
     text lv_upgradeAvailable;
+    int lv_mercReward;
     int lv_indexAchievement;
     int lv_unlockedTech;
     int lv_subGroupEnabledIndex;
@@ -10274,6 +10398,9 @@ void libCamp_gf_DisplayCampaignVictoryScoreScreen (int lp_mission) {
     lv_indexObjective = libCamp_ge_MissionObjective_MissionObjectiveNone;
 
     // Implementation
+    // Merc Edition: the Reward panel counts the base reward plus this run's bonus objective credits.
+    // Read first, before the transition save below.
+    lv_mercReward = (libCamp_gf_MissionReward(lp_mission) + libCamp_gf_MercMissionBonusCreditsEarned());
     GameCheatAllow(c_gameCheatProgress, false);
     UISetWorldVisible(PlayerGroupAll(), false);
     libNtve_gf_HideGameUI(false, PlayerGroupAll());
@@ -10300,9 +10427,9 @@ void libCamp_gf_DisplayCampaignVictoryScoreScreen (int lp_mission) {
         VictoryPanelSetVictoryText(StringExternal("Param/Value/lib_Camp_2D326347"));
     }
     VictoryPanelSetMissionTimeText(libCamp_gf_FormatTimeCampaign(libCamp_gv_tS_MissionCompleteTime));
-    if ((libCamp_gf_MissionReward(lp_mission) > 0)) {
+    if ((lv_mercReward > 0)) {
         VictoryPanelSetRewardTitle(StringExternal("Param/Value/lib_Camp_C2E2CE7E"));
-        VictoryPanelSetRewardCredits(libCamp_gf_MissionReward(lp_mission));
+        VictoryPanelSetRewardCredits(lv_mercReward);
     }
     else {
         VictoryPanelSetRewardTitle(StringToText(""));

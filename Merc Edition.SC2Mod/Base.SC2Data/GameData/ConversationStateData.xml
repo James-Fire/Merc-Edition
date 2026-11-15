@@ -5,11 +5,6 @@
             <InfoValue index="0" Value="50000"/>
         </Indices>
     </CConversationState>
-    <CConversationState id="LabResearchObject">
-        <Indices index="5">
-            <InfoValue index="1" Value="1"/>
-        </Indices>
-    </CConversationState>
     <CConversationState id="Maps">
         <Indices index="0">
             <InfoValue Id="Reward" Value="55"/>
@@ -28,19 +23,31 @@
     <CConversationState id="MissionObjective">
         <Indices index="0">
             <InfoValue Id="Credits Per Item" Value="5000"/>
-            <InfoValue Id="Item Count" Value="16"/>
+            <InfoValue Id="Item Count" Value="8"/>
+        </Indices>
+        <Indices index="1">
+            <InfoValue Id="Credits Per Item" Value="50000"/>
+            <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="3">
             <InfoValue Id="Credits Per Item" Value="50000"/>
             <InfoValue Id="Item Count" Value="1"/>
         </Indices>
+        <Indices index="4">
+            <InfoValue Id="Credits Per Item" Value="15000"/>
+            <InfoValue Id="Item Count" Value="2"/>
+        </Indices>
         <Indices index="5">
-            <InfoValue Id="Credits Per Item" Value="5000"/>
-            <InfoValue Id="Item Count" Value="11"/>
+            <InfoValue Id="Credits Per Item" Value="25000"/>
+            <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="6">
-            <InfoValue Id="Item Count" Value="5"/>
             <InfoValue Id="Credits Per Item" Value="25000"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
+        <Indices index="7">
+            <InfoValue Id="Credits Per Item" Value="100000"/>
+            <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="10">
             <InfoValue Id="Credits Per Item" Value="25000"/>
@@ -78,6 +85,10 @@
             <InfoValue Id="Credits Per Item" Value="50000"/>
             <InfoValue Id="Item Count" Value="5"/>
         </Indices>
+        <Indices index="25">
+            <InfoValue Id="Credits Per Item" Value="50000"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
         <Indices index="30">
             <InfoValue Id="Credits Per Item" Value="100000"/>
             <InfoValue Id="Item Count" Value="2"/>
@@ -103,7 +114,7 @@
             <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="50">
-            <InfoValue Id="Credits Per Item" Value="-48577"/>
+            <InfoValue Id="Credits Per Item" Value="1000000"/>
             <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="53">
@@ -114,21 +125,29 @@
             <InfoValue Id="Credits Per Item" Value="4000"/>
             <InfoValue Id="Item Count" Value="100"/>
         </Indices>
+        <Indices index="58">
+            <InfoValue Id="Credits Per Item" Value="400000"/>
+            <InfoValue Id="Item Count" Value="1"/>
+        </Indices>
         <Indices index="60">
             <InfoValue Id="Credits Per Item" Value="50000"/>
-            <InfoValue Id="Item Count" Value="11"/>
+            <InfoValue Id="Item Count" Value="5"/>
+        </Indices>
+        <Indices index="61">
+            <InfoValue Id="Credits Per Item" Value="300000"/>
+            <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="66">
             <InfoValue Id="Credits Per Item" Value="50000"/>
-            <InfoValue Id="Item Count" Value="7"/>
+            <InfoValue Id="Item Count" Value="8"/>
         </Indices>
         <Indices index="70">
             <InfoValue Id="Credits Per Item" Value="50000"/>
             <InfoValue Id="Item Count" Value="3"/>
         </Indices>
         <Indices index="71">
-            <InfoValue Id="Credits Per Item" Value="150000"/>
-            <InfoValue Id="Item Count" Value="5"/>
+            <InfoValue Id="Credits Per Item" Value="750000"/>
+            <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="74">
             <InfoValue Id="Credits Per Item" Value="50000"/>
@@ -147,12 +166,12 @@
             <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="84">
-            <InfoValue Id="Credits Per Item" Value="10000"/>
+            <InfoValue Id="Credits Per Item" Value="100000"/>
             <InfoValue Id="Item Count" Value="1"/>
         </Indices>
         <Indices index="86">
-            <InfoValue Id="Credits Per Item" Value="15000"/>
-            <InfoValue Id="Item Count" Value="6"/>
+            <InfoValue Id="Credits Per Item" Value="0"/>
+            <InfoValue Id="Item Count" Value="0"/>
         </Indices>
         <Indices index="87">
             <InfoValue Id="Credits Per Item" Value="100000"/>
@@ -180,6 +199,31 @@
         <Indices index="13">
             <InfoValue index="0" Value="110000"/>
             <InfoUpgrade index="0" Upgrade="ChemicalPlating"/>
+        </Indices>
+    </CConversationState>
+    <CConversationState id="LabResearch">
+        <!-- Merc lab rework. Indices are positional in stock order: Z1_1..Z5_2 = 0..9, P1_1..P5_2 = 10..19. -->
+        <Indices index="3">
+            <!-- Z2_2 Perdition Turret -> Nanite Emitter (TerranBuild Build25) -->
+            <InfoAbilCmd index="0" Abil="TerranBuild" Cmd="24"/>
+            <InfoUpgrade Id="Upgrade 1" Upgrade="NaniteEmitter"/>
+        </Indices>
+        <Indices index="4">
+            <!-- Z3_1 Predator -> Wolverine (FactoryTrain Train19) -->
+            <ImagePath value="Assets\Textures\btn-unit-terran-warhound.dds"/>
+            <InfoAbilCmd index="0" Abil="FactoryTrain" Cmd="18"/>
+        </Indices>
+        <Indices index="5">
+            <!-- Z3_2 Hercules -> Samson (ZeusLanderFlying, StarportTrain Train17) -->
+            <InfoAbilCmd index="0" Abil="StarportTrain" Cmd="16"/>
+        </Indices>
+        <Indices index="16">
+            <!-- P4_1 Raven -> Nomad (StarportTrain Train16) -->
+            <InfoAbilCmd index="0" Abil="StarportTrain" Cmd="15"/>
+        </Indices>
+        <Indices index="17">
+            <!-- P4_2 Science Vessel -> Adjudicator (StarportTrain Train15); keeps upgrade ScienceVessel for BuildScienceVessel -->
+            <InfoAbilCmd index="0" Abil="StarportTrain" Cmd="14"/>
         </Indices>
     </CConversationState>
 </Catalog>
