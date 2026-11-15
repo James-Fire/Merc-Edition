@@ -52,6 +52,15 @@
         </Frame>
         <Frame type="Image" name="SelectedBackgroundImage">
             <Visible val="false"/>
+            <Alpha val="0"/>
+        </Frame>
+        <Frame type="Image" name="NormalCinematicImage">
+            <ColorAdjustMode val="Desaturate"/>
+            <AdjustmentColor val="d49736"/>
+        </Frame>
+        <Frame type="Image" name="HoverCinematicImage">
+            <ColorAdjustMode val="Desaturate"/>
+            <AdjustmentColor val="ffc616"/>
         </Frame>
     </Frame>
     <Frame type="BattleReportPanel" name="BattleReportPanelTemplate" file="BattleReportPanel">
