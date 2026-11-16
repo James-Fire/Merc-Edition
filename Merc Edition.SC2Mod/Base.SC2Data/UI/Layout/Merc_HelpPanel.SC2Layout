@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <!-- Updated Help Panel from HotS, ported from SC Evo -->
-    <Frame type="HelpPanelListBoxItem" name="HelpPanelListBoxItem" file="HelpPanel">
+    <!--Frame type="HelpPanelListBoxItem" name="HelpPanelListBoxItem" file="HelpPanel">
         <AcceptsMouse val="false"/>
 
         <Frame type="Image" name="BorderImage">
@@ -164,5 +164,5 @@
                 </Frame>
             </Frame>
         </Frame>
-    </Frame>
+    </Frame-->
 </Desc>
