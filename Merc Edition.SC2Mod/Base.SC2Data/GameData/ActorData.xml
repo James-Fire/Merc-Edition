@@ -3096,6 +3096,8 @@
     <!--                                                                                         -->
     <CActorGlobalConfig id="SYSTEM_ActorConfig">
         <DeathCustomPriorityList value="Hellstorm"/>
+        <DeathCustomPriorityList value="BroodWar"/>
+        <DeathCustomPriorityList value="BroodWarFlying"/>
     </CActorGlobalConfig>
     <CActorRange id="SentinelMissilesAresRange" parent="RangeAbil" abil="SentinelMissilesAres">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
@@ -4981,7 +4983,7 @@
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetUnitIcon Assets\Textures\btn-building-terran-barracks.dds"/>
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetWireframe 0 Assets\Textures\Wireframe-Terran-Barracks.dds"/>
         <On Terms="Behavior.BroodWarSkin.Off" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Terran-Barracks.dds"/>
-        <On Terms="UnitDeathCustomize.Barracks; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWar"/>
         <On Terms="UnitDeathCustomize.BarracksFlying; ValidateUnit HasBroodWarSkin" Send="DeathCustomize BroodWarFlying"/>
         <DeathCustoms ModelLink="BarracksSCBW@Death" SoundLink="Barracks_Explode" Name="BroodWar"/>
         <DeathCustoms ModelLink="BarracksSCBW@FlyDeath" SoundLink="Barracks_Explode" Name="BroodWarFlying"/>
