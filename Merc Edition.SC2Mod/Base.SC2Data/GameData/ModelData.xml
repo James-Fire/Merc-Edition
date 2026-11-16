@@ -34,6 +34,31 @@
             <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
         </TextureDeclares>
     </CModel>
+    <CModel id="UnstableArtifactNovaActivated" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\XelNagaArtifactSpellPowerUp\XelNagaArtifactSpellPowerUp.m3"/>
+        <ScaleMax value="2.200000,2.200000,2.200000"/>
+        <ScaleMin value="2.200000,2.200000,2.200000"/>
+        <SelectionRadius value="0.227000"/>
+        <ShadowRadius value="0.227000"/>
+    </CModel>
+    <CModel id="UnstableArtifactNovaShockwave" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\XelNagaArtifactSpell\XelNagaArtifactSpell.m3"/>
+        <AnimSpeed value="1.300000"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.300000,0.300000,0.300000"/>
+        <ScaleMin value="0.300000,0.300000,0.300000"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="UnstableArtifact" parent="Unit">
+        <Model value="Assets\Buildings\Terran\Korhal_KeyStone\Korhal_KeyStone.m3"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <Radius value="2.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
     <CModel id="BioSurvivalProtocol">
         <Model value="Assets\Effects\Terran\Nova_Buff_Invulnerable\Nova_Buff_Invulnerable.m3"/>
     </CModel>
@@ -1633,6 +1658,16 @@
         <Model value="Assets\Doodads\GenericProtossFire_Shakuras_Medium_Long\GenericProtossFire_Shakuras_Medium_Long.m3"/>
         <ScaleMax value="0.600000,0.600000,0.600000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="UnstableArtifactHolder">
+        <Model value="Assets\Doodads\HybridHoloProjector\HybridHoloProjector.m3"/>
+        <ScaleMax value="1.300000,1.300000,1.000000"/>
+        <ScaleMin value="1.300000,1.300000,1.000000"/>
+    </CModel>
+    <CModel id="UnstableArtifactBase">
+        <Model value="Assets\Buildings\Terran\SupplyPodFalling_HornerHan_Coop\SupplyPodFalling_HornerHan_Coop.m3"/>
+        <ScaleMax value="1.600000,1.600000,1.000000"/>
+        <ScaleMin value="1.600000,1.600000,1.000000"/>
     </CModel>
     <CModel id="WildSnipeDamageBeam">
         <Model value="Assets\Effects\Terran\Nova_Snipe_Beam\Nova_Snipe_Beam.m3"/>

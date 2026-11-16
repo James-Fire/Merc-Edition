@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="UnstableArtifactNovaActivated" parent="ModelAddition">
+        <On Terms="Abil.UnstableArtifactNova.SourcePrepStart" Send="Create"/>
+    </CActorModel>
+    <CActorSound id="UnstableArtifactNovaExplosion" parent="SoundOneShot">
+        <On Terms="Effect.UnstableArtifactNovaSA.Start" Send="Create"/>
+        <Sound value="Artifact_EnergyNova"/>
+    </CActorSound>
+    <CActorModel id="UnstableArtifactNovaShockwave">
+        <On Terms="Effect.UnstableArtifactNovaSA.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="$Birth"/>
+        <On Terms="AnimDone; AnimName Birth" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary"/>
+    </CActorModel>
     <CActorModel id="BioSurvivalProtocol" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.BioSurvivalProtocol.On" Send="Create"/>
@@ -2333,6 +2348,36 @@
     <CActorAction id="TychusCommandoAttack">
         <LaunchAssets Sound="TychusAttackLaunch"/>
     </CActorAction>
+    <CActorUnit id="UnstableArtifact" parent="TerranBuilding" unitName="UnstableArtifact">
+        <On Terms="ActorCreation" Send="SetTeamColor 128,128,128"/>
+        <DeathArray index="Normal" ModelLink="DOM_Explosion_Lg" SoundLink="Terran_BuildingExplosion_large"/>
+        <DeathActorModel value="UnitDeathModelUnscaled"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-terran-artifactcontainmentfield.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-artifact.dds"/>
+        <HighlightTooltip value="Unit/Name/Artifact"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-artifact.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-terran-artifactcontainmentfield.dds"/>
+        </Wireframe>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorUnit>
+    <CActorModel id="UnstableArtifactHolder" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand,Four Death"/>
+        <On Terms="UnitCreation.UnstableArtifact" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpShadow SOpAttachOrigin"/>
+    </CActorModel>
+    <CActorModel id="UnstableArtifactBase" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD {} Stand Death"/>
+        <On Terms="UnitCreation.UnstableArtifact" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpShadow SOpAttachOrigin SOpMoveDownBy1 SOpMoveDownByDot25 SOpMoveDownByDot25"/>
+    </CActorModel>
     <CActorAction id="WildSnipe" parent="GenericAttack" effectAttack="WildSnipeDamage">
         <EditorCategories value=""/>
         <Beam value="WildSnipeDamageBeam"/>

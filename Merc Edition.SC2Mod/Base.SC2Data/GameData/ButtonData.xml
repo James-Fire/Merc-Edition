@@ -102,6 +102,11 @@
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="UnstableEnergyNova">
+        <Icon value="Assets\Textures\btn-tips-terran-energynova.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-terran-energynova.dds"/>
+        <HotkeyAlias value="EnergyNova"/>
+    </CButton>
     <CButton id="FaceMelt">
         <Icon value="Assets\Icons and Wireframes\etc-facemelt.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\etc-facemelt.dds"/>

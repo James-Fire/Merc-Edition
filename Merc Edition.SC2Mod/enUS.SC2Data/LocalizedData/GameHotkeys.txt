@@ -123,6 +123,7 @@ Button/Hotkey/TrainShadow=G
 Button/Hotkey/TrainSkibisAngel=E
 Button/Hotkey/TrainWarPig=A
 Button/Hotkey/TychusSecretStash=T
+Button/Hotkey/UnstableEnergyNova=V
 Button/Hotkey/UpgradeMergedArmorsLevel1=A
 Button/Hotkey/UpgradeMergedArmorsLevel2=A
 Button/Hotkey/UpgradeMergedArmorsLevel3=A
