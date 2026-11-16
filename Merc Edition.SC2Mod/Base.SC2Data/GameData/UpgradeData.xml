@@ -215,7 +215,32 @@
         <AffectedUnitArray value="DevilDog"/>
         <MaxLevel value="3"/>
     </CUpgrade>
-    <CUpgrade id="SpeedyResearch"/>
+    <CUpgrade id="SpeedyResearch">
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research18].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research19].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research20].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research21].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research22].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research23].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research3].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research4].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research5].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research7].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research8].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research9].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research3].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research4].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research5].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research6].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research7].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research8].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research9].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research10].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research11].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research12].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research13].Time" Value="2.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research14].Time" Value="2.000000"/>
+    </CUpgrade>
     <CUpgrade id="UmojanCellularReactors">
         <Flags index="UpgradeCheat" value="0"/>
         <EffectArray Reference="Unit,DuskWing,EnergyStart" Value="100"/>
