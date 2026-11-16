@@ -27,6 +27,30 @@
     <CRequirement id="IsNotMinikin">
         <NodeArray index="Show" Link="NotCountBehaviorMinikinCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="LearnMergedArmorsLevel1">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTECountUpgradeMergedArmorsLevel1QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnMergedArmorsLevel2">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTECountUpgradeMergedArmorsLevel2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnMergedArmorsLevel3">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTECountUpgradeMergedArmorsLevel3QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnMergedWeaponsLevel1">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTECountUpgradeMergedWeaponsLevel1QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnMergedWeaponsLevel2">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTECountUpgradeMergedWeaponsLevel2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnMergedWeaponsLevel3">
+        <EditorCategories value="TechType:Upgrade"/>
+        <NodeArray index="Show" Link="LTECountUpgradeMergedWeaponsLevel3QueuedOrBetter0"/>
+    </CRequirement>
     <CRequirement id="LearnZeusTankSecretUpgrade">
         <EditorCategories value="TechType:Upgrade"/>
         <NodeArray index="Show" Link="LTECountUpgradeZeusTankSecretUpgradeQueuedOrBetter0"/>
@@ -202,13 +226,41 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeMacroFiltersCompleteOnly"/>
     </CRequirement>
-    <CRequirement id="UseLiberatedBSP">
+    <CRequirement id="UseBioSurvivalProtocol">
         <EditorCategories value="TechType:Ability"/>
-        <NodeArray index="Show" Link="CountUpgradeMaxTechLiberatedBSPCompleteOnly"/>
+        <NodeArray index="Show" Link="CountUpgradeBioSurvivalProtocolCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="UseMercEdition">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMergedArmorsLevel1">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMergedArmorsLevel1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMergedArmorsLevel2">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMergedArmorsLevel2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMergedArmorsLevel3">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMergedArmorsLevel3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMergedUpgrades">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMergedUpgradesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMergedWeaponsLevel1">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMergedWeaponsLevel1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMergedWeaponsLevel2">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMergedWeaponsLevel2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseMergedWeaponsLevel3">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMergedWeaponsLevel3CompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseMicroFusionReactor">
         <EditorCategories value="TechType:Ability"/>

@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <!-- Setting merc compound and merc units back to liberty settings -->
+    <CUnit id="MercCompound">
+        <AbilArray Link="MercReviveJimRaynor"/>
+        <AbilArray Link="MercReviveHankHarnack"/>
+        <AbilArray Link="MercReviveRattlesnake"/>
+        <AbilArray Link="MercReviveED067"/>
+        <AbilArray Link="MercReviveSgtHammer"/>
+        <AbilArray Link="MercReviveCabal"/>
+        <AbilArray Link="MercReviveFreyja"/>
+        <AbilArray Link="MercReviveDukesRevenge"/>
+        <AbilArray Link="MercHeroTrain"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="MercReviveJimRaynor" AbilCmd="MercReviveJimRaynor,Execute"/>
+            <LayoutButtons index="1" Face="MercReviveHankHarnack" AbilCmd="MercReviveHankHarnack,Execute"/>
+            <LayoutButtons index="2" Face="MercReviveRattlesnake" AbilCmd="MercReviveRattlesnake,Execute"/>
+            <LayoutButtons index="3" Face="MercReviveED067" AbilCmd="MercReviveED067,Execute"/>
+            <LayoutButtons index="4" Face="MercReviveSgtHammer" AbilCmd="MercReviveSgtHammer,Execute"/>
+            <LayoutButtons index="5" Face="MercReviveCabal" AbilCmd="MercReviveCabal,Execute"/>
+            <LayoutButtons index="6" Face="MercReviveFreyja" AbilCmd="MercReviveFreyja,Execute"/>
+            <LayoutButtons index="7" Face="MercReviveDukesRevenge" AbilCmd="MercReviveDukesRevenge,Execute" Row="2" Column="0"/>
+            <LayoutButtons index="8" Face="MercHireJimRaynor" Type="AbilCmd" AbilCmd="MercHeroTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons index="9" Face="MercHireHankHarnack" AbilCmd="MercHeroTrain,Train2" Row="0" Column="1"/>
+            <LayoutButtons index="10" Face="MercHireRattlesnake" AbilCmd="MercHeroTrain,Train3" Row="0" Column="2"/>
+            <LayoutButtons index="11" Face="MercHireED067" AbilCmd="MercHeroTrain,Train4" Row="0" Column="3"/>
+            <LayoutButtons index="12" Face="MercHireSgtHammer" Type="AbilCmd" AbilCmd="MercHeroTrain,Train5" Row="1"/>
+            <LayoutButtons Face="MercHireCabal" Type="AbilCmd" AbilCmd="MercHeroTrain,Train6" Row="1" Column="1"/>
+            <LayoutButtons Face="MercHireFreyja" Type="AbilCmd" AbilCmd="MercHeroTrain,Train7" Row="1" Column="2"/>
+            <LayoutButtons Face="MercHireDukesRevenge" Type="AbilCmd" AbilCmd="MercHeroTrain,Train8" Row="2" Column="0"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" AbilCmd="255,255" Row="1" Column="3"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="ReaperSpeed" Type="AbilCmd" AbilCmd="MercCompoundResearch,Research4" Row="2" Column="1"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="250mmUranusCarronadesWeapon" parent="MISSILE">
         <Mover value="250mmUranusCarronadesMissile"/>
     </CUnit>
     <CUnit id="ACV">
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>
@@ -1091,41 +1127,6 @@
         <GlossaryWeakArray value="Marine"/>
         <GlossaryWeakArray value="Stalker"/>
     </CUnit>
-    <!-- Setting merc compound and merc units back to liberty settings -->
-    <CUnit id="MercCompound">
-        <AbilArray Link="MercReviveJimRaynor"/>
-        <AbilArray Link="MercReviveHankHarnack"/>
-        <AbilArray Link="MercReviveRattlesnake"/>
-        <AbilArray Link="MercReviveED067"/>
-        <AbilArray Link="MercReviveSgtHammer"/>
-        <AbilArray Link="MercReviveCabal"/>
-        <AbilArray Link="MercReviveFreyja"/>
-        <AbilArray Link="MercReviveDukesRevenge"/>
-        <AbilArray Link="MercHeroTrain"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="0" Face="MercReviveJimRaynor" AbilCmd="MercReviveJimRaynor,Execute"/>
-            <LayoutButtons index="1" Face="MercReviveHankHarnack" AbilCmd="MercReviveHankHarnack,Execute"/>
-            <LayoutButtons index="2" Face="MercReviveRattlesnake" AbilCmd="MercReviveRattlesnake,Execute"/>
-            <LayoutButtons index="3" Face="MercReviveED067" AbilCmd="MercReviveED067,Execute"/>
-            <LayoutButtons index="4" Face="MercReviveSgtHammer" AbilCmd="MercReviveSgtHammer,Execute"/>
-            <LayoutButtons index="5" Face="MercReviveCabal" AbilCmd="MercReviveCabal,Execute"/>
-            <LayoutButtons index="6" Face="MercReviveFreyja" AbilCmd="MercReviveFreyja,Execute"/>
-            <LayoutButtons index="7" Face="MercReviveDukesRevenge" AbilCmd="MercReviveDukesRevenge,Execute" Row="2" Column="0"/>
-            <LayoutButtons index="8" Face="MercHireJimRaynor" Type="AbilCmd" AbilCmd="MercHeroTrain,Train1" Row="0" Column="0"/>
-            <LayoutButtons index="9" Face="MercHireHankHarnack" AbilCmd="MercHeroTrain,Train2" Row="0" Column="1"/>
-            <LayoutButtons index="10" Face="MercHireRattlesnake" AbilCmd="MercHeroTrain,Train3" Row="0" Column="2"/>
-            <LayoutButtons index="11" Face="MercHireED067" AbilCmd="MercHeroTrain,Train4" Row="0" Column="3"/>
-            <LayoutButtons index="12" Face="MercHireSgtHammer" Type="AbilCmd" AbilCmd="MercHeroTrain,Train5" Row="1"/>
-            <LayoutButtons Face="MercHireCabal" Type="AbilCmd" AbilCmd="MercHeroTrain,Train6" Row="1" Column="1"/>
-            <LayoutButtons Face="MercHireFreyja" Type="AbilCmd" AbilCmd="MercHeroTrain,Train7" Row="1" Column="2"/>
-            <LayoutButtons Face="MercHireDukesRevenge" Type="AbilCmd" AbilCmd="MercHeroTrain,Train8" Row="2" Column="0"/>
-            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" AbilCmd="255,255" Row="1" Column="3"/>
-            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
-            <LayoutButtons Face="ReaperSpeed" Type="AbilCmd" AbilCmd="MercCompoundResearch,Research4" Row="2" Column="1"/>
-            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
-            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-        </CardLayouts>
-    </CUnit>
     <CUnit id="MinikinMissile" parent="MISSILE"/>
     <CUnit id="Odin">
         <AbilArray Link="OdinRepairDroneMagazine"/>
@@ -1356,7 +1357,17 @@
     <CUnit id="EngineeringBay">
         <AbilArray Link="SalvageShared"/>
         <CardLayouts index="0">
+            <LayoutButtons index="0" Face="UpgradeMergedWeaponsLevel1" AbilCmd="EngineeringBayResearch,Research21"/>
+            <LayoutButtons index="1" Face="TerranInfantryWeaponsLevel1" AbilCmd="EngineeringBayResearch,Research3"/>
+            <LayoutButtons index="2" Face="TerranInfantryWeaponsLevel2" AbilCmd="EngineeringBayResearch,Research4"/>
+            <LayoutButtons index="9" Face="UpgradeMergedArmorsLevel1" AbilCmd="EngineeringBayResearch,Research18"/>
             <LayoutButtons index="13" Column="0"/>
+            <LayoutButtons Face="UpgradeMergedWeaponsLevel2" Type="AbilCmd" AbilCmd="EngineeringBayResearch,Research22" Row="0" Column="0"/>
+            <LayoutButtons Face="UpgradeMergedWeaponsLevel3" Type="AbilCmd" AbilCmd="EngineeringBayResearch,Research23" Row="0" Column="0"/>
+            <LayoutButtons Face="TerranInfantryWeaponsLevel3" Type="AbilCmd" AbilCmd="EngineeringBayResearch,Research5" Row="0" Column="0"/>
+            <LayoutButtons Face="UpgradeMergedArmorsLevel2" Type="AbilCmd" AbilCmd="EngineeringBayResearch,Research19" Row="0" Column="1"/>
+            <LayoutButtons Face="UpgradeMergedArmorsLevel3" Type="AbilCmd" AbilCmd="EngineeringBayResearch,Research20" Row="0" Column="1"/>
+            <LayoutButtons Face="TerranInfantryArmorLevel1" Type="AbilCmd" AbilCmd="EngineeringBayResearch,Research7" Row="0" Column="1"/>
             <LayoutButtons Face="Salvage" Type="AbilCmd" AbilCmd="SalvageShared,On" Row="2" Column="2"/>
         </CardLayouts>
     </CUnit>
@@ -2553,6 +2564,14 @@
         <TacticalAI value="DuskWingBansheeWeapon"/>
     </CUnit>
     <CUnit id="FlyingBlockB">
+        <AbilArray Link="BioSurvivalProtocol"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="BlockBFly"/>
+        <AbilArray Link="BlockBFlyMorph"/>
+        <AbilArray Link="BlockBLand"/>
+        <AbilArray Link="BlockBLandMorph"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>
@@ -2586,13 +2605,6 @@
         <DamageDealtXP value="1"/>
         <DamageTakenXP value="1"/>
         <KillXP value="20"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
-        <AbilArray Link="BlockBFly"/>
-        <AbilArray Link="BlockBFlyMorph"/>
-        <AbilArray Link="BlockBLand"/>
-        <AbilArray Link="BlockBLandMorph"/>
         <WeaponArray Link="BarBreakersFlying"/>
         <WeaponArray Link="D8Charge"/>
         <CardLayouts>
@@ -2630,6 +2642,7 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
     </CUnit>
     <CUnit id="Copperhead">
         <DeathRevealRadius value="3"/>
@@ -2766,10 +2779,12 @@
         <EffectArray index="Death" value="AnarchistFearSA"/>
     </CUnit>
     <CUnit id="DevilDog">
+        <AbilArray Link="BioSurvivalProtocol"/>
+        <AbilArray Link="DevilDogGrapple"/>
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
+        <BehaviorArray Link="ChemicalPlating"/>
         <CostResource index="Minerals" value="125"/>
         <CostResource index="Vespene" value="50"/>
-        <AbilArray Link="DevilDogGrapple"/>
-        <BehaviorArray Link="ChemicalPlating"/>
         <EffectArray index="Death" value="DeadMenTellNoTales"/>
         <CardLayouts index="0">
             <LayoutButtons index="5" Face="BearclawGauntlets" AbilCmd="" Requirements="UseBearclawGauntlets"/>
@@ -2984,6 +2999,8 @@
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
     <CUnit id="HammerSecurity">
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
+        <BehaviorArray Link="AblativeScales"/>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="50"/>
         <AbilArray index="3" Link="MagrailMunitions"/>
@@ -2994,7 +3011,6 @@
             <LayoutButtons Face="AblativeScalesNew" Type="Passive" Requirements="UseAblativeScalesNew" Row="1" Column="1"/>
             <LayoutButtons Face="ConcussiveShrapnel" Type="Passive" Requirements="UseConcussiveShrapnel" Row="1" Column="0"/>
         </CardLayouts>
-        <BehaviorArray Link="AblativeScales"/>
     </CUnit>
     <CUnit id="HelsAngelAssault">
         <CostResource index="Minerals" value="225"/>
@@ -3145,6 +3161,13 @@
     </CUnit>
     <CUnit id="SignalFlareMissile" parent="MISSILE"/>
     <CUnit id="SkibisAngel">
+        <AbilArray Link="BioSurvivalProtocol"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="GreaterHeal"/>
+        <AbilArray Link="SignalFlare"/>
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
+        <BehaviorArray Link="ThornShield"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -3177,11 +3200,6 @@
         <DamageDealtXP value="1"/>
         <DamageTakenXP value="1"/>
         <KillXP value="15"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="move"/>
-        <AbilArray Link="GreaterHeal"/>
-        <AbilArray Link="SignalFlare"/>
-        <BehaviorArray Link="ThornShield"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -3277,6 +3295,14 @@
         <FlagArray index="ArmySelect" value="1"/>
     </CUnit>
     <CUnit id="BlockB">
+        <AbilArray Link="BioSurvivalProtocol"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="BlockBFly"/>
+        <AbilArray Link="BlockBFlyMorph"/>
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
+        <BehaviorArray Link="ReaperJump"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>
@@ -3310,12 +3336,6 @@
         <DamageDealtXP value="1"/>
         <DamageTakenXP value="1"/>
         <KillXP value="20"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
-        <AbilArray Link="BlockBFly"/>
-        <AbilArray Link="BlockBFlyMorph"/>
-        <BehaviorArray Link="ReaperJump"/>
         <WeaponArray Link="BarBreakers"/>
         <WeaponArray Link="D8Charge"/>
         <CardLayouts>
@@ -3462,6 +3482,17 @@
         <BehaviorArray Link="StarcruiserShieldGlaze"/>
     </CUnit>
     <CUnit id="Phantom">
+        <AbilArray Link="BioSurvivalProtocol"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="SnipePhantom"/>
+        <AbilArray Link="TacNukeStrike"/>
+        <AbilArray Link="GhostHoldFire"/>
+        <AbilArray Link="GhostWeaponsFree"/>
+        <AbilArray Link="PhantomCloak"/>
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
+        <BehaviorArray Link="EnergyUserRadar"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>
@@ -3495,14 +3526,6 @@
         <DamageDealtXP value="1"/>
         <DamageTakenXP value="1"/>
         <KillXP value="30"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
-        <AbilArray Link="SnipePhantom"/>
-        <AbilArray Link="TacNukeStrike"/>
-        <AbilArray Link="GhostHoldFire"/>
-        <AbilArray Link="GhostWeaponsFree"/>
-        <AbilArray Link="PhantomCloak"/>
         <WeaponArray Link="C11EthereanRifle"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -3542,9 +3565,20 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
-        <BehaviorArray Link="EnergyUserRadar"/>
     </CUnit>
     <CUnit id="Shadow">
+        <AbilArray Link="BioSurvivalProtocol"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="RogueGhostCloak"/>
+        <AbilArray Link="SpectreNuke"/>
+        <AbilArray Link="SpectreHoldFire"/>
+        <AbilArray Link="SpectreWeaponsFree"/>
+        <AbilArray Link="DarkTemplarShadowFury"/>
+        <AbilArray Link="Obliterate"/>
+        <AbilArray Link="ShadowHallucination"/>
+        <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
         <Mob value="Campaign"/>
@@ -3576,16 +3610,6 @@
         <DamageDealtXP value="1"/>
         <DamageTakenXP value="1"/>
         <KillXP value="30"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="RogueGhostCloak"/>
-        <AbilArray Link="SpectreNuke"/>
-        <AbilArray Link="SpectreHoldFire"/>
-        <AbilArray Link="SpectreWeaponsFree"/>
-        <AbilArray Link="DarkTemplarShadowFury"/>
-        <AbilArray Link="Obliterate"/>
-        <AbilArray Link="ShadowHallucination"/>
         <WeaponArray Link="AGRShadeHunter"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -4175,10 +4199,11 @@
         <EffectArray index="Death" value="MagmineDeathrattleCP"/>
     </CUnit>
     <CUnit id="WarPig">
-        <CostResource index="Minerals" value="75"/>
         <AbilArray index="3" Link="SprayandPay"/>
+        <AbilArray Link="BioSurvivalProtocol"/>
         <AbilArray Link="SuperStim"/>
         <AbilArray Link="BioSurvivalProtocol"/>
+        <CostResource index="Minerals" value="75"/>
         <BehaviorArray Link="ThornShield"/>
         <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
         <CardLayouts index="0">

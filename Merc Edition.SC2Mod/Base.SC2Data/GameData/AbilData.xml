@@ -4,10 +4,12 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="BioSurvivalProtocol1hp"/>
         <Cost>
-            <Cooldown TimeUse="300"/>
+            <Cooldown Location="Unit" TimeUse="300"/>
         </Cost>
         <AINotifyEffect value="BioSurvivalProtocol1hp"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BioSurvivalProtocol" Requirements="UseLiberatedBSP"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BioSurvivalProtocol" Requirements="UseBioSurvivalProtocol">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilTrain id="CommandCenterTrain">
         <InfoArray index="Train2" Time="17">
@@ -45,6 +47,38 @@
             <Flags index="IgnoreUser" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
+    <CAbilResearch id="EngineeringBayResearch">
+        <InfoArray index="Research18" Time="160" Upgrade="MergedArmorsLevel1">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UpgradeMergedArmorsLevel1" State="Suppressed" Requirements="LearnMergedArmorsLevel1"/>
+        </InfoArray>
+        <InfoArray index="Research19" Time="190" Upgrade="MergedArmorsLevel2">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UpgradeMergedArmorsLevel2" State="Suppressed" Requirements="LearnMergedArmorsLevel2"/>
+        </InfoArray>
+        <InfoArray index="Research20" Time="220" Upgrade="MergedArmorsLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UpgradeMergedArmorsLevel3" State="Suppressed" Requirements="LearnMergedArmorsLevel3"/>
+        </InfoArray>
+        <InfoArray index="Research21" Time="160" Upgrade="MergedWeaponsLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UpgradeMergedWeaponsLevel1" State="Suppressed" Requirements="LearnMergedWeaponsLevel1"/>
+        </InfoArray>
+        <InfoArray index="Research22" Time="190" Upgrade="MergedWeaponsLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UpgradeMergedWeaponsLevel2" State="Suppressed" Requirements="LearnMergedWeaponsLevel2"/>
+        </InfoArray>
+        <InfoArray index="Research23" Time="220" Upgrade="MergedWeaponsLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UpgradeMergedWeaponsLevel3" State="Suppressed" Requirements="LearnMergedWeaponsLevel3"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilEffectInstant id="FaceMelt">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="FaceMeltSA"/>

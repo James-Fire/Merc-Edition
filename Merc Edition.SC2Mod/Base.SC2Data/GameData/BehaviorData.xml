@@ -10,16 +10,20 @@
         <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1">
             <Chance value="1"/>
         </DamageResponse>
+        <Modification>
+            <StateFlags index="CannotDie" value="1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="BioSurvivalProtocolDResponse">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Requirements value="UseLiberatedBSP"/>
+        <Requirements value="UseBioSurvivalProtocol"/>
         <DamageResponse Fatal="1" Handled="BioSurvivalProtocolAB">
             <Chance value="1"/>
             <Cost>
-                <Cooldown Link="Abil/BioSurvivalProtocol" Location="Abil" TimeUse="300"/>
+                <Cooldown Link="Abil/BioSurvivalProtocol" Location="Unit" TimeUse="300"/>
             </Cost>
         </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DarkTemplarShadowFuryController">
         <InfoFlags index="Hidden" value="0"/>

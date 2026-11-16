@@ -118,6 +118,36 @@
         <Icon value="Assets\Icons and Wireframes\etc-powerslide.dds"/>
         <AlertIcon value="Assets\Icons and Wireframes\etc-powerslide.dds"/>
     </CButton>
+    <CButton id="UpgradeMergedArmorsLevel1">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-mechbioarmorupgrades-a.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-mechbioarmorupgrades-a.dds"/>
+        <HotkeyAlias value="TerranInfantryArmorLevel1"/>
+    </CButton>
+    <CButton id="UpgradeMergedArmorsLevel2">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-mechbioarmorupgrades-b.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-mechbioarmorupgrades-b.dds"/>
+        <HotkeyAlias value="TerranInfantryArmorLevel1"/>
+    </CButton>
+    <CButton id="UpgradeMergedArmorsLevel3">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-mechbioarmorupgrades-b.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-mechbioarmorupgrades-b.dds"/>
+        <HotkeyAlias value="TerranInfantryArmorLevel1"/>
+    </CButton>
+    <CButton id="UpgradeMergedWeaponsLevel1">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-a.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-a.dds"/>
+        <HotkeyAlias value="TerranInfantryWeaponsLevel1"/>
+    </CButton>
+    <CButton id="UpgradeMergedWeaponsLevel2">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-b.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-b.dds"/>
+        <HotkeyAlias value="TerranInfantryWeaponsLevel1"/>
+    </CButton>
+    <CButton id="UpgradeMergedWeaponsLevel3">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-c.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-c.dds"/>
+        <HotkeyAlias value="TerranInfantryWeaponsLevel1"/>
+    </CButton>
     <CButton id="SpectreNo15Nuke">
         <Icon value="Assets\Textures\btn-ability-terran-nuclearstrike-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-nuclearstrike-color.dds"/>
