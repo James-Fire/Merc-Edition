@@ -2161,6 +2161,123 @@ void libBA5CCDED_gt_ProtossGenericDifficulty_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Ultra-Capacitors
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_UltraCapacitors_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(((TechTreeUpgradeCount(EventPlayer(), "PlusUltraCapacitorsDamageBoost", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(EventPlayer(), "UltraCapacitors", c_techCountCompleteOnly) == 1)))) {
+            return false;
+        }
+
+        if (!(((EventUpgradeName() == "TerranInfantryWeaponsLevel1") || (EventUpgradeName() == "TerranInfantryWeaponsLevel2") || (EventUpgradeName() == "TerranInfantryWeaponsLevel3") || (EventUpgradeName() == "TerranVehicleWeaponsLevel1") || (EventUpgradeName() == "TerranVehicleWeaponsLevel2") || (EventUpgradeName() == "TerranVehicleWeaponsLevel3") || (EventUpgradeName() == "TerranShipWeaponsLevel1") || (EventUpgradeName() == "TerranShipWeaponsLevel2") || (EventUpgradeName() == "TerranShipWeaponsLevel3") || (EventUpgradeName() == "MergedWeaponsLevel1") || (EventUpgradeName() == "MergedWeaponsLevel2") || (EventUpgradeName() == "MergedWeaponsLevel3")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((EventUpgradeName() == "TerranInfantryWeaponsLevel1") || (EventUpgradeName() == "TerranInfantryWeaponsLevel2") || (EventUpgradeName() == "TerranInfantryWeaponsLevel3"))) {
+        TechTreeUpgradeAddLevel(EventPlayer(), "PlusUltraCapacitorsInfantryAttackSpeed", 1);
+        return true;
+    }
+
+    if (((EventUpgradeName() == "TerranVehicleWeaponsLevel1") || (EventUpgradeName() == "TerranVehicleWeaponsLevel2") || (EventUpgradeName() == "TerranVehicleWeaponsLevel3"))) {
+        TechTreeUpgradeAddLevel(EventPlayer(), "PlusUltraCapacitorsVehicleAttackSpeed", 1);
+        return true;
+    }
+
+    if (((EventUpgradeName() == "TerranShipWeaponsLevel1") || (EventUpgradeName() == "TerranShipWeaponsLevel2") || (EventUpgradeName() == "TerranShipWeaponsLevel3"))) {
+        TechTreeUpgradeAddLevel(EventPlayer(), "PlusUltraCapacitorsStarshipAttackSpeed", 1);
+        return true;
+    }
+
+    if (((EventUpgradeName() == "MergedWeaponsLevel1") || (EventUpgradeName() == "MergedWeaponsLevel2") || (EventUpgradeName() == "MergedWeaponsLevel3"))) {
+        TechTreeUpgradeAddLevel(EventPlayer(), "PlusUltraCapacitorsInfantryAttackSpeed", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "PlusUltraCapacitorsVehicleAttackSpeed", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "PlusUltraCapacitorsStarshipAttackSpeed", 1);
+        return true;
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_UltraCapacitors_Init () {
+    libBA5CCDED_gt_UltraCapacitors = TriggerCreate("libBA5CCDED_gt_UltraCapacitors_Func");
+    TriggerAddEventUnitResearchProgress(libBA5CCDED_gt_UltraCapacitors, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Merged Upgrades
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_MergedUpgrades_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    string auto0584BF19_val;
+
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(EventPlayer(), "MergedUpgrades", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+
+        if (!(((EventUpgradeName() == "MergedArmorsLevel1") || (EventUpgradeName() == "MergedArmorsLevel2") || (EventUpgradeName() == "MergedArmorsLevel3") || (EventUpgradeName() == "MergedWeaponsLevel1") || (EventUpgradeName() == "MergedWeaponsLevel2") || (EventUpgradeName() == "MergedWeaponsLevel3")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto0584BF19_val = EventUpgradeName();
+    if (auto0584BF19_val == "MergedArmorsLevel1") {
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryArmorsLevel1", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranVehicleArmorsLevel1", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranShipArmorsLevel1", 1);
+    }
+    else if (auto0584BF19_val == "MergedArmorsLevel2") {
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryArmorsLevel2", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranVehicleArmorsLevel2", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranShipArmorsLevel2", 1);
+    }
+    else if (auto0584BF19_val == "MergedArmorsLevel3") {
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryArmorsLevel3", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryArmorsLevel3", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryArmorsLevel3", 1);
+    }
+    else if (auto0584BF19_val == "MergedWeaponsLevel1") {
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryWeaponsLevel1", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranVehicleWeaponsLevel1", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranShipWeaponsLevel1", 1);
+    }
+    else if (auto0584BF19_val == "MergedWeaponsLevel2") {
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryWeaponsLevel2", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranVehicleWeaponsLevel2", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranShipWeaponsLevel2", 1);
+    }
+    else if (auto0584BF19_val == "MergedWeaponsLevel3") {
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranInfantryWeaponsLevel3", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranVehicleWeaponsLevel3", 1);
+        TechTreeUpgradeAddLevel(EventPlayer(), "TerranShipWeaponsLevel3", 1);
+    }
+    else {
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_MergedUpgrades_Init () {
+    libBA5CCDED_gt_MergedUpgrades = TriggerCreate("libBA5CCDED_gt_MergedUpgrades_Func");
+    TriggerAddEventUnitResearchProgress(libBA5CCDED_gt_MergedUpgrades, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Freyja Egg
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_FreyjaEgg_Func (bool testConds, bool runActions) {
@@ -3291,6 +3408,8 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_ZergTerranGenericDifficulty_Init();
     libBA5CCDED_gt_ProtossGenericDifficulty_Init();
+    libBA5CCDED_gt_UltraCapacitors_Init();
+    libBA5CCDED_gt_MergedUpgrades_Init();
     libBA5CCDED_gt_FreyjaEgg_Init();
     libBA5CCDED_gt_NomadMineDroneSpawner_Init();
     libBA5CCDED_gt_ETCPowerSlide_Init();

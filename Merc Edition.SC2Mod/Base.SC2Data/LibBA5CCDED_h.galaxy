@@ -120,6 +120,8 @@ trigger libBA5CCDED_gt_MissionDirectives;
 trigger libBA5CCDED_gt_DepositMoney;
 trigger libBA5CCDED_gt_ZergTerranGenericDifficulty;
 trigger libBA5CCDED_gt_ProtossGenericDifficulty;
+trigger libBA5CCDED_gt_UltraCapacitors;
+trigger libBA5CCDED_gt_MergedUpgrades;
 trigger libBA5CCDED_gt_FreyjaEgg;
 trigger libBA5CCDED_gt_NomadMineDroneSpawner;
 trigger libBA5CCDED_gt_ETCPowerSlide;

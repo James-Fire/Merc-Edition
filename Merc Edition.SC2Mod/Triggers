@@ -15659,6 +15659,7 @@
             <Preset Type="PresetValue" Library="Ntve" Id="9F34ED12"/>
         </Element>
         <Element Type="Category" Id="0B90820E">
+            <Item Type="Category" Library="BA5CCDED" Id="1A3743F3"/>
             <Item Type="Category" Library="BA5CCDED" Id="320AB634"/>
             <Item Type="Category" Library="BA5CCDED" Id="8A555FC0"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="B8DBDB59"/>
@@ -15691,6 +15692,1719 @@
             <Item Type="Trigger" Library="BA5CCDED" Id="56A0FB04"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="26223857"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="ED467E3E"/>
+        </Element>
+        <Element Type="Category" Id="1A3743F3">
+            <Item Type="Trigger" Library="BA5CCDED" Id="FE268FD6"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="9C7137BE"/>
+        </Element>
+        <Element Type="Trigger" Id="FE268FD6">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="1390DA7B"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="890C91BA"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="18BA7EA2"/>
+            <Action Type="Comment" Library="BA5CCDED" Id="9EDADE43"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="A96F894D"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="2772AE28"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="1E9E5F44"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="797514C7"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1390DA7B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D8B5FD69"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E9DA3785"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="55299A50"/>
+        </Element>
+        <Element Type="Param" Id="E9DA3785">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1BEB3316"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="55299A50">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="250D010D"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000060"/>
+        </Element>
+        <Element Type="FunctionCall" Id="890C91BA">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <FunctionCall Type="Comment" Library="BA5CCDED" Id="FFCD5432"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F4E9BEDE"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B73F49E5"/>
+        </Element>
+        <Element Type="Comment" Id="FFCD5432">
+            <Comment>
+                lol i dont remember how i set this shit up, ill cover all bases
+            </Comment>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F4E9BEDE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="37C0A5AB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6CA6D780"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6C710A30"/>
+        </Element>
+        <Element Type="Param" Id="37C0A5AB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="5DF5979B"/>
+        </Element>
+        <Element Type="FunctionCall" Id="5DF5979B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C6A2BDB4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3B35F454"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1B4671D4"/>
+        </Element>
+        <Element Type="Param" Id="C6A2BDB4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="448F39DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D78D6018"/>
+        </Element>
+        <Element Type="Param" Id="3B35F454">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
+            <Value>PlusUltraCapacitorsDamageBoost</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Param" Id="1B4671D4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000446"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="2703BB64"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2703BB64">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="6CA6D780">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="6C710A30">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B73F49E5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5DE4A008"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="EA12C3F6"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7303B3C1"/>
+        </Element>
+        <Element Type="Param" Id="5DE4A008">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9C2AD557"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9C2AD557">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2F91E10A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BAB26A0F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6BD880F0"/>
+        </Element>
+        <Element Type="Param" Id="2F91E10A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="448F39DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D78D6018"/>
+        </Element>
+        <Element Type="Param" Id="BAB26A0F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
+            <Value>UltraCapacitors</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Param" Id="6BD880F0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000446"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="AFF3EFF2"/>
+        </Element>
+        <Element Type="FunctionCall" Id="AFF3EFF2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="EA12C3F6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="7303B3C1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="18BA7EA2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <FunctionCall Type="Comment" Library="BA5CCDED" Id="F1F27B14"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C9D6BB2B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="01AC64BE"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="251D9952"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="565D65B6"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="277F5BCF"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1C848F18"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="272DEC7D"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EBB82476"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="36313116"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9D8C87E3"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="17CFCA9D"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="3645C893"/>
+        </Element>
+        <Element Type="Comment" Id="F1F27B14">
+            <Comment>
+                the Or statement of death and despair
+            </Comment>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C9D6BB2B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9B3418C4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="578CE138"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="12E33A72"/>
+        </Element>
+        <Element Type="Param" Id="9B3418C4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1F5D24F8"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1F5D24F8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="578CE138">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="12E33A72">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranInfantryWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="01AC64BE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0222A53B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="15B3FA56"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3D16589F"/>
+        </Element>
+        <Element Type="Param" Id="0222A53B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="A53676EE"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A53676EE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="15B3FA56">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="3D16589F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranInfantryWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="251D9952">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B746DB35"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3D2BA7D4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="19F95B09"/>
+        </Element>
+        <Element Type="Param" Id="B746DB35">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="BD436087"/>
+        </Element>
+        <Element Type="FunctionCall" Id="BD436087">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="3D2BA7D4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="19F95B09">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranInfantryWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="565D65B6">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0142A68A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B7279EBD"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A95F2EB3"/>
+        </Element>
+        <Element Type="Param" Id="0142A68A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="A72DFDE7"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A72DFDE7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="B7279EBD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="A95F2EB3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranVehicleWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="277F5BCF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A94D304A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D461CF2C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BAD81097"/>
+        </Element>
+        <Element Type="Param" Id="A94D304A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1DD3BC1C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1DD3BC1C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="D461CF2C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="BAD81097">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranVehicleWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1C848F18">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3BE2791B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2DBFA70F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FC8CC0F1"/>
+        </Element>
+        <Element Type="Param" Id="3BE2791B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EAA5A318"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EAA5A318">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="2DBFA70F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="FC8CC0F1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranVehicleWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="272DEC7D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1DF75DBD"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="931652BE"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7BE1C60B"/>
+        </Element>
+        <Element Type="Param" Id="1DF75DBD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D6541F79"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D6541F79">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="931652BE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="7BE1C60B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranShipWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EBB82476">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1FEF2BA3"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="90E260C4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="29BD96AF"/>
+        </Element>
+        <Element Type="Param" Id="1FEF2BA3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="436D8BA8"/>
+        </Element>
+        <Element Type="FunctionCall" Id="436D8BA8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="90E260C4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="29BD96AF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranShipWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="36313116">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E731DFB8"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="78CFB34B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7FDD1D6E"/>
+        </Element>
+        <Element Type="Param" Id="E731DFB8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="02CD0913"/>
+        </Element>
+        <Element Type="FunctionCall" Id="02CD0913">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="78CFB34B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="7FDD1D6E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranShipWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9D8C87E3">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F1506523"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9A863D50"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="28F334C7"/>
+        </Element>
+        <Element Type="Param" Id="F1506523">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FA7B6746"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FA7B6746">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="9A863D50">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="28F334C7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="17CFCA9D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3E0C8EA4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3D63E869"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4F411B2A"/>
+        </Element>
+        <Element Type="Param" Id="3E0C8EA4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="20DCC5F0"/>
+        </Element>
+        <Element Type="FunctionCall" Id="20DCC5F0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="3D63E869">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="4F411B2A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3645C893">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1CA34F72"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D78E709F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E1179BE2"/>
+        </Element>
+        <Element Type="Param" Id="1CA34F72">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="0963CAFB"/>
+        </Element>
+        <Element Type="FunctionCall" Id="0963CAFB">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="D78E709F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="E1179BE2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Comment" Id="9EDADE43">
+            <Comment>
+                damnit, why cant i put an Or in a switch
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="A96F894D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1DEE15F8"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="3FCF5A52"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9AF6A11D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1DEE15F8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C9EFDF47"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="44233CDB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9C426FC2"/>
+        </Element>
+        <Element Type="Param" Id="C9EFDF47">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="237CF1A4"/>
+        </Element>
+        <Element Type="FunctionCall" Id="237CF1A4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="44233CDB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="9C426FC2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>PlusUltraCapacitorsInfantryAttackSpeed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3FCF5A52">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000139"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9AF6A11D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="8A1372A9"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="254E7EEE"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C97A31D1"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8A1372A9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FA2E5646"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="49927F90"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="AE912447"/>
+        </Element>
+        <Element Type="Param" Id="FA2E5646">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="8775E17C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8775E17C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="49927F90">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="AE912447">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranInfantryWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="254E7EEE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C0AE917E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9AEC21BF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D118EA74"/>
+        </Element>
+        <Element Type="Param" Id="C0AE917E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="96688F89"/>
+        </Element>
+        <Element Type="FunctionCall" Id="96688F89">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="9AEC21BF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="D118EA74">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranInfantryWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C97A31D1">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D581671F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="27E720AE"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="ECABEA4F"/>
+        </Element>
+        <Element Type="Param" Id="D581671F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="5C578E76"/>
+        </Element>
+        <Element Type="FunctionCall" Id="5C578E76">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="27E720AE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="ECABEA4F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranInfantryWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2772AE28">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="A2AE5974"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="5C5FC95F"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="78296E1D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A2AE5974">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A63BDD32"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="DDCB409F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="34CFF4E8"/>
+        </Element>
+        <Element Type="Param" Id="A63BDD32">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C6B24E08"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C6B24E08">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="DDCB409F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="34CFF4E8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>PlusUltraCapacitorsVehicleAttackSpeed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="5C5FC95F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000139"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+        </Element>
+        <Element Type="FunctionCall" Id="78296E1D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E7E2186D"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="623AF8C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F674FD88"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E7E2186D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="71D1B338"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="898FA6E8"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="16F29DC6"/>
+        </Element>
+        <Element Type="Param" Id="71D1B338">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D9BF32B7"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D9BF32B7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="898FA6E8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="16F29DC6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranVehicleWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="623AF8C4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BC13B9B9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F84945C6"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A1C39EA8"/>
+        </Element>
+        <Element Type="Param" Id="BC13B9B9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="652C1C96"/>
+        </Element>
+        <Element Type="FunctionCall" Id="652C1C96">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="F84945C6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="A1C39EA8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranVehicleWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F674FD88">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F44E1A74"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E947EB07"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8A7DFBC0"/>
+        </Element>
+        <Element Type="Param" Id="F44E1A74">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="3BD61014"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3BD61014">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="E947EB07">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="8A7DFBC0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranVehicleWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1E9E5F44">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="36D08352"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EF465120"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="221EE514"/>
+        </Element>
+        <Element Type="FunctionCall" Id="36D08352">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C042EF34"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4AB6ABE4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="015F90E2"/>
+        </Element>
+        <Element Type="Param" Id="C042EF34">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CEBC41C6"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CEBC41C6">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="4AB6ABE4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="015F90E2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>PlusUltraCapacitorsStarshipAttackSpeed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EF465120">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000139"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+        </Element>
+        <Element Type="FunctionCall" Id="221EE514">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B9C3C969"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="8650A875"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="85D801F0"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B9C3C969">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3A4485DA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B55466F8"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="025519BF"/>
+        </Element>
+        <Element Type="Param" Id="3A4485DA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="06307184"/>
+        </Element>
+        <Element Type="FunctionCall" Id="06307184">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="B55466F8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="025519BF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranShipWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8650A875">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D0A84417"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="69430F2B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="43002668"/>
+        </Element>
+        <Element Type="Param" Id="D0A84417">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="8136257F"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8136257F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="69430F2B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="43002668">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranShipWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="85D801F0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0A9028E9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9AC33E2F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="256597EF"/>
+        </Element>
+        <Element Type="Param" Id="0A9028E9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E03FD1B9"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E03FD1B9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="9AC33E2F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="256597EF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>TerranShipWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="797514C7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="92E9A9EE"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="385BA9D7"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="699108D4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="66343114"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E762EB03"/>
+        </Element>
+        <Element Type="FunctionCall" Id="92E9A9EE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A858E08D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="505ED7B3"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0F558151"/>
+        </Element>
+        <Element Type="Param" Id="A858E08D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="72DD3EA9"/>
+        </Element>
+        <Element Type="FunctionCall" Id="72DD3EA9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="505ED7B3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="0F558151">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>PlusUltraCapacitorsInfantryAttackSpeed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="385BA9D7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B1A3FD51"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="76984E6C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="220B8530"/>
+        </Element>
+        <Element Type="Param" Id="B1A3FD51">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="6F8C16F3"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6F8C16F3">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="76984E6C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="220B8530">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>PlusUltraCapacitorsVehicleAttackSpeed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="699108D4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="AF30DCBB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="85FBFBA3"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9B37DF2E"/>
+        </Element>
+        <Element Type="Param" Id="AF30DCBB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C8F49883"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C8F49883">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="85FBFBA3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="9B37DF2E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>PlusUltraCapacitorsStarshipAttackSpeed</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="66343114">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000139"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E762EB03">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="2386AAF9"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4079227B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F75EFD94"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2386AAF9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="56F6BEEC"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CCED8107"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A52E1360"/>
+        </Element>
+        <Element Type="Param" Id="56F6BEEC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="70464C20"/>
+        </Element>
+        <Element Type="FunctionCall" Id="70464C20">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="CCED8107">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="A52E1360">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4079227B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="32C774DD"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E059A84F"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A54C2AD0"/>
+        </Element>
+        <Element Type="Param" Id="32C774DD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="26148226"/>
+        </Element>
+        <Element Type="FunctionCall" Id="26148226">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="E059A84F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="A54C2AD0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F75EFD94">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="92605D95"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="DE5331BE"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B1AB83F1"/>
+        </Element>
+        <Element Type="Param" Id="92605D95">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B5AF3A91"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B5AF3A91">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="DE5331BE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="B1AB83F1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Trigger" Id="9C7137BE">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="629ED96D"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="F2A2D87C"/>
+            <Condition Type="FunctionCall" Library="BA5CCDED" Id="0C24C1FB"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="0584BF19"/>
+        </Element>
+        <Element Type="FunctionCall" Id="629ED96D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="D8B5FD69"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="DAB0FA82"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C0587966"/>
+        </Element>
+        <Element Type="Param" Id="DAB0FA82">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1BEB3316"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
+        <Element Type="Param" Id="C0587966">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="250D010D"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000060"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F2A2D87C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8618FBBA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F42EE184"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="34638047"/>
+        </Element>
+        <Element Type="Param" Id="8618FBBA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D094E917"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D094E917">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FA9ED676"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="796276D8"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6DBF87D2"/>
+        </Element>
+        <Element Type="Param" Id="FA9ED676">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="448F39DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D78D6018"/>
+        </Element>
+        <Element Type="Param" Id="796276D8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
+            <Value>MergedUpgrades</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Param" Id="6DBF87D2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000446"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="A19E2C8A"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A19E2C8A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="F42EE184">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="34638047">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="0C24C1FB">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000133"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="45B0779B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="3669D18B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F27D7536"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="6A88ACF6"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9BD5E169"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4B7D590C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="45B0779B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B5BB3A3D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2CC82BE1"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9B23B074"/>
+        </Element>
+        <Element Type="Param" Id="B5BB3A3D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="97491B96"/>
+        </Element>
+        <Element Type="FunctionCall" Id="97491B96">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="2CC82BE1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="9B23B074">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedArmorsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3669D18B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="AF8D5111"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4A2379A5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6C8BB26A"/>
+        </Element>
+        <Element Type="Param" Id="AF8D5111">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="2DE2A9CD"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2DE2A9CD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="4A2379A5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="6C8BB26A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedArmorsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F27D7536">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="87C729AE"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="536896D5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="ADCE1726"/>
+        </Element>
+        <Element Type="Param" Id="87C729AE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="3288D16B"/>
+        </Element>
+        <Element Type="FunctionCall" Id="3288D16B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="536896D5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="ADCE1726">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedArmorsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6A88ACF6">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D67A20F5"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D764B41B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="142D9D75"/>
+        </Element>
+        <Element Type="Param" Id="D67A20F5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="59684BF7"/>
+        </Element>
+        <Element Type="FunctionCall" Id="59684BF7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="D764B41B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="142D9D75">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9BD5E169">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6DDD2E1E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="75359BD0"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="50E0A3F5"/>
+        </Element>
+        <Element Type="Param" Id="6DDD2E1E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1CA3B46E"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1CA3B46E">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="75359BD0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="50E0A3F5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4B7D590C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000001"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="D2161A85"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="88F3BC45"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="67299EA0"/>
+        </Element>
+        <Element Type="Param" Id="D2161A85">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="D62599E2"/>
+        </Element>
+        <Element Type="FunctionCall" Id="D62599E2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="Param" Id="88F3BC45">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="67299EA0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>MergedWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="0584BF19">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="91C49196"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0CF1FD2C"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FD71F147"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="37BC774F"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="AC72BD67"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B9096118"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="36DB2758"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="59CA00F7"/>
+        </Element>
+        <Element Type="Param" Id="0CF1FD2C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="B4ACF12A"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="EB7CD0FA"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EB7CD0FA">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="F161CEC9"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FD71F147">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3A1227AB"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="AD43BC93"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="894FF10E"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="2ED686D9"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="0AC0BCE5"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CEC68F54"/>
+        </Element>
+        <Element Type="Param" Id="894FF10E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A8F1093"/>
+            <Value>MergedArmorsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2ED686D9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="547AD193"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BF8AA620"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F802B217"/>
+        </Element>
+        <Element Type="Param" Id="547AD193">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="060BBDFF"/>
+        </Element>
+        <Element Type="FunctionCall" Id="060BBDFF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="BF8AA620">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="F802B217">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryArmorsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="0AC0BCE5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="023FDBF3"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A7A1D788"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="91ECC8D1"/>
+        </Element>
+        <Element Type="Param" Id="023FDBF3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F61D5724"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F61D5724">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="A7A1D788">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="91ECC8D1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranVehicleArmorsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CEC68F54">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="83DEF6B7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="283DDCBF"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CA80CF46"/>
+        </Element>
+        <Element Type="Param" Id="83DEF6B7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="ED8F0150"/>
+        </Element>
+        <Element Type="FunctionCall" Id="ED8F0150">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="283DDCBF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="CA80CF46">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranShipArmorsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="37BC774F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3A1227AB"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="AD43BC93"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F77C6140"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F123037B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="2C30E0C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="CB20F9D5"/>
+        </Element>
+        <Element Type="Param" Id="F77C6140">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A8F1093"/>
+            <Value>MergedArmorsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F123037B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="95023847"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="88F457AA"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="E1367CA5"/>
+        </Element>
+        <Element Type="Param" Id="95023847">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4DE682A0"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4DE682A0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="88F457AA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="E1367CA5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryArmorsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2C30E0C4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="85CA116D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="516F9833"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0588F190"/>
+        </Element>
+        <Element Type="Param" Id="85CA116D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="34D7C75D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="34D7C75D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="516F9833">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="0588F190">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranVehicleArmorsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CB20F9D5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="50558F05"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="68967B22"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="17DF9C7E"/>
+        </Element>
+        <Element Type="Param" Id="50558F05">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="6D3EC69A"/>
+        </Element>
+        <Element Type="FunctionCall" Id="6D3EC69A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="68967B22">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="17DF9C7E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranShipArmorsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="AC72BD67">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3A1227AB"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="AD43BC93"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8FBEFF29"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B7598F6B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C4E50D02"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4E8D8894"/>
+        </Element>
+        <Element Type="Param" Id="8FBEFF29">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A8F1093"/>
+            <Value>MergedArmorsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B7598F6B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9A9CD6F6"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BE267576"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="ED467BB8"/>
+        </Element>
+        <Element Type="Param" Id="9A9CD6F6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="30B73F97"/>
+        </Element>
+        <Element Type="FunctionCall" Id="30B73F97">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="BE267576">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="ED467BB8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryArmorsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C4E50D02">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="DDCAECC7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2C5E1FC7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="167B959B"/>
+        </Element>
+        <Element Type="Param" Id="DDCAECC7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="37772873"/>
+        </Element>
+        <Element Type="FunctionCall" Id="37772873">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="2C5E1FC7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="167B959B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryArmorsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4E8D8894">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CBA61D90"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7565DFE4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0E38FD94"/>
+        </Element>
+        <Element Type="Param" Id="CBA61D90">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B4C88AF5"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B4C88AF5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="7565DFE4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="0E38FD94">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryArmorsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B9096118">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3A1227AB"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="AD43BC93"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BD352105"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B93349D8"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="8F90F6DE"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F6DCDD4D"/>
+        </Element>
+        <Element Type="Param" Id="BD352105">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A8F1093"/>
+            <Value>MergedWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B93349D8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="F667E5EC"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="38D421C7"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5A0FB6BF"/>
+        </Element>
+        <Element Type="Param" Id="F667E5EC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FEBECDF0"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FEBECDF0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="38D421C7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="5A0FB6BF">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8F90F6DE">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="78ED2F7A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="B442FC8B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="BDA4552A"/>
+        </Element>
+        <Element Type="Param" Id="78ED2F7A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="4FB559DD"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4FB559DD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="B442FC8B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="BDA4552A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranVehicleWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F6DCDD4D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="DCB3CB77"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6CF2C920"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FAFDBA73"/>
+        </Element>
+        <Element Type="Param" Id="DCB3CB77">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="33B109C9"/>
+        </Element>
+        <Element Type="FunctionCall" Id="33B109C9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="6CF2C920">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="FAFDBA73">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranShipWeaponsLevel1</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="36DB2758">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3A1227AB"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="AD43BC93"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="A9BED6DD"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="80F4C207"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="1BEF7A0B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="224C5471"/>
+        </Element>
+        <Element Type="Param" Id="A9BED6DD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A8F1093"/>
+            <Value>MergedWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="80F4C207">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="98B6C5EC"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="EBCB323E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0CFA5E99"/>
+        </Element>
+        <Element Type="Param" Id="98B6C5EC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="F3D0D029"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F3D0D029">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="EBCB323E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="0CFA5E99">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1BEF7A0B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="1E10177C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="423EAFCB"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2BB267F2"/>
+        </Element>
+        <Element Type="Param" Id="1E10177C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="85D0E473"/>
+        </Element>
+        <Element Type="FunctionCall" Id="85D0E473">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="423EAFCB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="2BB267F2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranVehicleWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="224C5471">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="82AECD3A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="084FE529"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="C67B986B"/>
+        </Element>
+        <Element Type="Param" Id="82AECD3A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="FA0B1BBC"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FA0B1BBC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="084FE529">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="C67B986B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranShipWeaponsLevel2</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="59CA00F7">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="3A1227AB"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="AD43BC93"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3C2DDD1D"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9AEBC4A2"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="0D2CB56B"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B44F79F2"/>
+        </Element>
+        <Element Type="Param" Id="3C2DDD1D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="9A8F1093"/>
+            <Value>MergedWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9AEBC4A2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="CDFA4FF4"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="8FB2A5DC"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="896473BD"/>
+        </Element>
+        <Element Type="Param" Id="CDFA4FF4">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E4CB0086"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E4CB0086">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="8FB2A5DC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="896473BD">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranInfantryWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="0D2CB56B">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FB040E2D"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="0FC352AC"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3DF1511E"/>
+        </Element>
+        <Element Type="Param" Id="FB040E2D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="C01B8D0C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="C01B8D0C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="0FC352AC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="3DF1511E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranVehicleWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B44F79F2">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="3696033A"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FD831EFC"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="7924E26E"/>
+        </Element>
+        <Element Type="Param" Id="3696033A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="9CE50CF0"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9CE50CF0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="FD831EFC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="7924E26E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>TerranShipWeaponsLevel3</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
         </Element>
         <Element Type="Category" Id="320AB634">
             <Item Type="Trigger" Library="BA5CCDED" Id="390A3B5A"/>
