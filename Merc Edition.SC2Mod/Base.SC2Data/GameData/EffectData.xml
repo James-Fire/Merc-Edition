@@ -37,6 +37,26 @@
             <SortArray value="TSRandom"/>
         </TargetSorts>
     </CEffectEnumArea>
+    <CEffectModifyUnit id="BioSurvivalProtocol1hp">
+        <EditorCategories value=""/>
+        <LaunchUnit Value="Caster"/>
+        <ImpactUnit Value="Caster"/>
+        <VitalArray index="Life">
+            <Change value="1"/>
+        </VitalArray>
+        <ModifyFlags index="SetVitals" value="1"/>
+    </CEffectModifyUnit>
+    <CEffectApplyBehavior id="BioSurvivalProtocolAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BioSurvivalProtocol"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="BioSurvivalProtocolHeal">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <VitalArray index="Life">
+            <ChangeFraction value="0.02"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectModifyUnit id="DeathMetalCooldown">
         <EditorCategories value=""/>
         <ImpactUnit Value="Caster"/>

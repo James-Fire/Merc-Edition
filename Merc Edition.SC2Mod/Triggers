@@ -16324,11 +16324,11 @@
         </Element>
         <Element Type="Param" Id="73D7D46B">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
-            <Preset Type="PresetValue" Library="Ntve" Id="E123C832"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
         </Element>
         <Element Type="Param" Id="3026494A">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
-            <Value>3</Value>
+            <Value>1</Value>
             <ValueType Type="int"/>
         </Element>
         <Element Type="Variable" Id="474F7F82">

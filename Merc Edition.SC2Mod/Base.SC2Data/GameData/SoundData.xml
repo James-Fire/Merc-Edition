@@ -354,6 +354,13 @@
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Construct_Eso_EnergyWave_01.wav" FacialGroup=""/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="BioSurvivalProtocolSound" parent="Spell">
+        <AssetArray File="Assets\Sounds\Nova_Holographic_Decoy_Coop_Birth_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Holographic_Decoy_Coop_Birth_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Holographic_Decoy_Coop_Birth_03.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
     <CSound id="DeathMetalMusic" parent="Spell">
         <AssetArray File="Assets\Sounds\ETC\ETC_GuitarSolo01.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\ETC\ETC_GuitarSolo02.ogg" FacialGroup=""/>
@@ -1696,6 +1703,5 @@
         <Category value="User1"/>
         <LoopCount value="-1"/>
         <AssetArray File="Assets\Sounds\Merc_TechPurchase_Medic.ogg" FacialGroup=""/>
-        <Volume value="0.000000,0.000000"/>
     </CSound>
 </Catalog>

@@ -6,6 +6,7 @@ Abil/Name/AlphaSquadron=Alpha Squadron
 Abil/Name/AnduinOpenGate=Open Gate
 Abil/Name/AnduinShadowCharge=Shadow Charge
 Abil/Name/AspisBlink=Aspis Blink
+Abil/Name/BioSurvivalProtocol=Bio-Survival Protocol
 Abil/Name/BunkerLower=Lower
 Abil/Name/BunkerRaise=Raise
 Abil/Name/CabalAssaultMode=Cabal Assault Mode
@@ -104,6 +105,8 @@ Behavior/Name/ARESTargetLock=Target Lock
 Behavior/Name/AdjudicatorCloakingField=Cloaking Field
 Behavior/Name/AdrenalineRush=Adrenaline Rush
 Behavior/Name/AfterburnersHelsAngel=Afterburners
+Behavior/Name/BioSurvivalProtocol=Bio-Survival Protocol
+Behavior/Name/BioSurvivalProtocolDResponse=Bio-Survival Protocol DResponse
 Behavior/Name/BunkerBurrowed=Bunker Burrowed
 Behavior/Name/BunkerMorphing=Bunker Morphing
 Behavior/Name/ColossusCuirassier=Colossus Cuirassier
@@ -173,6 +176,7 @@ Behavior/Tooltip/ARESTargetLock=This unit is taking increased damage.
 Behavior/Tooltip/AdjudicatorCloakingField=This unit is cloaked unless revealed by detectors or effects.
 Behavior/Tooltip/AdrenalineRush=This unit has temporarily increased movement and attack speeds.
 Behavior/Tooltip/AfterburnersHelsAngel=This unit is moving faster.
+Behavior/Tooltip/BioSurvivalProtocol=This unit is invincible and healing life.
 Behavior/Tooltip/ConcussiveShrapnel=This unit is slowed.
 Behavior/Tooltip/Contaminated=This structure is unable to train new units, research upgrades, or attack.
 Behavior/Tooltip/DemonRockets=This unit is stunned.
@@ -235,6 +239,7 @@ Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
 Button/Name/AspisBlinkShield=Aspis Blink Shield
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
+Button/Name/BioSurvivalProtocol=Bio-Survival Protocol
 Button/Name/BombardmentFortress=Bombardment
 Button/Name/BoxofScraps=Box of Scraps
 Button/Name/BuildAdjucator=Build Adjucator
@@ -459,6 +464,7 @@ Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and w
 Button/Tooltip/AutomatedRefinery=Improved Refinery that sends refined vespene gas straight to the Command Center via short-range warp fields. Eliminates the need for SCVs in vespene gas production, but still allows them to be allocated for faster harvesting.
 Button/Tooltip/AutomatedRefineryTextKicker8=<s val="Kicker_Refinery">+8</s><IMG path="Assets\Textures\icon-gas-terran.dds" height="32" width="32"/>
 Button/Tooltip/BearclawGauntlets=Increases Devil Dog attack radius by 60% and grants the Grapple ability.
+Button/Tooltip/BioSurvivalProtocol=When taking fatal damage, this unit will become invincible for 3 seconds and heal a small portion of their life.<n/><n/>Can only occur once every 5 minutes.
 Button/Tooltip/BombardmentFortress=Randomly bombard a location with 4 missiles, each dealing up to <d ref="Effect,FortressBombardmentDamage,Amount"/> (+200 vs Structure) damage in an area. Fires an additional missile per SCV loaded.
 Button/Tooltip/BoxofScraps=Nanite Cloud Emitters gain 2 armor and are built nearly instantly.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
@@ -703,6 +709,87 @@ Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Button/Tooltip/ZeusTankSecretUpgrade=Squad Sight radius increased, Target Lock range and damage bonus increased.
 Button/Tooltip/ZhakulGuardians=This unit moves faster than its base counterpart.
+ConversationState/Hotspots/CantinaMercLaptop=Mercenary Commanders
+ConversationState/LabResearch/ResearchP1_1=Plus Ultra Capacitors
+ConversationState/LabResearch/ResearchP1_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Plus Ultra Capacitors</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Gen 1 Plating.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP1_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Weapon upgrades increase attack speed by 10%<n/>- All units gain a 10% damage increase<n/>- Applies to Armory and Engineering Bay</s><n/><n/><s val="ResearchDescription_Protoss">Self-replicating capacitors cut the reload time of every weapon and system they are fitted to. Each weapon upgrade from the Armory or Engineering Bay now also makes our guns fire faster.</s>
+ConversationState/LabResearch/ResearchP1_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Plus Ultra Capacitors</s><n/><s val="TooltipDescription_Protoss">Weapon upgrades also increase attack speed.</s>
+ConversationState/LabResearch/ResearchP1_2=Gen 1 Plating
+ConversationState/LabResearch/ResearchP1_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Gen 1 Plating</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Plus Ultra Capacitors.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP1_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Armor upgrades increase life by 10%<n/>- All units gain an additional +1 armor<n/>- Applies to Armory and Engineering Bay</s><n/><n/><s val="ResearchDescription_Protoss">A lightweight alloy layered under existing hull plating. Every armor upgrade from the Armory or Engineering Bay now also adds life to our units and structures.</s>
+ConversationState/LabResearch/ResearchP1_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Gen 1 Plating</s><n/><s val="TooltipDescription_Protoss">Armor upgrades also increase life.</s>
+ConversationState/LabResearch/ResearchP2_1=Orbital Base Depots
+ConversationState/LabResearch/ResearchP2_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Orbital Base Depots</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Macro Filters.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP2_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Supply depots are built instantly<n/>- Supply Depots now cost 75 minerals<n/>- Start each mission with 100 supply</s><n/><n/><s val="ResearchDescription_Protoss">Supply depots are dropped straight from orbit. An A.C.V only needs to place the landing beacon.</s>
+ConversationState/LabResearch/ResearchP2_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Orbital Base Depots</s><n/><s val="TooltipDescription_Protoss">Supply Depots are dropped from orbit and built instantly.</s>
+ConversationState/LabResearch/ResearchP2_2=Macro Filters
+ConversationState/LabResearch/ResearchP2_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Macro Filters</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Orbital Base Depots.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP2_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Refineries produce 100% more Vespene per trip<n/>- Refinery Speed is decreased by 15%<n/>- Applies to Automated Refinery</s><n/><n/><s val="ResearchDescription_Protoss">Combining Terran and Protoss filtering methods recovers far more gas from each load, at the cost of a slower refining cycle.</s>
+ConversationState/LabResearch/ResearchP2_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Macro Filters</s><n/><s val="TooltipDescription_Protoss">Refineries return more gas per trip, but work slower.</s>
+ConversationState/LabResearch/ResearchP3_1=Automated Refinery
+ConversationState/LabResearch/ResearchP3_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Automated Refinery</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Refitted Reactor.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP3_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Refineries no longer require A.C.Vs to harvest Vespene Gas<n/>- Can still allocate A.C.Vs for faster harvesting</s><n/><n/><s val="ResearchDescription_Protoss">Gas is warped out of the refinery automatically. A.C.Vs can still be assigned to speed things up, but the geyser runs dry sooner.</s>
+ConversationState/LabResearch/ResearchP3_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Automated Refinery</s><n/><s val="TooltipDescription_Protoss">Refineries harvest gas without A.C.Vs.</s>
+ConversationState/LabResearch/ResearchP3_2=Refitted Reactor
+ConversationState/LabResearch/ResearchP3_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Refitted Reactor</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Automated Refinery.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP3_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Allows two A.C.Vs to be trained simultaneously<n/>- A.C.V construction time and mineral cost reduced by 25%</s><n/><n/><s val="ResearchDescription_Protoss">A refitted reactor lets the Command Center assemble two A.C.Vs at once, and trims their cost.</s>
+ConversationState/LabResearch/ResearchP3_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Refitted Reactor</s><n/><s val="TooltipDescription_Protoss">Train two A.C.Vs at once, faster and cheaper.</s>
+ConversationState/LabResearch/ResearchP4_1=Nomad
+ConversationState/LabResearch/ResearchP4_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Nomad</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Adjudicator.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP4_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Detects cloaked and burrowed units<n/>- Can drop Railgun Turrets<n/>- Can place Point Defense Drones<n/>- Grants Squad Sight to nearby allies<n/>- Uses explosive weaponry<n/>- Built at Starport</s><n/><n/><s val="ResearchDescription_Protoss">The Nomad is an unmanned aerial vehicle that exposes hidden enemies, deploys turrets and drones where they are needed most, and fires hunter-seeker missiles.</s>
+ConversationState/LabResearch/ResearchP4_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Nomad</s><n/><s val="TooltipDescription_Protoss">Support drone. Detects cloaked and burrowed units.</s>
+ConversationState/LabResearch/ResearchP4_2=Adjudicator
+ConversationState/LabResearch/ResearchP4_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Adjudicator</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Nomad.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP4_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Detects cloaked and burrowed units<n/>- Repairs nearby mechanical units<n/>- Access to Protoss tech<n/>- Trains energy based units<n/>- Can irradiate enemy units<n/>- Built at Starport</s><n/><n/><s val="ResearchDescription_Protoss">A heavily modified Science Vessel fitted with hull repair systems and recovered Protoss technology.</s>
+ConversationState/LabResearch/ResearchP4_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Adjudicator</s><n/><s val="TooltipDescription_Protoss">Support vessel. Detects and repairs mechanical units.</s>
+ConversationState/LabResearch/ResearchP5_1=Supreme Reactor
+ConversationState/LabResearch/ResearchP5_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Supreme Reactor</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Orbital Deployment.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP5_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Combines Tech Lab and Reactor<n/>- 20 second build time<n/>- Reduces build time of units trained at attached structure by 5%</s><n/><n/><s val="ResearchDescription_Protoss">A combined tech reactor add-on. The attached structure can train two units of any type at once, and the add-on itself goes up faster.</s>
+ConversationState/LabResearch/ResearchP5_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Supreme Reactor</s><n/><s val="TooltipDescription_Protoss">Add-on that works as both a Tech Lab and a Reactor.</s>
+ConversationState/LabResearch/ResearchP5_2=Orbital Deployment
+ConversationState/LabResearch/ResearchP5_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Orbital Deployment</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Supreme Reactor.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchP5_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Barracks, Factory, & Starport units now arrive by Drop-Pod.<n/>- Drop-Pods land at their respective rally point.<n/>- Drop Pod units gain a temporary buff to attack and movement speed</s><n/><n/><s val="ResearchDescription_Protoss">A low-cost drop pod delivers infantry, vehicles and starships straight to the rally point, ready to fight.</s>
+ConversationState/LabResearch/ResearchP5_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Orbital Deployment</s><n/><s val="TooltipDescription_Protoss">Units arrive by Drop-Pod at their rally point.</s>
+ConversationState/LabResearch/ResearchZ1_1=Battle Bunker
+ConversationState/LabResearch/ResearchZ1_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Battle Bunker</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Burrow Bunker.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ1_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Outfits all Bunkers with an automated turret<n/>- Bunkers gain +200 life and +2 armor<n/>- Turret upgrades with vehicle weapon upgrades</s><n/><n/><s val="ResearchDescription_Zerg">A bunker design that pairs an automated turret with a far tougher shell.</s>
+ConversationState/LabResearch/ResearchZ1_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Battle Bunker</s><n/><s val="TooltipDescription_Zerg">Bunkers gain an automated turret and extra life.</s>
+ConversationState/LabResearch/ResearchZ1_2=Burrow Bunker
+ConversationState/LabResearch/ResearchZ1_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Burrow Bunker</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Battle Bunker.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ1_2/Info/Description=<s val="ResearchDescSummary_Zerg">- All Bunkers can raise and lower just like a Supply Depot<n/>- Does not harm units inside Bunker if it is lowered<n/>- Spiked Barricades deal damage back to melee attackers</s><n/><n/><s val="ResearchDescription_Zerg">Bunkers can now sink into the ground so our own troops can pass. Nobody is quite sure where the spiked barricades came from.</s>
+ConversationState/LabResearch/ResearchZ1_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Burrow Bunker</s><n/><s val="TooltipDescription_Zerg">Bunkers can be lowered like Supply Depots.</s>
+ConversationState/LabResearch/ResearchZ2_1=Bombardment Fortress
+ConversationState/LabResearch/ResearchZ2_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Bombardment Fortress</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Nanite Emitter.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ2_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Command Center can upgrade to Bombardment Fortress<n/>- Upgrade grants extra armor and can bombard a target similar to Earth Splitters<n/>- Reduces firing time if loaded with A.C.Vs<n/>- Bombardment Fortress can not lift off without repacking first</s><n/><n/><s val="ResearchDescription_Zerg">Twin cannons and extra plating are bolted onto a finished Command Center. It can still lift off once the guns are packed away.</s>
+ConversationState/LabResearch/ResearchZ2_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Bombardment Fortress</s><n/><s val="TooltipDescription_Zerg">Command Center upgrade with long-range bombardment.</s>
+ConversationState/LabResearch/ResearchZ2_2=Nanite Emitter
+ConversationState/LabResearch/ResearchZ2_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Nanite Emitter</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Bombardment Fortress.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ2_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Built by an A.C.V so it can be salvaged<n/>- Can burrow when not in use<n/>- Can be upgraded in armory<n/>- Is a detector</s><n/><n/><s val="ResearchDescription_Zerg">A defensive turret that releases a nanite cloud to break up large waves, then hides underground when idle.</s>
+ConversationState/LabResearch/ResearchZ2_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Nanite Emitter</s><n/><s val="TooltipDescription_Zerg">Nanite cloud turret. Burrows when out of combat.</s>
+ConversationState/LabResearch/ResearchZ3_1=Wolverine
+ConversationState/LabResearch/ResearchZ3_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Wolverine</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Samson.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ3_1/Info/Description=<s val="ResearchDescSummary_Zerg">- A close-in Terran walker<n/>- Upgraded racks target ground and air<n/>- Can use mag mines<n/>- Armed with low grade variant of the M34 Terror Rounds<n/>- Built at Factory</s><n/><n/><s val="ResearchDescription_Zerg">A close-quarters walker built for the fringe colonies, with tricks the Warhound never had.</s>
+ConversationState/LabResearch/ResearchZ3_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Wolverine</s><n/><s val="TooltipDescription_Zerg">Close-range assault walker.</s>
+ConversationState/LabResearch/ResearchZ3_2=Samson
+ConversationState/LabResearch/ResearchZ3_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Samson</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Wolverine.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ3_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Colossal transport ship<n/>- Deploys loaded troops almost instantly<n/>- Loaded troops survive if transport is destroyed<n/>- Armed with laser batteries for defense<n/>- Built at Starport</s><n/><n/><s val="ResearchDescription_Zerg">A modified Hercules dropship that carries 30 troops and defends itself with Battlecruiser-grade laser batteries.</s>
+ConversationState/LabResearch/ResearchZ3_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Samson</s><n/><s val="TooltipDescription_Zerg">Heavy transport. Deploys troops almost instantly.</s>
+ConversationState/LabResearch/ResearchZ4_1=Umojan Cellular Reactor
+ConversationState/LabResearch/ResearchZ4_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Umojan Cellular Reactor</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Heroic Training.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ4_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Specialist units gain +100 starting energy<n/>- Specialist units gain +100 maximum energy<n/>- Specialist units regen energy 45% faster.</s><n/><n/><s val="ResearchDescription_Zerg">Specialists and heroes start every fight ready to use their abilities, and can store far more energy.</s>
+ConversationState/LabResearch/ResearchZ4_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Umojan Cellular Reactor</s><n/><s val="TooltipDescription_Zerg">Specialists gain energy and faster energy regeneration.</s>
+ConversationState/LabResearch/ResearchZ4_2=Heroic Training
+ConversationState/LabResearch/ResearchZ4_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Heroic Training</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Umojan Cellular Reactor.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ4_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Heroes gain 25% cooldown reduction<n/>- Heroes gain 25% increase in health<n/>- Heroes gain +2 armor</s><n/><n/><s val="ResearchDescription_Zerg">Our heroes get the best training and gear credits can buy.</s>
+ConversationState/LabResearch/ResearchZ4_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Heroic Training</s><n/><s val="TooltipDescription_Zerg">Heroes gain cooldown reduction, life and armor.</s>
+ConversationState/LabResearch/ResearchZ5_1=Overmind Emulator
+ConversationState/LabResearch/ResearchZ5_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Overmind Emulator</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Psi Dispersion Device.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ5_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Defensive structure<n/>- Can call forth elite Zerg units<n/>- Can only build one at a time</s><n/><n/><s val="ResearchDescription_Zerg">An emulator that summons elite Zerg strains under our permanent control, with a long recharge between summons.</s>
+ConversationState/LabResearch/ResearchZ5_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Overmind Emulator</s><n/><s val="TooltipDescription_Zerg">Defensive structure. Summons elite Zerg units.</s>
+ConversationState/LabResearch/ResearchZ5_2=Psi Dispersion Device
+ConversationState/LabResearch/ResearchZ5_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Psi Dispersion Device</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Overmind Emulator.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
+ConversationState/LabResearch/ResearchZ5_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Defensive structure<n/>- Slows movement & attack speeds of nearby Psi linked units<n/>- Damages Psi linked units at a rate of 5hp per second<n/>- Constant effect</s><n/><n/><s val="ResearchDescription_Zerg">A sigma-radiation emitter that dulls the reflexes of nearby Zerg and slowly burns any psi-linked creature in range.</s>
+ConversationState/LabResearch/ResearchZ5_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Psi Dispersion Device</s><n/><s val="TooltipDescription_Zerg">Defensive structure. Slows and damages psi-linked units.</s>
 ConversationState/Tech/Tech_Firebat_1=Bearclaw Nozzles
 ConversationState/Tech/Tech_Firebat_1/Info/Description=<s val="TechSummary">- Devil Dogs gain a 60% larger area attack.<n/>- Devil Dogs gain the Jump Jets ability.</s><n/><n/><s val="TechDescription">temp</s>
 ConversationState/Tech/Tech_Firebat_1/Info/Tooltip=<s val="TooltipTitle_Tech">Bearclaw Nozzles</s><n/><s val="TooltipDescription_Tech">Devil Dogs gain a 60% larger area attack and gain Jump Jets.</s>
@@ -791,6 +878,9 @@ Effect/Name/AspisBlinkCooldown=Aspis Blink Cooldown
 Effect/Name/BarBreakersCP=Bar Breakers CP
 Effect/Name/BarBreakersDamage=Bar Breakers Damage
 Effect/Name/BarBreakersSet=Bar Breakers Set
+Effect/Name/BioSurvivalProtocol1hp=Bio-Survival Protocol 1hp
+Effect/Name/BioSurvivalProtocolAB=Bio-Survival Protocol AB
+Effect/Name/BioSurvivalProtocolHeal=Bio-Survival Protocol Heal
 Effect/Name/BlockBFlightDurationApplyBehavior=BlockBFlightDurationApplyBehavior
 Effect/Name/BroodlingGestationCU=Broodling Gestation CU
 Effect/Name/BunkerBurrowedApplyBehavior=BunkerBurrowedApplyBehavior
@@ -1235,6 +1325,8 @@ RequirementNode/Tooltip/MercHeroDeployed=This Commander is already deployed
 SkibidiSkibidiHeHeHaHa=x2
 StarcruiserShields=Shield Generator
 StarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevenge2ShieldsStarcruiserShieldsStarcruiser2ShieldsStarcruiserShieldsDukesRevengeHeroShields=Shield Generator
+UI/MercenaryPanelSelectHeading=SELECT A CCOMMANDER
+UI/MercenaryPanelTitle=COMMANDERS
 UI/Upgrading=Upgrading
 Unit/Category/TerranUnits=Terran
 Unit/Name/250mmUranusCarronadesWeapon=250mm Uranus Carronades Projectile
@@ -1380,6 +1472,7 @@ Upgrade/Name/LegionSystems=Legion Systems
 Upgrade/Name/LooseEngineSeals=Loose Engine Seals
 Upgrade/Name/MASH=M.A.S.H
 Upgrade/Name/MacroFilters=Macro Filters
+Upgrade/Name/MaxTechLiberatedBSP=Max Tech - Liberated BSP
 Upgrade/Name/MercEdition=Merc Edition
 Upgrade/Name/MicroFusionReactor=Micro Fusion Reactor
 Upgrade/Name/MobileStockpile=Mobile Stockpile
@@ -1706,86 +1799,3 @@ Weapon/Name/VanirMissiles=Vanir Missiles
 Weapon/Name/Warbot120mmCannon=120mm Cannon
 Weapon/Tip/NomadMissile=
 Weapon/Tip/PlasmaTorpedo=Deals <d ref="Effect,LightningBombDamage,Amount*Behavior,LightningBomb,Duration/Behavior,LightningBomb,Period"/> damage over <d ref="Behavior,LightningBomb,Duration"/> seconds. Does not stack.
-ConversationState/Hotspots/CantinaMercLaptop=Mercenary Commanders
-UI/MercenaryPanelTitle=COMMANDERS
-UI/MercenaryPanelSelectHeading=SELECT A CCOMMANDER
-ConversationState/LabResearch/ResearchP1_1=Plus Ultra Capacitors
-ConversationState/LabResearch/ResearchP1_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Plus Ultra Capacitors</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Gen 1 Plating.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP1_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Weapon upgrades increase attack speed by 10%<n/>- All units gain a 10% damage increase<n/>- Applies to Armory and Engineering Bay</s><n/><n/><s val="ResearchDescription_Protoss">Self-replicating capacitors cut the reload time of every weapon and system they are fitted to. Each weapon upgrade from the Armory or Engineering Bay now also makes our guns fire faster.</s>
-ConversationState/LabResearch/ResearchP1_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Plus Ultra Capacitors</s><n/><s val="TooltipDescription_Protoss">Weapon upgrades also increase attack speed.</s>
-ConversationState/LabResearch/ResearchP1_2=Gen 1 Plating
-ConversationState/LabResearch/ResearchP1_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Gen 1 Plating</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Plus Ultra Capacitors.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP1_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Armor upgrades increase life by 10%<n/>- All units gain an additional +1 armor<n/>- Applies to Armory and Engineering Bay</s><n/><n/><s val="ResearchDescription_Protoss">A lightweight alloy layered under existing hull plating. Every armor upgrade from the Armory or Engineering Bay now also adds life to our units and structures.</s>
-ConversationState/LabResearch/ResearchP1_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Gen 1 Plating</s><n/><s val="TooltipDescription_Protoss">Armor upgrades also increase life.</s>
-ConversationState/LabResearch/ResearchP2_1=Orbital Base Depots
-ConversationState/LabResearch/ResearchP2_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Orbital Base Depots</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Macro Filters.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP2_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Supply depots are built instantly<n/>- Supply Depots now cost 75 minerals<n/>- Start each mission with 100 supply</s><n/><n/><s val="ResearchDescription_Protoss">Supply depots are dropped straight from orbit. An A.C.V only needs to place the landing beacon.</s>
-ConversationState/LabResearch/ResearchP2_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Orbital Base Depots</s><n/><s val="TooltipDescription_Protoss">Supply Depots are dropped from orbit and built instantly.</s>
-ConversationState/LabResearch/ResearchP2_2=Macro Filters
-ConversationState/LabResearch/ResearchP2_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Macro Filters</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Orbital Base Depots.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP2_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Refineries produce 100% more Vespene per trip<n/>- Refinery Speed is decreased by 15%<n/>- Applies to Automated Refinery</s><n/><n/><s val="ResearchDescription_Protoss">Combining Terran and Protoss filtering methods recovers far more gas from each load, at the cost of a slower refining cycle.</s>
-ConversationState/LabResearch/ResearchP2_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Macro Filters</s><n/><s val="TooltipDescription_Protoss">Refineries return more gas per trip, but work slower.</s>
-ConversationState/LabResearch/ResearchP3_1=Automated Refinery
-ConversationState/LabResearch/ResearchP3_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Automated Refinery</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Refitted Reactor.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP3_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Refineries no longer require A.C.Vs to harvest Vespene Gas<n/>- Can still allocate A.C.Vs for faster harvesting</s><n/><n/><s val="ResearchDescription_Protoss">Gas is warped out of the refinery automatically. A.C.Vs can still be assigned to speed things up, but the geyser runs dry sooner.</s>
-ConversationState/LabResearch/ResearchP3_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Automated Refinery</s><n/><s val="TooltipDescription_Protoss">Refineries harvest gas without A.C.Vs.</s>
-ConversationState/LabResearch/ResearchP3_2=Refitted Reactor
-ConversationState/LabResearch/ResearchP3_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Refitted Reactor</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Automated Refinery.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP3_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Allows two A.C.Vs to be trained simultaneously<n/>- A.C.V construction time and mineral cost reduced by 25%</s><n/><n/><s val="ResearchDescription_Protoss">A refitted reactor lets the Command Center assemble two A.C.Vs at once, and trims their cost.</s>
-ConversationState/LabResearch/ResearchP3_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Refitted Reactor</s><n/><s val="TooltipDescription_Protoss">Train two A.C.Vs at once, faster and cheaper.</s>
-ConversationState/LabResearch/ResearchP4_1=Nomad
-ConversationState/LabResearch/ResearchP4_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Nomad</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Adjudicator.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP4_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Detects cloaked and burrowed units<n/>- Can drop Railgun Turrets<n/>- Can place Point Defense Drones<n/>- Grants Squad Sight to nearby allies<n/>- Uses explosive weaponry<n/>- Built at Starport</s><n/><n/><s val="ResearchDescription_Protoss">The Nomad is an unmanned aerial vehicle that exposes hidden enemies, deploys turrets and drones where they are needed most, and fires hunter-seeker missiles.</s>
-ConversationState/LabResearch/ResearchP4_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Nomad</s><n/><s val="TooltipDescription_Protoss">Support drone. Detects cloaked and burrowed units.</s>
-ConversationState/LabResearch/ResearchP4_2=Adjudicator
-ConversationState/LabResearch/ResearchP4_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Adjudicator</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Nomad.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP4_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Detects cloaked and burrowed units<n/>- Repairs nearby mechanical units<n/>- Access to Protoss tech<n/>- Trains energy based units<n/>- Can irradiate enemy units<n/>- Built at Starport</s><n/><n/><s val="ResearchDescription_Protoss">A heavily modified Science Vessel fitted with hull repair systems and recovered Protoss technology.</s>
-ConversationState/LabResearch/ResearchP4_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Adjudicator</s><n/><s val="TooltipDescription_Protoss">Support vessel. Detects and repairs mechanical units.</s>
-ConversationState/LabResearch/ResearchP5_1=Supreme Reactor
-ConversationState/LabResearch/ResearchP5_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Supreme Reactor</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Orbital Deployment.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP5_1/Info/Description=<s val="ResearchDescSummary_Protoss">- Combines Tech Lab and Reactor<n/>- 20 second build time<n/>- Reduces build time of units trained at attached structure by 5%</s><n/><n/><s val="ResearchDescription_Protoss">A combined tech reactor add-on. The attached structure can train two units of any type at once, and the add-on itself goes up faster.</s>
-ConversationState/LabResearch/ResearchP5_1/Info/Tooltip=<s val="TooltipTitle_Protoss">Supreme Reactor</s><n/><s val="TooltipDescription_Protoss">Add-on that works as both a Tech Lab and a Reactor.</s>
-ConversationState/LabResearch/ResearchP5_2=Orbital Deployment
-ConversationState/LabResearch/ResearchP5_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Orbital Deployment</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Supreme Reactor.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchP5_2/Info/Description=<s val="ResearchDescSummary_Protoss">- Barracks, Factory, & Starport units now arrive by Drop-Pod.<n/>- Drop-Pods land at their respective rally point.<n/>- Drop Pod units gain a temporary buff to attack and movement speed</s><n/><n/><s val="ResearchDescription_Protoss">A low-cost drop pod delivers infantry, vehicles and starships straight to the rally point, ready to fight.</s>
-ConversationState/LabResearch/ResearchP5_2/Info/Tooltip=<s val="TooltipTitle_Protoss">Orbital Deployment</s><n/><s val="TooltipDescription_Protoss">Units arrive by Drop-Pod at their rally point.</s>
-ConversationState/LabResearch/ResearchZ1_1=Battle Bunker
-ConversationState/LabResearch/ResearchZ1_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Battle Bunker</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Burrow Bunker.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ1_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Outfits all Bunkers with an automated turret<n/>- Bunkers gain +200 life and +2 armor<n/>- Turret upgrades with vehicle weapon upgrades</s><n/><n/><s val="ResearchDescription_Zerg">A bunker design that pairs an automated turret with a far tougher shell.</s>
-ConversationState/LabResearch/ResearchZ1_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Battle Bunker</s><n/><s val="TooltipDescription_Zerg">Bunkers gain an automated turret and extra life.</s>
-ConversationState/LabResearch/ResearchZ1_2=Burrow Bunker
-ConversationState/LabResearch/ResearchZ1_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Burrow Bunker</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Battle Bunker.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ1_2/Info/Description=<s val="ResearchDescSummary_Zerg">- All Bunkers can raise and lower just like a Supply Depot<n/>- Does not harm units inside Bunker if it is lowered<n/>- Spiked Barricades deal damage back to melee attackers</s><n/><n/><s val="ResearchDescription_Zerg">Bunkers can now sink into the ground so our own troops can pass. Nobody is quite sure where the spiked barricades came from.</s>
-ConversationState/LabResearch/ResearchZ1_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Burrow Bunker</s><n/><s val="TooltipDescription_Zerg">Bunkers can be lowered like Supply Depots.</s>
-ConversationState/LabResearch/ResearchZ2_1=Bombardment Fortress
-ConversationState/LabResearch/ResearchZ2_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Bombardment Fortress</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Nanite Emitter.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ2_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Command Center can upgrade to Bombardment Fortress<n/>- Upgrade grants extra armor and can bombard a target similar to Earth Splitters<n/>- Reduces firing time if loaded with A.C.Vs<n/>- Bombardment Fortress can not lift off without repacking first</s><n/><n/><s val="ResearchDescription_Zerg">Twin cannons and extra plating are bolted onto a finished Command Center. It can still lift off once the guns are packed away.</s>
-ConversationState/LabResearch/ResearchZ2_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Bombardment Fortress</s><n/><s val="TooltipDescription_Zerg">Command Center upgrade with long-range bombardment.</s>
-ConversationState/LabResearch/ResearchZ2_2=Nanite Emitter
-ConversationState/LabResearch/ResearchZ2_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Nanite Emitter</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Bombardment Fortress.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ2_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Built by an A.C.V so it can be salvaged<n/>- Can burrow when not in use<n/>- Can be upgraded in armory<n/>- Is a detector</s><n/><n/><s val="ResearchDescription_Zerg">A defensive turret that releases a nanite cloud to break up large waves, then hides underground when idle.</s>
-ConversationState/LabResearch/ResearchZ2_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Nanite Emitter</s><n/><s val="TooltipDescription_Zerg">Nanite cloud turret. Burrows when out of combat.</s>
-ConversationState/LabResearch/ResearchZ3_1=Wolverine
-ConversationState/LabResearch/ResearchZ3_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Wolverine</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Samson.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ3_1/Info/Description=<s val="ResearchDescSummary_Zerg">- A close-in Terran walker<n/>- Upgraded racks target ground and air<n/>- Can use mag mines<n/>- Armed with low grade variant of the M34 Terror Rounds<n/>- Built at Factory</s><n/><n/><s val="ResearchDescription_Zerg">A close-quarters walker built for the fringe colonies, with tricks the Warhound never had.</s>
-ConversationState/LabResearch/ResearchZ3_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Wolverine</s><n/><s val="TooltipDescription_Zerg">Close-range assault walker.</s>
-ConversationState/LabResearch/ResearchZ3_2=Samson
-ConversationState/LabResearch/ResearchZ3_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Samson</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Wolverine.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ3_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Colossal transport ship<n/>- Deploys loaded troops almost instantly<n/>- Loaded troops survive if transport is destroyed<n/>- Armed with laser batteries for defense<n/>- Built at Starport</s><n/><n/><s val="ResearchDescription_Zerg">A modified Hercules dropship that carries 30 troops and defends itself with Battlecruiser-grade laser batteries.</s>
-ConversationState/LabResearch/ResearchZ3_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Samson</s><n/><s val="TooltipDescription_Zerg">Heavy transport. Deploys troops almost instantly.</s>
-ConversationState/LabResearch/ResearchZ4_1=Umojan Cellular Reactor
-ConversationState/LabResearch/ResearchZ4_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Umojan Cellular Reactor</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Heroic Training.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ4_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Specialist units gain +100 starting energy<n/>- Specialist units gain +100 maximum energy<n/>- Specialist units regen energy 45% faster.</s><n/><n/><s val="ResearchDescription_Zerg">Specialists and heroes start every fight ready to use their abilities, and can store far more energy.</s>
-ConversationState/LabResearch/ResearchZ4_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Umojan Cellular Reactor</s><n/><s val="TooltipDescription_Zerg">Specialists gain energy and faster energy regeneration.</s>
-ConversationState/LabResearch/ResearchZ4_2=Heroic Training
-ConversationState/LabResearch/ResearchZ4_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Heroic Training</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Umojan Cellular Reactor.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ4_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Heroes gain 25% cooldown reduction<n/>- Heroes gain 25% increase in health<n/>- Heroes gain +2 armor</s><n/><n/><s val="ResearchDescription_Zerg">Our heroes get the best training and gear credits can buy.</s>
-ConversationState/LabResearch/ResearchZ4_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Heroic Training</s><n/><s val="TooltipDescription_Zerg">Heroes gain cooldown reduction, life and armor.</s>
-ConversationState/LabResearch/ResearchZ5_1=Overmind Emulator
-ConversationState/LabResearch/ResearchZ5_1/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Overmind Emulator</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Psi Dispersion Device.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ5_1/Info/Description=<s val="ResearchDescSummary_Zerg">- Defensive structure<n/>- Can call forth elite Zerg units<n/>- Can only build one at a time</s><n/><n/><s val="ResearchDescription_Zerg">An emulator that summons elite Zerg strains under our permanent control, with a long recharge between summons.</s>
-ConversationState/LabResearch/ResearchZ5_1/Info/Tooltip=<s val="TooltipTitle_Zerg">Overmind Emulator</s><n/><s val="TooltipDescription_Zerg">Defensive structure. Summons elite Zerg units.</s>
-ConversationState/LabResearch/ResearchZ5_2=Psi Dispersion Device
-ConversationState/LabResearch/ResearchZ5_2/Info/Confirmation=<s val="WarningText"><n/>Researching </s><s val="WarningHighlight">Psi Dispersion Device</s><s val="WarningText"> will prevent you from researching </s><s val="WarningHighlight">Overmind Emulator.</s> <s val="WarningText">Once made, the choice will be irreversible.<n/><n/>Would you like to confirm this research decision?<n/><n/></s>
-ConversationState/LabResearch/ResearchZ5_2/Info/Description=<s val="ResearchDescSummary_Zerg">- Defensive structure<n/>- Slows movement & attack speeds of nearby Psi linked units<n/>- Damages Psi linked units at a rate of 5hp per second<n/>- Constant effect</s><n/><n/><s val="ResearchDescription_Zerg">A sigma-radiation emitter that dulls the reflexes of nearby Zerg and slowly burns any psi-linked creature in range.</s>
-ConversationState/LabResearch/ResearchZ5_2/Info/Tooltip=<s val="TooltipTitle_Zerg">Psi Dispersion Device</s><n/><s val="TooltipDescription_Zerg">Defensive structure. Slows and damages psi-linked units.</s>

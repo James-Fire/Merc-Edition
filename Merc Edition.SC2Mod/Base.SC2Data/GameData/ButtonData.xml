@@ -67,6 +67,10 @@
         <AlertTooltip value="Button/Tooltip/ZeusBattleTank"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-ares.dds"/>
     </CButton>
+    <CButton id="BioSurvivalProtocol">
+        <Icon value="Assets\Textures\btn-ability-stetmann-garyselfhealing.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garyselfhealing.dds"/>
+    </CButton>
     <CButton id="Cleanse">
         <Icon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>

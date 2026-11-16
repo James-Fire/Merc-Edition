@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="BioSurvivalProtocol">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="BioSurvivalProtocol1hp"/>
+        <Cost>
+            <Cooldown TimeUse="300"/>
+        </Cost>
+        <AINotifyEffect value="BioSurvivalProtocol1hp"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BioSurvivalProtocol" Requirements="UseLiberatedBSP"/>
+    </CAbilEffectTarget>
     <CAbilTrain id="CommandCenterTrain">
         <InfoArray index="Train2" Time="17">
             <Button DefaultButtonFace="TrainACV" State="Restricted"/>

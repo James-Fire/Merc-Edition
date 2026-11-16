@@ -151,6 +151,9 @@
     <CRequirementCountUpgrade id="CountUpgradeMacroFiltersCompleteOnly">
         <Count Link="MacroFilters" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMaxTechLiberatedBSPCompleteOnly">
+        <Count Link="MaxTechLiberatedBSP" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMercEditionCompleteOnly">
         <Count Link="MercEdition" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

@@ -34,6 +34,9 @@
             <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
         </TextureDeclares>
     </CModel>
+    <CModel id="BioSurvivalProtocol">
+        <Model value="Assets\Effects\Terran\Nova_Buff_Invulnerable\Nova_Buff_Invulnerable.m3"/>
+    </CModel>
     <CModel id="ColossusPurifierAttackBeam">
         <Model value="Assets\Effects\Protoss\Colossus_Purifier_Coop_TimeBeam\Colossus_Purifier_Coop_TimeBeam.m3"/>
     </CModel>

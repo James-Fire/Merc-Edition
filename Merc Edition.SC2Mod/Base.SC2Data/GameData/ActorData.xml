@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="BioSurvivalProtocol" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.BioSurvivalProtocol.On" Send="Create"/>
+        <On Terms="Behavior.BioSurvivalProtocol.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+    </CActorModel>
+    <CActorSound id="BioSurvivalProtocolSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.BioSurvivalProtocol.On" Send="Create"/>
+    </CActorSound>
     <CActorModel id="DeathMetalCharge" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
         <On Terms="Behavior.DeathMetalHealing.On" Send="Create"/>

@@ -202,6 +202,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeMacroFiltersCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseLiberatedBSP">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeMaxTechLiberatedBSPCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseMercEdition">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeMercEditionCompleteOnly"/>
