@@ -76,6 +76,10 @@
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBioSurvivalProtocolCompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="BioSurvivalProtocol" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBoxofScrapsCompleteOnly">
         <Count Link="BoxofScraps" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -151,11 +155,53 @@
     <CRequirementCountUpgrade id="CountUpgradeMacroFiltersCompleteOnly">
         <Count Link="MacroFilters" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeMaxTechLiberatedBSPCompleteOnly">
-        <Count Link="MaxTechLiberatedBSP" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMercEditionCompleteOnly">
         <Count Link="MercEdition" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedArmorsLevel1CompleteOnly">
+        <Count Link="MergedArmorsLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedArmorsLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MergedArmorsLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedArmorsLevel2CompleteOnly">
+        <Count Link="MergedArmorsLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedArmorsLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MergedArmorsLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedArmorsLevel3CompleteOnly">
+        <Count Link="MergedArmorsLevel3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedArmorsLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MergedArmorsLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedUpgradesCompleteOnly">
+        <Count Link="MergedUpgrades" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedWeaponsLevel1CompleteOnly">
+        <Count Link="MergedWeaponsLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedWeaponsLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MergedWeaponsLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedWeaponsLevel2CompleteOnly">
+        <Count Link="MergedWeaponsLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedWeaponsLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MergedWeaponsLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedWeaponsLevel3CompleteOnly">
+        <Count Link="MergedWeaponsLevel3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMergedWeaponsLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MergedWeaponsLevel3" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMicroFusionReactorCompleteOnly">
         <Count Link="MicroFusionReactor" State="CompleteOnly"/>
@@ -306,6 +352,30 @@
     </CRequirementLTE>
     <CRequirementLTE id="LTCountUpgradeThornShieldQueuedOrBetter0">
         <OperandArray index="0" value="CountUpgradeThornShieldQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeMergedArmorsLevel1QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeMergedArmorsLevel1QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeMergedArmorsLevel2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeMergedArmorsLevel2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeMergedArmorsLevel3QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeMergedArmorsLevel3QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeMergedWeaponsLevel1QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeMergedWeaponsLevel1QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeMergedWeaponsLevel2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeMergedWeaponsLevel2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUpgradeMergedWeaponsLevel3QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeMergedWeaponsLevel3QueuedOrBetter"/>
         <OperandArray index="1" value="0"/>
     </CRequirementLTE>
     <CRequirementLTE id="LTECountUpgradeZeusTankSecretUpgradeQueuedOrBetter0">

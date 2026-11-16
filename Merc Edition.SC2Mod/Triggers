@@ -7732,7 +7732,7 @@
         </Element>
         <Element Type="Param" Id="59481484">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
-            <Value>PlusUltraCapacitors</Value>
+            <Value>PlusUltraCapacitorsDamageBoost</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
         </Element>
@@ -7810,7 +7810,7 @@
         </Element>
         <Element Type="Param" Id="42DCC6FB">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
-            <Value>PlusUltraCapacitors</Value>
+            <Value>PlusUltraCapacitorsDamageBoost</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
         </Element>

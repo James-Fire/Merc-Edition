@@ -1729,8 +1729,8 @@ bool libBA5CCDED_gt_InitTech_Func (bool testConds, bool runActions) {
         TechTreeUpgradeAddLevel(1, "VanadiumPlating", 1);
     }
 
-    if (((TechTreeUpgradeCount(1, "PlusUltraCapacitors", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "UltraCapacitors", c_techCountCompleteOnly) == 1))) {
-        TechTreeUpgradeAddLevel(1, "PlusUltraCapacitors", 1);
+    if (((TechTreeUpgradeCount(1, "PlusUltraCapacitorsDamageBoost", c_techCountCompleteOnly) == 1) || (TechTreeUpgradeCount(1, "UltraCapacitors", c_techCountCompleteOnly) == 1))) {
+        TechTreeUpgradeAddLevel(1, "PlusUltraCapacitorsDamageBoost", 1);
         TechTreeUpgradeAddLevel(1, "UltraCapacitors", 1);
     }
 

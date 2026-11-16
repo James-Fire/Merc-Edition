@@ -5,7 +5,10 @@
         <On Terms="Behavior.BioSurvivalProtocol.On" Send="Create"/>
         <On Terms="Behavior.BioSurvivalProtocol.Off" Send="AnimBracketStop BSD"/>
         <Host Subject="_Unit"/>
-        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <AutoScaleFactor value="1.000000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
     </CActorModel>
     <CActorSound id="BioSurvivalProtocolSound" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -207,6 +210,12 @@
         <EditorCategories value=""/>
         <On Terms="Effect.FortressBombardmentDamage.Start; ValidateEffect UseSlagShellsBellyBonus@Validator" Send="Create"/>
         <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="HoloBaddieMercHaven" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.MercCompound" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachHardPoint"/>
     </CActorModel>
     <CActorModel id="NaniteSnipeControl" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>

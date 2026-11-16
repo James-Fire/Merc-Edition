@@ -109,7 +109,14 @@
         <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCP,PeriodCount" Value="1"/>
     </CUpgrade>
     <CUpgrade id="L800ETCStageDive"/>
-    <CUpgrade id="MaxTechLiberatedBSP"/>
+    <CUpgrade id="BioSurvivalProtocol"/>
+    <CUpgrade id="MergedArmorsLevel2"/>
+    <CUpgrade id="MergedArmorsLevel3"/>
+    <CUpgrade id="MergedUpgrades"/>
+    <CUpgrade id="MergedWeaponsLevel1"/>
+    <CUpgrade id="MergedArmorsLevel1"/>
+    <CUpgrade id="MergedWeaponsLevel2"/>
+    <CUpgrade id="MergedWeaponsLevel3"/>
     <CUpgrade id="NaniteEmitter"/>
     <CUpgrade id="PlagueMunitions"/>
     <CUpgrade id="SlagShellsBellyBonus">
@@ -127,6 +134,56 @@
         <EffectArray Reference="Effect,PoisonGasDamage,Amount" Value="1"/>
         <AffectedUnitArray value="NaniteCloudEmitter"/>
         <AffectedUnitArray value="NaniteCloudEmitterBurrowed"/>
+    </CUpgrade>
+    <CUpgrade id="PlusUltraCapacitorsLeveledAttackSpeed">
+        <Flags index="UpgradeCheat" value="0"/>
+        <InfoTooltipPriority value="61"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,KelmorianMinerGaussRifle,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,HammerSecurity,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,DevilDogFlameThrower,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,HellbornFlamethrower,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,TheGrill,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,BarBreakers,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,D8Charge,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,RaidersRival,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,ChargedJupiterRail,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,DuskWingBanshee,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,DuskWingBanshee2,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,DuskWingBanshee3,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,BarBreakersFlying,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,WreckingCrewAssault,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,WreckingCrewFighter,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,NomadMissile,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,C11EthereanRifle,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,AGRShadeHunter,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,ArcliteShockCannon,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,SiegeBreaker,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,SpartanCompanyG,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,SpartanCompanyGUpgraded,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,SpartanCompanyAUpgraded,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,SpartanCompanyA,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,ThermalBurst,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,ScorpionMissiles,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,LogiLaserBattery,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,PharaohBatteryQuarternary,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,PharaohBatterySecondary,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,PharaohBatteryTertiary,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,RagnarokNRoll,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,CoeusMissileLaunchers,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,FistsofKronos,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,Railcannon,RateMultiplier" Value="0.1"/>
+        <EffectArray Reference="Weapon,Warbot120mmCannon,RateMultiplier" Value="0.1"/>
+        <EditorCategories value="Race:Terran,UpgradeType:AttackBonus"/>
+        <AffectedUnitArray value="WarPig"/>
+        <AffectedUnitArray value="HammerSecurity"/>
+        <AffectedUnitArray value="DevilDog"/>
+        <MaxLevel value="3"/>
     </CUpgrade>
     <CUpgrade id="UmojanCellularReactors">
         <Flags index="UpgradeCheat" value="0"/>
@@ -368,7 +425,7 @@
         <AffectedUnitArray value="Wolverine"/>
         <EffectArray Operation="Set" Reference="Weapon,Railcannon,Effect" Value="WolverineRailcannonCP"/>
     </CUpgrade>
-    <CUpgrade id="PlusUltraCapacitors">
+    <CUpgrade id="PlusUltraCapacitorsDamageBoost">
         <EffectArray Operation="Multiply" Reference="Effect,KelmorianMinerDamage,Amount" Value="1.100000"/>
         <EffectArray Operation="Multiply" Reference="Effect,HammerSecurityDamage,Amount" Value="1.100000"/>
         <EffectArray Operation="Multiply" Reference="Effect,BarBreakersDamage,Amount" Value="1.100000"/>

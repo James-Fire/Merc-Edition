@@ -145,6 +145,12 @@
         <ScaleMax value="0.700000,0.700000,1.000000"/>
         <ScaleMin value="0.700000,0.700000,1.000000"/>
     </CModel>
+    <CModel id="HoloBaddieMercHaven">
+        <Model value="Assets\Effects\Terran\Holo_Stripper\Holo_Stripper.m3"/>
+        <AnimSpeed value="0.500000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
     <CModel id="InfestedMarineUpgraded" parent="Unit">
         <Model value="Assets\Units\Zerg\InfestedMarine\InfestedMarine.m3"/>
         <EditorCategories value="Race:Zerg"/>
@@ -392,6 +398,9 @@
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Lighting value=""/>
         <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="MercCompound">
+        <Model value="Assets\Buildings\Terran\MercHaven\MercHaven.m3"/>
     </CModel>
     <CModel id="NaniteSnipeControl">
         <Model value="Assets\Effects\Protoss\Adept_Missile_Impact\Adept_Missile_Impact.m3"/>

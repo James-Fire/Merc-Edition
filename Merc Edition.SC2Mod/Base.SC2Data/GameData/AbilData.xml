@@ -4,10 +4,12 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="BioSurvivalProtocol1hp"/>
         <Cost>
-            <Cooldown TimeUse="300"/>
+            <Cooldown Location="Unit" TimeUse="300"/>
         </Cost>
         <AINotifyEffect value="BioSurvivalProtocol1hp"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BioSurvivalProtocol" Requirements="UseLiberatedBSP"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BioSurvivalProtocol" Requirements="UseBioSurvivalProtocol">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilTrain id="CommandCenterTrain">
         <InfoArray index="Train2" Time="17">
@@ -45,6 +47,38 @@
             <Flags index="IgnoreUser" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
+    <CAbilResearch id="EngineeringBayResearch">
+        <InfoArray index="Research18" Time="160" Upgrade="MergedArmorsLevel1">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UpgradeMergedArmorsLevel1" State="Suppressed" Requirements="LearnMergedArmorsLevel1"/>
+        </InfoArray>
+        <InfoArray index="Research19" Time="190" Upgrade="MergedArmorsLevel2">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UpgradeMergedArmorsLevel2" State="Suppressed" Requirements="LearnMergedArmorsLevel2"/>
+        </InfoArray>
+        <InfoArray index="Research20" Time="220" Upgrade="MergedArmorsLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UpgradeMergedArmorsLevel3" State="Suppressed" Requirements="LearnMergedArmorsLevel3"/>
+        </InfoArray>
+        <InfoArray index="Research21" Time="160" Upgrade="MergedWeaponsLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UpgradeMergedWeaponsLevel1" State="Suppressed" Requirements="LearnMergedWeaponsLevel1"/>
+        </InfoArray>
+        <InfoArray index="Research22" Time="190" Upgrade="MergedWeaponsLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UpgradeMergedWeaponsLevel2" State="Suppressed" Requirements="LearnMergedWeaponsLevel2"/>
+        </InfoArray>
+        <InfoArray index="Research23" Time="220" Upgrade="MergedWeaponsLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UpgradeMergedWeaponsLevel3" State="Suppressed" Requirements="LearnMergedWeaponsLevel3"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilEffectInstant id="FaceMelt">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="FaceMeltSA"/>
@@ -1832,11 +1866,10 @@
     </CAbilMorph>
     <CAbilEffectInstant id="MercReviveJimRaynor">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <Effect value="MercHeroReviveEventJimRaynor"/>
+        <Effect index="0" value="MercHeroReviveEventJimRaynor"/>
         <Flags index="AutoCast" value="1"/>
-        <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveJimRaynor" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveJimRaynor" State="Restricted" Requirements="MercHeroLimitJimRaynor"/>
     </CAbilEffectInstant>
@@ -1846,7 +1879,7 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveHankHarnack" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveHankHarnack" State="Restricted" Requirements="MercHeroLimitHankHarnack"/>
     </CAbilEffectInstant>
@@ -1856,7 +1889,7 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveRattlesnake" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveRattlesnake" State="Restricted" Requirements="MercHeroLimitRattlesnake"/>
     </CAbilEffectInstant>
@@ -1866,7 +1899,7 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveED067" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveED067" State="Restricted" Requirements="MercHeroLimitED067"/>
     </CAbilEffectInstant>
@@ -1876,7 +1909,7 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveSgtHammer" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveSgtHammer" State="Restricted" Requirements="MercHeroLimitSgtHammer"/>
     </CAbilEffectInstant>
@@ -1886,7 +1919,7 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveCabal" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveCabal" State="Restricted" Requirements="MercHeroLimitCabal"/>
     </CAbilEffectInstant>
@@ -1896,7 +1929,7 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveFreyja" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveFreyja" State="Restricted" Requirements="MercHeroLimitFreyja"/>
     </CAbilEffectInstant>
@@ -1906,7 +1939,7 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown Link="MercReviveDukesRevenge" Location="Player"/>
+            <Cooldown Link="MercReviveShared" Location="Player" TimeUse="60"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="MercReviveDukesRevenge" State="Restricted" Requirements="MercHeroLimitDukesRevenge"/>
     </CAbilEffectInstant>
@@ -1922,7 +1955,12 @@
                 <Link value="MercHireJimRaynor"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireJimRaynor" Location="Player" TimeStart="180"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="180"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireJimRaynor" State="Restricted" Requirements="MercHeroLimitJimRaynor"/>
             <Unit value="JimRaynor"/>
         </InfoArray>
@@ -1936,7 +1974,12 @@
                 <Link value="MercHireHankHarnack"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireHankHarnack" Location="Player" TimeStart="240"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="240"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireHankHarnack" State="Restricted" Requirements="MercHeroLimitHankHarnack"/>
             <Unit value="HankHarnack"/>
         </InfoArray>
@@ -1950,7 +1993,12 @@
                 <Link value="MercHireRattlesnake"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireRattlesnake" Location="Player" TimeStart="300"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="300"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireRattlesnake" State="Restricted" Requirements="MercHeroLimitRattlesnake"/>
             <Unit value="Rattlesnake"/>
         </InfoArray>
@@ -1964,7 +2012,12 @@
                 <Link value="MercHireED067"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireED067" Location="Player" TimeStart="360"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="360"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireED067" State="Restricted" Requirements="MercHeroLimitED067"/>
             <Unit value="ED067"/>
         </InfoArray>
@@ -1978,7 +2031,12 @@
                 <Link value="MercHireSgtHammer"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireSgtHammer" Location="Player" TimeStart="420"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="420"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireSgtHammer" State="Restricted" Requirements="MercHeroLimitSgtHammer"/>
             <Unit value="SgtHammer"/>
         </InfoArray>
@@ -1992,7 +2050,12 @@
                 <Link value="MercHireCabal"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireCabal" Location="Player" TimeStart="300"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="300"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireCabal" State="Restricted" Requirements="MercHeroLimitCabal"/>
             <Unit value="CabalFighter"/>
         </InfoArray>
@@ -2006,7 +2069,12 @@
                 <Link value="MercHireFreyja"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireFreyja" Location="Player" TimeStart="420"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="420"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireFreyja" State="Restricted" Requirements="MercHeroLimitFreyja"/>
             <Unit value="Freyja"/>
         </InfoArray>
@@ -2020,7 +2088,12 @@
                 <Link value="MercHireDukesRevenge"/>
                 <Location value="Player"/>
             </Charge>
-            <Cooldown Link="MercHireDukesRevenge" Location="Player" TimeStart="540"/>
+            <Cooldown>
+                <Link value="MercReviveShared"/>
+                <Location value="Player"/>
+                <TimeStart value="540"/>
+                <TimeUse value="60"/>
+            </Cooldown>
             <Button DefaultButtonFace="MercHireDukesRevenge" State="Restricted" Requirements="MercHeroLimitDukesRevenge"/>
             <Unit value="DukesRevengeHero"/>
         </InfoArray>

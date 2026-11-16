@@ -359,7 +359,7 @@
         <AssetArray File="Assets\Sounds\Nova_Holographic_Decoy_Coop_Birth_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Nova_Holographic_Decoy_Coop_Birth_03.wav" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
-        <Volume value="-9.000000,-9.000000"/>
+        <Volume value="-4.000000,-4.000000"/>
     </CSound>
     <CSound id="DeathMetalMusic" parent="Spell">
         <AssetArray File="Assets\Sounds\ETC\ETC_GuitarSolo01.ogg" FacialGroup=""/>
