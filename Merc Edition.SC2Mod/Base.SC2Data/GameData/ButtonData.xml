@@ -977,9 +977,9 @@
         <TooltipFlags index="ShowLevel" value="0"/>
     </CButton>
     <CButton id="MercReviveJimRaynor">
+        <TooltipFlags index="ShowLevel" value="0"/>
         <Icon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-marineraynor.dds"/>
-        <TooltipFlags index="ShowLevel" value="0"/>
     </CButton>
     <CButton id="MercReviveHankHarnack">
         <Icon value="Assets\Textures\btn-unit-terran-tychusfirebat.dds"/>
