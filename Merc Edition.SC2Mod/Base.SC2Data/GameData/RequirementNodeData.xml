@@ -77,7 +77,6 @@
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBioSurvivalProtocolCompleteOnlyTechTreeCheat">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="BioSurvivalProtocol" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBoxofScrapsCompleteOnly">
@@ -231,6 +230,9 @@
     <CRequirementCountUpgrade id="CountUpgradePsiDispersionDeviceCompleteOnly">
         <Count Link="PsiDispersionDevice" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePsionicIndoctrinatorCompleteOnly">
+        <Count Link="PsionicIndoctrinator" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRagnarokWeaponsCompleteOnly">
         <Count Link="RagnarokWeapons" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -263,6 +265,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSmartServosMKIVCompleteOnly">
         <Count Link="SmartServosMKIV" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSpeedyResearchCompleteOnly">
+        <Count Link="SpeedyResearch" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeStabilizerMedpacksMercCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -304,6 +309,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeU240RoundsCompleteOnly">
         <Count Link="U240Rounds" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUnstableArtifactCompleteOnly">
+        <Count Link="UnstableArtifact" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeUranusProtocolCompleteOnly">
         <Count Link="UranusProtocol" State="CompleteOnly"/>
