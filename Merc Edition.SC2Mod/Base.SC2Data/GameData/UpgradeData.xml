@@ -176,7 +176,7 @@
         <AffectedUnitArray value="DevilDog"/>
         <MaxLevel value="3"/>
     </CUpgrade>
-    <CUpgrade id="PsiIndoctrinator"/>
+    <CUpgrade id="PsionicIndoctrinator"/>
     <CUpgrade id="SlagShellsBellyBonus">
         <AffectedUnitArray value="PlanetaryFortress"/>
         <EffectArray Reference="Unit,PlanetaryFortress,LifeMax" Value="750"/>

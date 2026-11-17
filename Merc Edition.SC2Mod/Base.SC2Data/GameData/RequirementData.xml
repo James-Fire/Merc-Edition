@@ -298,6 +298,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePsiDispersionDeviceCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UsePsionicIndoctrinator">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradePsionicIndoctrinatorCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseRagnarokWeapons">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeRagnarokWeaponsCompleteOnly"/>
@@ -342,6 +346,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSmartServosMKIVCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseSpeedyResearch">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSpeedyResearchCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeStabilizerMedpacksMercCompleteOnly"/>
@@ -381,6 +389,10 @@
     <CRequirement id="UseU240Rounds">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeU240RoundsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseUnstableArtifact">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeUnstableArtifactCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseUranusProtocol">
         <EditorCategories value="TechType:Ability"/>

@@ -102,9 +102,14 @@
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="MindControl">
+        <Icon value="Assets\Icons and Wireframes\emulator-control.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\emulator-control.dds"/>
+    </CButton>
     <CButton id="PsionicIndoctrinatorMindControl">
-        <Icon value="Assets\Textures\btn-ability-terran-scannersweep-color.dds"/>
+        <Icon value="Assets\Icons and Wireframes\indoctrinator-control.dds"/>
         <EditorCategories value="Race:Terran"/>
+        <AlertIcon value="Assets\Icons and Wireframes\indoctrinator-control.dds"/>
     </CButton>
     <CButton id="UnstableEnergyNova">
         <Icon value="Assets\Textures\btn-tips-terran-energynova.dds"/>
