@@ -212,8 +212,8 @@
         <AlertIcon value="Assets\Textures\wireframe-terran-labgasturret.dds"/>
     </CButton>
     <CButton id="BuildNomad">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons and Wireframes\unit nomad.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\unit nomad.dds"/>
     </CButton>
     <CButton id="BuildWolverine">
         <Icon value="Assets\Textures\btn-unit-terran-warhound.dds"/>
