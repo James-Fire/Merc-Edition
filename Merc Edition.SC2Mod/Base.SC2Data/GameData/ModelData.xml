@@ -34,6 +34,36 @@
             <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
         </TextureDeclares>
     </CModel>
+    <CModel id="PsionicIndoctrinator" parent="Building">
+        <Model value="Assets\Buildings\Terran\PsiIndoctrinator\PsiIndoctrinator.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value=""/>
+        <PlanetPanelCamera value="Star2CameraHigher10"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="1.100000"/>
+        <TechPurchaseCamera value="Star2CameraHigher10"/>
+        <UnitGlossaryCamera value="Star2CameraHigher10"/>
+    </CModel>
+    <CModel id="PsionicIndoctrinatorDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Terran\PsiIndoctrinatorDeath\PsiIndoctrinatorDeath.m3"/>
+        <LowQualityModel value="HiveMindEmulatorDeathLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="3.333000"/>
+        </Events>
+    </CModel>
     <CModel id="UnstableArtifactNovaActivated" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Protoss\XelNagaArtifactSpellPowerUp\XelNagaArtifactSpellPowerUp.m3"/>
         <ScaleMax value="2.200000,2.200000,2.200000"/>

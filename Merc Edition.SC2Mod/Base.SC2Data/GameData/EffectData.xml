@@ -87,6 +87,12 @@
         <AreaArray Radius="15" Effect="DeathMetalDanceAB"/>
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
     </CEffectEnumArea>
+    <CEffectModifyUnit id="PsionicIndoctrinatorControl">
+        <ValidatorArray value="IsTerranorProtossUnit"/>
+        <ValidatorArray value="NotStructureTarget"/>
+        <ValidatorArray value="NotInterceptor"/>
+        <ModifyFlags index="Owner" value="1"/>
+    </CEffectModifyUnit>
     <CEffectDamage id="UnstableArtifactNovaDamage">
         <ValidatorArray value="noMarkers"/>
         <EditorCategories value="Race:Terran"/>

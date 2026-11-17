@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="PsionicIndoctrinatorLaunchS" parent="SoundOneShot">
+        <On Terms="Abil.PsionicIndoctrinatorControl.SourceCastStart" Send="Create"/>
+        <Sound value="HiveMindEmulator_MindControlLaunch"/>
+    </CActorSound>
+    <CActorRange id="PsionicIndoctrinatorRange" parent="RangeAbil" abil="PsionicIndoctrinatorControl"/>
+    <CActorUnit id="PsionicIndoctrinator" parent="TerranBuilding" unitName="PsionicIndoctrinator">
+        <Aliases value="_UnitLarge"/>
+        <On Terms="Abil.MindControl.SourceCastStart" Send="AnimPlay Attack Attack"/>
+        <DeathArray index="Normal" ModelLink="PsionicIndoctrinatorDeath" SoundLink=""/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Terran_ExplosionMedium"/>
+        <PlacementModel value="HiveMindEmulatorPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PlacementActorModel value="HiveMindEmulatorPlacementModel"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <BarOffset value="125"/>
+        <BarWidth value="120"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-psiindoctrinator.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-psiindoctrinator.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="What" value="HiveMindEmulator_What"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-psiindoctrinator.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-psiindoctrinator.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="UnstableArtifactNovaActivated" parent="ModelAddition">
         <On Terms="Abil.UnstableArtifactNova.SourcePrepStart" Send="Create"/>
     </CActorModel>

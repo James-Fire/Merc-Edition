@@ -102,6 +102,10 @@
         <HotkeySet value="VikingModes"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="PsionicIndoctrinatorMindControl">
+        <Icon value="Assets\Textures\btn-ability-terran-scannersweep-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="UnstableEnergyNova">
         <Icon value="Assets\Textures\btn-tips-terran-energynova.dds"/>
         <AlertIcon value="Assets\Textures\btn-tips-terran-energynova.dds"/>

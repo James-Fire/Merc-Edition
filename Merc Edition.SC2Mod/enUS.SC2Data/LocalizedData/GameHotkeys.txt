@@ -89,6 +89,7 @@ Button/Hotkey/NormalModeNomad=D
 Button/Hotkey/PenetratorRound=Z
 Button/Hotkey/PointBreakDrone=D
 Button/Hotkey/PowerSlide=Q
+Button/Hotkey/PsionicIndoctrinatorMindControl=C
 Button/Hotkey/RaptoroftheMists=R
 Button/Hotkey/Rattlesnake22=D
 Button/Hotkey/ReapTheWhirlwind=

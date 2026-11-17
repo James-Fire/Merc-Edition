@@ -176,6 +176,7 @@
         <AffectedUnitArray value="DevilDog"/>
         <MaxLevel value="3"/>
     </CUpgrade>
+    <CUpgrade id="PsiIndoctrinator"/>
     <CUpgrade id="SlagShellsBellyBonus">
         <AffectedUnitArray value="PlanetaryFortress"/>
         <EffectArray Reference="Unit,PlanetaryFortress,LifeMax" Value="750"/>
@@ -797,6 +798,7 @@
         <EffectArray Operation="Set" Reference="Unit,CharonDropship,EnergyStart" Value="0"/>
         <AffectedUnitArray value="CharonDropship"/>
     </CUpgrade>
+    <CUpgrade id="UnstableArtifact"/>
     <CUpgrade id="UranusProtocol">
         <AffectedUnitArray value="Titan"/>
     </CUpgrade>
