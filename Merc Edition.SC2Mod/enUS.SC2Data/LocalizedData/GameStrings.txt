@@ -260,6 +260,7 @@ Button/Name/BuildSiegeBreaker=Build Siege Breaker
 Button/Name/BuildSpartanCompany=Build Spartan Company
 Button/Name/BuildStarcruiser=Build Starcruiser
 Button/Name/BuildTitan=Build Titan
+Button/Name/BuildUnstableArtifact=Build Artifact Prototype
 Button/Name/BuildWolverine=Build Wolverine
 Button/Name/BuildZeusLander=Build Samson
 Button/Name/BurstAmplifier=Burst Amplifier
@@ -430,7 +431,7 @@ Button/Name/TrainWarPig=Train War Pig
 Button/Name/TriggerOverdrive=Trigger Overdrive
 Button/Name/TyradorImplants=Tyrador Implants
 Button/Name/U240Rounds=U-240 Rounds
-Button/Name/UnstableEnergyNova=Unstable Energy Nova
+Button/Name/UnstableEnergyNova=Energy Nova
 Button/Name/UpgradeMergedArmorsLevel1=Upgrade Merged Armors Level 1
 Button/Name/UpgradeMergedArmorsLevel2=Upgrade Merged Armors Level 2
 Button/Name/UpgradeMergedArmorsLevel3=Upgrade Merged Armors Level 3
@@ -634,7 +635,7 @@ Button/Tooltip/PsychoMissiles=Launch a volley of missiles that deals 30 damage. 
 Button/Tooltip/R31TearGasRounds=Wolverine attacks have a 10% chance to Fear enemies in a small area, causing them to run around uncontrollably for 2 seconds.<n/><n/><c val="FFFF80">The same enemy cannot be Feared more than once every 4 seconds.</c>
 Button/Tooltip/RadarTower=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy. <n/><n/><c val="FFE303">Detector</c>
 Button/Tooltip/RagnarokWeapons=Weapon can be toggled to fire slower, stronger particle cannon shots.
-Button/Tooltip/RailGunTurret=Automated defensive turret. Damages all enemy ground units in a straight line. Times out after <d ref="Behavior,RailGunTurretTimedLife,Duration"/> seconds.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/RailGunTurret=Automated defensive turret. Damages all enemy ground units in a straight line. Times out after <d ref="Behavior,NomadTurretTimedLife,Duration"/> seconds.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RapidAlgorithms=Charon Dropships gain the Ignite Afterburners ability and 2 movement speed. Deploying units is now instant.
 Button/Tooltip/RaptoroftheMists=Jump from target to target, dealing 75 damage with each jump. Hits <d ref="Behavior,DarkTemplarShadowFuryController,PeriodCount+1"/> times. Briefly gain Super Cloak after ending.
 Button/Tooltip/Rattlesnake22=Kev "Rattlesnake" West is a terran mercenary marauder and is one of the few mercenaries to be honorably discharged from the Armed Forces. Though he refuses to take jobs that have the possibility of harming innocent people, West still works steadily. His war days might be behind him, but he did not lose his bite.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -707,8 +708,8 @@ Button/Tooltip/TriggerOverdrive=Attacks increase attack speed by 10% for a short
 Button/Tooltip/TychusSecretStash=A homebrew Stimpack made from methamphetamine, cocaine, and rocket fuel. Temporarily increases attack speed and damage reduction by a large amount. Causes 30 damage when used.
 Button/Tooltip/TyradorImplants=Phantoms gain +3 weapon and sight range, are able to calldown nukes 50% faster, and have 10% reduced Snipe energy cost.
 Button/Tooltip/U240Rounds=Increases the Block B's range by 1 and damage vs Light by 3. Enemies killed release a G-4 Clusterbomb.
-Button/Tooltip/UnstableArtifact=Assembled Xel'Naga Artifact. Can unleash a single energy nova, destroying itself in the process.
-Button/Tooltip/UnstableEnergyNova=Deals 250 damage to all enemies in a massive radius. However, the structure is destroyed in the process.
+Button/Tooltip/UnstableArtifact=Assembled Xel'Naga Artifact. Can unleash a single energy nova, destroying itself in the process. Limited to 1 at a time.
+Button/Tooltip/UnstableEnergyNova=Deal 250 damage to all enemies in a massive radius, but destroy the device holding the artifact.
 Button/Tooltip/UpgradeMergedArmorsLevel1=Upgrades the armor of combat units.
 Button/Tooltip/UpgradeMergedArmorsLevel2=Further upgrades the armor of combat units.
 Button/Tooltip/UpgradeMergedArmorsLevel3=Maximizes the armor of combat units.
@@ -1427,11 +1428,11 @@ Unit/Name/SgtHammer=Sgt. Hammer
 Unit/Name/SgtHammerNapalmMissile=Sgt Hammer Napalm Missile
 Unit/Name/SgtHammerSieged=Sgt. Hammer
 Unit/Name/Shadow=Shadow
-Unit/Name/SignalFlareMissile=Signal Flare Missile
 Unit/Name/SignalFlareTargetDummy=Signal Flare Target Dummy
 Unit/Name/SignalFlareUnit=Signal Flare Unit
 Unit/Name/SignifierAnduin=Signifier Anduin
 Unit/Name/SkibisAngel=Skibi's Angel
+Unit/Name/SkibisAngelSignalFlareMissile=Skibi's Angel Signal Flare Missile
 Unit/Name/SpectreNo15=Spectre No.15
 Unit/Name/Spotter=Spotter
 Unit/Name/SpotterBioDischargeWeapon=Bio-Discharge Projectile
@@ -1444,7 +1445,7 @@ Unit/Name/TarBombMissile=Tar Bomb Missile
 Unit/Name/TempestWeaponGround2=Tempest Weapon (Ground)
 Unit/Name/Titan=Titan
 Unit/Name/TitanWreckage=Titan Wreckage
-Unit/Name/UnstableArtifact=Unstable Artifact
+Unit/Name/UnstableArtifact=Artifact Prototype
 Unit/Name/Wolverine=Wolverine
 Unit/Name/WolverineWeapon=Wolverine
 Unit/Name/ZealotAnduin=Militant

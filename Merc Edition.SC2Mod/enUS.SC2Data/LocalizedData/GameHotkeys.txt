@@ -29,6 +29,7 @@ Button/Hotkey/BuildSiegeBreaker=S
 Button/Hotkey/BuildSpartanCompany=G
 Button/Hotkey/BuildStarcruiser=B
 Button/Hotkey/BuildTitan=T
+Button/Hotkey/BuildUnstableArtifact=T
 Button/Hotkey/BuildWolverine=W
 Button/Hotkey/BuildZeusLander=H
 Button/Hotkey/CabalAssaultMode=V

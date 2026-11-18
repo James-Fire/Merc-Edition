@@ -102,7 +102,7 @@
     <CEffectEnumArea id="UnstableArtifactNovaSA">
         <EditorCategories value="Race:Terran"/>
         <SearchFilters value="-;Self,Player,Ally,Neutral,Structure,Missile,Dead,Invulnerable"/>
-        <AreaArray Radius="30" Effect="UnstableArtifactNovaDamage"/>
+        <AreaArray Radius="50" Effect="UnstableArtifactNovaDamage"/>
     </CEffectEnumArea>
     <CEffectDamage id="FaceMeltDamage">
         <EditorCategories value=""/>
@@ -2041,13 +2041,13 @@
     </CEffectEnumArea>
     <CEffectLaunchMissile id="SignalFlareRevealLaunchMissile">
         <ImpactEffect value="SignalFlareCU"/>
-        <AmmoUnit value="SignalFlareMissile"/>
+        <AmmoUnit value="SkibisAngelSignalFlareMissile"/>
         <LaunchLocation Value="CasterUnit"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="SignalFlareBlindLaunchMissile">
         <ImpactOffset value="0,0,15"/>
         <ImpactEffect value="SignalFlareBlindAB"/>
-        <AmmoUnit value="SignalFlareMissile"/>
+        <AmmoUnit value="SkibisAngelSignalFlareMissile"/>
     </CEffectLaunchMissile>
     <CEffectSwitch id="SignalFlareSwitch">
         <EditorCategories value=""/>

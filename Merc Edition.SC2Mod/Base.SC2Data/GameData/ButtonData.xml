@@ -71,6 +71,11 @@
         <Icon value="Assets\Textures\btn-ability-stetmann-garyselfhealing.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-stetmann-garyselfhealing.dds"/>
     </CButton>
+    <CButton id="BuildUnstableArtifact">
+        <Icon value="Assets\Textures\btn-building-terran-artifact.dds"/>
+        <AlertTooltip value="Button/Tooltip/UnstableArtifact"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-artifact.dds"/>
+    </CButton>
     <CButton id="Cleanse">
         <Icon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
@@ -212,8 +217,8 @@
         <AlertIcon value="Assets\Textures\wireframe-terran-labgasturret.dds"/>
     </CButton>
     <CButton id="BuildNomad">
-        <Icon value="Assets\Icons and Wireframes\unit nomad.dds"/>
-        <AlertIcon value="Assets\Icons and Wireframes\unit nomad.dds"/>
+        <Icon value="Assets\Icons and Wireframes\nomadunittech.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\nomadunittech.dds"/>
     </CButton>
     <CButton id="BuildWolverine">
         <Icon value="Assets\Textures\btn-unit-terran-warhound.dds"/>
@@ -622,8 +627,8 @@
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="NormalModeNomad">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons and Wireframes\btn-nomad.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\btn-nomad.dds"/>
     </CButton>
     <CButton id="ArmAdjudicatorwithNuke">
         <Icon value="Assets\Textures\btn-ability-terran-armnuke.dds"/>

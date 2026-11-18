@@ -29,6 +29,14 @@
             <Image value="Assets\Textures\wireframe-terran-psiindoctrinator.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorSound id="UnstableArtifactCharge" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.UnstableArtifactNova.SourcePrepStart" Send="Create"/>
+        <On Terms="Abil.UnstableArtifactNova.SourcePrepStop" Send="Destroy Immediate"/>
+    </CActorSound>
+    <CActorSound id="UnstableArtifactHum" parent="SoundContinuous">
+        <EditorCategories value=""/>
+    </CActorSound>
     <CActorModel id="UnstableArtifactNovaActivated" parent="ModelAddition">
         <On Terms="Abil.UnstableArtifactNova.SourcePrepStart" Send="Create"/>
     </CActorModel>
@@ -2379,7 +2387,8 @@
     </CActorAction>
     <CActorUnit id="UnstableArtifact" parent="TerranBuilding" unitName="UnstableArtifact">
         <On Terms="ActorCreation" Send="SetTeamColor 128,128,128"/>
-        <DeathArray index="Normal" ModelLink="DOM_Explosion_Lg" SoundLink="Terran_BuildingExplosion_large"/>
+        <On Terms="ActorCreation" Send="Create UnstableArtifactHum"/>
+        <DeathArray index="Normal" ModelLink="UnstableArtifactDeath" SoundLink="Terran_BuildingExplosion_large"/>
         <DeathActorModel value="UnitDeathModelUnscaled"/>
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-terran-artifactcontainmentfield.dds"/>
@@ -2404,9 +2413,20 @@
         <EditorCategories value=""/>
         <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD {} Stand Death"/>
         <On Terms="UnitCreation.UnstableArtifact" Send="Create"/>
+        <On Terms="Abil.UnstableArtifactNova.SourcePrepStart" Send="TimerSet 1.000000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetTintColor {255,222,168 10.000000} 0.500000"/>
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpShadow SOpAttachOrigin SOpMoveDownBy1 SOpMoveDownByDot25 SOpMoveDownByDot25"/>
     </CActorModel>
+    <CActorRange id="UnstableArtifactRange">
+        <EditorCategories value=""/>
+        <On Terms="SelectionLocalUpdate.UnstableArtifact.Start" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.UnstableArtifact.Stop" Send="Destroy"/>
+        <Range value="50.000000"/>
+        <Icon value="Assets\Textures\radaricon2.dds"/>
+        <IconScale value="0.024000,0.018000"/>
+        <IconTint value="255,0,128,255"/>
+    </CActorRange>
     <CActorAction id="WildSnipe" parent="GenericAttack" effectAttack="WildSnipeDamage">
         <EditorCategories value=""/>
         <Beam value="WildSnipeDamageBeam"/>
@@ -3921,8 +3941,9 @@
         <EditorCategories value=""/>
         <Sound value="SignalFlareMistLoop"/>
     </CActorSound>
-    <CActorMissile id="SignalFlareMissile" parent="GenericAttackMissile" unitName="SignalFlareMissile">
+    <CActorMissile id="SignalFlareMissile" parent="GenericAttackMissile" unitName="SkibisAngelSignalFlareMissile">
         <HostSiteOps Ops="SOpPointUpWorld" HoldRotation="1"/>
+        <Model value="SignalFlareMissile"/>
     </CActorMissile>
     <CActorModel id="SignalFlareHealingMist" parent="ModelAnimationStyleContinuous">
         <EditorCategories value=""/>
@@ -3940,6 +3961,8 @@
         <On Terms="ActorCreation" Send="SetTintColor {255,128,128 2.000000}"/>
         <On Terms="ActorCreation" Send="SetOpacity"/>
         <On Terms="ActorCreation" Send="SetOpacity 1.000000 2.000000"/>
+        <On Terms="ActorCreation" Send="TimerSet 12.000000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetOpacity 0.000000 1.500000"/>
         <On Terms="ActorCreation; ValidatePlayer HaveStabilizerMedpacks" Send="SetTintColor {0,153,0 2.000000}"/>
     </CActorModel>
     <CActorUnit id="SignalFlareTargetDummy" parent="GenericUnitStandard" unitName="SignalFlareTargetDummy">
@@ -3952,6 +3975,8 @@
         <On Terms="ActorCreation" Send="Create SignalFlareLoop"/>
         <On Terms="ActorCreation; ValidatePlayer HaveStabilizerMedpacks" Send="Create SignalFlareHealingMistLoop"/>
         <On Terms="ActorCreation" Send="SetTintColor {255,255,255 2.500000}"/>
+        <On Terms="ActorCreation" Send="TimerSet 12.000000 1"/>
+        <On Terms="TimerExpired; TimerName 1" Send="SetOpacity 0.000000 1.500000"/>
         <HostSiteOps Ops="SOpPointUpWorld" HoldRotation="1"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
     </CActorUnit>
@@ -4026,6 +4051,7 @@
         <Wireframe>
             <Image value="Assets\Textures\wireframe-terran-medic-mercenary.dds"/>
         </Wireframe>
+        <AbilSoundArray AbilCmd="SignalFlare,Execute" Sound="Medic_FlareVO" GroupSound="Medic_FlareVO"/>
     </CActorUnit>
     <CActorUnit id="Nomad" parent="GenericUnitStandardNoAutoSoundLinks" unitName="Nomad">
         <AnimBlendTime value="1.200000"/>
@@ -4035,10 +4061,10 @@
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Terran-nomad.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-terran-nomad.dds"/>
+        <HeroIcon value="Assets\Icons and Wireframes\btn-nomad.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
         <NameOffset value="40"/>
-        <UnitIcon value="Assets\Textures\btn-unit-terran-nomad.dds"/>
+        <UnitIcon value="Assets\Icons and Wireframes\btn-nomad.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-nomad.dds"/>
         </Wireframe>
