@@ -16682,7 +16682,7 @@
         </Element>
         <Element Type="Param" Id="796276D8">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
-            <Value>MergedUpgrades</Value>
+            <Value>DoomsdayArmory</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
         </Element>

@@ -2221,7 +2221,7 @@ bool libBA5CCDED_gt_MergedUpgrades_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((TechTreeUpgradeCount(EventPlayer(), "MergedUpgrades", c_techCountCompleteOnly) == 1))) {
+        if (!((TechTreeUpgradeCount(EventPlayer(), "DoomsdayArmory", c_techCountCompleteOnly) == 1))) {
             return false;
         }
 
