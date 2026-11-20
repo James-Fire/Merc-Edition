@@ -731,8 +731,8 @@
         <AlertIcon value="Assets\Textures\btn-ability-protoss-recallondeath.dds"/>
     </CButton>
     <CButton id="RorkesRedline">
-        <Icon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
+        <Icon value="Assets\Icons and Wireframes\redline-reactor.dds"/>
+        <AlertIcon value="Assets\Icons and Wireframes\redline-reactor.dds"/>
     </CButton>
     <CButton id="SentinelMissilesAres">
         <Icon value="Assets\Textures\btn-ability-terran-unstablepayload.dds"/>

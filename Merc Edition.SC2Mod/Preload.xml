@@ -22,6 +22,9 @@
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
 <Sound id="Spectre15NukeLaunch"/>
+<Sound id="BigDog"/>
+<Sound id="BigDogClose"/>
+<Sound id="BigDogGuitar"/>
 <Sound id="StageDiveLand2"/>
 <Sound id="StageDiveLand"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
@@ -32,9 +35,6 @@
 <Sound id="UIArmoryPurchaseButtonPress2"/>
 <Sound id="UIArmoryPurchaseButtonPress3"/>
 <Sound id="UIArmoryUpgradePressed"/>
-<Sound id="BigDog"/>
-<Sound id="BigDogClose"/>
-<Sound id="BigDogGuitar"/>
 <Unit id="InfestedTerran"/>
 <Unit id="Odin"/>
 <Unit id="ARESWarbotMercMod"/>
