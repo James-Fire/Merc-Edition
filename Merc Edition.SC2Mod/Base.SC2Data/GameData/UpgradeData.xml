@@ -178,6 +178,7 @@
         <MaxLevel value="3"/>
     </CUpgrade>
     <CUpgrade id="PsionicIndoctrinator"/>
+    <CUpgrade id="RadarTower"/>
     <CUpgrade id="SlagShellsBellyBonus">
         <AffectedUnitArray value="PlanetaryFortress"/>
         <EffectArray Reference="Unit,PlanetaryFortress,LifeMax" Value="750"/>

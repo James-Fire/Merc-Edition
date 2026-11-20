@@ -239,6 +239,9 @@
     <CRequirementCountUpgrade id="CountUpgradePsionicIndoctrinatorCompleteOnly">
         <Count Link="PsionicIndoctrinator" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRadarTowerCompleteOnly">
+        <Count Link="RadarTower" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRagnarokWeaponsCompleteOnly">
         <Count Link="RagnarokWeapons" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

@@ -306,6 +306,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradePsionicIndoctrinatorCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseRadarTower">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeRadarTowerCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseRagnarokWeapons">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeRagnarokWeaponsCompleteOnly"/>

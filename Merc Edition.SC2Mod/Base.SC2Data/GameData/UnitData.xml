@@ -4319,7 +4319,7 @@
             <LayoutButtons index="6" Face="SuperStim" Type="AbilCmd" AbilCmd="SuperStim,Execute" Requirements="UseSuperStim"/>
             <LayoutButtons Face="ThornShieldWarPig" Type="Passive" Requirements="UseThornShield" Row="2" Column="2"/>
             <LayoutButtons Face="LaserTargetingSystem" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="BioSurvivalProtocol" Type="AbilCmd" AbilCmd="BioSurvivalProtocol,Execute" Row="1" Column="4"/>
+            <LayoutButtons Face="BioSurvivalProtocolabilitybutton" Type="AbilCmd" AbilCmd="BioSurvivalProtocol,Execute" Row="1" Column="4"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="HarrierAirLeft" parent="MISSILE">

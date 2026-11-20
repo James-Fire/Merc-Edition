@@ -7,7 +7,7 @@
             <Cooldown Location="Unit" TimeUse="300"/>
         </Cost>
         <AINotifyEffect value="BioSurvivalProtocol1hp"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BioSurvivalProtocol" Requirements="UseBioSurvivalProtocol">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BioSurvivalProtocolabilitybutton" Requirements="UseBioSurvivalProtocol">
             <Flags index="IgnoreUser" value="1"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
@@ -686,7 +686,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="SuperStim"/>
     </CAbilEffectInstant>
     <CAbilMorph id="SensorTowerMorphToRadarTower">
-        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorRadar"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorRadar" Requirements="UseRadarTower"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Birth" value="1"/>

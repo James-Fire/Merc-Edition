@@ -240,7 +240,7 @@ Button/Name/ArmAdjudicatorwithNuke=Arm Adjudicator with Nuke
 Button/Name/ArmoredHousing=Armored Housing
 Button/Name/AspisBlinkShield=Aspis Blink Shield
 Button/Name/BearclawGauntlets=Bearclaw Gauntlets
-Button/Name/BioSurvivalProtocol=Bio-Survival Protocol
+Button/Name/BioSurvivalProtocolabilitybutton=Bio-Survival Protocol
 Button/Name/BombardmentFortress=Bombardment
 Button/Name/BoxofScraps=Box of Scraps
 Button/Name/BuildAdjucator=Build Adjucator
@@ -474,7 +474,7 @@ Button/Tooltip/AspisBlinkShield=Spartan Companies gain 50 hardened shields and w
 Button/Tooltip/AutomatedRefinery=Improved Refinery that sends refined vespene gas straight to the Command Center via short-range warp fields. Eliminates the need for SCVs in vespene gas production, but still allows them to be allocated for faster harvesting.
 Button/Tooltip/AutomatedRefineryTextKicker8=<s val="Kicker_Refinery">+8</s><IMG path="Assets\Textures\icon-gas-terran.dds" height="32" width="32"/>
 Button/Tooltip/BearclawGauntlets=Increases Devil Dog attack radius by 60% and grants the Grapple ability.
-Button/Tooltip/BioSurvivalProtocol=When taking fatal damage, this unit will become invincible for 3 seconds and heal a small portion of their life.<n/><n/>Can only occur once every 5 minutes.
+Button/Tooltip/BioSurvivalProtocolabilitybutton=When taking fatal damage, this unit will become invincible for 3 seconds and heal a small portion of their life.<n/><n/>Can only occur once every 5 minutes.
 Button/Tooltip/BombardmentFortress=Randomly bombard a location with 4 missiles, each dealing up to <d ref="Effect,FortressBombardmentDamage,Amount"/> (+200 vs Structure) damage in an area. Fires an additional missile per SCV loaded.
 Button/Tooltip/BoxofScraps=Nanite Cloud Emitters gain 2 armor and are built nearly instantly.
 Button/Tooltip/BuildAdjucator=Aerial support unit. Can use Irradiate and Nano-Repair abilities.<n/><n/><c val="FFE303">Detector</c>
@@ -1526,6 +1526,7 @@ Upgrade/Name/PlusUltraCapacitorsStarshipAttackSpeed=Plus Ultra Capacitors (Stars
 Upgrade/Name/PlusUltraCapacitorsVehicleAttackSpeed=Plus Ultra Capacitors (Vehicle Attack Speed)
 Upgrade/Name/PsiDispersionDevice=Psi Dispersion Device
 Upgrade/Name/PsionicIndoctrinator=Psionic Indoctrinator
+Upgrade/Name/RadarTower=Radar Tower
 Upgrade/Name/RagnarokWeapons=Ragnarok Weapons
 Upgrade/Name/RapidAlgorithms=Rapid Algorithms
 Upgrade/Name/RaynorSpecial=Raynor Special
