@@ -256,6 +256,16 @@
         <EffectArray Operation="Set" Reference="Unit,SpartanCompany,CostResource[Minerals]" Value="169"/>
         <EffectArray Operation="Set" Reference="Unit,SpartanCompany,CostResource[Vespene]" Value="57"/>
         <EffectArray Operation="Set" Reference="Unit,Condor,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,HelsAngelFighter,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,HelsAngelAssault,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,Starcruiser,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,DuskWing,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,Harrier,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,CharonDropship,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,ZeusLanderLanded,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,ZeusLanderFlying,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,Nomad,CostResource[Minerals]" Value="112"/>
+        <EffectArray Operation="Set" Reference="Unit,Adjudicator,CostResource[Minerals]" Value="112"/>
     </CUpgrade>
     <CUpgrade id="UmojanCellularReactors">
         <Flags index="UpgradeCheat" value="0"/>
