@@ -811,6 +811,7 @@
         <EffectArray Operation="Set" Reference="Unit,CharonDropship,EnergyStart" Value="0"/>
         <AffectedUnitArray value="CharonDropship"/>
     </CUpgrade>
+    <CUpgrade id="BigDog"/>
     <CUpgrade id="UnstableArtifact"/>
     <CUpgrade id="UranusProtocol">
         <AffectedUnitArray value="Titan"/>

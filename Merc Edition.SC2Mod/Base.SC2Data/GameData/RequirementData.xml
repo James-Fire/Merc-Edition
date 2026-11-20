@@ -126,6 +126,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBigDog">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBigDogCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBoxofScraps">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBoxofScrapsCompleteOnly"/>

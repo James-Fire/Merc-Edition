@@ -76,6 +76,9 @@
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBigDogCompleteOnly">
+        <Count Link="BigDog" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBioSurvivalProtocolCompleteOnlyTechTreeCheat">
         <Count Link="BioSurvivalProtocol" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -116,7 +119,6 @@
         <Count Link="DevastatorOverride" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDoomsdayArmoryCompleteOnlyTechTreeCheat">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="DoomsdayArmory" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEchoBellyCompleteOnly">
@@ -126,7 +128,6 @@
         <Count Link="EidolonSuit" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEnlightenedResearchersCompleteOnlyTechTreeCheat">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="EnlightenedResearchers" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeExplosiveCalibrationsCompleteOnly">

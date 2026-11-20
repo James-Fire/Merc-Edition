@@ -1470,6 +1470,7 @@ Upgrade/Name/ArmoredHousing=Armored Housing
 Upgrade/Name/AspisBlinkShield=Aspis Blink Shield
 Upgrade/Name/BattleBunker=Battle Bunker
 Upgrade/Name/BearclawGauntlets=Bearclaw Gauntlets
+Upgrade/Name/BigDog=Big Dog
 Upgrade/Name/BioSurvivalProtocol=Bio-Survival Protocol
 Upgrade/Name/BoxofScraps=Box of Scraps
 Upgrade/Name/BreakoutMission=Breakout Mission
