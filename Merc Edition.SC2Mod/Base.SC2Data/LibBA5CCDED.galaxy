@@ -29,6 +29,7 @@ void libBA5CCDED_InitVariables () {
     libBA5CCDED_InitVariables_completed = true;
 
     libBA5CCDED_gv_eventString = "";
+    libBA5CCDED_gv_bigDogTimer = 20;
     libBA5CCDED_gv_hillRespawnPoint = PlayerStartLocation(1);
     libBA5CCDED_gv_hillRespawnTimer = TimerCreate();
     libBA5CCDED_gv_mU_Armory.lv_armoryDialog = c_invalidDialogId;
@@ -2161,6 +2162,66 @@ void libBA5CCDED_gt_ProtossGenericDifficulty_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: BIG DOG IS OFF THE LEASH
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BIGDOGISOFFTHELEASH_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_odin;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Odin", 0, 1, PointFromName("BigDog"));
+    lv_odin = UnitLastCreated();
+    UnitSetHeight(lv_odin, 40.0, 0.0);
+    UnitSetHeight(lv_odin, 0.0, 0.5);
+    UnitCreateEffectPoint(lv_odin, "StageDiveCP", UnitGetPosition(lv_odin));
+    SoundPlayForPlayer(SoundLink("BigDog", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    SoundPlayForPlayer(SoundLink("BigDogGuitar", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BIGDOGISOFFTHELEASH_Init () {
+    libBA5CCDED_gt_BIGDOGISOFFTHELEASH = TriggerCreate("libBA5CCDED_gt_BIGDOGISOFFTHELEASH_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Big Dog Timer
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_BigDogTimer_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libBA5CCDED_gv_bigDogTimer -= 1;
+    if ((libBA5CCDED_gv_bigDogTimer == 1)) {
+        SoundPlayForPlayer(SoundLink("BigDogClose", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    }
+
+    if ((libBA5CCDED_gv_bigDogTimer == 0)) {
+        TriggerExecute(libBA5CCDED_gt_BIGDOGISOFFTHELEASH, true, false);
+        TriggerEnable(TriggerGetCurrent(), false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_BigDogTimer_Init () {
+    libBA5CCDED_gt_BigDogTimer = TriggerCreate("libBA5CCDED_gt_BigDogTimer_Func");
+    TriggerEnable(libBA5CCDED_gt_BigDogTimer, false);
+    TriggerAddEventTimePeriodic(libBA5CCDED_gt_BigDogTimer, 60.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Ultra-Capacitors
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_UltraCapacitors_Func (bool testConds, bool runActions) {
@@ -2221,7 +2282,7 @@ bool libBA5CCDED_gt_MergedUpgrades_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((TechTreeUpgradeCount(EventPlayer(), "MergedUpgrades", c_techCountCompleteOnly) == 1))) {
+        if (!((TechTreeUpgradeCount(EventPlayer(), "DoomsdayArmory", c_techCountCompleteOnly) == 1))) {
             return false;
         }
 
@@ -3408,6 +3469,8 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_DepositMoney_Init();
     libBA5CCDED_gt_ZergTerranGenericDifficulty_Init();
     libBA5CCDED_gt_ProtossGenericDifficulty_Init();
+    libBA5CCDED_gt_BIGDOGISOFFTHELEASH_Init();
+    libBA5CCDED_gt_BigDogTimer_Init();
     libBA5CCDED_gt_UltraCapacitors_Init();
     libBA5CCDED_gt_MergedUpgrades_Init();
     libBA5CCDED_gt_FreyjaEgg_Init();

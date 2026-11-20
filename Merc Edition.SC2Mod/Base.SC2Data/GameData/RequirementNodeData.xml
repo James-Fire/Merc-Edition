@@ -76,6 +76,9 @@
     <CRequirementCountUpgrade id="CountUpgradeBearclawGauntletsCompleteOnly">
         <Count Link="BearclawGauntlets" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBigDogCompleteOnly">
+        <Count Link="BigDog" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBioSurvivalProtocolCompleteOnlyTechTreeCheat">
         <Count Link="BioSurvivalProtocol" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -115,11 +118,17 @@
     <CRequirementCountUpgrade id="CountUpgradeDevastatorOverrideCompleteOnly">
         <Count Link="DevastatorOverride" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDoomsdayArmoryCompleteOnlyTechTreeCheat">
+        <Count Link="DoomsdayArmory" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEchoBellyCompleteOnly">
         <Count Link="EchoBelly" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEidolonSuitCompleteOnly">
         <Count Link="EidolonSuit" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeEnlightenedResearchersCompleteOnlyTechTreeCheat">
+        <Count Link="EnlightenedResearchers" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeExplosiveCalibrationsCompleteOnly">
         <Count Link="ExplosiveCalibrations" State="CompleteOnly"/>
@@ -177,9 +186,6 @@
     <CRequirementCountUpgrade id="CountUpgradeMergedArmorsLevel3QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MergedArmorsLevel3" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeMergedUpgradesCompleteOnly">
-        <Count Link="MergedUpgrades" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMergedWeaponsLevel1CompleteOnly">
         <Count Link="MergedWeaponsLevel1" State="CompleteOnly"/>
@@ -266,9 +272,6 @@
     <CRequirementCountUpgrade id="CountUpgradeSmartServosMKIVCompleteOnly">
         <Count Link="SmartServosMKIV" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeSpeedyResearchCompleteOnly">
-        <Count Link="SpeedyResearch" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeStabilizerMedpacksMercCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="StabilizerMedpacksMerc" State="CompleteOnly"/>
@@ -287,6 +290,9 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSwannNanitesCompleteOnly">
         <Count Link="SwannNanites" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSwannsExtraSuppliesCompleteOnly">
+        <Count Link="SwannsExtraSupplies" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSwannsSuppressionCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>

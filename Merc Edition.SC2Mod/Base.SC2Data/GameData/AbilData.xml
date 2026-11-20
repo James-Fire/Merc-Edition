@@ -69,7 +69,7 @@
         <Cost>
             <Charge CountMax="1" CountStart="1" CountUse="1"/>
         </Cost>
-        <PrepTime value="1"/>
+        <PrepTime value="1.25"/>
         <Marker Link="Abil/Supernova">
             <MatchFlags index="Id" value="1"/>
             <MatchFlags index="Link" value="0"/>
@@ -830,6 +830,9 @@
         </InfoArray>
         <InfoArray index="Build26" Unit="PsiDispersionDevice" Time="82">
             <Button DefaultButtonFace="PsiDisruptor" Requirements="UsePsiDispersionDevice"/>
+        </InfoArray>
+        <InfoArray index="Build27" Unit="UnstableArtifact" Time="160">
+            <Button DefaultButtonFace="BuildUnstableArtifact" State="Suppressed" Requirements="UseUnstableArtifact"/>
         </InfoArray>
     </CAbilBuild>
     <CAbilEffectTarget id="AspisBlink">

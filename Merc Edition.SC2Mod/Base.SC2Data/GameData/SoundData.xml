@@ -354,6 +354,15 @@
         <AssetArray File="Assets\Sounds\Protoss\Zeratul\Zeratul_AC_Construct_Eso_EnergyWave_01.wav" FacialGroup=""/>
         <Volume value="-8.000000,-8.000000"/>
     </CSound>
+    <CSound id="BigDog" parent="Voice">
+        <AssetArray File="LocalizedData\Sounds\VO\TychusCommander_OdinUsed02.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="BigDogClose" parent="Voice">
+        <AssetArray File="LocalizedData\Sounds\VO\TychusCommander_OdinReady00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="BigDogGuitar" parent="UI">
+        <AssetArray File="Assets\Tychus_AC_MxFx\Tychus_AC_Mx_Defeat_01.ogg" FacialGroup=""/>
+    </CSound>
     <CSound id="BioSurvivalProtocolSound" parent="Spell">
         <AssetArray File="Assets\Sounds\Nova_Holographic_Decoy_Coop_Birth_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Nova_Holographic_Decoy_Coop_Birth_02.wav" FacialGroup=""/>
@@ -1406,12 +1415,10 @@
         <Volume value="-6.000000,-6.000000"/>
     </CSound>
     <CSound id="SignalFlareLaunch">
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\flare_detonator_launch.mp3" FacialGroup=""/>
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
+        <Volume value="-9.000000,-9.000000"/>
     </CSound>
     <CSound id="SignalFlareLoop">
         <AssetArray>
@@ -1645,6 +1652,24 @@
         <AssetArray File="Assets\Sounds\Uni\UI\BattleNet_UI\UI_BnetSelect02_1.wav" FacialGroup=""/>
         <Pitch value="-0.500000,0.500000"/>
         <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="UnstableArtifactCharge" parent="Spell">
+        <AssetArray File="Assets\Sounds\VoidShard_Energy_ChargeUp_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VoidShard_Energy_ChargeUp_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VoidShard_Energy_ChargeUp_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VoidShard_Energy_ChargeUp_04.wav" FacialGroup=""/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="UnstableArtifactHum" parent="Spell">
+        <AssetArray>
+            <File value="Assets\Sounds\XelNaga_KeyStone_SetPiece_Rev_Loop.wav"/>
+            <LoopCount value="999"/>
+            <LoopTime value="0,269649"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <Volume value="-14.000000,-14.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="20.110191" Volume="-96.000000"/>
     </CSound>
     <CSound id="WildSnipeImpact" parent="Combat">
         <AssetArray File="Assets\Sounds\Explosion_CarpetBurn_2.wav" FacialGroup=""/>

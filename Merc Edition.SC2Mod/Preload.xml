@@ -14,6 +14,7 @@
 <Behavior id="SurvivorsGuiltApolloCD"/>
 <Effect id="NukeDetonate"/>
 <Effect id="HeroNukeDetonate"/>
+<Effect id="StageDiveCP"/>
 <Effect id="EchoDropPodsIndicatorDummy"/>
 <Effect id="CabalAssaultReviveDummy"/>
 <Effect id="CabalFighterReviveDummy"/>
@@ -21,6 +22,9 @@
 <Effect id="SpartanCompanyShellShowerFull"/>
 <Effect id="SurvivorsGuiltApolloApplyBehavior"/>
 <Sound id="Spectre15NukeLaunch"/>
+<Sound id="BigDog"/>
+<Sound id="BigDogClose"/>
+<Sound id="BigDogGuitar"/>
 <Sound id="StageDiveLand2"/>
 <Sound id="StageDiveLand"/>
 <Sound id="FreyjaHellraiserMusicEasterEgg"/>
@@ -32,5 +36,6 @@
 <Sound id="UIArmoryPurchaseButtonPress3"/>
 <Sound id="UIArmoryUpgradePressed"/>
 <Unit id="InfestedTerran"/>
+<Unit id="Odin"/>
 <Unit id="ARESWarbotMercMod"/>
 </Preload>

@@ -126,6 +126,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBearclawGauntletsCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseBigDog">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeBigDogCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseBoxofScraps">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeBoxofScrapsCompleteOnly"/>
@@ -246,9 +250,9 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeMergedArmorsLevel3CompleteOnly"/>
     </CRequirement>
-    <CRequirement id="UseMergedUpgrades">
+    <CRequirement id="UseDoomsdayArmory">
         <EditorCategories value="TechType:Ability"/>
-        <NodeArray index="Show" Link="CountUpgradeMergedUpgradesCompleteOnly"/>
+        <NodeArray index="Show" Link="CountUpgradeDoomsdayArmoryCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="UseMergedWeaponsLevel1">
         <EditorCategories value="TechType:Ability"/>
@@ -346,9 +350,9 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSmartServosMKIVCompleteOnly"/>
     </CRequirement>
-    <CRequirement id="UseSpeedyResearch">
+    <CRequirement id="UseEnlightenedResearchers">
         <EditorCategories value="TechType:Ability"/>
-        <NodeArray index="Show" Link="CountUpgradeSpeedyResearchCompleteOnly"/>
+        <NodeArray index="Show" Link="CountUpgradeEnlightenedResearchersCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="UseStabilizerMedpacksMerc">
         <EditorCategories value="TechType:Ability"/>
@@ -365,6 +369,10 @@
     <CRequirement id="UseSwannNanites">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeSwannNanitesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSwannsExtraSupplies">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeSwannsExtraSuppliesCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseSwannsSuppression">
         <EditorCategories value="TechType:Ability"/>

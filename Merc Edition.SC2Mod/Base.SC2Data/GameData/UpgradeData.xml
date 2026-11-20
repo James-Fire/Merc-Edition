@@ -112,7 +112,7 @@
     <CUpgrade id="BioSurvivalProtocol"/>
     <CUpgrade id="MergedArmorsLevel2"/>
     <CUpgrade id="MergedArmorsLevel3"/>
-    <CUpgrade id="MergedUpgrades"/>
+    <CUpgrade id="DoomsdayArmory"/>
     <CUpgrade id="MergedWeaponsLevel1"/>
     <CUpgrade id="MergedArmorsLevel1"/>
     <CUpgrade id="MergedWeaponsLevel2"/>
@@ -216,7 +216,7 @@
         <AffectedUnitArray value="DevilDog"/>
         <MaxLevel value="3"/>
     </CUpgrade>
-    <CUpgrade id="SpeedyResearch">
+    <CUpgrade id="EnlightenedResearchers">
         <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research18].Time" Value="2.000000"/>
         <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research19].Time" Value="2.000000"/>
         <EffectArray Operation="Divide" Reference="Abil,EngineeringBayResearch,InfoArray[Research20].Time" Value="2.000000"/>
@@ -241,6 +241,19 @@
         <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research12].Time" Value="2.000000"/>
         <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research13].Time" Value="2.000000"/>
         <EffectArray Operation="Divide" Reference="Abil,ArmoryResearch,InfoArray[Research14].Time" Value="2.000000"/>
+    </CUpgrade>
+    <CUpgrade id="SwannsExtraSupplies">
+        <EffectArray Operation="Set" Reference="Unit,Anarchist,CostResource[Minerals]" Value="113"/>
+        <EffectArray Operation="Set" Reference="Unit,Agitator,CostResource[Minerals]" Value="113"/>
+        <EffectArray Operation="Set" Reference="Unit,SiegeBreakerSieged,CostResource[Minerals]" Value="169"/>
+        <EffectArray Operation="Set" Reference="Unit,SiegeBreakerSieged,CostResource[Vespene]" Value="139"/>
+        <EffectArray Operation="Set" Reference="Unit,SiegeBreaker,CostResource[Minerals]" Value="169"/>
+        <EffectArray Operation="Set" Reference="Unit,SiegeBreaker,CostResource[Vespene]" Value="139"/>
+        <EffectArray Operation="Set" Reference="Unit,Copperhead,CostResource[Minerals]" Value="150"/>
+        <EffectArray Operation="Set" Reference="Unit,Copperhead,CostResource[Vespene]" Value="150"/>
+        <EffectArray Operation="Set" Reference="Unit,SpartanCompany,CostResource[Minerals]" Value="169"/>
+        <EffectArray Operation="Set" Reference="Unit,SpartanCompany,CostResource[Vespene]" Value="57"/>
+        <EffectArray Operation="Set" Reference="Unit,Condor,CostResource[Minerals]" Value="112"/>
     </CUpgrade>
     <CUpgrade id="UmojanCellularReactors">
         <Flags index="UpgradeCheat" value="0"/>
@@ -798,6 +811,7 @@
         <EffectArray Operation="Set" Reference="Unit,CharonDropship,EnergyStart" Value="0"/>
         <AffectedUnitArray value="CharonDropship"/>
     </CUpgrade>
+    <CUpgrade id="BigDog"/>
     <CUpgrade id="UnstableArtifact"/>
     <CUpgrade id="UranusProtocol">
         <AffectedUnitArray value="Titan"/>

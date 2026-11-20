@@ -201,6 +201,7 @@
             <LayoutButtons Face="TerranBuildAdvanced" Type="Submenu" SubmenuCardId="TBl2" Row="2" Column="1"/>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="TerranBuild,Halt" Row="2" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="CancelTerrazineHarvest,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="BuildUnstableArtifact" Type="AbilCmd" AbilCmd="TerranBuild,Build27" Row="1" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="TBl1">
             <LayoutButtons Face="CommandCenter" Type="AbilCmd" AbilCmd="TerranBuild,Build1" Row="0" Column="0"/>
@@ -3264,7 +3265,9 @@
         <FlagArray index="Unstoppable" value="1"/>
         <EffectArray index="Create" value="SignalFlareMistCP"/>
     </CUnit>
-    <CUnit id="SignalFlareMissile" parent="MISSILE"/>
+    <CUnit id="SkibisAngelSignalFlareMissile" parent="MISSILE">
+        <Mover value="SignalFlareMissile"/>
+    </CUnit>
     <CUnit id="SkibisAngel">
         <AbilArray Link="BioSurvivalProtocol"/>
         <AbilArray Link="stop"/>

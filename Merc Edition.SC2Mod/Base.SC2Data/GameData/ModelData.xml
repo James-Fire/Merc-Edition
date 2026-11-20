@@ -64,6 +64,11 @@
             <Time value="3.333000"/>
         </Events>
     </CModel>
+    <CModel id="UnstableArtifactDeath">
+        <Model value="Assets\Effects\Terran\TerranBuildingDeath\TerranBuildingDeath.m3"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
+    </CModel>
     <CModel id="UnstableArtifactNovaActivated" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Protoss\XelNagaArtifactSpellPowerUp\XelNagaArtifactSpellPowerUp.m3"/>
         <ScaleMax value="2.200000,2.200000,2.200000"/>
@@ -73,10 +78,10 @@
     </CModel>
     <CModel id="UnstableArtifactNovaShockwave" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Protoss\XelNagaArtifactSpell\XelNagaArtifactSpell.m3"/>
-        <AnimSpeed value="1.300000"/>
+        <AnimSpeed value="2.000000"/>
         <EditorCategories value="Race:Protoss"/>
-        <ScaleMax value="0.300000,0.300000,0.300000"/>
-        <ScaleMin value="0.300000,0.300000,0.300000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
         <SelectionRadius value="2.000000"/>
         <ShadowRadius value="2.000000"/>
     </CModel>
