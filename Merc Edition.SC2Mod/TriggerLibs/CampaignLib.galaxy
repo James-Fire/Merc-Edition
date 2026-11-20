@@ -16,6 +16,16 @@ string[17] libCamp_gv_MercHeroInstance;
 string[17] libCamp_gv_MercHeroCooldown;
 string[17] libCamp_gv_MercHeroAltUnit;
 
+// Merc Edition: extra armory techs (bodies further down)
+void libCamp_gf_MercExtraTechInit ();
+bool libCamp_gf_MercIsExtraTech (int lp_tech);
+void libCamp_gf_MercExtraTechRefresh (int lp_tech);
+int libCamp_gf_MercExtraTechCost (int lp_tech);
+void libCamp_gf_MercExtraTechApply (int lp_player);
+void libCamp_gf_MercExtraTechReset ();
+void libCamp_gf_MercExtraTechSave (bank lp_bank);
+void libCamp_gf_MercExtraTechLoad (bank lp_bank);
+
 //--------------------------------------------------------------------------------------------------
 // Library: Campaign
 //--------------------------------------------------------------------------------------------------
@@ -386,6 +396,7 @@ void libCamp_InitVariables () {
     libCamp_gv_tSX_DebugTechCheatOption = libCamp_ge_TS_DebugTechCheatOption_Average;
     libCamp_gv_tS_DebugTechCustomButton = c_invalidDialogControlId;
     libCamp_gv_tS_DebugTechCustomDialog = c_invalidDialogId;
+    libCamp_gf_MercExtraTechInit();
 }
 
 // Presets
@@ -6921,6 +6932,9 @@ text libCamp_gf_StoryTechDescription (int lp_tech) {
 int libCamp_gf_StoryTechCost (int lp_tech) {
     // Automatic Variable Declarations
     // Implementation
+    if (libCamp_gf_MercIsExtraTech(lp_tech)) {
+        return libCamp_gf_MercExtraTechCost(lp_tech);
+    }
     return FixedToInt(ConversationDataStateFixedValue(libCamp_gf_TS_StoryTechConvoID(lp_tech), ("Cost")));
 }
 
@@ -7196,6 +7210,9 @@ bool libCamp_gf_MercTryPurchaseTech (int lp_tech) {
     if (lp_tech == libCamp_ge_StoryTech_StoryTechNone) {
         return false;
     }
+    if (libCamp_gf_MercIsExtraTech(lp_tech)) {
+        libCamp_gf_MercExtraTechRefresh(lp_tech);
+    }
     if (libCamp_gf_StoryCredits() < libCamp_gf_StoryTechCost(lp_tech)) {
         return false;
     }
@@ -7206,7 +7223,9 @@ bool libCamp_gf_MercTryPurchaseTech (int lp_tech) {
     libCamp_gv_tSX_Tech_Status[(lp_tech)] = libCamp_ge_StoryTechStates_TechPurchased;
     libCamp_gf_SetStoryCredits((libCamp_gf_StoryCredits() - libCamp_gf_StoryTechCost(lp_tech)));
     PlayerModifyPropertyInt(1, c_playerPropCredits, c_playerPropOperSetTo, libCamp_gf_StoryCredits());
-    libCamp_gf_TS_AddRecentTech(lp_tech);
+    if (!libCamp_gf_MercIsExtraTech(lp_tech)) {
+        libCamp_gf_TS_AddRecentTech(lp_tech);
+    }
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_Camp_D1E7DDD8") + IntToText(libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry))), false);
     AchievementTermQuantitySet(1, "TStory01_1", libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryInfantry));
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_Camp_E40FD404") + IntToText(libCamp_gf_TS_StoryTechPurchasedCountInCategory(libCamp_ge_StoryTechCategory_StoryTechCategoryVehicles))), false);
@@ -7219,6 +7238,9 @@ bool libCamp_gf_MercTryPurchaseTech (int lp_tech) {
 
 // Read-only helpers so the armory GUI never touches libCamp arrays directly.
 int libCamp_gf_MercTechStatus (int lp_tech) {
+    if (libCamp_gf_MercIsExtraTech(lp_tech)) {
+        libCamp_gf_MercExtraTechRefresh(lp_tech);
+    }
     return libCamp_gv_tSX_Tech_Status[(lp_tech)];
 }
 
@@ -7242,6 +7264,9 @@ int libCamp_gf_MercTechOfGroupSlot (int lp_group, int lp_slot) {
 }
 
 bool libCamp_gf_MercTechGroupVisible (int lp_group) {
+    if (lp_group == libCamp_ge_StoryTechGroup_StoryTechGroupNone) {
+        return true;
+    }
     return libCamp_gf_TS_StoryTechGroupUIUnlocked(lp_group);
 }
 
@@ -7267,6 +7292,75 @@ void libCamp_gf_MercClearTechNew (int lp_tech) {
         libCamp_gv_tSX_Tech_Status[(lp_tech)] = libCamp_ge_StoryTechStates_TechAvailable;
     }
 }
+
+//--------------------------------------------------------------------------------------------------
+// Merc Edition: extra armory techs (units with no stock tech slot)
+// They use free IDs 51-60 in the stock tech arrays. Set the same number as TechID in
+// MercArmoryUpgrades. They open when their unit is unlocked and save under "MercExtraTech".
+//--------------------------------------------------------------------------------------------------
+const int libCamp_gv_MercExtraTechFirst = 51;
+const int libCamp_gv_MercExtraTechLast = 60;
+string[61] libCamp_gv_MercExtraTechArmory;
+string[61] libCamp_gv_MercExtraTechUnit;
+string[61] libCamp_gv_MercExtraTechUpgrade;
+
+void libCamp_gf_MercExtraTechAdd (int lp_tech, string lp_armory, string lp_unit, string lp_upgrade) {
+    libCamp_gv_MercExtraTechArmory[lp_tech] = lp_armory;
+    libCamp_gv_MercExtraTechUnit[lp_tech] = lp_unit;
+    libCamp_gv_MercExtraTechUpgrade[lp_tech] = lp_upgrade;
+}
+
+void libCamp_gf_MercExtraTechInit () {
+    libCamp_gf_MercExtraTechAdd(51, "Nanite Emitter - Box of Scraps", "NaniteCloudEmitter", "BoxofScraps");
+    libCamp_gf_MercExtraTechAdd(52, "Nanite Emitter - Danger Mist", "NaniteCloudEmitter", "NanitePulse");
+    libCamp_gf_MercExtraTechAdd(53, "Nomad - Explosive Calibrations", "Nomad", "ExplosiveCalibrations");
+    libCamp_gf_MercExtraTechAdd(54, "Nomad - Silent Mode", "Nomad", "SilentMode");
+    libCamp_gf_MercExtraTechAdd(55, "Adjudicator - Mobile Stockpile", "Adjudicator", "MobileStockpile");
+    libCamp_gf_MercExtraTechAdd(56, "Adjudicator - Swann Nanites", "Adjudicator", "SwannNanites");
+    libCamp_gf_MercExtraTechAdd(57, "Samson - ATX Ordnance", "ZeusLanderFlying", "ATXOrdnance");
+    libCamp_gf_MercExtraTechAdd(58, "Samson - Apollo Injection Pods", "ZeusLanderFlying", "ApolloInjectionPods");
+    libCamp_gf_MercExtraTechAdd(59, "Wolverine - Piercing Strike", "Wolverine", "PiercingStrike");
+    libCamp_gf_MercExtraTechAdd(60, "Wolverine - Chaotic Power", "Wolverine", "ChaoticPower");
+}
+
+bool libCamp_gf_MercIsExtraTech (int lp_tech) {
+    return (lp_tech >= libCamp_gv_MercExtraTechFirst) && (lp_tech <= libCamp_gv_MercExtraTechLast) && (libCamp_gv_MercExtraTechArmory[lp_tech] != "");
+}
+
+// Opens the tech once its unit is unlocked; closes it again if the unit isn't.
+void libCamp_gf_MercExtraTechRefresh (int lp_tech) {
+    if (libCamp_gv_tSX_Tech_Status[lp_tech] == libCamp_ge_StoryTechStates_TechPurchased) {
+        return;
+    }
+    if (libCamp_gf_StoryTechUnitIsEnabled(libCamp_gv_MercExtraTechUnit[lp_tech])) {
+        if ((libCamp_gv_tSX_Tech_Status[lp_tech] != libCamp_ge_StoryTechStates_TechAvailable)) {
+            libCamp_gv_tSX_Tech_Status[lp_tech] = libCamp_ge_StoryTechStates_TechNew;
+        }
+    }
+    else {
+        libCamp_gv_tSX_Tech_Status[lp_tech] = libCamp_ge_StoryTechStates_TechUnavailable;
+    }
+}
+
+int libCamp_gf_MercExtraTechCost (int lp_tech) {
+    return UserDataGetInt("MercArmoryUpgrades", libCamp_gv_MercExtraTechArmory[lp_tech], "PreviewCosts", 1);
+}
+
+void libCamp_gf_MercExtraTechApply (int lp_player) {
+    int lv_tech = libCamp_gv_MercExtraTechFirst;
+    while (lv_tech <= libCamp_gv_MercExtraTechLast) {
+        if (libCamp_gf_MercIsExtraTech(lv_tech) && (libCamp_gv_MercExtraTechUpgrade[lv_tech] != "")) {
+            if (libCamp_gv_tSX_Tech_Status[lv_tech] == libCamp_ge_StoryTechStates_TechPurchased) {
+                libNtve_gf_SetUpgradeLevelForPlayer(lp_player, libCamp_gv_MercExtraTechUpgrade[lv_tech], 1);
+            }
+            else {
+                libNtve_gf_SetUpgradeLevelForPlayer(lp_player, libCamp_gv_MercExtraTechUpgrade[lv_tech], 0);
+            }
+        }
+        lv_tech += 1;
+    }
+}
+
 
 //--------------------------------------------------------------------------------------------------
 // Merc Edition: mission research and bonus credits (GUI: "Give Research", score-screen lines)
@@ -7566,6 +7660,7 @@ void libCamp_gf_ApplyCampaignTech (int lp_player) {
         }
         auto8191891C_i = auto8191891C_i + 1;
     }
+    libCamp_gf_MercExtraTechApply(lp_player);
     if ((lp_player == 1)) {
         libCamp_gf_TS_ApplyCampaignTechLimitsProtoss();
     }
@@ -8125,6 +8220,7 @@ void libCamp_gf_TS_ResetTechData () {
         libCamp_gv_tSX_Tech_Status[lv_index] = libCamp_ge_StoryTechStates_TechAvailable;
     }
     libCamp_gf_TS_UpdateTechStates();
+    libCamp_gf_MercExtraTechReset();
 }
 
 void libCamp_gf_TS_CreateTechCategoryUI () {
@@ -9362,6 +9458,33 @@ string libCamp_gf_TS_CampaignDifficultyBankKey (int lp_mission, int lp_difficult
     return (IntToString((lp_mission)) + "-" + lv_key);
 }
 
+// Merc Edition: save/load for the extra armory techs
+void libCamp_gf_MercExtraTechReset () {
+    int lv_tech = libCamp_gv_MercExtraTechFirst;
+    while (lv_tech <= libCamp_gv_MercExtraTechLast) {
+        libCamp_gv_tSX_Tech_Status[lv_tech] = libCamp_ge_StoryTechStates_TechUnavailable;
+        lv_tech += 1;
+    }
+}
+
+void libCamp_gf_MercExtraTechSave (bank lp_bank) {
+    string lv_section = libCamp_gf_TS_BankSectionName("MercExtraTech");
+    int lv_tech = libCamp_gv_MercExtraTechFirst;
+    while (lv_tech <= libCamp_gv_MercExtraTechLast) {
+        libCamp_gf_TS_SaveTransitionVarInteger(lp_bank, lv_section, IntToString(lv_tech), (libCamp_gv_tSX_Tech_Status[lv_tech]), (libCamp_ge_StoryTechStates_TechUnavailable));
+        lv_tech += 1;
+    }
+}
+
+void libCamp_gf_MercExtraTechLoad (bank lp_bank) {
+    string lv_section = libCamp_gf_TS_BankSectionName("MercExtraTech");
+    int lv_tech = libCamp_gv_MercExtraTechFirst;
+    while (lv_tech <= libCamp_gv_MercExtraTechLast) {
+        libCamp_gv_tSX_Tech_Status[lv_tech] = libCamp_gf_TS_LoadTransitionVarInteger(lp_bank, lv_section, IntToString(lv_tech), (libCamp_ge_StoryTechStates_TechUnavailable));
+        lv_tech += 1;
+    }
+}
+
 void libCamp_gf_TS_LoadTransitionVars (bank lp_sourceBank, bool lp_simulation) {
     // Variable Declarations
     string lv__SectionName;
@@ -9509,6 +9632,7 @@ void libCamp_gf_TS_LoadTransitionVars (bank lp_sourceBank, bool lp_simulation) {
         libCamp_gv_tSX_MercStatus[(lv_indexMerc)] = libCamp_gf_TS_LoadTransitionVarInteger(lp_sourceBank, lv__SectionName, IntToString((lv_indexMerc)), 0);
         auto0841871E_i = auto0841871E_i + 1;
     }
+    libCamp_gf_MercExtraTechLoad(lp_sourceBank);
     lv__SectionName = libCamp_gf_TS_BankSectionName("TechStatus");
     autoD29E95DB_ae = libCamp_gv_TSC_TECH_LAST;
     lv_index = libCamp_gv_TSC_TECH_FIRST;
@@ -9778,6 +9902,7 @@ void libCamp_gf_TS_SaveTransitionVars (bank lp_targetBank, bool lp_nextIsSimulat
                 libCamp_gf_TS_SaveTransitionVarInteger(lp_targetBank, lv__SectionName, IntToString((lv_indexMerc)), libCamp_gv_tSX_MercStatus[(lv_indexMerc)], 0);
                 auto9F534327_i = auto9F534327_i + 1;
             }
+            libCamp_gf_MercExtraTechSave(lp_targetBank);
             lv__SectionName = libCamp_gf_TS_BankSectionName("TechStatus");
             autoDD9A22CB_ae = libCamp_gv_TSC_TECH_LAST;
             lv_index = libCamp_gv_TSC_TECH_FIRST;
@@ -9866,6 +9991,7 @@ void libCamp_gf_TS_SaveTransitionVars (bank lp_targetBank, bool lp_nextIsSimulat
         libCamp_gf_TS_SaveTransitionVarInteger(lp_targetBank, lv__SectionName, IntToString((lv_indexMerc)), libCamp_gv_tSX_MercStatus[(lv_indexMerc)], 0);
         auto59B72122_i = auto59B72122_i + 1;
     }
+    libCamp_gf_MercExtraTechSave(lp_targetBank);
     lv__SectionName = libCamp_gf_TS_BankSectionName("TechStatus");
     auto194C13E9_ae = libCamp_gv_TSC_TECH_LAST;
     lv_index = libCamp_gv_TSC_TECH_FIRST;
