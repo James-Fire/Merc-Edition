@@ -2201,6 +2201,10 @@ bool libBA5CCDED_gt_BigDogTimer_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    if ((TechTreeUpgradeCount(1, "BigDog", c_techCountQueuedOrBetter) == 0)) {
+        TriggerEnable(TriggerGetCurrent(), false);
+    }
+
     libBA5CCDED_gv_bigDogTimer -= 1;
     if ((libBA5CCDED_gv_bigDogTimer == 1)) {
         SoundPlayForPlayer(SoundLink("BigDogClose", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);

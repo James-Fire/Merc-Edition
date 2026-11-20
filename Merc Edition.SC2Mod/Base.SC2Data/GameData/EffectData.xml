@@ -657,9 +657,6 @@
         <Effect value="ReaperMissilesLaunchMissile"/>
         <Radius value="3"/>
     </CEffectRandomPointInCircle>
-    <CEffectSet id="RedlineReactorMusicEasterEgg">
-        <EditorCategories value=""/>
-    </CEffectSet>
     <CEffectCreatePersistent id="OdinRepairDroneHealCP">
         <EditorCategories value=""/>
         <WhichLocation Value="TargetUnit"/>
