@@ -16,7 +16,7 @@ string[17] libCamp_gv_MercHeroInstance;
 string[17] libCamp_gv_MercHeroCooldown;
 string[17] libCamp_gv_MercHeroAltUnit;
 
-// Merc Edition: extra armory techs (bodies further down)
+// Merc Edition
 void libCamp_gf_MercExtraTechInit ();
 bool libCamp_gf_MercIsExtraTech (int lp_tech);
 void libCamp_gf_MercExtraTechRefresh (int lp_tech);
