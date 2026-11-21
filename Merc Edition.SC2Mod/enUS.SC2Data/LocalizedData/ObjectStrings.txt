@@ -92,6 +92,7 @@ Actor/EditorDescription/EasterEggAuraFreyja=
 Actor/EditorDescription/EasterEggAuraStarcruiser=
 Actor/EditorDescription/EchoDropPodsIndicator=the dummy thing doesnt work, so fuck it, we're going with triggers. got a problem? good
 Actor/EditorDescription/FreyjaBombardment=this is specifically so that the missiles come out of freyja instead of the ground
+Actor/EditorDescription/HoloBaddieMercHaven=damn this bitch sucks at dancing
 Actor/EditorDescription/Lockdown=I have no idea why, but the impact effect of this action actor just does NOT register. I guess I'll have to make a separate actor for it.
 Actor/EditorDescription/NomadMissileClusterMissileSound=The action actor, by some satanatic intervention, completely breaks where the missile visually appears, resulting in me spending 15+ minutes trying to get the cluster bombs to launch from the target, when in reality, they WERE, but the action actor was making it look like they werent. We love Blizzard!
 Actor/EditorDescription/SiegeBreakerSiegedAttack=For spicy visual effects connected to an upgrade, I had to separate the launch assets into separate model/sound actors.
