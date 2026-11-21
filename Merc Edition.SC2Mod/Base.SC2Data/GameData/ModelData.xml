@@ -64,6 +64,12 @@
             <Time value="3.333000"/>
         </Events>
     </CModel>
+    <CModel id="SOAMothership">
+        <Model value="Assets\Units\Protoss\Mothership_Golden\Mothership_Golden.m3"/>
+    </CModel>
+    <CModel id="SOAMothershipPortrait">
+        <Model value="Assets\Portraits\Protoss\Mothership_Golden_Portrait\Mothership_Golden_Portrait.m3"/>
+    </CModel>
     <CModel id="UnstableArtifactDeath">
         <Model value="Assets\Effects\Terran\TerranBuildingDeath\TerranBuildingDeath.m3"/>
         <ScaleMax value="1.300000,1.300000,1.300000"/>
