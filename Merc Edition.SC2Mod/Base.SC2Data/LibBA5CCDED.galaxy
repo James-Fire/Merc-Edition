@@ -2343,6 +2343,43 @@ void libBA5CCDED_gt_MergedUpgrades_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Korhal Deserters Supply
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_KorhalDesertersSupply_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(2.0, c_timeGame);
+    if ((TechTreeUpgradeCount(1, "KorhalDeserters", c_techCountCompleteOnly) == 1)) {
+        PlayerModifyPropertyInt(1, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 220);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_KorhalDesertersSupply_Init () {
+    libBA5CCDED_gt_KorhalDesertersSupply = TriggerCreate("libBA5CCDED_gt_KorhalDesertersSupply_Func");
+    TriggerAddEventMapInit(libBA5CCDED_gt_KorhalDesertersSupply);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Korhal Deserters Naming
+//--------------------------------------------------------------------------------------------------
+bool libBA5CCDED_gt_KorhalDesertersNaming_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBA5CCDED_gt_KorhalDesertersNaming_Init () {
+    libBA5CCDED_gt_KorhalDesertersNaming = TriggerCreate("libBA5CCDED_gt_KorhalDesertersNaming_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Freyja Egg
 //--------------------------------------------------------------------------------------------------
 bool libBA5CCDED_gt_FreyjaEgg_Func (bool testConds, bool runActions) {
@@ -3477,6 +3514,8 @@ void libBA5CCDED_InitTriggers () {
     libBA5CCDED_gt_BigDogTimer_Init();
     libBA5CCDED_gt_UltraCapacitors_Init();
     libBA5CCDED_gt_MergedUpgrades_Init();
+    libBA5CCDED_gt_KorhalDesertersSupply_Init();
+    libBA5CCDED_gt_KorhalDesertersNaming_Init();
     libBA5CCDED_gt_FreyjaEgg_Init();
     libBA5CCDED_gt_NomadMineDroneSpawner_Init();
     libBA5CCDED_gt_ETCPowerSlide_Init();

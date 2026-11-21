@@ -148,6 +148,9 @@
     <CRequirementCountUpgrade id="CountUpgradeKelmorianCuttersCompleteOnly">
         <Count Link="KelmorianCutters" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKorhalDesertersCompleteOnly">
+        <Count Link="KorhalDeserters" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeL800ETCStageDiveCompleteOnly">
         <Count Link="L800ETCStageDive" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

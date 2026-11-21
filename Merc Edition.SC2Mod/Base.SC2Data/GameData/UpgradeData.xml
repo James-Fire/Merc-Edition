@@ -108,7 +108,37 @@
         <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCUBB,SpawnCount" Value="0"/>
         <EffectArray Operation="Set" Reference="Effect,EchoDropPodsCP,PeriodCount" Value="1"/>
     </CUpgrade>
-    <CUpgrade id="KorhalDeserters"/>
+    <CUpgrade id="KorhalDeserters">
+        <EffectArray Operation="Divide" Reference="Abil,BarracksTrain,InfoArray[Train1].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksTrain,InfoArray[Train10].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksTrain,InfoArray[Train11].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksTrain,InfoArray[Train13].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksTrain,InfoArray[Train12].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksTrain,InfoArray[Train14].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksTrain,InfoArray[Train15].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train10].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train12].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train13].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train14].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train15].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train16].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train17].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train18].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train19].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryTrain,InfoArray[Train19].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train10].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train11].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train12].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train13].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train14].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train15].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train16].Time" Value="1.100000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportTrain,InfoArray[Train17].Time" Value="1.100000"/>
+        <EffectArray Operation="Set" Reference="Unit,WarPig,RandomNameArray[3]" Value="Unit/Name/MengskMarine"/>
+        <EffectArray Operation="Set" Reference="Unit,HammerSecurity,RandomNameArray[3]" Value="Unit/Name/MengskMarauder"/>
+        <EffectArray Operation="Set" Reference="Unit,SkibisAngel,RandomNameArray[3]" Value="Unit/Name/MengskMedic"/>
+        <EffectArray Operation="Set" Reference="Unit,DevilDog,RandomNameArray[3]" Value="Unit/Name/MengskFirebat"/>
+    </CUpgrade>
     <CUpgrade id="L800ETCStageDive"/>
     <CUpgrade id="BioSurvivalProtocol"/>
     <CUpgrade id="MergedArmorsLevel2"/>

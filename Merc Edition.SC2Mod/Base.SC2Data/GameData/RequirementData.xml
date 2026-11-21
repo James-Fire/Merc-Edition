@@ -214,6 +214,10 @@
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeL800ETCStageDiveCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="UseKorhalDeserters">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeKorhalDesertersCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="UseLegionSystems">
         <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Show" Link="CountUpgradeLegionSystemsCompleteOnly"/>

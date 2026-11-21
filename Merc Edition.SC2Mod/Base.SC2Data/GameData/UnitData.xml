@@ -2885,6 +2885,10 @@
         <EffectArray index="Death" value="AnarchistFearSA"/>
     </CUnit>
     <CUnit id="DevilDog">
+        <RandomNameArray value="Unit/Name/DevilDog"/>
+        <RandomNameArray value="Unit/Name/DevilDog"/>
+        <RandomNameArray value="Unit/Name/DevilDog"/>
+        <RandomNameArray value="Unit/Name/DevilDog"/>
         <AbilArray Link="BioSurvivalProtocol"/>
         <AbilArray Link="DevilDogGrapple"/>
         <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
@@ -3105,6 +3109,10 @@
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
     <CUnit id="HammerSecurity">
+        <RandomNameArray value="Unit/Name/HammerSecurity"/>
+        <RandomNameArray value="Unit/Name/HammerSecurity"/>
+        <RandomNameArray value="Unit/Name/HammerSecurity"/>
+        <RandomNameArray value="Unit/Name/HammerSecurity"/>
         <BehaviorArray Link="BioSurvivalProtocolDResponse"/>
         <BehaviorArray Link="AblativeScales"/>
         <CostResource index="Minerals" value="150"/>
@@ -3269,6 +3277,10 @@
         <Mover value="SignalFlareMissile"/>
     </CUnit>
     <CUnit id="SkibisAngel">
+        <RandomNameArray value="Unit/Name/SkibisAngel"/>
+        <RandomNameArray value="Unit/Name/SkibisAngel"/>
+        <RandomNameArray value="Unit/Name/SkibisAngel"/>
+        <RandomNameArray value="Unit/Name/SkibisAngel"/>
         <AbilArray Link="BioSurvivalProtocol"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="move"/>
@@ -4321,6 +4333,10 @@
             <LayoutButtons Face="LaserTargetingSystem" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="BioSurvivalProtocolabilitybutton" Type="AbilCmd" AbilCmd="BioSurvivalProtocol,Execute" Row="1" Column="4"/>
         </CardLayouts>
+        <RandomNameArray value="Unit/Name/WarPig"/>
+        <RandomNameArray value="Unit/Name/WarPig"/>
+        <RandomNameArray value="Unit/Name/WarPig"/>
+        <RandomNameArray value="Unit/Name/WarPig"/>
     </CUnit>
     <CUnit id="HarrierAirLeft" parent="MISSILE">
         <Race value="Terr"/>

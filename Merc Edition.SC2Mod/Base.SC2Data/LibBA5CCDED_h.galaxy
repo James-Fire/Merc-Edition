@@ -125,6 +125,8 @@ trigger libBA5CCDED_gt_BIGDOGISOFFTHELEASH;
 trigger libBA5CCDED_gt_BigDogTimer;
 trigger libBA5CCDED_gt_UltraCapacitors;
 trigger libBA5CCDED_gt_MergedUpgrades;
+trigger libBA5CCDED_gt_KorhalDesertersSupply;
+trigger libBA5CCDED_gt_KorhalDesertersNaming;
 trigger libBA5CCDED_gt_FreyjaEgg;
 trigger libBA5CCDED_gt_NomadMineDroneSpawner;
 trigger libBA5CCDED_gt_ETCPowerSlide;

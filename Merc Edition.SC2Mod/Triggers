@@ -15699,6 +15699,8 @@
             <Item Type="Variable" Library="BA5CCDED" Id="F10CCAF3"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="FE268FD6"/>
             <Item Type="Trigger" Library="BA5CCDED" Id="9C7137BE"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="F2EB9DE5"/>
+            <Item Type="Trigger" Library="BA5CCDED" Id="A44D4482"/>
         </Element>
         <Element Type="Trigger" Id="94CFD9BF">
             <Variable Type="Variable" Library="BA5CCDED" Id="E91DC6F2"/>
@@ -17865,6 +17867,102 @@
             <Value>TerranShipWeaponsLevel3</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Trigger" Id="F2EB9DE5">
+            <Event Type="FunctionCall" Library="BA5CCDED" Id="070DEEED"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="021F9F97"/>
+            <Action Type="FunctionCall" Library="BA5CCDED" Id="EAC66A2D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="070DEEED">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="021F9F97">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000242"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="673EC199"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="5322022E"/>
+        </Element>
+        <Element Type="Param" Id="673EC199">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000419"/>
+            <Value>2</Value>
+            <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="5322022E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000420"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000013"/>
+        </Element>
+        <Element Type="FunctionCall" Id="EAC66A2D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="BADB4658"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="B181CC8D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="BADB4658">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="943DF2F7"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="26F1C63E"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="39BE7466"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="FA4B4B24"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="2A612EA7"/>
+        </Element>
+        <Element Type="Param" Id="26F1C63E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="75FC31CB"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="39BE7466">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4AA9487D"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="74DE5DFF"/>
+        </Element>
+        <Element Type="Param" Id="FA4B4B24">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C93A9DCB"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D6715A64"/>
+        </Element>
+        <Element Type="Param" Id="2A612EA7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EEF303AC"/>
+            <Value>220</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B181CC8D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000003"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4C2B51B9"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="9D3FEC4B"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="53C86A9F"/>
+        </Element>
+        <Element Type="Param" Id="4C2B51B9">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="BA5CCDED" Id="E250DBB8"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E250DBB8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="6A44F216"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="32817DE2"/>
+            <Parameter Type="Param" Library="BA5CCDED" Id="4B658EE6"/>
+        </Element>
+        <Element Type="Param" Id="6A44F216">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="448F39DC"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D78D6018"/>
+        </Element>
+        <Element Type="Param" Id="32817DE2">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000447"/>
+            <Value>KorhalDeserters</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="Param" Id="4B658EE6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000446"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="9D3FEC4B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
+        </Element>
+        <Element Type="Param" Id="53C86A9F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Trigger" Id="A44D4482">
         </Element>
         <Element Type="Category" Id="320AB634">
             <Item Type="Trigger" Library="BA5CCDED" Id="390A3B5A"/>
