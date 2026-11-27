@@ -74,6 +74,7 @@ Abil/Name/SentinelMissilesAres=Sentinel Missiles
 Abil/Name/SgtHammerNapalm=Sgt Hammer Napalm
 Abil/Name/SgtHammerSiege=Sgt Hammer Siege
 Abil/Name/SgtHammerUnsiege=Sgt Hammer Unsiege
+Abil/Name/ShadowChargeZyrkhan=Shadow Charge
 Abil/Name/ShadowHallucination=Hallucination
 Abil/Name/SignalFlare=Signal Flare
 Abil/Name/SilentMode=Silent Mode
@@ -554,6 +555,7 @@ Button/Tooltip/GreaterFeedback=Drains all energy from enemies in an area, dealin
 Button/Tooltip/HERCGrappleDummy=No one will believe you.
 Button/Tooltip/HammerMunitions=Rattlesnake's attacks deal 50% of their damage in an area of effect.
 Button/Tooltip/HankHarnack=Henry "Hank" Harnack, the son of a trucking company operator, became a private in the Confederate Marine Corps' famous Heaven's Devils platoon. Friends with fellow marines Jim Raynor and Ryk Kydd, he was quick to anger and had an impulsive attitude.  He was officially listed as KIA and much like Emperor Palpatine he somehow survived.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/HardenedShield=Reduces incoming damage to a maximum of 10 while this unit still has shields.
 Button/Tooltip/Harrier=Highly mobile flying unit. Excellent at surgical strikes.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/HeatTreatedNanitesBellyBonus=Increases damage and life by 50%.
 Button/Tooltip/Hellraiser=Increase attack speed by 150%. Lasts for <d time="10"/>.
@@ -719,11 +721,13 @@ Button/Tooltip/UpgradeMergedWeaponsLevel3=Maximizes the damage dealt by combat u
 Button/Tooltip/UpgradeToPlanetaryFortress=Adds a powerful turret, and increases armor. Removes Lift Off, Scanner Sweep, and MULE abilities, but allows it to fire powerful missiles at long range.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/UpgradetoRadarTower=Transforms the Sensor Tower into a Radar Tower.<n/>Radar Towers can use Scanner Sweep and give allies bonus weapon range.
 Button/Tooltip/ViralFlammenwerfer=Increases Anarchist and Agitator damage vs Light and Biological by 15, and doubles the width of attacks.
+Button/Tooltip/VoidZealotShadowCharge=Intercepts enemy ground units and increases movement speed. Briefly cloaks and allows it to move through other units.
 Button/Tooltip/VulcanCannons=The more this unit attacks, the faster and stronger its attacks become.
 Button/Tooltip/WildSnipe=Mr. Hill snipes an enemy with an explosive round, dealing 250 damage to them and a small amount in an area.
 Button/Tooltip/WillofRaszagal=Anduin has +200% shield and energy regeneration, and regenerates 2 life per second. Upon taking fatal damage, become invulnerable for 3 seconds, then restore all vitals and release a damaging shockwave. Cooldown of 240 seconds.
 Button/Tooltip/Wolverine=Support walker. Buffs nearby units and applies Fear to enemies. Can use Mag Mine and Psycho Missiles. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/YamatoCulverin=Blasts a target with a devastating plasma cannon, causing <d ref="Effect,StarcruiserYamatoDamage,Amount"/> damage to the target and 80 to enemies nearby.
+Button/Tooltip/Zealot=Powerful mercenary warrior. Can use Shadow Charge.<n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/ZeusBattleTank=Armored weapons platform. Can use Target Lock and Sentinel Missiles.<n/><n/><c val="FFFF00">Detector</c><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/ZeusLanderFlying=Massive transport ship.
 Button/Tooltip/ZeusLanderTacticalJump=After <d time="6"/>, warps to the target location. The Samson is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
@@ -1284,6 +1288,8 @@ Effect/Name/WolverineFearImmunityAB=Fear Immunity AB
 Effect/Name/WolverineFearSA=Fear SA
 Effect/Name/WolverineFearSet=Fear Set
 Effect/Name/WolverineRailcannonCP=Wolverine Railcannon CP
+Effect/Name/ZyrkhansLegionBladesCP=Zyrkhan's Legion Blades CP
+Effect/Name/ZyrkhansLegionBladesDamage=Zyrkhan's Legion Blades Damage
 HighTemplarPartisanName=Partisan
 L800ETCShields=Amped Up
 MinimumRange15=Too close
@@ -1452,6 +1458,7 @@ Unit/Name/WarPig=War Pig
 Unit/Name/Wolverine=Wolverine
 Unit/Name/WolverineWeapon=Wolverine
 Unit/Name/ZealotAnduin=Militant
+Unit/Name/ZealotZyrkhan=Zyrkhan's Legion
 Unit/Name/ZeusLanderFlying=Samson
 Unit/Name/ZeusLanderLanded=Samson
 Unit/ShieldArmorName/SpectreNo15Shields=Psi Shield
@@ -1844,5 +1851,6 @@ Weapon/Name/TheGrill=The Grill
 Weapon/Name/ThermalBurst=Thermal Burst
 Weapon/Name/VanirMissiles=Vanir Missiles
 Weapon/Name/Warbot120mmCannon=120mm Cannon
+Weapon/Name/ZyrkhanPsiBlades=Psi Blades
 Weapon/Tip/NomadMissile=
 Weapon/Tip/PlasmaTorpedo=Deals <d ref="Effect,LightningBombDamage,Amount*Behavior,LightningBomb,Duration/Behavior,LightningBomb,Period"/> damage over <d ref="Behavior,LightningBomb,Duration"/> seconds. Does not stack.

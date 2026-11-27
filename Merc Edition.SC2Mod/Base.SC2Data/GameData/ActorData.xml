@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorBeamSimple id="HiveMindEmulatorBeam">
+        <On index="4" Terms="ActorCreation"/>
+        <On Terms="Effect.PsionicIndoctrinatorControl.Start" Send="Create"/>
+    </CActorBeamSimple>
+    <CActorAction id="ZyrkhansLegionBlades" parent="GenericAttack" effectAttack="ZyrkhansLegionBladesDamage">
+        <LaunchAttachQuery Methods="AMFilterWeaponLeft"/>
+        <LaunchAssets Sound="Zealot_AttackLaunch"/>
+        <ImpactMap index="None" Sound="Zealot_AttackImpact"/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="ZealotAttackDeathForce00"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="Attack01"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="01"/>
+            <Physics value="ZealotAttackDeathForce01"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="Attack02"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="02"/>
+            <Physics value="ZealotAttackDeathForce02"/>
+        </ImpactPhysics>
+        <AcquisitionYawHalfArc value="25.000000"/>
+        <AcquisitionPitchHalfArc value="25.000000"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorUnit id="ZyrkhansLegion" parent="GenericUnitStandard" unitName="ZyrkhansLegion">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ChargingAnim"/>
+        <On Terms="Behavior.Charging.On" Send="ModelSuddenMotionStart"/>
+        <On Terms="Behavior.Charging.Off" Send="ModelSuddenMotionStop"/>
+        <BuildModel value="ZealotWarpIn"/>
+        <DeathArray index="Normal" ModelLink="ZyrkhansLegionDeath" SoundLink="Zealot_DeathFX"/>
+        <PlacementModel value="ZealotPlacement"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PortraitModel value="ZealotPortrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="45"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-zealotprison.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="Zealot_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Zealot_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Zealot_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Zealot_GroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-prisonzealot.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <SoundArray index="Birth" value="Zealot_Birth"/>
+        <SoundArray index="Ready" value="ZealotNerazim_Ready"/>
+        <SoundArray index="Help" value="ZealotNerazim_Help"/>
+        <SoundArray index="What" value="ZealotNerazim_What"/>
+        <SoundArray index="Yes" value="ZealotNerazim_Yes"/>
+        <SoundArray index="Attack" value="ZealotNerazim_Attack"/>
+        <SoundArray index="Pissed" value="ZealotNerazim_Pissed"/>
+        <SoundArray index="Movement" value="Zealot_Movement"/>
+        <SoundArray index="Turning" value="Zealot_Turning"/>
+        <SoundArray index="Board" value="Zealot_Board"/>
+        <SoundArray index="Click" value="Zealot_Click"/>
+        <SoundArray index="ClickError" value="Zealot_ClickError"/>
+        <SoundArray index="Highlight" value="Zealot_Highlight"/>
+        <UnitIcon value="Assets\Icons and Wireframes\btn-unit-protoss-zealot-merc-collection.dds"/>
+        <Wireframe>
+            <Image value="Assets\Icons and Wireframes\wireframe-protoss-zealot-merc-collection.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Icons and Wireframes\wireframe-protoss-zealot-merc-collection-shield01.dds"/>
+            <Image value="Assets\Icons and Wireframes\wireframe-protoss-zealot-merc-collection-shield02.dds"/>
+            <Image value="Assets\Icons and Wireframes\wireframe-protoss-zealot-merc-collection-shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
     <CActorSound id="PsionicIndoctrinatorLaunchS" parent="SoundOneShot">
         <On Terms="Abil.PsionicIndoctrinatorControl.SourceCastStart" Send="Create"/>
         <Sound value="HiveMindEmulator_MindControlLaunch"/>

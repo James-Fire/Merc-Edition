@@ -34,8 +34,16 @@
             <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
         </TextureDeclares>
     </CModel>
+    <CModel id="ZyrkhansLegion" parent="ZealotBase">
+        <Model value="Assets\Models\Zealot_Merc_Collection.m3"/>
+        <Lighting value="Zealot"/>
+    </CModel>
+    <CModel id="ZyrkhansLegionDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Models\Zealot_Merc_Collection_Death.m3"/>
+        <Occlusion value="Show"/>
+    </CModel>
     <CModel id="PsionicIndoctrinator" parent="Building">
-        <Model value="Assets\Buildings\Terran\PsiIndoctrinator\PsiIndoctrinator.m3"/>
+        <Model value="Assets\Models\PsiIndoctrinatorTC.m3"/>
         <EditorCategories value="Race:Terran"/>
         <Lighting value=""/>
         <PlanetPanelCamera value="Star2CameraHigher10"/>
@@ -48,7 +56,7 @@
         <UnitGlossaryCamera value="Star2CameraHigher10"/>
     </CModel>
     <CModel id="PsionicIndoctrinatorDeath" parent="BuildingDeath">
-        <Model value="Assets\Buildings\Terran\PsiIndoctrinatorDeath\PsiIndoctrinatorDeath.m3"/>
+        <Model value="Assets\Models\PsiIndoctrinatorTCDeath.m3"/>
         <LowQualityModel value="HiveMindEmulatorDeathLow"/>
         <EditorCategories value="Race:Terran"/>
         <Events>

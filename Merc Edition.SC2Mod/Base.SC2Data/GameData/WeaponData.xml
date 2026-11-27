@@ -136,6 +136,18 @@
         <Period value="2.1542"/>
         <Effect value="GrandArchonWeaponDamage"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="ZyrkhanPsiBlades">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ZyrkhansLegionBladesDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="1.2"/>
+        <DamagePoint value="0"/>
+        <Effect value="ZyrkhansLegionBladesCP"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="SpotterBioDischarge">
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="SpotterBioDischargeDamage"/>

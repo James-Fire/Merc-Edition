@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilAugment id="ShadowChargeZyrkhan">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidZealotShadowCharge"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Cooldown Link="Charge" Location="Unit" TimeUse="10"/>
+        </Cost>
+        <Effect value="ShadowCharge"/>
+        <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
+    </CAbilAugment>
     <CAbilEffectTarget id="BioSurvivalProtocol">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="BioSurvivalProtocol1hp"/>
